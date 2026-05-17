@@ -9,7 +9,7 @@ export default function HomePage() {
   const { t, isAr } = useLanguage();
   const featured = PLANTS[FEATURED_ID];
   const arFeatured = isAr ? PLANT_TRANSLATIONS.ar[FEATURED_ID] : null;
-  const heroLines = t('home_hero_title').split('\n');
+  const heroLines = (t('home_hero_title') || '').split('\n');
 
   return (
       <div className="page-enter">
@@ -22,13 +22,14 @@ export default function HomePage() {
               }}
           />
 
-          {/* FIX: Changed pt-20 to pt-32 md:pt-20. This pushes the text down away from the navbar on mobile, but keeps desktop exactly the same. */}
+          {/* Main Container - Pushed down on mobile to clear navbar */}
           <div className="relative section-container w-full text-center pt-32 md:pt-20 pb-16 md:pb-0 px-4 md:px-0">
             <div className="inline-flex items-center gap-2 bg-secondary-fixed text-on-secondary-fixed font-manrope text-label-sm px-4 py-1.5 rounded-full mb-8 mx-auto">
               {t('tagline')}
             </div>
 
-            <h1 className="font-caslon text-headline-lg-mobile md:text-display-lg text-primary max-w-3xl mx-auto mb-6 leading-tight">
+            {/* FIX: Scaled mobile font down to text-3xl to contain long words. Added break-words. Jumps back to text-display-lg on desktop. */}
+            <h1 className="font-caslon text-3xl sm:text-4xl md:text-display-lg text-primary w-full max-w-3xl mx-auto mb-6 leading-tight px-2 break-words">
               {heroLines.map((line, i) => (
                   <span key={i}>
                     {line}
@@ -37,7 +38,7 @@ export default function HomePage() {
               ))}
             </h1>
 
-            <p className="font-manrope text-body-lg text-on-surface-variant max-w-xl mx-auto mb-10">
+            <p className="font-manrope text-base sm:text-lg md:text-body-lg text-on-surface-variant max-w-xl mx-auto mb-10">
               {t('home_hero_sub')}
             </p>
 

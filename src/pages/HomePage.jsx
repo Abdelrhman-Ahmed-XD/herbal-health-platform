@@ -38,17 +38,19 @@ export default function HomePage() {
               ))}
             </h1>
 
-            <p className="font-manrope text-base sm:text-lg md:text-body-lg text-on-surface-variant max-w-xl mx-auto mb-10">
+            {/* Shrunk mobile text to text-sm and reduced bottom margin to mb-8 */}
+            <p className="font-manrope text-sm sm:text-lg md:text-body-lg text-on-surface-variant max-w-xl mx-auto mb-8 sm:mb-10 px-2">
               {t('home_hero_sub')}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            {/* Reduced the gap between buttons on mobile to gap-3 */}
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
               <Link to="/categories"
-                    className="bg-primary-container text-on-primary-container font-manrope font-semibold text-sm tracking-wide px-8 py-4 rounded-full hover:opacity-80 transition-all duration-200 hover:-translate-y-0.5 shadow-botanical w-full sm:w-auto text-center">
+                    className="bg-primary-container text-on-primary-container font-manrope font-semibold text-xs sm:text-sm tracking-wide px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:opacity-80 transition-all duration-200 hover:-translate-y-0.5 shadow-botanical w-[85%] sm:w-auto text-center">
                 {t('home_cta_explore')}
               </Link>
               <Link to="/questionnaire"
-                    className="border border-outline text-on-surface-variant font-manrope font-semibold text-sm tracking-wide px-8 py-4 rounded-full hover:border-primary hover:text-primary transition-all duration-200 w-full sm:w-auto text-center">
+                    className="border border-outline text-on-surface-variant font-manrope font-semibold text-xs sm:text-sm tracking-wide px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:border-primary hover:text-primary transition-all duration-200 w-[85%] sm:w-auto text-center">
                 {t('home_cta_journal')}
               </Link>
             </div>

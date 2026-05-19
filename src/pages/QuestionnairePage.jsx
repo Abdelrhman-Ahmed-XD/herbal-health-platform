@@ -1,37 +1,14 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell, LineChart, Line, Legend,
+  PieChart, Pie, Cell,
 } from 'recharts';
 import { PLANTS, SYMPTOM_TAG_MAP } from '../data/plants.js';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
 import { PLANT_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
+import { saveQuestionnaire, fetchAnalytics, invalidateAnalyticsCache } from '../services/firestoreService.js';
 
-/* ── Static analytics data ─────────────────────────────────────────────── */
-const SYMPTOM_EN = [
-  { name:'Immunity', count:142, fill:'#1b3022' }, { name:'Stress',  count:118, fill:'#536346' },
-  { name:'Fatigue',  count:97,  fill:'#4d6453' }, { name:'Sleep',   count:89,  fill:'#364c3c' },
-  { name:'IBS',      count:76,  fill:'#59694b' }, { name:'Cough',   count:63,  fill:'#819986' },
-];
-const SYMPTOM_AR = [
-  { name:'مناعة', count:142, fill:'#1b3022' }, { name:'توتر',  count:118, fill:'#536346' },
-  { name:'إرهاق', count:97,  fill:'#4d6453' }, { name:'نوم',   count:89,  fill:'#364c3c' },
-  { name:'قولون', count:76,  fill:'#59694b' }, { name:'سعال', count:63,  fill:'#819986' },
-];
-const CATEGORY_EN = [
-  { name:"Women's",   value:28, fill:'#f4dfcb' }, { name:'Immunity',   value:35, fill:'#d6e9c3' },
-  { name:'Digestive', value:22, fill:'#b4cdb8' }, { name:'Respiratory',value:15, fill:'#d7c3b0' },
-];
-const CATEGORY_AR = [
-  { name:'صحة المرأة', value:28, fill:'#f4dfcb' }, { name:'المناعة',         value:35, fill:'#d6e9c3' },
-  { name:'الهضم',      value:22, fill:'#b4cdb8' }, { name:'الجهاز التنفسي', value:15, fill:'#d7c3b0' },
-];
-const TREND_DATA = [
-  { month:'Jan', users:45,  plants:12 }, { month:'Feb', users:62,  plants:18 },
-  { month:'Mar', users:78,  plants:24 }, { month:'Apr', users:95,  plants:31 },
-  { month:'May', users:134, plants:38 }, { month:'Jun', users:187, plants:52 },
-];
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (!active || !payload?.length) return null;
@@ -44,75 +21,130 @@ const CustomTooltip = ({ active, payload, label }) => {
 };
 
 /* ── Dashboard ─────────────────────────────────────────────────────────── */
+const SYM_PALETTE = ['#1b3022','#536346','#4d6453','#364c3c','#59694b','#819986'];
+const CAT_PALETTE = ['#f4dfcb','#d6e9c3','#b4cdb8','#d7c3b0'];
+const SYM_AR_MAP  = { Immunity:'مناعة', Stress:'توتر', Fatigue:'إرهاق', Sleep:'نوم', IBS:'قولون', Cough:'سعال', PMS:'دورة', Constipation:'إمساك' };
+const CAT_AR_MAP  = { immunity:'المناعة', digestive:'الهضم', respiratory:'الجهاز التنفسي', 'womens-health':'صحة المرأة', stress:'التوتر', sleep:'النوم' };
+const CAT_EN_MAP  = { immunity:'Immunity', digestive:'Digestive', respiratory:'Respiratory', 'womens-health':"Women's", stress:'Stress', sleep:'Sleep' };
+
+function buildSymptomChart(raw, isAr) {
+  if (!raw || Object.keys(raw).length === 0) return [];
+  return Object.entries(raw).sort(([,a],[,b])=>b-a).slice(0,6).map(([k,v],i)=>({
+    name: isAr ? (SYM_AR_MAP[k]||k) : k, count: v, fill: SYM_PALETTE[i%SYM_PALETTE.length],
+  }));
+}
+
+function buildCategoryChart(raw, isAr) {
+  if (!raw || Object.keys(raw).length === 0) return [];
+  const total = Object.values(raw).reduce((s,v)=>s+v,0)||1;
+  return Object.entries(raw).sort(([,a],[,b])=>b-a).slice(0,4).map(([k,v],i)=>({
+    name: isAr ? (CAT_AR_MAP[k]||k) : (CAT_EN_MAP[k]||k),
+    value: Math.round((v/total)*100),
+    fill: CAT_PALETTE[i%CAT_PALETTE.length],
+  }));
+}
+
+const EmptyChart = ({ message }) => (
+  <div className="flex flex-col items-center justify-center h-44 gap-2">
+    <span className="material-symbols-outlined text-4xl text-outline">bar_chart</span>
+    <p className="font-manrope text-xs text-on-surface-variant text-center max-w-xs">{message}</p>
+  </div>
+);
+
 function AnalyticsDashboard() {
   const { t, isAr } = useLanguage();
-  const symptomData  = isAr ? SYMPTOM_AR  : SYMPTOM_EN;
-  const categoryData = isAr ? CATEGORY_AR : CATEGORY_EN;
+  const [liveData, setLiveData] = useState(null);
+  const [loading, setLoading]   = useState(true);
+
+  useEffect(() => {
+    fetchAnalytics()
+      .then(d => { if (d) setLiveData(d); })
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, []);
+
+  const symptomData  = buildSymptomChart(liveData?.symptoms, isAr);
+  const categoryData = buildCategoryChart(liveData?.categories, isAr);
+  const noData       = !loading && symptomData.length === 0 && categoryData.length === 0;
+
+  const emptyMsg = isAr
+    ? 'لا توجد بيانات بعد. كن أول من يساهم بإكمال الاستبيان!'
+    : 'No data yet. Be the first to contribute by completing the questionnaire!';
 
   return (
     <div className="space-y-8 mb-16">
-      <div>
-        <h2 className="font-caslon text-headline-sm text-primary mb-1">{t('q_title')}</h2>
-        <p className="font-manrope text-sm text-on-surface-variant">{t('q_sub')}</p>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-
-        {/* Bar – symptoms */}
-        <div className="xl:col-span-2 bg-surface-container-lowest border border-surface-container-high rounded-xl p-6 shadow-botanical-sm">
-          <h3 className="font-caslon text-xl text-primary mb-1">{t('q_chart_symptoms')}</h3>
-          <p className="font-manrope text-xs text-on-surface-variant mb-5">{t('q_chart_symptoms_sub')}</p>
-          <ResponsiveContainer width="100%" height={220}>
-            <BarChart data={symptomData} margin={{ top:0, right:0, bottom:0, left:-20 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#c3c8c1" strokeOpacity={0.5} />
-              <XAxis dataKey="name" tick={{ fontFamily:'Cairo, Manrope', fontSize:11, fill:'#434843' }} />
-              <YAxis tick={{ fontFamily:'Manrope', fontSize:11, fill:'#434843' }} />
-              <Tooltip content={<CustomTooltip />} />
-              <Bar dataKey="count" radius={[4,4,0,0]}>
-                {symptomData.map((e,i) => <Cell key={i} fill={e.fill} />)}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
+      <div className="flex items-start justify-between flex-wrap gap-2">
+        <div>
+          <h2 className="font-caslon text-headline-sm text-primary mb-1">{t('q_title')}</h2>
+          <p className="font-manrope text-sm text-on-surface-variant">{t('q_sub')}</p>
         </div>
-
-        {/* Pie – categories */}
-        <div className="bg-surface-container-lowest border border-surface-container-high rounded-xl p-6 shadow-botanical-sm">
-          <h3 className="font-caslon text-xl text-primary mb-1">{t('q_chart_categories')}</h3>
-          <p className="font-manrope text-xs text-on-surface-variant mb-4">{t('q_chart_categories_sub')}</p>
-          <ResponsiveContainer width="100%" height={180}>
-            <PieChart>
-              <Pie data={categoryData} cx="50%" cy="50%" innerRadius={50} outerRadius={80} paddingAngle={3} dataKey="value">
-                {categoryData.map((e,i) => <Cell key={i} fill={e.fill} stroke="#fbf9f4" strokeWidth={2} />)}
-              </Pie>
-              <Tooltip formatter={(v) => `${v}%`} />
-            </PieChart>
-          </ResponsiveContainer>
-          <div className="flex flex-wrap gap-2 mt-2">
-            {categoryData.map(d => (
-              <span key={d.name} className="flex items-center gap-1.5 font-manrope text-xs text-on-surface-variant">
-                <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: d.fill }} />
-                {d.name} ({d.value}%)
-              </span>
-            ))}
+        {loading && (
+          <div className="flex items-center gap-2 font-manrope text-xs text-on-surface-variant">
+            <span className="w-3 h-3 rounded-full border-2 border-primary border-t-transparent animate-spin" />
+            {isAr ? 'تحميل البيانات...' : 'Loading data...'}
           </div>
-        </div>
-
-        {/* Line – trends */}
-        <div className="md:col-span-2 xl:col-span-3 bg-surface-container-lowest border border-surface-container-high rounded-xl p-6 shadow-botanical-sm">
-          <h3 className="font-caslon text-xl text-primary mb-1">{t('q_chart_trends')}</h3>
-          <p className="font-manrope text-xs text-on-surface-variant mb-5">{t('q_chart_trends_sub')}</p>
-          <ResponsiveContainer width="100%" height={200}>
-            <LineChart data={TREND_DATA} margin={{ top:0, right:10, bottom:0, left:-20 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#c3c8c1" strokeOpacity={0.5} />
-              <XAxis dataKey="month" tick={{ fontFamily:'Manrope', fontSize:11, fill:'#434843' }} />
-              <YAxis tick={{ fontFamily:'Manrope', fontSize:11, fill:'#434843' }} />
-              <Tooltip content={<CustomTooltip />} />
-              <Legend wrapperStyle={{ fontFamily:'Manrope', fontSize:'12px', color:'#434843' }} />
-              <Line type="monotone" dataKey="users"  name={t('q_users')}          stroke="#1b3022" strokeWidth={2.5} dot={{ fill:'#1b3022', r:4 }} />
-              <Line type="monotone" dataKey="plants" name={t('q_plants_explored')} stroke="#536346" strokeWidth={2} strokeDasharray="5 3" dot={{ fill:'#536346', r:3 }} />
-            </LineChart>
-          </ResponsiveContainer>
-        </div>
+        )}
       </div>
+
+      {noData ? (
+        <div className="bg-surface-container-lowest border border-dashed border-outline-variant rounded-2xl p-12 text-center">
+          <span className="material-symbols-outlined text-5xl text-outline mb-3 block">monitoring</span>
+          <p className="font-manrope text-sm text-on-surface-variant max-w-sm mx-auto">{emptyMsg}</p>
+        </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+
+          {/* Bar – symptoms */}
+          <div className="xl:col-span-2 bg-surface-container-lowest border border-surface-container-high rounded-xl p-6 shadow-botanical-sm">
+            <h3 className="font-caslon text-xl text-primary mb-1">{t('q_chart_symptoms')}</h3>
+            <p className="font-manrope text-xs text-on-surface-variant mb-5">{t('q_chart_symptoms_sub')}</p>
+            {symptomData.length > 0 ? (
+              <ResponsiveContainer width="100%" height={220}>
+                <BarChart data={symptomData} margin={{ top:0, right:0, bottom:0, left:-20 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#c3c8c1" strokeOpacity={0.5} />
+                  <XAxis dataKey="name" tick={{ fontFamily:'Cairo, Manrope', fontSize:11, fill:'#434843' }} />
+                  <YAxis tick={{ fontFamily:'Manrope', fontSize:11, fill:'#434843' }} />
+                  <Tooltip content={<CustomTooltip />} />
+                  <Bar dataKey="count" radius={[4,4,0,0]}>
+                    {symptomData.map((e,i) => <Cell key={i} fill={e.fill} />)}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            ) : (
+              <EmptyChart message={emptyMsg} />
+            )}
+          </div>
+
+          {/* Pie – categories */}
+          <div className="bg-surface-container-lowest border border-surface-container-high rounded-xl p-6 shadow-botanical-sm">
+            <h3 className="font-caslon text-xl text-primary mb-1">{t('q_chart_categories')}</h3>
+            <p className="font-manrope text-xs text-on-surface-variant mb-4">{t('q_chart_categories_sub')}</p>
+            {categoryData.length > 0 ? (
+              <>
+                <ResponsiveContainer width="100%" height={180}>
+                  <PieChart>
+                    <Pie data={categoryData} cx="50%" cy="50%" innerRadius={50} outerRadius={80} paddingAngle={3} dataKey="value">
+                      {categoryData.map((e,i) => <Cell key={i} fill={e.fill} stroke="#fbf9f4" strokeWidth={2} />)}
+                    </Pie>
+                    <Tooltip formatter={(v) => `${v}%`} />
+                  </PieChart>
+                </ResponsiveContainer>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {categoryData.map(d => (
+                    <span key={d.name} className="flex items-center gap-1.5 font-manrope text-xs text-on-surface-variant">
+                      <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ background: d.fill }} />
+                      {d.name} ({d.value}%)
+                    </span>
+                  ))}
+                </div>
+              </>
+            ) : (
+              <EmptyChart message={emptyMsg} />
+            )}
+          </div>
+
+        </div>
+      )}
     </div>
   );
 }
@@ -277,7 +309,7 @@ function QuestionnaireWizard({ onComplete }) {
 }
 
 /* ── Results ────────────────────────────────────────────────────────────── */
-function Results({ answers }) {
+function Results({ answers, onReset }) {
   const { t, isAr } = useLanguage();
   const symptoms  = answers.symptoms ?? [];
   const category  = answers.primary_concern;
@@ -344,7 +376,7 @@ function Results({ answers }) {
           {t('res_explore_all')}
         </Link>
         <button
-          onClick={() => window.location.reload()}
+          onClick={onReset}
           className="border border-outline text-on-surface-variant font-manrope font-semibold text-sm tracking-wide px-6 py-3 rounded-full hover:border-primary hover:text-primary transition-all">
           {t('res_retake')}
         </button>
@@ -365,7 +397,15 @@ export default function QuestionnairePage() {
     setAnswers(ans);
     setCompleted(true);
     setActiveTab('results');
-    console.log('Questionnaire answers:', ans);
+    // Fire-and-forget: never blocks the results from showing
+    saveQuestionnaire(ans);
+    invalidateAnalyticsCache();
+  }, []);
+
+  const handleReset = useCallback(() => {
+    setAnswers(null);
+    setCompleted(false);
+    setActiveTab('questionnaire');
   }, []);
 
   return (
@@ -397,7 +437,7 @@ export default function QuestionnairePage() {
         </div>
 
         {activeTab === 'questionnaire' && <QuestionnaireWizard onComplete={handleComplete} />}
-        {activeTab === 'results' && answers && <Results answers={answers} />}
+        {activeTab === 'results' && answers && <Results answers={answers} onReset={handleReset} />}
         {activeTab === 'results' && !answers && (
           <div className="text-center py-16">
             <span className="material-symbols-outlined text-5xl text-outline mb-3 block">quiz</span>

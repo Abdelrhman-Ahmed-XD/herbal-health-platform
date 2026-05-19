@@ -35,11 +35,11 @@ export function LanguageProvider({ children }) {
 export const TRANSLATIONS = {
   en: {
     brand: 'Nabta', tagline: 'BOTANICAL RESEARCH INSTITUTE',
-    nav_discover: 'Discover', nav_categories: 'Categories', nav_journal: 'Journal',
+    nav_discover: 'Discover', nav_categories: 'Categories', nav_journal: 'Community',
     nav_about: 'About', nav_consult: 'Consult Expert', nav_switchLang: 'AR',
     home_hero_title: "Nature's Wisdom,\nScientifically Refined.",
     home_hero_sub: 'Explore the intersection of traditional herbalism and modern clinical research. Elevate your wellness through curated, evidence-based botanical education.',
-    home_cta_explore: 'Explore Compendium', home_cta_journal: 'Read Latest Journal',
+    home_cta_explore: 'Explore Compendium', home_cta_journal: 'Community Insights',
     home_sleep_title: 'Sleep & Calm', home_sleep_desc: 'Botanical allies to quiet the mind, ease tension, and promote restorative rest. Discover tinctures and teas featuring Valerian, Chamomile, and Ashwagandha.',
     home_immunity_title: 'Immunity', home_immunity_desc: 'Fortify your natural defenses with potent extracts of Echinacea, Elderberry, and medicinal mushrooms.',
     home_vitality_title: 'Vitality', home_vitality_desc: 'Awaken natural energy reserves and support endurance. A curated selection of stimulating herbs including Ginseng, Rhodiola, and Eleuthero.',
@@ -67,7 +67,7 @@ export const TRANSLATIONS = {
     plant_family: 'Family', plant_native: 'Native Region', plant_growth: 'Growth Habit',
     plant_compounds: 'Active Compounds', plant_cultivation: 'Cultivation Notes',
     plant_part_of: 'Part of Collection', plant_best_for: 'BEST FOR',
-    q_title: 'Community Wellness Insights', q_sub: 'Aggregated data from questionnaire responses — updated in real time.',
+    q_title: 'Community Wellness Insights', q_sub: 'Aggregated data from questionnaire responses, updated in real time.',
     q_chart_symptoms: 'Most Reported Symptoms', q_chart_symptoms_sub: 'Total community responses',
     q_chart_categories: 'Category Interest', q_chart_categories_sub: 'Distribution of user focus areas',
     q_chart_trends: 'Wellness Engagement Trends', q_chart_trends_sub: 'Monthly growth in users & plant profiles explored',
@@ -108,7 +108,7 @@ export const TRANSLATIONS = {
     about_title: 'About Nabta', about_sub: 'Nabta is a botanical research institute dedicated to bridging the gap between traditional herbal wisdom and modern clinical science.',
     about_evidence: 'Evidence-Based', about_evidence_desc: 'Every plant profile is grounded in peer-reviewed research and traditional clinical use.',
     about_sourced: 'Ethically Sourced', about_sourced_desc: 'We partner with responsible growers who practice sustainable, regenerative agriculture.',
-    about_education: 'Botanical Education', about_education_desc: 'Our goal is empowerment through knowledge — not replacement of medical care.',
+    about_education: 'Botanical Education', about_education_desc: 'Our goal is empowerment through knowledge, not replacement of medical care.',
     about_disclaimer_title: 'Important Disclaimer',
     about_disclaimer: 'All information on Nabta is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider before starting any herbal regimen, especially if pregnant, nursing, or taking medications.',
     footer_privacy: 'Privacy Policy', footer_sourcing: 'Ethical Sourcing',
@@ -133,14 +133,31 @@ export const TRANSLATIONS = {
     sub_sinusitis: 'Sinusitis', sub_cough: 'Cough',
     sub_immune: 'Immune Boosting Plants', sub_antioxidant: 'Anti-Oxidant Rich Plants',
     sub_antiinflammatory: 'Anti-Inflammatory Plants',
+    plant_active_constituents: 'Active Constituents',
+    plant_moa: 'Mechanism of Action',
+    plant_moa_show: 'Show Mechanism',
+    plant_moa_hide: 'Hide Mechanism',
+    plant_how_to_use: 'How to Use',
+    plant_age_groups: 'Suitable Age Groups',
+    plant_dosage: 'Dosage',
+    plant_overdose: 'Overdose',
+    plant_side_effects: 'Side Effects',
+    plant_contraindications: 'Contraindications',
+    plant_drug_interactions: 'Drug Interactions',
+    plant_storage: 'Storage',
+    plant_marketed: 'Marketed Products',
+    plant_warnings: 'Warnings',
+    demo_badge: 'Demo Data: Full profile coming soon',
+    plant_uses: 'Uses & Indications',
+    plant_references: 'Scientific References',
   },
   ar: {
     brand: 'نبتة', tagline: 'معهد الأبحاث النباتية',
-    nav_discover: 'اكتشف', nav_categories: 'التصنيفات', nav_journal: 'المجلة',
+    nav_discover: 'اكتشف', nav_categories: 'التصنيفات', nav_journal: 'المجتمع',
     nav_about: 'عن المعهد', nav_consult: 'استشر خبيراً', nav_switchLang: 'En',
     home_hero_title: 'حكمة الطبيعة،\nمُكتنَزةٌ علمياً.',
     home_hero_sub: 'استكشف التقاء الطب العشبي التقليدي بالبحث السريري الحديث. ارتقِ بصحتك من خلال التعليم النباتي المنتقى القائم على الأدلة.',
-    home_cta_explore: 'استكشف الموسوعة', home_cta_journal: 'اقرأ أحدث المجلات',
+    home_cta_explore: 'استكشف الموسوعة', home_cta_journal: 'رؤى المجتمع',
     home_sleep_title: 'النوم والهدوء', home_sleep_desc: 'حلفاء نباتيون لتهدئة العقل وتخفيف التوتر وتعزيز النوم التصافي. اكتشف الصبغات والشاي المحتوي على فاليريان والبابونج والأشواغاندا.',
     home_immunity_title: 'المناعة', home_immunity_desc: 'عزّز دفاعاتك الطبيعية بمستخلصات قوية من إشنسا والتوت الأكبر والفطريات الطبية.',
     home_vitality_title: 'الحيوية', home_vitality_desc: 'أيقظ احتياطيات الطاقة الطبيعية وادعم التحمل. مجموعة مختارة من الأعشاب المنشطة بما فيها الجينسنغ والروديولا والإليوثيرو.',
@@ -168,7 +185,7 @@ export const TRANSLATIONS = {
     plant_family: 'العائلة', plant_native: 'المنطقة الأصلية', plant_growth: 'عادة النمو',
     plant_compounds: 'المركبات الفعّالة', plant_cultivation: 'ملاحظات الزراعة',
     plant_part_of: 'جزء من مجموعة', plant_best_for: 'الأفضل لـ',
-    q_title: 'رؤى صحة المجتمع', q_sub: 'بيانات مجمّعة من ردود الاستبيان — تُحدَّث في الوقت الفعلي.',
+    q_title: 'رؤى صحة المجتمع', q_sub: 'بيانات مجمّعة من ردود الاستبيان، تُحدَّث في الوقت الفعلي.',
     q_chart_symptoms: 'الأعراض الأكثر إبلاغاً', q_chart_symptoms_sub: 'مجموع ردود المجتمع',
     q_chart_categories: 'الاهتمام بالتصنيفات', q_chart_categories_sub: 'توزيع مجالات اهتمام المستخدمين',
     q_chart_trends: 'اتجاهات التفاعل الصحي', q_chart_trends_sub: 'النمو الشهري في المستخدمين والنباتات المستكشَفة',
@@ -210,7 +227,7 @@ export const TRANSLATIONS = {
     about_title: 'عن نبتة', about_sub: 'نبتة معهد بحثي نباتي يهدف إلى سد الفجوة بين الحكمة العشبية التقليدية والعلم السريري الحديث.',
     about_evidence: 'قائم على الأدلة', about_evidence_desc: 'كل ملف نباتي مستند إلى بحث علمي محكّم واستخدام سريري تقليدي.',
     about_sourced: 'مستدام أخلاقياً', about_sourced_desc: 'نتشارك مع مزارعين مسؤولين يمارسون الزراعة المستدامة والتجديدية.',
-    about_education: 'تعليم نباتي', about_education_desc: 'هدفنا تمكين المعرفة — لا استبدال الرعاية الطبية.',
+    about_education: 'تعليم نباتي', about_education_desc: 'هدفنا تمكين المعرفة، لا استبدال الرعاية الطبية.',
     about_disclaimer_title: 'إخلاء مسؤولية مهم',
     about_disclaimer: 'جميع المعلومات على نبتة لأغراض تعليمية فقط ولا تُعدّ نصيحة طبية. استشر دائماً مقدم رعاية صحية مؤهلاً قبل البدء بأي نظام عشبي.',
     footer_privacy: 'سياسة الخصوصية', footer_sourcing: 'الاستدامة الأخلاقية',
@@ -235,6 +252,23 @@ export const TRANSLATIONS = {
     sub_sinusitis: 'التهاب الجيوب الأنفية', sub_cough: 'السعال',
     sub_immune: 'نباتات تقوية المناعة', sub_antioxidant: 'نباتات غنية بمضادات الأكسدة',
     sub_antiinflammatory: 'نباتات مضادة للالتهابات',
+    plant_active_constituents: 'المكوّنات الفعّالة',
+    plant_moa: 'آلية العمل',
+    plant_moa_show: 'عرض آلية العمل',
+    plant_moa_hide: 'إخفاء آلية العمل',
+    plant_how_to_use: 'طريقة الاستخدام',
+    plant_age_groups: 'الفئات العمرية المناسبة',
+    plant_dosage: 'الجرعة',
+    plant_overdose: 'الجرعة الزائدة',
+    plant_side_effects: 'الآثار الجانبية',
+    plant_contraindications: 'موانع الاستخدام',
+    plant_drug_interactions: 'التفاعلات الدوائية',
+    plant_storage: 'التخزين',
+    plant_marketed: 'المنتجات التجارية',
+    plant_warnings: 'تحذيرات',
+    demo_badge: 'بيانات تجريبية: الملف الكامل قريباً',
+    plant_uses: 'الاستخدامات والمؤشرات',
+    plant_references: 'المراجع العلمية',
   },
 };
 
@@ -527,6 +561,92 @@ export const PLANT_TRANSLATIONS = {
         { method: 'كمادة الشاي', desc: 'اصنع شاياً قوياً، انقعي قطعة قماش، ضعيها على البشرة المصابة لمدة 15-20 دقيقة.', bestFor: 'شفاء الجروح والالتهابات' },
       ],
       symptoms: ['تهيج البشرة', 'أكزيما', 'جروح', 'جفاف البشرة'],
+    },
+
+    // ── 18 real plants from All data.docx ──────────────────────────────────
+
+    'aloe-vera': {
+      name: 'الصبّار',
+      shortDescription: 'نبات رائد في العناية بالبشرة يُعالج حروق الشمس والجروح الطفيفة والحمى بخصائصه المهدّئة والمضادة للالتهابات المُثبتة سريرياً.',
+      description: 'الصبّار نبات طبي استثنائي استُخدم لأكثر من 4000 عام في الثقافات المصرية واليونانية والصينية. هلامه الشفاف الغني بالألوئين والبراديكينيناز يُشفي البشرة ويُهدِّئ الالتهابات ويُسرِّع التئام الجروح.',
+      symptoms: ['تهيج البشرة', 'حروق الشمس', 'جفاف البشرة', 'الصدفية', 'قروح الفم'],
+    },
+
+    'tea-tree': {
+      name: 'شجرة الشاي',
+      shortDescription: 'مطهّر نباتي قوي للاستخدام الموضعي فقط في علاج حب الشباب والعدوى الفطرية. ⚠️ سُمّي خطير إذا بُلع.',
+      description: 'زيت شجرة الشاي المُقطَّر من أوراق Melaleuca alternifolia الأسترالية هو أحد أكثر مضادات الميكروبات الطبيعية دراسةً. يحتوي على التربينول-4 الذي يُتلِف أغشية خلايا الميكروبات. يُحظر بلعه مطلقاً.',
+      symptoms: ['حب الشباب', 'عدوى فطرية', 'قشرة الرأس', 'الجروح الجلدية'],
+    },
+
+    licorice: {
+      name: 'عرق السوس',
+      shortDescription: 'مُهدِّئ للبشرة ومُخفِّف لفرط التصبغ بفضل مركب الغليسيريزين، مع خصائص مضادة للالتهابات والفيروسات.',
+      description: 'عرق السوس Glycyrrhiza glabra واحد من أوائل الأعشاب الطبية المُدوَّنة في التاريخ. الغليسيريزين يُعدِّل نشاط المناعة ويُثبِّط الالتهاب، والغلابريدين يُقلِّل إنتاج الميلانين في البشرة.',
+      symptoms: ['فرط التصبغ', 'تهيج البشرة', 'الأكزيما', 'الحلق المتهيج'],
+    },
+
+    'green-tea': {
+      name: 'الشاي الأخضر',
+      shortDescription: 'غني بمضادات الأكسدة البوليفينول التي تحمي البشرة من الشيخوخة المبكرة وتُقلِّل الالتهاب وتُعزِّز المناعة.',
+      description: 'الشاي الأخضر Camellia sinensis من أكثر المشروبات استهلاكاً وأعمقها بحثاً. مادة الكاتيشين EGCG الفعّالة تُثبِّط أكسدة الدهون وتحمي الخلايا من الإجهاد التأكسدي وتُقلِّل علامات الشيخوخة في البشرة.',
+      symptoms: ['شيخوخة البشرة', 'التهاب البشرة', 'ضعف المناعة', 'حب الشباب'],
+    },
+
+    fenugreek: {
+      name: 'الحلبة',
+      shortDescription: 'منبّه فعّال لإدرار الحليب قادر على زيادة الإنتاج بنسبة تصل إلى 50٪ خلال 24-72 ساعة لدى الأمهات المرضعات.',
+      description: 'الحلبة Trigonella foenum-graecum من أقدم الأعشاب الطبية المُدوَّنة في مصر القديمة والهند. بذورها تحتوي على الديوسجينين والتريغونيلين المُحفِّزَين لإنتاج حليب الثدي عبر مشابهتهما للإستروجين.',
+      symptoms: ['قلة حليب الثدي', 'ضعف الإدرار', 'ضعف الشهية', 'ارتفاع السكر'],
+    },
+
+    moringa: {
+      name: 'المورينغا',
+      shortDescription: 'تُعرف بـ"شجرة المعجزة"، أوراقها تدعم إنتاج الحليب وتُحسِّن التغذية. ⚠️ الأوراق فقط آمنة؛ الجذور والنباك والأزهار سامة.',
+      description: 'المورينغا أولييفيرا شجرة استوائية غنية بالقيمة الغذائية. أوراقها تحتوي على مستويات استثنائية من البروتين والحديد والكالسيوم وفيتامين C. إيزوثيوسيانات الأوراق تُحفِّز إدرار الحليب. الجذور والنباك والأزهار تحتوي على السبيروكين وهو قلويد خطير.',
+      symptoms: ['قلة حليب الثدي', 'نقص التغذية', 'ضعف الطاقة', 'ارتفاع السكر'],
+    },
+
+    'dill-seed': {
+      name: 'بذور الشبت',
+      shortDescription: 'مُخفِّف فعّال لتشنجات الدورة الشهرية بخصائصه الفيتوإستروجينية. ⚠️ محرَّم تاماً خلال الحمل وعند اضطراب الغدة الدرقية.',
+      description: 'بذور الشبت Anethum graveolens تحتوي على مركبات فيتوإستروجين تُوازن الأعراض الهرمونية وتُرخِّي العضلات الملساء الرحمية. البذور هي الجزء الطبي فقط؛ الأوراق لا تملك هذه الخصائص. يُحظر استخدامها إطلاقاً أثناء الحمل.',
+      symptoms: ['تشنجات الدورة الشهرية', 'انتفاخ الحيض', 'غثيان الدورة', 'غازات الجهاز الهضمي'],
+    },
+
+    cinnamon: {
+      name: 'القرفة',
+      shortDescription: 'تُنظِّم مستوى السكر في الدم وتُخفِّف تشنجات الدورة الشهرية. يُفضَّل نوع السيلاني؛ الكاسيا تحتوي على الكومارين الضار بالكبد.',
+      description: 'القرفة السيلانية Cinnamomum zeylanicum من أقدم التوابل المُستخدَمة طبياً. السينامالدهيد يُثبِّط إنزيمات الالتهاب ويُحسِّن حساسية الإنسولين. القرفة الكاسيا تحتوي على الكومارين بتركيزات عالية قد تُسبِّب تسمماً كبدياً عند الاستخدام المطوّل.',
+      symptoms: ['تشنجات الدورة الشهرية', 'ارتفاع السكر', 'التهاب المفاصل', 'صعوبة الهضم'],
+    },
+
+    butterbur: {
+      name: 'البتربور',
+      shortDescription: 'مُثبِّط قوي لمستقبلات الهيستامين H1 والليكوترين لعلاج التهاب الأنف التحسسي. ⚠️ يُستخدم المستحضر الخالي من PA فقط.',
+      description: 'البتربور Petasites hybridus عشب أوروبي يُعادل فعاليته في التجارب السريرية بعض مضادات الهيستامين لعلاج حمى القش. البيتاسين والإيزوبيتاسين يُثبِّطان تخليق الليكوترين. النبات الخام يحتوي على ألكالويدات PA السامة للكبد؛ المستحضرات المُعتمدة يجب أن تكون PA-free.',
+      symptoms: ['التهاب الأنف التحسسي', 'حمى القش', 'احتقان الأنف', 'العطس المتكرر'],
+    },
+
+    'stinging-nettle': {
+      name: 'القراص',
+      shortDescription: 'مُثبِّط طبيعي لالتهاب الأنف التحسسي يعمل على مستقبلات الهيستامين ويُقلِّل الإفرازات الأنفية والعطس.',
+      description: 'القراص Urtica dioica نبات يُستخدم طبياً منذ اليونان القديمة. مستخلص أوراقه يُثبِّط إطلاق السيتوكينات الالتهابية ويُقلِّل نشاط التفاعلات التحسسية عبر تثبيط NF-κB ومسارات الهيستامين.',
+      symptoms: ['التهاب الأنف التحسسي', 'العطس', 'حمى القش', 'حكة العيون'],
+    },
+
+    lemon: {
+      name: 'الليمون',
+      shortDescription: 'غني بفيتامين C والهيسبيريدين، يُعزِّز المناعة ويُخفِّف أعراض البرد والتهاب الحلق.',
+      description: 'الليمون Citrus limon من أكثر الفاكهة استخداماً في الطب الشعبي حول العالم. محتواه الغالي من حمض الأسكوربيك (فيتامين C) وفلافونويدات الهيسبيريدين يُحفِّز إنتاج الإنترفيرون ويُعزِّز نشاط الخلايا البلعمية.',
+      symptoms: ['البرد', 'التهاب الحلق', 'ضعف المناعة', 'نقص فيتامين C'],
+    },
+
+    'black-seed': {
+      name: 'الحبة السوداء',
+      shortDescription: 'مُعدِّل مناعي قوي بالثيموكينون. ⚠️ يجب سحقها فور الاستخدام لأن الثيموكينون يتبخر بسرعة.',
+      description: 'الحبة السوداء Nigella sativa مُستخدَمة طبياً لأكثر من 2000 عام وذُكر علاجها في الحديث النبوي الشريف. الثيموكينون TQ هو المادة الفعّالة الرئيسية بخصائص مضادة للالتهابات والأكسدة والميكروبات. البذور تُسحق فور الاستخدام لأن TQ يتبخر سريعاً عند التعرض للهواء.',
+      symptoms: ['ضعف المناعة', 'الالتهابات', 'الحساسية', 'الجهاز التنفسي'],
     },
   },
 };

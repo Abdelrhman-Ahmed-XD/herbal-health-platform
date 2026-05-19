@@ -40,8 +40,8 @@ export default function CategoryPage() {
 
       <section className="section-container pb-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {(category.subcategories ?? []).map(sub => (
-            <Link key={sub.id} to={`/category/${category.id}/${sub.id}`} className="block group">
+          {(category.subcategories ?? []).map((sub, i) => (
+            <Link key={sub.id} to={`/category/${category.id}/${sub.id}`} className="block group animate-slide-up" style={{ animationDelay: `${i * 100}ms` }}>
               <div className="card-botanical shadow-botanical hover:shadow-botanical-lg">
                 <div className="relative h-52 overflow-hidden bg-surface-container">
                   <img src={sub.image} alt={t(SUB_NAME_KEY[sub.id]) ?? sub.name}

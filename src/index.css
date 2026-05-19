@@ -86,3 +86,67 @@ body.font-arabic h3 {
 ::-webkit-scrollbar       { width: 6px; }
 ::-webkit-scrollbar-track { background: #f0eee9; }
 ::-webkit-scrollbar-thumb { background: #c3c8c1; border-radius: 3px; }
+
+/* ── Site-wide smooth transitions ────────────────────────────────────── */
+a, button { transition-property: color, background-color, border-color, opacity, transform, box-shadow; transition-duration: 200ms; transition-timing-function: ease; }
+
+/* ── Slide-up animation for page sections ───────────────────────────── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up { animation: slideUp 0.5s ease both; }
+
+/* ── Animation delay utilities ───────────────────────────────────────── */
+.anim-delay-50  { animation-delay:  50ms; }
+.anim-delay-100 { animation-delay: 100ms; }
+.anim-delay-150 { animation-delay: 150ms; }
+.anim-delay-200 { animation-delay: 200ms; }
+.anim-delay-250 { animation-delay: 250ms; }
+.anim-delay-300 { animation-delay: 300ms; }
+.anim-delay-350 { animation-delay: 350ms; }
+.anim-delay-400 { animation-delay: 400ms; }
+
+/* ── Fade-in for sidebar / secondary content ─────────────────────────── */
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(16px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+.animate-fade-right { animation: fadeInRight 0.45s ease both; }
+
+/* ── Plant hero image zoom on hover ─────────────────────────────────── */
+.plant-hero-img { transition: transform 0.5s ease; }
+.plant-hero-img:hover { transform: scale(1.03); }
+
+/* ── Card lift on hover (enhanced) ──────────────────────────────────── */
+.card-lift {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(6, 27, 14, 0.1);
+}
+
+/* ── Nav link underline animation ───────────────────────────────────── */
+.nav-link-animate {
+  position: relative;
+}
+.nav-link-animate::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: width 0.25s ease;
+}
+.nav-link-animate:hover::after { width: 100%; }
+
+/* ── Chip / tag hover glow ───────────────────────────────────────────── */
+.chip-hover {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.chip-hover:hover {
+  transform: translateY(-1px);
+}

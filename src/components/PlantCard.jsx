@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
 import { PLANT_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
+import { trackPlantView } from '../services/firestoreService.js';
 
 export default function PlantCard({ plant }) {
   const { t, isAr } = useLanguage();
@@ -8,15 +9,11 @@ export default function PlantCard({ plant }) {
   const displayName  = arData?.name  ?? plant.name;
   const displayShort = arData?.shortDescription ?? plant.shortDescription;
 
-  const handlePlantClick = () => {
-    const views = JSON.parse(localStorage.getItem('plantViews') || '{}');
-    views[plant.id] = (views[plant.id] || 0) + 1;
-    localStorage.setItem('plantViews', JSON.stringify(views));
-  };
+  const handlePlantClick = () => trackPlantView(plant.id);
 
   return (
     <Link to={`/plant/${plant.id}`} onClick={handlePlantClick} className="block group">
-      <div className="card-botanical shadow-botanical hover:shadow-botanical-lg">
+      <div className="card-botanical card-lift shadow-botanical hover:shadow-botanical-lg">
         <div className="relative h-52 overflow-hidden bg-surface-container">
           <img
             src={plant.image}
@@ -29,15 +26,6 @@ export default function PlantCard({ plant }) {
               <span key={tag} className="chip text-xs">{tag}</span>
             ))}
           </div>
-          <button
-            className={`absolute top-3 ${isAr ? 'left-3' : 'right-3'} w-8 h-8 rounded-full bg-surface/80 backdrop-blur-sm flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors`}
-            onClick={(e) => e.preventDefault()}
-            aria-label={t('plant_save')}
-          >
-            <span className="material-symbols-outlined text-base" style={{ fontVariationSettings: "'FILL' 0" }}>
-              bookmark
-            </span>
-          </button>
         </div>
 
         <div className="p-5">

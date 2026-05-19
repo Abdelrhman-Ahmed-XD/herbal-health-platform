@@ -4,6 +4,7 @@ import { CATEGORIES, PLANTS } from '../data/plants.js';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
 import { PLANT_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
 import PlantCard from '../components/PlantCard.jsx';
+import { fetchPlantViews, trackPlantView } from '../services/firestoreService.js';
 
 const NAME_KEY = { immunity:'cat_immunity_name', digestive:'cat_digestive_name', respiratory:'cat_respiratory_name', 'womens-health':'cat_womens_name' };
 const SUB_NAME_KEY = {
@@ -22,22 +23,23 @@ export default function SubcategoryPage() {
   const category    = CATEGORIES.find(c => c.id === id);
   const subcategory = category?.subcategories?.find(s => s.id === subId);
 
-  // Plants that belong to this subcategory (exact match) or fall back to category match
-  const categoryPlants = Object.values(PLANTS).filter(p =>
-    p.subcategory === subId || p.category === id
-  );
+  const categoryPlants = Object.values(PLANTS).filter(p => p.subcategory === subId);
 
   useEffect(() => {
-    if (categoryPlants.length > 0) {
-      const views = JSON.parse(localStorage.getItem('plantViews') || '{}');
-      let best = categoryPlants[0];
-      let max  = -1;
-      categoryPlants.forEach(p => {
-        const v = views[p.id] || 0;
-        if (v > max) { max = v; best = p; }
-      });
-      setPopularPlant(best);
-    }
+    if (categoryPlants.length === 0) return;
+    // Show local result immediately
+    const localViews = (() => {
+      try { return JSON.parse(localStorage.getItem('plantViews') || '{}'); } catch { return {}; }
+    })();
+    const pickBest = (views) => categoryPlants.reduce(
+      (best, p) => (views[p.id] || 0) > (views[best.id] || 0) ? p : best,
+      categoryPlants[0]
+    );
+    setPopularPlant(pickBest(localViews));
+    // Update async with merged Firebase data
+    fetchPlantViews().then(merged => {
+      if (merged && Object.keys(merged).length > 0) setPopularPlant(pickBest(merged));
+    }).catch(() => {});
   }, [subId]);
 
   if (!category || !subcategory) return <Navigate to="/categories" />;
@@ -67,7 +69,7 @@ export default function SubcategoryPage() {
       {/* Popular plant spotlight */}
       {popularPlant && (
         <section className="section-container pb-12">
-          <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center shadow-botanical">
+          <div className="bg-surface-container-lowest border border-outline-variant rounded-2xl p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center shadow-botanical animate-slide-up anim-delay-100">
             <div className="w-full md:w-1/3 h-48 md:h-64 rounded-xl overflow-hidden relative flex-shrink-0">
               <img src={popularPlant.image} alt={(isAr ? PLANT_TRANSLATIONS.ar[popularPlant.id]?.name : null) ?? popularPlant.name}
                 className="w-full h-full object-cover" />
@@ -85,11 +87,7 @@ export default function SubcategoryPage() {
               </p>
               <Link
                 to={`/plant/${popularPlant.id}`}
-                onClick={() => {
-                  const views = JSON.parse(localStorage.getItem('plantViews') || '{}');
-                  views[popularPlant.id] = (views[popularPlant.id] || 0) + 1;
-                  localStorage.setItem('plantViews', JSON.stringify(views));
-                }}
+                onClick={() => trackPlantView(popularPlant.id)}
                 className="bg-primary text-on-primary px-6 py-2.5 rounded-full font-manrope text-sm font-semibold hover:opacity-90 transition-opacity inline-block"
               >
                 {t('plant_view_profile')}
@@ -106,7 +104,11 @@ export default function SubcategoryPage() {
         </h2>
         {categoryPlants.length > 0 ? (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categoryPlants.map(plant => <PlantCard key={plant.id} plant={plant} />)}
+            {categoryPlants.map((plant, i) => (
+              <div key={plant.id} className="animate-slide-up" style={{ animationDelay: `${i * 80}ms` }}>
+                <PlantCard plant={plant} />
+              </div>
+            ))}
           </div>
         ) : (
           <div className="text-center py-16 bg-surface-container rounded-xl border border-dashed border-outline-variant">

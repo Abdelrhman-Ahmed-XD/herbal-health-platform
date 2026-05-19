@@ -1,6 +1,180 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { sendChatMessage } from '../services/aiService.js';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
+import { PLANTS } from '../data/plants.js';
+
+// ── Plant name → route ID lookup ─────────────────────────────────────────
+const PLANT_LINK_MAP = {};
+Object.values(PLANTS).forEach(p => {
+  PLANT_LINK_MAP[p.name.toLowerCase()] = p.id;
+  // First word alone (e.g. "Astragalus" from "Astragalus mongholicus")
+  const first = p.name.split(' ')[0].toLowerCase();
+  if (!PLANT_LINK_MAP[first]) PLANT_LINK_MAP[first] = p.id;
+});
+
+function findPlantId(name = '') {
+  return PLANT_LINK_MAP[name.toLowerCase()] ?? null;
+}
+
+// ── Inline markdown parser → React nodes ────────────────────────────────
+function renderInline(text) {
+  const parts = [];
+  const regex = /\*\*(.*?)\*\*|\*(.*?)\*/g;
+  let last = 0, match;
+  while ((match = regex.exec(text)) !== null) {
+    if (match.index > last) parts.push(<span key={last}>{text.slice(last, match.index)}</span>);
+    if (match[1] !== undefined) {
+      const id = findPlantId(match[1]);
+      if (id) {
+        parts.push(
+          <Link key={match.index} to={`/plant/${id}`}
+            className="inline-flex items-center gap-0.5 font-semibold text-primary hover:underline underline-offset-2">
+            <span className="material-symbols-outlined text-sm leading-none">eco</span>
+            {match[1]}
+          </Link>
+        );
+      } else {
+        parts.push(<strong key={match.index} className="font-semibold text-on-surface">{match[1]}</strong>);
+      }
+    } else {
+      parts.push(<em key={match.index} className="italic text-on-surface-variant text-xs">{match[2]}</em>);
+    }
+    last = regex.lastIndex;
+  }
+  if (last < text.length) parts.push(<span key={last}>{text.slice(last)}</span>);
+  return parts;
+}
+
+// ── Line classifier ──────────────────────────────────────────────────────
+function classifyLine(line) {
+  const t = line.trim();
+  if (!t) return null;
+
+  // Warning / disclaimer
+  if (t.startsWith('⚠️')) return { type: 'warning', text: t.replace('⚠️', '').trim() };
+
+  // Bullet point: •, -, *, 🌿
+  const bullet = t.match(/^(?:[•\-\*🌿])\s+(.*)/);
+  if (bullet) return { type: 'bullet', text: bullet[1] };
+
+  // Numbered list
+  const numbered = t.match(/^\d+\.\s+(.*)/);
+  if (numbered) return { type: 'bullet', text: numbered[1] };
+
+  // Plant entry: **Name** (*Latin*): description  OR  **Name**: description
+  const plant = t.match(/^\*\*([^*]+)\*\*\s*(?:\(?\*([^*]*)\*\)?)?\s*[:：]\s*(.*)/);
+  if (plant) {
+    return {
+      type: 'plant',
+      name: plant[1].trim(),
+      latin: plant[2]?.trim() ?? null,
+      desc: plant[3]?.trim() ?? '',
+      id: findPlantId(plant[1].trim()),
+    };
+  }
+
+  return { type: 'text', text: t };
+}
+
+// ── Rendered line components ─────────────────────────────────────────────
+function WarningLine({ text }) {
+  return (
+    <div className="flex items-start gap-2 bg-tertiary-fixed/30 border border-tertiary/20 rounded-lg px-3 py-2 mt-2">
+      <span className="material-symbols-outlined text-sm text-tertiary flex-shrink-0 mt-0.5">warning</span>
+      <p className="font-manrope text-xs text-on-surface-variant leading-relaxed">{text}</p>
+    </div>
+  );
+}
+
+function BulletLine({ text }) {
+  return (
+    <div className="flex items-start gap-2">
+      <span className="material-symbols-outlined text-xs text-secondary flex-shrink-0 mt-1">fiber_manual_record</span>
+      <p className="font-manrope text-sm text-on-surface leading-relaxed">{renderInline(text)}</p>
+    </div>
+  );
+}
+
+function PlantEntryLine({ name, latin, desc, id }) {
+  const nameNode = id ? (
+    <Link to={`/plant/${id}`}
+      className="font-caslon text-base text-primary hover:text-secondary transition-colors hover:underline underline-offset-2 flex items-center gap-1">
+      <span className="material-symbols-outlined text-sm">eco</span>
+      {name}
+    </Link>
+  ) : (
+    <span className="font-caslon text-base text-primary flex items-center gap-1">
+      <span className="material-symbols-outlined text-sm">eco</span>
+      {name}
+    </span>
+  );
+
+  return (
+    <div className="bg-surface-container-low border border-outline-variant/50 rounded-xl p-3 space-y-1">
+      <div className="flex items-center justify-between gap-2 flex-wrap">
+        {nameNode}
+        {latin && <span className="font-manrope text-xs italic text-on-surface-variant">{latin}</span>}
+      </div>
+      {desc && <p className="font-manrope text-xs text-on-surface-variant leading-relaxed">{renderInline(desc)}</p>}
+      {id && (
+        <Link to={`/plant/${id}`}
+          className="inline-flex items-center gap-1 font-manrope text-xs font-semibold text-primary hover:gap-2 transition-all duration-150 mt-1">
+          View full profile
+          <span className="material-symbols-outlined text-sm">arrow_forward</span>
+        </Link>
+      )}
+    </div>
+  );
+}
+
+// ── Formatted message body ───────────────────────────────────────────────
+function FormattedMessage({ content }) {
+  const lines = content.split('\n');
+  const parsed = lines.map(classifyLine).filter(Boolean);
+
+  return (
+    <div className="space-y-2 text-sm">
+      {parsed.map((item, i) => {
+        if (item.type === 'warning')  return <WarningLine key={i} text={item.text} />;
+        if (item.type === 'bullet')   return <BulletLine key={i} text={item.text} />;
+        if (item.type === 'plant')    return <PlantEntryLine key={i} {...item} />;
+        return (
+          <p key={i} className="font-manrope text-sm text-on-surface leading-relaxed">
+            {renderInline(item.text)}
+          </p>
+        );
+      })}
+    </div>
+  );
+}
+
+// ── Single message bubble ────────────────────────────────────────────────
+function MessageBubble({ msg, isAr }) {
+  const isUser = msg.role === 'user';
+  return (
+    <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-3`}>
+      {!isUser && (
+        <div className="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center mx-2 flex-shrink-0 mt-0.5">
+          <span className="material-symbols-outlined text-on-primary-container text-sm">eco</span>
+        </div>
+      )}
+      <div
+        className={`max-w-[82%] px-4 py-3 rounded-2xl leading-relaxed ${
+          isUser
+            ? 'bg-primary text-on-primary rounded-tr-sm font-manrope text-sm'
+            : 'bg-surface-container text-on-surface rounded-tl-sm'
+        }`}
+        dir={isAr ? 'rtl' : 'ltr'}
+      >
+        {isUser
+          ? <p className="font-manrope text-sm">{msg.content}</p>
+          : <FormattedMessage content={msg.content} />
+        }
+      </div>
+    </div>
+  );
+}
 
 function TypingIndicator() {
   return (
@@ -12,32 +186,7 @@ function TypingIndicator() {
   );
 }
 
-function MessageBubble({ msg, isAr }) {
-  const isUser = msg.role === 'user';
-  const formatted = msg.content
-    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\*(.*?)\*/g, '<em>$1</em>')
-    .replace(/\n/g, '<br/>');
-  return (
-    <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-3`}>
-      {!isUser && (
-        <div className="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center mx-2 flex-shrink-0 mt-0.5">
-          <span className="material-symbols-outlined text-on-primary-container text-sm">eco</span>
-        </div>
-      )}
-      <div
-        className={`max-w-[80%] px-4 py-3 rounded-2xl text-sm leading-relaxed font-manrope ${
-          isUser
-            ? 'bg-primary text-on-primary rounded-tr-sm'
-            : 'bg-surface-container text-on-surface rounded-tl-sm'
-        }`}
-        dir={isAr ? 'rtl' : 'ltr'}
-        dangerouslySetInnerHTML={{ __html: formatted }}
-      />
-    </div>
-  );
-}
-
+// ── Main chat widget ─────────────────────────────────────────────────────
 export default function AIChat() {
   const { t, isAr } = useLanguage();
   const [open, setOpen]         = useState(false);
@@ -47,7 +196,6 @@ export default function AIChat() {
   const bottomRef = useRef(null);
   const inputRef  = useRef(null);
 
-  // Re-seed welcome message when language changes or chat first opens
   useEffect(() => {
     if (open && !messages) {
       setMessages([{ id: 'welcome', role: 'assistant', content: t('chat_welcome') }]);
@@ -110,7 +258,7 @@ export default function AIChat() {
           <div className="absolute inset-0 sm:hidden bg-primary/10 backdrop-blur-sm" onClick={() => setOpen(false)} />
 
           <div
-            className="relative w-full sm:w-[400px] h-[600px] sm:h-[580px] bg-surface rounded-t-3xl sm:rounded-2xl shadow-botanical-lg flex flex-col overflow-hidden border border-outline-variant/50"
+            className="relative w-full sm:w-[420px] h-[620px] sm:h-[600px] bg-surface rounded-t-3xl sm:rounded-2xl shadow-botanical-lg flex flex-col overflow-hidden border border-outline-variant/50"
             dir={isAr ? 'rtl' : 'ltr'}
           >
             {/* Header */}

@@ -1,134 +1,120 @@
-// AI service - calls Firebase Function which securely wraps Gemini API
-// The API key is NEVER exposed in the frontend.
-
 import { PLANTS, SYMPTOM_TAG_MAP } from '../data/plants.js';
 
-// Build context string from plants database for AI grounding
-const buildPlantContext = () => {
-  const entries = Object.values(PLANTS).map(p => 
+// Build context string from plant database for the system prompt
+const buildPlantContext = () =>
+  Object.values(PLANTS).map(p =>
     `Plant: ${p.name} (${p.latinName})
 Category: ${p.category}
 Tags: ${p.tags.join(', ')}
 Description: ${p.shortDescription}
 Benefits: ${p.benefits.map(b => b.title + ': ' + b.desc).join('; ')}
 Symptoms addressed: ${p.symptoms.join(', ')}`
-  );
-  return entries.join('\n\n');
-};
+  ).join('\n\n');
 
-const SYSTEM_PROMPT = `You are a knowledgeable botanical health educator for Verdant Lore Botanical Institute. 
-Your role is to provide educational information about herbal plants and natural wellness.
+const SYSTEM_PROMPT = `You are Nabta's botanical health educator — a knowledgeable, warm, and evidence-aware guide to herbal wellness.
 
-STRICT RULES:
-1. ONLY provide information based on the plant database context provided below
-2. NEVER give medical diagnoses or prescribe treatments
-3. Always recommend consulting a qualified healthcare provider for medical conditions
-4. Classify user questions into symptom tags: IBS, Cough, Constipation, Immunity, Stress, Respiratory, Anxiety, Sleep, Fatigue, Nausea, PMS, Cold
-5. Suggest relevant plants from the database based on these classifications
-6. Keep responses concise, educational, and warm in tone
-7. If asked about something outside herbal/botanical education, politely redirect
+YOUR KNOWLEDGE SOURCES (use all three):
+1. NABTA PLANT DATABASE (below) — your primary source for detailed profiles on the 18 plants in this platform
+2. YOUR TRAINED BOTANICAL KNOWLEDGE — you may draw on peer-reviewed phytotherapy, ethnobotany, and pharmacognosy knowledge for additional context, mechanisms, and comparisons
+3. GENERAL MEDICAL PLANT SCIENCE — clinical herb-drug interactions, safety classifications, evidence levels
 
-AVAILABLE PLANT DATABASE:
+HARD CONSTRAINTS:
+- ONLY discuss topics related to medicinal plants, botanicals, herbal medicine, nutrition, or general wellness
+- NEVER diagnose medical conditions, prescribe dosages for specific patients, or replace a doctor
+- NEVER discuss topics outside the plant/health domain — politely redirect
+- Always end with: "⚠️ Educational only. Please consult a qualified healthcare professional before use."
+- Keep responses under 300 words — clear and structured
+
+NABTA PLANT DATABASE:
 ${buildPlantContext()}
 
-SYMPTOM-TO-PLANT CLASSIFICATIONS:
+SYMPTOM CLASSIFICATIONS:
 ${Object.entries(SYMPTOM_TAG_MAP).map(([tag, plants]) => `${tag}: ${plants.join(', ')}`).join('\n')}
 
-When responding:
-- Identify which symptom tags relate to the user's question
-- Suggest 1-3 relevant plants from the database
-- Explain briefly how those plants may help (educational only)
-- Always add: "⚠️ This is educational information only. Please consult a healthcare professional."
-- Format responses in a clear, friendly way`;
+RESPONSE FORMAT:
+- Identify which symptom/topic matches the question
+- Prioritize Nabta database plants where relevant, supplement with broader botanical knowledge when helpful
+- Use bold for plant names, bullet points for key facts
+- Always include the safety disclaimer at the end`;
 
-// In production: call Firebase Cloud Function
-// const callGeminiFunction = httpsCallable(functions, 'geminiChat');
+// ── Gemini direct call (dev mode — key is in VITE env) ───────────────────
+const callGeminiDirect = async (key, messages, userMessage) => {
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`;
+  const history = messages.slice(-6).map(m => ({
+    role: m.role === 'assistant' ? 'model' : 'user',
+    parts: [{ text: m.content }],
+  }));
+  const body = {
+    system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
+    contents: [...history, { role: 'user', parts: [{ text: userMessage }] }],
+    generationConfig: { maxOutputTokens: 1024, temperature: 0.4, topP: 0.8 },
+  };
+  const res  = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  const data = await res.json();
+  return data.candidates?.[0]?.content?.parts?.[0]?.text
+    || 'I apologize, I could not process your question. Please try again.';
+};
 
-// Fallback local AI simulation using Gemini API via fetch
+// ── Main entry point ─────────────────────────────────────────────────────
 export const sendChatMessage = async (messages, userMessage) => {
-  const endpoint = import.meta.env.VITE_FIREBASE_FUNCTION_URL;
-  
-  // If Firebase function URL is configured, use it (production)
-  if (endpoint) {
-    const response = await fetch(`${endpoint}/geminiChat`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ messages, userMessage, systemPrompt: SYSTEM_PROMPT }),
-    });
-    const data = await response.json();
-    return data.response;
-  }
-
-  // Development: call Gemini directly (set VITE_GEMINI_API_KEY in .env for dev only)
+  // Dev: VITE_GEMINI_API_KEY is set → call Gemini directly (no Cloud Function needed)
   const geminiKey = import.meta.env.VITE_GEMINI_API_KEY;
   if (geminiKey) {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${geminiKey}`;
-    const history = messages.slice(-6).map(m => ({
-      role: m.role === 'assistant' ? 'model' : 'user',
-      parts: [{ text: m.content }],
-    }));
-    
-    const body = {
-      system_instruction: { parts: [{ text: SYSTEM_PROMPT }] },
-      contents: [...history, { role: 'user', parts: [{ text: userMessage }] }],
-      generationConfig: { maxOutputTokens: 512, temperature: 0.4 },
-    };
+    return callGeminiDirect(geminiKey, messages, userMessage);
+  }
 
-    const res = await fetch(url, {
+  // Production: route through Netlify Function (API key stays server-side)
+  try {
+    const res = await fetch('/.netlify/functions/geminiChat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(body),
+      body: JSON.stringify({ messages: messages.slice(-8), userMessage }),
     });
+    if (!res.ok) throw new Error('Function error');
     const data = await res.json();
-    return data.candidates?.[0]?.content?.parts?.[0]?.text || 'I apologize, I could not process your question. Please try again.';
+    return data.response;
+  } catch {
+    return generateLocalResponse(userMessage);
   }
-
-  // Demo fallback: pattern-match responses from local data
-  return generateLocalResponse(userMessage);
 };
 
-// Smart local fallback that uses plant data
-const generateLocalResponse = (userMessage) => {
-  const msg = userMessage.toLowerCase();
-  
-  // Find matching symptoms
-  const matchedTags = Object.keys(SYMPTOM_TAG_MAP).filter(tag => 
-    msg.includes(tag.toLowerCase()) ||
-    (tag === 'Cough' && (msg.includes('cough') || msg.includes('cold') || msg.includes('throat'))) ||
-    (tag === 'IBS' && (msg.includes('ibs') || msg.includes('bloat') || msg.includes('stomach') || msg.includes('gut'))) ||
-    (tag === 'Stress' && (msg.includes('stress') || msg.includes('anxiety') || msg.includes('nervous'))) ||
-    (tag === 'Immunity' && (msg.includes('immun') || msg.includes('sick') || msg.includes('defense'))) ||
-    (tag === 'Sleep' && (msg.includes('sleep') || msg.includes('insomnia') || msg.includes('rest'))) ||
-    (tag === 'Fatigue' && (msg.includes('tired') || msg.includes('fatigue') || msg.includes('energy'))) ||
-    (tag === 'Constipation' && (msg.includes('constip') || msg.includes('digest') || msg.includes('bowel')))
-  );
-
-  if (matchedTags.length === 0) {
-    // Check if asking about a specific plant
-    const plant = Object.values(PLANTS).find(p => 
-      msg.includes(p.name.toLowerCase()) || msg.includes(p.latinName.toLowerCase())
-    );
-    if (plant) {
-      return `**${plant.name}** (*${plant.latinName}*)\n\n${plant.description}\n\n**Key Benefits:**\n${plant.benefits.map(b => `• **${b.title}**: ${b.desc}`).join('\n')}\n\n**How to use:** ${plant.preparation[0].desc}\n\n⚠️ *This is educational information only. Please consult a healthcare professional before starting any herbal regimen.*`;
-    }
-    return "Welcome to Verdant Lore! 🌿 I'm here to help you explore the world of botanical wellness. You can ask me about specific herbs, symptoms you're experiencing, or health categories like immunity, digestion, or respiratory support. What would you like to learn about?";
-  }
-
-  const plantIds = [...new Set(matchedTags.flatMap(tag => SYMPTOM_TAG_MAP[tag] || []))].slice(0, 3);
-  const plants = plantIds.map(id => PLANTS[id]).filter(Boolean);
-
-  let response = `Based on your interest in **${matchedTags.join(', ')}**, here are some botanical allies that may support you:\n\n`;
-  
-  plants.forEach(plant => {
-    response += `🌿 **${plant.name}** (*${plant.latinName}*)\n${plant.shortDescription}\n\n`;
-  });
-
-  response += `⚠️ *This is educational information only. Please consult a qualified healthcare professional before using any herbal remedies, especially if you have existing conditions or take medications.*`;
-  
-  return response;
-};
-
+// ── Local keyword fallback (no API key, no Cloud Function) ───────────────
 export const classifySymptoms = (text) => {
   const lower = text.toLowerCase();
   return Object.keys(SYMPTOM_TAG_MAP).filter(tag => lower.includes(tag.toLowerCase()));
+};
+
+const generateLocalResponse = (userMessage) => {
+  const msg = userMessage.toLowerCase();
+
+  const matchedTags = Object.keys(SYMPTOM_TAG_MAP).filter(tag =>
+    msg.includes(tag.toLowerCase()) ||
+    (tag === 'Cough'       && (msg.includes('cough') || msg.includes('cold') || msg.includes('throat'))) ||
+    (tag === 'IBS'         && (msg.includes('ibs') || msg.includes('bloat') || msg.includes('stomach'))) ||
+    (tag === 'Stress'      && (msg.includes('stress') || msg.includes('anxiety') || msg.includes('nervous'))) ||
+    (tag === 'Immunity'    && (msg.includes('immun') || msg.includes('sick') || msg.includes('defense'))) ||
+    (tag === 'Sleep'       && (msg.includes('sleep') || msg.includes('insomnia') || msg.includes('rest'))) ||
+    (tag === 'Fatigue'     && (msg.includes('tired') || msg.includes('fatigue') || msg.includes('energy'))) ||
+    (tag === 'Constipation'&& (msg.includes('constip') || msg.includes('digest') || msg.includes('bowel')))
+  );
+
+  if (matchedTags.length === 0) {
+    const plant = Object.values(PLANTS).find(p =>
+      msg.includes(p.name.toLowerCase()) || msg.includes(p.latinName.toLowerCase())
+    );
+    if (plant) {
+      return `**${plant.name}** (*${plant.latinName}*)\n\n${plant.description}\n\n**Key Benefits:**\n${plant.benefits.map(b => `• **${b.title}**: ${b.desc}`).join('\n')}\n\n**How to use:** ${plant.preparation[0].desc}\n\n⚠️ *Educational information only. Please consult a healthcare professional before starting any herbal regimen.*`;
+    }
+    return "Hello! 🌿 I'm your Nabta botanical guide. Ask me about specific herbs, symptoms, or health categories like immunity, digestion, or respiratory support. What would you like to learn about?";
+  }
+
+  const plantIds = [...new Set(matchedTags.flatMap(tag => SYMPTOM_TAG_MAP[tag] || []))].slice(0, 3);
+  const plants   = plantIds.map(id => PLANTS[id]).filter(Boolean);
+
+  let response = `Based on your interest in **${matchedTags.join(', ')}**, here are some botanical allies:\n\n`;
+  plants.forEach(plant => {
+    response += `🌿 **${plant.name}** (*${plant.latinName}*)\n${plant.shortDescription}\n\n`;
+  });
+  response += `⚠️ *Educational information only. Please consult a qualified healthcare professional before using any herbal remedies.*`;
+  return response;
 };

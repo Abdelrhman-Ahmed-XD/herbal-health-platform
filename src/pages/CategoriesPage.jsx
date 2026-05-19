@@ -13,44 +13,51 @@ export default function CategoriesPage() {
   const { t, isAr } = useLanguage();
   return (
     <div className="page-enter pt-20">
-      <section className="section-container py-16 text-center">
+      <section className="section-container py-16 text-center animate-slide-up">
         <h1 className="font-caslon text-headline-lg text-primary mb-4">{t('cats_title')}</h1>
         <p className="font-manrope text-body-md text-on-surface-variant max-w-xl mx-auto">{t('cats_sub')}</p>
       </section>
 
       <section className="section-container pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {CAT_IDS.map((id) => {
+          {CAT_IDS.map((id, i) => {
             const meta = CATEGORY_META[id];
             return (
-              <div key={id} className="group">
-                <div className="flex flex-col rounded-xl overflow-hidden border border-surface-container-high shadow-botanical hover:shadow-botanical-lg transition-all duration-300 hover:-translate-y-1">
+              <Link
+                key={id}
+                to={`/category/${id}`}
+                className="group block animate-slide-up"
+                style={{ animationDelay: `${i * 120}ms` }}
+              >
+                <div className="flex flex-col rounded-xl overflow-hidden border border-surface-container-high shadow-botanical hover:shadow-botanical-lg transition-all duration-300 hover:-translate-y-1 h-full">
                   <div className="h-56 bg-surface-container overflow-hidden">
-                    <img src={meta.image} alt={t(meta.nameKey)}
+                    <img
+                      src={meta.image}
+                      alt={t(meta.nameKey)}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy" />
+                      loading="lazy"
+                    />
                   </div>
-                  <div className="bg-surface-container-lowest p-6">
-                    <div className="flex items-center gap-2 mb-2">
+                  <div className={`bg-surface-container-lowest p-6 flex flex-col flex-1 ${isAr ? 'text-right' : ''}`}>
+                    <div className={`flex items-center gap-2 mb-2 ${isAr ? 'flex-row-reverse' : ''}`}>
                       <span className="material-symbols-outlined text-primary">{meta.icon}</span>
-                      <h2 className="font-caslon text-headline-sm text-primary">{t(meta.nameKey)}</h2>
+                      <h2 className="font-caslon text-headline-sm text-primary group-hover:text-secondary transition-colors">{t(meta.nameKey)}</h2>
                     </div>
                     <p className="font-manrope text-sm text-on-surface-variant leading-relaxed mb-4">{t(meta.taglineKey)}</p>
-                    <div className="flex gap-2 mb-4 flex-wrap">
+                    <div className={`flex gap-2 mb-4 flex-wrap ${isAr ? 'flex-row-reverse' : ''}`}>
                       {meta.chips.map(c => <span key={c} className="chip text-xs">{c}</span>)}
                     </div>
-                    <hr className="border-outline-variant mb-4" />
-                    <Link
-                      to={`/category/${id}`}
-                      className={`flex items-center gap-2 font-manrope text-sm font-semibold text-primary hover:gap-3 transition-all duration-200 group/link ${isAr ? 'flex-row-reverse justify-end' : ''}`}
-                    >
+                    <hr className="border-outline-variant mb-4 mt-auto" />
+                    <div className={`flex items-center gap-2 font-manrope text-sm font-semibold text-primary group-hover:gap-3 transition-all duration-200 ${isAr ? 'flex-row-reverse justify-end' : ''}`}>
                       {t('cats_explore')}
-                      <span className="material-symbols-outlined text-base group-hover/link:translate-x-1 transition-transform"
-                        style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>arrow_forward</span>
-                    </Link>
+                      <span
+                        className="material-symbols-outlined text-base transition-transform duration-200 group-hover:translate-x-1"
+                        style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}
+                      >arrow_forward</span>
+                    </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>

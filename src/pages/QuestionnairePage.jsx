@@ -4,7 +4,7 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell,
 } from 'recharts';
-import { PLANTS, SYMPTOM_TAG_MAP } from '../data/plants.js';
+import { PLANTS } from '../data/plants.js';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
 import { PLANT_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
 import { saveQuestionnaire, fetchAnalytics, invalidateAnalyticsCache } from '../services/firestoreService.js';
@@ -23,14 +23,30 @@ const CustomTooltip = ({ active, payload, label }) => {
 /* ── Dashboard ─────────────────────────────────────────────────────────── */
 const SYM_PALETTE = ['#1b3022','#536346','#4d6453','#364c3c','#59694b','#819986'];
 const CAT_PALETTE = ['#f4dfcb','#d6e9c3','#b4cdb8','#d7c3b0'];
-const SYM_AR_MAP  = { Immunity:'مناعة', Stress:'توتر', Fatigue:'إرهاق', Sleep:'نوم', IBS:'قولون', Cough:'سعال', PMS:'دورة', Constipation:'إمساك' };
+const SYM_AR_MAP  = {
+  // Legacy keys
+  Immunity:'مناعة', Stress:'توتر', Fatigue:'إرهاق', Sleep:'نوم', IBS:'قولون', Cough:'سعال', PMS:'دورة', Constipation:'إمساك',
+  // New sub_concern slugs (AR)
+  'menstrual-health':'الدورة الشهرية', 'pregnancy-support':'الحمل', 'breast-feeding':'الرضاعة',
+  'hair-care':'الشعر', 'skin-care':'البشرة', 'cold':'البرد', 'rhinitis':'التهاب الأنف',
+  'sinusitis':'الجيوب الأنفية', 'cough':'السعال', 'immune-boosting':'المناعة',
+  'immune-recover':'التعافي', 'anti-oxidant-rich':'مضادات الأكسدة', 'wellness':'الصحة العامة',
+};
+const SYM_EN_MAP  = {
+  // New sub_concern slugs (EN display)
+  'menstrual-health':'Menstrual', 'pregnancy-support':'Pregnancy', 'breast-feeding':'Breastfeeding',
+  'hair-care':'Hair Care', 'skin-care':'Skin Care', 'cold':'Cold & Flu', 'rhinitis':'Rhinitis',
+  'sinusitis':'Sinusitis', 'cough':'Cough', 'immune-boosting':'Immunity',
+  'immune-recover':'Recovery', 'anti-oxidant-rich':'Antioxidant', 'wellness':'Wellness',
+};
 const CAT_AR_MAP  = { immunity:'المناعة', digestive:'الهضم', respiratory:'الجهاز التنفسي', 'womens-health':'صحة المرأة', stress:'التوتر', sleep:'النوم' };
 const CAT_EN_MAP  = { immunity:'Immunity', digestive:'Digestive', respiratory:'Respiratory', 'womens-health':"Women's", stress:'Stress', sleep:'Sleep' };
 
 function buildSymptomChart(raw, isAr) {
   if (!raw || Object.keys(raw).length === 0) return [];
   return Object.entries(raw).sort(([,a],[,b])=>b-a).slice(0,6).map(([k,v],i)=>({
-    name: isAr ? (SYM_AR_MAP[k]||k) : k, count: v, fill: SYM_PALETTE[i%SYM_PALETTE.length],
+    name: isAr ? (SYM_AR_MAP[k] || k) : (SYM_EN_MAP[k] || k),
+    count: v, fill: SYM_PALETTE[i%SYM_PALETTE.length],
   }));
 }
 
@@ -93,8 +109,6 @@ function AnalyticsDashboard() {
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-
-          {/* Bar – symptoms */}
           <div className="xl:col-span-2 bg-surface-container-lowest border border-surface-container-high rounded-xl p-6 shadow-botanical-sm">
             <h3 className="font-caslon text-xl text-primary mb-1">{t('q_chart_symptoms')}</h3>
             <p className="font-manrope text-xs text-on-surface-variant mb-5">{t('q_chart_symptoms_sub')}</p>
@@ -114,8 +128,6 @@ function AnalyticsDashboard() {
               <EmptyChart message={emptyMsg} />
             )}
           </div>
-
-          {/* Pie – categories */}
           <div className="bg-surface-container-lowest border border-surface-container-high rounded-xl p-6 shadow-botanical-sm">
             <h3 className="font-caslon text-xl text-primary mb-1">{t('q_chart_categories')}</h3>
             <p className="font-manrope text-xs text-on-surface-variant mb-4">{t('q_chart_categories_sub')}</p>
@@ -142,89 +154,203 @@ function AnalyticsDashboard() {
               <EmptyChart message={emptyMsg} />
             )}
           </div>
-
         </div>
       )}
     </div>
   );
 }
 
-/* ── Build translated questions ─────────────────────────────────────────── */
-const buildQuestions = (t) => [
-  {
-    id:'primary_concern', step:1, type:'single',
-    question: t('qq1_q'), subtitle: t('qq1_sub'),
-    options:[
-      { value:'immunity',      label:t('opt_immunity'),    icon:'shield',      desc:t('opt_immunity_desc') },
-      { value:'digestive',     label:t('opt_digestive'),   icon:'nutrition',   desc:t('opt_digestive_desc') },
-      { value:'respiratory',   label:t('opt_respiratory'), icon:'air',         desc:t('opt_respiratory_desc') },
-      { value:'womens-health', label:t('opt_womens'),      icon:'favorite',    desc:t('opt_womens_desc') },
-      { value:'stress',        label:t('opt_stress'),      icon:'psychology',  desc:t('opt_stress_desc') },
-      { value:'sleep',         label:t('opt_sleep'),       icon:'bedtime',     desc:t('opt_sleep_desc') },
+/* ── Recommendation engine ──────────────────────────────────────────────── */
+const EVIDENCE = {
+  'ginger': 'high', 'dill-seed': 'high', 'cinnamon': 'high',
+  'echinacea': 'high', 'black-seed': 'high',
+  'aloe-vera': 'moderate', 'tea-tree': 'moderate', 'licorice': 'moderate',
+  'green-tea': 'moderate', 'fenugreek': 'moderate', 'fennel': 'moderate',
+  'butterbur': 'moderate', 'stinging-nettle': 'moderate',
+  'eucalyptus': 'moderate', 'lemon': 'moderate',
+  'rosemary': 'preliminary', 'moringa': 'preliminary', 'astragalus': 'preliminary',
+};
+
+// Plants excluded for each safety flag
+const SAFETY_EXCLUDE = {
+  pregnant:      new Set(['fenugreek', 'dill-seed', 'butterbur', 'stinging-nettle', 'black-seed']),
+  nut_allergy:   new Set(['fenugreek']),
+};
+// Plants flagged with a warning for each safety flag (not excluded, but caution needed)
+const SAFETY_WARN = {
+  pregnant:      new Set(['cinnamon', 'ginger', 'licorice']),
+  breastfeeding: new Set(['dill-seed']),
+  diabetes:      new Set(['fenugreek', 'cinnamon', 'black-seed']),
+  blood_thinners:new Set(['ginger', 'black-seed']),
+  liver:         new Set(['licorice', 'echinacea']),
+};
+// Sub-concerns that cross subcategory boundaries — explicit plant lists
+const CONCERN_OVERRIDE = {
+  'resp-both':        ['eucalyptus', 'lemon', 'butterbur', 'stinging-nettle'],
+  'immune-recover':   ['echinacea', 'astragalus'],
+  'anti-oxidant-rich':['green-tea', 'rosemary', 'moringa', 'lemon'],
+  'wellness':         ['ginger', 'green-tea', 'lemon', 'rosemary'],
+};
+
+function getFormInfo(plant, preferredForm) {
+  if (!plant.howToUse?.length) return null;
+  if (!preferredForm || preferredForm === 'unsure' || preferredForm === 'both') return plant.howToUse[0];
+  const match = plant.howToUse.find(h => {
+    const m = h.method.toLowerCase();
+    if (preferredForm === 'tea')      return m.includes('tea') || m.includes('infusion') || m.includes('decoction') || m.includes('brew');
+    if (preferredForm === 'capsules') return m.includes('capsul') || m.includes('supplement') || m.includes('extract');
+    return false;
+  });
+  return match || plant.howToUse[0];
+}
+
+function getRecommendations(answers) {
+  const { primary_concern, sub_concern, safety_flags = [], preferred_form } = answers;
+  const activeFlags = safety_flags.filter(f => f !== 'none');
+
+  if (primary_concern === 'digestive') return []; // coming soon
+
+  const key = (sub_concern === 'both' && primary_concern === 'respiratory')
+    ? 'resp-both'
+    : (sub_concern || primary_concern);
+
+  let candidateIds;
+  if (CONCERN_OVERRIDE[key]) {
+    candidateIds = [...CONCERN_OVERRIDE[key]];
+  } else {
+    candidateIds = Object.values(PLANTS)
+      .filter(p => !p.isDemo && p.subcategory === key)
+      .map(p => p.id);
+  }
+
+  const excluded = new Set(activeFlags.flatMap(f => [...(SAFETY_EXCLUDE[f] ?? new Set())]));
+  const warned   = new Set(activeFlags.flatMap(f => [...(SAFETY_WARN[f]   ?? new Set())]));
+
+  return candidateIds
+    .filter(id => !excluded.has(id) && PLANTS[id] && !PLANTS[id].isDemo)
+    .slice(0, 4)
+    .map(id => ({
+      plant:          PLANTS[id],
+      evidenceLevel:  EVIDENCE[id] || 'preliminary',
+      isWarned:       warned.has(id),
+      keyConstituent: PLANTS[id].activeConstituents?.[0] ?? null,
+      formInfo:       getFormInfo(PLANTS[id], preferred_form),
+      dosage:         PLANTS[id].dosage?.standard ?? '',
+    }));
+}
+
+/* ── Question definitions ───────────────────────────────────────────────── */
+function buildQuestions(t, answers = {}) {
+  const q1 = answers.primary_concern;
+  const subOptionsMap = {
+    'womens-health': [
+      { value: 'skin-care',        label: t('opt_wh_skin'),      icon: 'face_retouching_natural', desc: t('opt_wh_skin_desc') },
+      { value: 'breast-feeding',   label: t('opt_wh_bf'),        icon: 'baby_changing_station',   desc: t('opt_wh_bf_desc') },
+      { value: 'menstrual-health', label: t('opt_wh_menstrual'), icon: 'spa',                     desc: t('opt_wh_menstrual_desc') },
     ],
-  },
-  {
-    id:'symptoms', step:2, type:'multi',
-    question: t('qq2_q'), subtitle: t('qq2_sub'),
-    options:[
-      { value:'Fatigue',     label:t('opt_fatigue'),          icon:'energy_savings_leaf' },
-      { value:'Stress',      label:t('opt_anxiety'),          icon:'psychology' },
-      { value:'Sleep',       label:t('opt_poor_sleep'),       icon:'bedtime' },
-      { value:'Constipation',label:t('opt_digestive_issues'), icon:'nutrition' },
-      { value:'IBS',         label:t('opt_ibs'),              icon:'healing' },
-      { value:'Cough',       label:t('opt_cough'),            icon:'coronavirus' },
-      { value:'Immunity',    label:t('opt_low_immunity'),     icon:'shield' },
-      { value:'PMS',         label:t('opt_hormonal'),         icon:'favorite' },
+    'respiratory': [
+      { value: 'cold',     label: t('opt_resp_cold'),     icon: 'coronavirus', desc: t('opt_resp_cold_desc') },
+      { value: 'rhinitis', label: t('opt_resp_rhinitis'), icon: 'air',         desc: t('opt_resp_rhinitis_desc') },
+      { value: 'both',     label: t('opt_resp_both'),     icon: 'healing',     desc: t('opt_resp_both_desc') },
     ],
-  },
-  {
-    id:'lifestyle', step:3, type:'single',
-    question: t('qq3_q'), subtitle: t('qq3_sub'),
-    options:[
-      { value:'sedentary',   label:t('opt_sedentary'),   icon:'chair',           desc:t('opt_sedentary_desc') },
-      { value:'moderate',    label:t('opt_moderate'),    icon:'directions_walk', desc:t('opt_moderate_desc') },
-      { value:'active',      label:t('opt_active'),      icon:'fitness_center',  desc:t('opt_active_desc') },
-      { value:'high_stress', label:t('opt_high_stress'), icon:'bolt',            desc:t('opt_high_stress_desc') },
+    'immunity': [
+      { value: 'immune-boosting',   label: t('opt_imm_prevent'),     icon: 'shield',  desc: t('opt_imm_prevent_desc') },
+      { value: 'immune-recover',    label: t('opt_imm_recover'),     icon: 'healing', desc: t('opt_imm_recover_desc') },
+      { value: 'anti-oxidant-rich', label: t('opt_imm_antioxidant'), icon: 'spa',     desc: t('opt_imm_antioxidant_desc') },
     ],
-  },
-  {
-    id:'experience', step:4, type:'single',
-    question: t('qq4_q'), subtitle: t('qq4_sub'),
-    options:[
-      { value:'beginner',    label:t('opt_beginner'),    icon:'eco',           desc:t('opt_beginner_desc') },
-      { value:'some',        label:t('opt_some'),        icon:'local_florist', desc:t('opt_some_desc') },
-      { value:'experienced', label:t('opt_experienced'), icon:'science',       desc:t('opt_experienced_desc') },
-    ],
-  },
-  {
-    id:'goal', step:5, type:'single',
-    question: t('qq5_q'), subtitle: t('qq5_sub'),
-    options:[
-      { value:'prevention', label:t('opt_prevention'), icon:'shield',    desc:t('opt_prevention_desc') },
-      { value:'acute',      label:t('opt_acute'),      icon:'healing',   desc:t('opt_acute_desc') },
-      { value:'longterm',   label:t('opt_longterm'),   icon:'spa',       desc:t('opt_longterm_desc') },
-      { value:'education',  label:t('opt_education'),  icon:'menu_book', desc:t('opt_education_desc') },
-    ],
-  },
-];
+  };
+
+  return [
+    {
+      id: 'primary_concern', type: 'single',
+      skipCheck: () => false,
+      question: t('qq1_q'), subtitle: t('qq1_sub'),
+      options: [
+        { value: 'womens-health', label: t('opt_womens'),         icon: 'favorite',  desc: t('opt_womens_desc') },
+        { value: 'respiratory',   label: t('opt_respiratory'),    icon: 'air',       desc: t('opt_respiratory_desc') },
+        { value: 'immunity',      label: t('opt_immunity'),       icon: 'shield',    desc: t('opt_immunity_desc') },
+        { value: 'digestive',     label: t('opt_digestive_soon'), icon: 'nutrition', desc: t('opt_digestive_soon_desc') },
+        { value: 'wellness',      label: t('opt_wellness'),       icon: 'spa',       desc: t('opt_wellness_desc') },
+      ],
+    },
+    {
+      id: 'sub_concern', type: 'single',
+      skipCheck: (ans) => !ans.primary_concern || !subOptionsMap[ans.primary_concern],
+      question: t('qq2_new_q'), subtitle: t('qq2_new_sub'),
+      options: subOptionsMap[q1] ?? [],
+    },
+    {
+      id: 'safety_flags', type: 'multi',
+      skipCheck: () => false,
+      question: t('qq3_new_q'), subtitle: t('qq3_new_sub'),
+      options: [
+        { value: 'pregnant',       label: t('opt_pregnant'),       icon: 'child_care' },
+        { value: 'breastfeeding',  label: t('opt_breastfeeding'),  icon: 'baby_changing_station' },
+        { value: 'diabetes',       label: t('opt_diabetes'),       icon: 'bloodtype' },
+        { value: 'blood_thinners', label: t('opt_blood_thinners'), icon: 'medication' },
+        { value: 'liver',          label: t('opt_liver'),          icon: 'monitor_heart' },
+        { value: 'nut_allergy',    label: t('opt_nut_allergy'),    icon: 'no_food' },
+        { value: 'none',           label: t('opt_none_apply'),     icon: 'check_circle' },
+      ],
+    },
+    {
+      id: 'age_group', type: 'single',
+      skipCheck: () => false,
+      question: t('qq4_new_q'), subtitle: t('qq4_new_sub'),
+      options: [
+        { value: 'under18', label: t('opt_age_under18'), icon: 'child_care', desc: t('opt_age_under18_desc') },
+        { value: '18_40',   label: t('opt_age_18_40'),   icon: 'person',     desc: '' },
+        { value: '40_65',   label: t('opt_age_40_65'),   icon: 'person_4',   desc: '' },
+        { value: 'over65',  label: t('opt_age_over65'),  icon: 'elderly',    desc: t('opt_age_over65_desc') },
+      ],
+    },
+    {
+      id: 'preferred_form', type: 'single',
+      skipCheck: () => false,
+      question: t('qq5_new_q'), subtitle: t('qq5_new_sub'),
+      options: [
+        { value: 'tea',      label: t('opt_form_tea'),      icon: 'local_cafe',   desc: t('opt_form_tea_desc') },
+        { value: 'capsules', label: t('opt_form_capsules'), icon: 'medication',   desc: t('opt_form_capsules_desc') },
+        { value: 'both',     label: t('opt_form_both'),     icon: 'spa',          desc: t('opt_form_both_desc') },
+        { value: 'unsure',   label: t('opt_form_unsure'),   icon: 'help_outline', desc: t('opt_form_unsure_desc') },
+      ],
+    },
+  ];
+}
 
 /* ── Wizard ─────────────────────────────────────────────────────────────── */
 function QuestionnaireWizard({ onComplete }) {
-  const { t, isAr }   = useLanguage();
-  const questions      = buildQuestions(t);
+  const { t, isAr } = useLanguage();
   const [step, setStep]       = useState(0);
   const [answers, setAnswers] = useState({});
-  const current = questions[step];
-  const total   = questions.length;
+
+  // Rebuild on every render so Q2 options update instantly with Q1 selection
+  const questions = buildQuestions(t, answers);
+  const visible   = questions.filter(q => !q.skipCheck(answers));
+  const current   = visible[step] ?? visible[visible.length - 1];
+  const total     = visible.length;
 
   const handleSelect = (value) => {
     if (current.type === 'multi') {
       setAnswers(prev => {
-        const ex = prev[current.id] ?? [];
-        return { ...prev, [current.id]: ex.includes(value) ? ex.filter(v => v !== value) : [...ex, value] };
+        const existing = prev[current.id] ?? [];
+        let next;
+        if (value === 'none') {
+          next = existing.includes('none') ? [] : ['none'];
+        } else {
+          const withoutNone = existing.filter(v => v !== 'none');
+          next = withoutNone.includes(value)
+            ? withoutNone.filter(v => v !== value)
+            : [...withoutNone, value];
+        }
+        return { ...prev, [current.id]: next };
       });
     } else {
-      setAnswers(prev => ({ ...prev, [current.id]: value }));
+      setAnswers(prev => {
+        const updated = { ...prev, [current.id]: value };
+        if (current.id === 'primary_concern') delete updated.sub_concern;
+        return updated;
+      });
     }
   };
 
@@ -308,22 +434,40 @@ function QuestionnaireWizard({ onComplete }) {
   );
 }
 
+/* ── Evidence badge ─────────────────────────────────────────────────────── */
+function EvidenceBadge({ level, t }) {
+  const cfg = {
+    high:        { label: t('res_evidence_high'),        cls: 'bg-primary-fixed/30 border-primary/20 text-primary' },
+    moderate:    { label: t('res_evidence_moderate'),    cls: 'bg-secondary-fixed/40 border-secondary/20 text-secondary' },
+    preliminary: { label: t('res_evidence_preliminary'), cls: 'bg-surface-container border-outline-variant text-on-surface-variant' },
+  };
+  const { label, cls } = cfg[level] || cfg.preliminary;
+  return (
+    <span className={`inline-flex items-center gap-1.5 text-xs font-manrope font-semibold px-2.5 py-1 rounded-full border whitespace-nowrap ${cls}`}>
+      <span className="w-1.5 h-1.5 rounded-full bg-current opacity-70 flex-shrink-0" />
+      {label}
+    </span>
+  );
+}
+
 /* ── Results ────────────────────────────────────────────────────────────── */
 function Results({ answers, onReset }) {
   const { t, isAr } = useLanguage();
-  const symptoms  = answers.symptoms ?? [];
-  const category  = answers.primary_concern;
+  const recs = getRecommendations(answers);
+  const isComingSoon      = answers.primary_concern === 'digestive';
+  const hasContraindication = (answers.safety_flags ?? []).some(f => f !== 'none');
 
-  const recommendedIds = new Set();
-  symptoms.forEach(sym => (SYMPTOM_TAG_MAP[sym] ?? []).forEach(id => recommendedIds.add(id)));
-  if (category) {
-    Object.values(PLANTS).filter(p => p.category === category).slice(0, 3).forEach(p => recommendedIds.add(p.id));
-  }
-  const recommendedPlants = [...recommendedIds].map(id => PLANTS[id]).filter(Boolean).slice(0, 4);
+  const summaryItems = [
+    answers.primary_concern && { label: t('res_focus'),     value: answers.primary_concern.replace(/-/g, ' ') },
+    answers.sub_concern     && { label: t('res_your_focus'),value: answers.sub_concern.replace(/-/g, ' ') },
+    answers.age_group       && { label: t('res_your_age'),  value: t(`opt_age_${answers.age_group}`) || answers.age_group },
+    answers.preferred_form  && { label: t('res_your_form'), value: t(`opt_form_${answers.preferred_form}`) || answers.preferred_form },
+  ].filter(Boolean);
 
   return (
     <div className="max-w-3xl mx-auto page-enter">
-      <div className="text-center mb-10">
+      {/* Header */}
+      <div className="text-center mb-8">
         <div className="w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center mx-auto mb-4">
           <span className="material-symbols-outlined text-on-secondary-fixed text-3xl">eco</span>
         </div>
@@ -331,45 +475,144 @@ function Results({ answers, onReset }) {
         <p className="font-manrope text-sm text-on-surface-variant">{t('res_sub')}</p>
       </div>
 
-      <div className="bg-surface-container rounded-xl p-5 mb-8 flex flex-wrap gap-5">
-        <div>
-          <p className="font-manrope text-xs text-on-surface-variant uppercase tracking-wider mb-1.5">{t('res_focus')}</p>
-          <span className="chip capitalize">{(category ?? 'General').replace('-', ' ')}</span>
-        </div>
-        {symptoms.length > 0 && (
-          <div>
-            <p className="font-manrope text-xs text-on-surface-variant uppercase tracking-wider mb-1.5">{t('res_symptoms')}</p>
-            <div className="flex flex-wrap gap-1.5">
-              {symptoms.map(s => <span key={s} className="chip">{s}</span>)}
-            </div>
+      {/* Answer summary */}
+      <div className="bg-surface-container rounded-xl p-5 mb-6 flex flex-wrap gap-5">
+        {summaryItems.map(item => (
+          <div key={item.label}>
+            <p className="font-manrope text-xs text-on-surface-variant uppercase tracking-wider mb-1.5">{item.label}</p>
+            <span className="chip capitalize">{item.value}</span>
           </div>
-        )}
+        ))}
       </div>
 
-      <h3 className="font-caslon text-xl text-primary mb-4">{t('res_recommended')}</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-        {recommendedPlants.map(plant => {
-          const arData = isAr ? PLANT_TRANSLATIONS.ar[plant.id] : null;
-          return (
-            <Link key={plant.id} to={`/plant/${plant.id}`}
-              className="flex gap-4 bg-surface-container-lowest border border-surface-container-high rounded-xl p-4 hover:shadow-botanical transition-all hover:-translate-y-0.5 group">
-              <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-surface-container">
-                <img src={plant.image} alt={arData?.name ?? plant.name} className="w-full h-full object-cover" loading="lazy" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <h4 className="font-caslon text-lg text-primary group-hover:text-secondary transition-colors">
-                  {arData?.name ?? plant.name}
-                </h4>
-                <p className="font-caslon italic text-xs text-on-surface-variant mb-1">{plant.latinName}</p>
-                <p className="font-manrope text-xs text-on-surface-variant line-clamp-2">
-                  {arData?.shortDescription ?? plant.shortDescription}
-                </p>
-              </div>
-            </Link>
-          );
-        })}
+      {/* Contraindication warning */}
+      {hasContraindication && (
+        <div className="flex gap-3 bg-tertiary-fixed/30 border border-tertiary/30 rounded-xl p-4 mb-6">
+          <span className="material-symbols-outlined text-tertiary flex-shrink-0 mt-0.5">warning</span>
+          <p className="font-manrope text-sm text-on-surface-variant leading-relaxed">{t('res_contraindication_warning')}</p>
+        </div>
+      )}
+
+      {/* Coming soon */}
+      {isComingSoon && (
+        <div className="text-center py-16 bg-surface-container-lowest border border-dashed border-outline-variant rounded-2xl mb-8">
+          <span className="material-symbols-outlined text-5xl text-outline mb-3 block">construction</span>
+          <h3 className="font-caslon text-xl text-primary mb-2">{t('res_coming_soon_title')}</h3>
+          <p className="font-manrope text-sm text-on-surface-variant max-w-sm mx-auto">{t('res_coming_soon_desc')}</p>
+        </div>
+      )}
+
+      {/* No plants found (excluded by safety) */}
+      {!isComingSoon && recs.length === 0 && (
+        <div className="text-center py-12 bg-surface-container-lowest border border-dashed border-outline-variant rounded-2xl mb-8">
+          <span className="material-symbols-outlined text-5xl text-outline mb-3 block">search_off</span>
+          <p className="font-manrope text-sm text-on-surface-variant">{t('res_no_plants_found')}</p>
+        </div>
+      )}
+
+      {/* Recommendation cards */}
+      {recs.length > 0 && (
+        <>
+          <h3 className="font-caslon text-xl text-primary mb-4">{t('res_recommended')}</h3>
+          <div className="space-y-4 mb-8">
+            {recs.map(({ plant, evidenceLevel, isWarned, keyConstituent, formInfo, dosage }) => {
+              const arData = isAr ? PLANT_TRANSLATIONS.ar[plant.id] : null;
+              return (
+                <div key={plant.id}
+                  className={`bg-surface-container-lowest border rounded-2xl overflow-hidden shadow-botanical-sm ${
+                    isWarned ? 'border-tertiary/40' : 'border-surface-container-high'
+                  }`}
+                >
+                  {/* Top: image + name + evidence */}
+                  <div className="flex gap-4 p-4">
+                    <div className="w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container">
+                      <img src={plant.image} alt={arData?.name ?? plant.name}
+                        className="w-full h-full object-cover" loading="lazy" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-start justify-between gap-2 flex-wrap mb-1">
+                        <div>
+                          <h4 className="font-caslon text-lg text-primary leading-tight">
+                            {arData?.name ?? plant.name}
+                          </h4>
+                          <p className="font-manrope text-xs italic text-on-surface-variant">{plant.latinName}</p>
+                        </div>
+                        <EvidenceBadge level={evidenceLevel} t={t} />
+                      </div>
+                      <p className="font-manrope text-xs text-on-surface-variant leading-relaxed mt-1">
+                        <span className="font-semibold text-on-surface">{t('res_match_reason_label')}: </span>
+                        {isAr
+                          ? `يعالج: ${plant.symptoms.slice(0, 3).join('، ')}`
+                          : `Addresses: ${plant.symptoms.slice(0, 3).join(', ')}`
+                        }
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Detail grid */}
+                  <div className="border-t border-outline-variant/50 px-4 py-3 grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {keyConstituent && (
+                      <div>
+                        <p className="font-manrope text-xs text-on-surface-variant uppercase tracking-wide mb-0.5">
+                          {t('res_key_constituent_label')}
+                        </p>
+                        <p className="font-manrope text-xs font-semibold text-on-surface">{keyConstituent.name}</p>
+                        <p className="font-manrope text-xs text-on-surface-variant leading-relaxed line-clamp-2">{keyConstituent.effect}</p>
+                      </div>
+                    )}
+                    {formInfo && (
+                      <div>
+                        <p className="font-manrope text-xs text-on-surface-variant uppercase tracking-wide mb-0.5">
+                          {t('res_recommended_form_label')}
+                        </p>
+                        <p className="font-manrope text-xs font-semibold text-on-surface">{formInfo.method}</p>
+                        <p className="font-manrope text-xs text-on-surface-variant leading-relaxed line-clamp-2">{formInfo.instruction}</p>
+                      </div>
+                    )}
+                    {dosage && (
+                      <div className="sm:col-span-2">
+                        <p className="font-manrope text-xs text-on-surface-variant uppercase tracking-wide mb-0.5">
+                          {t('res_dose_label')}
+                        </p>
+                        <p className="font-manrope text-xs text-on-surface leading-relaxed">{dosage}</p>
+                      </div>
+                    )}
+                    {isWarned && plant.warnings?.[0] && (
+                      <div className="sm:col-span-2 bg-tertiary-fixed/20 border border-tertiary/20 rounded-lg px-3 py-2">
+                        <p className="font-manrope text-xs text-on-surface-variant leading-relaxed">
+                          <span className="font-semibold text-tertiary">{t('res_safety_note_label')}: </span>
+                          {plant.warnings[0]}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+
+                  {/* View profile */}
+                  <div className="px-4 pb-4 pt-1">
+                    <Link to={`/plant/${plant.id}`}
+                      className="inline-flex items-center gap-1.5 font-manrope text-xs font-semibold text-primary hover:gap-2.5 transition-all duration-150">
+                      {t('res_view_plant')}
+                      <span className="material-symbols-outlined text-sm"
+                        style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>arrow_forward</span>
+                    </Link>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </>
+      )}
+
+      {/* Evidence footnote */}
+      <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 mb-8">
+        <p className="font-manrope text-xs text-on-surface-variant leading-relaxed text-center">
+          {isAr
+            ? 'تستند هذه التوصيات إلى المكونات الفعّالة والأدلة السريرية الموثّقة في قاعدة بيانات نبتة. تعكس مستويات الأدلة الوضع الراهن للبحث العلمي.'
+            : 'These recommendations are based on active constituents and clinical evidence documented in the Nabta plant database. Evidence levels reflect current scientific research.'}
+        </p>
       </div>
 
+      {/* Actions */}
       <div className="flex flex-col sm:flex-row gap-3 justify-center">
         <Link to="/categories"
           className="text-center font-manrope text-sm font-semibold px-6 py-3 rounded-full bg-primary-container text-on-primary-container hover:opacity-80 transition-all">
@@ -388,17 +631,19 @@ function Results({ answers, onReset }) {
 
 /* ── Page ───────────────────────────────────────────────────────────────── */
 export default function QuestionnairePage() {
-  const { t }                           = useLanguage();
-  const [completed, setCompleted]       = useState(false);
-  const [answers, setAnswers]           = useState(null);
-  const [activeTab, setActiveTab]       = useState('questionnaire');
+  const { t }                     = useLanguage();
+  const [completed, setCompleted] = useState(false);
+  const [answers, setAnswers]     = useState(null);
+  const [activeTab, setActiveTab] = useState('questionnaire');
 
   const handleComplete = useCallback((ans) => {
     setAnswers(ans);
     setCompleted(true);
     setActiveTab('results');
-    // Fire-and-forget: never blocks the results from showing
-    saveQuestionnaire(ans);
+    saveQuestionnaire({
+      ...ans,
+      symptoms: ans.sub_concern ? [ans.sub_concern] : [],
+    });
     invalidateAnalyticsCache();
   }, []);
 
@@ -415,7 +660,6 @@ export default function QuestionnairePage() {
       </section>
       <div className="border-t border-outline-variant" />
       <section className="section-container py-16">
-        {/* Tabs */}
         <div className="flex gap-1 bg-surface-container p-1 rounded-full w-fit mx-auto mb-12">
           {[
             { key:'questionnaire', label: t('q_tab_questionnaire') },

@@ -14,6 +14,13 @@ const SUB_NAME_KEY = {
   'cold':'sub_cold','rhinitis':'sub_rhinitis','sinusitis':'sub_sinusitis','cough':'sub_cough',
   'immune-boosting':'sub_immune','anti-oxidant-rich':'sub_antioxidant','anti-inflammatory':'sub_antiinflammatory',
 };
+const SUB_DESC_KEY = {
+  'menstrual-health':'sub_menstrual_desc','pregnancy-support':'sub_pregnancy_desc','breast-feeding':'sub_breastfeeding_desc',
+  'hair-care':'sub_haircare_desc','skin-care':'sub_skincare_desc','constipation-relief':'sub_constipation_desc',
+  'diarrhea-support':'sub_diarrhea_desc','dyspepsia':'sub_dyspepsia_desc','ibs':'sub_ibs_desc',
+  'cold':'sub_cold_desc','rhinitis':'sub_rhinitis_desc','sinusitis':'sub_sinusitis_desc','cough':'sub_cough_desc',
+  'immune-boosting':'sub_immune_desc','anti-oxidant-rich':'sub_antioxidant_desc','anti-inflammatory':'sub_antiinflammatory_desc',
+};
 
 export default function SubcategoryPage() {
   const { id, subId }    = useParams();
@@ -62,7 +69,7 @@ export default function SubcategoryPage() {
           {subName}
         </h1>
         <p className="font-manrope text-body-md text-on-surface-variant max-w-xl leading-relaxed">
-          {subcategory.description}
+          {t(SUB_DESC_KEY[subId]) ?? subcategory.description}
         </p>
       </section>
 

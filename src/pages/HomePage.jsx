@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import { PLANTS } from '../data/plants.js';
-import { useLanguage, PLANT_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
+import { useLanguage, PLANT_TRANSLATIONS, TAG_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
 import heroBackground from '../assets/hero-bg.jpeg';
 import { fetchPlantViews, trackPlantView } from '../services/firestoreService.js';
 
@@ -186,7 +186,7 @@ export default function HomePage() {
                 </p>
                 <div className={`flex flex-wrap gap-1.5 mb-4 ${isAr ? 'flex-row-reverse' : ''}`}>
                   {potm.tags.slice(0, 3).map(tag => (
-                    <span key={tag} className="chip text-xs">{tag}</span>
+                    <span key={tag} className="chip text-xs">{isAr ? (TAG_TRANSLATIONS[tag] ?? tag) : tag}</span>
                   ))}
                 </div>
                 <div className={`flex items-center gap-2 font-manrope text-sm font-semibold text-primary group-hover/card:gap-3 transition-all duration-200 ${isAr ? 'flex-row-reverse justify-end' : ''}`}>

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useLanguage } from '../contexts/LanguageContext.jsx';
-import { PLANT_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
+import { useLanguage, PLANT_TRANSLATIONS, TAG_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
 import { trackPlantView } from '../services/firestoreService.js';
 
 export default function PlantCard({ plant }) {
@@ -23,7 +22,9 @@ export default function PlantCard({ plant }) {
           />
           <div className={`absolute top-3 ${isAr ? 'right-3' : 'left-3'} flex flex-wrap gap-1.5`}>
             {plant.tags.slice(0, 2).map(tag => (
-              <span key={tag} className="chip text-xs">{tag}</span>
+              <span key={tag} className="chip text-xs">
+                {isAr ? (TAG_TRANSLATIONS[tag] ?? tag) : tag}
+              </span>
             ))}
           </div>
         </div>

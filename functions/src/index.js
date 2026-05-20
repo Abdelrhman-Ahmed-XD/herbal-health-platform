@@ -1,6 +1,6 @@
 /**
  * Firebase Cloud Functions
- * Secure Gemini API proxy — the API key lives only here (server-side).
+ * Secure Gemini API proxy  the API key lives only here (server-side).
  * 
  * Deploy: firebase deploy --only functions
  * Set key: firebase functions:config:set gemini.key="YOUR_KEY"

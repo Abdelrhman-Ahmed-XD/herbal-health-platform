@@ -1,20 +1,44 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { sendChatMessage } from '../services/aiService.js';
-import { useLanguage } from '../contexts/LanguageContext.jsx';
+import { useLanguage, PLANT_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
 import { PLANTS } from '../data/plants.js';
 
-// ── Plant name → route ID lookup ─────────────────────────────────────────
+// ── Plant name → route ID lookup (English + Arabic) ──────────────────────
 const PLANT_LINK_MAP = {};
 Object.values(PLANTS).forEach(p => {
   PLANT_LINK_MAP[p.name.toLowerCase()] = p.id;
-  // First word alone (e.g. "Astragalus" from "Astragalus mongholicus")
   const first = p.name.split(' ')[0].toLowerCase();
   if (!PLANT_LINK_MAP[first]) PLANT_LINK_MAP[first] = p.id;
 });
+if (PLANT_TRANSLATIONS?.ar) {
+  Object.entries(PLANT_TRANSLATIONS.ar).forEach(([id, data]) => {
+    if (data.name) {
+      PLANT_LINK_MAP[data.name] = id;
+      const firstWord = data.name.split(' ')[0];
+      if (!PLANT_LINK_MAP[firstWord]) PLANT_LINK_MAP[firstWord] = id;
+    }
+  });
+}
+
+// ── Helpers ───────────────────────────────────────────────────────────────
+const containsArabic = (text) => /[؀-ۿ]/.test(text ?? '');
+
+const extractName = (text) => {
+  const patterns = [
+    /(?:my name is|i am|i'm|call me)\s+([A-Za-z]{2,})/i,
+    /(?:اسمي|أنا|انا)\s+(\S{2,})/,
+  ];
+  const stopWords = new Set(['a','an','the','not','just','also','here','there','going','trying','feeling','at','in','on','to','by','for','from','with','up','out','about','working','feeling','stressed','tired','sick']);
+  for (const p of patterns) {
+    const m = text.match(p);
+    if (m?.[1] && !stopWords.has(m[1].toLowerCase())) return m[1];
+  }
+  return null;
+};
 
 function findPlantId(name = '') {
-  return PLANT_LINK_MAP[name.toLowerCase()] ?? null;
+  return PLANT_LINK_MAP[name.toLowerCase()] ?? PLANT_LINK_MAP[name] ?? null;
 }
 
 // ── Inline markdown parser → React nodes ────────────────────────────────
@@ -46,38 +70,67 @@ function renderInline(text) {
   return parts;
 }
 
+// ── Section heading icon picker ──────────────────────────────────────────
+function getHeadingIcon(text) {
+  const l = text.toLowerCase();
+  if (l.includes('recommend') || l.includes('plant') || l.includes('نبات') || l.includes('توصية') || l.includes('مقترح')) return 'eco';
+  if (l.includes('work') || l.includes('why') || l.includes('mechanism') || l.includes('يعمل') || l.includes('آلية') || l.includes('سبب')) return 'science';
+  if (l.includes('use') || l.includes('how') || l.includes('استخدام') || l.includes('طريقة')) return 'local_pharmacy';
+  if (l.includes('dosage') || l.includes('dose') || l.includes('جرعة') || l.includes('المقدار')) return 'medication';
+  if (l.includes('warn') || l.includes('caution') || l.includes('important') || l.includes('تحذير') || l.includes('احتياط') || l.includes('هام')) return 'warning';
+  if (l.includes('contra') || l.includes('avoid') || l.includes('موانع') || l.includes('تجنب')) return 'block';
+  return 'info';
+}
+
 // ── Line classifier ──────────────────────────────────────────────────────
 function classifyLine(line) {
   const t = line.trim();
   if (!t) return null;
 
-  // Warning / disclaimer
   if (t.startsWith('⚠️')) return { type: 'warning', text: t.replace('⚠️', '').trim() };
 
-  // Bullet point: •, -, *, 🌿
-  const bullet = t.match(/^(?:[•\-\*🌿])\s+(.*)/);
-  if (bullet) return { type: 'bullet', text: bullet[1] };
-
-  // Numbered list
-  const numbered = t.match(/^\d+\.\s+(.*)/);
-  if (numbered) return { type: 'bullet', text: numbered[1] };
+  const heading = t.match(/^#{1,3}\s+(.*)/);
+  if (heading) return { type: 'heading', text: heading[1].trim() };
 
   // Plant entry: **Name** (*Latin*): description  OR  **Name**: description
   const plant = t.match(/^\*\*([^*]+)\*\*\s*(?:\(?\*([^*]*)\*\)?)?\s*[:：]\s*(.*)/);
   if (plant) {
+    const desc = plant[3]?.trim() ?? '';
     return {
       type: 'plant',
       name: plant[1].trim(),
       latin: plant[2]?.trim() ?? null,
-      desc: plant[3]?.trim() ?? '',
+      desc,
       id: findPlantId(plant[1].trim()),
     };
   }
+
+  // Bold-only line = section heading
+  const boldOnly = t.match(/^\*\*([^*]+)\*\*\s*:?\s*$/);
+  if (boldOnly) return { type: 'heading', text: boldOnly[1].trim() };
+
+  // Numbered list
+  const numbered = t.match(/^(\d+)\.\s+(.*)/);
+  if (numbered) return { type: 'numbered', index: parseInt(numbered[1]), text: numbered[2] };
+
+  // Bullet point
+  const bullet = t.match(/^(?:[•\-\*🌿])\s+(.*)/);
+  if (bullet) return { type: 'bullet', text: bullet[1] };
 
   return { type: 'text', text: t };
 }
 
 // ── Rendered line components ─────────────────────────────────────────────
+function HeadingLine({ text }) {
+  const icon = getHeadingIcon(text);
+  return (
+    <div className="flex items-center gap-2 mt-4 mb-1.5 border-b border-outline-variant/40 pb-1.5">
+      <span className="material-symbols-outlined text-base text-secondary flex-shrink-0">{icon}</span>
+      <p className="font-caslon text-base text-primary font-semibold">{text}</p>
+    </div>
+  );
+}
+
 function WarningLine({ text }) {
   return (
     <div className="flex items-start gap-2 bg-tertiary-fixed/30 border border-tertiary/20 rounded-lg px-3 py-2 mt-2">
@@ -88,9 +141,23 @@ function WarningLine({ text }) {
 }
 
 function BulletLine({ text }) {
+  const isWarning = /\b(avoid|caution|warning|do not|don't|تجنب|تحذير|لا تستخدم)\b/i.test(text);
   return (
-    <div className="flex items-start gap-2">
-      <span className="material-symbols-outlined text-xs text-secondary flex-shrink-0 mt-1">fiber_manual_record</span>
+    <div className="flex items-start gap-2 py-0.5">
+      <span className={`material-symbols-outlined text-sm flex-shrink-0 mt-0.5 ${isWarning ? 'text-tertiary' : 'text-secondary'}`}>
+        {isWarning ? 'error_outline' : 'fiber_manual_record'}
+      </span>
+      <p className="font-manrope text-sm text-on-surface leading-relaxed">{renderInline(text)}</p>
+    </div>
+  );
+}
+
+function NumberedLine({ index, text }) {
+  return (
+    <div className="flex items-start gap-2.5 py-0.5">
+      <span className="w-5 h-5 rounded-full bg-primary/15 text-primary text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5 font-manrope">
+        {index}
+      </span>
       <p className="font-manrope text-sm text-on-surface leading-relaxed">{renderInline(text)}</p>
     </div>
   );
@@ -111,7 +178,7 @@ function PlantEntryLine({ name, latin, desc, id }) {
   );
 
   return (
-    <div className="bg-surface-container-low border border-outline-variant/50 rounded-xl p-3 space-y-1">
+    <div className="bg-gradient-to-br from-primary-fixed/30 to-surface-container-low border border-outline-variant/50 rounded-xl p-3 space-y-1 my-1">
       <div className="flex items-center justify-between gap-2 flex-wrap">
         {nameNode}
         {latin && <span className="font-manrope text-xs italic text-on-surface-variant">{latin}</span>}
@@ -120,8 +187,8 @@ function PlantEntryLine({ name, latin, desc, id }) {
       {id && (
         <Link to={`/plant/${id}`}
           className="inline-flex items-center gap-1 font-manrope text-xs font-semibold text-primary hover:gap-2 transition-all duration-150 mt-1">
-          View full profile
-          <span className="material-symbols-outlined text-sm">arrow_forward</span>
+          {containsArabic(name) ? 'عرض الملف الكامل' : 'View full profile'}
+          <span className="material-symbols-outlined text-sm" style={{ transform: containsArabic(name) ? 'scaleX(-1)' : 'none' }}>arrow_forward</span>
         </Link>
       )}
     </div>
@@ -134,10 +201,12 @@ function FormattedMessage({ content }) {
   const parsed = lines.map(classifyLine).filter(Boolean);
 
   return (
-    <div className="space-y-2 text-sm">
+    <div className="space-y-1 text-sm">
       {parsed.map((item, i) => {
+        if (item.type === 'heading')  return <HeadingLine key={i} text={item.text} />;
         if (item.type === 'warning')  return <WarningLine key={i} text={item.text} />;
         if (item.type === 'bullet')   return <BulletLine key={i} text={item.text} />;
+        if (item.type === 'numbered') return <NumberedLine key={i} index={item.index} text={item.text} />;
         if (item.type === 'plant')    return <PlantEntryLine key={i} {...item} />;
         return (
           <p key={i} className="font-manrope text-sm text-on-surface leading-relaxed">
@@ -149,9 +218,23 @@ function FormattedMessage({ content }) {
   );
 }
 
+// ── Typing indicator (dots) ───────────────────────────────────────────────
+function TypingDots() {
+  return (
+    <div className="flex gap-1 items-center py-1 px-1">
+      <span className="w-2 h-2 rounded-full bg-secondary typing-dot" />
+      <span className="w-2 h-2 rounded-full bg-secondary typing-dot" />
+      <span className="w-2 h-2 rounded-full bg-secondary typing-dot" />
+    </div>
+  );
+}
+
 // ── Single message bubble ────────────────────────────────────────────────
-function MessageBubble({ msg, isAr }) {
+function MessageBubble({ msg, loading }) {
   const isUser = msg.role === 'user';
+  const msgIsRtl = containsArabic(msg.content);
+  const isEmpty = msg.content === '';
+
   return (
     <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-3`}>
       {!isUser && (
@@ -165,23 +248,15 @@ function MessageBubble({ msg, isAr }) {
             ? 'bg-primary text-on-primary rounded-tr-sm font-manrope text-sm'
             : 'bg-surface-container text-on-surface rounded-tl-sm'
         }`}
-        dir={isAr ? 'rtl' : 'ltr'}
+        dir={msgIsRtl ? 'rtl' : 'ltr'}
       >
         {isUser
           ? <p className="font-manrope text-sm">{msg.content}</p>
-          : <FormattedMessage content={msg.content} />
+          : isEmpty && loading
+            ? <TypingDots />
+            : <FormattedMessage content={msg.content} />
         }
       </div>
-    </div>
-  );
-}
-
-function TypingIndicator() {
-  return (
-    <div className="flex gap-1 items-center px-4 py-3 bg-surface-container rounded-xl w-fit">
-      <span className="w-2 h-2 rounded-full bg-secondary typing-dot" />
-      <span className="w-2 h-2 rounded-full bg-secondary typing-dot" />
-      <span className="w-2 h-2 rounded-full bg-secondary typing-dot" />
     </div>
   );
 }
@@ -193,6 +268,7 @@ export default function AIChat() {
   const [messages, setMessages] = useState(null);
   const [input, setInput]       = useState('');
   const [loading, setLoading]   = useState(false);
+  const [userName, setUserName] = useState(null);
   const bottomRef = useRef(null);
   const inputRef  = useRef(null);
 
@@ -212,23 +288,37 @@ export default function AIChat() {
     if (open) setTimeout(() => inputRef.current?.focus(), 100);
   }, [open]);
 
+  // Auto-resize textarea as user types
+  useEffect(() => {
+    const ta = inputRef.current;
+    if (!ta) return;
+    ta.style.height = 'auto';
+    ta.style.height = Math.min(ta.scrollHeight, 160) + 'px';
+  }, [input]);
+
   const sendMessage = async () => {
     const text = input.trim();
     if (!text || loading) return;
-    const userMsg = { id: Date.now(), role: 'user', content: text };
-    setMessages(prev => [...(prev ?? []), userMsg]);
+
+    const detected = extractName(text);
+    if (detected) setUserName(detected);
+
+    const userMsg   = { id: Date.now(),     role: 'user',      content: text };
+    const streamId  = Date.now() + 1;
+    const currentHistory = messages ?? [];
+
+    setMessages(prev => [...(prev ?? []), userMsg, { id: streamId, role: 'assistant', content: '' }]);
     setInput('');
     setLoading(true);
+
     try {
-      const response = await sendChatMessage(messages ?? [], text);
-      setMessages(prev => [...(prev ?? []), { id: Date.now() + 1, role: 'assistant', content: response }]);
+      await sendChatMessage(currentHistory, text, (chunk) => {
+        setMessages(prev => prev.map(m => m.id === streamId ? { ...m, content: chunk } : m));
+      });
     } catch {
-      setMessages(prev => [...(prev ?? []), {
-        id: Date.now() + 1, role: 'assistant',
-        content: isAr
-          ? 'عذراً، أواجه صعوبة في الاتصال الآن. يرجى المحاولة مجدداً.'
-          : "I'm having trouble connecting right now. Please try again.",
-      }]);
+      setMessages(prev => prev.map(m =>
+        m.id === streamId ? { ...m, content: 'Unable to connect. Please try again later.' } : m
+      ));
     } finally {
       setLoading(false);
     }
@@ -247,14 +337,14 @@ export default function AIChat() {
     <>
       <button
         onClick={() => setOpen(true)}
-        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-primary text-on-primary shadow-botanical-lg flex items-center justify-center hover:scale-110 transition-transform duration-200 chat-pulse"
+        className="fixed bottom-6 end-6 z-50 w-14 h-14 rounded-full bg-primary text-on-primary shadow-botanical-lg flex items-center justify-center hover:scale-110 transition-transform duration-200 chat-pulse"
         aria-label={t('chat_title')}
       >
         <span className="material-symbols-outlined">eco</span>
       </button>
 
       {open && (
-        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:justify-end sm:pr-6 sm:pb-6">
+        <div className="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:justify-end sm:pe-6 sm:pb-6">
           <div className="absolute inset-0 sm:hidden bg-primary/10 backdrop-blur-sm" onClick={() => setOpen(false)} />
 
           <div
@@ -268,8 +358,17 @@ export default function AIChat() {
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-caslon text-on-primary-container text-base font-semibold">{t('chat_title')}</p>
-                <p className="font-manrope text-on-primary-container/70 text-xs">{t('chat_powered')}</p>
+                <p className="font-manrope text-on-primary-container/70 text-xs">
+                  {userName ? `${t('chat_powered')} · ${userName}` : t('chat_powered')}
+                </p>
               </div>
+              <button
+                onClick={() => { setMessages(null); setUserName(null); }}
+                className="text-on-primary-container/70 hover:text-on-primary-container transition-colors p-1 rounded-full hover:bg-white/10 flex-shrink-0"
+                title="Clear conversation"
+              >
+                <span className="material-symbols-outlined text-xl">refresh</span>
+              </button>
               <button
                 onClick={() => setOpen(false)}
                 className="text-on-primary-container/70 hover:text-on-primary-container transition-colors p-1 rounded-full hover:bg-white/10 flex-shrink-0"
@@ -281,16 +380,8 @@ export default function AIChat() {
             {/* Messages */}
             <div className="flex-1 overflow-y-auto px-4 py-4">
               {(messages ?? []).map(msg => (
-                <MessageBubble key={msg.id} msg={msg} isAr={isAr} />
+                <MessageBubble key={msg.id} msg={msg} loading={loading} />
               ))}
-              {loading && (
-                <div className="flex justify-start mb-3">
-                  <div className="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center mx-2 flex-shrink-0">
-                    <span className="material-symbols-outlined text-on-primary-container text-sm">eco</span>
-                  </div>
-                  <TypingIndicator />
-                </div>
-              )}
               <div ref={bottomRef} />
             </div>
 
@@ -319,9 +410,9 @@ export default function AIChat() {
                   onKeyDown={handleKeyDown}
                   placeholder={t('chat_placeholder')}
                   rows={1}
-                  dir={isAr ? 'rtl' : 'ltr'}
-                  className="flex-1 bg-transparent resize-none outline-none font-manrope text-sm text-on-surface placeholder:text-outline px-2 py-1 max-h-24"
-                  style={{ lineHeight: '1.5' }}
+                  dir={isAr || containsArabic(input) ? 'rtl' : 'ltr'}
+                  className="flex-1 bg-transparent resize-none outline-none font-manrope text-sm text-on-surface placeholder:text-outline px-2 py-1 overflow-hidden"
+                  style={{ lineHeight: '1.5', maxHeight: '160px' }}
                 />
                 <button
                   onClick={sendMessage}

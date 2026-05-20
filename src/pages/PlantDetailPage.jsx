@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { PLANTS, CATEGORIES } from '../data/plants.js';
-import { useLanguage, PLANT_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
+import { useLanguage, PLANT_TRANSLATIONS, TAG_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
 import PlantCard from '../components/PlantCard.jsx';
 
 const NAME_KEY = {
@@ -19,6 +19,7 @@ const SUB_NAME_KEY = {
 };
 
 function MoaAccordionItem({ title, detail }) {
+  const { isAr } = useLanguage();
   const [open, setOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
   const isOpen = open || hovered;
@@ -30,7 +31,7 @@ function MoaAccordionItem({ title, detail }) {
     >
       <button
         onClick={() => setOpen(o => !o)}
-        className="w-full flex items-center justify-between gap-3 px-5 py-4 bg-surface-container-lowest hover:bg-surface-container transition-colors text-left"
+        className={`w-full flex items-center justify-between gap-3 px-5 py-4 bg-surface-container-lowest hover:bg-surface-container transition-colors ${isAr ? 'text-right flex-row-reverse' : 'text-left'}`}
       >
         <span className="font-manrope font-semibold text-sm text-primary">{title}</span>
         <span
@@ -42,7 +43,7 @@ function MoaAccordionItem({ title, detail }) {
         className="overflow-hidden transition-all duration-300"
         style={{ maxHeight: isOpen ? '500px' : '0px' }}
       >
-        <p className="font-manrope text-sm text-on-surface-variant leading-relaxed px-5 py-4 border-t border-surface-container-high">
+        <p className={`font-manrope text-sm text-on-surface-variant leading-relaxed px-5 py-4 border-t border-surface-container-high ${isAr ? 'text-right' : ''}`}>
           {detail}
         </p>
       </div>
@@ -76,11 +77,19 @@ export default function PlantDetailPage() {
   const prepData         = arData?.preparation      ?? plant.preparation;
   const botFacts         = arData?.botanicalFacts   ?? plant.botanicalFacts;
 
-  const {
-    activeConstituents, moa, uses, howToUse, suitableAgeGroups,
-    dosage, overdose, sideEffects, contraindications, drugInteractions,
-    storage, marketedProducts, warnings,
-  } = plant;
+  const activeConstituents = arData?.activeConstituents ?? plant.activeConstituents;
+  const moa               = arData?.moa               ?? plant.moa;
+  const uses              = arData?.uses               ?? plant.uses;
+  const howToUse          = arData?.howToUse           ?? plant.howToUse;
+  const suitableAgeGroups = arData?.suitableAgeGroups  ?? plant.suitableAgeGroups;
+  const dosage            = arData?.dosage             ?? plant.dosage;
+  const overdose          = arData?.overdose           ?? plant.overdose;
+  const sideEffects       = arData?.sideEffects        ?? plant.sideEffects;
+  const contraindications = arData?.contraindications  ?? plant.contraindications;
+  const drugInteractions  = arData?.drugInteractions   ?? plant.drugInteractions;
+  const storage           = arData?.storage            ?? plant.storage;
+  const { marketedProducts } = plant;
+  const warnings          = arData?.warnings           ?? plant.warnings;
 
   const factLabels = {
     family:          t('plant_family'),
@@ -98,7 +107,9 @@ export default function PlantDetailPage() {
           <div>
             <div className="flex gap-2 mb-4 flex-wrap">
               {plant.tags.map(tag => (
-                <span key={tag} className="chip text-xs">{tag}</span>
+                <span key={tag} className="chip text-xs">
+                  {isAr ? (TAG_TRANSLATIONS[tag] ?? tag) : tag}
+                </span>
               ))}
             </div>
             <h1 className="font-caslon text-headline-md md:text-headline-lg text-primary mb-1">{name}</h1>
@@ -150,14 +161,16 @@ export default function PlantDetailPage() {
               {/* Warnings */}
               {warnings?.length > 0 && (
                 <div className="bg-red-50 border border-red-200 rounded-xl p-5">
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className={`flex items-center gap-2 mb-3 ${isAr ? 'flex-row-reverse' : ''}`}>
                     <span className="material-symbols-outlined text-red-600">warning</span>
                     <h2 className="font-manrope font-bold text-red-800">{t('plant_warnings')}</h2>
                   </div>
                   <ul className="space-y-2">
                     {warnings.map((w, i) => (
-                      <li key={i} className="font-manrope text-sm text-red-700 flex gap-2 items-start">
-                        <span className="text-red-400 mt-0.5 flex-shrink-0">▸</span>{w}
+                      <li key={i} className={`font-manrope text-sm text-red-700 flex gap-2 items-start ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                        <span className="material-symbols-outlined text-red-400 text-base flex-shrink-0 mt-0.5"
+                          style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>chevron_right</span>
+                        {w}
                       </li>
                     ))}
                   </ul>
@@ -289,17 +302,19 @@ export default function PlantDetailPage() {
               {/* Overdose */}
               {(overdose?.symptoms?.length > 0 || overdose?.management?.length > 0) && (
                 <div className="bg-orange-50 border border-orange-200 rounded-xl p-5">
-                  <div className="flex items-center gap-2 mb-4">
+                  <div className={`flex items-center gap-2 mb-4 ${isAr ? 'flex-row-reverse' : ''}`}>
                     <span className="material-symbols-outlined text-orange-600">emergency</span>
                     <h2 className="font-caslon text-headline-sm text-orange-800">{t('plant_overdose')}</h2>
                   </div>
                   {overdose.symptoms?.length > 0 && (
                     <div className="mb-4">
-                      <h4 className="font-manrope font-semibold text-sm text-orange-700 mb-2 uppercase tracking-wide">Symptoms</h4>
+                      <h4 className={`font-manrope font-semibold text-sm text-orange-700 mb-2 uppercase tracking-wide ${isAr ? 'text-right' : ''}`}>{t('plant_overdose_symptoms')}</h4>
                       <ul className="space-y-1">
                         {overdose.symptoms.map((s, i) => (
-                          <li key={i} className="font-manrope text-sm text-orange-700 flex gap-2 items-start">
-                            <span className="text-orange-400 mt-0.5 flex-shrink-0">▸</span>{s}
+                          <li key={i} className={`font-manrope text-sm text-orange-700 flex gap-2 items-start ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                            <span className="material-symbols-outlined text-orange-400 text-base flex-shrink-0 mt-0.5"
+                              style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>chevron_right</span>
+                            {s}
                           </li>
                         ))}
                       </ul>
@@ -307,11 +322,13 @@ export default function PlantDetailPage() {
                   )}
                   {overdose.management?.length > 0 && (
                     <div>
-                      <h4 className="font-manrope font-semibold text-sm text-orange-700 mb-2 uppercase tracking-wide">Management</h4>
+                      <h4 className={`font-manrope font-semibold text-sm text-orange-700 mb-2 uppercase tracking-wide ${isAr ? 'text-right' : ''}`}>{t('plant_overdose_management')}</h4>
                       <ul className="space-y-1">
                         {overdose.management.map((m, i) => (
-                          <li key={i} className="font-manrope text-sm text-orange-700 flex gap-2 items-start">
-                            <span className="text-orange-400 mt-0.5 flex-shrink-0">▸</span>{m}
+                          <li key={i} className={`font-manrope text-sm text-orange-700 flex gap-2 items-start ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                            <span className="material-symbols-outlined text-orange-400 text-base flex-shrink-0 mt-0.5"
+                              style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>chevron_right</span>
+                            {m}
                           </li>
                         ))}
                       </ul>

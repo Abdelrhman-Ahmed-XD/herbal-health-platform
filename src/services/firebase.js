@@ -1,5 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getFirestore, enableIndexedDbPersistence } from 'firebase/firestore';
+import { initializeFirestore, persistentLocalCache, persistentMultipleTabManager } from 'firebase/firestore';
 import { getAnalytics } from 'firebase/analytics';
 
 const firebaseConfig = {
@@ -13,10 +13,10 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
 
-// Offline persistence — reads cached instantly even with no network
-enableIndexedDbPersistence(db).catch(() => {});
+export const db = initializeFirestore(app, {
+  cache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }),
+});
 
 // Analytics — lazy, non-blocking
 if (typeof window !== 'undefined') {

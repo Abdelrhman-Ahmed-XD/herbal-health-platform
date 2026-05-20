@@ -315,9 +315,13 @@ export default function AIChat() {
       await sendChatMessage(currentHistory, text, (chunk) => {
         setMessages(prev => prev.map(m => m.id === streamId ? { ...m, content: chunk } : m));
       });
-    } catch {
+    } catch (err) {
+      const isRateLimit = err?.message === 'RATE_LIMIT';
+      const errMsg = isAr
+        ? (isRateLimit ? '⏱️ تم الوصول إلى حد الطلبات. انتظر لحظة ثم أعد المحاولة.' : 'تعذّر الاتصال. حاول مجدداً لاحقاً.')
+        : (isRateLimit ? '⏱️ Rate limit reached — please wait a moment and try again.' : 'Unable to connect. Please try again later.');
       setMessages(prev => prev.map(m =>
-        m.id === streamId ? { ...m, content: 'Unable to connect. Please try again later.' } : m
+        m.id === streamId ? { ...m, content: errMsg } : m
       ));
     } finally {
       setLoading(false);

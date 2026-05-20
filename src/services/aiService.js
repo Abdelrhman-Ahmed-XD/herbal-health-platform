@@ -95,6 +95,8 @@ SPECIAL RULES:
 - The database will grow design responses to naturally accommodate new plants added in the future`;
 
 // ── Gemini streaming call ────────────────────────────────────────────────────
+const sleep = (ms) => new Promise(r => setTimeout(r, ms));
+
 const callGeminiDirect = async (key, messages, userMessage, onChunk) => {
   const isStreaming = typeof onChunk === 'function';
   const url = isStreaming
@@ -112,9 +114,18 @@ const callGeminiDirect = async (key, messages, userMessage, onChunk) => {
     generationConfig: { maxOutputTokens: 8192, temperature: 0.4, topP: 0.8 },
   };
 
-  const res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+  // Retry up to 2 times on 429 with exponential backoff
+  let res;
+  for (let attempt = 0; attempt <= 2; attempt++) {
+    res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+    if (res.status !== 429) break;
+    if (attempt < 2) await sleep(6000 * (attempt + 1));
+  }
 
-  if (!res.ok) throw new Error(`API ${res.status}`);
+  if (!res.ok) {
+    if (res.status === 429) throw new Error('RATE_LIMIT');
+    throw new Error(`API ${res.status}`);
+  }
 
   if (!isStreaming) {
     const data = await res.json();

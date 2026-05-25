@@ -41,7 +41,7 @@ export default function PlantCard({ plant }) {
           <p className="font-manrope text-sm text-on-surface-variant leading-relaxed line-clamp-3">
             {displayShort}
           </p>
-          <div className={`flex items-center gap-1.5 mt-4 text-primary font-manrope text-sm font-semibold tracking-wide group-hover:gap-3 transition-all duration-200 ${isAr ? 'flex-row-reverse justify-end' : ''}`}>
+          <div className={`flex items-center gap-1.5 mt-4 text-primary font-manrope text-sm font-semibold tracking-wide group-hover:gap-3 transition-all duration-200`}>
             {t('plant_view_profile')}
             <span
               className="material-symbols-outlined text-base"

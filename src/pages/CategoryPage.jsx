@@ -2,14 +2,15 @@ import { useParams, Link } from 'react-router-dom';
 import { CATEGORIES } from '../data/plants.js';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
 
-const NAME_KEY    = { immunity:'cat_immunity_name', digestive:'cat_digestive_name', respiratory:'cat_respiratory_name', 'womens-health':'cat_womens_name' };
-const LONG_KEY    = { immunity:'cat_immunity_long', digestive:'cat_digestive_long', respiratory:'cat_respiratory_long', 'womens-health':'cat_womens_long' };
+const NAME_KEY    = { immunity:'cat_immunity_name', digestive:'cat_digestive_name', respiratory:'cat_respiratory_name', 'womens-health':'cat_womens_name', uti:'cat_uti_name' };
+const LONG_KEY    = { immunity:'cat_immunity_long', digestive:'cat_digestive_long', respiratory:'cat_respiratory_long', 'womens-health':'cat_womens_long', uti:'cat_uti_long' };
 const SUB_NAME_KEY = {
   'menstrual-health':'sub_menstrual','pregnancy-support':'sub_pregnancy','breast-feeding':'sub_breastfeeding',
   'hair-care':'sub_haircare','skin-care':'sub_skincare','constipation-relief':'sub_constipation',
   'diarrhea-support':'sub_diarrhea','dyspepsia':'sub_dyspepsia','ibs':'sub_ibs',
   'cold':'sub_cold','rhinitis':'sub_rhinitis','sinusitis':'sub_sinusitis','cough':'sub_cough',
   'immune-boosting':'sub_immune','anti-oxidant-rich':'sub_antioxidant','anti-inflammatory':'sub_antiinflammatory',
+  'anti-septic':'sub_antiseptic','diuretics':'sub_diuretics','bph':'sub_bph',
 };
 const SUB_DESC_KEY = {
   'menstrual-health':'sub_menstrual_desc','pregnancy-support':'sub_pregnancy_desc','breast-feeding':'sub_breastfeeding_desc',
@@ -17,6 +18,7 @@ const SUB_DESC_KEY = {
   'diarrhea-support':'sub_diarrhea_desc','dyspepsia':'sub_dyspepsia_desc','ibs':'sub_ibs_desc',
   'cold':'sub_cold_desc','rhinitis':'sub_rhinitis_desc','sinusitis':'sub_sinusitis_desc','cough':'sub_cough_desc',
   'immune-boosting':'sub_immune_desc','anti-oxidant-rich':'sub_antioxidant_desc','anti-inflammatory':'sub_antiinflammatory_desc',
+  'anti-septic':'sub_antiseptic_desc','diuretics':'sub_diuretics_desc','bph':'sub_bph_desc',
 };
 
 export default function CategoryPage() {
@@ -62,7 +64,7 @@ export default function CategoryPage() {
                   <p className="font-manrope text-sm text-on-surface-variant leading-relaxed line-clamp-2 mt-2">
                     {t(SUB_DESC_KEY[sub.id]) ?? sub.description}
                   </p>
-                  <div className={`flex items-center gap-1.5 mt-4 text-primary font-manrope text-sm font-semibold tracking-wide group-hover:gap-3 transition-all duration-200 ${isAr ? 'flex-row-reverse justify-end' : ''}`}>
+                  <div className={`flex items-center gap-1.5 mt-4 text-primary font-manrope text-sm font-semibold tracking-wide group-hover:gap-3 transition-all duration-200`}>
                     {t('view_collection')}
                     <span className="material-symbols-outlined text-base"
                       style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>arrow_forward</span>

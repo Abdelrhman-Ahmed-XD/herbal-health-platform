@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
 
 const CATEGORY_META = {
-  immunity:       { icon: 'shield',    image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80', chips: ['Medicinal','Adaptogen'],  nameKey: 'cat_immunity_name',    taglineKey: 'cat_immunity_tagline' },
-  digestive:      { icon: 'nutrition', image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80', chips: ['Digestive','Culinary'],   nameKey: 'cat_digestive_name',   taglineKey: 'cat_digestive_tagline' },
-  respiratory:    { icon: 'air',       image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80', chips: ['Nervines','Adaptogens'], nameKey: 'cat_respiratory_name', taglineKey: 'cat_respiratory_tagline' },
-  'womens-health':{ icon: 'favorite',  image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=600&q=80', chips: ['Adaptogens','Nervines'], nameKey: 'cat_womens_name',      taglineKey: 'cat_womens_tagline' },
+  immunity:       { icon: 'shield',      image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80', chips: ['Medicinal','Adaptogen'],  nameKey: 'cat_immunity_name',    taglineKey: 'cat_immunity_tagline' },
+  digestive:      { icon: 'nutrition',   image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80', chips: ['Digestive','Culinary'],   nameKey: 'cat_digestive_name',   taglineKey: 'cat_digestive_tagline' },
+  respiratory:    { icon: 'air',         image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80', chips: ['Nervines','Adaptogens'], nameKey: 'cat_respiratory_name', taglineKey: 'cat_respiratory_tagline' },
+  'womens-health':{ icon: 'favorite',    image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=600&q=80', chips: ['Adaptogens','Nervines'], nameKey: 'cat_womens_name',      taglineKey: 'cat_womens_tagline' },
+  uti:            { icon: 'water_drop',  image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80', chips: ['Diuretic','Antiseptic'], nameKey: 'cat_uti_name',         taglineKey: 'cat_uti_tagline' },
 };
-const CAT_IDS = ['womens-health','digestive','respiratory','immunity'];
+const CAT_IDS = ['womens-health','digestive','respiratory','immunity','uti'];
 
 export default function CategoriesPage() {
   const { t, isAr } = useLanguage();
@@ -39,16 +40,16 @@ export default function CategoriesPage() {
                     />
                   </div>
                   <div className={`bg-surface-container-lowest p-6 flex flex-col flex-1 ${isAr ? 'text-right' : ''}`}>
-                    <div className={`flex items-center gap-2 mb-2 ${isAr ? 'flex-row-reverse' : ''}`}>
+                    <div className={`flex items-center gap-2 mb-2`}>
                       <span className="material-symbols-outlined text-primary">{meta.icon}</span>
                       <h2 className="font-caslon text-headline-sm text-primary group-hover:text-secondary transition-colors">{t(meta.nameKey)}</h2>
                     </div>
                     <p className="font-manrope text-sm text-on-surface-variant leading-relaxed mb-4">{t(meta.taglineKey)}</p>
-                    <div className={`flex gap-2 mb-4 flex-wrap ${isAr ? 'flex-row-reverse' : ''}`}>
+                    <div className={`flex gap-2 mb-4 flex-wrap`}>
                       {meta.chips.map(c => <span key={c} className="chip text-xs">{c}</span>)}
                     </div>
                     <hr className="border-outline-variant mb-4 mt-auto" />
-                    <div className={`flex items-center gap-2 font-manrope text-sm font-semibold text-primary group-hover:gap-3 transition-all duration-200 ${isAr ? 'flex-row-reverse justify-end' : ''}`}>
+                    <div className={`flex items-center gap-2 font-manrope text-sm font-semibold text-primary group-hover:gap-3 transition-all duration-200`}>
                       {t('cats_explore')}
                       <span
                         className="material-symbols-outlined text-base transition-transform duration-200 group-hover:translate-x-1"

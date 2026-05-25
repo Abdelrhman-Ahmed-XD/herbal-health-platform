@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell,
+  PieChart, Pie, Cell, LabelList,
 } from 'recharts';
 import { PLANTS } from '../data/plants.js';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
@@ -113,14 +113,22 @@ function AnalyticsDashboard() {
             <h3 className="font-caslon text-xl text-primary mb-1">{t('q_chart_symptoms')}</h3>
             <p className="font-manrope text-xs text-on-surface-variant mb-5">{t('q_chart_symptoms_sub')}</p>
             {symptomData.length > 0 ? (
-              <ResponsiveContainer width="100%" height={220}>
-                <BarChart data={symptomData} margin={{ top:0, right:0, bottom:0, left:-20 }}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#c3c8c1" strokeOpacity={0.5} />
-                  <XAxis dataKey="name" tick={{ fontFamily:'Cairo, Manrope', fontSize:11, fill:'#434843' }} />
-                  <YAxis tick={{ fontFamily:'Manrope', fontSize:11, fill:'#434843' }} />
+              <ResponsiveContainer width="100%" height={280}>
+                <BarChart data={symptomData} margin={{ top: 20, right: 8, bottom: 60, left: -20 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#c3c8c1" strokeOpacity={0.5} vertical={false} />
+                  <XAxis
+                    dataKey="name"
+                    tick={{ fontFamily: 'Cairo, Manrope, sans-serif', fontSize: 11, fill: '#434843' }}
+                    interval={0}
+                    angle={-35}
+                    textAnchor="end"
+                    height={65}
+                  />
+                  <YAxis tick={{ fontFamily: 'Manrope, sans-serif', fontSize: 11, fill: '#434843' }} />
                   <Tooltip content={<CustomTooltip />} />
-                  <Bar dataKey="count" radius={[4,4,0,0]}>
-                    {symptomData.map((e,i) => <Cell key={i} fill={e.fill} />)}
+                  <Bar dataKey="count" radius={[4, 4, 0, 0]}>
+                    <LabelList dataKey="count" position="top" style={{ fill: '#536346', fontSize: 11, fontFamily: 'Manrope, sans-serif', fontWeight: 600 }} />
+                    {symptomData.map((e, i) => <Cell key={i} fill={e.fill} />)}
                   </Bar>
                 </BarChart>
               </ResponsiveContainer>
@@ -390,7 +398,7 @@ function QuestionnaireWizard({ onComplete }) {
           <button
             key={opt.value}
             onClick={() => handleSelect(opt.value)}
-            className={`flex items-center gap-4 p-4 rounded-xl border-2 text-left transition-all duration-200 hover:-translate-y-0.5 ${
+            className={`flex items-center gap-4 p-4 rounded-xl border-2 text-start transition-all duration-200 hover:-translate-y-0.5 ${
               isSelected(opt.value)
                 ? 'border-primary bg-primary-fixed/30 shadow-botanical-sm'
                 : 'border-surface-container-high bg-surface-container-lowest hover:border-outline hover:bg-surface-container-low'
@@ -412,11 +420,11 @@ function QuestionnaireWizard({ onComplete }) {
       </div>
 
       {/* Navigation */}
-      <div className={`flex items-center justify-between ${isAr ? 'flex-row-reverse' : ''}`}>
+      <div className={`flex items-center justify-between`}>
         <button
           onClick={() => setStep(s => Math.max(0, s - 1))}
           disabled={step === 0}
-          className={`flex items-center gap-2 font-manrope text-sm text-on-surface-variant disabled:opacity-30 hover:text-primary transition-colors ${isAr ? 'flex-row-reverse' : ''}`}
+          className={`flex items-center gap-2 font-manrope text-sm text-on-surface-variant disabled:opacity-30 hover:text-primary transition-colors`}
         >
           <span className="material-symbols-outlined text-base"
             style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>arrow_back</span>

@@ -30,6 +30,54 @@ const buildPlantContext = () =>
     })
     .join('\n\n');
 
+// Compact version for Groq (stays under free-tier token limits)
+const buildCompactPlantContext = () =>
+  Object.values(PLANTS)
+    .filter(p => !p.isDemo)
+    .map(p => {
+      const compounds = p.activeConstituents?.slice(0, 2).map(c => c.name).join(', ') ?? '';
+      const warning   = Array.isArray(p.warnings) ? p.warnings[0] ?? '' : '';
+      return [
+        `**${p.name}** (${p.nameAr}) | ${p.latinName} | ${p.subcategory}`,
+        `Symptoms: ${p.symptoms.join(', ')}`,
+        compounds         ? `Key compounds: ${compounds}` : '',
+        p.dosage?.standard ? `Dosage: ${p.dosage.standard}` : '',
+        warning            ? `⚠️ ${warning.slice(0, 160)}` : '',
+      ].filter(Boolean).join('\n');
+    })
+    .join('\n\n');
+
+const GROQ_SYSTEM_PROMPT = `You are Nabta AI, an expert herbal pharmaceutical assistant for the Nabta botanical research platform.
+
+PERSONALITY & MEMORY:
+- You are warm, knowledgeable, and conversational
+- You remember everything the user tells you in this conversation
+- If the user shares their name, always address them by name
+- Think step by step before answering
+
+LANGUAGE:
+- Always respond in the EXACT same language as the current user message
+- English message → English reply | Arabic message → Arabic reply
+- Support any language
+
+PLANT DATABASE (40 verified plants):
+${buildCompactPlantContext()}
+
+FORMATTING:
+- Bold every plant name: **Plant Name** — this creates a clickable link in the app
+- Use ### for section headers, • for bullets, numbered lists for steps
+- Keep sections concise (2-4 bullets max)
+
+HOW TO ANSWER:
+1. Identify relevant plants from the database
+2. Structure: ### Recommended Plants → ### Why It Works → ### How to Use → ### Dosage → ### Important Warnings
+3. End with: "⚠️ This information is for educational purposes only. Please consult a qualified healthcare professional before starting any herbal treatment." (use Arabic version for Arabic messages)
+
+RULES:
+- Only recommend plants from the database above
+- Never say "I don't know" if the answer is in the database
+- For pregnancy/children: give info + clear special warning`;
+
 const SYSTEM_PROMPT = `You are Nabta AI, an expert herbal pharmaceutical assistant for the Nabta botanical research platform.
 
 PERSONALITY & MEMORY:
@@ -94,9 +142,77 @@ SPECIAL RULES:
 - If a condition has no matching plant: say the database does not cover this yet but will be expanded soon
 - The database will grow design responses to naturally accommodate new plants added in the future`;
 
-// ── Gemini streaming call ────────────────────────────────────────────────────
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
+// ── Groq direct — supports CORS, free tier, streaming ────────────────────────
+const callGroqDirect = async (key, messages, userMessage, onChunk) => {
+  const isStreaming = typeof onChunk === 'function';
+  const url = 'https://api.groq.com/openai/v1/chat/completions';
+
+  const history = messages.filter(m => m.id !== 'welcome').slice(-20).map(m => ({
+    role: m.role === 'assistant' ? 'assistant' : 'user',
+    content: m.content,
+  }));
+
+  const body = {
+    model: 'llama-3.3-70b-versatile',
+    messages: [
+      { role: 'system', content: GROQ_SYSTEM_PROMPT },
+      ...history,
+      { role: 'user', content: userMessage },
+    ],
+    max_tokens: 4096,
+    temperature: 0.4,
+    top_p: 0.8,
+    stream: isStreaming,
+  };
+
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Authorization': `Bearer ${key}`, 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+
+  if (!res.ok) {
+    if (res.status === 429) throw new Error('RATE_LIMIT');
+    throw new Error(`Groq ${res.status}`);
+  }
+
+  if (!isStreaming) {
+    const data = await res.json();
+    return data.choices?.[0]?.message?.content
+      || 'I apologize, I could not process your question. Please try again.';
+  }
+
+  const reader  = res.body.getReader();
+  const decoder = new TextDecoder();
+  let fullText = '';
+  let buffer   = '';
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split('\n');
+    buffer = lines.pop() ?? '';
+
+    for (const line of lines) {
+      if (!line.startsWith('data: ')) continue;
+      const jsonStr = line.slice(6).trim();
+      if (!jsonStr || jsonStr === '[DONE]') continue;
+      try {
+        const data = JSON.parse(jsonStr);
+        const text = data.choices?.[0]?.delta?.content;
+        if (text) { fullText += text; onChunk(fullText); }
+      } catch {}
+    }
+  }
+
+  return fullText || 'I apologize, I could not process your question. Please try again.';
+};
+
+// ── Gemini direct — dev streaming fallback ────────────────────────────────────
 const callGeminiDirect = async (key, messages, userMessage, onChunk) => {
   const isStreaming = typeof onChunk === 'function';
   const url = isStreaming
@@ -114,7 +230,6 @@ const callGeminiDirect = async (key, messages, userMessage, onChunk) => {
     generationConfig: { maxOutputTokens: 8192, temperature: 0.4, topP: 0.8 },
   };
 
-  // Retry up to 2 times on 429 with exponential backoff
   let res;
   for (let attempt = 0; attempt <= 2; attempt++) {
     res = await fetch(url, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
@@ -124,7 +239,7 @@ const callGeminiDirect = async (key, messages, userMessage, onChunk) => {
 
   if (!res.ok) {
     if (res.status === 429) throw new Error('RATE_LIMIT');
-    throw new Error(`API ${res.status}`);
+    throw new Error(`Gemini ${res.status}`);
   }
 
   if (!isStreaming) {
@@ -133,11 +248,10 @@ const callGeminiDirect = async (key, messages, userMessage, onChunk) => {
       || 'I apologize, I could not process your question. Please try again.';
   }
 
-  // Streaming: read SSE chunks and call onChunk with accumulated text
-  const reader = res.body.getReader();
+  const reader  = res.body.getReader();
   const decoder = new TextDecoder();
   let fullText = '';
-  let buffer = '';
+  let buffer   = '';
 
   while (true) {
     const { done, value } = await reader.read();
@@ -154,35 +268,52 @@ const callGeminiDirect = async (key, messages, userMessage, onChunk) => {
       try {
         const data = JSON.parse(jsonStr);
         const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
-        if (text) {
-          fullText += text;
-          onChunk(fullText);
-        }
-      } catch { /* ignore parse errors on partial chunks */ }
+        if (text) { fullText += text; onChunk(fullText); }
+      } catch {}
     }
   }
 
   return fullText || 'I apologize, I could not process your question. Please try again.';
 };
 
-// ── Main entry point ───────────────────────────────────────────────────────────
+// ── Main entry point ──────────────────────────────────────────────────────────
+// Priority order:
+//   1. Groq direct  (VITE_GROQ_API_KEY  — free, CORS-safe, streaming)
+//   2. Gemini direct (VITE_GEMINI_API_KEY — dev shortcut, streaming)
+//   3. Netlify Function  (prod: Groq server-side → Gemini server-side)
 export const sendChatMessage = async (messages, userMessage, onChunk) => {
-  const geminiKey = import.meta.env.VITE_GEMINI_API_KEY;
-  if (geminiKey) {
-    return callGeminiDirect(geminiKey, messages, userMessage, onChunk);
+  // 1. Groq direct (free, supports browser CORS + streaming)
+  const groqKey = import.meta.env.VITE_GROQ_API_KEY;
+  if (groqKey) {
+    try {
+      return await callGroqDirect(groqKey, messages, userMessage, onChunk);
+    } catch (err) {
+      console.warn('[AI] Groq direct failed:', err.message);
+    }
   }
 
-  // Production: Netlify Function (no streaming in this path)
+  // 2. Gemini direct (dev shortcut)
+  const geminiKey = import.meta.env.VITE_GEMINI_API_KEY;
+  if (geminiKey) {
+    try {
+      return await callGeminiDirect(geminiKey, messages, userMessage, onChunk);
+    } catch (err) {
+      console.warn('[AI] Gemini direct failed:', err.message);
+    }
+  }
+
+  // 3. Netlify Function (production — Groq server-side → Gemini server-side)
   try {
     const res = await fetch('/.netlify/functions/geminiChat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ messages: messages.filter(m => m.id !== 'welcome').slice(-20), userMessage }),
     });
-    if (!res.ok) throw new Error('Function error');
+    if (!res.ok) throw new Error(`Function ${res.status}`);
     const data = await res.json();
-    return data.response;
-  } catch {
-    return 'Unable to connect. Please try again later.';
+    return data.response || 'I apologize, I could not process your question. Please try again.';
+  } catch (err) {
+    console.warn('[AI] Function failed:', err.message);
+    return 'Unable to connect to the AI service. Please try again later.';
   }
 };

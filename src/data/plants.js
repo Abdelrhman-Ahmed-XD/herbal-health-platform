@@ -56,22 +56,22 @@ export const PLANTS = {
       { method: 'Facial Care', instruction: 'Cleanse the skin first, then apply a thin layer of pure aloe gel, massaging gently in an upward motion. Leave on as a lightweight moisturizer or rinse off with lukewarm water after 15 minutes.' },
       { method: 'Dry Skin', instruction: 'Mix a few drops of hydrating oil (jojoba or coconut) with aloe gel before application to boost moisturizing effect.' },
       { method: 'Oily / Acne-Prone Skin', instruction: 'Use pure, unadulterated aloe gel as a lightweight, water-based, non-comedogenic moisturizer.' },
-      { method: 'Hair and Scalp Care', instruction: 'Apply fresh or commercial pure gel directly to scalp and hair strands. Leave for 30–60 minutes to condition, then rinse thoroughly.' },
+      { method: 'Hair and Scalp Care', instruction: 'Apply fresh or commercial pure gel directly to scalp and hair strands. Leave for 30-60 minutes to condition, then rinse thoroughly.' },
     ],
     suitableAgeGroups: [
       { group: 'Infants (<1 year)', notes: 'Oral use strictly contraindicated. Topical use not recommended unless expressly approved by a pediatrician.' },
-      { group: 'Children (1–5 years)', notes: 'External use only in small amounts; avoid oral use.' },
-      { group: 'Children (6–12 years)', notes: 'Generally safe for topical use (burns, irritation, skincare). Oral latex use strictly avoided due to electrolyte risks.' },
-      { group: 'Adolescents (12–18 years)', notes: 'Safe for topical use; limited and cautious oral use (decolorized whole-leaf juice) if clinically indicated.' },
+      { group: 'Children (1-5 years)', notes: 'External use only in small amounts; avoid oral use.' },
+      { group: 'Children (6-12 years)', notes: 'Generally safe for topical use (burns, irritation, skincare). Oral latex use strictly avoided due to electrolyte risks.' },
+      { group: 'Adolescents (12-18 years)', notes: 'Safe for topical use; limited and cautious oral use (decolorized whole-leaf juice) if clinically indicated.' },
       { group: 'Adults', notes: 'Safe for topical and proper oral use when guidelines are followed.' },
       { group: 'Pregnant & Breastfeeding Women', notes: 'Oral use strictly contraindicated (stimulates uterine contractions; anthraquinones pass into breast milk). Topical use generally considered safe.' },
     ],
     dosage: {
-      standard: 'Topical: thin layer 2–3 times daily. Oral purified juice (aloin-free): 10–30 mL once or twice daily before meals.',
+      standard: 'Topical: thin layer 2-3 times daily. Oral purified juice (aloin-free): 10-30 mL once or twice daily before meals.',
       forms: [
-        { form: 'Topical Gel', dose: 'Apply thin layer 2–3 times daily to affected skin areas.' },
-        { form: 'Oral Juice (decolorized, aloin-free)', dose: '10–30 mL once or twice daily, before meals.' },
-        { form: 'Laxative / Latex (not for routine use)', dose: 'Approx. 50–200 mg standardized extract. Start with low dose; avoid long-term oral use.' },
+        { form: 'Topical Gel', dose: 'Apply thin layer 2-3 times daily to affected skin areas.' },
+        { form: 'Oral Juice (decolorized, aloin-free)', dose: '10-30 mL once or twice daily, before meals.' },
+        { form: 'Laxative / Latex (not for routine use)', dose: 'Approx. 50-200 mg standardized extract. Start with low dose; avoid long-term oral use.' },
       ],
     },
     overdose: {
@@ -102,7 +102,7 @@ export const PLANTS = {
     storage: {
       forms: [
         { form: 'Commercial products', instructions: 'Store in a cool, dry place away from direct sunlight.' },
-        { form: 'Freshly extracted natural gel', instructions: 'Keep in an airtight container, refrigerate immediately, and use within 1–2 weeks.' },
+        { form: 'Freshly extracted natural gel', instructions: 'Keep in an airtight container, refrigerate immediately, and use within 1-2 weeks.' },
       ],
     },
     marketedProducts: [
@@ -111,7 +111,7 @@ export const PLANTS = {
       { name: 'Himalaya Aloe Vera Face Gel 100ml', image: '/images/Picture4.jpg' },
     ],
     benefits: [
-      { icon: 'healing', title: 'Wound & Burn Healing', desc: 'Stimulates fibroblast activity and collagen synthesis to accelerate repair of wounds and 1st–2nd degree burns.' },
+      { icon: 'healing', title: 'Wound & Burn Healing', desc: 'Stimulates fibroblast activity and collagen synthesis to accelerate repair of wounds and 1st-2nd degree burns.' },
       { icon: 'water_drop', title: 'Deep Skin Hydration', desc: 'Acemannan mucopolysaccharides retain moisture for lasting hydration without clogging pores.' },
       { icon: 'spa', title: 'Anti-inflammatory', desc: 'Inhibits the COX pathway and reduces prostaglandin synthesis to calm skin irritation and redness.' },
       { icon: 'science', title: 'Antimicrobial', desc: 'Broad-spectrum activity against pathogenic microorganisms for skin and wound protection.' },
@@ -119,13 +119,13 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Asphodelaceae',
       nativeRegion: 'Arabian Peninsula; naturalized worldwide in tropical and subtropical regions',
-      growthHabit: 'Succulent perennial with thick fleshy leaves arranged in rosettes, growing 60–100 cm tall',
+      growthHabit: 'Succulent perennial with thick fleshy leaves arranged in rosettes, growing 60-100 cm tall',
       activeCompounds: 'Acemannan, vitamins A/C/E, anthraquinones (aloin, emodin), plant sterols, bradykinase',
       cultivationNotes: 'Thrives in arid and semi-arid tropical climates; drought-tolerant; widely cultivated globally for pharmaceutical and cosmetic industries',
     },
     preparation: [
       { method: 'Fresh Gel (Topical)', desc: 'Extract inner leaf gel directly for immediate topical application.', bestFor: 'Wound healing, burns, acute skin soothing' },
-      { method: 'Decolorized Oral Juice', desc: 'Commercially prepared juice with aloin/latex removed, taken orally at 10–30 mL.', bestFor: 'Short-term management of occasional constipation' },
+      { method: 'Decolorized Oral Juice', desc: 'Commercially prepared juice with aloin/latex removed, taken orally at 10-30 mL.', bestFor: 'Short-term management of occasional constipation' },
       { method: 'Topical Skincare Formulation', desc: 'Standardized commercial gels or creams containing aloe vera extract.', bestFor: 'Daily moisturizing, acne care, and UV protection' },
     ],
     symptoms: ['Skin irritation', 'Burns', 'Dry skin', 'Acne', 'Wound healing'],
@@ -134,12 +134,12 @@ export const PLANTS = {
       'Oral use absolutely contraindicated in pregnancy.',
       'Avoid applying to deeply infected or surgical wounds as it may delay deep tissue healing.',
     ],
+    relatedPlants: ['tea-tree', 'green-tea', 'witch-hazel'],
     references: [
-      { text: 'Surjushe A, Vasani R, Saple DG. Aloe vera: A short review. Indian J Dermatol. 2008;53(4): 163–166.', url: 'https://doi.org/10.4103/0019-5154.44785' },
-      { text: 'Maenthaisong R, et al. The efficacy of aloe vera used for burn wound healing: A systematic review. Burns. 2007;33(6): 713–718.', url: 'https://doi.org/10.1016/j.burns.2006.10.384' },
-      { text: 'Radha MH, Laxmipriya NP. Evaluation of biological properties and clinical effectiveness of Aloe vera: A scientific review. J Tradit Complement Med. 2015;5(1): 21–26.', url: 'https://doi.org/10.1016/j.jtcme.2014.10.006' },
+      { text: 'Surjushe, A., Vasani, R., & Saple, D. G. (2008). Aloe vera: A short review. Indian Journal of Dermatology, 53(4), 163–166.', url: 'https://journals.lww.com/ijd/fulltext/2008/53040/aloe_vera__a_short_review.1.aspx' },
+      { text: 'Eshun, K., & He, Q. (2004). Aloe vera: A valuable ingredient for the food, pharmaceutical and cosmetic industries – A review. Critical Reviews in Food Science and Nutrition, 44(2), 91–96.', url: 'http://dx.doi.org/10.1016/j.jep.2004.09.006' },
+      { text: 'Vardy, D. A., Cohen, A. D., Tchetov, T., Medvedovsky, E., & Biton, A. (1999). A double-blind placebo-controlled trial of an Aloe vera extract in the treatment of seborrheic dermatitis. Journal of Dermatological Treatment, 10(1), 7–11.' },
     ],
-    relatedPlants: ['tea-tree', 'green-tea', 'licorice'],
   },
 
   'tea-tree': {
@@ -157,9 +157,9 @@ export const PLANTS = {
     history: 'Aboriginal Australians used the leaves of Melaleuca alternifolia for centuries to treat skin infections, wounds, and respiratory conditions. The oil was first distilled in the early 20th century and became widely used during World War II as a first-aid antiseptic before antibiotics became available.',
     isDemo: false,
     activeConstituents: [
-      { name: 'Terpinen-4-ol', percentage: '35–48%', effect: 'Primary active constituent; potent antibacterial, antifungal, and anti-inflammatory properties' },
+      { name: 'Terpinen-4-ol', percentage: '35-48%', effect: 'Primary active constituent; potent antibacterial, antifungal, and anti-inflammatory properties' },
       { name: '1,8-Cineole (Eucalyptol)', percentage: '<15%', effect: 'Anti-inflammatory and mucolytic properties; higher concentrations can induce cutaneous irritation' },
-      { name: 'γ-Terpinene and α-Terpinene', percentage: '10–28%', effect: 'Significant antioxidant and synergistic antimicrobial support' },
+      { name: 'γ-Terpinene and α-Terpinene', percentage: '10-28%', effect: 'Significant antioxidant and synergistic antimicrobial support' },
       { name: 'p-Cymene and Limonene', percentage: 'minor', effect: 'Aid in topical skin penetration' },
     ],
     moa: [
@@ -169,7 +169,7 @@ export const PLANTS = {
     ],
     uses: [
       'Management of acne vulgaris (5% TTO gel comparable to 5% benzoyl peroxide with fewer side effects)',
-      'Tinea pedis (athlete\'s foot): topical 25–50% solutions',
+      'Tinea pedis (athlete\'s foot): topical 25-50% solutions',
       'Onychomycosis (nail fungus): 100% TTO comparable to clotrimazole 1%',
       'Seborrheic dermatitis (dandruff): 5% TTO shampoo reduces Malassezia furfur',
       'Broad-spectrum antiseptic for minor cutaneous lacerations, abrasions, and insect bites',
@@ -178,22 +178,22 @@ export const PLANTS = {
     ],
     howToUse: [
       { method: 'Facial / Acne Application', instruction: 'Dilute 1 drop of pure TTO in 1 teaspoon of non-comedogenic carrier oil (jojoba or mineral oil) to yield ~1% concentration. Apply as spot treatment.' },
-      { method: 'Body Application', instruction: 'Blend 2–3 drops per teaspoon of carrier oil. Apply to affected areas.' },
-      { method: 'Scalp Application', instruction: 'Blend 3–5 drops per tablespoon of carrier oil or add directly into a mild sulfate-free shampoo.' },
-      { method: 'Antifungal Formulation', instruction: 'Use commercially prepared 10–50% topical solutions depending on tissue thickness (nails vs. skin surface).' },
+      { method: 'Body Application', instruction: 'Blend 2-3 drops per teaspoon of carrier oil. Apply to affected areas.' },
+      { method: 'Scalp Application', instruction: 'Blend 3-5 drops per tablespoon of carrier oil or add directly into a mild sulfate-free shampoo.' },
+      { method: 'Antifungal Formulation', instruction: 'Use commercially prepared 10-50% topical solutions depending on tissue thickness (nails vs. skin surface).' },
     ],
     suitableAgeGroups: [
       { group: 'Pediatrics (<3 years)', notes: 'Strictly contraindicated: thin infant skin barrier increases risk of transdermal absorption and systemic neurotoxicity.' },
-      { group: 'Adults', notes: 'Safe in concentrations up to 5%; 1–2% is often sufficient for facial use.' },
+      { group: 'Adults', notes: 'Safe in concentrations up to 5%; 1-2% is often sufficient for facial use.' },
       { group: 'Pregnancy & Lactation', notes: 'Topical cosmetic use in low concentrations (<2%) generally considered safe. Avoid application near breast area during lactation.' },
       { group: 'Geriatrics & Chronic Skin Conditions', notes: 'Use with heightened caution in individuals with sensitive skin, atopic eczema, or severe psoriasis.' },
     ],
     dosage: {
-      standard: 'Acne products: 2–5% topical. Antifungal formulations: 10–50% topical. CRITICAL: Oral ingestion strictly contraindicated: highly toxic if swallowed.',
+      standard: 'Acne products: 2-5% topical. Antifungal formulations: 10-50% topical. CRITICAL: Oral ingestion strictly contraindicated: highly toxic if swallowed.',
       forms: [
-        { form: 'Acne Topical Gel/Cream', dose: '2–5% concentration, applied twice daily.' },
-        { form: 'Antifungal Topical Solution', dose: '10–50% concentration, applied 1–2 times daily to affected nails/skin.' },
-        { form: 'Anti-dandruff Shampoo', dose: '5% TTO shampoo; leave on for 3–5 minutes before rinsing.' },
+        { form: 'Acne Topical Gel/Cream', dose: '2-5% concentration, applied twice daily.' },
+        { form: 'Antifungal Topical Solution', dose: '10-50% concentration, applied 1-2 times daily to affected nails/skin.' },
+        { form: 'Anti-dandruff Shampoo', dose: '5% TTO shampoo; leave on for 3-5 minutes before rinsing.' },
       ],
     },
     overdose: {
@@ -236,12 +236,12 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Myrtaceae',
       nativeRegion: 'New South Wales, Australia (narrow coastal strip)',
-      growthHabit: 'Small tree or shrub growing 5–8 m tall with papery bark and needle-like leaves',
-      activeCompounds: 'Terpinen-4-ol (35–48%), γ-terpinene (10–28%), 1,8-cineole',
+      growthHabit: 'Small tree or shrub growing 5-8 m tall with papery bark and needle-like leaves',
+      activeCompounds: 'Terpinen-4-ol (35-48%), γ-terpinene (10-28%), 1,8-cineole',
       cultivationNotes: 'Grown commercially in Australia via steam distillation of leaves; standardized to ISO 4730 for pharmaceutical grade quality',
     },
     preparation: [
-      { method: 'Diluted Essential Oil', desc: 'Dilute in carrier oil (1–5%) before any topical application. Never apply undiluted to skin.', bestFor: 'Acne, minor antiseptic, deodorant' },
+      { method: 'Diluted Essential Oil', desc: 'Dilute in carrier oil (1-5%) before any topical application. Never apply undiluted to skin.', bestFor: 'Acne, minor antiseptic, deodorant' },
       { method: 'Commercial 5% Gel', desc: 'Standardized commercial topical formulations for safe, consistent dosing.', bestFor: 'Acne vulgaris management' },
       { method: 'Medicated Shampoo', desc: '5% TTO added to mild shampoo for scalp use.', bestFor: 'Dandruff, seborrheic dermatitis' },
     ],
@@ -251,12 +251,10 @@ export const PLANTS = {
       'Always dilute before skin application. Undiluted oil causes severe chemical burns.',
       'Store out of reach of children: as little as a few mL can be dangerous if swallowed by a child.',
     ],
-    references: [
-      { text: 'Hammer KA, Carson CF, Riley TV. Antimicrobial activity of essential oils and other plant extracts. J Appl Microbiol. 1999;86(6): 985–990.', url: 'https://doi.org/10.1046/j.1365-2672.1999.00780.x' },
-      { text: 'Enshaieh S, et al. The efficacy of 5% topical tea tree oil gel in mild to moderate acne vulgaris. Indian J Dermatol Venereol Leprol. 2007;73(1): 22–25.', url: 'https://doi.org/10.4103/0378-6323.30646' },
-      { text: 'Carson CF, Hammer KA, Riley TV. Melaleuca alternifolia (Tea Tree) Oil: A Review of Antimicrobial and Other Medicinal Properties. Clin Microbiol Rev. 2006;19(1): 50–62.', url: 'https://doi.org/10.1128/CMR.19.1.50-62.2006' },
-    ],
     relatedPlants: ['aloe-vera', 'green-tea', 'licorice'],
+    references: [
+      { text: 'Tea Tree Oil — Clinical Reference & Safety Data.', url: 'https://share.google/YdFqGC2Zq6Z1YMHFc' },
+    ],
   },
 
   'licorice': {
@@ -300,27 +298,27 @@ export const PLANTS = {
       'Gastrointestinal support: management of gastric ulcers, gastritis, and acid reflux',
     ],
     howToUse: [
-      { method: 'DIY Brightening Mask', instruction: 'Mix 1 teaspoon of licorice powder with rose water, milk, yogurt, or honey to form a paste. Apply to clean face, leave 15–20 minutes, rinse with lukewarm water.' },
-      { method: 'Targeted Spot Treatment', instruction: 'Mix a pinch of licorice powder with aloe vera gel or honey and apply directly to acne marks or hyperpigmentation for 10–15 minutes before rinsing.' },
+      { method: 'DIY Brightening Mask', instruction: 'Mix 1 teaspoon of licorice powder with rose water, milk, yogurt, or honey to form a paste. Apply to clean face, leave 15-20 minutes, rinse with lukewarm water.' },
+      { method: 'Targeted Spot Treatment', instruction: 'Mix a pinch of licorice powder with aloe vera gel or honey and apply directly to acne marks or hyperpigmentation for 10-15 minutes before rinsing.' },
       { method: 'Commercial Topical Products', instruction: 'Incorporate serums, toners, or creams containing standardized licorice extract (glabridin) into daily skincare routines.' },
-      { method: 'Oral Tea (Respiratory/Digestive)', instruction: 'Steep 1–2 teaspoons of dried chopped root in hot water to relieve coughs or improve digestion. For sore throats: mix 1 teaspoon of powder in warm water for gargling.' },
+      { method: 'Oral Tea (Respiratory/Digestive)', instruction: 'Steep 1-2 teaspoons of dried chopped root in hot water to relieve coughs or improve digestion. For sore throats: mix 1 teaspoon of powder in warm water for gargling.' },
     ],
     suitableAgeGroups: [
       { group: 'Infants (<1 year)', notes: 'Oral use strictly contraindicated. Topical use not recommended unless prescribed by a pediatrician.' },
-      { group: 'Children (1–5 years)', notes: 'External use only in small amounts; oral use strictly avoided.' },
-      { group: 'Children (6–12 years)', notes: 'Safe for topical use in skincare. Oral use strictly limited to prevent pseudoaldosteronism (fluid retention and blood pressure shifts).' },
-      { group: 'Adolescents (12–18 years)', notes: 'Safe for topical use (acne, hyperpigmentation). Cautious brief oral use is acceptable within standard limits.' },
+      { group: 'Children (1-5 years)', notes: 'External use only in small amounts; oral use strictly avoided.' },
+      { group: 'Children (6-12 years)', notes: 'Safe for topical use in skincare. Oral use strictly limited to prevent pseudoaldosteronism (fluid retention and blood pressure shifts).' },
+      { group: 'Adolescents (12-18 years)', notes: 'Safe for topical use (acne, hyperpigmentation). Cautious brief oral use is acceptable within standard limits.' },
       { group: 'Adults', notes: 'Safe for topical use and proper oral use when duration limits are followed.' },
       { group: 'Pregnancy', notes: 'Strictly contraindicated orally: high intake linked to increased risk of preterm labor and fetal neurodevelopmental issues. Low-concentration topical commercial use generally considered safe.' },
       { group: 'Chronic Disease Patients', notes: 'Oral use strictly contraindicated or limited for patients with hypertension, cardiovascular diseases, or renal insufficiency.' },
     ],
     dosage: {
-      standard: 'Topical serum (1–2%): apply 2–3 drops 1–2 times daily. DIY masks: ½ tsp powder, 2–3 times per week. Oral DGL licorice: up to 4.5 g daily for up to 4 months.',
+      standard: 'Topical serum (1-2%): apply 2-3 drops 1-2 times daily. DIY masks: ½ tsp powder, 2-3 times per week. Oral DGL licorice: up to 4.5 g daily for up to 4 months.',
       forms: [
-        { form: 'Licorice Extract Serum (1–2%)', dose: 'Apply 2–3 drops 1–2 times daily onto clean skin before moisturizer.' },
-        { form: 'DIY Powder Mask', dose: 'Mix ½ tsp with yogurt/honey/rose water, apply 2–3 times per week for 10–15 minutes.' },
+        { form: 'Licorice Extract Serum (1-2%)', dose: 'Apply 2-3 drops 1-2 times daily onto clean skin before moisturizer.' },
+        { form: 'DIY Powder Mask', dose: 'Mix ½ tsp with yogurt/honey/rose water, apply 2-3 times per week for 10-15 minutes.' },
         { form: 'Deglycyrrhizinated Licorice (DGL)', dose: 'Up to 4.5 g daily for up to 4 months (for ulcers; does not cause hypertension).' },
-        { form: 'Topical Gel/Serum (2%)', dose: 'Safe for up to 2–4 weeks continuous use on skin.' },
+        { form: 'Topical Gel/Serum (2%)', dose: 'Safe for up to 2-4 weeks continuous use on skin.' },
       ],
     },
     overdose: {
@@ -368,12 +366,12 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Fabaceae (Leguminosae)',
       nativeRegion: 'Southern Europe, Western Asia, and North Africa',
-      growthHabit: 'Perennial herbaceous plant reaching 1–1.5 m with compound leaves and violet flowers; root is the medicinal part',
+      growthHabit: 'Perennial herbaceous plant reaching 1-1.5 m with compound leaves and violet flowers; root is the medicinal part',
       activeCompounds: 'Glycyrrhizin, glabridin, licochalcone A, liquiritin, glycyrrhetinic acid',
-      cultivationNotes: 'Root harvested after 3–5 years; standardized commercial extracts produced from the root by solvent extraction',
+      cultivationNotes: 'Root harvested after 3-5 years; standardized commercial extracts produced from the root by solvent extraction',
     },
     preparation: [
-      { method: 'Topical Serum/Cream', desc: 'Standardized commercial products with glabridin (1–2%) for daily skincare.', bestFor: 'Hyperpigmentation, melasma, dark spots, rosacea' },
+      { method: 'Topical Serum/Cream', desc: 'Standardized commercial products with glabridin (1-2%) for daily skincare.', bestFor: 'Hyperpigmentation, melasma, dark spots, rosacea' },
       { method: 'DIY Face Mask', desc: 'Mix licorice powder with honey, yogurt, or rose water for a 15-minute brightening mask.', bestFor: 'Skin brightening, acne marks' },
       { method: 'Oral Root Infusion', desc: 'Steep chopped dried root in hot water for respiratory or digestive use.', bestFor: 'Cough, sore throat, gastric ulcer support' },
     ],
@@ -383,12 +381,13 @@ export const PLANTS = {
       'Use DGL (deglycyrrhizinated) form for oral use in patients with cardiovascular or renal concerns.',
       'Strictly avoid oral use in pregnancy.',
     ],
-    references: [
-      { text: 'Asl MN, Hosseinzadeh H. Review of Pharmacological Effects of Glycyrrhiza sp. and its Bioactive Compounds. Phytother Res. 2008;22(6): 709–724.', url: 'https://doi.org/10.1002/ptr.2362' },
-      { text: 'Amer M, et al. A new topical application of liquorice in the treatment of melasma. J Cosmetic Dermatol. 2009.', url: 'https://pubmed.ncbi.nlm.nih.gov/19874360/' },
-      { text: 'WHO Monographs on Selected Medicinal Plants: Radix Glycyrrhizae. Vol 1. 1999.', url: 'https://apps.who.int/iris/handle/10665/42052' },
-    ],
     relatedPlants: ['aloe-vera', 'green-tea', 'tea-tree'],
+    references: [
+      { text: 'Fiore, C., Eisenhut, M., Krausse, R., et al. (2008). Antiviral effects of Glycyrrhiza species. Phytotherapy Research, 22(2), 141–148.' },
+      { text: 'Asl, M. N., & Hosseinzadeh, H. (2008). Review of pharmacological effects of Glycyrrhiza sp. and its bioactive compounds.' },
+      { text: 'Healthline — Licorice Root: Dosage, Benefits and Forms.', url: 'https://www.healthline.com/nutrition/licorice-root#dosage-and-forms' },
+      { text: 'WebMD — Licorice: Uses, Side Effects, Interactions.', url: 'https://www.webmd.com/vitamins/ai/ingredientmono-881/licorice#uses' },
+    ],
   },
 
   'green-tea': {
@@ -432,20 +431,20 @@ export const PLANTS = {
     ],
     howToUse: [
       { method: 'Facial Toner (Topical)', instruction: 'Cooled fresh green tea infusion applied directly via a cotton pad as a soothing antioxidant toner.' },
-      { method: 'Eye Compress', instruction: 'Cooled used green tea bags compressed over closed eyelids for 10–15 minutes to reduce puffiness and dark circles.' },
-      { method: 'Oral Infusion (Tea)', instruction: 'Steep 2–3 g of dried leaves in hot water at 80–85°C (avoid boiling to prevent tannin bitterness and catechin degradation) for 3–5 minutes.' },
+      { method: 'Eye Compress', instruction: 'Cooled used green tea bags compressed over closed eyelids for 10-15 minutes to reduce puffiness and dark circles.' },
+      { method: 'Oral Infusion (Tea)', instruction: 'Steep 2-3 g of dried leaves in hot water at 80-85°C (avoid boiling to prevent tannin bitterness and catechin degradation) for 3-5 minutes.' },
     ],
     suitableAgeGroups: [
-      { group: 'Pregnancy & Lactation', notes: 'Oral intake strictly limited to maximum 1–2 cups daily. High doses of caffeine cross the placenta; EGCG may interfere with folic acid absorption. Topical cosmetic use poses negligible systemic risk.' },
+      { group: 'Pregnancy & Lactation', notes: 'Oral intake strictly limited to maximum 1-2 cups daily. High doses of caffeine cross the placenta; EGCG may interfere with folic acid absorption. Topical cosmetic use poses negligible systemic risk.' },
       { group: 'Pediatrics', notes: 'High oral doses of caffeine-containing supplements not recommended; moderation with standard dietary intake is essential.' },
       { group: 'Geriatrics', notes: 'Generally safe; clinical vigilance regarding potential interactions with cardiovascular therapies or anticoagulants.' },
       { group: 'Chronic Diseases', notes: 'Use with extreme caution in patients with hepatic impairment, severe renal failure, or clinical anxiety disorders: avoid concentrated oral extracts.' },
     ],
     dosage: {
-      standard: 'Topical: 2–3% standardized green tea extract applied twice daily. Oral: 2–3 cups brewed tea daily (~250–750 mg total catechins). NOTE: Never ingest concentrated green tea extract on an empty stomach.',
+      standard: 'Topical: 2-3% standardized green tea extract applied twice daily. Oral: 2-3 cups brewed tea daily (~250-750 mg total catechins). NOTE: Never ingest concentrated green tea extract on an empty stomach.',
       forms: [
-        { form: 'Topical Gel/Cream', dose: '2–3% standardized green tea extract, applied twice daily for dermatological use.' },
-        { form: 'Brewed Oral Tea', dose: '2–3 g leaves per 200 mL at 80–85°C; 2–3 cups daily.' },
+        { form: 'Topical Gel/Cream', dose: '2-3% standardized green tea extract, applied twice daily for dermatological use.' },
+        { form: 'Brewed Oral Tea', dose: '2-3 g leaves per 200 mL at 80-85°C; 2-3 cups daily.' },
         { form: 'Extract Supplements', dose: 'Must never be taken on an empty stomach due to heightened risk of hepatotoxicity.' },
       ],
     },
@@ -493,27 +492,26 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Theaceae',
       nativeRegion: 'China and Southeast Asia; widely cultivated in East Asia, India, and East Africa',
-      growthHabit: 'Evergreen shrub or small tree, 2–3 m tall when cultivated; young shoots and leaves are harvested',
+      growthHabit: 'Evergreen shrub or small tree, 2-3 m tall when cultivated; young shoots and leaves are harvested',
       activeCompounds: 'EGCG, epicatechin (EC), epigallocatechin (EGC), caffeine, L-theanine, condensed tannins',
       cultivationNotes: 'Green tea is produced from unoxidized Camellia sinensis leaves: minimal processing preserves high catechin content vs. black or oolong teas',
     },
     preparation: [
       { method: 'Topical Toner', desc: 'Brewed, cooled green tea applied with cotton pad to skin.', bestFor: 'Daily antioxidant protection, oily/acne-prone skin' },
-      { method: 'Eye Compress', desc: 'Cooled used tea bags placed over closed eyelids for 10–15 minutes.', bestFor: 'Reducing puffiness and dark circles' },
-      { method: 'Oral Tea', desc: 'Brewed at 80–85°C for 3–5 minutes; 2–3 cups daily.', bestFor: 'Cardiovascular support, cognitive function, weight management' },
+      { method: 'Eye Compress', desc: 'Cooled used tea bags placed over closed eyelids for 10-15 minutes.', bestFor: 'Reducing puffiness and dark circles' },
+      { method: 'Oral Tea', desc: 'Brewed at 80-85°C for 3-5 minutes; 2-3 cups daily.', bestFor: 'Cardiovascular support, cognitive function, weight management' },
     ],
     symptoms: ['Acne', 'Oily skin', 'Dark circles', 'Puffiness', 'UV damage', 'Aging skin'],
     warnings: [
       'Concentrated green tea extract supplements must never be taken on an empty stomach: risk of acute hepatotoxicity.',
-      'Limit oral intake during pregnancy to 1–2 cups daily; high EGCG may impair folic acid metabolism.',
+      'Limit oral intake during pregnancy to 1-2 cups daily; high EGCG may impair folic acid metabolism.',
       'Avoid with MAO inhibitors or CNS stimulants due to caffeine interactions.',
     ],
-    references: [
-      { text: 'Katiyar SK. Green Tea Prevents Non-melanoma Skin Cancer by Enhancing DNA Repair. Arch Biochem Biophys. 2011;508(2): 152–158.', url: 'https://doi.org/10.1016/j.abb.2010.11.015' },
-      { text: 'Yoo JY, Kim SS. Probiotics and Prebiotics: Present Status and Future Perspectives on Metabolic Disorders. Nutrients. 2016;8(3): 173.', url: 'https://pubmed.ncbi.nlm.nih.gov/26978396/' },
-      { text: 'Elsaie ML, et al. The efficacy of polyphenone 15% green tea extract in the treatment of melasma. J Drugs Dermatol. 2009;8(4): 358–364.', url: 'https://pubmed.ncbi.nlm.nih.gov/19363854/' },
-    ],
     relatedPlants: ['aloe-vera', 'tea-tree', 'rosemary'],
+    references: [
+      { text: 'National Center for Biotechnology Information (NCBI) — Green Tea.' },
+      { text: 'Drugs.com — Green Tea: Uses, Side Effects, Interactions.', url: 'https://www.drugs.com/npp/green-tea.html' },
+    ],
   },
 
   'rosemary': {
@@ -555,10 +553,10 @@ export const PLANTS = {
       'Gastrointestinal comfort: carminative and antispasmodic to relieve dyspepsia and flatulence',
     ],
     howToUse: [
-      { method: 'Scalp: Essential Oil', instruction: 'Dilute 5 drops of rosemary essential oil in a suitable carrier oil (jojoba, argan, or coconut oil). Massage thoroughly into the scalp 2–3 times weekly; leave for at least 2–4 hours or overnight before rinsing.' },
+      { method: 'Scalp: Essential Oil', instruction: 'Dilute 5 drops of rosemary essential oil in a suitable carrier oil (jojoba, argan, or coconut oil). Massage thoroughly into the scalp 2-3 times weekly; leave for at least 2-4 hours or overnight before rinsing.' },
       { method: 'Scalp: Aqueous Infusion', instruction: 'Boiled and cooled rosemary water can be sprayed directly onto the scalp daily as a leave-in treatment to improve localized circulation.' },
-      { method: 'Skincare: Topical Mask', instruction: 'Mix 2–3 drops of rosemary essential oil per teaspoon of carrier oil or aloe vera gel. Apply for 10–15 minutes as an antioxidant face treatment, then rinse thoroughly.' },
-      { method: 'Oral: Herbal Infusion', instruction: 'Steep 1–2 g (1–2 teaspoons) of dried leaves in 150–200 mL of hot water (85–90°C) in a covered vessel for 10–15 minutes. Strain and consume 1–3 times daily. Maximum daily: 4–6 g dry herb.' },
+      { method: 'Skincare: Topical Mask', instruction: 'Mix 2-3 drops of rosemary essential oil per teaspoon of carrier oil or aloe vera gel. Apply for 10-15 minutes as an antioxidant face treatment, then rinse thoroughly.' },
+      { method: 'Oral: Herbal Infusion', instruction: 'Steep 1-2 g (1-2 teaspoons) of dried leaves in 150-200 mL of hot water (85-90°C) in a covered vessel for 10-15 minutes. Strain and consume 1-3 times daily. Maximum daily: 4-6 g dry herb.' },
     ],
     suitableAgeGroups: [
       { group: 'Pregnancy & Lactation', notes: 'Oral intake in medicinal/concentrated amounts and use of pure essential oil STRICTLY CONTRAINDICATED. Rosemary acts as an emmenagogue and uterine stimulant: can induce pelvic congestion and pose risk of preterm labor or miscarriage. Low-concentration cosmetic topical use away from mammary glands considered low-risk during lactation.' },
@@ -566,10 +564,10 @@ export const PLANTS = {
       { group: 'Geriatrics', notes: 'Generally safe, but clinical monitoring required for potential interactions with cardiovascular or anticoagulant regimens.' },
     ],
     dosage: {
-      standard: 'Topical (hair): 5 drops EO in carrier, 2–3x weekly. Oral infusion: 1–2 g dried leaves in 150–200 mL hot water, 1–3 times daily. Max daily dry herb: 4–6 g.',
+      standard: 'Topical (hair): 5 drops EO in carrier, 2-3x weekly. Oral infusion: 1-2 g dried leaves in 150-200 mL hot water, 1-3 times daily. Max daily dry herb: 4-6 g.',
       forms: [
-        { form: 'Topical Essential Oil (diluted)', dose: '5 drops in carrier oil applied to scalp 2–3 times weekly.' },
-        { form: 'Oral Herbal Infusion', dose: '1–2 g dried leaves per 150–200 mL at 85–90°C; 1–3 cups daily (max 4–6 g dry herb/day).' },
+        { form: 'Topical Essential Oil (diluted)', dose: '5 drops in carrier oil applied to scalp 2-3 times weekly.' },
+        { form: 'Oral Herbal Infusion', dose: '1-2 g dried leaves per 150-200 mL at 85-90°C; 1-3 cups daily (max 4-6 g dry herb/day).' },
       ],
     },
     overdose: {
@@ -616,14 +614,14 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Lamiaceae (Labiatae)',
       nativeRegion: 'Mediterranean region; widely cultivated worldwide',
-      growthHabit: 'Aromatic evergreen shrub growing 0.5–2 m tall with needle-like leaves and blue flowers',
+      growthHabit: 'Aromatic evergreen shrub growing 0.5-2 m tall with needle-like leaves and blue flowers',
       activeCompounds: 'Carnosic acid, carnosol, rosmarinic acid, 1,8-cineole, camphor, alpha-pinene',
       cultivationNotes: 'Drought-tolerant; thrives in Mediterranean climate; essential oil produced by steam distillation of flowering tops and leaves',
     },
     preparation: [
       { method: 'Scalp Oil Massage', desc: 'Dilute rosemary EO in carrier oil (jojoba/coconut), apply to scalp with massage, leave overnight.', bestFor: 'Hair loss (androgenetic alopecia), dandruff' },
       { method: 'Leave-in Scalp Spray', desc: 'Cooled rosemary infusion sprayed onto scalp daily without rinsing.', bestFor: 'Scalp circulation, mild hair thinning' },
-      { method: 'Oral Herbal Tea', desc: 'Steep 1–2 g dried leaves covered at 85–90°C for 10–15 minutes.', bestFor: 'Cognitive support, dyspepsia, antioxidant maintenance' },
+      { method: 'Oral Herbal Tea', desc: 'Steep 1-2 g dried leaves covered at 85-90°C for 10-15 minutes.', bestFor: 'Cognitive support, dyspepsia, antioxidant maintenance' },
     ],
     symptoms: ['Hair loss', 'Dandruff', 'Scalp issues', 'Memory', 'Muscle pain', 'Digestive discomfort'],
     warnings: [
@@ -631,11 +629,14 @@ export const PLANTS = {
       'Essential oil must NEVER be applied near the face of children under 6 years old.',
       'Camphor content can lower seizure threshold: avoid oral use in epilepsy patients.',
     ],
+    relatedPlants: ['green-tea', 'aloe-vera', 'witch-hazel'],
     references: [
-      { text: 'Panahi Y, et al. Rosemary oil vs minoxidil 2% for the treatment of androgenetic alopecia: A randomized comparative trial. Skinmed. 2015;13(1): 15–21.', url: 'https://pubmed.ncbi.nlm.nih.gov/25842469/' },
-      { text: 'Moss M, et al. Aromas of rosemary and lavender essential oils differentially affect cognition and mood in healthy adults. Int J Neurosci. 2003;113(1): 15–38.', url: 'https://doi.org/10.1080/00207450390161903' },
+      { text: 'European Medicines Agency (EMA). (2010). European Union herbal monograph on Rosmarinus officinalis L., folium. Committee on Herbal Medicinal Products (HMPC).' },
+      { text: 'World Health Organization (WHO). (2009). WHO Monographs on Selected Medicinal Plants (Vol. 4): Folium Rosmarini. Geneva.' },
+      { text: 'Panahi, Y., Taghizadeh, M., & Sahebkar, A. (2015). Rosemary oil vs minoxidil 2% for androgenetic alopecia: a randomized comparative trial. Skinmed, 13(1), 15–21.' },
+      { text: 'Moss, M., Cook, J., Wesnes, K., & Duckett, P. (2003). Aromas of rosemary and lavender essential oils differentially affect cognition and mood in healthy adults. International Journal of Neuroscience, 113(1), 15–38.' },
+      { text: 'WebMD — Rosemary: Uses, Side Effects, Dosage.', url: 'https://www.webmd.com/vitamins/ai/ingredientmono-154/rosemary' },
     ],
-    relatedPlants: ['green-tea', 'aloe-vera', 'tea-tree'],
   },
 
   // ══════════════════════════════════════════════════════════════════════
@@ -653,17 +654,17 @@ export const PLANTS = {
     tags: ['Galactagogue', 'Lactation', 'Breastfeeding', 'Hormonal'],
     image: '/images/Picture34.jpg',
     shortDescription: 'One of the most popular galactagogues worldwide, fenugreek stimulates prolactin and oxytocin secretion to enhance breast milk production in lactating mothers.',
-    description: 'Fenugreek seeds contain diosgenin (a steroidal saponin that mimics estrogen), 4-hydroxyisoleucine (an amino acid with antidiabetic activity), and galactomannan fiber (20–30%). It enhances lactation through hormonal stimulation (increasing prolactin and oxytocin), phytoestrogenic effects (diosgenin promotes breast development), and stimulation of mammary glands (which are modified sweat glands). Studies report up to 400% increase in milk supply for some mothers.',
+    description: 'Fenugreek seeds contain diosgenin (a steroidal saponin that mimics estrogen), 4-hydroxyisoleucine (an amino acid with antidiabetic activity), and galactomannan fiber (20-30%). It enhances lactation through hormonal stimulation (increasing prolactin and oxytocin), phytoestrogenic effects (diosgenin promotes breast development), and stimulation of mammary glands (which are modified sweat glands). Studies report up to 400% increase in milk supply for some mothers.',
     history: 'Fenugreek has been used in Egyptian, Indian, Middle Eastern, and Chinese medicine for thousands of years. Ancient Egyptians used it for childbirth and breastfeeding support. It is a staple galactagogue in Ayurvedic medicine and is commonly called "Methi" in South Asian cuisine and herbalism.',
     isDemo: false,
     activeConstituents: [
       { name: '4-Hydroxyisoleucine', percentage: '0.09%', effect: 'Amino acid derivative with antidiabetic activity' },
-      { name: 'Steroidal Saponins (Diosgenin, Yamogenin, Tigogenin)', percentage: '0.6–1.7%', effect: 'Cholesterol-lowering effect; diosgenin mimics estrogen and may promote breast development' },
-      { name: 'Galactomannan Fiber', percentage: '20–30%', effect: 'Soluble fiber: lowers blood glucose and cholesterol' },
+      { name: 'Steroidal Saponins (Diosgenin, Yamogenin, Tigogenin)', percentage: '0.6-1.7%', effect: 'Cholesterol-lowering effect; diosgenin mimics estrogen and may promote breast development' },
+      { name: 'Galactomannan Fiber', percentage: '20-30%', effect: 'Soluble fiber: lowers blood glucose and cholesterol' },
       { name: 'Alkaloids: Trigonelline, Gentianine, Choline', percentage: '0.5%', effect: 'Antidiabetic and neuroprotective effects' },
       { name: 'Flavonoids / Polyphenols: Quercetin, Orientin, Vitexin', percentage: '', effect: 'Antioxidant and anti-inflammatory activity' },
-      { name: 'Proteins (Rich in Lysine, Tryptophan)', percentage: '20–30%', effect: 'Essential for milk protein production' },
-      { name: 'Fixed Oils (PUFAs)', percentage: '5–10%', effect: 'Rich in polyunsaturated fatty acids; nutritional support' },
+      { name: 'Proteins (Rich in Lysine, Tryptophan)', percentage: '20-30%', effect: 'Essential for milk protein production' },
+      { name: 'Fixed Oils (PUFAs)', percentage: '5-10%', effect: 'Rich in polyunsaturated fatty acids; nutritional support' },
       { name: 'Minerals & Vitamins (Iron, Calcium, Niacin)', percentage: '', effect: 'Supports maternal recovery and boosts milk nutrient density' },
       { name: 'Sotolon (Volatile Component)', percentage: '', effect: 'Responsible for the characteristic maple syrup-like aroma in sweat and breast milk' },
     ],
@@ -681,23 +682,23 @@ export const PLANTS = {
       'Traditional use for declining testosterone levels in men over 40',
     ],
     howToUse: [
-      { method: 'Capsules (Most Common)', instruction: 'Take 2–3 capsules (580–610 mg each) three to four times per day.' },
-      { method: 'Tea', instruction: 'Steep 1 teaspoon of fenugreek seeds in boiling water for at least 15 minutes, 2–3 times a day.' },
+      { method: 'Capsules (Most Common)', instruction: 'Take 2-3 capsules (580-610 mg each) three to four times per day.' },
+      { method: 'Tea', instruction: 'Steep 1 teaspoon of fenugreek seeds in boiling water for at least 15 minutes, 2-3 times a day.' },
       { method: 'Powder / Seeds', instruction: 'Consume ½ to 1 teaspoon of powder or seeds up to 3 times a day, mixed into water, juice, or food.' },
-      { method: 'Tincture', instruction: 'Take 1–2 mL three times a day (check package directions for specific concentration).' },
+      { method: 'Tincture', instruction: 'Take 1-2 mL three times a day (check package directions for specific concentration).' },
     ],
     suitableAgeGroups: [
-      { group: 'Adults (18–65+ years)', notes: 'Primary users for lactation support, diabetes management, and testosterone support.' },
+      { group: 'Adults (18-65+ years)', notes: 'Primary users for lactation support, diabetes management, and testosterone support.' },
       { group: 'Older Men (40+ years)', notes: 'Used to address declining testosterone levels.' },
       { group: 'Women for Lactation', notes: 'Used by lactating women to boost milk supply. Leaves only recommended: avoid bark and root.' },
       { group: 'Children (Small Amounts)', notes: 'Considered safe in amounts found in food. Insufficient evidence for large amounts; may cause unusual maple syrup body odors.' },
     ],
     dosage: {
-      standard: 'Typical lactation dosage: 3,500–7,300 mg per day in divided doses.',
+      standard: 'Typical lactation dosage: 3,500-7,300 mg per day in divided doses.',
       forms: [
-        { form: 'Capsules', dose: '2–3 capsules (approx. 500–600 mg each) three times daily (total 6–12 capsules/day).' },
-        { form: 'Powder', dose: '2–3 teaspoons daily (total 1–6 g powdered seed daily).' },
-        { form: 'Tea', dose: '1–3 cups daily of 15-minute steeped infusion.' },
+        { form: 'Capsules', dose: '2-3 capsules (approx. 500-600 mg each) three times daily (total 6-12 capsules/day).' },
+        { form: 'Powder', dose: '2-3 teaspoons daily (total 1-6 g powdered seed daily).' },
+        { form: 'Tea', dose: '1-3 cups daily of 15-minute steeped infusion.' },
       ],
     },
     overdose: {
@@ -737,7 +738,7 @@ export const PLANTS = {
       forms: [
         { form: 'Whole Seeds & Powder', instructions: 'Store in an airtight container in a dry, dark, and cool environment to prevent staleness and loss of therapeutic properties.' },
         { form: 'Brewed Tea', instructions: 'Store in the refrigerator for up to a few days (similar to iced tea).' },
-        { form: 'Capsules & Supplements', instructions: 'Store at room temperature (68–72°F/20–22°C). Avoid excessive humidity and temperature extremes. Once opened, consume within 12 months. Shelf life 18–24 months properly stored.' },
+        { form: 'Capsules & Supplements', instructions: 'Store at room temperature (68-72°F/20-22°C). Avoid excessive humidity and temperature extremes. Once opened, consume within 12 months. Shelf life 18-24 months properly stored.' },
       ],
     },
     marketedProducts: [
@@ -754,13 +755,13 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Fabaceae (Leguminosae)',
       nativeRegion: 'Mediterranean region, South Asia, Western Asia; widely cultivated in India, Egypt, and the Middle East',
-      growthHabit: 'Annual herb growing 30–60 cm tall with trifoliate leaves and small white/yellow flowers; seeds harvested from pods',
+      growthHabit: 'Annual herb growing 30-60 cm tall with trifoliate leaves and small white/yellow flowers; seeds harvested from pods',
       activeCompounds: 'Diosgenin, galactomannan, 4-hydroxyisoleucine, trigonelline, sotolon, quercetin',
       cultivationNotes: 'Seeds are the medicinal part; harvested when pods dry; widely used as a culinary spice throughout South Asia and the Middle East',
     },
     preparation: [
-      { method: 'Capsules/Tablets', desc: '2–3 capsules (500–600 mg) three to four times daily: most convenient and consistent dose.', bestFor: 'Lactation support, consistent therapeutic dosing' },
-      { method: 'Seed Tea', desc: 'Steep 1 tsp seeds in boiling water for 15 minutes; consume 2–3 cups daily.', bestFor: 'Lactation, digestive support' },
+      { method: 'Capsules/Tablets', desc: '2-3 capsules (500-600 mg) three to four times daily: most convenient and consistent dose.', bestFor: 'Lactation support, consistent therapeutic dosing' },
+      { method: 'Seed Tea', desc: 'Steep 1 tsp seeds in boiling water for 15 minutes; consume 2-3 cups daily.', bestFor: 'Lactation, digestive support' },
       { method: 'Culinary Use', desc: 'Add seeds to food or sprinkle powder into smoothies, yogurt, or soups.', bestFor: 'Nutritional supplementation, gradual lactation support' },
     ],
     symptoms: ['Low milk supply', 'Postpartum fatigue', 'Nutritional deficiency during lactation'],
@@ -769,11 +770,13 @@ export const PLANTS = {
       'May cause maple syrup body odor in both mother and infant: this is harmless but can be alarming.',
       'Monitor blood sugar closely if taking alongside diabetes medications: risk of dangerous hypoglycemia.',
     ],
-    references: [
-      { text: 'Forinash AB, et al. The use of galactogogues in the breastfeeding mother. Ann Pharmacother. 2012;46(10): 1392–1404.', url: 'https://doi.org/10.1345/aph.1R167' },
-      { text: 'Turkyilmaz C, et al. The effect of galactagogue herbal tea on breast milk production and short-term catch-up of birth weight in the first week of life. J Altern Complement Med. 2011;17(2): 139–142.', url: 'https://doi.org/10.1089/acm.2010.0090' },
-    ],
     relatedPlants: ['fennel', 'moringa'],
+    references: [
+      { text: 'Drugs.com — Fenugreek and Breastfeeding: Safety, Dosage.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK501779/' },
+      { text: 'ScienceDirect — Fenugreek for lactation: A systematic review.', url: 'https://www.sciencedirect.com/science/article/pii/S2213398420300051' },
+      { text: 'Healthline — Fenugreek for Breastfeeding: Does It Work?', url: 'https://www.healthline.com/health/breastfeeding/fenugreek-breastfeeding#dose' },
+      { text: 'Avicenna Journal of Phytomedicine — Fenugreek clinical study.', url: 'https://ajp.mums.ac.ir/article_26043_538c31701d3e67cabb73b8c9b84bf5ad.pdf' },
+    ],
   },
 
   'fennel': {
@@ -787,11 +790,11 @@ export const PLANTS = {
     tags: ['Galactagogue', 'Lactation', 'Carminative', 'Phytoestrogen'],
     image: '/images/Picture36.jpg',
     shortDescription: 'A traditional galactagogue containing anethole: a phytoestrogenic compound that may increase prolactin levels, improve milk volume, and soothe infant colic through breast milk.',
-    description: 'Fennel seeds contain trans-anethole (50–80% of essential oil), which acts as a phytoestrogen mimicking estrogen to support mammary gland development and may block dopamine to increase prolactin levels. Fennel also relaxes smooth muscle to improve the let-down reflex, and provides a carminative effect that may soothe infant colic when compounds pass through breast milk.',
+    description: 'Fennel seeds contain trans-anethole (50-80% of essential oil), which acts as a phytoestrogen mimicking estrogen to support mammary gland development and may block dopamine to increase prolactin levels. Fennel also relaxes smooth muscle to improve the let-down reflex, and provides a carminative effect that may soothe infant colic when compounds pass through breast milk.',
     history: 'Fennel has been used since antiquity in Mediterranean cultures for digestive health, lactation, and menstrual support. It was used by ancient Romans for its aromatic and medicinal properties. In traditional medicine across Europe, the Middle East, and South Asia, fennel tea is a common galactagogue given to new mothers.',
     isDemo: false,
     activeConstituents: [
-      { name: 'trans-Anethole (Volatile Oil)', percentage: '50–80%', effect: 'Phytoestrogen mimicking estrogen; supports mammary gland development; may block dopamine to increase prolactin; antispasmodic and carminative properties' },
+      { name: 'trans-Anethole (Volatile Oil)', percentage: '50-80%', effect: 'Phytoestrogen mimicking estrogen; supports mammary gland development; may block dopamine to increase prolactin; antispasmodic and carminative properties' },
       { name: 'Fenchone (Volatile Oil)', percentage: 'up to 11.68%', effect: 'Contributes to bitter taste and digestive/antispasmodic effects' },
       { name: 'Limonene, α-Pinene, Methyl Chavicol', percentage: 'minor', effect: 'Antimicrobial and aromatic support' },
       { name: 'Rosmarinic Acid, Caffeoylquinic Acid Derivatives (Phenolic)', percentage: '', effect: 'Antioxidant and anti-inflammatory activity' },
@@ -816,23 +819,23 @@ export const PLANTS = {
       'Vasomotor symptom reduction in menopausal/postmenopausal women (hot flashes, improved sleep)',
     ],
     howToUse: [
-      { method: 'Fennel Tea (Most Common)', instruction: 'Steep 1–3 teaspoons of crushed fennel seeds in 8 ounces of boiling water for 10–20 minutes. Cover the cup while steeping to prevent beneficial volatile oils from escaping. Drink 1–3 cups per day.' },
+      { method: 'Fennel Tea (Most Common)', instruction: 'Steep 1-3 teaspoons of crushed fennel seeds in 8 ounces of boiling water for 10-20 minutes. Cover the cup while steeping to prevent beneficial volatile oils from escaping. Drink 1-3 cups per day.' },
       { method: 'Seed Consumption', instruction: 'Chew on 1 teaspoon of fennel seeds after meals, up to 3 times a day, to aid digestion and support lactation.' },
       { method: 'Culinary Uses', instruction: 'Add crushed seeds to soups, salads, curries, or roasted vegetables for a light anise-like flavor and nutritional benefit.' },
       { method: 'Lactation Blends', instruction: 'Choose teas that combine fennel with other herbs like fenugreek or nettle for synergistic lactation support.' },
     ],
     suitableAgeGroups: [
-      { group: 'Infants (2–12 weeks)', notes: 'Fennel seed oil emulsions used for alleviating colic: under medical supervision only.' },
-      { group: 'Adolescents and Young Adults (13–21 years)', notes: 'Used for primary dysmenorrhea; studies involve oral fennel drops.' },
+      { group: 'Infants (2-12 weeks)', notes: 'Fennel seed oil emulsions used for alleviating colic: under medical supervision only.' },
+      { group: 'Adolescents and Young Adults (13-21 years)', notes: 'Used for primary dysmenorrhea; studies involve oral fennel drops.' },
       { group: 'Adults: Women of Reproductive Age', notes: 'Used for PMS, hirsutism, and general digestive health.' },
-      { group: 'Menopausal Women (40–60+)', notes: 'Used to reduce hot flashes, improve sleep quality, and manage bone density.' },
-      { group: 'Lactating Women', notes: 'Primary use group; 1–3 cups of tea or 500–1,000 mg capsules 2–3 times daily.' },
+      { group: 'Menopausal Women (40-60+)', notes: 'Used to reduce hot flashes, improve sleep quality, and manage bone density.' },
+      { group: 'Lactating Women', notes: 'Primary use group; 1-3 cups of tea or 500-1,000 mg capsules 2-3 times daily.' },
     ],
     dosage: {
-      standard: 'Tea/Seeds: 1–3 cups of tea per day or roughly 1 teaspoon of seeds 3 times daily. Capsules: 500–1,000 mg taken 2–3 times daily.',
+      standard: 'Tea/Seeds: 1-3 cups of tea per day or roughly 1 teaspoon of seeds 3 times daily. Capsules: 500-1,000 mg taken 2-3 times daily.',
       forms: [
-        { form: 'Fennel Seed Tea', dose: '1–3 cups daily of 10–20 minute infusion of 1–3 teaspoons crushed seeds.' },
-        { form: 'Capsules (seed powder)', dose: '500–1,000 mg, taken 2–3 times daily.' },
+        { form: 'Fennel Seed Tea', dose: '1-3 cups daily of 10-20 minute infusion of 1-3 teaspoons crushed seeds.' },
+        { form: 'Capsules (seed powder)', dose: '500-1,000 mg, taken 2-3 times daily.' },
         { form: 'Whole Seeds', dose: '1 teaspoon chewed after meals, up to 3 times daily.' },
       ],
     },
@@ -869,7 +872,7 @@ export const PLANTS = {
     ],
     storage: {
       forms: [
-        { form: 'Fennel Seeds', instructions: 'Store in an airtight glass jar in a cool, dark, dry place. Properly stored, dried seeds remain potent for 6–12 months. Lightly crush just before steeping to release volatile oils.' },
+        { form: 'Fennel Seeds', instructions: 'Store in an airtight glass jar in a cool, dark, dry place. Properly stored, dried seeds remain potent for 6-12 months. Lightly crush just before steeping to release volatile oils.' },
         { form: 'Fresh Fennel Bulb/Fronds', instructions: 'Store in a sealed plastic bag in the vegetable crisper. Fresh fennel lasts up to one week in the fridge.' },
       ],
     },
@@ -888,13 +891,13 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Apiaceae (Umbelliferae)',
       nativeRegion: 'Mediterranean region; widely naturalized in Europe, Asia, and the Americas',
-      growthHabit: 'Tall aromatic perennial herb reaching 1.5–2.5 m with feathery leaves and yellow flower umbels; seeds and bulb both used',
-      activeCompounds: 'trans-Anethole (50–80%), fenchone, limonene, rosmarinic acid, quercetin-3-rutinoside',
+      growthHabit: 'Tall aromatic perennial herb reaching 1.5-2.5 m with feathery leaves and yellow flower umbels; seeds and bulb both used',
+      activeCompounds: 'trans-Anethole (50-80%), fenchone, limonene, rosmarinic acid, quercetin-3-rutinoside',
       cultivationNotes: 'Seeds harvested in late summer when umbels mature; dried seeds are the medicinal part used in teas and capsules',
     },
     preparation: [
-      { method: 'Seed Tea', desc: 'Steep 1–3 tsp crushed seeds in boiling water for 10–20 minutes (covered).', bestFor: 'Lactation support, infant colic (via breast milk), digestive comfort' },
-      { method: 'Capsules', desc: '500–1,000 mg seed powder capsules taken with meals.', bestFor: 'Consistent lactation dosing, dysmenorrhea' },
+      { method: 'Seed Tea', desc: 'Steep 1-3 tsp crushed seeds in boiling water for 10-20 minutes (covered).', bestFor: 'Lactation support, infant colic (via breast milk), digestive comfort' },
+      { method: 'Capsules', desc: '500-1,000 mg seed powder capsules taken with meals.', bestFor: 'Consistent lactation dosing, dysmenorrhea' },
       { method: 'Culinary Incorporation', desc: 'Add to soups, salads, or roasted vegetables.', bestFor: 'Nutritional supplementation, mild digestive support' },
     ],
     symptoms: ['Low milk supply', 'Infant colic', 'Bloating', 'Menstrual pain', 'Digestive discomfort'],
@@ -903,11 +906,15 @@ export const PLANTS = {
       'Avoid concentrated fennel essential oil while breastfeeding: can be toxic to infants.',
       'Do not use in hormone-sensitive cancers (estrogen-like activity).',
     ],
+    relatedPlants: ['fenugreek', 'moringa', 'anise'],
     references: [
-      { text: 'Alexandrovich I, et al. The effect of fennel (Foeniculum vulgare) seed oil emulsion in infantile colic: A randomized, placebo-controlled study. Altern Ther Health Med. 2003;9(4): 58–61.', url: 'https://pubmed.ncbi.nlm.nih.gov/12868253/' },
-      { text: 'Jaafarpour M, et al. Comparative effect of cinnamon and ibuprofen for treatment of primary dysmenorrhea. J Clin Diagn Res. 2015;9(4): QC04–QC07.', url: 'https://doi.org/10.7860/JCDR/2015/12084.5783' },
+      { text: 'European Medicines Agency (EMA). (2016). European Union herbal monograph on Foeniculum vulgare Miller, fructus. Committee on Herbal Medicinal Products (HMPC).' },
+      { text: 'World Health Organization (WHO). (2007). WHO Monographs on Selected Medicinal Plants (Vol. 3). Geneva.' },
+      { text: 'Badgujar, S. B., Patel, V. V., & Bandivdekar, A. H. (2014). Foeniculum vulgare Mill: A review of its botany, phytochemistry, pharmacology, contemporary application, and toxicology. BioMed Research International, 2014.' },
+      { text: 'PMC — Fennel (Foeniculum vulgare) as a galactagogue.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4137549/' },
+      { text: 'NCBI — Drugs and Lactation Database (LactMed): Fennel.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK501793/' },
+      { text: 'Healthline — Fennel Tea: Health Benefits, Uses and Side Effects.', url: 'https://www.healthline.com/health/fennel-tea' },
     ],
-    relatedPlants: ['fenugreek', 'moringa'],
   },
 
   'moringa': {
@@ -941,7 +948,7 @@ export const PLANTS = {
       { title: 'Anti-inflammatory Effects', detail: 'Reduces oxidative stress in the mammary tissue, supporting optimal milk synthesis environment.' },
     ],
     uses: [
-      'Boosts milk volume: studies indicate moringa can significantly increase milk supply, especially in early postpartum days (days 3–7), with some reporting up to 400 mL/day increase',
+      'Boosts milk volume: studies indicate moringa can significantly increase milk supply, especially in early postpartum days (days 3-7), with some reporting up to 400 mL/day increase',
       'Raises prolactin levels: stimulates the hormone responsible for milk production',
       'Nutrient-dense nutrition: rich in iron, calcium, and vitamins (A, B); helps rebuild maternal nutrient stores',
       'Immune support for infants (via breast milk)',
@@ -956,18 +963,18 @@ export const PLANTS = {
     ],
     suitableAgeGroups: [
       { group: 'Infants and Young Children (6 months to 5 years)', notes: 'As a nutritional supplement in food amounts only.' },
-      { group: 'Children and Adolescents (6–18 years)', notes: 'Supports immunity, muscle growth, and brain development. Often added to juices and smoothies.' },
-      { group: 'Young Adults and Adults (19–50 years)', notes: 'Provides natural energy, stress balance, iron levels, and breast milk production support.' },
+      { group: 'Children and Adolescents (6-18 years)', notes: 'Supports immunity, muscle growth, and brain development. Often added to juices and smoothies.' },
+      { group: 'Young Adults and Adults (19-50 years)', notes: 'Provides natural energy, stress balance, iron levels, and breast milk production support.' },
       { group: 'Lactating Women', notes: 'Using LEAVES ONLY: roots, bark, and flowers are strictly contraindicated.' },
       { group: 'Older Adults (50+)', notes: 'Helps manage blood sugar and blood pressure, reduces joint inflammation, and supports eye health.' },
     ],
     dosage: {
-      standard: 'Powder: 1 teaspoon to 1 tablespoon per day (morning and midday doses). Capsules/Tablets: 1–2 twice a day. Leaves (raw): up to 1 cup fresh leafy greens equivalent.',
+      standard: 'Powder: 1 teaspoon to 1 tablespoon per day (morning and midday doses). Capsules/Tablets: 1-2 twice a day. Leaves (raw): up to 1 cup fresh leafy greens equivalent.',
       forms: [
         { form: 'Leaf Powder', dose: '1 tsp to 1 tbsp per day, split into morning and midday doses.' },
-        { form: 'Capsules / Tablets', dose: '1–2 capsules twice daily.' },
+        { form: 'Capsules / Tablets', dose: '1-2 capsules twice daily.' },
         { form: 'Raw Fresh Leaves', dose: 'Up to 1 cup equivalent daily, cooked or in salads.' },
-        { form: 'Tea', dose: '1–2 cups daily of steeped moringa leaf tea.' },
+        { form: 'Tea', dose: '1-2 cups daily of steeped moringa leaf tea.' },
       ],
     },
     overdose: {
@@ -1026,13 +1033,13 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Moringaceae',
       nativeRegion: 'Sub-Himalayan regions of northwestern India; widely cultivated throughout the tropics',
-      growthHabit: 'Fast-growing tree reaching 10–12 m; drought-resistant; compound leaves, white flowers, and long seed pods ("drumsticks")',
+      growthHabit: 'Fast-growing tree reaching 10-12 m; drought-resistant; compound leaves, white flowers, and long seed pods ("drumsticks")',
       activeCompounds: 'β-sitosterol, quercetin, kaempferol, isothiocyanates, iron, calcium, vitamins A/B/C/E',
       cultivationNotes: 'One of the most nutritionally dense plants known. Leaves harvested year-round in tropical climates. ONLY leaves are safe for breastfeeding: never use bark, roots, or flowers',
     },
     preparation: [
-      { method: 'Leaf Powder in Food', desc: 'Mix 1 tsp–1 tbsp moringa powder into smoothies, yogurt, or soups.', bestFor: 'Daily lactation support, nutritional supplementation' },
-      { method: 'Capsules', desc: '1–2 capsules twice daily for consistent dosing.', bestFor: 'Convenient lactation support with precise dosing' },
+      { method: 'Leaf Powder in Food', desc: 'Mix 1 tsp-1 tbsp moringa powder into smoothies, yogurt, or soups.', bestFor: 'Daily lactation support, nutritional supplementation' },
+      { method: 'Capsules', desc: '1-2 capsules twice daily for consistent dosing.', bestFor: 'Convenient lactation support with precise dosing' },
       { method: 'Fresh Leaves (Cooked)', desc: 'Cooked like spinach in local dishes.', bestFor: 'Culinary integration, nutritional boost' },
     ],
     symptoms: ['Low milk supply', 'Postpartum fatigue', 'Nutritional deficiency', 'Anemia during lactation'],
@@ -1041,11 +1048,14 @@ export const PLANTS = {
       'STRICTLY CONTRAINDICATED in pregnancy: all parts except leaves can cause uterine contractions.',
       'Monitor blood sugar and blood pressure closely when taking alongside antidiabetic or antihypertensive medications.',
     ],
-    references: [
-      { text: 'Estrella MCP, et al. A double-blind, randomised controlled trial on the use of malunggay (Moringa oleifera) for augmentation of the volume of breastmilk among non-nursing mothers of preterm infants. Philipp J Pediatr. 2000;49(1): 3–6.', url: 'https://pubmed.ncbi.nlm.nih.gov/12297299/' },
-      { text: 'Fuglie LJ. The Miracle Tree: Moringa oleifera: Natural Nutrition for the Tropics. Church World Service; 1999.', url: 'https://www.fao.org/fileadmin/user_upload/agns/pdf/Moringa_oleifera.pdf' },
-    ],
     relatedPlants: ['fenugreek', 'fennel'],
+    references: [
+      { text: 'PMC — Moringa oleifera as a galactagogue in postpartum women.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9684698/' },
+      { text: 'PMC — Nutritional and therapeutic properties of Moringa oleifera.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12294722/' },
+      { text: 'NCBI — Drugs and Lactation Database (LactMed): Moringa.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK501899/' },
+      { text: 'PMC — Review of Moringa oleifera pharmacological activities.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC8373516/' },
+      { text: 'Cleveland Clinic — Moringa: Benefits, Side Effects and Preparations.', url: 'https://health.clevelandclinic.org/moringa-benefits' },
+    ],
   },
 
   // ══════════════════════════════════════════════════════════════════════
@@ -1070,7 +1080,7 @@ export const PLANTS = {
       { name: 'Gingerols (6-gingerol primary)', percentage: '', effect: 'Primary active principles in fresh ginger; potent anti-inflammatory and anti-emetic properties; analgesic activity' },
       { name: 'Shogaols (6-shogaol primary)', percentage: '', effect: 'Formed via drying/heating of gingerols; 3× more potent anti-inflammatory profile; higher chemical stability' },
       { name: 'Paradols & Zingerone', percentage: '', effect: 'Secondary degradation products; contribute to antioxidant and warming profile' },
-      { name: 'Volatile Essential Oils (1–3%)', percentage: '1–3%', effect: 'Primarily beta-zingiberene (up to 35%), ar-curcumene; characteristic spicy aroma; antimicrobial and antispasmodic effects' },
+      { name: 'Volatile Essential Oils (1-3%)', percentage: '1-3%', effect: 'Primarily beta-zingiberene (up to 35%), ar-curcumene; characteristic spicy aroma; antimicrobial and antispasmodic effects' },
       { name: 'Phenolic Derivatives & Resins', percentage: '', effect: 'Secondary cellular antioxidant support; maintain gastric mucosal integrity at physiological doses' },
     ],
     moa: [
@@ -1092,9 +1102,9 @@ export const PLANTS = {
     ],
     howToUse: [
       { method: 'Aqueous Infusion (Ginger Tea)', instruction: 'Infuse ginger in hot water (covered) for 10 minutes. Recommended to consume the remaining sediment: rich in shogaols and essential oils. Consume with food to minimize gastric irritation. For menstrual relief: start 2 days before expected period and continue through first 3 days of menstruation.' },
-      { method: 'Powdered Ginger (Dried Extract)', instruction: '250–500 mg per dose (approx. 1/4 flat teaspoon), taken 3–4 times daily. Do not exceed 4 g per day.' },
-      { method: 'Fresh Ginger Rhizome', instruction: '2–3 g per dose (approx. 1 level teaspoon finely grated), taken 3–4 times daily. Do not exceed 15–20 g per day. Note: 1 g powder ≈ 4 g fresh ginger.' },
-      { method: 'Standardized Oral Capsules', instruction: '250–500 mg standardized extract (standardized to 5% total gingerols/shogaols) taken 2–4 times per day.' },
+      { method: 'Powdered Ginger (Dried Extract)', instruction: '250-500 mg per dose (approx. 1/4 flat teaspoon), taken 3-4 times daily. Do not exceed 4 g per day.' },
+      { method: 'Fresh Ginger Rhizome', instruction: '2-3 g per dose (approx. 1 level teaspoon finely grated), taken 3-4 times daily. Do not exceed 15-20 g per day. Note: 1 g powder ≈ 4 g fresh ginger.' },
+      { method: 'Standardized Oral Capsules', instruction: '250-500 mg standardized extract (standardized to 5% total gingerols/shogaols) taken 2-4 times per day.' },
       { method: 'Lozenges / Candies', instruction: 'Use as needed to dissolve slowly in the buccal cavity for targeted local antiseptic and anesthetic action in the pharynx.' },
     ],
     suitableAgeGroups: [
@@ -1106,17 +1116,17 @@ export const PLANTS = {
       { group: 'Geriatrics', notes: 'Caution in patients with diabetes, cardiovascular disease, or cholelithiasis.' },
     ],
     dosage: {
-      standard: 'For dysmenorrhea: start 2 days before period; powdered ginger 250–500 mg 3–4×/day (max 4 g/day) OR fresh ginger 2–3 g 3–4×/day (max 15–20 g/day). For cold/respiratory: infuse 2–3 g fresh or dried root in covered vessel 10–15 min, 3–4 cups daily.',
+      standard: 'For dysmenorrhea: start 2 days before period; powdered ginger 250-500 mg 3-4×/day (max 4 g/day) OR fresh ginger 2-3 g 3-4×/day (max 15-20 g/day). For cold/respiratory: infuse 2-3 g fresh or dried root in covered vessel 10-15 min, 3-4 cups daily.',
       forms: [
-        { form: 'Powdered Dry Ginger', dose: '250–500 mg per dose, 3–4 times daily. Max 4 g/day.' },
-        { form: 'Fresh Ginger Rhizome', dose: '2–3 g per dose, 3–4 times daily. Max 15–20 g/day.' },
-        { form: 'Standardized Capsules (5% gingerols)', dose: '250–500 mg, 2–4 times per day.' },
-        { form: 'Aqueous Infusion (Tea)', dose: '2–3 g fresh/dried in 200–250 mL boiling water for 10–15 min; 3–4 cups daily.' },
+        { form: 'Powdered Dry Ginger', dose: '250-500 mg per dose, 3-4 times daily. Max 4 g/day.' },
+        { form: 'Fresh Ginger Rhizome', dose: '2-3 g per dose, 3-4 times daily. Max 15-20 g/day.' },
+        { form: 'Standardized Capsules (5% gingerols)', dose: '250-500 mg, 2-4 times per day.' },
+        { form: 'Aqueous Infusion (Tea)', dose: '2-3 g fresh/dried in 200-250 mL boiling water for 10-15 min; 3-4 cups daily.' },
       ],
     },
     overdose: {
       symptoms: [
-        'Acute oral overdose (>5 g dry powder/day OR >20–25 g fresh/day): Severe gastric mucosal irritation, burning epigastric pain, severe heartburn, acid reflux, diarrhea, and local mouth/throat inflammation. At toxic doses: CNS depression and cardiac palpitations.',
+        'Acute oral overdose (>5 g dry powder/day OR >20-25 g fresh/day): Severe gastric mucosal irritation, burning epigastric pain, severe heartburn, acid reflux, diarrhea, and local mouth/throat inflammation. At toxic doses: CNS depression and cardiac palpitations.',
         'Topical overdose (undiluted essential oil): Erythema and hypersensitivity contact dermatitis.',
       ],
       management: [
@@ -1133,7 +1143,7 @@ export const PLANTS = {
       'Active cholelithiasis (gallstones): potent choleretic effect can precipitate biliary colic',
       'Active peptic ulcer disease (PUD) or ulcerative colitis: pungent local irritant properties',
       'Severe bleeding disorders (hemophilia): anti-aggregatory effects on platelets',
-      'Major pre-operative states: discontinue 1–2 weeks prior to major surgical procedures',
+      'Major pre-operative states: discontinue 1-2 weeks prior to major surgical procedures',
     ],
     drugInteractions: [
       'Anticoagulants / Antiplatelets (Warfarin, Aspirin, Clopidogrel): inhibits thromboxane synthase; weak platelet aggregation inhibitor; monitor INR closely',
@@ -1162,28 +1172,34 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Zingiberaceae',
       nativeRegion: 'Southeast Asia (likely India); widely cultivated throughout tropical and subtropical regions worldwide',
-      growthHabit: 'Herbaceous perennial with reed-like stems growing 1–1.5 m tall; underground rhizome is the medicinal part',
+      growthHabit: 'Herbaceous perennial with reed-like stems growing 1-1.5 m tall; underground rhizome is the medicinal part',
       activeCompounds: '6-gingerol, 6-shogaol, beta-zingiberene, paradols, zingerone',
-      cultivationNotes: 'Rhizome harvested 8–10 months after planting; fresh root richest in gingerols, dried root richest in shogaols which are more potent anti-inflammatories',
+      cultivationNotes: 'Rhizome harvested 8-10 months after planting; fresh root richest in gingerols, dried root richest in shogaols which are more potent anti-inflammatories',
     },
     preparation: [
-      { method: 'Covered Aqueous Infusion', desc: 'Infuse 2–3 g in boiling water in a covered vessel for 10–15 min. Consume sediment for maximum shogaols.', bestFor: 'Dysmenorrhea, cold/flu, nausea, sore throat' },
-      { method: 'Standardized Capsules', desc: '250–500 mg standardized capsules (5% gingerols) taken with food.', bestFor: 'Dysmenorrhea, consistent anti-inflammatory dosing' },
+      { method: 'Covered Aqueous Infusion', desc: 'Infuse 2-3 g in boiling water in a covered vessel for 10-15 min. Consume sediment for maximum shogaols.', bestFor: 'Dysmenorrhea, cold/flu, nausea, sore throat' },
+      { method: 'Standardized Capsules', desc: '250-500 mg standardized capsules (5% gingerols) taken with food.', bestFor: 'Dysmenorrhea, consistent anti-inflammatory dosing' },
       { method: 'Fresh Ginger Shots', desc: 'Freshly grated and juiced with honey and lemon.', bestFor: 'Immune support, respiratory symptoms, anti-nausea' },
     ],
     symptoms: ['Menstrual cramps', 'Nausea', 'Vomiting', 'Sore throat', 'Cough', 'Cold symptoms', 'Joint pain'],
     warnings: [
       'Ginger is NOT a direct antibiotic or antiviral: it supports the immune system without eradicating pathogens.',
       'Sweetening with sugar antagonizes pain-relieving therapeutic effects.',
-      'Discontinue 1–2 weeks before major surgery due to antiplatelet properties.',
-      'Max oral dose: 4 g dry powder/day; 15–20 g fresh/day.',
-    ],
-    references: [
-      { text: 'Ozgoli G, Goli M, Moattar F. Comparison of Effects of Ginger, Mefenamic Acid, and Ibuprofen on Pain in Women with Primary Dysmenorrhea. J Altern Complement Med. 2009;15(2): 129–132.', url: 'https://doi.org/10.1089/acm.2008.0311' },
-      { text: 'Viljoen E, et al. A systematic review and meta-analysis of the effect and safety of ginger in the treatment of pregnancy-associated nausea and vomiting. Nutr J. 2014;13: 20.', url: 'https://doi.org/10.1186/1475-2891-13-20' },
-      { text: 'Chang JS, et al. Fresh ginger (Zingiber officinale) has anti-viral activity against human respiratory syncytial virus in human respiratory tract cell lines. J Ethnopharmacol. 2013;145(1): 146–151.', url: 'https://doi.org/10.1016/j.jep.2012.10.043' },
+      'Discontinue 1-2 weeks before major surgery due to antiplatelet properties.',
+      'Max oral dose: 4 g dry powder/day; 15-20 g fresh/day.',
     ],
     relatedPlants: ['dill-seed', 'cinnamon', 'fennel', 'lemon'],
+    references: [
+      { text: 'European Medicines Agency (EMA). European Union herbal monograph on Zingiber officinale Roscoe, rhizoma. (2014). Committee on Herbal Medicinal Products (HMPC).' },
+      { text: 'World Health Organization (WHO). WHO Monographs on Selected Medicinal Plants, Volume 1: Rhizoma Zingiberis. Geneva.' },
+      { text: 'Anh, N. H., Kim, S. J., Long, N. P., et al. (2020). Ginger on Human Health: A Comprehensive Systematic Review of Randomized Clinical Trials. Nutrients, 12(1), 157.' },
+      { text: 'Duke, J. A., Bogenschutz-Godwin, M. J., duCellier, J., & Duke, P. K. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
+      { text: 'PMC — Ginger for nausea and vomiting in pregnancy: a systematic review.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6616534/' },
+      { text: 'PMC — Ginger for treating nausea and vomiting during pregnancy.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4228518/' },
+      { text: 'PubMed — Ginger for the treatment of nausea and vomiting of pregnancy.', url: 'https://pubmed.ncbi.nlm.nih.gov/31935866/' },
+      { text: 'PMC — Is ginger effective for the treatment of Irritable Bowel Syndrome?', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3958926/' },
+      { text: 'Egyptian Drug Authority — Zingiber officinale Roscoe monograph.', url: 'https://edaegypt.gov.eg/media/2kuczzhq/zingiber-officinale-roscoe-%DA%86%D9%86%D8%B2%D9%86%D8%A8%D9%8A%D9%84.pdf' },
+    ],
   },
 
   'dill-seed': {
@@ -1217,9 +1233,9 @@ export const PLANTS = {
       'Pediatric care: historical "gold standard" for infantile colic (primary active ingredient in traditional Gripe Water)',
     ],
     howToUse: [
-      { method: 'Aqueous Infusion (Dill Seed Tea)', instruction: 'Infuse 1 teaspoon (approximately 3 g) of CRUSHED seeds in 200–250 mL of boiling water in a strictly COVERED vessel for 10 minutes to prevent escape of volatile carvone.' },
+      { method: 'Aqueous Infusion (Dill Seed Tea)', instruction: 'Infuse 1 teaspoon (approximately 3 g) of CRUSHED seeds in 200-250 mL of boiling water in a strictly COVERED vessel for 10 minutes to prevent escape of volatile carvone.' },
       { method: 'Adult Dry Powder', instruction: '3 grams of dried powder administered daily in divided doses.' },
-      { method: 'Adult Concentrated Pure Essential Oil', instruction: '0.05–2 mL (or 0.1–0.3 g) total daily, strictly divided into 3 distinct doses per day.' },
+      { method: 'Adult Concentrated Pure Essential Oil', instruction: '0.05-2 mL (or 0.1-0.3 g) total daily, strictly divided into 3 distinct doses per day.' },
     ],
     suitableAgeGroups: [
       { group: 'Pediatrics (<12 months)', notes: 'Not recommended: potential renal and gastric irritation by volatile monoterpenes.' },
@@ -1228,11 +1244,11 @@ export const PLANTS = {
       { group: 'Adults', notes: 'Safe for adults at recommended doses for dysmenorrhea and digestive complaints.' },
     ],
     dosage: {
-      standard: 'Dill Seed Tea: 1 tsp crushed seeds per 200–250 mL boiling water (covered), 10 min infusion. Dry Powder: 3 g daily in divided doses.',
+      standard: 'Dill Seed Tea: 1 tsp crushed seeds per 200-250 mL boiling water (covered), 10 min infusion. Dry Powder: 3 g daily in divided doses.',
       forms: [
-        { form: 'Crushed Seed Tea', dose: '1 tsp (~3 g) crushed seeds per 200–250 mL covered boiling water, 10 min; drink 2–3 times daily.' },
+        { form: 'Crushed Seed Tea', dose: '1 tsp (~3 g) crushed seeds per 200-250 mL covered boiling water, 10 min; drink 2-3 times daily.' },
         { form: 'Dry Powder', dose: '3 g total daily in divided doses.' },
-        { form: 'Essential Oil (pharmaceutical)', dose: '0.05–2 mL daily, strictly divided into 3 doses.' },
+        { form: 'Essential Oil (pharmaceutical)', dose: '0.05-2 mL daily, strictly divided into 3 doses.' },
       ],
     },
     overdose: {
@@ -1281,7 +1297,7 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Apiaceae',
       nativeRegion: 'South and West Asia (likely Afghanistan/India); widely naturalized across Europe and the Mediterranean',
-      growthHabit: 'Annual or biennial herb growing 40–60 cm tall; feathery, aromatic leaves; yellow flower umbels; seeds are the medicinal part',
+      growthHabit: 'Annual or biennial herb growing 40-60 cm tall; feathery, aromatic leaves; yellow flower umbels; seeds are the medicinal part',
       activeCompounds: 'Carvone (up to 60%), limonene, α-phellandrene: ONLY from seeds, not leaves',
       cultivationNotes: 'Dill seed oil and dill weed oil are chemically distinct: seed oil is significantly richer in carvone and constitutes the pharmaceutical standard for spasmolytic applications',
     },
@@ -1296,12 +1312,12 @@ export const PLANTS = {
       'DILL LEAVES do NOT have therapeutic spasmolytic effects: SEEDS ONLY are the medicinal part.',
       'Must steep in COVERED vessel to prevent volatile carvone from escaping with steam.',
     ],
-    references: [
-      { text: 'Maleki N, et al. Study of the effects of anethole and carvone in reducing menstrual pain: a systematic review. J Midwifery Womens Health. 2020.', url: 'https://pubmed.ncbi.nlm.nih.gov/30549249/' },
-      { text: 'Kaur M, et al. Biological properties of carvone: a comprehensive review. Phytother Res. 2022;36(1): 43–64.', url: 'https://doi.org/10.1002/ptr.7213' },
-      { text: 'Madmoli M, et al. Effect of Anethum graveolens (dill) on primary dysmenorrhea: double-blind randomized clinical trial. Eur J Obstet Gynecol Reprod Biol. 2018;227: 64–69.', url: 'https://doi.org/10.1016/j.ejogrb.2018.05.028' },
-    ],
     relatedPlants: ['ginger', 'cinnamon', 'fennel'],
+    references: [
+      { text: 'Duke, J. A., Bogenschutz-Godwin, M. J., duCellier, J., & Duke, P. K. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
+      { text: 'Chevallier, A. (2016). Encyclopedia of Herbal Medicine (3rd ed.). DK Publishing / Penguin Random House.' },
+      { text: 'Egyptian Drug Authority — Anethum graveolens L. (Dill) monograph.', url: 'https://edaegypt.gov.eg/media/kixhbxbj/anethum-graveolens-l-%D8%B4%D8%A8%D8%AA.pdf' },
+    ],
   },
 
   'cinnamon': {
@@ -1339,7 +1355,7 @@ export const PLANTS = {
     ],
     howToUse: [
       { method: 'Aqueous Infusion (Tea)', instruction: 'Infuse 1 gram of crushed CEYLON cinnamon bark in boiling water for 10 minutes in a sealed vessel.' },
-      { method: 'Therapeutic Dose Range', instruction: 'Administer 1–4 grams of dried bark daily, strictly divided into multiple smaller doses throughout the day. Maximum absolute daily limit: 6 grams.' },
+      { method: 'Therapeutic Dose Range', instruction: 'Administer 1-4 grams of dried bark daily, strictly divided into multiple smaller doses throughout the day. Maximum absolute daily limit: 6 grams.' },
     ],
     suitableAgeGroups: [
       { group: 'Adults (18+ years)', notes: 'Primary demographic for therapeutic administration: metabolic or gynecological disorders.' },
@@ -1348,9 +1364,9 @@ export const PLANTS = {
       { group: 'Liver Disease', notes: 'STRICTLY CONTRAINDICATED if using Cassia cinnamon: dangerous potential for coumarin-induced hepatotoxicity.' },
     ],
     dosage: {
-      standard: 'Therapeutic range: 1–4 g dried bark daily in divided doses. Maximum daily limit: 6 g. Use CEYLON cinnamon ONLY for therapeutic protocols.',
+      standard: 'Therapeutic range: 1-4 g dried bark daily in divided doses. Maximum daily limit: 6 g. Use CEYLON cinnamon ONLY for therapeutic protocols.',
       forms: [
-        { form: 'Dried Bark Infusion (CEYLON)', dose: '1–4 g daily in divided doses; max 6 g/day.' },
+        { form: 'Dried Bark Infusion (CEYLON)', dose: '1-4 g daily in divided doses; max 6 g/day.' },
         { form: 'Standardized Extract Capsules', dose: 'Per manufacturer\'s standardized protocol for specific condition (dysmenorrhea, PCOS, metabolic support).' },
       ],
     },
@@ -1381,7 +1397,7 @@ export const PLANTS = {
     drugInteractions: [
       'Antidiabetics (all classes): potentiates hypoglycemic agents; risk of acute dangerously low blood sugar',
       'Anticoagulants (Warfarin): increases bleeding times; close INR monitoring required',
-      'Tetracyclines: tannins in cinnamon bind to tetracyclines via chelation, forming insoluble complexes that inhibit antibiotic absorption; separate by at least 2–3 hours',
+      'Tetracyclines: tannins in cinnamon bind to tetracyclines via chelation, forming insoluble complexes that inhibit antibiotic absorption; separate by at least 2-3 hours',
     ],
     storage: {
       forms: [
@@ -1402,7 +1418,7 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Lauraceae',
       nativeRegion: 'Sri Lanka (Ceylon): considered the origin of true cinnamon; Cinnamomum cassia is native to southern China',
-      growthHabit: 'Evergreen tree growing 10–15 m; thin papery inner bark (quills) is the medicinal part; harvested from young shoots',
+      growthHabit: 'Evergreen tree growing 10-15 m; thin papery inner bark (quills) is the medicinal part; harvested from young shoots',
       activeCompounds: 'trans-cinnamaldehyde, eugenol, condensed tannins: Ceylon has negligible coumarin; Cassia has high coumarin',
       cultivationNotes: 'Ceylon cinnamon produces thin, multi-layered quills with a sweet delicate flavor. Distinguish from Cassia using the Iodine Starch Test: blue/black = Cassia (high coumarin); no color change = Ceylon (safe).',
     },
@@ -1417,12 +1433,12 @@ export const PLANTS = {
       'STRICTLY CONTRAINDICATED in pregnancy at medicinal doses.',
       'Never exceed 6 g dried bark/day: risk of severe GI irritation, tachycardia, and hypoglycemia.',
     ],
-    references: [
-      { text: 'Jaafarpour M, et al. Comparative effect of cinnamon and ibuprofen for treatment of primary dysmenorrhea. J Clin Diagn Res. 2015;9(4): QC04–QC07.', url: 'https://doi.org/10.7860/JCDR/2015/12084.5783' },
-      { text: 'Kort DH, Lobo RA. Preliminary evidence that cinnamon improves menstrual cyclicity in women with polycystic ovary syndrome: a randomized controlled trial. Am J Obstet Gynecol. 2014;211(5): 487.e1–6.', url: 'https://doi.org/10.1016/j.ajog.2014.05.009' },
-      { text: 'Crawford P. Effectiveness of cinnamon for lowering hemoglobin A1C in patients with type 2 diabetes: a randomized, controlled trial. J Am Board Fam Med. 2009;22(5): 507–512.', url: 'https://doi.org/10.3122/jabfm.2009.05.080093' },
-    ],
     relatedPlants: ['ginger', 'dill-seed'],
+    references: [
+      { text: 'Duke, J. A., Bogenschutz-Godwin, M. J., duCellier, J., & Duke, P. K. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
+      { text: 'Chevallier, A. (2016). Encyclopedia of Herbal Medicine (3rd ed.). DK Publishing / Penguin Random House.' },
+      { text: 'Egyptian Drug Authority — Cinnamomum verum J. Presl monograph.', url: 'https://www.edaegypt.gov.eg/media/jvknpkbg/cinnamomum-verum-j-presl.pdf' },
+    ],
   },
 
   // ══════════════════════════════════════════════════════════════════════
@@ -1464,15 +1480,15 @@ export const PLANTS = {
     suitableAgeGroups: [
       { group: 'Pregnancy & Lactation', notes: 'STRICTLY CONTRAINDICATED: complete lack of safety data; theoretical risk of severe fetal hepatotoxicity from trace pyrrolizidine alkaloids.' },
       { group: 'Pediatrics (<6 years)', notes: 'STRICTLY CONTRAINDICATED: insufficient safety, tolerability, and efficacy data.' },
-      { group: 'Children (Ages 6–12)', notes: 'Under professional medical supervision only: 25–50 mg twice daily (50–100 mg/day).' },
+      { group: 'Children (Ages 6-12)', notes: 'Under professional medical supervision only: 25-50 mg twice daily (50-100 mg/day).' },
       { group: 'Children (Ages >12)', notes: 'Can transition to adult therapeutic dose.' },
-      { group: 'Adults', notes: '50–150 mg daily divided into 2–3 doses. For severe rhinitis or migraine prophylaxis: 75 mg twice daily (150 mg/day).' },
+      { group: 'Adults', notes: '50-150 mg daily divided into 2-3 doses. For severe rhinitis or migraine prophylaxis: 75 mg twice daily (150 mg/day).' },
       { group: 'Geriatrics', notes: 'Generally safe provided there is no pre-existing severe hepatic impairment.' },
     ],
     dosage: {
-      standard: 'Adults: 50–150 mg daily in 2–3 divided doses. Migraine prophylaxis: 75 mg twice daily. ONLY certified PA-free standardized extracts (min. 15% petasins).',
+      standard: 'Adults: 50-150 mg daily in 2-3 divided doses. Migraine prophylaxis: 75 mg twice daily. ONLY certified PA-free standardized extracts (min. 15% petasins).',
       forms: [
-        { form: 'PA-Free Standardized Extract (Soft Gel/Tablet)', dose: 'Adults: 50–75 mg twice daily. Children 6–12: 25–50 mg twice daily.' },
+        { form: 'PA-Free Standardized Extract (Soft Gel/Tablet)', dose: 'Adults: 50-75 mg twice daily. Children 6-12: 25-50 mg twice daily.' },
       ],
     },
     overdose: {
@@ -1503,7 +1519,7 @@ export const PLANTS = {
     ],
     storage: {
       forms: [
-        { form: 'Standardized Extract Tablets/Soft Gels', instructions: 'Store in original tightly sealed blister packs or amber glass bottles at room temperature 15–25°C. Protect from heat, direct sunlight, and moisture to prevent hydrolytic degradation of active petasin esters.' },
+        { form: 'Standardized Extract Tablets/Soft Gels', instructions: 'Store in original tightly sealed blister packs or amber glass bottles at room temperature 15-25°C. Protect from heat, direct sunlight, and moisture to prevent hydrolytic degradation of active petasin esters.' },
       ],
     },
     marketedProducts: [
@@ -1533,12 +1549,14 @@ export const PLANTS = {
       'ABSOLUTELY CONTRAINDICATED in pregnancy and lactation.',
       'Avoid if allergic to ragweed, chrysanthemums, daisies, or other Asteraceae family plants.',
     ],
-    references: [
-      { text: 'Lipton RB, et al. Petasites hybridus root (butterbur) is an effective preventive treatment for migraine. Neurology. 2004;63(12): 2240–2244.', url: 'https://doi.org/10.1212/01.WNL.0000147290.68289.C1' },
-      { text: 'Schapowal A, Petasites Study Group. Randomised controlled trial of butterbur and cetirizine for treating seasonal allergic rhinitis. BMJ. 2002;324(7330): 144–146.', url: 'https://doi.org/10.1136/bmj.324.7330.144' },
-      { text: 'Schapowal A. Treating intermittent allergic rhinitis: a prospective, randomized, placebo and antihistamine-controlled study of Butterbur extract Ze 339. Phytother Res. 2005;19(6): 530–537.', url: 'https://doi.org/10.1002/ptr.1705' },
-    ],
     relatedPlants: ['stinging-nettle'],
+    references: [
+      { text: 'NCBI — Butterbur (Petasites hybridus) for allergic rhinitis and migraine.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK537160/' },
+      { text: 'NCCIH — Butterbur: What You Need To Know.', url: 'https://www.nccih.nih.gov/health/butterbur' },
+      { text: 'EuropePMC — Petasites hybridus in seasonal allergic rhinitis (RCT).', url: 'https://europepmc.org/article/pmc/64514' },
+      { text: 'American Academy of Allergy, Asthma & Immunology (AAAAI) — Butterbur for allergies.', url: 'https://www.aaaai.org/allergist-resources/ask-the-expert/answers/old-ask-the-experts/butterbur' },
+      { text: 'NCBI — Butterbur: safety, evidence, and dosing.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK547997/' },
+    ],
   },
 
   'stinging-nettle': {
@@ -1575,9 +1593,9 @@ export const PLANTS = {
       'Mild diuretic support: flushes lower urinary tract and prevents minor fluid retention',
     ],
     howToUse: [
-      { method: 'Standardized Freeze-Dried Leaf Capsules (Preferred)', instruction: '300–600 mg taken 2–3 times daily. Highly preferred for allergic rhinitis as freeze-drying best preserves anti-inflammatory constituents.' },
-      { method: 'Aqueous Leaf Infusion (Nettle Tea)', instruction: 'Steep 2–4 g of dried loose leaves in 150–200 mL of boiling water for 10–15 minutes. Drink 3–4 cups daily.' },
-      { method: 'Fluid Extract / Tincture (1: 5 in 45% ethanol)', instruction: '2–6 mL taken three times daily.' },
+      { method: 'Standardized Freeze-Dried Leaf Capsules (Preferred)', instruction: '300-600 mg taken 2-3 times daily. Highly preferred for allergic rhinitis as freeze-drying best preserves anti-inflammatory constituents.' },
+      { method: 'Aqueous Leaf Infusion (Nettle Tea)', instruction: 'Steep 2-4 g of dried loose leaves in 150-200 mL of boiling water for 10-15 minutes. Drink 3-4 cups daily.' },
+      { method: 'Fluid Extract / Tincture (1: 5 in 45% ethanol)', instruction: '2-6 mL taken three times daily.' },
     ],
     suitableAgeGroups: [
       { group: 'Pregnancy & Lactation', notes: 'STRICTLY CONTRAINDICATED: extracted compounds can stimulate uterine contractions (oxytocic and abortifacient potential). Insufficient safety data during lactation.' },
@@ -1585,11 +1603,11 @@ export const PLANTS = {
       { group: 'Geriatrics: Cardiovascular & Renal Disease', notes: 'Use with caution in patients with congestive heart failure (CHF) or severe chronic kidney disease (CKD) due to potent diuretic action and high potassium content which can disrupt electrolyte balances.' },
     ],
     dosage: {
-      standard: 'Freeze-dried leaf capsules: 300–600 mg, 2–3 times daily. Nettle tea: 2–4 g dried leaves, 3–4 cups daily.',
+      standard: 'Freeze-dried leaf capsules: 300-600 mg, 2-3 times daily. Nettle tea: 2-4 g dried leaves, 3-4 cups daily.',
       forms: [
-        { form: 'Freeze-Dried Leaf Capsules', dose: '300–600 mg taken 2–3 times daily.' },
-        { form: 'Aqueous Leaf Infusion (Tea)', dose: '2–4 g dried leaves in 150–200 mL boiling water, steep 10–15 min; drink 3–4 cups daily.' },
-        { form: 'Fluid Extract (1: 5 in 45% ethanol)', dose: '2–6 mL three times daily.' },
+        { form: 'Freeze-Dried Leaf Capsules', dose: '300-600 mg taken 2-3 times daily.' },
+        { form: 'Aqueous Leaf Infusion (Tea)', dose: '2-4 g dried leaves in 150-200 mL boiling water, steep 10-15 min; drink 3-4 cups daily.' },
+        { form: 'Fluid Extract (1: 5 in 45% ethanol)', dose: '2-6 mL three times daily.' },
       ],
     },
     overdose: {
@@ -1639,13 +1657,13 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Urticaceae',
       nativeRegion: 'Europe, temperate Asia, western North Africa; naturalized worldwide',
-      growthHabit: 'Herbaceous perennial growing 1–2 m tall; stem and leaves covered in hollow silica-tipped stinging trichomes (hairs) containing histamine, acetylcholine, and formic acid',
+      growthHabit: 'Herbaceous perennial growing 1-2 m tall; stem and leaves covered in hollow silica-tipped stinging trichomes (hairs) containing histamine, acetylcholine, and formic acid',
       activeCompounds: 'Quercetin, kaempferol, rutin, caffeoylmalic acid (CMA), chlorogenic acid: stinging trichomes contain histamine and acetylcholine (denatured by processing)',
       cultivationNotes: 'Leaves are the medicinal part for allergic rhinitis (Folium Urticae). Roots contain different compounds (lignans and sterols) indicated for BPH: pharmacologically distinct from the leaves',
     },
     preparation: [
-      { method: 'Freeze-Dried Leaf Capsules (Preferred)', desc: '300–600 mg freeze-dried capsules 2–3 times daily. Freeze-drying best preserves anti-inflammatory constituents.', bestFor: 'Seasonal allergic rhinitis, hay fever' },
-      { method: 'Aqueous Leaf Infusion', desc: 'Steep 2–4 g dried leaves in boiling water 10–15 minutes; 3–4 cups daily.', bestFor: 'Allergic rhinitis, mild diuretic support, joint inflammation' },
+      { method: 'Freeze-Dried Leaf Capsules (Preferred)', desc: '300-600 mg freeze-dried capsules 2-3 times daily. Freeze-drying best preserves anti-inflammatory constituents.', bestFor: 'Seasonal allergic rhinitis, hay fever' },
+      { method: 'Aqueous Leaf Infusion', desc: 'Steep 2-4 g dried leaves in boiling water 10-15 minutes; 3-4 cups daily.', bestFor: 'Allergic rhinitis, mild diuretic support, joint inflammation' },
     ],
     symptoms: ['Rhinorrhea', 'Sneezing', 'Nasal congestion', 'Hay fever', 'Watery eyes', 'Joint inflammation'],
     warnings: [
@@ -1654,11 +1672,13 @@ export const PLANTS = {
       'Nettle LEAVES (for rhinitis) are pharmacologically distinct from nettle ROOTS (for BPH): do not confuse products.',
       'Use with caution in CHF or severe CKD due to potent diuretic action.',
     ],
-    references: [
-      { text: 'Mittman P. Randomized, double-blind study of freeze-dried Urtica dioica in the treatment of allergic rhinitis. Planta Med. 1990;56(1): 44–47.', url: 'https://doi.org/10.1055/s-2006-960881' },
-      { text: 'Roschek B Jr, et al. Nettle extract (Urtica dioica) affects key receptors and enzymes associated with allergic rhinitis. Phytother Res. 2009;23(7): 920–926.', url: 'https://doi.org/10.1002/ptr.2763' },
-    ],
     relatedPlants: ['butterbur'],
+    references: [
+      { text: 'NCBI — Stinging Nettle (Urtica dioica) in allergic rhinitis and BPH.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK537160/' },
+      { text: 'WebMD — Stinging Nettle: Uses, Benefits and Dosage.', url: 'https://www.webmd.com/vitamins/ai/ingredientmono-664/stinging-nettle' },
+      { text: 'PMC — Anti-inflammatory activity of Urtica dioica leaf extract.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5963652/' },
+      { text: 'A. Vogel — How can nettle help your allergies?', url: 'https://www.avogel.co.uk/health/allergic-rhinitis/how-can-nettle-help-your-allergies/' },
+    ],
   },
 
   // ══════════════════════════════════════════════════════════════════════
@@ -1675,12 +1695,12 @@ export const PLANTS = {
     subcategory: 'cold',
     tags: ['Expectorant', 'Decongestant', 'Mucolytic', 'Respiratory', 'Essential Oil'],
     image: '/images/Picture41.jpg',
-    shortDescription: 'The gold standard respiratory botanical: 1,8-cineole (eucalyptol) at 70–85% provides simultaneous mucolytic, decongestant, and anti-inflammatory actions for cough, congestion, and bronchial irritation. CRITICAL: Pure oil is highly toxic if swallowed.',
-    description: 'Eucalyptus oil is strictly determined by its high volatile monoterpene content: primarily 1,8-cineole (70–85%), which must meet pharmacopeial standards (typically >70% cineole). 1,8-cineole directly stimulates respiratory epithelium ciliary beat (secretomotoric action) and downregulates mucin gene expression (MUC2 and MUC19) to thin mucus secretions. It also stimulates TRPM8 cold receptors in nasal mucosa, creating a decongestant cooling sensation similar to menthol. CRITICAL: 3.5 mL of pure oil can be fatal in an adult.',
+    shortDescription: 'The gold standard respiratory botanical: 1,8-cineole (eucalyptol) at 70-85% provides simultaneous mucolytic, decongestant, and anti-inflammatory actions for cough, congestion, and bronchial irritation. CRITICAL: Pure oil is highly toxic if swallowed.',
+    description: 'Eucalyptus oil is strictly determined by its high volatile monoterpene content: primarily 1,8-cineole (70-85%), which must meet pharmacopeial standards (typically >70% cineole). 1,8-cineole directly stimulates respiratory epithelium ciliary beat (secretomotoric action) and downregulates mucin gene expression (MUC2 and MUC19) to thin mucus secretions. It also stimulates TRPM8 cold receptors in nasal mucosa, creating a decongestant cooling sensation similar to menthol. CRITICAL: 3.5 mL of pure oil can be fatal in an adult.',
     history: 'Eucalyptus trees are native to Australia where Aboriginal peoples used steam inhalation for respiratory ailments. Introduced to Europe in the 19th century as a fever remedy (hence "fever tree"). The purified oil has been used in pharmaceutical formulations (lozenges, inhalations, chest rubs) for over 150 years and remains one of the most commercially produced essential oils worldwide.',
     isDemo: false,
     activeConstituents: [
-      { name: '1,8-Cineole (Eucalyptol)', percentage: '70–85%', effect: 'Primary active monoterpene alcohol; mucolytic, secretomotoric, and anti-inflammatory activities in respiratory tracts' },
+      { name: '1,8-Cineole (Eucalyptol)', percentage: '70-85%', effect: 'Primary active monoterpene alcohol; mucolytic, secretomotoric, and anti-inflammatory activities in respiratory tracts' },
       { name: 'α-Pinene & Limonene', percentage: 'minor', effect: 'Minor monoterpene hydrocarbons; synergistic antiseptic and antioxidant protection' },
       { name: 'Sesquiterpenes (e.g., Globulol)', percentage: 'minor', effect: 'Contributes to characteristic aroma and antimicrobial profile' },
       { name: 'Flavonoids & Hydrolyzable Tannins', percentage: '', effect: 'Present in crude leaf extracts; astringent and cellular antioxidant support' },
@@ -1698,7 +1718,7 @@ export const PLANTS = {
       'Adjuvant therapy for sore throats: local anesthetic and antiseptic qualities in lozenges or gargles',
     ],
     howToUse: [
-      { method: 'Steam Inhalation (Aqueous Vapor)', instruction: 'Add 2–5 drops of pure eucalyptus essential oil into a vessel of steaming (not boiling) water. Inhale the medicated vapors through nose and mouth for 5–10 minutes with eyes closed to avoid ocular irritation.' },
+      { method: 'Steam Inhalation (Aqueous Vapor)', instruction: 'Add 2-5 drops of pure eucalyptus essential oil into a vessel of steaming (not boiling) water. Inhale the medicated vapors through nose and mouth for 5-10 minutes with eyes closed to avoid ocular irritation.' },
       { method: 'Topical Application (Chest Rub)', instruction: 'Incorporate into a suitable carrier oil to a maximum concentration of 1%. Massage gently onto the chest or back to act as a localized counter-irritant and vapor releaser.' },
       { method: 'Standardized Oral Pharmaceutical Formulations', instruction: 'Standardized eucalyptol is available in specific pharmaceutical enteric-coated capsules (e.g., Soledum® or Myrtol®) for lower respiratory infections: must be administered under medical supervision.' },
     ],
@@ -1708,9 +1728,9 @@ export const PLANTS = {
       { group: 'Geriatrics & Chronic Diseases', notes: 'Use with high clinical caution in patients with asthma history (unmonitored inhalation may trigger bronchospasm), epilepsy, or severe hepatic impairment.' },
     ],
     dosage: {
-      standard: 'Steam inhalation: 2–5 drops in steaming water; 5–10 min, 2–3 times daily. Topical: max 1% in carrier oil. Oral pharmaceutical formulations only under medical supervision.',
+      standard: 'Steam inhalation: 2-5 drops in steaming water; 5-10 min, 2-3 times daily. Topical: max 1% in carrier oil. Oral pharmaceutical formulations only under medical supervision.',
       forms: [
-        { form: 'Steam Inhalation', dose: '2–5 drops in steaming water; inhale 5–10 min, 2–3 times daily.' },
+        { form: 'Steam Inhalation', dose: '2-5 drops in steaming water; inhale 5-10 min, 2-3 times daily.' },
         { form: 'Topical Chest Rub', dose: '1% maximum concentration in carrier oil; apply to chest or back.' },
         { form: 'Enteric-Coated Oral Capsules (Pharmaceutical)', dose: 'As directed by prescribing physician only.' },
       ],
@@ -1718,7 +1738,7 @@ export const PLANTS = {
     overdose: {
       symptoms: [
         'Acute Ingestion Overdose (Severe Neuro- & Cytotoxicity): As little as 3.5 mL of pure oil can be FATAL in an adult; significantly less in pediatric patients.',
-        'Symptoms (Rapid onset within 10–30 minutes): Severe burning epigastric pain, projectile vomiting, nausea, severe CNS depression, profound ataxia, miosis (pinpoint pupils), convulsions, status epilepticus, and fatal respiratory failure or coma.',
+        'Symptoms (Rapid onset within 10-30 minutes): Severe burning epigastric pain, projectile vomiting, nausea, severe CNS depression, profound ataxia, miosis (pinpoint pupils), convulsions, status epilepticus, and fatal respiratory failure or coma.',
         'Topical: Severe localized erythema, burning sensation, pruritus, or allergic contact dermatitis.',
       ],
       management: [
@@ -1758,12 +1778,12 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Myrtaceae',
       nativeRegion: 'Tasmania and southeastern Australia; widely cultivated in subtropical regions worldwide',
-      growthHabit: 'Very fast-growing evergreen tree reaching 30–55 m tall (one of the tallest trees on earth); narrow, aromatic, lance-shaped adult leaves are the medicinal part',
-      activeCompounds: '1,8-Cineole (70–85% of oil), α-pinene, limonene, globulol',
+      growthHabit: 'Very fast-growing evergreen tree reaching 30-55 m tall (one of the tallest trees on earth); narrow, aromatic, lance-shaped adult leaves are the medicinal part',
+      activeCompounds: '1,8-Cineole (70-85% of oil), α-pinene, limonene, globulol',
       cultivationNotes: 'Essential oil is steam-distilled from leaves and young twigs. Must contain >70% cineole to meet pharmacopeial pharmaceutical standard. Widely cultivated in Australia, Spain, Portugal, China, and Egypt.',
     },
     preparation: [
-      { method: 'Steam Inhalation', desc: '2–5 drops in steaming water; inhale with eyes closed for 5–10 min.', bestFor: 'Nasal congestion, productive cough, sinus stuffiness' },
+      { method: 'Steam Inhalation', desc: '2-5 drops in steaming water; inhale with eyes closed for 5-10 min.', bestFor: 'Nasal congestion, productive cough, sinus stuffiness' },
       { method: 'Topical Chest Rub (1% dilution)', desc: 'Dilute 1% in carrier oil; apply to chest and back.', bestFor: 'Bronchial irritation, productive cough, muscle counter-irritant' },
     ],
     symptoms: ['Productive cough', 'Nasal congestion', 'Sinus stuffiness', 'Cold symptoms', 'Bronchial irritation', 'Sore throat'],
@@ -1771,13 +1791,15 @@ export const PLANTS = {
       'CRITICAL: Pure eucalyptus oil is HIGHLY TOXIC if swallowed: even 3.5 mL can be fatal in an adult.',
       'NEVER apply to the face, nostrils, or chest of children under 6 years old.',
       'Store completely out of reach of children: must be treated as a pharmaceutical hazard.',
-      'Do not use undiluted on skin: always dilute to maximum 1–5% in carrier oil.',
-    ],
-    references: [
-      { text: 'Sadlon AE, Lamson DW. Immune-modifying and antimicrobial effects of Eucalyptus oil and simple inhalation devices. Altern Med Rev. 2010;15(1): 33–47.', url: 'https://pubmed.ncbi.nlm.nih.gov/20359267/' },
-      { text: 'Juergens UR. Anti-inflammatory Properties of the Monoterpene 1.8-Cineole. Curr Drug Targets. 2014;15(4): 439–445.', url: 'https://doi.org/10.2174/1389450115666140131120734' },
+      'Do not use undiluted on skin: always dilute to maximum 1-5% in carrier oil.',
     ],
     relatedPlants: ['lemon', 'ginger', 'stinging-nettle'],
+    references: [
+      { text: 'Juergens, U. R., et al. (2024). Eucalyptus oil and its pharmacological actions. Inflammopharmacology.', url: 'https://doi.org/10.1007/s10787-024-01588-8' },
+      { text: 'PeaceHealth — Eucalyptus: Uses, Evidence and Safety.', url: 'https://www.peacehealth.org/medical-topics/id/hn-2086009' },
+      { text: 'Egyptian Drug Authority — Eucalyptus monograph.', url: 'https://share.google/UxU0P9ogdLDFmvlxK' },
+      { text: 'ResearchGate — Biological properties of Eucalyptus globulus essential oil.', url: 'https://share.google/09LFp1qEYE5Do7HAB' },
+    ],
   },
 
   'lemon': {
@@ -1791,14 +1813,14 @@ export const PLANTS = {
     tags: ['Vitamin C', 'Immune Support', 'Antitussive', 'Cold & Flu', 'Antioxidant'],
     image: '/images/Picture22.jpg',
     shortDescription: 'A powerful immune-supporting citrus fruit rich in Vitamin C, hesperidin, and citric acid: providing antioxidant defense, pharyngeal anti-inflammatory action, and effective demulcent relief for coughs and sore throats.',
-    description: 'Lemon\'s therapeutic profile is determined by its rich content of citric acid (5–7%, pH ~2.0–3.0), Vitamin C (~40–50 mg/100 mL fresh juice), citrus flavanones (hesperidin, eriocitrin, naringin), and D-limonene (65–70% of peel volatile oil). Vitamin C accumulates within phagocytic cells (neutrophils and macrophages), enhancing chemotaxis, phagocytosis, and T-cell proliferation. When combined with honey, lemon creates a highly effective demulcent formulation coating the pharyngeal mucosa to soothe dry, tickling coughs. Note: avoid boiling water (>60°C) with fresh lemon juice: destroys L-ascorbic acid.',
+    description: 'Lemon\'s therapeutic profile is determined by its rich content of citric acid (5-7%, pH ~2.0-3.0), Vitamin C (~40-50 mg/100 mL fresh juice), citrus flavanones (hesperidin, eriocitrin, naringin), and D-limonene (65-70% of peel volatile oil). Vitamin C accumulates within phagocytic cells (neutrophils and macrophages), enhancing chemotaxis, phagocytosis, and T-cell proliferation. When combined with honey, lemon creates a highly effective demulcent formulation coating the pharyngeal mucosa to soothe dry, tickling coughs. Note: avoid boiling water (>60°C) with fresh lemon juice: destroys L-ascorbic acid.',
     history: 'Originating in South Asia, lemons spread through Persia, the Middle East, and Europe via Arab traders in the 10th century. Vitamin C from citrus fruits famously cured scurvy in British sailors in the 18th century. Today, warm lemon honey water remains one of the most universally used home remedies for colds and sore throats across virtually every culture.',
     isDemo: false,
     activeConstituents: [
-      { name: 'Citric Acid', percentage: '5–7% of fresh juice (pH ~2.0–3.0)', effect: 'Stimulates salivation, airway mucus secretion; local demulcent effect when diluted; mild antimicrobial (unfavorable pH for pathogens); potent crystallization inhibitor for calcium oxalate kidney stones' },
-      { name: 'Vitamin C (Ascorbic Acid)', percentage: '~40–50 mg per 100 mL fresh juice', effect: 'Potent water-soluble antioxidant; accumulates in phagocytic cells enhancing chemotaxis, phagocytosis, T-cell proliferation, and differentiation' },
+      { name: 'Citric Acid', percentage: '5-7% of fresh juice (pH ~2.0-3.0)', effect: 'Stimulates salivation, airway mucus secretion; local demulcent effect when diluted; mild antimicrobial (unfavorable pH for pathogens); potent crystallization inhibitor for calcium oxalate kidney stones' },
+      { name: 'Vitamin C (Ascorbic Acid)', percentage: '~40-50 mg per 100 mL fresh juice', effect: 'Potent water-soluble antioxidant; accumulates in phagocytic cells enhancing chemotaxis, phagocytosis, T-cell proliferation, and differentiation' },
       { name: 'Hesperidin, Eriocitrin, Naringin (Flavanones)', percentage: '', effect: 'Downregulate iNOS and COX-2 expression, markedly decreasing pro-inflammatory mediators (PGE2 and NO); vascular protection' },
-      { name: 'D-Limonene (Volatile Peel Oil)', percentage: '65–70% of peel oil', effect: 'Disrupts microbial cell membranes in vitro; responsible for antimicrobial and aromatic profile' },
+      { name: 'D-Limonene (Volatile Peel Oil)', percentage: '65-70% of peel oil', effect: 'Disrupts microbial cell membranes in vitro; responsible for antimicrobial and aromatic profile' },
       { name: 'Coumarins & Furanocoumarins (Peel: trace)', percentage: 'minor', effect: 'Clinically relevant for photosensitivity reactions (phytophotodermatitis) when peel oil contacts skin before sun exposure' },
     ],
     moa: [
@@ -1816,26 +1838,26 @@ export const PLANTS = {
       'Management of hypocitraturia: dietary citrate acts as potent crystallization inhibitor for calcium oxalate kidney stones',
     ],
     howToUse: [
-      { method: 'Standard Warm Lemon Infusion', instruction: 'Squeeze 15–30 mL of fresh lemon juice (approximately half a fresh lemon) into 200 mL of warm water. Drink 2–3 times daily.' },
-      { method: 'Synergistic Demulcent Formulation', instruction: 'Mix 15 mL of fresh lemon juice with 1–2 teaspoons (5–10 mL) of pure honey in a cup of warm water. Sip slowly to coat the hypopharynx and suppress dry cough.' },
+      { method: 'Standard Warm Lemon Infusion', instruction: 'Squeeze 15-30 mL of fresh lemon juice (approximately half a fresh lemon) into 200 mL of warm water. Drink 2-3 times daily.' },
+      { method: 'Synergistic Demulcent Formulation', instruction: 'Mix 15 mL of fresh lemon juice with 1-2 teaspoons (5-10 mL) of pure honey in a cup of warm water. Sip slowly to coat the hypopharynx and suppress dry cough.' },
       { method: 'CRITICAL PREPARATION NOTE', instruction: 'AVOID adding boiling water (>60°C) directly to fresh lemon juice: thermal stress accelerates irreversible oxidation and degradation of bioactive L-ascorbic acid. Use warm, not boiling, water.' },
     ],
     suitableAgeGroups: [
       { group: 'Pregnancy & Lactation', notes: 'Completely safe and highly recommended at standard dietary/therapeutic doses. Widely utilized as non-pharmacological option to alleviate first-trimester morning sickness and gestational nausea.' },
       { group: 'Pediatrics (>1 year)', notes: 'Safe for general pediatric use. CRITICAL: If combining lemon juice with honey for pediatric cough management, NEVER administer to infants under 12 months due to fatal risk of infant botulism from Clostridium botulinum spore contamination in raw honey.' },
-      { group: 'Advanced CKD (Stage 4–5)', notes: 'Limit heavy intake due to risk of hyperkalemia: lemon juice contains notable concentrations of potassium.' },
+      { group: 'Advanced CKD (Stage 4-5)', notes: 'Limit heavy intake due to risk of hyperkalemia: lemon juice contains notable concentrations of potassium.' },
       { group: 'Nephrolithiasis', notes: 'Highly beneficial for patients prone to calcium oxalate stones: dietary citrate acts as potent crystallization inhibitor.' },
     ],
     dosage: {
-      standard: 'Warm lemon infusion: juice of ½ lemon (15–30 mL) in 200 mL warm water, 2–3 times daily. With honey for cough: 15 mL juice + 5–10 mL honey in warm water.',
+      standard: 'Warm lemon infusion: juice of ½ lemon (15-30 mL) in 200 mL warm water, 2-3 times daily. With honey for cough: 15 mL juice + 5-10 mL honey in warm water.',
       forms: [
-        { form: 'Warm Lemon Infusion', dose: '15–30 mL fresh juice in 200 mL warm water (<60°C), 2–3 times daily.' },
-        { form: 'Lemon-Honey Demulcent', dose: '15 mL juice + 1–2 tsp honey in warm water; sip slowly 3–4 times daily for cough relief.' },
+        { form: 'Warm Lemon Infusion', dose: '15-30 mL fresh juice in 200 mL warm water (<60°C), 2-3 times daily.' },
+        { form: 'Lemon-Honey Demulcent', dose: '15 mL juice + 1-2 tsp honey in warm water; sip slowly 3-4 times daily for cough relief.' },
       ],
     },
     overdose: {
       symptoms: [
-        'Excessive chronic intake (>5–6 whole lemons daily consistently):',
+        'Excessive chronic intake (>5-6 whole lemons daily consistently):',
         'Gastrointestinal: Severe gastric acid reflux, acute pyrosis (heartburn), epigastric burning pain, transient osmotic diarrhea.',
         'Dental: Significant dental enamel erosion and dentin hypersensitivity due to prolonged chemical demineralization of calcium hydroxyapatite by citric acid.',
       ],
@@ -1843,7 +1865,7 @@ export const PLANTS = {
         'Discontinue immediate excess intake.',
         'Administer oral antacids, calcium carbonate, H2-blockers, or PPIs to mitigate acute gastric distress.',
         'Dental Protection Protocol: Rinse oral cavity thoroughly with plain water or 0.05% sodium fluoride rinse.',
-        'CRITICAL: Do NOT brush teeth for at least 30–60 minutes after acid exposure: mechanical friction will permanently strip away temporarily softened enamel matrix.',
+        'CRITICAL: Do NOT brush teeth for at least 30-60 minutes after acid exposure: mechanical friction will permanently strip away temporarily softened enamel matrix.',
       ],
     },
     sideEffects: [
@@ -1857,13 +1879,13 @@ export const PLANTS = {
       'Known genetic hypersensitivity or clinical allergy to citrus fruits or Rutaceae family members',
     ],
     drugInteractions: [
-      'Antacids Containing Aluminum: citric acid significantly enhances systemic aluminum absorption from oral antacids; risk of toxicity in renal impairment; separate administration by at least 2–3 hours',
+      'Antacids Containing Aluminum: citric acid significantly enhances systemic aluminum absorption from oral antacids; risk of toxicity in renal impairment; separate administration by at least 2-3 hours',
       'pH-Dependent Drug Absorptions: massive lemon juice ingestion can transiently alter gastric pH, potentially reducing bioavailability of drugs requiring high acidity for absorption (e.g., Ketoconazole, Itraconazole)',
     ],
     storage: {
       forms: [
-        { form: 'Fresh Whole Lemons', instructions: 'Store under refrigeration at 4–8°C to prevent moisture loss and inhibit mold growth (Penicillium species).' },
-        { form: 'Freshly Squeezed Lemon Juice', instructions: 'Store in a tightly sealed glass container, refrigerated, and consume within 48–72 hours to avoid micro-oxidation of Vitamin C and microbial fermentation.' },
+        { form: 'Fresh Whole Lemons', instructions: 'Store under refrigeration at 4-8°C to prevent moisture loss and inhibit mold growth (Penicillium species).' },
+        { form: 'Freshly Squeezed Lemon Juice', instructions: 'Store in a tightly sealed glass container, refrigerated, and consume within 48-72 hours to avoid micro-oxidation of Vitamin C and microbial fermentation.' },
       ],
     },
     marketedProducts: [
@@ -1879,13 +1901,13 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Rutaceae',
       nativeRegion: 'South Asia (likely northeastern India); widely cultivated throughout Mediterranean region, Americas, and subtropical zones worldwide',
-      growthHabit: 'Evergreen small tree or shrub 3–6 m tall; thorny branches; fragrant white flowers; oval yellow fruit with acidic juice vesicles',
-      activeCompounds: 'Citric acid (5–7%), Vitamin C, hesperidin, eriocitrin, naringin, D-limonene (peel)',
+      growthHabit: 'Evergreen small tree or shrub 3-6 m tall; thorny branches; fragrant white flowers; oval yellow fruit with acidic juice vesicles',
+      activeCompounds: 'Citric acid (5-7%), Vitamin C, hesperidin, eriocitrin, naringin, D-limonene (peel)',
       cultivationNotes: 'World\'s third most important citrus crop after oranges and mandarins. Fresh juice is the primary therapeutic preparation; commercial products (Vitamin C supplements) are widely available',
     },
     preparation: [
-      { method: 'Warm Lemon Infusion', desc: 'Squeeze ½ lemon (15–30 mL) into warm water (<60°C): never boiling.', bestFor: 'Hydration, Vitamin C delivery, mild immune support' },
-      { method: 'Lemon-Honey Demulcent', desc: '15 mL fresh juice + 1–2 tsp honey in warm water, sip slowly.', bestFor: 'Dry irritative cough, sore throat, pharyngitis' },
+      { method: 'Warm Lemon Infusion', desc: 'Squeeze ½ lemon (15-30 mL) into warm water (<60°C): never boiling.', bestFor: 'Hydration, Vitamin C delivery, mild immune support' },
+      { method: 'Lemon-Honey Demulcent', desc: '15 mL fresh juice + 1-2 tsp honey in warm water, sip slowly.', bestFor: 'Dry irritative cough, sore throat, pharyngitis' },
     ],
     symptoms: ['Sore throat', 'Dry cough', 'Cold symptoms', 'Congestion', 'Hydration during fever', 'Immune support'],
     warnings: [
@@ -1894,11 +1916,12 @@ export const PLANTS = {
       'Avoid adding boiling water (>60°C): destroys Vitamin C.',
       'Avoid in active GERD, gastritis, or peptic ulcer disease.',
     ],
-    references: [
-      { text: 'Carr AC, Maggini S. Vitamin C and Immune Function. Nutrients. 2017;9(11): 1211.', url: 'https://doi.org/10.3390/nu9111211' },
-      { text: 'Hemilä H, Chalker E. Vitamin C for preventing and treating the common cold. Cochrane Database Syst Rev. 2013;(1): CD000980.', url: 'https://doi.org/10.1002/14651858.CD000980.pub4' },
-    ],
     relatedPlants: ['ginger', 'eucalyptus'],
+    references: [
+      { text: 'Addi, M., Elbouzidi, A., Abid, M., Tungmunnithum, D., Elamrani, A., & Hano, C. (2021). An overview of bioactive flavonoids from citrus fruits. Applied Sciences, 12(1), 29.', url: 'https://doi.org/10.3390/app12010029' },
+      { text: 'Agarwal, P., Sebghatollahi, Z., Kamal, M., et al. (2022). Citrus essential oils in aromatherapy: Therapeutic effects and mechanisms. Antioxidants, 11(12), 2374.', url: 'https://doi.org/10.3390/antiox11122374' },
+      { text: 'Lemon (Citrus limon) — Clinical reference.', url: 'https://share.google/HGyIszy5fXiY9Ud1i' },
+    ],
   },
 
   // ══════════════════════════════════════════════════════════════════════
@@ -1936,20 +1959,20 @@ export const PLANTS = {
       'Topical healing: direct localized application for poorly healing superficial wounds, mild inflammatory acne, minor burns, skin scratches, and recurrent boils or abscesses',
     ],
     howToUse: [
-      { method: 'Aqueous Infusion / Decoction', instruction: 'Simmer 1.0–2.0 grams of the dried herb in boiling water for 15 minutes.' },
+      { method: 'Aqueous Infusion / Decoction', instruction: 'Simmer 1.0-2.0 grams of the dried herb in boiling water for 15 minutes.' },
       { method: 'CRITICAL TIMING', instruction: 'For maximum clinical efficacy, therapy MUST be initiated at the absolute FIRST SIGN of cold or flu symptoms (scratchy throat, minor chills). It is virtually useless if taken after the infection has fully established.' },
     ],
     suitableAgeGroups: [
       { group: 'Pediatrics (<2 years)', notes: 'STRICTLY CONTRAINDICATED: absolutely prohibited due to risk of severe systemic complications.' },
-      { group: 'Pediatrics (2–12 years)', notes: 'Not recommended without direct medical supervision: heightened risk of precipitating severe T-cell-mediated allergic manifestations.' },
+      { group: 'Pediatrics (2-12 years)', notes: 'Not recommended without direct medical supervision: heightened risk of precipitating severe T-cell-mediated allergic manifestations.' },
       { group: 'Pregnancy & Lactation', notes: 'Avoid completely: clinical safety and maternal-fetal outcome data have not been established.' },
-      { group: 'Adults', notes: 'Primary target demographic. Adult prophylaxis/acute dose: 2.5–6.0 g dried herb daily in divided doses.' },
+      { group: 'Adults', notes: 'Primary target demographic. Adult prophylaxis/acute dose: 2.5-6.0 g dried herb daily in divided doses.' },
     ],
     dosage: {
-      standard: 'Adult prophylaxis/acute dose: 2.5–6.0 g dried herb daily in divided doses. Duration limits: Acute treatment max 10 consecutive days; prophylactic cycles max 8 weeks with mandatory 3-week rest.',
+      standard: 'Adult prophylaxis/acute dose: 2.5-6.0 g dried herb daily in divided doses. Duration limits: Acute treatment max 10 consecutive days; prophylactic cycles max 8 weeks with mandatory 3-week rest.',
       forms: [
-        { form: 'Aqueous Infusion / Decoction', dose: '1.0–2.0 g dried herb in boiling water, simmered 15 minutes; 2–3 cups daily.' },
-        { form: 'Standardized Capsules/Extracts', dose: '2.5–6.0 g dried herb equivalent daily in divided doses. Max 10 consecutive days acute; max 8 weeks prophylactic.' },
+        { form: 'Aqueous Infusion / Decoction', dose: '1.0-2.0 g dried herb in boiling water, simmered 15 minutes; 2-3 cups daily.' },
+        { form: 'Standardized Capsules/Extracts', dose: '2.5-6.0 g dried herb equivalent daily in divided doses. Max 10 consecutive days acute; max 8 weeks prophylactic.' },
       ],
     },
     overdose: {
@@ -1996,12 +2019,12 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Asteraceae / Compositae',
       nativeRegion: 'North America (Great Plains and eastern North America); now widely cultivated worldwide',
-      growthHabit: 'Herbaceous perennial growing 60–120 cm tall; large purple-pink cone-shaped flowers; entire aerial part (leaves, stems, flowers, roots) may be used medicinally',
+      growthHabit: 'Herbaceous perennial growing 60-120 cm tall; large purple-pink cone-shaped flowers; entire aerial part (leaves, stems, flowers, roots) may be used medicinally',
       activeCompounds: 'Isobutylamides (alkamides), cichoric acid, caftaric acid, echinacoside, arabinogalactans',
       cultivationNotes: 'Three species are medicinal: E. purpurea (most studied), E. angustifolia, and E. pallida: each has somewhat different constituent profiles and suggested uses. Purpurea is the most commercially available.',
     },
     preparation: [
-      { method: 'Decoction at First Symptoms', desc: 'Simmer 1–2 g dried herb in boiling water for 15 min; 2–3 cups daily. Start IMMEDIATELY at first sign of cold.', bestFor: 'Acute URTI prophylaxis and treatment; immune activation' },
+      { method: 'Decoction at First Symptoms', desc: 'Simmer 1-2 g dried herb in boiling water for 15 min; 2-3 cups daily. Start IMMEDIATELY at first sign of cold.', bestFor: 'Acute URTI prophylaxis and treatment; immune activation' },
       { method: 'Standardized Capsules / Liquid Extract', desc: 'Commercially standardized preparations for consistent dosing.', bestFor: 'Prophylactic immune maintenance cycles (max 8 weeks, then 3-week break)' },
     ],
     symptoms: ['Cold symptoms', 'Flu', 'Recurrent infections', 'Reduced immunity', 'Minor wounds'],
@@ -2011,12 +2034,12 @@ export const PLANTS = {
       'ABSOLUTELY PROHIBITED for organ transplant patients: directly antagonizes essential immunosuppressant therapies.',
       'Maximum acute use: 10 consecutive days; maximum prophylactic cycle: 8 weeks (mandatory 3-week rest after).',
     ],
+    relatedPlants: ['black-seed', 'astragalus', 'turmeric'],
     references: [
-      { text: 'Shah SA, et al. Evaluation of echinacea for the prevention and treatment of the common cold: a meta-analysis. Lancet Infect Dis. 2007;7(7): 473–480.', url: 'https://doi.org/10.1016/S1473-3099(07)70160-3' },
-      { text: 'Karsch-Völk M, et al. Echinacea for preventing and treating the common cold. Cochrane Database Syst Rev. 2015;(2): CD000530.', url: 'https://doi.org/10.1002/14651858.CD000530.pub3' },
-      { text: 'Manayi A, et al. Echinacea purpurea: pharmacology, phytochemistry and analysis methods. Pharmacogn Rev. 2015;9(17): 63–72.', url: 'https://doi.org/10.4103/0973-7847.156353' },
+      { text: 'Duke, J. A., Bogenschutz-Godwin, M. J., duCellier, J., & Duke, P. K. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
+      { text: 'Chevallier, A. (2016). Encyclopedia of Herbal Medicine (3rd ed.). DK Publishing / Penguin Random House.' },
+      { text: 'Egyptian Drug Authority — Echinacea purpurea (L.) Moench monograph.', url: 'https://edaegypt.gov.eg/media/tkbhrjew/echinacea-purpurea-l-moench-%D8%A5%D8%B4%D9%86%D8%B3%D9%8A%D8%A7.pdf' },
     ],
-    relatedPlants: ['black-seed', 'astragalus'],
   },
 
   'black-seed': {
@@ -2069,8 +2092,8 @@ export const PLANTS = {
       forms: [
         { form: 'Powdered Seeds: General Immune Support', dose: '~500 mg daily.' },
         { form: 'Powdered Seeds: Asthma Protocol', dose: '500 mg to 1.0 g twice daily.' },
-        { form: 'Powdered Seeds: Type 2 Diabetes', dose: '2.0–3.0 g daily for continuous 3-month cycle.' },
-        { form: 'Powdered Seeds: Hypertension Support', dose: '200–400 mg daily.' },
+        { form: 'Powdered Seeds: Type 2 Diabetes', dose: '2.0-3.0 g daily for continuous 3-month cycle.' },
+        { form: 'Powdered Seeds: Hypertension Support', dose: '200-400 mg daily.' },
         { form: 'Cold-Pressed Oil: General Immune Maintenance', dose: '2.5 mL daily.' },
         { form: 'Cold-Pressed Oil: Acute Asthma', dose: '5.0 mL up to 3 times daily.' },
         { form: 'Cold-Pressed Oil: Type 2 Diabetes', dose: '5.0 mL once daily, or 2.5 mL twice daily.' },
@@ -2079,7 +2102,7 @@ export const PLANTS = {
     },
     overdose: {
       symptoms: [
-        'No documented cases of acute human lethal toxicity. Animal models indicate lethal threshold at 540–580 mg/kg body weight: far beyond standard clinical doses.',
+        'No documented cases of acute human lethal toxicity. Animal models indicate lethal threshold at 540-580 mg/kg body weight: far beyond standard clinical doses.',
         'Symptoms: Severe acute hypotension (dangerous blood pressure drops), profound hypoglycemia (sugar crashes), and intense gastrointestinal erosion or distress.',
       ],
       management: [
@@ -2125,13 +2148,13 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Ranunculaceae',
       nativeRegion: 'Southern Europe, North Africa, and South Asia; widely cultivated in the Middle East, India, and North Africa',
-      growthHabit: 'Annual herb growing 20–30 cm tall; white or pale blue flowers; triangular black seeds (the medicinal part) inside inflated pods',
+      growthHabit: 'Annual herb growing 20-30 cm tall; white or pale blue flowers; triangular black seeds (the medicinal part) inside inflated pods',
       activeCompounds: 'Thymoquinone (TQ), thymohydroquinone, nigellone, linoleic acid, oleic acid, nigellicine, nigellidine',
       cultivationNotes: 'Seeds must be freshly crushed immediately before use: pre-grinding leads to rapid TQ evaporation and complete loss of medicinal activity. Cold-pressed oil preserves TQ best. Avoid boiling.',
     },
     preparation: [
       { method: 'Freshly Crushed Seeds WITH Food', desc: 'Crush immediately before use; take with or immediately after meals for optimal TQ absorption. Start with titration dose.', bestFor: 'Immune support, asthma, diabetes, hypertension' },
-      { method: 'Cold-Pressed Oil WITH Food', desc: '2.5–5 mL cold-pressed oil taken with food; do not heat.', bestFor: 'All indications; easier to take than crushed seeds; best bioavailability' },
+      { method: 'Cold-Pressed Oil WITH Food', desc: '2.5-5 mL cold-pressed oil taken with food; do not heat.', bestFor: 'All indications; easier to take than crushed seeds; best bioavailability' },
     ],
     symptoms: ['Reduced immunity', 'Asthma', 'Allergy', 'High blood sugar', 'High cholesterol', 'Hypertension'],
     warnings: [
@@ -2140,12 +2163,17 @@ export const PLANTS = {
       'CRITICAL: Seeds MUST be crushed immediately before use and taken with food: volatile TQ evaporates rapidly from pre-ground seeds.',
       'Discontinue 2 weeks before any major surgery.',
     ],
+    relatedPlants: ['echinacea', 'astragalus', 'turmeric'],
     references: [
-      { text: 'Sahebkar A, et al. Effects of supplementation with Nigella sativa (black seed) on oxidative stress and inflammatory biomarkers. Phytother Res. 2016;30(7): 1196–1205.', url: 'https://doi.org/10.1002/ptr.5636' },
-      { text: 'Datau EA, et al. Efficacy of Nigella sativa for the treatment of mild-to-moderate asthma. Acta Med Indones. 2010;42(3): 130–134.', url: 'https://pubmed.ncbi.nlm.nih.gov/20714083/' },
-      { text: 'Bamosa AO, et al. Effect of Nigella sativa seeds on the glycemic control of patients with type 2 diabetes mellitus. Indian J Physiol Pharmacol. 2010;54(4): 344–354.', url: 'https://pubmed.ncbi.nlm.nih.gov/21280494/' },
+      { text: 'Duke, J. A., Bogenschutz-Godwin, M. J., duCellier, J., & Duke, P. K. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
+      { text: 'Chevallier, A. (2016). Encyclopedia of Herbal Medicine (3rd ed.). DK Publishing / Penguin Random House.' },
+      { text: 'ScienceDirect — Anti-inflammatory and immune effects of Nigella sativa.', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0041010124003593' },
+      { text: 'WebMD — Black Seed: Uses, Side Effects and Dosage.', url: 'https://www.webmd.com/vitamins/ai/ingredientmono-901/black-seed' },
+      { text: 'Frontiers in Pharmacology — Thymoquinone: mechanisms of action and therapeutic potential.', url: 'https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2024.1417013/full' },
+      { text: 'PubMed — Nigella sativa in allergic rhinitis: a double-blind controlled trial.', url: 'https://pubmed.ncbi.nlm.nih.gov/23855426/' },
+      { text: 'PMC — Nigella sativa seed benefits and pharmacological activities.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4387228/' },
+      { text: 'Egyptian Drug Authority — Nigella sativa L. monograph.', url: 'https://www.edaegypt.gov.eg/media/cuobaarg/nigella-sativa-l-_1.pdf' },
     ],
-    relatedPlants: ['echinacea', 'astragalus'],
   },
 
   'astragalus': {
@@ -2159,12 +2187,12 @@ export const PLANTS = {
     tags: ['Adaptogen', 'Immunomodulator', 'Antiviral', 'Fatigue', 'Respiratory'],
     image: '/images/Picture63.png',
     shortDescription: 'A true adaptogen and cornerstone of Traditional Chinese Medicine: astragalus polysaccharides and astragaloside IV trigger interferon production, T-cell activation, and antiviral defense, making it one of the most extensively studied immune-restorative botanicals.',
-    description: 'Astragalus contains astragalan polysaccharides (foundational for adaptogenic and interferonogenic properties), a triterpenoid saponin matrix of Astragalosides I–X (with Astragaloside IV as the most pharmacologically active), and bioflavonoids (quercetin, kaempferol). It triggers the endogenous cellular production of Interferon, potentiates T-lymphocyte and NK cell proliferation, and works synergistically to stop viral replication cycles including Coxsackie B and common respiratory cold viruses. Best used for PREVENTATIVE PROPHYLAXIS or post-viral recovery phase: not during phases of high fever or acute severe inflammation.',
+    description: 'Astragalus contains astragalan polysaccharides (foundational for adaptogenic and interferonogenic properties), a triterpenoid saponin matrix of Astragalosides I-X (with Astragaloside IV as the most pharmacologically active), and bioflavonoids (quercetin, kaempferol). It triggers the endogenous cellular production of Interferon, potentiates T-lymphocyte and NK cell proliferation, and works synergistically to stop viral replication cycles including Coxsackie B and common respiratory cold viruses. Best used for PREVENTATIVE PROPHYLAXIS or post-viral recovery phase: not during phases of high fever or acute severe inflammation.',
     history: 'A central pillar of Traditional Chinese Medicine (TCM) for over 2,000 years, known as "Huang Qi" (Yellow Leader) due to its yellow root and supreme adaptogenic status. Listed in the ancient Chinese medical text Shennong Bencao Jing (circa 200 AD) as a superior tonic. Modern pharmacological research has validated its interferonogenic properties and clinical trials have confirmed its use in respiratory prophylaxis and post-chemotherapy immune recovery.',
     isDemo: false,
     activeConstituents: [
       { name: 'Astragalan Polysaccharides', percentage: '', effect: 'Complex high-molecular-weight water-soluble glycans; foundational pillars for adaptogenic and interferonogenic properties; directly stimulate immune cell proliferation' },
-      { name: 'Astragalosides I–X (Triterpenoid Saponins)', percentage: '', effect: 'Specialized chemical matrix; Astragaloside IV is most pharmacologically active and heavily researched' },
+      { name: 'Astragalosides I-X (Triterpenoid Saponins)', percentage: '', effect: 'Specialized chemical matrix; Astragaloside IV is most pharmacologically active and heavily researched' },
       { name: 'Quercetin, Kaempferol, Specialized Isoflavones (Bioflavonoids)', percentage: '', effect: 'Cellular vascular stabilization; antioxidant; anti-inflammatory support' },
       { name: 'Asparagine, β-sitosterol, Nickel, Chromium (Trace Amino Acids & Minerals)', percentage: '', effect: 'Dense concentrations of essential trace elements supporting overall metabolic and immune function' },
     ],
@@ -2181,9 +2209,9 @@ export const PLANTS = {
       'Research: Adjuvant therapy improving quality of life and immune recovery for patients undergoing chemotherapy',
     ],
     howToUse: [
-      { method: 'Raw Root Decoction', instruction: 'Boil 9–30 grams of the sliced dried root daily in water, allowing it to fully simmer to extract the heavy polysaccharides.' },
-      { method: 'Standardized Dry Extract Capsules', instruction: 'Administer 100–150 mg of standardized extract exactly three times daily.' },
-      { method: 'Fluid Extract Dilution (1: 2)', instruction: '4.5–8.5 mL administered daily in carefully divided doses. (A 1: 2 dilution contains 1 g of the herb per 2 mL of liquid).' },
+      { method: 'Raw Root Decoction', instruction: 'Boil 9-30 grams of the sliced dried root daily in water, allowing it to fully simmer to extract the heavy polysaccharides.' },
+      { method: 'Standardized Dry Extract Capsules', instruction: 'Administer 100-150 mg of standardized extract exactly three times daily.' },
+      { method: 'Fluid Extract Dilution (1: 2)', instruction: '4.5-8.5 mL administered daily in carefully divided doses. (A 1: 2 dilution contains 1 g of the herb per 2 mL of liquid).' },
     ],
     suitableAgeGroups: [
       { group: 'Adults', notes: 'Primary target demographic for therapeutic restoration and stress adaptation.' },
@@ -2191,11 +2219,11 @@ export const PLANTS = {
       { group: 'Pregnancy & Lactation', notes: 'STRICTLY AVOIDED: clinical safety profile is absent; no verified human fertility or gestational data available.' },
     ],
     dosage: {
-      standard: 'Standardized extract capsules: 100–150 mg three times daily. Raw root decoction: 9–30 g daily. Best used preventatively: NOT during high fever or acute severe inflammation.',
+      standard: 'Standardized extract capsules: 100-150 mg three times daily. Raw root decoction: 9-30 g daily. Best used preventatively: NOT during high fever or acute severe inflammation.',
       forms: [
-        { form: 'Standardized Dry Extract Capsules', dose: '100–150 mg three times daily.' },
-        { form: 'Raw Root Decoction', dose: '9–30 g sliced dried root boiled daily.' },
-        { form: 'Fluid Extract (1: 2)', dose: '4.5–8.5 mL daily in divided doses.' },
+        { form: 'Standardized Dry Extract Capsules', dose: '100-150 mg three times daily.' },
+        { form: 'Raw Root Decoction', dose: '9-30 g sliced dried root boiled daily.' },
+        { form: 'Fluid Extract (1: 2)', dose: '4.5-8.5 mL daily in divided doses.' },
       ],
     },
     overdose: {
@@ -2242,13 +2270,13 @@ export const PLANTS = {
     botanicalFacts: {
       family: 'Fabaceae / Leguminosae',
       nativeRegion: 'Northern and Eastern China, Mongolia, Korea: widely cultivated in China for TCM',
-      growthHabit: 'Perennial herb growing 20–40 cm tall; compound leaves; yellowish flowers; long taproot (the medicinal part) harvested after 4–5 years',
-      activeCompounds: 'Astragalan polysaccharides, Astragalosides I–X (especially Astragaloside IV), quercetin, kaempferol, asparagine, β-sitosterol',
+      growthHabit: 'Perennial herb growing 20-40 cm tall; compound leaves; yellowish flowers; long taproot (the medicinal part) harvested after 4-5 years',
+      activeCompounds: 'Astragalan polysaccharides, Astragalosides I-X (especially Astragaloside IV), quercetin, kaempferol, asparagine, β-sitosterol',
       cultivationNotes: 'Root (Radix Astragali / Huang Qi) is the medicinal part; harvested in spring or autumn from plants at least 4 years old. Standardized extracts guarantee minimum polysaccharide and saponin content.',
     },
     preparation: [
-      { method: 'Root Decoction', desc: 'Boil 9–30 g sliced dried root in water for full simmering to extract heavy polysaccharides.', bestFor: 'Immune restoration, respiratory prophylaxis, chronic fatigue' },
-      { method: 'Standardized Capsules', desc: '100–150 mg standardized extract three times daily.', bestFor: 'Convenient therapeutic dosing for immune prophylaxis and post-viral recovery' },
+      { method: 'Root Decoction', desc: 'Boil 9-30 g sliced dried root in water for full simmering to extract heavy polysaccharides.', bestFor: 'Immune restoration, respiratory prophylaxis, chronic fatigue' },
+      { method: 'Standardized Capsules', desc: '100-150 mg standardized extract three times daily.', bestFor: 'Convenient therapeutic dosing for immune prophylaxis and post-viral recovery' },
     ],
     symptoms: ['Reduced immunity', 'Recurrent infections', 'Chronic fatigue', 'Post-viral weakness', 'Respiratory vulnerability'],
     warnings: [
@@ -2257,17 +2285,2317 @@ export const PLANTS = {
       'Do NOT use during acute high fever: use preventatively BEFORE infection or AFTER recovery only.',
       'Clinical evidence shows synergistic antiviral effect with body\'s natural interferon against Coxsackie B virus: but it is not a replacement for chemotherapy.',
     ],
+    relatedPlants: ['echinacea', 'black-seed', 'turmeric'],
     references: [
-      { text: 'Denzler KL, et al. Investigation of the biochemical and immunological effects of Astragalus membranaceus in healthy volunteers: results of a double-blind, placebo-controlled trial. Phytother Res. 2010;24(5): 756–762.', url: 'https://doi.org/10.1002/ptr.3001' },
-      { text: 'Auyeung KK, et al. Astragalus membranaceus: a review of its protection against inflammation and gastrointestinal cancers. Am J Chin Med. 2016;44(1): 1–22.', url: 'https://doi.org/10.1142/S0192415X16500014' },
-      { text: 'Chen HW, et al. Inhibitory actions of the Chinese herb-derived constituents on SARS-CoV-2 spike protein–ACE2 interaction and viral infectivity. J Ethnopharmacol. 2020;260: 113057.', url: 'https://doi.org/10.1016/j.jep.2020.113057' },
+      { text: 'Duke, J. A., Bogenschutz-Godwin, M. J., duCellier, J., & Duke, P. K. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
+      { text: 'Chevallier, A. (2016). Encyclopedia of Herbal Medicine (3rd ed.). DK Publishing / Penguin Random House.' },
+      { text: 'Egyptian Drug Authority — Astragalus mongholicus monograph.', url: 'https://www.edaegypt.gov.eg/media/nmfpej2l/astragalus-mongholicus_1.pdf' },
     ],
-    relatedPlants: ['echinacea', 'black-seed'],
   },
-};
 
-// ══════════════════════════════════════════════════════════════════════════
-// CATEGORIES
+  // ══════════════════════════════════════════════════════════════════════
+  // WOMEN'S HEALTH › HAIR CARE
+  // ══════════════════════════════════════════════════════════════════════
+
+  'rocket': {
+    id: 'rocket',
+    name: 'Rocket',
+    nameAr: 'الجرجير',
+    latinName: 'Eruca sativa Mill.',
+    commonNames: ['Rocket', 'Arugula', 'Rucola', 'Taramira'],
+    category: 'womens-health',
+    subcategory: 'hair-care',
+    tags: ['Hair Growth', 'Scalp Nourishment', 'Antioxidant', 'Sulfur-rich', 'Anti-breakage'],
+    image: '/images/Picture215.jpeg',
+    shortDescription: 'Rich in sulfur-containing glucosinolates, isothiocyanates, and essential fatty acids that nourish hair follicles, reduce breakage, and support scalp microcirculation.',
+    description: 'Rocket (Eruca sativa) seed oil and leaf extracts support scalp and follicular health through their dense isothiocyanate and glucosinolate content. Erucin and related sulfur compounds provide antimicrobial and antioxidant protection to the scalp, while the cold-pressed seed oil delivers oleic and linoleic acids that condition the hair shaft and reduce mechanical breakage. Flavonoids quercetin and isorhamnetin contribute to antioxidant defense within the follicular microenvironment, and experimental studies suggest possible enhancement of scalp microcirculation and growth factor signaling.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Isothiocyanates (Erucin and related sulfur compounds)', percentage: '', effect: 'Antimicrobial and antioxidant activity; support scalp health and follicular environment' },
+      { name: 'Glucosinolates (Glucoerucin)', percentage: '', effect: 'Precursors to isothiocyanates; sulfur-rich compounds supporting keratin synthesis' },
+      { name: 'Fatty Acids (Oleic, Linoleic, minor Erucic acid)', percentage: '', effect: 'Condition the hair shaft, reduce mechanical breakage, and improve hair softness' },
+      { name: 'Vitamins A, C, K and Minerals (Iron, Magnesium, Sulfur)', percentage: '', effect: 'Support follicle metabolism, scalp tissue integrity, and normal hair growth cycles' },
+      { name: 'Flavonoids (Quercetin and Isorhamnetin)', percentage: '', effect: 'Antioxidant protection of follicular cells; reduce oxidative stress linked to hair loss' },
+    ],
+    moa: [
+      { title: 'Scalp Microcirculation Support', detail: 'Experimental studies suggest sulfur-containing compounds and flavonoids may enhance scalp microvascular perfusion, improving delivery of nutrients to the dermal papilla.' },
+      { title: 'Antioxidant Follicular Protection', detail: 'Quercetin and isorhamnetin scavenge reactive oxygen species (ROS) within the scalp environment, reducing oxidative damage to hair follicles that contributes to premature shedding.' },
+      { title: 'Hair Shaft Conditioning', detail: 'Oleic and linoleic acids in the seed oil penetrate the hair cortex, filling gaps in the cuticle, reducing hygral fatigue, and decreasing susceptibility to mechanical breakage.' },
+      { title: 'Scalp Antimicrobial Action', detail: 'Isothiocyanates exert broad-spectrum antimicrobial activity against scalp surface pathogens, helping maintain a healthy scalp environment conducive to hair growth.' },
+    ],
+    uses: [
+      'Supporting healthier hair growth and reducing hair breakage',
+      'Improving hair softness, shine, and manageability',
+      'Scalp nourishment and conditioning',
+      'Helping improve the appearance of thinning or dull hair',
+      'Adjunct support for mild scalp dryness and irritation',
+    ],
+    howToUse: [
+      { method: 'Seed Oil Scalp Massage', instruction: 'Warm a small amount of cold-pressed rocket (taramira) seed oil and massage directly into the scalp for 5-10 minutes. Leave for 30-60 minutes as a pre-wash treatment, then shampoo thoroughly. Use twice weekly.' },
+      { method: 'Fresh Leaf Juice Mask', instruction: 'Blend fresh rocket leaves with a small amount of lukewarm water, then strain through a fine cloth to obtain concentrated green juice. Apply to the scalp, leave for 30-60 minutes, then rinse thoroughly. Use twice weekly.' },
+      { method: 'Home-made Infused Seed Oil', instruction: 'Lightly crush rocket seeds to crack the outer shell. Place in a glass jar, cover with Sweet Almond oil, and leave in a warm dark place for 14 days, shaking daily. Strain through cloth and use as a pre-wash scalp treatment.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Safe for topical use when applied as directed.' },
+      { group: 'Children', notes: 'Generally safe for topical use; diluted preparations preferred. Perform patch test before use.' },
+      { group: 'Pregnant Women', notes: 'Generally considered safe for topical use in moderate amounts. Avoid excessive application.' },
+    ],
+    dosage: {
+      standard: 'Seed oil: massage into scalp 5-10 minutes, twice weekly as pre-wash treatment. Fresh juice: apply to scalp twice weekly for 30-60 minutes.',
+      forms: [
+        { form: 'Cold-Pressed Seed Oil (Topical)', dose: 'Apply small amount to scalp; massage 5-10 min; leave 30-60 min before washing. Twice weekly.' },
+        { form: 'Fresh Leaf Juice Mask (Topical)', dose: 'Apply strained juice to scalp; leave 30-60 min; rinse. Twice weekly.' },
+        { form: 'Infused Seed Oil (Topical)', dose: 'Massage into scalp as pre-wash treatment. Twice weekly.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Mild scalp redness or irritation in sensitive individuals with very frequent concentrated seed oil application.',
+        'Temporary burning or stinging sensation on sensitive skin.',
+      ],
+      management: [
+        'Rinse the scalp thoroughly with cool water.',
+        'Discontinue use temporarily if irritation persists.',
+        'Apply a soothing emollient (e.g., aloe vera gel) to calm the scalp.',
+      ],
+    },
+    sideEffects: [
+      'Mild warming sensation during application (common with sulfur-containing oils)',
+      'Strong sulfur-like odor during and after application',
+      'Possible mild scalp irritation in individuals with sensitive skin',
+    ],
+    contraindications: [
+      'Sensitivity to Cruciferous Plants: Individuals sensitive to mustard, cabbage, broccoli, or related Brassicaceae plants should perform a patch test before use, due to possible cross-reactivity with sulfur-containing glucosinolates.',
+      'Severely Irritated or Broken Scalp Skin: Avoid application on open wounds, severely inflamed scalp areas, or active dermatitis, as sulfur compounds may increase irritation.',
+    ],
+    drugInteractions: [],
+    storage: {
+      forms: [
+        { form: 'Fresh Leaf Juice', instructions: 'Use immediately after preparation; oxidizes rapidly and cannot be stored.' },
+        { form: 'Cold-Pressed Seed Oil (Commercial)', instructions: 'Store in a cool, dark place in an amber-colored bottle. Shelf life up to 1 year when sealed.' },
+        { form: 'Home-made Infused Oil', instructions: 'Refrigerate after straining; use within 1-2 months. Ensure no water contamination to prevent microbial growth.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Imtenan Eruca Oil (زيت الجرجير)', image: '/images/Picture217.jpeg' },
+      { name: 'El-Hawag Rocket Oil (زيت الجرجير الحواج)', image: '/images/Picture216.jpeg' },
+    ],
+    benefits: [
+      { icon: 'spa', title: 'Scalp Nourishment', desc: 'Oleic and linoleic acids deeply condition the scalp and hair shaft to reduce breakage and improve shine.' },
+      { icon: 'science', title: 'Antioxidant Protection', desc: 'Quercetin and isorhamnetin flavonoids scavenge ROS to protect follicles from oxidative stress.' },
+      { icon: 'water_drop', title: 'Hair Growth Support', desc: 'Sulfur compounds support scalp microcirculation and keratin synthesis for healthier hair growth cycles.' },
+      { icon: 'shield', title: 'Scalp Antimicrobial', desc: 'Isothiocyanates inhibit scalp surface pathogens, maintaining a healthy follicular environment.' },
+    ],
+    botanicalFacts: {
+      family: 'Brassicaceae (Cruciferous family)',
+      nativeRegion: 'Mediterranean and Southwest Asia; now cultivated worldwide',
+      growthHabit: 'Annual herb, 20-100 cm tall; pinnately lobed leaves with peppery aroma; white or pale yellow flowers with purple veins',
+      activeCompounds: 'Glucoerucin, erucin (isothiocyanate), oleic acid, linoleic acid, erucic acid, quercetin, isorhamnetin',
+      cultivationNotes: 'Widely cultivated globally as a salad herb and oil crop. Cold-pressed taramira oil from seeds is used extensively in South Asian hair care traditions.',
+    },
+    preparation: [
+      { method: 'Cold-Pressed Seed Oil (Standard Scientific)', desc: 'Seeds cold-pressed to preserve sulfur-containing compounds and sensitive fatty acids that degrade with heat.', bestFor: 'Scalp conditioning, hair shaft coating, anti-breakage treatment' },
+      { method: 'Fresh Leaf Juice Mask', desc: 'Blend fresh rocket leaves with a little lukewarm water, strain through fine cloth, and apply concentrated juice to scalp.', bestFor: 'Scalp nourishment, mild dandruff support, antioxidant scalp treatment' },
+      { method: 'Home Infused Seed Oil', desc: 'Crushed seeds macerated in Sweet Almond oil for 14 days in a cool dark place, then strained.', bestFor: 'Pre-wash scalp treatment, conditioning, hair vitality support' },
+    ],
+    symptoms: ['Hair loss', 'Hair breakage', 'Scalp dryness', 'Weak hair', 'Thinning hair'],
+    warnings: [
+      'Perform a patch test before first use, especially in individuals sensitive to cruciferous plants.',
+      'Do not apply on broken, actively inflamed, or psoriasis-compromised scalp skin.',
+      'Fresh juice oxidizes rapidly; prepare fresh immediately before use.',
+    ],
+    relatedPlants: ['rosemary', 'aloe-vera', 'garlic'],
+    references: [
+      { text: 'Nurzyńska-Wierdak, R. (2022). Bioactive compounds of Brassicaceae plants and their potential health benefits. Molecules.' },
+      { text: 'Ares, A. M., et al. (2018). Bioactive compounds and health benefits of Eruca sativa. Food Research International.' },
+      { text: 'Jin, Y., et al. (2009). Glucosinolates and their biological activities in cruciferous plants. Molecules.' },
+    ],
+  },
+
+  // ── Women's Health › Hair Care ─────────────────────────────────────────
+  'garlic': {
+    id: 'garlic',
+    name: 'Garlic',
+    nameAr: 'الثوم',
+    latinName: 'Allium sativum L.',
+    commonNames: ['Garlic', 'Common Garlic', 'Ajo', 'Knoblauch'],
+    category: 'womens-health',
+    subcategory: 'hair-care',
+    tags: ['Scalp Health', 'Antimicrobial', 'Hair Growth', 'Keratin Support', 'Anti-dandruff'],
+    image: '/images/Picture209.jpg',
+    shortDescription: 'Potent organosulfur compounds in garlic (led by allicin) deliver broad-spectrum scalp antimicrobial activity, enhance follicular microcirculation via TRP channel vasodilation, and furnish bioavailable sulfur for keratin cross-linking to reduce hair breakage.',
+    description: 'Allium sativum supports the scalp ecosystem and follicular units through multi-targeted pharmacological pathways. Its organosulfur fraction, led by allicin, exerts potent antimicrobial and antimycotic actions directly suppressing opportunistic scalp pathogens such as Malassezia furfur. Local topical application induces mild counter-irritation and vasodilation via transient receptor potential (TRP) channels, augmenting microvascular blood perfusion to the dermal papilla. Bioavailable sulfur and selenium profiles furnish building blocks for cross-linking disulfide bonds within the growing hair shaft\'s keratin matrix, mechanically optimizing tensile strength and decreasing premature structural breakage.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Alliin & Allicin (Organosulfur Compounds)', percentage: '', effect: 'Primary antimicrobial and antimycotic activity; allicin forms transiently via alliinase enzyme activation upon tissue disruption' },
+      { name: 'Ajoene, DADS, DATS (Oil-soluble Organosulfur Metabolites)', percentage: '', effect: 'Secondary antimicrobial, anti-inflammatory, and circulatory-supporting effects' },
+      { name: 'Quercetin Glycosides & Phenolic Acids (Polyphenolic Flavonoids)', percentage: '', effect: 'Localized scavenging of reactive oxygen species (ROS); antioxidant protection of follicular cells' },
+      { name: 'Selenium & Elemental Sulfur (Trace Minerals)', percentage: '', effect: 'Critical for maintaining epithelial integrity and supporting keratin cross-linking and disulfide bond formation in hair shaft' },
+      { name: 'Vitamin C (Ascorbic Acid) & Vitamin B6 (Pyridoxine)', percentage: '', effect: 'Metabolic co-factors supporting follicular metabolism and collagen synthesis in the scalp dermis' },
+      { name: 'Sulfur-Containing Amino Acids', percentage: '', effect: 'Non-protein amino acids that directly support keratin synthesis and cross-linking pathways within the hair follicle matrix' },
+    ],
+    moa: [
+      { title: 'Scalp Antimicrobial & Antifungal Action', detail: 'Allicin and related organosulfur compounds exert potent broad-spectrum antimicrobial and antimycotic actions, directly suppressing opportunistic cutaneous pathogens including Malassezia furfur, a key contributor to seborrheic dermatitis and dandruff.' },
+      { title: 'Follicular Microcirculation Enhancement', detail: 'Local topical application induces mild counter-irritation and vasodilation via activation of transient receptor potential (TRP) channels, augmenting microvascular blood perfusion to the dermal papilla and improving nutrient delivery to active hair follicles.' },
+      { title: 'Keratin Matrix Reinforcement', detail: 'Bioavailable sulfur and selenium furnish the necessary building blocks for cross-linking disulfide bonds within the keratin matrix of the growing hair shaft, mechanically optimizing tensile strength and decreasing premature structural breakage.' },
+      { title: 'Immunomodulatory Counter-Irritant Effect', detail: 'Experimental and limited clinical evidence suggests garlic gel acts as an adjunct topical co-therapy in localized autoimmune hair loss (Alopecia Areata) through immunomodulatory counter-irritant properties that may modulate local immune responses.' },
+    ],
+    uses: [
+      'Supportive antimicrobial management of seborrheic dermatitis and excessive scalp microbial buildup',
+      'Adjunct supportive topical co-therapy in localized autoimmune thinning such as early Alopecia Areata',
+      'Reduction of mechanical hair shaft fracturing through targeted disulfide and lipid reinforcement',
+      'Revitalization of metabolic perfusion inside the follicular niche to support general hair vitality',
+    ],
+    howToUse: [
+      { method: 'Infused Garlic Oil (Pre-wash Mask)', instruction: 'Lightly crush or macerate fresh garlic cloves to activate alliinase enzyme (allow 5-10 minutes). Submerge crushed garlic in a carrier oil (Olive Oil or Coconut Oil) in an airtight glass container. Macerate 5-7 days in a cool, dark place. Filter through sterile cloth. Massage into scalp 1-2 times per week as a pre-wash treatment, then shampoo thoroughly.' },
+      { method: 'Commercial Garlic Hair Oil (Ready-to-use)', instruction: 'Apply to the designated scalp areas and massage gently. Leave as directed on the product. Shampoo thoroughly after. Use 1-2 times per week.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Completely indicated for regular topical use when adequately diluted in standard carrier oils.' },
+      { group: 'Children', notes: 'Highly restricted. Avoid concentrated extracts on pediatric scalps due to high epidermal permeability and susceptibility to chemical micro-burns.' },
+      { group: 'Pregnant Women', notes: 'Generally safe for conventional, low-frequency cosmetic topical use. Avoid highly concentrated, occlusive, or widespread applications due to systemic absorption of volatile metabolites.' },
+    ],
+    dosage: {
+      standard: 'Massaged into designated scalp areas 1-2 times per week as a pre-shampoo mask treatment, followed by thorough washing.',
+      forms: [
+        { form: 'Infused Garlic Oil (Topical)', dose: 'Massage into scalp 1-2 times per week as pre-wash treatment. Wash thoroughly after. Always diluted in carrier oil; never use undiluted.' },
+        { form: 'Commercial Garlic Hair Oil (Topical)', dose: 'Follow product instructions; typically 1-2 times weekly scalp application before shampooing.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Intense localized burning sensations upon prolonged or unmonitored contact.',
+        'Acute contact dermatitis and severe localized erythema.',
+        'Painful epidermal chemical micro-burns when applied undiluted, under occlusion, or on compromised skin.',
+      ],
+      management: [
+        'Immediately cleanse the scalp extensively with cool water and a mild, unperfumed, pH-balanced shampoo.',
+        'Suspend all garlic applications immediately.',
+        'Apply localized skin barrier repair formulations such as D-Panthenol or purified Aloe vera gel to speed re-epithelialization.',
+        'Seek medical advice if burns or severe dermatitis develop.',
+      ],
+    },
+    sideEffects: [
+      'Pungent, highly persistent organosulfur body and hair odor',
+      'Transient mild cutaneous warmth or burning during the initial phase of application',
+      'Risk of developing delayed allergic contact dermatitis upon prolonged use in atopic individuals',
+    ],
+    contraindications: [
+      'Known Amaryllidaceae Family Sensitivity: Patients with known clinical hypersensitivity or contact allergies to Amaryllidaceae family plants (e.g., onions, leeks, chives) should avoid garlic scalp applications.',
+      'Broken or Compromised Scalp Barrier: Absolute contraindication against applying crude garlic extracts, fresh juices, or raw garlic paste on actively peeling, inflamed, broken, or psoriasis-compromised scalp skin; risk of acute pain, severe chemical injury, koebnerization, and secondary infections.',
+    ],
+    drugInteractions: [],
+    storage: {
+      forms: [
+        { form: 'Fresh Homemade Garlic Oil', instructions: 'Must be strictly refrigerated (2-8°C) and completely consumed within 3-5 days to eliminate allicin degradation and avoid anaerobic microbial risks.' },
+        { form: 'Commercial Garlic Oils', instructions: 'Store inside sealed, dark amber glass containers protected from humidity, excessive temperature fluctuations, and direct sunlight.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Vatika Garlic Enriched Hair Oil 300 mL', image: '/images/Picture211.jpg' },
+      { name: 'Harir Garlic Hair Oil (زيت الثوم هرير)', image: '/images/Picture210.jpg' },
+    ],
+    benefits: [
+      { icon: 'shield', title: 'Scalp Antimicrobial', desc: 'Allicin and organosulfur compounds suppress Malassezia furfur and other scalp pathogens, reducing dandruff and seborrheic dermatitis.' },
+      { icon: 'water_drop', title: 'Follicular Blood Flow', desc: 'TRP channel activation induces mild vasodilation, augmenting microvascular perfusion and nutrient delivery to hair follicles.' },
+      { icon: 'science', title: 'Keratin Reinforcement', desc: 'Bioavailable sulfur and selenium provide building blocks for disulfide bond cross-linking within the keratin matrix, reducing hair breakage.' },
+      { icon: 'spa', title: 'Alopecia Areata Support', desc: 'Immunomodulatory counter-irritant properties offer adjunct support in early localized Alopecia Areata (clinical evidence from Sharquie et al.).' },
+    ],
+    botanicalFacts: {
+      family: 'Amaryllidaceae (Subfamily: Allioideae)',
+      nativeRegion: 'Central Asia (likely Kyrgyzstan/Tajikistan); cultivated worldwide for over 7,000 years',
+      growthHabit: 'Perennial bulbous herb; bulb composed of multiple cloves enclosed in a papery tunic; flat strap-like leaves; white to pink globose flower heads',
+      activeCompounds: 'Alliin, allicin, ajoene, diallyl disulfide (DADS), diallyl trisulfide (DATS), quercetin glycosides, selenium, sulfur amino acids',
+      cultivationNotes: 'One of the oldest cultivated medicinal plants. Allicin (the key active compound) is only generated via enzymatic reaction (alliinase) when raw cloves are crushed or chopped, not present in intact bulbs.',
+    },
+    preparation: [
+      { method: 'Steam Distillation / Solvent Extraction (Standard Scientific)', desc: 'Standardizes concentration of stable diallyl sulfides; cold expression isolates temporary allicin fractions under temperature-controlled conditions.', bestFor: 'Commercial garlic oil production with standardized active compound content' },
+      { method: 'Home-made Infused Garlic Oil', desc: 'Crush cloves (allow 5-10 min enzymatic conversion of alliin to allicin), then macerate in carrier oil (olive or coconut) for 5-7 days in a cool dark place, then strain.', bestFor: 'Pre-wash scalp treatment, seborrheic dermatitis support, hair vitality' },
+    ],
+    symptoms: ['Dandruff', 'Seborrheic dermatitis', 'Hair breakage', 'Hair thinning', 'Scalp microbial overgrowth', 'Alopecia areata'],
+    warnings: [
+      'NEVER apply raw garlic paste or undiluted garlic directly onto the scalp; risk of severe chemical burns and contact dermatitis.',
+      'Always dilute in carrier oil before application; perform patch test 24 hours before first use.',
+      'Do not apply on broken, actively inflamed, psoriasis-compromised, or open scalp wounds.',
+      'Homemade fresh garlic oil must be refrigerated and used within 3-5 days to prevent dangerous anaerobic bacterial growth (botulism risk).',
+      'Avoid concentrated applications in children; pediatric scalp is highly permeable to volatile sulfur metabolites.',
+    ],
+    relatedPlants: ['rocket', 'rosemary', 'clove'],
+    references: [
+      { text: 'World Health Organization (WHO). WHO Monographs on Selected Medicinal Plants, Volume 1: Bulbus Allii Sativi. Geneva.' },
+      { text: 'Sharquie, K. E., & Al-Obaidi, H. K. (2002). Topical garlic gel in the treatment of alopecia areata. The Journal of Dermatology, 29(11), 680–684.' },
+      { text: 'Bayan, L., Koulivand, P. H., & Gorji, A. (2014). Garlic: a review of potential therapeutic effects. Avicenna Journal of Phytomedicine, 4(1), 1–14.' },
+      { text: 'Ried, K. (2016). Garlic lowers blood pressure in hypertensive individuals, regulates serum cholesterol, and stimulates immunity. The Journal of Nutrition, 146(2), 389S–396S.' },
+      { text: 'PMC — Antimicrobial and anti-biofilm activity of garlic (Allium sativum).', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7146530' },
+      { text: 'PMC — Garlic for urinary tract infections: in vitro and clinical evidence.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3874089' },
+      { text: 'NCCIH — Garlic: What You Need To Know.', url: 'https://www.nccih.nih.gov/health/garlic' },
+    ],
+  },
+
+  'senna': {
+    id: 'senna',
+    name: 'Senna',
+    nameAr: 'السنا',
+    latinName: 'Senna alexandrina Mill.',
+    commonNames: ['Senna', 'Alexandrian Senna', 'Tinnevelly Senna', 'Sonamukhi'],
+    category: 'digestive',
+    subcategory: 'constipation-relief',
+    tags: ['Laxative', 'Constipation Relief', 'Bowel Cleansing', 'Anthraquinone', 'Short-term Use'],
+    image: '/images/Picture269.jpeg',
+    shortDescription: 'A clinically approved anthraquinone stimulant laxative acting via bacterial prodrug activation in the colon, producing reliable short-term bowel evacuation through dual motility and secretory mechanisms.',
+    description: 'Senna alexandrina contains sennosides A and B, dianthrone glycosides that pass unabsorbed through the upper GI tract. Upon reaching the colon, gut microbiota hydrolyze them to the active metabolite rheinthrone, which stimulates colonic peristalsis and modifies electrolyte transport via Na+/K+-ATPase inhibition and chloride channel opening, producing a soft bulky stool. It is indicated strictly for short-term use; chronic abuse leads to cathartic colon, electrolyte depletion, and dependency.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Sennosides A & B (Dianthrone Glycosides)', percentage: '~80% of total activity', effect: 'Key laxative prodrugs; hydrolyzed by colonic microbiota to active rheinthrone which stimulates peristalsis and modifies electrolyte secretion' },
+      { name: 'Sennosides C & D', percentage: '~20% of total activity', effect: 'Minor anthraquinone glycosides contributing to overall laxative effect' },
+      { name: 'Anthraquinone Glycosides (Dianthrones 75-80%, Anthrones 20-25%)', percentage: '', effect: 'Collectively responsible for the stimulant laxative property through bacterial prodrug activation in the colon' },
+    ],
+    moa: [
+      { title: 'Prodrug Activation by Gut Microbiota', detail: 'Sennosides are hydrophilic prodrugs that pass unabsorbed through the small intestine. Upon reaching the colon, bacterial beta-glycosidases hydrolyze them into the active metabolite rheinthrone, which then exerts its laxative effects locally.' },
+      { title: 'Intestinal Irritation and Motility Enhancement', detail: 'Rheinthrone stimulates the colonic mucosa, causing local irritation that enhances propulsive peristalsis and shortens colonic transit time, driving bowel evacuation.' },
+      { title: 'Fluid and Electrolyte Modulation', detail: 'Rheinthrone inhibits Na+/K+-ATPase and opens chloride channels in the colonic mucosa, inhibiting net water absorption and increasing secretion of water and electrolytes into the intestinal lumen, producing a soft, bulky stool.' },
+    ],
+    uses: [
+      'Short-term symptomatic relief of occasional or acute constipation',
+      'Bowel cleansing prior to colonoscopy, X-ray examinations, or surgical procedures (under medical supervision)',
+    ],
+    howToUse: [
+      { method: 'Senna Tea (Aqueous Infusion)', instruction: 'Steep 1-2 g of dried Senna leaves in 150 mL of boiling water in a covered vessel for 10-15 minutes. Do NOT boil leaves directly. Strain and optionally add ginger or peppermint as a carminative. Best taken at night before bedtime. Onset: 6-12 hours.' },
+      { method: 'Standardized Tablets / Granules', instruction: 'Take as directed on the product (typically 15-30 mg sennosides once daily at bedtime for adults). Do not exceed maximum daily dose of 30 mg hydroxyanthracene glycosides. Use only for short periods.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults and Adolescents (12+ years)', notes: '15-30 mg sennosides once daily at bedtime. Maximum: 30 mg/day. Short-term use only (maximum 1-2 weeks without medical advice).' },
+      { group: 'Children 6-12 years', notes: '7.5-15 mg sennosides once daily (half adult dose). Strictly under medical supervision only.' },
+      { group: 'Children 2-6 years', notes: '2.5-5 mg sennosides once daily. Strictly under direct medical supervision only.' },
+      { group: 'Children under 2 years', notes: 'STRICTLY CONTRAINDICATED.' },
+      { group: 'Pregnant Women', notes: 'NOT recommended. First trimester strictly avoided due to potential genotoxic risks. Only under strict medical advice if dietary/bulk-forming laxatives fail.' },
+      { group: 'Lactating Women', notes: 'Discouraged. Only negligible rheinthrone in breast milk, but risk of diarrhea or colic in infant.' },
+    ],
+    dosage: {
+      standard: 'Adults: 15-30 mg sennosides once daily at bedtime. Maximum: 30 mg hydroxyanthracene glycosides (calculated as sennoside B) per day. Onset: 6-12 hours.',
+      forms: [
+        { form: 'Senna Leaf Tea', dose: '1-2 g dried leaves steeped 10-15 min in 150 mL boiling water; taken at bedtime. Not for boiling.' },
+        { form: 'Standardized Tablets (e.g., 7.5 mg sennosides)', dose: 'Adults: 2-4 tablets at bedtime. Children 6-12: 1-2 tablets. Per product instructions.' },
+        { form: 'Granules / Syrup', dose: 'As per product concentration and age group; typically 5-10 mL for children 6-12 yrs.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Intense abdominal cramping and severe "griping" pain',
+        'Profuse watery diarrhea leading to rapid fluid and mineral loss',
+        'Electrolyte imbalance (Hypokalemia) - can trigger cardiac arrhythmias and muscle weakness',
+        'Metabolic acidosis from excessive bicarbonate loss',
+        'Chronic abuse: laxative dependency, cathartic colon (colon atony)',
+        'Theoretical risk of toxic hepatitis with prolonged abuse',
+      ],
+      management: [
+        'Immediately stop all anthraquinone-containing products',
+        'Initiate aggressive rehydration with Oral Rehydration Salts (ORS) or IV fluids',
+        'Continuous monitoring of serum electrolytes, especially potassium levels',
+        'Cardiac monitoring in patients with pre-existing cardiac conditions',
+      ],
+    },
+    sideEffects: [
+      'Abdominal pain and cramping ("griping") - most common',
+      'Diarrhea (especially at high doses or in sensitive individuals)',
+      'Electrolyte abnormalities, including hypokalemia',
+      'Melanosis Coli: benign, reversible brownish pigment discoloration of the colonic mucosa (disappears months after stopping)',
+      'Nausea and excessive bowel activity',
+      'Yellow-brown or reddish-brown urine discoloration (benign metabolite excretion)',
+    ],
+    contraindications: [
+      'Known hypersensitivity to Senna or other anthraquinone derivatives',
+      'Intestinal obstruction, ileus, or fecal impaction',
+      'Acute inflammatory bowel diseases (Crohn\'s disease, ulcerative colitis, appendicitis)',
+      'Severe dehydration or electrolyte depletion',
+      'Undiagnosed or severe abdominal pain with nausea/vomiting',
+      'Severe renal or hepatic impairment',
+      'Children under 2 years (strictly contraindicated)',
+    ],
+    drugInteractions: [
+      'Cardiac glycosides (e.g., Digoxin) and antiarrhythmics: Hypokalemia from laxative abuse potentiates toxicity - dangerous.',
+      'Potassium-depleting diuretics (e.g., Furosemide) and corticosteroids: Accelerate potassium loss, worsening hypokalemia.',
+      'Liquorice root (Glycyrrhiza glabra): Combined use drastically increases potassium loss.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Dried Senna Leaves / Tea', storage: 'Cool, dry place (15-25°C) in light-resistant, tightly sealed containers. Protect from heat, direct sunlight, and moisture.' },
+        { form: 'Tablets / Granules', storage: 'Store in original packaging away from heat and humidity. Do not store in bathrooms. Keep out of reach of children.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Senade Tablets (Mepaco Pharaonia)', image: '/images/Picture270.png' },
+      { name: 'Pursennid Tablets (Novartis / GSK)', image: '/images/Picture271.jpeg' },
+      { name: 'Agiolax Granules (Madaus / Sedico)', image: '/images/Picture272.jpeg' },
+      { name: 'Sekem Senna Tea / Royal Regime Tea', image: '/images/Picture273.jpeg' },
+    ],
+    benefits: [
+      { icon: 'medical_services', title: 'Clinically Approved Stimulant Laxative', desc: 'WHO and EMA monograph-endorsed short-term treatment for occasional or acute constipation with predictable bowel evacuation in 6-12 hours.' },
+      { icon: 'cleaning_services', title: 'Pre-procedure Bowel Cleansing', desc: 'Used under medical supervision for bowel clearance before colonoscopy, abdominal X-rays, or surgical interventions.' },
+      { icon: 'timer', title: 'Rapid and Reliable Onset', desc: 'Produces a predictable laxative effect within 6-12 hours, typically overnight when taken at bedtime.' },
+      { icon: 'science', title: 'Dual Mechanism Action', desc: 'Simultaneously stimulates colonic peristalsis (motility) and modifies electrolyte secretion into the intestinal lumen via Na+/K+-ATPase inhibition.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to northeast Africa (Egypt, Sudan) and South Asia (India). Cultivated commercially in India, Pakistan, and the Nile Valley.',
+      parts: 'Leaves (folium) and pods (fructus); leaves contain higher sennoside concentrations.',
+      history: 'Used since the 9th century in Arabic medicine; documented by Ibn Sina (Avicenna) in the Canon of Medicine. The WHO and EMA have published official herbal monographs establishing its clinical use.',
+    },
+    preparation: [
+      { method: 'Aqueous Infusion (Standard Home Use)', desc: 'Steep 1-2 g dried leaves in 150 mL boiling water in a covered vessel for 10-15 min. Strain well. Add ginger or peppermint to reduce griping.', bestFor: 'Short-term constipation relief; taken at bedtime for morning effect' },
+      { method: 'Standardized Extract (Commercial)', desc: 'Tablets and granules standardized to specific sennoside content (e.g., 7.5 mg or 12.5 mg sennoside per tablet) following EMA/WHO monograph guidelines.', bestFor: 'Precise dosing; bowel preparation for medical procedures' },
+    ],
+    symptoms: ['Constipation', 'Bowel irregularity', 'Pre-procedure bowel cleansing'],
+    warnings: [
+      'Strictly for short-term use only (maximum 1-2 weeks). Chronic use leads to dependency and cathartic colon.',
+      'NEVER use for weight loss; any weight loss is water weight and is dangerous.',
+      'Strictly contraindicated in children under 2 years old.',
+      'Contraindicated in pregnancy (especially first trimester) due to potential genotoxic anthraquinone risks.',
+      'Do NOT use in intestinal obstruction, acute abdominal pain, or inflammatory bowel disease.',
+      'Risk of dangerous hypokalemia with overuse - monitor electrolytes if used medically.',
+    ],
+    relatedPlants: ['psyllium', 'ginger', 'fennel'],
+    references: [
+      { text: 'European Medicines Agency (EMA) — Senna leaf (Sennae folium) herbal monograph.', url: 'https://www.ema.europa.eu/en/medicines/herbal/sennae-folium' },
+      { text: 'NHS — Senna: uses, dosage and side effects.', url: 'https://www.nhs.uk/medicines/senna/' },
+      { text: 'WebMD — Senna: Uses, Side Effects and Dosage.', url: 'https://www.webmd.com/vitamins/ai/ingredientmono-652/senna' },
+      { text: 'WHO — Senna monograph. In: WHO Monographs on Selected Medicinal Plants.' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════
+  // DIGESTIVE › CONSTIPATION RELIEF
+  // ══════════════════════════════════════════════════════════════════════
+
+  'psyllium': {
+    id: 'psyllium',
+    name: 'Psyllium',
+    nameAr: 'سيلليوم / إسباغول',
+    latinName: 'Plantago ovata Forssk.',
+    commonNames: ['Psyllium', 'Ispaghula', 'Blond Psyllium', 'Indian Plantain'],
+    category: 'digestive',
+    subcategory: 'constipation-relief',
+    tags: ['Bulk-forming Laxative', 'Fiber', 'IBS Relief', 'Cholesterol', 'Bowel Regulator'],
+    image: '/images/Picture274.jpeg',
+    shortDescription: 'A soluble dietary fiber functioning as a bulk-forming laxative; the seed husk absorbs up to 40× its weight in water, forming a viscous mucilaginous gel that softens stool, stimulates peristalsis, and beneficially modulates cholesterol and glycemic profiles.',
+    description: 'Psyllium (Plantago ovata) husks contain 10–30% mucilaginous heteropolysaccharides (arabinoxylans) that are exceptionally hydrophilic and resist enzymatic digestion in the upper GI tract. Upon reaching the colon, the expanded gel matrix exerts mechanical stretch on colonic mechanoreceptors, activating the myenteric reflex and stimulating peristalsis. Partial bacterial fermentation generates short-chain fatty acids (SCFAs) that nourish colonocytes. Unlike stimulant laxatives, psyllium is non-habit-forming and classified as first-line therapy for chronic constipation and IBS.',
+    history: 'Used for centuries in Ayurvedic and traditional medicine as a bowel regulator. EMA and WHO monographs establish its clinical role in constipation, IBS, and metabolic health.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Mucilage (Arabinoxylans)', percentage: '10–30% of husk weight', effect: 'High-molecular-weight heteropolysaccharides; exceptionally hydrophilic: absorb up to 40× weight in water, forming viscous gel that resists GI enzymatic degradation' },
+    ],
+    moa: [
+      { title: 'Bulk Formation & Mechanical Stretch', detail: 'Mucilage absorbs intraluminal water forming a stable hydrated gel matrix, increasing fecal bulk and softening consistency. Expanded bulk exerts mechanical radial stretch on colonic mechanoreceptors, activating the myenteric reflex and stimulating propulsive peristalsis.' },
+      { title: 'Bacterial Fermentation (SCFAs)', detail: 'Arabinoxylans undergo partial anaerobic fermentation by colonic microbiota, generating short-chain fatty acids (acetate, propionate, butyrate) that provide trophic energy to colonocytes and modulate intestinal motility.' },
+      { title: 'Cholesterol & Glycemic Modulation', detail: 'Viscous gel traps dietary cholesterol and binds bile acids in the intestinal lumen, inhibiting their enterohepatic reabsorption and upregulating hepatic LDL clearance. When taken with meals, delays gastric emptying and carbohydrate absorption, flattening postprandial glucose spikes.' },
+    ],
+    uses: [
+      'First-line phytotherapy for chronic constipation management and bowel habit correction (non-habit-forming)',
+      'Stool softening for anorectal conditions: hemorrhoids, anal fissures, post-surgical recovery',
+      'IBS (both IBS-C and alternating IBS): normalizes stool consistency and transit times',
+      'Adjunct LDL cholesterol lowering in hyperlipidemia',
+      'Glycemic control support in Type 2 Diabetes when taken with meals',
+    ],
+    howToUse: [
+      { method: 'Powder / Granules in Water', instruction: 'Mix 5–10 g (1 sachet or 1 tablespoon) in a full glass (250 mL) of cool water, milk, or juice. Stir rapidly and drink immediately before gelatinization occurs. Follow immediately with an additional full glass of water.' },
+      { method: 'Important Timing Note', instruction: 'May be taken at any time of day but NEVER immediately before bedtime (risk of esophageal or intestinal stagnation during recumbency). Take at least 30–60 minutes after any other oral medication.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults & Adolescents (>12 years)', notes: '5–10 g taken 1–3 times daily. Maximum: 30 g/day. Always with adequate fluid.' },
+      { group: 'Children (6–12 years)', notes: '2.5–5 g taken 1–2 times daily. Ensure mandatory fluid monitoring. Not for self-medication.' },
+      { group: 'Children (<6 years)', notes: 'Must be determined by a pediatrician. Generally not recommended for self-medication.' },
+      { group: 'Pregnant & Breastfeeding Women', notes: 'Category B (Safe). Preferred first-line for gestational constipation; purely mechanical/intraluminal, not systemically absorbed. Safe during lactation.' },
+    ],
+    dosage: {
+      standard: 'Adults: 5–10 g (1 sachet or tablespoon) mixed in 250 mL water, taken 1–3 times daily. Maximum: 30 g/day. Always take with adequate fluid.',
+      forms: [
+        { form: 'Effervescent Sachets (e.g., Fybogel)', dose: '1 sachet (3.5 g ispaghula husk) dissolved in 150 mL water, taken 2× daily morning and evening.' },
+        { form: 'Pure Husk Powder', dose: '5–10 g per dose in 250 mL water, 1–3× daily.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Acute intestinal obstruction, absolute constipation, painful abdominal distension, severe bloating from inadequate hydration creating dense impacted mass',
+        'Esophageal blockage if swallowed with insufficient liquid (premature swelling in esophagus)',
+        'Rare: skin rash, urticaria, bronchospasm in susceptible hypersensitivity individuals',
+      ],
+      management: [
+        'Immediate copious hydration if airway is secure and patient can swallow',
+        'Surgical or endoscopic intervention for verified structural GI blockage',
+        'Do NOT administer stimulant laxatives in obstruction',
+      ],
+    },
+    sideEffects: [
+      'Temporary flatulence, abdominal rumbling, and transient bloating during initial 3–5 days (microbial fermentation adjustment)',
+      'Risk of mechanical esophageal or intestinal obstruction strictly associated with poor hydration',
+      'Rare hypersensitivity reactions in susceptible individuals',
+    ],
+    contraindications: [
+      'Dysphagia: pre-existing swallowing difficulties, esophageal narrowing, or structural GI abnormalities',
+      'Fecal impaction: absolutely contraindicated if impacted stool is already present',
+      'Intestinal obstruction: known or suspected mechanical ileus or stenosis',
+      'Severely restricted mobility or neurological hypomotility states',
+    ],
+    drugInteractions: [
+      'All oral medications: Psyllium gel traps and reduces absorption of Lithium, Carbamazepine, Iron, Digoxin, and others. Take Psyllium 30–60 minutes AFTER any other oral medication.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Powder / Sachets', storage: 'Cool, dry place below 25°C in tightly sealed, airtight containers. Absolute protection from moisture: premature exposure initiates internal swelling and destroys therapeutic capacity.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Fybogel Effervescent Sachets (Reckitt Benckiser)', image: '/images/Picture275.jpeg' },
+      { name: 'Psyllium Husks / Pure Psyllium Powder (Mepaco Pharaonia)', image: '/images/Picture276.png' },
+    ],
+    benefits: [
+      { icon: 'favorite', title: 'First-Line Constipation Therapy', desc: 'EMA and WHO monograph-endorsed non-habit-forming bulk-forming laxative; safe for long-term use, pregnancy, and IBS management unlike stimulant laxatives.' },
+      { icon: 'bar_chart', title: 'Cholesterol & Glucose Management', desc: 'Viscous gel binds bile acids and dietary cholesterol, lowering LDL. When taken with meals, flattens postprandial glucose spikes in Type 2 Diabetes.' },
+      { icon: 'water_drop', title: 'Stool Softening & Bowel Regulation', desc: 'Absorbs up to 40× its weight in water, forming a gel that softens stool and relieves straining in hemorrhoids, anal fissures, and post-surgical patients.' },
+      { icon: 'spa', title: 'IBS Symptom Normalizer', desc: 'Normalizes stool consistency and transit times in both IBS-C and alternating IBS, reducing urgency, cramping, and discomfort.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to South Asia and the Middle East (India, Pakistan, Iran). Commercially cultivated in India (Rajasthan), accounting for ~85% of global supply.',
+      parts: 'Seed husk (tegumentum): the dried outer coating of the seed containing the therapeutic mucilage. The seed kernel itself is not used medicinally.',
+      history: 'Used for centuries in Ayurvedic medicine. EMA and WHO have published official herbal monographs establishing its clinical role in constipation, IBS, and metabolic health.',
+    },
+    preparation: [
+      { method: 'Aqueous Suspension', desc: 'Mix 5–10 g powder in 250 mL of cool water or juice, stir rapidly, and consume immediately before gelatinization. Always follow with another full glass of fluid.', bestFor: 'Chronic constipation, IBS, bowel regulation, hemorrhoid relief' },
+      { method: 'Effervescent Sachets', desc: 'Dissolve sachet in water (creates a fizzy, palatable suspension). Take 2× daily morning and evening after meals.', bestFor: 'Better compliance and palatability vs. plain powder' },
+    ],
+    symptoms: ['Constipation', 'Bowel irregularity', 'IBS symptoms', 'High cholesterol', 'Blood sugar management'],
+    warnings: [
+      'ALWAYS take with a full glass (250 mL) of water: NEVER dry or with insufficient fluid.',
+      'NEVER take immediately before bedtime: risk of esophageal obstruction in recumbent position.',
+      'Take at least 30–60 minutes after other oral medications to prevent drug absorption interference.',
+      'Absolutely contraindicated in fecal impaction and intestinal obstruction.',
+      'Children under 6 years: only under pediatric medical supervision.',
+    ],
+    relatedPlants: ['senna', 'castor', 'ginger'],
+    references: [
+      { text: 'European Medicines Agency (EMA) — Plantago ovata (psyllium husk) herbal monograph.', url: 'https://www.ema.europa.eu/en/medicines/herbal/plantaginis-ovatae-seminis-tegumentum' },
+      { text: 'ScienceDirect — Psyllium (Plantago ovata) in constipation and IBS management.', url: 'https://www.sciencedirect.com/science/article/abs/pii/S092422441830791X' },
+      { text: 'NCBI — Drugs and Lactation Database (LactMed): Psyllium.', url: 'https://www.ncbi.nlm.nih.gov/books/n/lactmed/LM471/' },
+      { text: 'PMC — Dietary fiber supplementation in pregnancy: safety and outcomes.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3418980' },
+      { text: 'Drugs.com — Plantain (Psyllium): Uses and Safety.', url: 'https://www.drugs.com/npp/plantain.html' },
+    ],
+  },
+
+  'castor': {
+    id: 'castor',
+    name: 'Castor',
+    nameAr: 'الخروع',
+    latinName: 'Ricinus communis L.',
+    commonNames: ['Castor', 'Castor Bean Oil', 'Ricinus Oil'],
+    category: 'digestive',
+    subcategory: 'constipation-relief',
+    tags: ['Stimulant Laxative', 'Purgative', 'Short-term Use', 'Castor Oil', 'Ricinoleic Acid'],
+    image: '/images/Picture277.jpeg',
+    shortDescription: 'A high-potency stimulant purgative; pancreatic lipase-activated ricinoleic acid selectively agonizes prostanoid receptors in the small intestine, triggering massive peristalsis and rapid bowel evacuation within 2–6 hours.',
+    description: 'Castor oil (fixed oil from Ricinus communis seeds) is pharmacologically inactive until hydrolyzed by pancreatic lipase in the small intestine, releasing ricinoleic acid. This unique hydroxylated fatty acid acts as a selective agonist for SEP_3 and SEP_4 prostanoid receptors on intestinal smooth muscle, mimicking prostaglandins and triggering forceful, rapid peristaltic contractions. Simultaneously inhibits Na+/K+-ATPase, increasing luminal fluid secretion. Unlike senna (which targets the colon), castor oil primarily stimulates the small intestine, producing rapid, powerful purgative action within 2–6 hours.',
+    history: 'Documented in the ancient Egyptian Ebers Papyrus (~1550 BC). Used medicinally for over 4,000 years. Today also a major pharmaceutical excipient (Cremophor EL for IV paclitaxel in cancer therapy).',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Ricinoleic Acid', percentage: '85–90% of total fatty acid content', effect: 'Active metabolite released by pancreatic lipase; selective prostanoid receptor agonist (SEP_3/SEP_4) triggering intense small-intestinal peristalsis and fluid secretion' },
+    ],
+    moa: [
+      { title: 'Enzymatic Activation (Prodrug Effect)', detail: 'Castor oil itself is pharmacologically inactive. Pancreatic lipase in the small intestine hydrolyzes triglycerides into glycerol and ricinoleic acid: the active metabolite.' },
+      { title: 'Prostanoid Receptor Agonism', detail: 'Ricinoleic acid selectively binds SEP_3 and SEP_4 prostanoid receptors on intestinal smooth muscle, mimicking natural prostaglandins. Triggers immediate, powerful muscle contractions throughout the small intestine.' },
+      { title: 'Peristalsis Stimulation & Fluid Secretion', detail: 'Causes massive, rapid peristaltic contractions primarily in the small intestine. Simultaneously inhibits Na+/K+-ATPase and stimulates luminal fluid secretion, keeping stool liquid and voluminous for rapid evacuation within 2–6 hours.' },
+    ],
+    uses: [
+      'Short-term rapid evacuation of the bowel in acute constipation',
+      'Bowel cleansing prior to colonoscopy, X-ray, proctoscopy, or surgical procedures (under medical supervision)',
+      'Labor induction (under strict hospital supervision only)',
+    ],
+    howToUse: [
+      { method: 'Oral Administration', instruction: 'Mix the prescribed dose (15–60 mL for adults) with a full glass of cold orange, lemon, or apple juice to mask the viscous texture. Chill the oil before administration. Drink at least 6–8 glasses of water throughout the day. Onset: 2–6 hours.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults & Adolescents (>12 years)', notes: '15–60 mL as a single oral dose in cold juice. Onset: 2–6 hours. Mandatory fluid intake throughout the day.' },
+      { group: 'Children (2–11 years)', notes: '5–15 mL under strict medical supervision only.' },
+      { group: 'Children (<2 years)', notes: 'STRICTLY CONTRAINDICATED: life-threatening dehydration and electrolyte imbalance risk.' },
+      { group: 'Pregnant Women', notes: 'STRICTLY CONTRAINDICATED (Category X). Ricinoleic acid stimulates uterine smooth muscle: high risk of premature labor, uterine hemorrhage, or miscarriage.' },
+      { group: 'Geriatrics (65+ years)', notes: 'Generally discouraged due to increased susceptibility to orthostatic hypotension from rapid dehydration.' },
+    ],
+    dosage: {
+      standard: 'Adults: 15–60 mL as a single oral dose mixed in cold juice. Onset: 2–6 hours. Mandatory copious hydration (6–8 glasses/day).',
+      forms: [
+        { form: 'Castor Oil (Oral)', dose: 'Adults: 15–60 mL single dose in cold juice. Children 2–11 yrs: 5–15 mL under medical supervision. Always chilled and mixed in cold citrus juice.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Severe GI distress: violent abdominal cramping, persistent vomiting, explosive watery diarrhea',
+        'Rapid dehydration: dry mucous membranes, extreme thirst, oliguria, hypotension',
+        'Electrolyte crisis: profound hypokalemia and hyponatremia → muscle weakness, tremors, confusion, dangerous cardiac arrhythmias, hypovolemic shock',
+      ],
+      management: [
+        'Immediately discontinue castor oil',
+        'ORS if conscious; aggressive IV fluids (Normal Saline or Ringer\'s Lactate) if severe vomiting',
+        'IV/oral potassium and sodium supplementation to stabilize cardiac rhythm',
+        'Hyoscine butylbromide (Buscopan) for severe intestinal cramps',
+      ],
+    },
+    sideEffects: [
+      'Severe abdominal cramping and griping from forceful peristaltic stimulation',
+      'Nausea and vomiting from heavy oily texture and unpleasant taste',
+      'Rapid dehydration from explosive watery diarrhea',
+      'Electrolyte depletion: hypokalemia and hyponatremia',
+      'Pelvic congestion: can intensify menstrual cramps or trigger uterine activity',
+      'Laxative dependency from chronic abuse: permanent myenteric plexus damage (Lazy Bowel Syndrome)',
+    ],
+    contraindications: [
+      'Pregnancy (Category X): stimulates uterine contractions → premature labor risk',
+      'Intestinal obstruction: risk of bowel perforation',
+      'Inflammatory bowel conditions: appendicitis, Crohn\'s disease, ulcerative colitis',
+      'Active menstruation: may exacerbate pelvic congestion',
+      'Children under 2 years: strictly contraindicated',
+    ],
+    drugInteractions: [
+      'All oral medications: drastically reduces bioavailability due to accelerated transit: separate other drugs by at least 2 hours.',
+      'Diuretics (e.g., Furosemide): exponentially increases risk of fluid loss and profound hypokalemia.',
+      'Cardiac glycosides (e.g., Digoxin): castor oil-induced hypokalemia → dangerous digoxin toxicity and potentially fatal arrhythmias.',
+      'Fat-soluble vitamins (A, D, E, K): chronic use impairs absorption → nutritional deficiencies.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Castor Oil', storage: 'Well-filled, tightly closed, light-resistant containers in a cool place below 25°C. Protection from direct sunlight prevents oxidation and rancidity of ricinoleic acid.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Imtenan Castor Oil (100% Natural Cold Pressed)', image: '/images/Picture278.png' },
+    ],
+    benefits: [
+      { icon: 'bolt', title: 'Rapid Powerful Evacuation', desc: 'Produces bowel evacuation within 2–6 hours via prostanoid receptor agonism in the small intestine: significantly faster than senna (6–12 h) or psyllium.' },
+      { icon: 'medical_services', title: 'Bowel Preparation Standard', desc: 'Established tool for pre-procedure bowel cleansing before colonoscopy, X-rays, and surgical interventions under medical supervision.' },
+      { icon: 'science', title: 'Dual Mechanism Action', desc: 'Ricinoleic acid simultaneously stimulates SEP_3/SEP_4 prostanoid receptors (motility) and inhibits Na+/K+-ATPase (fluid secretion) for complete, rapid evacuation.' },
+      { icon: 'warning', title: 'Strictly Short-term Only', desc: 'Chronic use causes permanent myenteric plexus damage (Lazy Bowel Syndrome). Only for acute short-term use under medical guidance: never for routine constipation or weight loss.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to tropical East Africa (Ethiopia). Widely cultivated in tropical and subtropical regions; major producers include India, China, and Brazil.',
+      parts: 'Fixed oil cold-pressed from seeds. The seed contains ricin (highly toxic protein) but this is completely absent from pharmaceutical-grade processed oil.',
+      history: 'Documented in the Egyptian Ebers Papyrus (~1550 BC). Used for 4,000+ years medicinally. Today also a major pharmaceutical excipient as Cremophor EL (IV paclitaxel solubilizer).',
+    },
+    preparation: [
+      { method: 'Cold-pressed Oil (Oral)', desc: 'Chill the oil before administration. Mix 15–60 mL in cold citrus juice and consume as a single dose. Mandatory copious hydration (6–8 glasses/day) throughout the day.', bestFor: 'Acute constipation; short-term rapid bowel evacuation; pre-procedure bowel preparation' },
+    ],
+    symptoms: ['Constipation', 'Pre-procedure bowel cleansing', 'Bowel irregularity'],
+    warnings: [
+      'STRICTLY CONTRAINDICATED in pregnancy (Category X): stimulates uterine contractions causing premature labor.',
+      'NEVER use chronically for constipation or weight loss: causes irreversible bowel nerve damage.',
+      'Strictly contraindicated in children under 2 years.',
+      'Drink 6–8 glasses of water throughout the day after taking castor oil.',
+      'Separate all other oral medications by at least 2 hours.',
+      'Do NOT use in intestinal obstruction, active inflammatory bowel disease, or appendicitis.',
+    ],
+    relatedPlants: ['senna', 'psyllium'],
+    references: [
+      { text: 'European Medicines Agency (EMA) — Ricinus communis (castor oil) herbal monograph.', url: 'https://www.ema.europa.eu/en/medicines/herbal/ricini-oleum' },
+      { text: 'PubChem — Castor Oil: compound summary and safety data.', url: 'https://pubchem.ncbi.nlm.nih.gov/compound/Castor-oil' },
+      { text: 'Healthline — Castor Oil for Constipation: Does It Work?', url: 'https://www.healthline.com/health/digestive-health/castor-oil-for-constipation' },
+      { text: 'WebMD — Castor Oil: Health Benefits, Uses and Side Effects.', url: 'https://www.webmd.com/diet/castor-oil-health-benefits' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════
+  // DIGESTIVE › DIARRHEA SUPPORT
+  // ══════════════════════════════════════════════════════════════════════
+
+  'peppermint': {
+    id: 'peppermint',
+    name: 'Peppermint',
+    nameAr: 'النعناع الفلفلي',
+    latinName: 'Mentha × piperita L.',
+    commonNames: ['Peppermint', 'Brandy Mint', 'Balm Mint'],
+    category: 'digestive',
+    subcategory: 'diarrhea-support',
+    tags: ['Antispasmodic', 'IBS Relief', 'Carminative', 'Antidiarrheal', 'Menthol'],
+    image: '/images/Picture279.jpg',
+    shortDescription: 'A clinically validated antispasmodic phytotherapy for IBS and functional bowel disorders; menthol acts as a natural L-type calcium channel blocker, resolving GI smooth muscle hypermotility and visceral pain.',
+    description: 'Peppermint (Mentha × piperita) is a sterile hybrid combining menthol (30–55%) as its primary antispasmodic through L-type Ca²⁺ channel blockade, plus TRPM8 cold receptor activation for visceral analgesia. Rosmarinic acid and flavonoids (luteolin, apigenin) provide anti-inflammatory and gastroprotective support. Enteric-coated capsules deliver active menthol directly to the intestine, bypassing the stomach to avoid LES relaxation and GERD. Established by EMA and WHO as a validated phytotherapy for IBS and functional GI spasms.',
+    history: 'A sterile hybrid of Mentha aquatica and Mentha spicata cultivated since the 18th century. EMA, WHO, and ESCOP have published monographs confirming its therapeutic role in IBS and GI disorders.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Menthol (30–55%)', percentage: '30–55% of volatile oil', effect: 'L-type Ca²⁺ channel blocker in intestinal smooth muscle (antispasmodic); TRPM8 cold receptor agonist (visceral analgesia); primary active principle' },
+      { name: 'Menthone (14–32%)', percentage: '14–32%', effect: 'Precursor ketone synergizing with menthol in antispasmodic action' },
+      { name: 'Menthofuran (1–9%)', percentage: '1–9%', effect: 'Minor component; potential hepatotoxin at high concentrations: must be monitored' },
+      { name: 'Rosmarinic Acid & Flavonoids (Luteolin, Apigenin, Eriocitrin)', percentage: '', effect: 'Anti-inflammatory, gastroprotective, and systemic antioxidant actions' },
+    ],
+    moa: [
+      { title: 'Calcium Channel Antagonism (Antispasmodic)', detail: 'Menthol acts as a natural voltage-gated L-type calcium channel blocker in intestinal smooth muscle. Inhibits extracellular Ca²⁺ influx, preventing sustained contractions, resolving GI spasms, hypermotility, and excessive bowel movements.' },
+      { title: 'TRPM8 Receptor Activation (Visceral Analgesia)', detail: 'Menthol selectively activates TRPM8 cold receptors in GI afferent nerve fibers, eliciting a local cooling and desensitizing effect, inducing mild analgesia over hyperalgesic visceral walls.' },
+      { title: 'Carminative & Surface Tension Reduction', detail: 'Relaxes the lower esophageal sphincter (LES), facilitating expulsion of trapped gas, rapidly mitigating flatulence, bloating, and epigastric tension.' },
+      { title: 'Antimicrobial & Anti-inflammatory', detail: 'Direct bacteriostatic efficacy against standard GI pathogens; inhibits local pro-inflammatory eicosanoid cascades by suppressing leukotriene and prostaglandin production.' },
+    ],
+    uses: [
+      'Symptomatic relief of IBS: diarrhea, alternating bowel habits, visceral hypersensitivity',
+      'Management of GI spasms, abdominal tension, flatulence, and functional dyspepsia',
+      'Supportive alleviation of nausea and mild morning/travel sickness',
+    ],
+    howToUse: [
+      { method: 'Enteric-Coated Oil Capsules', instruction: 'Take 0.2–0.4 mL (180–360 mg) 3× daily, 30–60 minutes before meals. MUST be enteric-coated: swallow whole, never crush or chew.' },
+      { method: 'Peppermint Tea (Aqueous Infusion)', instruction: 'Steep 1.5–3 g dried leaves in 150 mL boiling water in a covered vessel for 5–10 minutes (covering preserves volatile menthol). Drink warm 2–3 times daily.' },
+      { method: 'Fluid Extract (1:1 in 45% ethanol)', instruction: '1–3 mL administered 3 times daily.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Highly safe and well-tolerated at therapeutic doses.' },
+      { group: 'Children (<4 years)', notes: 'Pure peppermint oil STRICTLY CONTRAINDICATED: menthol near nasal mucosa can trigger fatal laryngeal/bronchial spasms and respiratory arrest.' },
+      { group: 'Children (>4 years)', notes: 'Mild aqueous infusions (tea) generally safe. Avoid concentrated oil products.' },
+      { group: 'Pregnant & Breastfeeding Women', notes: 'Food-grade tea usage considered safe. High therapeutic doses of concentrated essential oils AVOIDED due to potential emmenagogue actions.' },
+      { group: 'Geriatrics', notes: 'Safe, but requires clinical profiling due to higher prevalence of hiatal hernia or GERD.' },
+    ],
+    dosage: {
+      standard: 'Enteric-coated capsules: 0.2–0.4 mL (180–360 mg) 3× daily, 30–60 min before meals. Tea: 1.5–3 g dried leaves steeped 5–10 min (covered), 2–3× daily.',
+      forms: [
+        { form: 'Enteric-Coated Capsules', dose: '0.2–0.4 mL (180–360 mg) 3× daily, 30–60 min before meals. Swallow whole: never crush.' },
+        { form: 'Peppermint Tea', dose: '1.5–3 g dried leaves in 150 mL boiling water (covered), 5–10 min steep. 2–3× daily.' },
+        { form: 'Fluid Extract', dose: '1–3 mL in 45% ethanol, 3× daily.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Severe GI erosion, hematuria, skin rashes from high-dose non-enteric oil',
+        'CNS depression: dizziness, confusion, ataxia, bradycardia, respiratory depression',
+        'Extreme toxicity: epileptiform seizures',
+      ],
+      management: [
+        'Discontinue immediately. Aggressive supportive and symptomatic therapy.',
+        'Maintain clear airways and hemodynamics.',
+        'Monitor renal and hepatic profiles if systemic absorption is extensive.',
+      ],
+    },
+    sideEffects: [
+      'Heartburn and GERD worsening from LES relaxation (use enteric-coated form to minimize)',
+      'Perianal burning sensation from residual menthol in stool',
+      'Rare allergic reactions in menthol-sensitive individuals',
+    ],
+    contraindications: [
+      'Known hypersensitivity to Mentha × piperita or menthol',
+      'Severe GERD and hiatal hernia: peppermint oil relaxes LES, markedly worsening acid reflux',
+      'Biliary obstruction and cholecystitis: strong choleretic/cholagogue activity triggers biliary colic in gallstone patients',
+      'Severe hepatic impairment: monoterpene metabolic load',
+      'Infants and children under 4 years: pure oil strictly contraindicated',
+    ],
+    drugInteractions: [
+      'Antacids, H2-blockers, PPIs (e.g., Omeprazole): raise gastric pH → premature dissolution of enteric coating → severe heartburn. Separate by at least 2 hours.',
+      'CYP3A4 substrates (e.g., Cyclosporine, Felodipine): moderate CYP3A4 inhibition may elevate plasma concentrations of narrow-TI drugs.',
+      'CNS depressants: additive sedation with high-dose menthol formulations.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Dry Leaves', storage: 'Airtight, moisture-resistant, light-resistant containers below 25°C.' },
+        { form: 'Enteric-Coated Capsules', storage: 'Original packaging below 25°C, away from moisture and heat.' },
+        { form: 'Volatile Oil Products', storage: 'Hermetically sealed to prevent evaporation and compositional oxidation.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Colpermin Capsules (Enteric-coated Peppermint oil 187 mg)', image: '/images/Picture280.jpeg' },
+      { name: 'IBgard Capsules (Sustained-release peppermint oil microspheres)', image: '/images/Picture281.jpg' },
+    ],
+    benefits: [
+      { icon: 'spa', title: 'Gold Standard for IBS', desc: 'Multiple meta-analyses confirm peppermint oil capsules significantly reduce IBS pain, stool frequency, and urgency: endorsed by EMA as validated phytotherapy.' },
+      { icon: 'air', title: 'Natural GI Smooth Muscle Relaxant', desc: 'Menthol\'s L-type Ca²⁺ channel blockade resolves painful intestinal spasms and hypermotility without habit formation.' },
+      { icon: 'thermostat', title: 'Visceral Analgesia via TRPM8', desc: 'TRPM8 cold receptor activation in GI afferent nerves induces cooling analgesia, desensitizing hyperalgesic visceral walls and reducing chronic gut pain.' },
+      { icon: 'bubble_chart', title: 'Rapid Gas Relief', desc: 'Carminative action mitigates flatulence, painful bloating, and epigastric tension by relaxing the LES and facilitating gas expulsion.' },
+    ],
+    botanicalFacts: {
+      origin: 'A sterile hybrid (Mentha aquatica × Mentha spicata) propagated entirely by vegetative cuttings. Commercial cultivation centered in the USA, India, and Europe.',
+      parts: 'Leaf (Folium Menthae Piperitae) and volatile essential oil (Aetheroleum Menthae Piperitae) distilled from leaves and flowering tops.',
+      history: 'Cultivated medicinally since at least the 18th century. EMA, WHO, and ESCOP monographs confirm its role in IBS, GI spasms, and functional dyspepsia.',
+    },
+    preparation: [
+      { method: 'Enteric-Coated Capsule', desc: 'Pharmaceutical-grade capsule standardized to peppermint oil content. Delivers menthol to the small intestine and colon while bypassing the stomach.', bestFor: 'IBS; GI spasms; functional diarrhea' },
+      { method: 'Aqueous Infusion (Tea)', desc: 'Steep 1.5–3 g dried leaves in 150 mL boiling water in a COVERED vessel for 5–10 minutes. Covering is essential to preserve volatile menthol.', bestFor: 'Mild GI discomfort, nausea, flatulence, bloating' },
+    ],
+    symptoms: ['Diarrhea', 'IBS symptoms', 'Abdominal cramps', 'Flatulence', 'Nausea', 'Bloating'],
+    warnings: [
+      'NEVER crush or chew enteric-coated capsules: releases menthol in stomach causing severe heartburn.',
+      'DO NOT use if you have GERD, hiatal hernia, or active gallbladder/gallstone problems.',
+      'Pure peppermint essential oil is STRICTLY CONTRAINDICATED in infants and children under 4 years.',
+      'Separate from antacids and PPIs by at least 2 hours.',
+    ],
+    relatedPlants: ['chamomile', 'ginger', 'fennel'],
+    references: [
+      { text: 'European Medicines Agency (EMA). (2020). European Union herbal monograph on Mentha x piperita L., folium. Committee on Herbal Medicinal Products (HMPC).' },
+      { text: 'World Health Organization (WHO). (2002). WHO Monographs on Selected Medicinal Plants (Vol. 2): Folium Menthae Piperitae. Geneva.' },
+      { text: 'Grigoleit, H. G., & Grigoleit, P. (2005). Peppermint oil in irritable bowel syndrome. Phytomedicine, 12(8), 601–606.' },
+      { text: 'Khanna, R., MacDonald, J. K., & Levesque, B. G. (2014). Peppermint oil for the treatment of irritable bowel syndrome: a systematic review and meta-analysis. Journal of Clinical Gastroenterology, 48(6), 505–512.' },
+      { text: 'PMC — Safety and efficacy of peppermint in pregnancy and lactation.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5960050' },
+      { text: 'NCBI — Drugs and Lactation Database (LactMed): Peppermint.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK501851' },
+      { text: 'Egyptian Drug Authority — Peppermint (Mentha piperita) monograph.', url: 'https://share.google/TShXvkd9DL6CFAZ5T' },
+    ],
+  },
+
+  'chamomile': {
+    id: 'chamomile',
+    name: 'Chamomile',
+    nameAr: 'البابونج',
+    latinName: 'Matricaria chamomilla L.',
+    commonNames: ['Chamomile', 'German Chamomile', 'Matricaria flower'],
+    category: 'digestive',
+    subcategory: 'diarrhea-support',
+    tags: ['Antispasmodic', 'Anti-inflammatory', 'Carminative', 'Anxiolytic', 'GI Soother'],
+    image: '/images/Picture284.jpeg',
+    shortDescription: 'A gentle multi-action botanical for GI inflammatory and spastic disorders; chamazulene and apigenin synergistically inhibit COX/5-LOX pathways and act on GABA-A receptors, producing antispasmodic, anti-inflammatory, and mild sedative effects.',
+    description: 'German chamomile (Matricaria chamomilla) contains chamazulene and α-bisabolol (volatile oil) alongside apigenin-7-glucoside (hydrophilic flavonoid) and herniarin/umbelliferone (coumarins). Chamazulene and bisabolol are potent COX/5-LOX inhibitors reducing pro-inflammatory prostaglandins and leukotrienes. Apigenin binds GABA-A benzodiazepine receptors, delivering mild sedation and reducing psychosomatic GI distress. Synergistic calcium channel blockade and phosphodiesterase inhibition resolve smooth muscle hyperreactivity. EMA herbal monograph established for mild GI spasms, gastritis, and IBS.',
+    history: 'One of the oldest-known herbal medicines, used by ancient Egyptians, Greeks, and Romans. EMA, WHO, and ESCOP monographs confirm its clinical use in GI spasms, gastritis, and psychosomatic digestive disorders.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Chamazulene', percentage: 'Formed from matricin during distillation', effect: 'COX and 5-LOX inhibitor; powerful anti-inflammatory; characteristic deep blue color of distilled chamomile oil' },
+      { name: 'α-Bisabolol & Bisabolol Oxides', percentage: '', effect: 'Antispasmodic, anti-inflammatory, and antimicrobial; promotes mucosal healing and ulceration recovery' },
+      { name: 'Apigenin-7-glucoside (Flavone)', percentage: 'Predominant hydrophilic flavonoid', effect: 'Competitive GABA-A benzodiazepine receptor ligand; mild sedation and anxiolytic; spasmolytic via Ca²⁺ channel blockade and PDE inhibition' },
+      { name: 'Coumarins (Umbelliferone, Herniarin)', percentage: '', effect: 'Secondary smooth muscle relaxation; monitor in patients on anticoagulants' },
+    ],
+    moa: [
+      { title: 'COX/5-LOX Inhibition (Anti-inflammatory)', detail: 'Chamazulene and α-bisabolol directly inhibit cyclooxygenase (COX) and 5-lipoxygenase (5-LOX) pathways, significantly reducing synthesis of pro-inflammatory prostaglandins and leukotrienes, mitigating intestinal mucosal irritation and edema.' },
+      { title: 'Antispasmodic via Ca²⁺ & PDE Inhibition', detail: 'Apigenin and bisabolol synergistically block voltage-dependent calcium channels and inhibit intracellular cyclic nucleotide phosphodiesterases, effectively resolving smooth muscle hyperreactivity, abdominal cramping, and bloating.' },
+      { title: 'GABA-A Receptor Agonism (Sedative/Anxiolytic)', detail: 'Apigenin acts as a competitive ligand for central GABA-A benzodiazepine receptors, inducing mild sedation and reducing psychosomatic GI distress in stress-induced bowel disorders.' },
+      { title: 'Mucosal Soothing & Antimicrobial', detail: 'Bacteriostatic action against common GI pathogens; local demulcent effect over gastric and intestinal mucosa, accelerating healing of ulcerations.' },
+    ],
+    uses: [
+      'Symptomatic relief of mild diarrhea, gastritis, dyspepsia, flatulence, and bloating',
+      'Management of GI smooth muscle spasms and painful abdominal cramps',
+      'Supportive treatment of psychosomatic GI distress, mild insomnia, and anxiety',
+    ],
+    howToUse: [
+      { method: 'Chamomile Tea (Aqueous Infusion)', instruction: 'Steep 2–3 g of dried flower heads in 150–250 mL boiling water in a covered vessel for 5–10 minutes (covering prevents loss of volatile oils, particularly chamazulene). Take 3–4 times daily between meals.' },
+      { method: 'Standardized Capsules / Extracts', instruction: '200–500 mg taken 2–3 times per day, standardized to apigenin or volatile oil content.' },
+      { method: 'Fluid Extract (1:1 in 45% ethanol)', instruction: '1–4 mL diluted in warm water, 3 times daily.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Generally safe and highly tolerated at therapeutic guidelines.' },
+      { group: 'Infants (<6 months)', notes: 'Must be under strict medical supervision only.' },
+      { group: 'Children', notes: 'Very mild, well-diluted aqueous infusions safe for infantile colic and mild GI discomfort: under medical supervision.' },
+      { group: 'Pregnant & Breastfeeding Women', notes: 'Standard culinary tea doses generally safe. High therapeutic doses or concentrated extracts AVOIDED due to theoretical uterine stimulation risks.' },
+      { group: 'Geriatrics', notes: 'Safe at standard doses with close monitoring in multi-morbidity patients.' },
+    ],
+    dosage: {
+      standard: 'Tea: 2–3 g dried flowers steeped 5–10 min (covered) in 150–250 mL water, 3–4× daily between meals. Capsules: 200–500 mg standardized, 2–3× daily.',
+      forms: [
+        { form: 'Chamomile Tea', dose: '2–3 g dried flowers steeped 5–10 min (covered) in 150–250 mL water. 3–4× daily between meals.' },
+        { form: 'Standardized Capsules', dose: '200–500 mg 2–3× daily, standardized to apigenin content.' },
+        { form: 'Fluid Extract', dose: '1–4 mL in 45% ethanol, 3× daily, diluted in warm water.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Severe nausea, vomiting, dizziness from concentrated extracts',
+        'Excessive drowsiness and generalized neuromuscular relaxation from GABAergic potentiation',
+      ],
+      management: [
+        'Discontinue immediately. Maintain adequate hydration.',
+        'Symptomatic and supportive treatment if severe symptoms persist.',
+      ],
+    },
+    sideEffects: [
+      'Rare allergic reactions in Asteraceae-sensitive individuals (cross-reactivity with ragweed, daisies, chrysanthemums, marigolds)',
+      'Mild drowsiness at high doses from GABAergic effect',
+    ],
+    contraindications: [
+      'Known hypersensitivity to Matricaria chamomilla or any Asteraceae/Compositae plant (ragweed, marigolds, chrysanthemums, daisies): anaphylaxis risk',
+      'Severe atopic asthma: avoid inhalation or high-dose consumption without medical clearance',
+    ],
+    drugInteractions: [
+      'Anticoagulants (Warfarin, Aspirin, Clopidogrel): coumarin content + antiplatelet activity may potentiate bleeding risk. Monitor PT/INR.',
+      'CNS depressants (Benzodiazepines, Alcohol, Opioids): additive sedation from apigenin\'s GABAergic binding.',
+      'CYP3A4 substrates: in vitro CYP3A4 inhibition: caution with narrow therapeutic index drugs.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Dried Flower Heads / Standardized Formulations', storage: 'Tightly sealed, airtight, light-resistant containers below 25°C. Prevent moisture absorption, volatile oil volatilization, and photodegradation of chamazulene.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Sekem Chamomile Tea (أعشاب سيكم بابونج)', image: '/images/Picture283.jpeg' },
+      { name: 'Kamillosan Liquid (Chamomile extract for GI and topical use)', image: '/images/Picture282.jpeg' },
+    ],
+    benefits: [
+      { icon: 'spa', title: 'Gentle GI Anti-inflammatory', desc: 'Chamazulene and bisabolol inhibit both COX and 5-LOX pathways, reducing mucosal inflammation in gastritis, IBS, and mild diarrhea: without the GI side effects of NSAIDs.' },
+      { icon: 'self_improvement', title: 'GABA-A Anxiolytic for Gut-Brain Axis', desc: 'Apigenin\'s GABA-A receptor binding calms psychosomatic GI distress and anxiety, addressing the gut-brain connection in stress-induced bowel disorders.' },
+      { icon: 'healing', title: 'Mucosal Healing & Demulcent', desc: 'α-Bisabolol soothes and accelerates healing of gastric and intestinal ulcerations, protecting the mucosal lining during acute GI inflammation.' },
+      { icon: 'local_florist', title: 'Infantile Colic Relief', desc: 'Mild chamomile infusions have clinical evidence for safely reducing infantile colic symptoms through GI smooth muscle relaxation.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to Europe and temperate Asia. Widely naturalized across North America. Major commercial cultivation in Germany, Hungary, Egypt, and Argentina.',
+      parts: 'Dried flower heads (anthodium/flos): the blue chamazulene is only released during steam distillation (formed from matricin): not present in this form in the whole plant.',
+      history: 'Used by ancient Egyptians (dedicated to Ra), Greeks, and Romans for digestive ailments. One of the most widely consumed herbal teas globally. EMA, WHO, and ESCOP have published clinical monographs.',
+    },
+    preparation: [
+      { method: 'Aqueous Infusion (Tea)', desc: 'Steep 2–3 g dried flower heads in 150–250 mL boiling water in a COVERED vessel for 5–10 minutes. Covering is critical to prevent loss of volatile chamazulene.', bestFor: 'Mild diarrhea, GI spasms, gastritis, flatulence, infantile colic, mild insomnia' },
+      { method: 'Standardized Capsule Extract', desc: 'Pharmaceutical-grade capsules standardized to apigenin content for consistent therapeutic outcomes.', bestFor: 'IBS, anxiety-associated GI distress, precise dosing' },
+    ],
+    symptoms: ['Diarrhea', 'IBS symptoms', 'Abdominal cramps', 'Flatulence', 'Bloating', 'Gastritis', 'Mild insomnia'],
+    warnings: [
+      'If allergic to ragweed, daisies, chrysanthemums, or marigolds: DO NOT use chamomile (cross-reactivity, anaphylaxis risk).',
+      'High doses of concentrated extracts AVOIDED in pregnancy.',
+      'Separate from anticoagulants and monitor bleeding risk if used with blood thinners.',
+      'Infants under 6 months: only under strict medical supervision.',
+    ],
+    relatedPlants: ['peppermint', 'ginger', 'fennel'],
+    references: [
+      { text: 'European Medicines Agency (EMA). (2015). European Union herbal monograph on Matricaria recutita L., flos. Committee on Herbal Medicinal Products (HMPC).' },
+      { text: 'World Health Organization (WHO). (1999). WHO Monographs on Selected Medicinal Plants (Vol. 1): Flos Chamomillae. Geneva.' },
+      { text: 'Srivastava, J. K., Shankar, E., & Gupta, S. (2010). Chamomile: A herbal medicine of the past with bright future. Molecular Medicine Reports, 3(6), 895–901.' },
+      { text: 'Amsterdam, J. D., Li, Y., Soeller, I., Rockwell, K., Shults, J., & Mao, J. J. (2009). A randomized, double-blind, placebo-controlled trial of oral Matricaria recutita extract therapy for generalized anxiety disorder. Journal of Clinical Psychopharmacology, 29(4), 378–382.' },
+      { text: 'NCCIH — Chamomile: What You Need To Know.', url: 'https://www.nccih.nih.gov/health/chamomile' },
+      { text: 'PubMed — Chamomile: therapeutic potential and pharmacological review.', url: 'https://pubmed.ncbi.nlm.nih.gov/16635985/' },
+      { text: 'Mount Sinai Health Library — Chamomile.', url: 'https://www.mountsinai.org/health-library/herb/chamomile' },
+    ],
+  },
+
+  'turmeric': {
+    id: 'turmeric',
+    name: 'Turmeric',
+    latinName: 'Curcuma longa L.',
+    category: 'immunity',
+    subcategory: 'anti-inflammatory',
+    tags: ['Anti-inflammatory', 'Antioxidant', 'Joint Health', 'Curcumin', 'Hepatoprotective'],
+    image: '/images/Picture285.jpeg',
+    images: ['/images/Picture285.jpeg'],
+    shortDescription: 'Golden rhizome with multi-pathway anti-inflammatory action via NF-κB, COX-2, and 5-LOX inhibition.',
+    description: 'Turmeric (Curcuma longa) belongs to the Zingiberaceae family. Its dried rhizome contains curcuminoids (3–5%), principally curcumin, which drives potent anti-inflammatory, antioxidant, and hepatoprotective effects. Bioavailability requires co-administration with piperine (black pepper) for a 2000% increase in absorption.',
+    symptoms: ['Joint pain', 'Chronic inflammation', 'Arthritis', 'Digestive discomfort', 'Liver support'],
+    warnings: [
+      'Discontinue ≥14 days before surgery: anti-platelet and mild fibrinolytic properties.',
+      'Contraindicated with active bile duct obstruction or severe gallstones.',
+      'Do not combine with anticoagulants (Warfarin, Heparin, Clopidogrel, Aspirin) without INR monitoring.',
+      'Pregnant women: culinary amounts safe; therapeutic extracts STRICTLY CONTRAINDICATED.',
+    ],
+    activeConstituents: [
+      { name: 'Curcuminoids (3–5%)', detail: 'Curcumin (77%), demethoxycurcumin (17%), bisdemethoxycurcumin (3%): lipophilic polyphenolic pigments responsible for anti-inflammatory and antioxidant activity.' },
+      { name: 'Volatile Essential Oils (3–7%)', detail: 'ar-Turmerone, alpha-turmerone, beta-turmerone, curlone, zingiberene: contribute anti-inflammatory and antimicrobial actions.' },
+    ],
+    moa: [
+      { title: 'NF-κB Inhibition', detail: 'Curcumin downregulates Nuclear Factor-kappa B (NF-κB), blocking pro-inflammatory cytokines TNF-α, IL-1, and IL-6.' },
+      { title: 'COX-2 & 5-LOX Dual Inhibition', detail: 'Suppresses both cyclooxygenase-2 and 5-lipoxygenase, reducing prostaglandin and leukotriene synthesis without gastric toxicity.' },
+      { title: 'Antioxidant: Direct Scavenging & Enzyme Upregulation', detail: 'Directly neutralizes ROS/RNS via phenolic groups; also upregulates endogenous SOD, CAT, and GPx antioxidant enzymes.' },
+      { title: 'Hepatoprotective & Choleretic', detail: 'Enhances hepatic bile synthesis via cholecystokinin-mediated pathways, accelerating lipid clearance and detoxification.' },
+    ],
+    uses: [
+      'Osteoarthritis and rheumatoid arthritis: relieves joint pain and swelling',
+      'Digestive support: dyspepsia, functional bloating, NAFLD/MASLD',
+      'Immunomodulation and cardiovascular protection via inflammatory marker reduction',
+      'Topical adjunct for inflammatory skin conditions (acne, psoriasis)',
+    ],
+    howToUse: [
+      { method: 'Powdered Rhizome (with Piperine)', instruction: '1–3 g daily with food. Pair with black pepper (piperine) to increase bioavailability by up to 2000%; co-ingestion with dietary fats also improves absorption.' },
+      { method: 'Standardized Extract Capsules', instruction: '500–1500 mg daily of extract standardized to 95% curcuminoids, taken with food and piperine for maximum absorption.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Highly recommended, especially for chronic joint conditions and metabolic syndrome.' },
+      { group: 'Elderly', notes: 'Beneficial for geriatric arthritis; reduces reliance on NSAIDs. Monitor renal function.' },
+      { group: 'Pregnant Women', notes: 'Culinary amounts safe. Concentrated therapeutic extracts STRICTLY CONTRAINDICATED.' },
+      { group: 'Children', notes: 'Safe in dietary quantities; medicinal supplementation not recommended without supervision.' },
+    ],
+    dosage: {
+      standard: 'Powdered rhizome: 1–3 g/day with food and piperine. Standardized extract (95% curcuminoids): 500–1500 mg/day.',
+      forms: [
+        { form: 'Powdered Rhizome', dose: '1–3 g daily with food and black pepper.' },
+        { form: 'Standardized Extract Capsules (95% curcuminoids)', dose: '500–1500 mg daily, with piperine and food.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Chronic >8–12 g curcumin/day: severe GI irritation, diarrhea, nausea, epigastric distress',
+        'Elevated risk of nephrolithiasis (calcium oxalate kidney stones) due to high oxalate content',
+      ],
+      management: [
+        'Cease supplements immediately. Vigorous hydration to prevent oxalate crystallization.',
+        'Anti-emetics or PPIs for gastric burning. Renal function monitoring if renal concerns exist.',
+      ],
+    },
+    sideEffects: [
+      'Epigastric discomfort, mild bloating, nausea, diarrhea at high doses',
+      'Transient dizziness or mild headaches at high therapeutic ranges',
+      'Allergic contact dermatitis or temporary yellow skin discoloration (topical use)',
+    ],
+    contraindications: [
+      'Biliary obstruction or active cholelithiasis: potent cholagogue action can trigger severe gallbladder contractions',
+      'Perioperative: discontinue ≥14 days before surgery (anti-platelet, mild fibrinolytic properties)',
+      'Anticoagulants and antiplatelets: synergistic bleeding risk',
+    ],
+    drugInteractions: [
+      'Anticoagulants / Antiplatelets (Warfarin, Heparin, Clopidogrel, Aspirin, DOACs): synergistic hemorrhage risk: INR monitoring mandatory.',
+      'Chemotherapeutic agents: P-gp and CYP3A4 competition may alter narrow-TI drug concentrations.',
+      'Antidiabetic agents: may enhance glucose-lowering effect: blood glucose monitoring recommended.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Powder & Extract Capsules', storage: 'Airtight, light-resistant containers (amber glass/HDPE) in cool, dry environment (15–25°C). Curcumin is highly photosensitive: protect from direct UV light.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Curcumin Capsules 500mg (Mepaco Pharaonia)', image: '/images/Picture286.jpg' },
+      { name: 'Turmeric Extract Capsules (Imtenan Health Shop)', image: '/images/Picture287.png' },
+    ],
+    benefits: [
+      { icon: 'healing', title: 'Multi-Pathway Anti-Inflammatory', desc: 'Curcumin simultaneously blocks NF-κB, COX-2, and 5-LOX: the three main inflammatory highways: reducing both prostaglandin and cytokine output without the GI side effects of NSAIDs.' },
+      { icon: 'shield', title: 'Potent Dual Antioxidant', desc: 'Directly scavenges ROS/RNS while also upregulating the body\'s own antioxidant enzymes (SOD, CAT, GPx), providing amplified cellular protection.' },
+      { icon: 'self_improvement', title: 'Joint Health & Arthritis Relief', desc: 'Evidence-based supportive phytotherapy for osteoarthritis and rheumatoid arthritis, reducing joint pain and swelling with a superior GI safety profile compared to NSAIDs.' },
+      { icon: 'local_pharmacy', title: 'Hepatoprotective & Choleretic', desc: 'Enhances bile synthesis and gallbladder function via cholecystokinin pathways, supporting liver detoxification and fat metabolism.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to South and Southeast Asia. India produces over 75% of global supply. Major cultivation in Tamil Nadu, Andhra Pradesh, and Orissa.',
+      parts: 'Dried rhizome (Rhizoma Curcumae Longae): ground into bright orange-yellow powder. Fresh rhizomes also used in cooking.',
+      history: 'Used for over 4,000 years in Ayurvedic and Chinese medicine. The bioavailability challenge was solved in 1998 with the discovery of piperine\'s 2000% enhancement. Featured in WHO and EMA monographs.',
+    },
+    preparation: [
+      { method: 'Golden Milk (Turmeric Latte)', desc: 'Mix 1 tsp turmeric + pinch of black pepper + 250 mL warm milk + honey. Fat and piperine together optimize curcumin absorption.', bestFor: 'Daily anti-inflammatory support, joint health' },
+      { method: 'Standardized Capsule Extract', desc: 'Pharmaceutical-grade capsules standardized to 95% curcuminoids, co-formulated with BioPerine (piperine) for maximum bioavailability.', bestFor: 'Osteoarthritis, rheumatoid arthritis, therapeutic dosing' },
+    ],
+    relatedPlants: ['ginger', 'black-seed', 'rosemary'],
+    references: [
+      { text: 'World Health Organization (WHO). WHO Monographs on Selected Medicinal Plants, Volume 2: Rhizoma Curcumae Longae. Geneva.' },
+      { text: 'Aggarwal, B. B., et al. (2009). Potential therapeutic effects of curcumin, the principal of turmeric, in patients with inflammatory bowel disease, hyperlipidemia, and osteoarthritis. Alternative Therapies in Health and Medicine, 15(5), 44–53.' },
+      { text: 'Hewlings, S. J., & Kalman, D. S. (2017). Curcumin: A Review of Its Effects on Human Health. Foods, 6(10), 92.' },
+      { text: 'Shoba, G., et al. (1998). Influence of piperine on the pharmacokinetics of curcumin in animals and human volunteers. Planta Medica, 64(4), 353–356.' },
+    ],
+  },
+
+  'clove': {
+    id: 'clove',
+    name: 'Clove',
+    latinName: 'Syzygium aromaticum (L.) Merr. & L.M.Perry',
+    category: 'uti',
+    subcategory: 'anti-septic',
+    tags: ['Antiseptic', 'Antimicrobial', 'Eugenol', 'Dental Health', 'Antifungal'],
+    image: '/images/Picture288.jpeg',
+    images: ['/images/Picture288.jpeg'],
+    shortDescription: 'Aromatic flower buds rich in eugenol (70–90%) with potent cell-membrane-disrupting antiseptic activity.',
+    description: 'Clove (Syzygium aromaticum) belongs to the Myrtaceae family. Its dried flower buds contain eugenol as the dominant active compound (70–90% of essential oil), providing broad-spectrum antimicrobial, local anesthetic, and anti-inflammatory properties. Widely used in dentistry, oral antisepsis, and food preservation.',
+    symptoms: ['Oral infections', 'Toothache', 'Gum inflammation', 'Minor wounds', 'Fungal infection'],
+    warnings: [
+      'Never apply undiluted clove oil directly to skin or mucous membranes: causes severe chemical burns.',
+      'Do not ingest concentrated clove oil: eugenol is hepatotoxic in high doses.',
+      'Children under 2 years: do not apply topically or orally.',
+      'Discontinue 2 weeks before surgery: eugenol inhibits blood clotting.',
+    ],
+    activeConstituents: [
+      { name: 'Eugenol (70–90% of essential oil)', detail: 'Primary phenolic compound responsible for antimicrobial, local anesthetic, anti-inflammatory, and mild analgesic effects.' },
+      { name: 'Eugenol Acetate, β-Caryophyllene, α-Humulene', detail: 'Secondary sesquiterpenes contributing antimicrobial and anti-inflammatory activity.' },
+    ],
+    moa: [
+      { title: 'Cell Membrane Disruption', detail: 'The hydroxyl group (-OH) of eugenol disrupts bacterial lipid bilayers, increasing membrane permeability and causing leakage of vital intracellular materials.' },
+      { title: 'Protein & Enzyme Inhibition', detail: 'Eugenol penetrates microbial cells and inhibits protein and DNA synthesis, preventing multiplication.' },
+      { title: 'Biofilm Prevention', detail: 'Blocks formation of bacterial biofilms, effective against dental plaque-forming pathogens.' },
+    ],
+    uses: [
+      'Dental antiseptic and topical analgesic for toothaches and sore gums',
+      'Oral antibacterial mouthwash to control cavity-causing bacteria and oral ulcers',
+      'Topical antiseptic for minor skin wounds and scrapes (always diluted in carrier oil)',
+      'Digestive aid: reduces bloating, indigestion, and nausea',
+    ],
+    howToUse: [
+      { method: 'Antiseptic Mouthwash (Infusion)', instruction: 'Boil a cup of water, steep 5–6 whole cloves until cool, strain and use as antibacterial mouthwash. Do not swallow.' },
+      { method: 'Topical Application', instruction: 'Mix 10–15 drops of clove essential oil per ounce of carrier oil (coconut or olive). Apply with cotton ball to affected area. Never apply undiluted.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Oral and topical use appropriate when properly diluted.' },
+      { group: 'Children 2–12 years', notes: 'Topical only under adult supervision; dilute well in carrier oil. No internal use.' },
+      { group: 'Children under 2 years', notes: 'Strictly contraindicated: seizures and hepatotoxicity risk.' },
+    ],
+    dosage: {
+      standard: 'No standardized dose established. Used as topical/oral rinse only. Avoid internal medicinal dosing.',
+      forms: [
+        { form: 'Mouthwash (Infusion)', dose: '5–6 cloves steeped in 1 cup water. Use as rinse; do not swallow.' },
+        { form: 'Topical Oil (Diluted)', dose: '10–15 drops essential oil per 30 mL carrier oil.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Difficulty breathing, dizziness, seizures, extreme agitation or loss of consciousness',
+        'Severe abdominal pain, nausea, vomiting, diarrhea',
+        'Jaundice or changes in urine output  signs of liver or kidney damage',
+      ],
+      management: [
+        'Do NOT induce vomiting as oil may enter lungs causing further complications.',
+        'Call emergency services immediately. Contact Poison Control.',
+      ],
+    },
+    sideEffects: [
+      'Undiluted topical oil: redness, burning, tissue damage (necrosis) on skin or gums',
+      'Allergic contact dermatitis: rashes, swelling',
+      'Concentrated ingestion: hepatotoxicity, liver damage, fluid imbalances',
+      'Eugenol slows blood clotting : increased bleeding risk',
+    ],
+    contraindications: [
+      'Children under 2 years: small amounts cause seizures and liver damage',
+      'Bleeding disorders or anticoagulant therapy: eugenol inhibits clotting',
+      'Two weeks before surgery: affects blood sugar and clotting',
+      'Known hypersensitivity to eugenol or Balsam of Peru',
+      'Open wounds or broken skin: undiluted oil causes severe burns',
+    ],
+    drugInteractions: [
+      'Anticoagulants / Antiplatelets (Warfarin, Aspirin, Clopidogrel): additive anticoagulant effect: increased bleeding risk.',
+      'Antidiabetic medications: may lower blood sugar: monitor blood glucose.',
+      'CYP1A2, CYP2C9, CYP2D6, CYP3A4 substrates: clove may alter hepatic metabolism: altered drug levels possible.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Whole Cloves / Essential Oil', storage: 'Cool, dark, dry environment (15–25°C) in airtight containers. Protect from heat and moisture to prevent essential oil degradation.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Orovex Clove Mouthwash', image: '/images/Picture289.jpeg' },
+      { name: 'Imtenan Aromatic Clove Oil', image: '/images/Picture290.jpeg' },
+    ],
+    benefits: [
+      { icon: 'sanitizer', title: 'Broad-Spectrum Oral Antiseptic', desc: 'Eugenol disrupts bacterial membranes and blocks biofilm formation, making clove one of the most effective natural agents against dental caries-causing bacteria.' },
+      { icon: 'healing', title: 'Natural Topical Analgesic', desc: 'Acts as a selective local anesthetic on dental and mucosal pain receptors, providing rapid temporary relief for toothaches and sore gums without systemic side effects.' },
+      { icon: 'science', title: 'Anti-Biofilm & Antifungal', desc: 'Prevents Candida and bacterial biofilm formation on oral and skin surfaces, providing protective anti-infective action without promoting antibiotic resistance.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to the Maluku Islands (Spice Islands) of Indonesia. Now cultivated in Zanzibar, Madagascar, Sri Lanka, and Brazil.',
+      parts: 'Dried unopened flower buds (Flos Caryophylli). The essential oil is steam-distilled from buds, leaves, and stems; bud oil has the highest eugenol quality.',
+      history: 'Used in Chinese medicine for over 2,000 years. Introduced to Europe via Arab traders. A cornerstone of traditional dental antisepsis and a key ingredient in ZOE (Zinc Oxide Eugenol) dental cement.',
+    },
+    preparation: [
+      { method: 'Clove Oil Dental Application', desc: 'Dilute 2 drops clove essential oil in 1 tsp olive oil. Apply with cotton ball directly to painful tooth or gum area for temporary relief.', bestFor: 'Toothache, sore gums, oral ulcers' },
+      { method: 'Clove Mouthwash Infusion', desc: 'Steep 5–6 cloves in boiling water until cool, strain and rinse mouth for 30 seconds. Do not swallow.', bestFor: 'Oral hygiene, gum inflammation, bad breath' },
+    ],
+    relatedPlants: ['garlic', 'tea-tree', 'eucalyptus'],
+    references: [
+      { text: 'PubChem — Syzygium aromaticum (Clove): compound taxonomy.', url: 'https://pubchem.ncbi.nlm.nih.gov/taxonomy/219868' },
+      { text: 'Drugs.com — Clove: Uses, Side Effects, Interactions.', url: 'https://www.drugs.com/mtm/clove.html' },
+    ],
+  },
+
+  'dandelion': {
+    id: 'dandelion',
+    name: 'Dandelion',
+    latinName: 'Taraxacum officinale F.H. Wigg.',
+    category: 'uti',
+    subcategory: 'diuretics',
+    tags: ['Diuretic', 'Aquaretic', 'Potassium-Sparing', 'Choleretic', 'Liver Support'],
+    image: '/images/Picture294.jpeg',
+    images: ['/images/Picture294.jpeg'],
+    shortDescription: 'Potassium-rich aquaretic that enhances renal water excretion without electrolyte depletion, unlike conventional diuretics.',
+    description: 'Dandelion (Taraxacum officinale) belongs to the Asteraceae family. Its leaves contain high concentrations of potassium salts (3–5%), flavonoids (luteolin), and coumarins that provide diuretic action without the hypokalemia risk of synthetic diuretics. The root provides choleretic (bile-stimulating) effects via sesquiterpene lactones.',
+    symptoms: ['Fluid retention', 'Minor edema', 'Urinary tract flushing', 'Liver support', 'Mild hypertension'],
+    warnings: [
+      'Contraindicated with active biliary obstruction: choleretic action can trigger gallbladder spasm.',
+      'Asteraceae family allergy (ragweed, chamomile, daisies): cross-reactivity risk.',
+      'Severe renal failure: high potassium content may cause dangerous hyperkalemia.',
+      'Not recommended in pregnancy or lactation: insufficient safety data.',
+    ],
+    activeConstituents: [
+      { name: 'Potassium Salts (Leaves, 3–5%)', detail: 'Exceptionally high endogenous potassium content continuously compensates for potassium excreted during diuresis: maintaining electrolyte balance unlike synthetic diuretics.' },
+      { name: 'Flavonoids (Luteolin) & Coumarins', detail: 'Act on renal tubules to stimulate water excretion and provide anti-inflammatory support.' },
+      { name: 'Sesquiterpene Lactones (Roots)', detail: 'Bitter principles stimulate bile secretion (choleretic effect) improving upper GI digestion and lipolysis.' },
+    ],
+    moa: [
+      { title: 'Aquaretic Effect (Potassium-Sparing)', detail: 'High potassium + flavonoids act on renal tubules to stimulate water excretion without accelerating electrolyte depletion, unlike loop or thiazide diuretics.' },
+      { title: 'Potassium Self-Replacement', detail: 'Unlike conventional diuretics that cause hypokalemia, dandelion\'s endogenous potassium compensates for renal potassium loss during diuresis.' },
+      { title: 'Choleretic Effect (Root)', detail: 'Sesquiterpene lactone bitter compounds stimulate gustatory receptors, inducing increased bile secretion and improving hepatic and GI digestion.' },
+    ],
+    uses: [
+      'Relief of mild fluid retention and pre-menstrual edema',
+      'Supportive diuresis for mild hypertension management',
+      'Urinary tract flushing and detoxification',
+      'Liver cleansing and bile flow support',
+    ],
+    howToUse: [
+      { method: 'Dandelion Leaf Tea', instruction: 'Steep 4–10 g dried leaves in 150–200 mL boiling water (covered) for 10 minutes. Consume up to 3 times daily. Maintain high fluid intake throughout the day.' },
+      { method: 'Fluid Extract (1:1)', instruction: '4–10 mL daily in divided doses, diluted in water.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Safe at therapeutic doses with adequate hydration. Monitor BP if taking antihypertensives.' },
+      { group: 'Elderly', notes: 'Use with caution in cardiovascular disease. Close BP monitoring required.' },
+      { group: 'Children (<12 years)', notes: 'Not recommended for self-medication: insufficient pediatric safety data.' },
+      { group: 'Pregnancy & Lactation', notes: 'Contraindicated: insufficient clinical safety data.' },
+    ],
+    dosage: {
+      standard: 'Dried leaves (tea): 4–10 g, 3× daily in 150–200 mL boiling water. Fluid extract (1:1): 4–10 mL/day.',
+      forms: [
+        { form: 'Dried Leaf Infusion (Tea)', dose: '4–10 g steeped 10 min (covered), up to 3× daily.' },
+        { form: 'Fluid Extract (1:1)', dose: '4–10 mL daily in divided doses.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Severe heartburn, gastric hyperacidity, mild epigastric pain, diarrhea',
+        'Potential hypersensitivity reactions (skin rashes) at massive doses >50–100 g/day',
+      ],
+      management: [
+        'Discontinue immediately. Administer oral antacids or H₂-receptor antagonists for hyperacidity.',
+        'Maintain standard hydration. Symptomatic supportive care.',
+      ],
+    },
+    sideEffects: [
+      'Heartburn and gastric hyperacidity (particularly on empty stomach)',
+      'Rare contact dermatitis in Asteraceae-sensitive individuals',
+      'Excessive diuresis if taken with concurrent diuretics',
+    ],
+    contraindications: [
+      'Asteraceae family hypersensitivity (chamomile, ragweed, daisies, marigolds)',
+      'Active biliary obstruction and gallstones: choleretic effect may precipitate biliary colic',
+      'Severe renal failure or anuria: risk of hyperkalemia from high potassium content',
+    ],
+    drugInteractions: [
+      'Concurrent synthetic diuretics (Furosemide, HCTZ): additive fluid depletion risk.',
+      'Potassium-sparing diuretics (Spironolactone) and potassium supplements: risk of additive hyperkalemia.',
+      'Antihypertensives: may exert additive BP-lowering effects: monitor blood pressure.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Dried Leaves / Tea Sachets', storage: 'Tightly sealed, light-resistant containers in a cool, dry place. Dandelion leaves are highly hygroscopic: absolute protection from moisture mandatory to prevent mold.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Imtenan Dandelion Leaves (Organic Herbal Tea)', image: '/images/Picture295.jpeg' },
+    ],
+    benefits: [
+      { icon: 'water_drop', title: 'Potassium-Sparing Diuretic', desc: 'Unlike loop or thiazide diuretics that deplete potassium, dandelion\'s own high potassium content self-replenishes what is excreted: a unique safety profile in natural diuresis.' },
+      { icon: 'cleaning_services', title: 'Urinary Tract Flushing', desc: 'Increases urine volume to mechanically flush micro-crystals and bacteria from the urinary tract, supporting UTI prevention and urological health.' },
+      { icon: 'favorite', title: 'Liver & Bile Support', desc: 'Root sesquiterpene lactones stimulate bile production and flow, supporting hepatic detoxification and fat digestion.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to Europe and Asia; now naturalized worldwide. One of the most widely distributed plants on Earth.',
+      parts: 'Leaves (diuretic/aquaretic), roots (choleretic/digestive), flowers (antioxidant-rich). Leaf and root have distinctly different pharmacological profiles.',
+      history: 'Used in European folk medicine since the 10th century. Name from French "dent de lion" (lion\'s tooth) referring to the toothed leaf edges. EMA has published herbal monographs on both the leaf and root.',
+    },
+    preparation: [
+      { method: 'Diuretic Leaf Tea', desc: 'Steep 4–10 g fresh or dried dandelion leaves in covered 200 mL boiling water for 10 minutes. Drink up to 3 cups daily. Always maintain generous fluid intake.', bestFor: 'Fluid retention, mild edema, urinary flushing' },
+      { method: 'Choleretic Root Decoction', desc: 'Gently boil 2–5 g dried root in 200 mL water for 10 minutes. Strain and drink. Used specifically for liver and bile support.', bestFor: 'Digestive support, bile stimulation, liver health' },
+    ],
+    relatedPlants: ['parsley', 'stinging-nettle', 'cranberry'],
+    references: [
+      { text: 'Egyptian Drug Authority — Taraxacum officinale Weber monograph.', url: 'https://edaegypt.gov.eg/media/pozoqoej/taraxacum-officinale-weber_2025-2.pdf' },
+      { text: 'WebMD — Dandelion: Uses, Side Effects and Dosage.', url: 'https://www.webmd.com/vitamins/ai/ingredientmono-706/dandelion' },
+      { text: 'European Medicines Agency (EMA) — Taraxacum (dandelion leaf) herbal monograph.', url: 'https://www.ema.europa.eu/en/medicines/herbal/taraxaci-folium' },
+      { text: 'Verywell Health — Natural Diuretics: Do They Work?', url: 'https://www.verywellhealth.com/natural-diuretics-8546926' },
+    ],
+  },
+
+  'parsley': {
+    id: 'parsley',
+    name: 'Parsley',
+    latinName: 'Petroselinum crispum (Mill.) Fuss',
+    category: 'uti',
+    subcategory: 'diuretics',
+    tags: ['Diuretic', 'Aquaretic', 'Anti-urolithic', 'Vitamin K', 'Apiaceae'],
+    image: '/images/Picture296.jpeg',
+    images: ['/images/Picture296.jpeg'],
+    shortDescription: 'Apiol-rich aquaretic that raises GFR via renal vasodilation; prevents calcium oxalate crystal aggregation.',
+    description: 'Parsley (Petroselinum crispum) belongs to the Apiaceae family. The therapeutic profile is driven by apiol (60–80% of seed oil), myristicin (10–30%), apiin, and exceptional potassium (554 mg/100 g) and vitamin C (133 mg/100 g) content. Provides evidence-based diuresis and urinary tract irrigation. Strictly contraindicated in pregnancy due to abortifacient properties (Category X).',
+    symptoms: ['Urinary tract infections', 'Fluid retention', 'Kidney stones prevention', 'Minor edema'],
+    warnings: [
+      'STRICTLY CONTRAINDICATED IN PREGNANCY (Category X): Apiol and myristicin cause uterine contractions, premature labor, or miscarriage.',
+      'Contraindicated in active nephritis, glomerulonephritis, or severe CKD (stage 4–5).',
+      'High vitamin K1 content (1640 mcg/100 g) directly antagonizes Warfarin: dangerous INR decrease.',
+      'Apiaceae family allergy (celery, carrots, fennel): cross-reactivity risk.',
+    ],
+    activeConstituents: [
+      { name: 'Apiol (60–80% of seed essential oil)', detail: 'Inhibits renal tubular Na⁺/K⁺-ATPase pump, trapping sodium in tubular lumen and forcing fluid clearance: osmotic/aquaretic effect.' },
+      { name: 'Myristicin (10–30% of seed oil)', detail: 'Direct renal vasodilator; relaxes afferent arterioles, increasing renal blood flow and glomerular filtration rate (GFR).' },
+      { name: 'Apiin (2.5–4%), Potassium (554 mg/100g), Vitamin C (133 mg/100g)', detail: 'Potassium creates osmotic drag; Vitamin C and flavonoids lower urinary calcium and increase citrate, preventing calcium oxalate crystal formation.' },
+    ],
+    moa: [
+      { title: 'Na⁺/K⁺-ATPase Inhibition (Aquaretic)', detail: 'Apiol inhibits the basolateral Na⁺/K⁺-ATPase pump in renal tubules, trapping sodium in the tubular lumen, preventing water reabsorption and forcing urine output.' },
+      { title: 'Renal Vasodilation (↑GFR)', detail: 'Myristicin relaxes afferent arterioles, increasing renal blood flow and glomerular filtration rate to generate downstream hydraulic pressure for urinary flushing.' },
+      { title: 'Anti-urolithic Kinetic Alteration', detail: 'Vitamin C and flavonoids lower urinary calcium excretion and increase citrate output, shifting urinary pH to inhibit calcium oxalate micro-crystal nucleation and aggregation.' },
+    ],
+    uses: [
+      'Urinary tract irrigation to flush micro-crystals and sand-like gravels',
+      'Prophylaxis against recurrent calcium oxalate kidney stones',
+      'Supportive relief of minor fluid retention and peripheral edema',
+      'Supportive diuresis for mild blood pressure management',
+    ],
+    howToUse: [
+      { method: 'Parsley Leaf Tea', instruction: 'Steep 2–4 g dried leaves in 150 mL boiling water (covered) for 10–15 minutes. Take up to 3 times daily. Consume with ample water throughout the day.' },
+      { method: 'Fluid Extract (1:1)', instruction: '2–4 mL taken up to 3 times daily, diluted in water.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults (>12 years)', notes: 'Appropriate at therapeutic doses with adequate hydration.' },
+      { group: 'Children (<12 years)', notes: 'Not recommended: insufficient pediatric safety data.' },
+      { group: 'Pregnancy', notes: 'STRICTLY CONTRAINDICATED (Category X): abortifacient.' },
+      { group: 'Elderly with Renal Disease', notes: 'Highly discouraged in compromised kidney function: potential structural tissue overload.' },
+    ],
+    dosage: {
+      standard: 'Dried leaves (tea): 2–4 g, 3× daily. Fluid extract (1:1): 2–4 mL, 3× daily.',
+      forms: [
+        { form: 'Dried Leaf Infusion (Tea)', dose: '2–4 g steeped 10–15 min (covered), up to 3× daily.' },
+        { form: 'Fluid Extract (1:1)', dose: '2–4 mL up to 3× daily, diluted in water.' },
+        { form: 'Fresh Leaf Juice', dose: '30–60 mL daily in divided doses.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'High-dose essential oil / seed overdose: acute nephrotoxicity, hepatotoxicity (jaundice, elevated liver enzymes)',
+        'CNS depression: severe dizziness, ataxia, generalized tremors, hemolytic anemia',
+      ],
+      management: [
+        'Discontinue immediately. Administer oral activated charcoal if acute ingestion.',
+        'Aggressive IV hydration for renal support. Monitor hepatic enzymes, serum creatinine, and CBC continuously.',
+      ],
+    },
+    sideEffects: [
+      'Minor gastric irritation, nausea, or heartburn (especially on empty stomach)',
+      'Cutaneous photosensitivity due to trace furanocoumarins',
+      'Mild uterine cramping at high doses (pelvic congestion from apiol)',
+    ],
+    contraindications: [
+      'Pregnancy (Category X: abortifacient): Apiol and myristicin induce uterine contractions',
+      'Apiaceae family hypersensitivity (celery, carrots, fennel, coriander)',
+      'Acute nephritis, glomerulonephritis, or severe CKD (stage 4–5)',
+    ],
+    drugInteractions: [
+      'Warfarin / Vitamin K antagonists: very high vitamin K1 (1640 mcg/100g) directly antagonizes anticoagulation: dangerous INR decrease and thrombosis risk.',
+      'Synthetic diuretics (Furosemide, HCTZ): additive fluid volume depletion and dehydration risk.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Dried Leaves / Essential Oil', storage: 'Airtight, amber glass containers below 25°C. Hermetically sealed to prevent volatilization and degradation of Apiol and Myristicin.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Imtenan Parsley Tea (Organic Herbal Infusion)', image: '/images/Picture297.jpeg' },
+    ],
+    benefits: [
+      { icon: 'water_drop', title: 'Dual-Mechanism Aquaretic', desc: 'Apiol blocks tubular sodium reabsorption while myristicin raises GFR via renal vasodilation: a two-point mechanism providing efficient urinary output without the electrolyte disruption of loop diuretics.' },
+      { icon: 'science', title: 'Anti-urolithic Protection', desc: 'Vitamin C and flavonoids shift urinary chemistry to prevent calcium oxalate micro-crystal nucleation, acting as a preventive flush before small crystals can aggregate into kidney stones.' },
+      { icon: 'nutrition', title: 'Nutritional Powerhouse', desc: 'Exceptional potassium (554 mg/100g), vitamin C (133 mg/100g), and vitamin K1: providing bone health, vascular support, and immune function alongside its diuretic properties.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to the central Mediterranean region (Sardinia, Lebanon). Now cultivated worldwide as a culinary and medicinal herb.',
+      parts: 'Leaves, stems (culinary/mild diuretic), seeds (concentrated active oil: therapeutic/medicinal). Leaf and seed have dramatically different constituent profiles.',
+      history: 'Used in ancient Greek and Roman medicine. The name derives from the Greek "petroselinon" (rock celery). A cornerstone of European herbal diuresis. EMA has published monographs on both root and herb.',
+    },
+    preparation: [
+      { method: 'Diuretic Leaf Infusion', desc: 'Steep 2–4 g dried parsley leaves in 150 mL boiling water (covered) for 10–15 minutes. Drink up to 3 cups daily with generous water intake throughout.', bestFor: 'Urinary flushing, kidney stone prevention, fluid retention' },
+    ],
+    relatedPlants: ['dandelion', 'halfabar', 'fennel'],
+    references: [
+      { text: 'Kreydiyyeh, S. I., & Usta, J. (2002). Diuretic effect and mechanism of action of parsley. Journal of Ethnopharmacology, 79(3), 353–357.', url: 'https://pubmed.ncbi.nlm.nih.gov/11849841/' },
+      { text: 'WebMD — Parsley: Health Benefits and Nutrition.', url: 'https://www.webmd.com/diet/health-benefits-parsley' },
+      { text: 'ResearchGate — Comparative Evaluation of Diuretic Activity of Celery and Parsley Extracts.', url: 'https://www.researchgate.net/publication/331413321_Comparative_Evaluation_of_Diuretic_Activity_of_Ethanolic_Extracts_of_Celery_Apium_graveolens_and_Parsley_Petroselinum_crispum_in_Male_Rats_Address_for_Correspondence' },
+      { text: 'Azhar Pharmaceutical Journal — Diuretic activity of Petroselinum crispum aqueous extract.', url: 'https://www.azpharmjournal.com/en/2024-volume-23-issue-1/assessment-of-the-diuretic-activity-of-petroselinum-crispum-aqueous-leaves-extract-in-wistar-rats/' },
+    ],
+  },
+
+  'witch-hazel': {
+    id: 'witch-hazel',
+    name: 'Witch Hazel',
+    latinName: 'Hamamelis virginiana L.',
+    category: 'uti',
+    subcategory: 'anti-septic',
+    tags: ['Antiseptic', 'Astringent', 'Tannins', 'Topical', 'Anti-inflammatory'],
+    image: '/images/Picture293.jpeg',
+    images: ['/images/Picture291.jpeg'],
+    shortDescription: 'Polyphenolic tannin-rich astringent with protein-precipitation mechanism for topical antisepsis and tissue protection.',
+    description: 'Witch Hazel (Hamamelis virginiana) belongs to the Hamamelidaceae family. Its bark and leaves contain gallotannins, procyanidins, catechins, and flavonols that provide broad-spectrum topical antimicrobial, astringent, vasoconstricting, and anti-inflammatory effects. Widely used in dermatology and wound care.',
+    symptoms: ['Minor wounds', 'Skin irritation', 'Acne', 'Hemorrhoid symptoms', 'Sore throat'],
+    warnings: [
+      'For external topical use only: do not ingest (tannins cause GI upset).',
+      'Oral mouthwash use: not recommended for children, pregnant, or breastfeeding women.',
+      'Alcohol-based formulations may cause dryness with frequent use.',
+      'Children under 2 years: avoid unless directed by a pediatrician.',
+    ],
+    activeConstituents: [
+      { name: 'Gallotannins (Hamamelitannin)', detail: 'Primary polyphenolic tannins mediating the astringent, protein-precipitating, and antibacterial actions.' },
+      { name: 'Flavonoids (Procyanidins, Catechins, Flavonols)', detail: 'Anti-inflammatory and antioxidant flavonoid complex that downregulates pro-inflammatory cytokines and cellular exudates.' },
+    ],
+    moa: [
+      { title: 'Protein Precipitation (Astringent Barrier)', detail: 'Tannins chemically bind and coagulate superficial dermal and mucosal proteins, creating a protective micro-barrier that contracts tissue, tightens pores, and controls weeping wounds.' },
+      { title: 'Microvascular Vasoconstriction', detail: 'Reduces local blood flow to inflamed tissue, decreasing erythema, edema, and wound exudate.' },
+      { title: 'Anti-inflammatory via Cytokine Downregulation', detail: 'Flavonoid and galloyl fractions downregulate pro-inflammatory cytokines, reducing redness and swelling in skin conditions.' },
+      { title: 'Broad-Spectrum Antimicrobial', detail: 'Tannins exhibit activity against Gram-positive and Gram-negative bacteria, and inhibitory effects against enveloped viruses including Herpes simplex.' },
+    ],
+    uses: [
+      'Topical antiseptic for minor cuts, scrapes, and skin wounds',
+      'Management of acne and oily skin: removes excess sebum, purifies pores',
+      'Hemorrhoid relief: reduces burning, itching, and swelling of hemorrhoidal tissue',
+      'Sore throat gargle (alcohol-free infusion) to reduce mucosal inflammation',
+      'Soothes insect bites, sunburn, poison ivy, and minor allergic skin reactions',
+    ],
+    howToUse: [
+      { method: 'Topical Application', instruction: 'Clean area with mild soap and water. Saturate a cotton pad with witch hazel liquid and dab gently onto affected area. Do not scrub on broken skin.' },
+      { method: 'Acne Toner', instruction: 'Apply with cotton pad after washing face to remove excess oil and purify pores. Use morning and evening.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Widely safe for topical antiseptic and astringent use.' },
+      { group: 'Ages 6+', notes: 'Safe for topical antiseptic and astringent use at standard dilutions.' },
+      { group: 'Ages 2–6', notes: 'Diluted use for diaper-related irritations under medical supervision only.' },
+      { group: 'Under 2 years', notes: 'Avoid unless specifically directed by a pediatrician.' },
+    ],
+    dosage: {
+      standard: 'Topical: apply undiluted commercial preparations (distillate) or diluted extracts to affected area as needed. No internal therapeutic dose established.',
+      forms: [
+        { form: 'Witch Hazel Distillate (Topical)', dose: 'Apply to affected area up to 3–4 times daily as needed.' },
+        { form: 'Oral Mouthwash (Alcohol-free Infusion)', dose: 'Rinse and gargle briefly; do not swallow.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Topical overuse: skin dryness, redness, stinging, or peeling',
+        'If ingested: GI upset, nausea, vomiting from tannin content',
+      ],
+      management: [
+        'Topical: reduce frequency of application; switch to alcohol-free formulation.',
+        'Ingested: supportive care; monitor for nausea/vomiting.',
+      ],
+    },
+    sideEffects: [
+      'Skin dryness or mild irritation with prolonged or frequent use',
+      'Rare allergic contact dermatitis in sensitive individuals',
+      'Alcohol-based formulas may cause stinging on broken skin',
+    ],
+    contraindications: [
+      'Known hypersensitivity to witch hazel components',
+      'Oral internal use: not recommended due to high tannin content',
+      'Children under 2 years: insufficient safety data',
+    ],
+    drugInteractions: [
+      'No significant systemic drug interactions reported for topical use.',
+      'Theoretical: concurrent use with other topical astringents may increase skin dryness.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Commercial Witch Hazel Distillate / Extracts', storage: 'Store in a cool, dark place at room temperature. Keep tightly sealed to prevent oxidation of tannins and evaporation of any alcohol content.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Thayers Witch Hazel Toner (Imported, Alcohol-free)', image: '/images/Picture292.jpeg' },
+      { name: 'Witch Hazel Astringent Solution (Various pharmacy brands)', image: '/images/Picture293.jpeg' },
+    ],
+    benefits: [
+      { icon: 'spa', title: 'Dual Astringent & Antiseptic', desc: 'Tannins create a protective protein-barrier over wounds and pores, simultaneously tightening tissue and blocking bacterial colonization without harsh chemical irritation.' },
+      { icon: 'water_drop', title: 'Vasoconstricting Anti-inflammatory', desc: 'Rapidly reduces local blood flow to inflamed tissue, visibly decreasing redness, swelling, and exudate in hemorrhoids, insect bites, and skin reactions.' },
+      { icon: 'face', title: 'Acne & Oil Control', desc: 'Removes excess sebum and tightens dilated pores while its anti-inflammatory action reduces acne papule redness: without the drying harshness of alcohol-based chemical toners.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to eastern North America, from Nova Scotia to Florida. Traditional medicine of the Potawatomi and Menominee peoples for centuries before European colonization.',
+      parts: 'Bark, leaves, and twigs: steam distilled or extracted with ethanol/water. Commercial witch hazel distillate is the most widely used form.',
+      history: 'Named from Old English "wych" (flexible branches): not related to witchcraft. A cornerstone of traditional Native American wound care. The FDA recognizes witch hazel as a safe and effective OTC skin protectant.',
+    },
+    preparation: [
+      { method: 'Wound Care Application', desc: 'Dampen a cotton pad with witch hazel distillate. Gently blot (do not scrub) the cleaned wound to remove bacteria and reduce minor bleeding.', bestFor: 'Minor cuts, scrapes, post-shave irritation' },
+      { method: 'Acne Face Toner', desc: 'After cleansing, sweep a witch hazel-soaked cotton pad across the face (avoiding eyes). Allow to dry before moisturizing.', bestFor: 'Oily skin, acne, enlarged pores, blackheads' },
+    ],
+    relatedPlants: ['tea-tree', 'aloe-vera', 'green-tea'],
+    references: [
+      { text: 'WebMD — Witch Hazel: Uses, Benefits and Side Effects.', url: 'https://www.webmd.com/vitamins-supplements/witch-hazel' },
+      { text: 'PMC — Antimicrobial and anti-inflammatory properties of Hamamelis virginiana.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12250947' },
+      { text: 'Drugs.com — Witch Hazel: Uses and Safety.', url: 'https://www.drugs.com/npp/witch-hazel.html' },
+    ],
+  },
+
+  'halfabar': {
+    id: 'halfabar',
+    name: 'Halfabar',
+    latinName: 'Cymbopogon proximus (Hochst. ex A.Rich.) Stapf',
+    category: 'uti',
+    subcategory: 'diuretics',
+    tags: ['Ureteric Spasmolytic', 'Stone Expulsion', 'Renal Colic', 'Calcium Channel Blocker', 'Diuretic'],
+    image: '/images/Picture1_halfabar.jpg',
+    images: ['/images/Picture1_halfabar.jpg'],
+    shortDescription: 'Selective calcium channel blocker in the ureter that relaxes smooth muscle to allow stone passage while preserving peristaltic propulsion.',
+    description: 'Halfabar (Cymbopogon proximus) belongs to the Poaceae family. Principal active constituent proximadiol (>75% of sesquiterpenoid fraction) acts as a non-atropinic calcium channel blocker selectively targeting ureteric smooth muscle: dilating the passage below impacted stones while preserving propulsive peristalsis for stone expulsion. Used in MET (Medical Expulsion Therapy) synergistically with Tamsulosin.',
+    symptoms: ['Kidney stones', 'Ureteric colic', 'Renal colic', 'Urinary stasis', 'Intestinal colic'],
+    warnings: [
+      'For stone expulsion: effective for calculi ≤1 cm; larger stones require lithotripsy or surgery.',
+      'Always rule out hematuria, acute retention, or suspected malignancy before use.',
+      'Avoid high therapeutic doses in early pregnancy as a precautionary measure.',
+    ],
+    activeConstituents: [
+      { name: 'Proximadiol (>75% of sesquiterpenoid fraction)', detail: 'Primary crystalline sesquiterpene diol; selective non-atropinic calcium channel blocker in ureteric walls: the pharmacological quality control marker.' },
+      { name: 'Piperitone (60–85% of volatile oil)', detail: 'Dominant monoterpene ketone; renal vasodilator increasing GFR and hydraulic flushing pressure.' },
+    ],
+    moa: [
+      { title: 'Ureteric Smooth Muscle Relaxation (Non-atropinic Ca²⁺ Block)', detail: 'Proximadiol selectively blocks voltage-gated calcium channels in ureteric walls, relaxing and dilating the segment below the impacted stone: without arresting upper propulsive peristalsis.' },
+      { title: 'Renal Vasodilation (↑GFR)', detail: 'Piperitone dilates renal vasculature, increasing GFR and downstream hydraulic pressure to assist calculus propulsion.' },
+      { title: 'Systemic Visceral Spasmolysis', detail: 'Extra-renally relaxes GI and bronchial smooth muscles, providing antispasmodic effects on intestinal colic and asthmatic coughs.' },
+    ],
+    uses: [
+      'Ureteric stone expulsion therapy: facilitates passage of calculi ≤1 cm',
+      'Management of severe renal colic: relieves acute flank pain from stone movement',
+      'Urinary stasis prophylaxis: flushes urinary channels to prevent crystal aggregation',
+      'GI antispasmodic for intestinal colic and bloating',
+    ],
+    howToUse: [
+      { method: 'Standardized Pharmaceutical (Proximol/Kellagon)', instruction: '0.4–1 mg pure proximadiol, 3 times daily as directed. Clinically preferred for reliable stone expulsion.' },
+      { method: 'Herbal Decoction', instruction: 'Boil 5–10 g dried grass in 200–250 mL water for 10 minutes (covered). Strain, consume warm, 2–3× daily.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults (>12 years)', notes: 'Primary therapeutic target: clinically safe and effective.' },
+      { group: 'Elderly (65+)', notes: 'Exceptionally safe: avoids systemic hypotension, tachycardia, dry mouth of synthetic anticholinergics.' },
+      { group: 'Children (<12 years)', notes: 'Not evaluated for pediatric urology: strictly avoid.' },
+      { group: 'Pregnancy', notes: 'Avoid therapeutic doses in early pregnancy as standard precaution.' },
+    ],
+    dosage: {
+      standard: 'Crude decoction: 5–10 g/day. Standardized: 0.4–1 mg proximadiol, 3× daily.',
+      forms: [
+        { form: 'Decoction', dose: '5–10 g dried grass in 200 mL water, 2–3× daily.' },
+        { form: 'Standardized Extract (Proximadiol)', dose: '0.4–1 mg, 3× daily with food.' },
+      ],
+    },
+    overdose: {
+      symptoms: ['Pure essential oil >5 mL: severe epigastric burning, nausea, vomiting, headache, dizziness, lethargy'],
+      management: ['Discontinue. Administer oral demulcents (cold milk, antacids) or PPIs. Force hydration to accelerate renal clearance.'],
+    },
+    sideEffects: [
+      'Gastric eructation (burping) with aromatic mint aftertaste',
+      'Mild gastric pyrosis (heartburn), especially on empty stomach',
+    ],
+    contraindications: [
+      'Known hypersensitivity to Poaceae (grass) family',
+      'Early pregnancy at high therapeutic doses',
+    ],
+    drugInteractions: [
+      'Tamsulosin (alpha-blocker): beneficial synergy: accelerates Medical Expulsion Therapy (MET) for ureteric calculi.',
+      'NSAIDs (Diclofenac): compatible; NSAIDs reduce inflammatory edema while Halfabar relieves smooth muscle spasm.',
+      'Systemic CCBs (Amlodipine, Verapamil): theoretical mild synergy: monitor blood pressure.',
+    ],
+    storage: {
+      forms: [{ form: 'Dried Grass / Standardized Extract', storage: 'Airtight, moisture-proof containers below 30°C in dark, dry environment.' }],
+    },
+    marketedProducts: [
+      { name: 'Proximol Effervescent/Tablets (Kahira Pharmaceuticals)', image: '/images/Picture299.jpeg' },
+      { name: 'Urinex Capsules (Pharco Impex)', image: '/images/Picture298.jpeg' },
+    ],
+    benefits: [
+      { icon: 'medical_services', title: 'Selective Ureteric Stone Expulsion', desc: 'Proximadiol uniquely relaxes the ureteric passage below a stone while preserving propulsive peristalsis above: creating a controlled biological highway for stone expulsion without systemic side effects.' },
+      { icon: 'water_drop', title: 'Renal Hydraulic Flushing', desc: 'Piperitone-driven renal vasodilation increases GFR and generates downstream hydraulic pressure that pushes calculi forward while flushing the urinary tract.' },
+      { icon: 'psychology', title: 'Elderly-Safe Antispasmodic', desc: 'Achieves ureteric muscle relaxation through selective calcium channel blockade without the anticholinergic side effects (hypotension, tachycardia, dry mouth) common with synthetic agents.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to North Africa and the Arabian Peninsula. Grows in semi-arid climates, particularly in Egypt, Sudan, and the Gulf countries.',
+      parts: 'Whole dried grass (stem and leaf blades). Smells of mint and lemon.',
+      history: 'A cornerstone of traditional Egyptian and Sudanese folk medicine for renal colic and stone expulsion. Clinically validated in Egyptian trials. Proximol and Kellagon are widely dispensed in Egyptian community pharmacies.',
+    },
+    preparation: [
+      { method: 'Halfabar Decoction', desc: 'Boil 5–10 g dried Halfabar grass in 200–250 mL water for 10 minutes in covered vessel. Strain, cool, consume warm. Take 2–3 times daily.', bestFor: 'Ureteric stone expulsion, renal colic relief, urinary stasis prevention' },
+    ],
+    relatedPlants: ['dandelion', 'cranberry', 'clove'],
+    references: [
+      { text: 'Egyptian Drug Authority — Cymbopogon proximus (Halfabar) monograph.', url: 'https://dev.edaegypt.gov.eg/media/0jnppjtj/cymbopogon-proximus_1.pdf' },
+      { text: 'PMC — Pharmacological activities of Cymbopogon proximus essential oil.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12256221' },
+      { text: 'ResearchGate — Pharmacological basis for medicinal use of Cymbopogon proximus in gastrointestinal disorders.', url: 'https://www.researchgate.net/publication/393170950_Pharmacological_basis_for_medicinal_use_of_Cymbopogon_proximus_Hochst_ex_A_Rich_Essential_oil_in_hyperactive_gastrointestinal_disorders' },
+      { text: 'DOAJ — Cymbopogon proximus biological properties and traditional uses.', url: 'https://doaj.org/article/b361bfdea23843e5aad4b60a5e6066a3' },
+    ],
+  },
+
+  'pygeum': {
+    id: 'pygeum',
+    name: 'Pygeum',
+    latinName: 'Prunus africana (Hook.f.) Kalkman',
+    category: 'uti',
+    subcategory: 'bph',
+    tags: ['BPH', 'Prostate Health', 'Phytosterol', 'Anti-proliferative', '5-LOX Inhibitor'],
+    image: '/images/Picture300.png',
+    images: ['/images/Picture300.png'],
+    shortDescription: 'African cherry bark extract that inhibits prostate growth factors and reduces prostatic edema for BPH symptom relief.',
+    description: 'Pygeum (Prunus africana) belongs to the Rosaceae family. Its lipophilic bark extract contains β-sitosterol, ursolic/oleanolic acid triterpenes, and ferulic acid esters that collectively inhibit prostate growth factors, reduce glandular edema, and improve bladder detrusor function: providing evidence-based relief for lower urinary tract symptoms in BPH.',
+    symptoms: ['Weak urine stream', 'Urinary hesitancy', 'Nocturia', 'BPH symptoms', 'Incomplete bladder emptying'],
+    warnings: [
+      'Prostate cancer must be ruled out before using phytotherapy for BPH: Pygeum masks symptoms.',
+      'Not a substitute for urological assessment in Stage III–IV BPH.',
+      'Discontinue if symptoms worsen or fever, hematuria, or acute retention develops.',
+    ],
+    activeConstituents: [
+      { name: 'β-sitosterol & Phytosterols', detail: 'Inhibit androgen binding to prostatic tissue and reduce pro-inflammatory eicosanoid synthesis.' },
+      { name: 'Ursolic & Oleanolic Acid Triterpenes', detail: 'Anti-proliferative and anti-edematous; inhibit 5-LOX inflammatory pathway in prostate tissue.' },
+      { name: 'Ferulic Acid Esters & Docosanol', detail: 'Reduce prolactin-stimulated testosterone uptake in prostate, lowering proliferative signals.' },
+    ],
+    moa: [
+      { title: 'Growth Factor Inhibition (Anti-proliferative)', detail: 'Inhibits FGF and EGF-mediated prostatic hyperproliferation: addressing root cause of BPH rather than just symptoms.' },
+      { title: '5-LOX Inhibition & Anti-edematous', detail: 'Reduces inflammatory prostaglandins and leukotrienes in prostatic tissue, decreasing glandular edema and urethral obstruction.' },
+      { title: 'Aromatase Inhibition', detail: 'Reduces testosterone-to-estrogen conversion, decreasing age-related estrogenic contribution to prostate enlargement.' },
+      { title: 'Bladder Detrusor Regulation', detail: 'Improves bladder muscle tone, enhancing urine stream and reducing post-void residual urine volume.' },
+    ],
+    uses: [
+      'Symptomatic relief of mild-to-moderate BPH (LUTS Stages I–II)',
+      'Improvement of urine stream and reduction of post-void residual urine',
+      'Reduction of nocturia and daytime urinary frequency',
+    ],
+    howToUse: [
+      { method: 'Standardized Bark Extract (Capsules)', instruction: '50–100 mg daily, standardized to 12–14% phytosterols. Take with food. Often combined with Saw Palmetto for enhanced efficacy.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adult Men (40+)', notes: 'Primary target population for mild-to-moderate BPH.' },
+      { group: 'Women & Children', notes: 'Not indicated: strictly adult male urological use.' },
+    ],
+    dosage: {
+      standard: '50–100 mg daily of standardized bark extract (12–14% phytosterols) with food.',
+      forms: [{ form: 'Standardized Bark Extract Capsules', dose: '50–100 mg/day standardized to 12–14% total phytosterols.' }],
+    },
+    overdose: {
+      symptoms: ['GI irritation, nausea, diarrhea at very high doses'],
+      management: ['Discontinue and manage symptoms supportively.'],
+    },
+    sideEffects: [
+      'Mild GI upset (nausea, constipation): usually transient',
+      'Rare headache or dizziness at high doses',
+    ],
+    contraindications: [
+      'Suspected prostate malignancy: must be excluded by urologist before initiating',
+      'Not indicated for women or pediatric use',
+    ],
+    drugInteractions: [
+      'No clinically significant drug interactions at standard doses.',
+      'Synergistic with Saw Palmetto: combination products available and preferred.',
+    ],
+    storage: {
+      forms: [{ form: 'Standardized Extract Capsules', storage: 'Cool, dry, dark place below 25°C in airtight containers.' }],
+    },
+    marketedProducts: [
+      { name: 'Prostarex Capsules (Pygeum Extract)', image: '/images/Picture301.jpeg' },
+    ],
+    benefits: [
+      { icon: 'medical_services', title: 'Growth Factor Anti-proliferative', desc: 'Uniquely targets BPH root cause by inhibiting FGF and EGF-mediated prostate growth signaling: complementing the DHT-blocking mechanism of Saw Palmetto.' },
+      { icon: 'water_drop', title: 'Bladder Function Improvement', desc: 'Improves detrusor muscle tone, providing measurable increases in urinary stream and significant reduction in post-void residual urine volume.' },
+      { icon: 'healing', title: 'Prostatic Anti-edematous', desc: '5-LOX inhibition and aromatase blockade reduce glandular edema and estrogenic contributions to prostate growth, addressing both inflammatory and hormonal BPH mechanisms.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to mountain forests of sub-Saharan Africa (Cameroon, Uganda, Kenya, Madagascar). Listed as vulnerable due to over-harvesting.',
+      parts: 'Lipophilic bark extract (Pygei africani cortex extractum). Tea preparations are therapeutically ineffective: active phytosterols require ethanolic lipid extraction.',
+      history: 'Traditional use by African indigenous peoples for urinary symptoms. Clinically validated in European RCTs 1990s–2000s. Featured in EMA monographs for BPH management.',
+    },
+    preparation: [
+      { method: 'Standardized Capsule', desc: 'Take 50–100 mg standardized bark extract (12–14% phytosterols) with a meal. Often combined with Saw Palmetto for synergistic BPH relief.', bestFor: 'BPH, LUTS, nocturia' },
+    ],
+    relatedPlants: ['saw-palmetto', 'stinging-nettle-root', 'stinging-nettle'],
+    references: [
+      { text: 'NCCIH — Pygeum: What You Need To Know.', url: 'https://www.nccih.nih.gov' },
+      { text: 'Mount Sinai Health Library — Pygeum.', url: 'https://www.mountsinai.org' },
+      { text: 'European Medicines Agency (EMA) — Pygeum africanum herbal medicines.', url: 'https://www.ema.europa.eu' },
+    ],
+  },
+
+  'saw-palmetto': {
+    id: 'saw-palmetto',
+    name: 'Saw Palmetto',
+    latinName: 'Serenoa repens (W.Bartram) Small',
+    category: 'uti',
+    subcategory: 'bph',
+    tags: ['BPH', 'Prostate Health', '5-Alpha Reductase Inhibitor', 'DHT Blocker', 'Lipidosterolic Extract'],
+    image: '/images/Picture302.jpg',
+    images: ['/images/Picture302.jpg'],
+    shortDescription: 'Dual 5-alpha reductase inhibitor (Types 1 & 2) with DHT receptor antagonism; the most studied herbal BPH treatment.',
+    description: 'Saw Palmetto (Serenoa repens) is a low-growing palm of the Arecaceae family native to southeastern North America. Its lipidosterolic berry extract (85–95% fatty acids and sterols) provides multi-mechanism BPH relief: dual 5-alpha reductase inhibition, DHT receptor antagonism, COX/5-LOX anti-inflammatory action, and alpha-1 adrenergic antagonism. Clinical trials demonstrate LUTS efficacy comparable to finasteride and alpha-blockers with fewer sexual side effects.',
+    symptoms: ['Weak urine stream', 'Urinary hesitancy', 'Nocturia', 'BPH symptoms', 'Incomplete bladder emptying'],
+    warnings: [
+      'Prostate cancer must be ruled out before initiating phytotherapy: Saw Palmetto masks symptoms.',
+      'Tea preparations are completely ineffective: active lipidosterolic fraction requires standardized lipid extraction.',
+      'May slightly lower PSA levels: inform urologist to avoid misinterpretation of PSA screening.',
+      'Discontinue if acute urinary retention, hematuria, or sudden PSA elevation occurs.',
+    ],
+    activeConstituents: [
+      { name: 'Lipidosterolic Fraction (85–95% of extract)', detail: 'Fatty acid complex (oleic, lauric, myristic, palmitic acids): primary 5-alpha reductase inhibitors.' },
+      { name: 'β-sitosterol & Phytosterols', detail: 'DHT receptor antagonism and anti-inflammatory eicosanoid modulation.' },
+    ],
+    moa: [
+      { title: 'Dual 5-Alpha Reductase Inhibition (Type 1 & 2)', detail: 'Blocks both isoforms converting testosterone to DHT (dihydrotestosterone), reducing intraprostatic DHT and growth stimulus.' },
+      { title: 'DHT Receptor Antagonism', detail: 'Competes with DHT at androgen receptors in prostate cells, further reducing androgenic growth signaling.' },
+      { title: 'COX/5-LOX Anti-inflammatory', detail: 'Reduces prostaglandin and leukotriene synthesis in prostatic tissue, decreasing inflammatory edema.' },
+      { title: 'Alpha-1 Adrenergic Antagonism', detail: 'Relaxes smooth muscle in bladder neck and prostate stroma, improving urine flow: similar to synthetic alpha-blockers.' },
+    ],
+    uses: [
+      'Symptomatic relief of mild-to-moderate BPH (LUTS Stages I–II)',
+      'Improvement of urine flow rate and reduction of post-void residual urine',
+      'Reduction of nocturia, urinary hesitancy, and daytime frequency',
+    ],
+    howToUse: [
+      { method: 'Standardized Lipidosterolic Extract (Capsules)', instruction: '320 mg daily standardized to 85–95% fatty acids and sterols. Take with food. Tea preparations are clinically ineffective.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adult Men (40+)', notes: 'Primary target population for mild-to-moderate BPH.' },
+      { group: 'Women & Children', notes: 'Not indicated due to anti-androgenic mechanisms.' },
+    ],
+    dosage: {
+      standard: '320 mg daily of standardized lipidosterolic extract (85–95% fatty acids/sterols) with food.',
+      forms: [{ form: 'Standardized Lipidosterolic Extract Capsules', dose: '320 mg/day. Tea/infusion preparations: clinically ineffective.' }],
+    },
+    overdose: {
+      symptoms: ['GI upset, nausea, diarrhea, headache at very high doses'],
+      management: ['Discontinue and manage symptoms supportively. Generally high safety margin.'],
+    },
+    sideEffects: [
+      'Mild GI symptoms: nausea, diarrhea, stomach pain (usually improved with food)',
+      'Rare headache or decreased libido',
+      'May mildly suppress PSA: inform healthcare provider',
+    ],
+    contraindications: [
+      'Suspected prostate malignancy: exclude with urologist before initiating',
+      'Not indicated for women (anti-androgenic effects) or pediatric use',
+    ],
+    drugInteractions: [
+      'Anticoagulants (Warfarin): theoretical mild anti-platelet effect: monitor INR.',
+      'Finasteride or other 5-alpha reductase inhibitors: additive effects; avoid combination without supervision.',
+      'Synergistic with Pygeum: combination products preferred for BPH.',
+    ],
+    storage: {
+      forms: [{ form: 'Lipidosterolic Extract Capsules', storage: 'Cool, dry, dark environment below 25°C. Lipid fraction susceptible to oxidative rancidity: protect from heat and air.' }],
+    },
+    marketedProducts: [
+      { name: 'Prostacure Capsules', image: '/images/Picture303.jpeg' },
+      { name: 'Pepon Plus / Prostasafe', image: '/images/Picture304.jpeg' },
+    ],
+    benefits: [
+      { icon: 'medical_services', title: 'Dual 5-Alpha Reductase Inhibition', desc: 'Blocks BOTH Type 1 and Type 2 5-alpha reductase isoforms: more comprehensive DHT reduction than synthetic finasteride (Type 2 only), with significantly fewer sexual side effects.' },
+      { icon: 'water_drop', title: 'Four-Pathway LUTS Relief', desc: 'Combines 5-alpha reductase inhibition, DHT receptor blockade, anti-inflammatory action, and alpha-1 adrenergic smooth muscle relaxation: addressing LUTS through 4 simultaneous mechanisms.' },
+      { icon: 'science', title: 'Best-Evidenced Herbal BPH Agent', desc: 'The most extensively studied phytomedicine for BPH, with multiple RCTs demonstrating LUTS efficacy comparable to finasteride and alpha-blockers with superior tolerability.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to southeastern United States (Florida, Georgia, South Carolina). Grows in sandy coastal soils and scrublands. Small palm reaching 2–4 m.',
+      parts: 'Dried ripe berries (Sabalis serrulatae fructus). Lipidosterolic fraction requires lipophilic solvent extraction: water-based tea is clinically worthless.',
+      history: 'Used by Native American Seminole peoples for urinary and reproductive disorders. Clinical BPH research began in Europe in the 1980s. EMA classified as well-established herbal medicine for BPH.',
+    },
+    preparation: [
+      { method: 'Standardized Lipidosterolic Capsule', desc: 'Take one 320 mg standardized capsule with a meal for maximum fat-assisted absorption. Do not substitute with tea.', bestFor: 'BPH, LUTS, nocturia, urinary hesitancy' },
+    ],
+    relatedPlants: ['pygeum', 'stinging-nettle-root', 'stinging-nettle'],
+    references: [
+      { text: 'NCCIH — Saw Palmetto: What You Need To Know.', url: 'https://www.nccih.nih.gov/health/saw-palmetto' },
+      { text: 'PubMed — Saw palmetto for benign prostatic hyperplasia: systematic review.', url: 'https://pubmed.ncbi.nlm.nih.gov/23293281/' },
+      { text: 'European Medicines Agency (EMA) — Serenoa repens (saw palmetto) herbal monograph.', url: 'https://www.ema.europa.eu/en/medicines/herbal/serenoa-repens' },
+      { text: 'Mount Sinai Health Library — Saw Palmetto.', url: 'https://www.mountsinai.org/health-library/herb/saw-palmetto' },
+    ],
+  },
+
+  'stinging-nettle-root': {
+    id: 'stinging-nettle-root',
+    name: 'Stinging Nettle Root',
+    latinName: 'Urtica dioica L. radix',
+    category: 'uti',
+    subcategory: 'bph',
+    tags: ['BPH', 'Prostate Health', 'SHBG Binding', 'Anti-proliferative', 'Lectin'],
+    image: '/images/Picture305.jpg',
+    images: ['/images/Picture305.jpg'],
+    shortDescription: 'Root lignans competitively bind SHBG to block prostatic androgen signaling; lectins inhibit EGF-driven prostate hyperproliferation.',
+    description: 'The root of Urtica dioica (pharmacologically distinct from the aerial leaf parts used for rhinitis) provides unique BPH mechanisms: SHBG-binding lignans block androgen delivery to the prostate, UDA lectins inhibit EGF receptor-driven hyperproliferation, and β-sitosterol/scopoletin provide anti-inflammatory COX-2/NF-κB suppression. Frequently combined with Saw Palmetto for synergistic LUTS relief in clinical practice.',
+    symptoms: ['Weak urine stream', 'Urinary hesitancy', 'Nocturia', 'BPH symptoms', 'Incomplete bladder emptying'],
+    warnings: [
+      'ROOT extract is NOT interchangeable with nettle leaf: different chemistry, different indication.',
+      'Prostate cancer must be ruled out by urologist before initiating BPH phytotherapy.',
+      'Strictly contraindicated in pregnancy: stimulates uterine contractions and alters androgen/estrogen profiles.',
+      'Cardiovascular/renal disease: mild diuretic action may shift fluid/electrolyte balance.',
+    ],
+    activeConstituents: [
+      { name: 'Lignans (Root-specific)', detail: 'Bind competitively to SHBG (Sex Hormone-Binding Globulin), blocking its interaction with prostatic cell membranes and preventing androgen receptor activation.' },
+      { name: 'UDA Lectins (Urtica dioica Agglutinin)', detail: 'Bind EGF receptors on prostate cells, arresting hyperplastic tissue growth: a unique mechanism not shared by other herbal BPH agents.' },
+      { name: 'β-sitosterol, Scopoletin, Coumarins', detail: 'Anti-inflammatory (COX-2, 5-LOX, NF-κB inhibition), antioxidant, and weak 5-alpha reductase inhibition.' },
+    ],
+    moa: [
+      { title: 'SHBG Receptor Blockade (Hormonal Modulation)', detail: 'Lignans occupy SHBG receptors on prostatic cell membranes, preventing SHBG-androgen complexes from binding and blocking hormone-induced prostate growth.' },
+      { title: 'EGF Receptor Blockade (Anti-proliferative)', detail: 'UDA lectins bind EGF receptors, arresting hyperplastic tissue growth signaling: a distinct mechanism from all other herbal BPH agents.' },
+      { title: 'Weak 5-Alpha Reductase & Aromatase Inhibition', detail: 'Supplementary reduction in DHT and estrogenic contributions to prostate enlargement.' },
+      { title: 'Anti-inflammatory (COX-2, 5-LOX, NF-κB)', detail: 'Reduces prostatic edema and urethral obstruction via suppression of inflammatory prostaglandins and cytokines.' },
+    ],
+    uses: [
+      'Symptomatic relief of mild-to-moderate BPH (LUTS Stages I–II)',
+      'Improvement of urine flow and reduction of post-void residual urine',
+      'Reduction of nocturia and daytime pollakiuria',
+    ],
+    howToUse: [
+      { method: 'Standardized Root Extract (Capsules)', instruction: '300–600 mg/day standardized to β-sitosterol or scopoletin. Clinical trials use 360 mg twice daily with food. Combine with Saw Palmetto for superior efficacy.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adult Men (40+)', notes: 'Primary therapeutic target. Synergy with Saw Palmetto strongly recommended.' },
+      { group: 'Women', notes: 'Strictly contraindicated (uterine stimulant, hormonal effects).' },
+      { group: 'Children (<18 years)', notes: 'Strictly contraindicated: no pediatric safety data.' },
+    ],
+    dosage: {
+      standard: '300–600 mg/day standardized root extract. Clinical protocol: 360 mg twice daily with food.',
+      forms: [
+        { form: 'Standardized Dry Root Extract (Capsules)', dose: '300–600 mg/day standardized to β-sitosterol or scopoletin.' },
+        { form: 'Fluid Extract (1:1, 45% ethanol)', dose: '1.5–3 mL, 3× daily.' },
+      ],
+    },
+    overdose: {
+      symptoms: ['GI irritation, nausea, diarrhea, excessive diuresis, transient hypotension, sweating, urticarial rashes'],
+      management: ['Discontinue immediately. Monitor blood pressure, hydration, and serum electrolytes if excessive diuresis is prolonged.'],
+    },
+    sideEffects: [
+      'Mild GI irritation, nausea',
+      'Mild diuretic effect: may cause more frequent urination initially',
+      'Rare allergic skin reactions',
+    ],
+    contraindications: [
+      'Pregnancy and lactation: stimulates uterine contractions',
+      'Children (<18 years): no safety data',
+      'Severe uncompensated cardiovascular or renal failure',
+      'Suspected prostate malignancy: exclude first',
+    ],
+    drugInteractions: [
+      'Antihypertensives (ACE inhibitors, beta-blockers): additive BP-lowering: orthostatic hypotension risk.',
+      'Diuretics (Furosemide, HCTZ): synergistic diuresis: volume depletion risk.',
+      'Anticoagulants / Antiplatelets: may interfere with clotting: INR monitoring recommended.',
+      'Antidiabetic agents: may enhance glucose control: monitor blood glucose.',
+    ],
+    storage: {
+      forms: [{ form: 'Root Extract Capsules / Dried Root', storage: 'Tightly sealed, moisture-resistant, light-resistant containers below 25°C. Humidity causes mold and degrades active lectins.' }],
+    },
+    marketedProducts: [
+      { name: 'Nettle Root Standardized Capsules 500mg (NOW Foods / Solaray)', image: '/images/Picture306.jpeg' },
+    ],
+    benefits: [
+      { icon: 'science', title: 'Unique SHBG Receptor Blockade', desc: 'Root lignans competitively occupy SHBG receptors on prostatic cells, blocking the entire androgen-SHBG signaling cascade: a hormone-modulating mechanism unique among herbal BPH agents.' },
+      { icon: 'medical_services', title: 'EGF-Mediated Anti-proliferative', desc: 'UDA lectins bind and block EGF receptors on prostate cells, halting hyperplastic growth at the cell proliferation level: not shared by Saw Palmetto or Pygeum.' },
+      { icon: 'shield', title: 'Superior Combination Therapy', desc: 'Multiple clinical trials show Urtica root + Serenoa repens produces LUTS resolution matching synthetic 5-alpha reductase inhibitors with significantly lower incidence of sexual side effects.' },
+    ],
+    botanicalFacts: {
+      origin: 'Urtica dioica native to Europe and temperate Asia; naturalized worldwide. Root harvested in autumn when active constituent concentrations peak.',
+      parts: 'Root and rhizome (Radix Urticae) ONLY: pharmacologically distinct from leaf parts. Do NOT interchange preparations.',
+      history: 'Root-specific BPH use established in European herbal medicine in the 1980s–1990s. EMA published separate monographs for root (BPH) and leaf (diuretic/anti-inflammatory). Urtica + Saw Palmetto is the most studied herbal BPH combination globally.',
+    },
+    preparation: [
+      { method: 'Standardized Root Capsule (+ Saw Palmetto)', desc: 'Take 300–600 mg standardized root extract with food. For optimal BPH efficacy, combine with 320 mg Saw Palmetto lipidosterolic extract. Allow 4–6 weeks for clinical response.', bestFor: 'BPH, LUTS, nocturia, urinary hesitancy' },
+    ],
+    relatedPlants: ['saw-palmetto', 'pygeum', 'stinging-nettle'],
+    references: [
+      { text: 'NCBI — Stinging Nettle root (Urtica dioica) for BPH.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK537160/' },
+      { text: 'NCCIH — Stinging Nettle: What You Need To Know.', url: 'https://www.nccih.nih.gov' },
+      { text: 'Mount Sinai Health Library — Stinging Nettle.', url: 'https://www.mountsinai.org/health-library/herb/stinging-nettle' },
+    ],
+  },
+
+  'cranberry': {
+    id: 'cranberry',
+    name: 'Cranberry',
+    latinName: 'Vaccinium macrocarpon Aiton',
+    category: 'womens-health',
+    subcategory: 'pregnancy-support',
+    tags: ['UTI Prevention', 'Anti-adhesion', 'Proanthocyanidins', 'Antioxidant', 'Vitamin C'],
+    image: 'https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?w=800&q=80'],
+    shortDescription: 'A-type proanthocyanidins prevent E. coli adhesion to uroepithelium: prophylaxis rather than treatment of UTIs.',
+    description: 'Cranberry (Vaccinium macrocarpon) belongs to the Ericaceae family. Its unique A-type proanthocyanidins (PACs) prevent P-fimbriated Escherichia coli from adhering to the urinary tract epithelium: the critical first step in UTI development. Safe in pregnancy for UTI prevention, unlike antibiotic treatments that require caution.',
+    symptoms: ['Recurrent UTIs', 'Urinary tract prevention', 'Urinary health', 'Antioxidant support'],
+    warnings: [
+      'Prophylactic only: does not treat active, established UTIs. Seek antibiotics for confirmed UTI.',
+      'Warfarin interaction: cranberry significantly elevates INR: avoid combination or monitor closely.',
+      'High doses may increase kidney stone risk in oxalate-sensitive individuals.',
+      'Excessive juice (>1 L/day) may cause GI upset and diarrhea.',
+    ],
+    activeConstituents: [
+      { name: 'A-type Proanthocyanidins (PACs)', detail: 'Unique structural A-type linkage (vs. B-type in other berries) prevents P-fimbriated E. coli from adhering to uroepithelial cell surfaces: the primary anti-adhesion mechanism.' },
+      { name: 'Anthocyanins (Cyanidins), Flavonols (Quercetin, Myricetin)', detail: 'Antioxidant and anti-inflammatory polyphenols supporting systemic urinary and vascular health.' },
+      { name: 'Benzoic Acid, Vitamin C', detail: 'Urinary acidification (benzoic acid → hippuric acid) and antioxidant immune support.' },
+    ],
+    moa: [
+      { title: 'Bacterial Anti-adhesion (PAC-mediated)', detail: 'A-type PACs structurally prevent P-fimbriated E. coli type 1 fimbriae from attaching to uroepithelial mannose receptors: bacteria cannot initiate UTI without mucosal adhesion.' },
+      { title: 'Urinary Acidification', detail: 'Benzoic acid is metabolized to hippuric acid and excreted in urine, lowering urinary pH and creating an inhospitable environment for bacterial growth.' },
+      { title: 'Antioxidant & Anti-inflammatory Support', detail: 'Polyphenols reduce oxidative stress in the urinary epithelium and suppress pro-inflammatory cytokines.' },
+    ],
+    uses: [
+      'Prophylaxis of recurrent UTIs in women: including during pregnancy',
+      'Prevention of first UTI in women with risk factors',
+      'General urinary tract health maintenance',
+    ],
+    howToUse: [
+      { method: 'Standardized PAC Capsules', instruction: '36 mg PAC (proanthocyanidins) daily: the clinically validated dose. Take with ample water. Preferred over juice for consistent dosing.' },
+      { method: 'Unsweetened Cranberry Juice', instruction: '240–300 mL daily of pure unsweetened cranberry juice (not cocktail/sweetened: insufficient PAC content). Sweeten with honey if needed.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults (including pregnant women)', notes: 'Safe at standard doses for UTI prophylaxis during pregnancy.' },
+      { group: 'Children', notes: 'Generally safe at reduced doses; diluted unsweetened juice acceptable.' },
+      { group: 'Elderly', notes: 'Beneficial for recurrent UTI prevention; avoid if on anticoagulants.' },
+    ],
+    dosage: {
+      standard: 'Standardized extract: 36 mg PACs daily. Juice: 240–300 mL unsweetened daily.',
+      forms: [
+        { form: 'Standardized PAC Extract Capsules', dose: '36 mg PAC/day (clinically validated dose).' },
+        { form: 'Unsweetened Cranberry Juice', dose: '240–300 mL/day of 100% pure juice.' },
+      ],
+    },
+    overdose: {
+      symptoms: ['High-dose juice: GI upset, diarrhea, stomach cramps', 'Elevated oxalate excretion: kidney stone risk in susceptible individuals'],
+      management: ['Reduce dose. Maintain adequate hydration. Switch to standardized PAC capsules for reliable dosing.'],
+    },
+    sideEffects: [
+      'GI upset (nausea, diarrhea) at high juice doses',
+      'Increased oxalate excretion with excessive consumption',
+      'Dental enamel erosion with prolonged undiluted juice consumption',
+    ],
+    contraindications: [
+      'Active anticoagulant therapy with Warfarin: significant INR elevation risk',
+      'History of calcium oxalate kidney stones: may increase urinary oxalate',
+    ],
+    drugInteractions: [
+      'Warfarin / Vitamin K antagonists: significant pharmacokinetic interaction increasing INR: contraindicated or requires close INR monitoring.',
+      'Other anticoagulants: theoretical interaction: monitor.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Standardized PAC Capsules / Juice', storage: 'Capsules: cool, dry, dark place below 25°C. Juice: refrigerate after opening; consume within 7–10 days.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Cran-Max Cranberry Concentrate (Imported)', image: 'https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?w=400&q=80' },
+    ],
+    benefits: [
+      { icon: 'shield', title: 'Proven UTI Anti-adhesion', desc: 'A-type PACs structurally block the fimbriae of P-fimbriated E. coli from binding to uroepithelial cells: preventing the critical first step of UTI establishment without antibiotic resistance.' },
+      { icon: 'pregnant_woman', title: 'Pregnancy-Safe UTI Prevention', desc: 'One of the few UTI-preventive agents deemed safe throughout pregnancy, offering antibiotic-sparing protection for expectant mothers prone to gestational UTIs.' },
+      { icon: 'science', title: 'Prophylactic: Not Antibiotic', desc: 'Prevents bacterial adhesion rather than killing bacteria: does not disrupt the microbiome, does not cause antibiotic resistance, and does not impair beneficial flora.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to northeastern North America (New England and Great Lakes region). Major commercial cultivation in Massachusetts, Wisconsin, New Jersey, and British Columbia.',
+      parts: 'Ripe berries: processed into juice, extract, or dried powder. A-type PAC concentration highest in fresh/freeze-dried berry extract.',
+      history: 'Used by Native Americans for UTI symptoms and as a food. Became widely studied in the 1980s–1990s when anti-adhesion mechanism was elucidated. EMA and several national guidelines support its prophylactic use for recurrent UTIs.',
+    },
+    preparation: [
+      { method: 'Daily UTI Prevention Capsule', desc: 'Take one standardized cranberry capsule (36 mg PAC) with a full glass of water each morning. Continue daily for minimum 3 months to achieve prophylactic effect.', bestFor: 'Recurrent UTI prevention, pregnancy urinary health' },
+    ],
+    relatedPlants: ['dandelion', 'parsley', 'garlic'],
+    references: [
+      { text: 'Drugs.com — Cranberry: Uses and Evidence.', url: 'https://www.drugs.com/npp/cranberry.html' },
+      { text: 'PMC — Cranberry products in prevention of UTIs: systematic review.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3924191' },
+      { text: 'WebMD — Cranberry: Uses, Side Effects and Dosage.', url: 'https://www.webmd.com/diet/supplement-guide-cranberry' },
+    ],
+  },
+
+  'thyme': {
+    id: 'thyme',
+    name: 'Thyme',
+    latinName: 'Thymus vulgaris L.',
+    category: 'respiratory',
+    subcategory: 'cough',
+    tags: ['Expectorant', 'Antimicrobial', 'Bronchospasmolytic', 'Thymol', 'Antitussive'],
+    image: 'https://images.unsplash.com/photo-1515586000433-45406d8e6662?w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1515586000433-45406d8e6662?w=800&q=80'],
+    shortDescription: 'Thymol-rich expectorant and bronchospasmolytic for productive cough, bronchitis, and upper respiratory tract infections.',
+    description: 'Thyme (Thymus vulgaris) belongs to the Lamiaceae family. Its essential oil rich in thymol (30–50%) and carvacrol (3–15%) provides potent antimicrobial, expectorant, and bronchospasmolytic actions. One of the most evidence-based herbal medicines for bronchitis and cough; the Bronchipret TP preparation has RCT evidence for acute bronchitis.',
+    symptoms: ['Cough', 'Bronchitis', 'Upper respiratory infections', 'Sore throat', 'Productive cough'],
+    warnings: [
+      'Pure thyme essential oil is highly concentrated: always dilute before use; never ingest undiluted oil.',
+      'Thyroid conditions: thyme may interfere with thyroid hormone: use with caution.',
+      'Pregnancy: culinary amounts safe; concentrated therapeutic extracts avoided.',
+      'Allergy to Lamiaceae family (mint, rosemary, lavender): cross-reactivity possible.',
+    ],
+    activeConstituents: [
+      { name: 'Thymol (30–50% of essential oil)', detail: 'Primary phenolic; disrupts bacterial membrane, enhances mucociliary clearance, and acts as bronchospasmolytic.' },
+      { name: 'Carvacrol (3–15%), p-Cymene, Linalool', detail: 'Supplementary antimicrobial, anti-inflammatory, and antispasmodic terpenes.' },
+      { name: 'Flavonoids (Luteolin, Apigenin)', detail: 'Anti-inflammatory and antioxidant polyphenols.' },
+    ],
+    moa: [
+      { title: 'Expectorant & Mucociliary Enhancement', detail: 'Thymol stimulates bronchial secretions, reduces mucus viscosity, and enhances mucociliary clearance to expel sputum from airways.' },
+      { title: 'Bronchospasmolytic (β2 Agonism & PDE Inhibition)', detail: 'Relaxes bronchial smooth muscle via mild β2 adrenergic agonism and phosphodiesterase inhibition, reducing cough-trigger bronchoconstriction.' },
+      { title: 'Antimicrobial (Membrane Disruption)', detail: 'Thymol disrupts bacterial and fungal cell membranes, providing broad-spectrum activity against respiratory pathogens including Streptococcus pyogenes.' },
+    ],
+    uses: [
+      'Acute bronchitis and productive cough: most evidence-based indication',
+      'Upper respiratory tract infections (colds, pharyngitis)',
+      'Whooping cough (pertussis): traditional supportive use',
+      'Oral hygiene: thymol is an active ingredient in antiseptic mouthwashes',
+    ],
+    howToUse: [
+      { method: 'Thyme Tea (Aqueous Infusion)', instruction: 'Steep 1–2 g dried thyme in 150 mL boiling water for 10 minutes (covered). Drink 3–4 times daily. Add honey and lemon to enhance soothing effect.' },
+      { method: 'Standardized Extract (Bronchipret TP / Syrup)', instruction: 'As directed on product label: standardized thyme preparations have RCT evidence for acute bronchitis. Typical: 2–3 times daily.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Well-tolerated at therapeutic doses.' },
+      { group: 'Children (>12 years)', notes: 'Safe at appropriate doses for cough and bronchitis.' },
+      { group: 'Children (2–12 years)', notes: 'Mild diluted thyme tea safe; standardized products under pediatric guidance.' },
+      { group: 'Pregnancy', notes: 'Culinary amounts safe. Concentrated extracts avoided as precaution.' },
+    ],
+    dosage: {
+      standard: 'Dried herb: 1–2 g per cup tea, 3–4× daily. Standardized extracts: as product directs.',
+      forms: [
+        { form: 'Dried Herb Tea', dose: '1–2 g steeped 10 min (covered) in 150 mL water, 3–4× daily.' },
+        { form: 'Standardized Liquid Extract', dose: 'As product label directs.' },
+      ],
+    },
+    overdose: {
+      symptoms: ['GI irritation, nausea at high doses of essential oil', 'Hyperthyroidism-like symptoms at excessive prolonged doses'],
+      management: ['Discontinue. Symptomatic support. Hydration.'],
+    },
+    sideEffects: [
+      'GI irritation or heartburn at high doses',
+      'Rare allergic reactions (skin rash) in Lamiaceae-sensitive individuals',
+    ],
+    contraindications: [
+      'Known hypersensitivity to Thymus vulgaris or Lamiaceae family',
+      'Active thyroid conditions: use with caution',
+    ],
+    drugInteractions: [
+      'Thyroid medications: potential interaction: monitor thyroid function.',
+      'Anticoagulants: theoretical mild effect: standard monitoring.',
+    ],
+    storage: {
+      forms: [{ form: 'Dried Herb / Essential Oil', storage: 'Airtight containers in cool, dark place below 25°C. Essential oil: hermetically sealed to prevent thymol oxidation.' }],
+    },
+    marketedProducts: [
+      { name: 'Bronchipret TP (Bionorica SE: Thyme + Ivy)', image: 'https://images.unsplash.com/photo-1515586000433-45406d8e6662?w=400&q=80' },
+    ],
+    benefits: [
+      { icon: 'air', title: 'RCT-Evidenced Bronchitis Relief', desc: 'Standardized thyme preparations (Bronchipret TP) are the only herbal medicine for bronchitis with multiple RCTs demonstrating equivalent efficacy to synthetic bronchospasmolytic drugs.' },
+      { icon: 'water_drop', title: 'Triple-Action Expectorant', desc: 'Simultaneously reduces mucus viscosity, stimulates bronchial secretions, and enhances mucociliary clearance: enabling productive cough to clear airways efficiently.' },
+      { icon: 'shield', title: 'Natural Antimicrobial Synergy', desc: 'Thymol disrupts the membrane of respiratory pathogens including Streptococcus and Haemophilus, while flavonoids reduce mucosal inflammation: a combined anti-infective and anti-inflammatory action.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to the Mediterranean region and southern Europe. Naturalized worldwide as a culinary herb.',
+      parts: 'Aerial parts: leaves and flowering tops (Thymi herba). Essential oil distilled from the whole above-ground plant.',
+      history: 'Used by ancient Egyptians as embalming oil and by Greeks as antiseptic incense. Thymol was isolated in 1719 and became the basis for Listerine mouthwash. EMA has published a clinical monograph supporting thyme use for cough and bronchitis.',
+    },
+    preparation: [
+      { method: 'Thyme Honey Tea', desc: 'Steep 1–2 g dried thyme leaves in 150 mL boiling water (covered) for 10 minutes. Strain, add 1 tsp honey and lemon juice. Drink up to 4 cups daily.', bestFor: 'Productive cough, bronchitis, sore throat, upper respiratory infections' },
+    ],
+    relatedPlants: ['licorice', 'eucalyptus', 'anise'],
+    references: [
+      { text: 'Stahl-Biskup, E., & Sáez, F. (2002). Thyme: The Genus Thymus. London: Taylor & Francis.' },
+      { text: 'Marchetti, M., et al. (2010). Antimicrobial activity of essential oils obtained from medicinal plants against respiratory pathogens. Fitoterapia, 81(8), 874–878.' },
+      { text: 'European Medicines Agency (EMA). (2013). Assessment report on Thymus vulgaris L. and Thymus zygis L., herba. Committee on Herbal Medicinal Products (HMPC).' },
+    ],
+  },
+
+  'anise': {
+    id: 'anise',
+    name: 'Anise',
+    latinName: 'Pimpinella anisum L.',
+    category: 'respiratory',
+    subcategory: 'cough',
+    tags: ['Expectorant', 'Antispasmodic', 'Anethole', 'Carminative', 'Antimicrobial'],
+    image: 'https://images.unsplash.com/photo-1585503418537-88331351ad99?w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1585503418537-88331351ad99?w=800&q=80'],
+    shortDescription: 'Trans-anethole-rich expectorant that increases bronchial secretion and enhances mucociliary clearance for productive cough.',
+    description: 'Anise (Pimpinella anisum) belongs to the Apiaceae family. Its volatile oil is dominated by trans-anethole (80–90%), which provides expectorant, antispasmodic, and antimicrobial actions. EMA has published a traditional herbal medicine monograph supporting its use as an expectorant for cough associated with the common cold and as a carminative for digestive complaints.',
+    symptoms: ['Cough', 'Bronchitis', 'Productive cough', 'Flatulence', 'Digestive discomfort'],
+    warnings: [
+      'Anise oil allergies: may cross-react with anethole-containing plants (fennel, sweet fennel).',
+      'Pregnancy: avoid concentrated therapeutic doses: mild uterine stimulant at high doses.',
+      'Infants: do not give concentrated anise preparations: potential breathing and CNS effects.',
+    ],
+    activeConstituents: [
+      { name: 'Trans-anethole (80–90% of volatile oil)', detail: 'Primary active compound; expectorant, antimicrobial, and mild estrogenic properties.' },
+      { name: 'Estragole (Methyl Chavicol, 1–5%), Pseudoisoeugenol', detail: 'Antispasmodic and antimicrobial secondary compounds.' },
+    ],
+    moa: [
+      { title: 'Expectorant Action', detail: 'Trans-anethole stimulates bronchial secretory cells, increasing mucus production and fluid content, reducing viscosity and facilitating expectoration via mucociliary escalator.' },
+      { title: 'Bronchial Antispasmodic', detail: 'Relaxes bronchial and intestinal smooth muscle via calcium channel modulation and mild β2 adrenergic agonism, reducing cough-associated bronchospasm.' },
+      { title: 'Antimicrobial', detail: 'Anethole and related terpenoids exhibit broad-spectrum activity against common respiratory pathogens.' },
+    ],
+    uses: [
+      'Expectorant for productive cough and bronchitis',
+      'Symptomatic relief of upper respiratory tract infections',
+      'Carminative for bloating, flatulence, and GI spasms',
+    ],
+    howToUse: [
+      { method: 'Anise Tea (Infusion)', instruction: 'Steep 1–3 g crushed anise seeds in 150 mL boiling water (covered) for 10–15 minutes. Drink up to 3–4 times daily for cough and respiratory complaints.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Appropriate at standard therapeutic doses.' },
+      { group: 'Children (>4 years)', notes: 'Mild diluted infusion safe under supervision.' },
+      { group: 'Infants (<4 years)', notes: 'Avoid concentrated preparations.' },
+      { group: 'Pregnancy', notes: 'Culinary amounts safe. Concentrated therapeutic doses avoided.' },
+    ],
+    dosage: {
+      standard: 'Crushed seeds: 1–3 g per cup infusion, 3–4× daily.',
+      forms: [{ form: 'Crushed Seed Infusion', dose: '1–3 g crushed seeds steeped 10–15 min (covered), up to 4× daily.' }],
+    },
+    overdose: {
+      symptoms: ['GI irritation, nausea, vomiting at high doses of essential oil'],
+      management: ['Discontinue. Symptomatic support.'],
+    },
+    sideEffects: [
+      'GI irritation at high doses',
+      'Rare allergic reactions in Apiaceae-sensitive individuals',
+      'Mild estrogenic effects at very high doses (anethole)',
+    ],
+    contraindications: [
+      'Apiaceae family hypersensitivity (carrots, celery, fennel, parsley)',
+      'Estrogen-sensitive conditions: theoretical mild estrogenic effect of anethole',
+    ],
+    drugInteractions: [
+      'Anticoagulants: theoretical mild interaction at high doses: monitor.',
+    ],
+    storage: {
+      forms: [{ form: 'Whole/Crushed Seeds', storage: 'Airtight containers in cool, dark place below 25°C to preserve volatile anethole content.' }],
+    },
+    marketedProducts: [
+      { name: 'Imtenan Anise Tea / Yansoon Herbal Infusion', image: 'https://images.unsplash.com/photo-1585503418537-88331351ad99?w=400&q=80' },
+    ],
+    benefits: [
+      { icon: 'air', title: 'Classic Expectorant', desc: 'Trans-anethole stimulates bronchial glands to produce thinner, more fluid mucus while enhancing mucociliary beat frequency: facilitating productive cough to clear airways.' },
+      { icon: 'spa', title: 'Dual Respiratory & Digestive', desc: 'Uniquely addresses both respiratory and GI smooth muscle spasms: relieving cough-associated bronchospasm and simultaneously treating the common companion of intestinal bloating and flatulence.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to the eastern Mediterranean and southwest Asia. Cultivated in Egypt, Turkey, Spain, and India.',
+      parts: 'Ripe dried seeds (Anisi fructus). Essential oil extracted by steam distillation.',
+      history: 'One of the oldest documented medicinal plants: referenced in ancient Egyptian Ebers Papyrus. Used in ancient Greek medicine by Hippocrates and Dioscorides. Still widely consumed in the Arab world as Yansoon tea.',
+    },
+    preparation: [
+      { method: 'Yansoon Tea (Traditional Arab Infusion)', desc: 'Crush 1–2 tsp anise seeds. Steep in 1 cup boiling water (covered) for 10–15 minutes. Strain and sweeten with honey. Inhale steam during brewing for added respiratory benefit.', bestFor: 'Productive cough, bronchitis, digestive bloating, flatulence' },
+    ],
+    relatedPlants: ['fennel', 'thyme', 'licorice'],
+    references: [
+      { text: 'Shojaii, A., & Fard, M. A. (2012). Review of pharmacological properties and chemical constituents of Pimpinella anisum. ISRN Pharmaceutics, 2012, 1–8.' },
+      { text: 'Özbek, H., et al. (2003). Evaluation of analgesic, anti-inflammatory and antimicrobial activities of Pimpinella anisum. Pharmaceutical Biology, 41(7), 483–486.' },
+    ],
+  },
+
+  'pelargonium': {
+    id: 'pelargonium',
+    name: 'Pelargonium',
+    latinName: 'Pelargonium sidoides DC.',
+    category: 'respiratory',
+    subcategory: 'sinusitis',
+    tags: ['Antiviral', 'Antibacterial', 'Immunomodulator', 'Sinusitis', 'Bronchitis'],
+    image: 'https://images.unsplash.com/photo-1587632286049-2c61b8c0c8df?w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1587632286049-2c61b8c0c8df?w=800&q=80'],
+    shortDescription: 'South African geranium root extract (EPs 7630) with triple action: anti-adhesion, immunomodulatory, and direct antiviral activity for sinusitis and bronchitis.',
+    description: 'Pelargonium sidoides belongs to the Geraniaceae family. Its root extract (proprietary EPs 7630 = Umckaloabo) is clinically validated through multiple RCTs for acute sinusitis, acute bronchitis, and tonsillopharyngitis. Its triple mechanism: reducing bacterial adhesion, activating NK cells/IFN-β, and directly inhibiting viral replication: makes it one of the most evidence-based herbal medicines for upper respiratory infections.',
+    symptoms: ['Sinusitis', 'Acute bronchitis', 'Nasal congestion', 'Sore throat', 'Upper respiratory infections'],
+    warnings: [
+      'Liver injury cases reported with EPs 7630: discontinue if jaundice, dark urine, or abdominal pain develops.',
+      'Anticoagulant therapy: mild coumarin content: monitor INR.',
+      'Pregnancy and lactation: insufficient safety data: avoid.',
+      'Children under 1 year: not recommended.',
+    ],
+    activeConstituents: [
+      { name: 'Coumarin Glycosides (Umckalin, 6,7,8-trimethoxycoumarin)', detail: 'Anti-adhesion agents that prevent bacterial and viral attachment to respiratory mucosal cells.' },
+      { name: 'Phenolic Acids (Caffeic acid, Hydroxycinnamic acids)', detail: 'Antiviral and antibacterial polyphenols contributing immunomodulatory effects.' },
+      { name: 'Polysaccharides', detail: 'Immunostimulatory macromolecules activating NK cells and inducing interferon-β production.' },
+    ],
+    moa: [
+      { title: 'Bacterial Anti-adhesion', detail: 'Coumarins and polyphenols prevent bacterial adhesion to nasopharyngeal and bronchial epithelial cells, inhibiting colonization before infection is established.' },
+      { title: 'Immunomodulation (NK Cells, IFN-β)', detail: 'Polysaccharides activate natural killer (NK) cells and induce interferon-beta (IFN-β) production, strengthening the innate antiviral immune response.' },
+      { title: 'Direct Antiviral Activity', detail: 'EPs 7630 components directly inhibit viral neuraminidase and block entry of respiratory viruses (rhinovirus, coronavirus, RSV) into host cells.' },
+      { title: 'Secretolytic & Mucociliary Enhancement', detail: 'Enhances mucociliary clearance, reducing mucus accumulation in sinuses and bronchial passages.' },
+    ],
+    uses: [
+      'Acute sinusitis: reduces duration and severity of symptoms',
+      'Acute bronchitis: RCT evidence comparable to antibiotics for non-complicated cases',
+      'Tonsillopharyngitis and acute pharyngitis',
+      'Upper respiratory tract infections: antiviral prophylaxis and symptom reduction',
+    ],
+    howToUse: [
+      { method: 'EPs 7630 Liquid Extract (Umckaloabo)', instruction: 'Adults: 30 drops, 3× daily (diluted in water). Children 6–12: 20 drops, 3× daily. Children 1–5: 10 drops, 3× daily. Take 30 min before meals.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Standard dose: 30 drops × 3/day.' },
+      { group: 'Children (6–12 years)', notes: '20 drops × 3/day.' },
+      { group: 'Children (1–5 years)', notes: '10 drops × 3/day.' },
+      { group: 'Infants (<1 year)', notes: 'Not recommended.' },
+      { group: 'Pregnancy & Lactation', notes: 'Avoid: insufficient safety data.' },
+    ],
+    dosage: {
+      standard: 'EPs 7630 liquid: Adults 30 drops × 3/day; Children 6–12: 20 drops × 3/day; Children 1–5: 10 drops × 3/day.',
+      forms: [{ form: 'EPs 7630 Liquid Extract', dose: 'Age-dependent: see above.' }],
+    },
+    overdose: {
+      symptoms: ['GI irritation at high doses'],
+      management: ['Discontinue and manage supportively.'],
+    },
+    sideEffects: [
+      'GI upset: nausea, heartburn, diarrhea (most common)',
+      'Rare: allergic skin reactions',
+      'Very rare: hepatotoxicity: monitor liver function in prolonged use',
+    ],
+    contraindications: [
+      'Hepatic conditions: rare but documented liver injury risk',
+      'Pregnancy and lactation: insufficient safety data',
+      'Anticoagulant therapy without INR monitoring',
+    ],
+    drugInteractions: [
+      'Anticoagulants (Warfarin): coumarin constituents: INR monitoring recommended.',
+      'Immunosuppressants: theoretical immunostimulatory interaction: caution in transplant patients.',
+    ],
+    storage: {
+      forms: [{ form: 'EPs 7630 Liquid Extract', storage: 'Store in original bottle, cool (below 25°C) and dark. Keep away from children.' }],
+    },
+    marketedProducts: [
+      { name: 'Umckaloabo (EPs 7630 liquid extract: Schwabe Pharma, imported)', image: 'https://images.unsplash.com/photo-1587632286049-2c61b8c0c8df?w=400&q=80' },
+    ],
+    benefits: [
+      { icon: 'shield', title: 'Triple Anti-infective Action', desc: 'The only herbal medicine proven to simultaneously block bacterial adhesion, activate NK cell immunity, and directly inhibit viral neuraminidase: all three mechanisms validated in RCTs for sinusitis and bronchitis.' },
+      { icon: 'air', title: 'Antibiotic-Sparing Sinusitis Therapy', desc: 'RCTs show EPs 7630 reduces symptom duration in acute sinusitis and bronchitis to a degree comparable to antibiotics, supporting its role as an antibiotic-sparing alternative for non-complicated cases.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to South Africa (Cape region and Lesotho highlands). The root "umckaloabo" means "severe cough" in Zulu: reflecting its traditional respiratory use.',
+      parts: 'Root (Pelargonii sidoidis radix). EPs 7630 is a proprietary 11% ethanolic extract standardized to coumarin content.',
+      history: 'Introduced to European medicine in the early 20th century by Charles Henry Stevens, who was cured of tuberculosis by a Basuto healer. Became the first African traditional plant medicine to receive European regulatory approval.',
+    },
+    preparation: [
+      { method: 'EPs 7630 Liquid (Umckaloabo)', desc: 'Measure the appropriate age-based dose of liquid extract into a small amount of water. Take 30 minutes before meals, 3 times daily. Continue for the full course (7–14 days).', bestFor: 'Acute sinusitis, acute bronchitis, tonsillopharyngitis' },
+    ],
+    relatedPlants: ['eucalyptus', 'black-elderberry', 'guava'],
+    references: [
+      { text: 'Egyptian Drug Authority — Pelargonium sidoides monograph.', url: 'https://share.google/ZyI55Tqy0w9r9lG1U' },
+      { text: 'National Institutes of Health (NIH) — Pelargonium sidoides for acute respiratory infections.', url: 'https://share.google/FxvhgrbV49wZAivOw' },
+      { text: 'National Institutes of Health (NIH) — Pelargonium sidoides: clinical evidence.', url: 'https://share.google/4PBaL8929gRtE03if' },
+    ],
+  },
+
+  'black-elderberry': {
+    id: 'black-elderberry',
+    name: 'Black Elderberry',
+    latinName: 'Sambucus nigra L.',
+    category: 'respiratory',
+    subcategory: 'sinusitis',
+    tags: ['Antiviral', 'Immunomodulator', 'Anthocyanins', 'Influenza', 'Anti-inflammatory'],
+    image: 'https://images.unsplash.com/photo-1564052522014-b3c20073b16f?w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1564052522014-b3c20073b16f?w=800&q=80'],
+    shortDescription: 'Anthocyanin-rich elderberry extract blocks viral hemagglutinin, preventing influenza and RSV entry into host cells.',
+    description: 'Black Elderberry (Sambucus nigra) belongs to the Adoxaceae family. Its berry extract is rich in anthocyanins (cyanidins) that block viral hemagglutinin, preventing influenza virus attachment to host cell receptors. Clinical meta-analyses confirm reduced influenza duration and severity. The raw plant contains sambunigrin (cyanogenic glycoside): properly processed berries only should be used.',
+    symptoms: ['Influenza', 'Sinusitis', 'Colds', 'Nasal congestion', 'Upper respiratory infections'],
+    warnings: [
+      'Never consume raw or unripe elderberries: sambunigrin causes nausea, vomiting, and cyanide toxicity.',
+      'Only use properly processed, commercially standardized preparations.',
+      'Autoimmune conditions: immunostimulatory: may exacerbate autoimmune disease.',
+      'Pregnancy: insufficient safety data: avoid concentrated preparations.',
+    ],
+    activeConstituents: [
+      { name: 'Anthocyanins (Cyanidin-3-glucoside, Cyanidin-3-sambubioside)', detail: 'Primary antiviral compounds; bind viral hemagglutinin, blocking influenza attachment to host sialic acid receptors.' },
+      { name: 'Flavonoids (Quercetin, Rutin, Kaempferol)', detail: 'Anti-inflammatory and antioxidant polyphenols; quercetin has direct antiviral activity against multiple respiratory viruses.' },
+      { name: 'Polyphenols & Viburnic Acid', detail: 'Immunomodulatory and direct antiviral contributions.' },
+    ],
+    moa: [
+      { title: 'Viral Hemagglutinin Binding (Anti-adhesion)', detail: 'Anthocyanins structurally bind to influenza hemagglutinin, blocking virus-to-host cell sialic acid receptor interaction: preventing viral entry.' },
+      { title: 'Immunostimulatory (Cytokine Regulation)', detail: 'Elderberry extract stimulates production of inflammatory cytokines (TNF-α, IL-1β, IL-6) from monocytes at lower concentrations for antiviral immune activation; at standard doses this is beneficial for viral clearance.' },
+      { title: 'Anti-inflammatory at Therapeutic Doses', detail: 'At standard therapeutic doses, polyphenols concurrently reduce viral-induced inflammatory cytokine overstimulation, preventing the cytokine storm associated with severe influenza.' },
+      { title: 'Neuraminidase Inhibition', detail: 'Flavonoids inhibit viral neuraminidase, reducing viral spread from infected cells to neighboring healthy cells.' },
+    ],
+    uses: [
+      'Influenza: reduces duration by up to 4 days (meta-analysis evidence)',
+      'Sinusitis associated with viral upper respiratory infections',
+      'Cold symptom relief and duration reduction',
+      'Immune support during respiratory illness season',
+    ],
+    howToUse: [
+      { method: 'Standardized Elderberry Syrup', instruction: 'Adults: 15 mL (1 tablespoon) 4× daily for treatment; 5 mL daily for prevention. Children: 7.5 mL (1.5 tsp) 4× daily. Take until symptoms resolve, maximum 5 days.' },
+      { method: 'Standardized Capsules/Gummies', instruction: '500–1000 mg elderberry extract daily for prevention; up to 4000 mg/day during acute illness. Follow product labeling.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Well-tolerated at standard syrup doses.' },
+      { group: 'Children (>1 year)', notes: 'Age-appropriate syrup formulations available.' },
+      { group: 'Infants (<1 year)', notes: 'Avoid: honey-based syrups contraindicated; immunostimulation concern.' },
+      { group: 'Pregnancy', notes: 'Culinary amounts possibly safe; concentrated extracts avoided.' },
+    ],
+    dosage: {
+      standard: 'Treatment: 15 mL syrup × 4/day adults; Prevention: 5 mL/day.',
+      forms: [
+        { form: 'Standardized Elderberry Syrup', dose: 'Adults: 15 mL × 4/day (acute); 5 mL/day (prevention).' },
+        { form: 'Standardized Extract Capsules', dose: '500–1000 mg/day prevention; up to 4000 mg/day acute illness.' },
+      ],
+    },
+    overdose: {
+      symptoms: ['Raw berry ingestion: severe nausea, vomiting from sambunigrin (cyanogenic glycoside)'],
+      management: ['Supportive care. Contact Poison Control if raw berries ingested in large amounts.'],
+    },
+    sideEffects: [
+      'GI mild upset (nausea, diarrhea) at very high doses of processed preparations',
+      'Raw unripe berries: toxic (sambunigrin): never consume raw',
+    ],
+    contraindications: [
+      'Autoimmune diseases (rheumatoid arthritis, lupus, MS): immunostimulation may exacerbate',
+      'Immunosuppressant therapy: potential counteraction',
+      'Raw or unripe elderberries or improperly prepared plant material',
+    ],
+    drugInteractions: [
+      'Immunosuppressants (Cyclosporine, Tacrolimus): immunostimulatory elderberry may counteract immunosuppression.',
+      'Diuretics: additive diuretic effect possible: monitor hydration.',
+    ],
+    storage: {
+      forms: [{ form: 'Elderberry Syrup / Capsules', storage: 'Syrup: refrigerate after opening; consume within 60–90 days. Capsules: cool, dry, dark below 25°C.' }],
+    },
+    marketedProducts: [
+      { name: 'Sambucol Black Elderberry Syrup (Pharmos Biopharma, imported)', image: 'https://images.unsplash.com/photo-1564052522014-b3c20073b16f?w=400&q=80' },
+    ],
+    benefits: [
+      { icon: 'shield', title: 'Influenza Duration Reduction', desc: 'Meta-analyses of 4 RCTs confirm elderberry supplementation reduces influenza duration by an average of 4 days and severity scores significantly: the strongest herbal evidence for any antiviral effect.' },
+      { icon: 'science', title: 'Hemagglutinin Blocking Antiviral', desc: 'Anthocyanins structurally bind influenza hemagglutinin: blocking the very first step of viral infection before the virus can enter host cells.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to Europe, southwestern Asia, and northwestern Africa. Widely naturalized in temperate regions worldwide.',
+      parts: 'Ripe, cooked, or properly processed berries (Sambuci nigri fructus). Flowers, leaves, bark, and unripe berries contain toxic sambunigrin: do not use raw.',
+      history: 'Used in European folk medicine for centuries. Sambucol was the first commercially standardized elderberry product. Published RCTs began in the 1990s-2000s with the Israeli H1N1 influenza study by Zakay-Rones.',
+    },
+    preparation: [
+      { method: 'Elderberry Syrup', desc: 'Simmer 2 cups dried elderberries with 3 cups water and 1 cinnamon stick for 45–60 minutes until reduced by half. Cool, strain, and add 1 cup raw honey. Store in refrigerator.', bestFor: 'Influenza prevention and treatment, immune support' },
+    ],
+    relatedPlants: ['echinacea', 'pelargonium', 'guava'],
+    references: [
+      { text: 'Egyptian Drug Authority — Sambucus nigra (Black Elderberry) monograph.', url: 'https://share.google/giPtlgGJ4b0ekz5Jg' },
+    ],
+  },
+
+  'guava': {
+    id: 'guava',
+    name: 'Guava',
+    latinName: 'Psidium guajava L.',
+    category: 'respiratory',
+    subcategory: 'cough',
+    tags: ['Antitussive', 'Antimicrobial', 'Quercetin', 'Vitamin C', 'Anti-inflammatory'],
+    image: 'https://images.unsplash.com/photo-1621243804936-775306a8f2e3?w=800&q=80',
+    images: ['https://images.unsplash.com/photo-1621243804936-775306a8f2e3?w=800&q=80'],
+    shortDescription: 'Quercetin-rich leaves provide peripheral antitussive action and COX-2 inhibition for cough and upper respiratory infections.',
+    description: 'Guava (Psidium guajava) belongs to the Myrtaceae family. Its leaves contain quercetin, catechins, guajaverin, and β-caryophyllene that collectively provide antitussive (peripheral cough suppression), antimicrobial, and anti-inflammatory (COX-2 inhibition) effects. Traditional use throughout the tropics for cough and respiratory infections; pharmacologically validated quercetin is the primary bioactive.',
+    symptoms: ['Cough', 'Sore throat', 'Upper respiratory infections', 'Diarrhea', 'Mouth ulcers'],
+    warnings: [
+      'Patients with diabetes: guava leaf may lower blood glucose: monitor blood sugar.',
+      'Pregnancy: avoid concentrated leaf extracts: insufficient safety data.',
+      'May cause constipation at high doses (tannin content of leaves).',
+    ],
+    activeConstituents: [
+      { name: 'Quercetin & Guajaverin', detail: 'Primary flavonoids; COX-2 inhibition reduces respiratory inflammation; quercetin has direct antiviral activity against respiratory viruses.' },
+      { name: 'Catechins & Tannins', detail: 'Astringent antimicrobial compounds effective against respiratory pathogens; also provide anti-diarrheal action.' },
+      { name: 'β-Caryophyllene & Vitamin C', detail: 'Anti-inflammatory sesquiterpene and antioxidant ascorbic acid supporting immune function.' },
+    ],
+    moa: [
+      { title: 'Peripheral Antitussive', detail: 'Flavonoids and tannins suppress cough reflex via peripheral mechanisms at airway sensory nerve endings, reducing cough frequency without central CNS depression.' },
+      { title: 'COX-2 Inhibition (Anti-inflammatory)', detail: 'Quercetin selectively inhibits COX-2, reducing prostaglandin-mediated airway inflammation and pharyngeal pain.' },
+      { title: 'Antimicrobial', detail: 'Catechins and quercetin exhibit activity against common respiratory pathogens including Staphylococcus aureus and Streptococcus pyogenes.' },
+    ],
+    uses: [
+      'Cough: traditional antitussive widely used in tropical pharmacopoeia',
+      'Sore throat and upper respiratory tract infections',
+      'Oral ulcers and gum inflammation (leaf decoction gargle)',
+    ],
+    howToUse: [
+      { method: 'Guava Leaf Tea (Decoction)', instruction: 'Boil 4–5 fresh or dried guava leaves in 500 mL water for 10 minutes. Strain, cool slightly. Drink 2–3 cups daily for cough or gargle for sore throat.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Standard doses well-tolerated.' },
+      { group: 'Children (>6 years)', notes: 'Mild leaf tea appropriate under supervision.' },
+      { group: 'Pregnancy', notes: 'Culinary amounts safe; concentrated leaf extracts avoided.' },
+    ],
+    dosage: {
+      standard: 'Decoction: 4–5 leaves boiled in 500 mL water, 2–3 cups daily.',
+      forms: [{ form: 'Leaf Decoction', dose: '4–5 leaves per 500 mL, 2–3× daily.' }],
+    },
+    overdose: {
+      symptoms: ['Constipation from high tannin content at excessive doses', 'Hypoglycemia risk in diabetic patients at very high doses'],
+      management: ['Reduce dose. Monitor blood glucose in diabetic patients.'],
+    },
+    sideEffects: [
+      'Constipation with high doses (astringent tannin content)',
+      'Mild GI discomfort',
+      'Possible hypoglycemia in diabetic patients',
+    ],
+    contraindications: [
+      'Poorly controlled diabetes without blood sugar monitoring',
+      'Pregnancy: concentrated leaf extracts avoided',
+    ],
+    drugInteractions: [
+      'Antidiabetic medications (Insulin, Metformin): additive glucose-lowering: monitor blood sugar closely.',
+    ],
+    storage: {
+      forms: [{ form: 'Fresh or Dried Guava Leaves', storage: 'Dried leaves: airtight container in cool, dry, dark place. Fresh leaves: refrigerate and use within a few days.' }],
+    },
+    marketedProducts: [
+      { name: 'Guava Leaf Tea (Traditional preparation: available in herbal shops)', image: 'https://images.unsplash.com/photo-1621243804936-775306a8f2e3?w=400&q=80' },
+    ],
+    benefits: [
+      { icon: 'air', title: 'Peripheral Antitussive', desc: 'Flavonoids suppress cough reflex at airway sensory nerve level: reducing cough frequency without the sedation, constipation, and addiction risk of opioid-based cough suppressants.' },
+      { icon: 'nutrition', title: 'Vitamin C & Quercetin Immune Support', desc: 'Guava leaves provide among the highest natural concentrations of both vitamin C and quercetin, combining antioxidant immune enhancement with direct antiviral activity against respiratory viruses.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to tropical Americas (Mexico to Peru). Now cultivated throughout tropical Asia, Africa, and the Middle East including Egypt.',
+      parts: 'Leaves (Psidii guajavae folium) for medicinal use; fruit for culinary and nutritional use (highest Vitamin C of any common fruit).',
+      history: 'Traditional respiratory remedy across tropical Asia, Africa, and Latin America. WHO lists guava among plants validated for traditional cough treatment. Quercetin pharmacology published in major journals.',
+    },
+    preparation: [
+      { method: 'Guava Leaf Cough Decoction', desc: 'Boil 4–5 guava leaves in 2 cups of water for 10–15 minutes. Add honey and ginger for enhanced effect. Strain and drink warm 2–3 times daily.', bestFor: 'Cough, sore throat, upper respiratory infections' },
+    ],
+    relatedPlants: ['thyme', 'licorice', 'ginger'],
+    references: [
+      { text: 'Gutiérrez, R. M. P., Mitchell, S., & Solis, R. V. (2008). Psidium guajava: A review of its traditional uses, phytochemistry and pharmacology. Journal of Ethnopharmacology, 117(1), 1–27.' },
+      { text: 'Begum, S., Hassan, S. I., Ali, S. N., & Siddiqui, B. S. (2004). Chemical constituents from the leaves of Psidium guajava. Natural Product Research, 18(2), 135–140.' },
+    ],
+  },
+
+};
 // ══════════════════════════════════════════════════════════════════════════
 
 export const CATEGORIES = [
@@ -2281,11 +4609,11 @@ export const CATEGORIES = [
     color: 'bg-tertiary-fixed text-on-tertiary-fixed-variant',
     image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=600&q=80',
     subcategories: [
-      { id: 'menstrual-health',   name: 'Menstrual Health',              description: 'Support for cycle regulation and hormonal balance.',   image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80' },
-      { id: 'pregnancy-support',  name: 'Pregnancy Support Plants',       description: 'Gentle, nourishing botanicals for expectant mothers.',  image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80' },
-      { id: 'breast-feeding',     name: 'Breast Feeding Support Plants',  description: 'Herbs to support lactation and nursing.',               image: 'https://images.unsplash.com/photo-1531983412531-1f49a365ffed?w=600&q=80' },
-      { id: 'hair-care',          name: 'Hair Care Plants',               description: 'Botanical extracts for scalp health and hair vitality.', image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600&q=80' },
-      { id: 'skin-care',          name: 'Skin Care Plants',               description: 'Botanicals for a radiant, healthy complexion.',          image: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=600&q=80' },
+      { id: 'menstrual-health',   name: 'Menstrual Health',              description: 'Support for cycle regulation and hormonal balance.',   image: 'https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=600&q=80', plants: ['ginger', 'cinnamon', 'dill-seed'] },
+      { id: 'pregnancy-support',  name: 'Pregnancy Support Plants',       description: 'Gentle, nourishing botanicals for expectant mothers.',  image: 'https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=600&q=80', plants: ['ginger', 'psyllium', 'peppermint', 'cranberry'] },
+      { id: 'breast-feeding',     name: 'Breast Feeding Support Plants',  description: 'Herbs to support lactation and nursing.',               image: 'https://images.unsplash.com/photo-1531983412531-1f49a365ffed?w=600&q=80', plants: ['moringa', 'fenugreek', 'fennel'] },
+      { id: 'hair-care',          name: 'Hair Care Plants',               description: 'Botanical extracts for scalp health and hair vitality.', image: 'https://images.unsplash.com/photo-1522337660859-02fbefca4702?w=600&q=80', plants: ['aloe-vera', 'rocket', 'rosemary', 'garlic'] },
+      { id: 'skin-care',          name: 'Skin Care Plants',               description: 'Botanicals for a radiant, healthy complexion.',          image: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=600&q=80', plants: ['aloe-vera', 'licorice', 'tea-tree', 'green-tea', 'rosemary'] },
     ],
   },
   {
@@ -2298,10 +4626,10 @@ export const CATEGORIES = [
     color: 'bg-tertiary-fixed text-on-tertiary-fixed',
     image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80',
     subcategories: [
-      { id: 'constipation-relief', name: 'Constipation Relief Plants', description: 'Support healthy bowel motility and regularity.',         image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80' },
-      { id: 'diarrhea-support',    name: 'Diarrhea Support Plants',    description: 'Astringent herbs to soothe and settle the tract.',      image: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?w=600&q=80' },
-      { id: 'dyspepsia',           name: 'Dyspepsia',                  description: 'Herbal relief for indigestion and stomach discomfort.', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80' },
-      { id: 'ibs',                 name: 'IBS',                        description: 'Calming carminatives to manage IBS symptoms.',          image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=600&q=80' },
+      { id: 'constipation-relief', name: 'Constipation Relief Plants', description: 'Support healthy bowel motility and regularity.',         image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80', plants: ['senna', 'psyllium', 'castor'] },
+      { id: 'diarrhea-support',    name: 'Diarrhea Support Plants',    description: 'Astringent herbs to soothe and settle the tract.',      image: 'https://images.unsplash.com/photo-1556910103-1c02745a872f?w=600&q=80', plants: ['peppermint', 'chamomile', 'ginger', 'fennel'] },
+      { id: 'dyspepsia',           name: 'Dyspepsia',                  description: 'Herbal relief for indigestion and stomach discomfort.', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80', plants: ['peppermint', 'chamomile', 'fennel'] },
+      { id: 'ibs',                 name: 'IBS',                        description: 'Calming carminatives to manage IBS symptoms.',          image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=600&q=80', plants: ['peppermint', 'psyllium', 'ginger'] },
     ],
   },
   {
@@ -2314,10 +4642,10 @@ export const CATEGORIES = [
     color: 'bg-primary-fixed text-on-primary-fixed',
     image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
     subcategories: [
-      { id: 'cold',      name: 'Cold',      description: 'Herbs to ease cold symptoms and speed recovery.',           image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80' },
-      { id: 'rhinitis',  name: 'Rhinitis',  description: 'Botanical support for nasal inflammation and runny nose.',  image: 'https://images.unsplash.com/photo-1515023677547-593d7638cbd6?w=600&q=80' },
-      { id: 'sinusitis', name: 'Sinusitis', description: 'Clear congestion and sinus pressure naturally.',             image: 'https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?w=600&q=80' },
-      { id: 'cough',     name: 'Cough',     description: 'Soothing herbs for irritated throats and airways.',         image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80' },
+      { id: 'cold',      name: 'Cold',      description: 'Herbs to ease cold symptoms and speed recovery.',           image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80', plants: ['eucalyptus', 'ginger', 'lemon'] },
+      { id: 'rhinitis',  name: 'Rhinitis',  description: 'Botanical support for nasal inflammation and runny nose.',  image: 'https://images.unsplash.com/photo-1515023677547-593d7638cbd6?w=600&q=80', plants: ['butterbur', 'stinging-nettle', 'black-seed'] },
+      { id: 'sinusitis', name: 'Sinusitis', description: 'Clear congestion and sinus pressure naturally.',             image: 'https://images.unsplash.com/photo-1611909023032-2d6b3134ecba?w=600&q=80', plants: ['pelargonium', 'eucalyptus', 'black-elderberry'] },
+      { id: 'cough',     name: 'Cough',     description: 'Soothing herbs for irritated throats and airways.',         image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80', plants: ['guava', 'anise', 'thyme', 'licorice'] },
     ],
   },
   {
@@ -2330,9 +4658,24 @@ export const CATEGORIES = [
     color: 'bg-secondary-fixed text-on-secondary-fixed',
     image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80',
     subcategories: [
-      { id: 'immune-boosting',   name: 'Immune Boosting Plants',   description: 'Deep immune system support with powerful botanicals.', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80' },
+      { id: 'immune-boosting',   name: 'Immune Boosting Plants',   description: 'Deep immune system support with powerful botanicals.', image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80', plants: ['echinacea', 'black-seed', 'astragalus'] },
       { id: 'anti-oxidant-rich', name: 'Anti-Oxidant Rich Plants', description: 'Protect cells from oxidative stress and damage.',     image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=600&q=80' },
-      { id: 'anti-inflammatory', name: 'Anti-Inflammatory Plants', description: 'Modulate the inflammatory response naturally.',       image: 'https://images.unsplash.com/photo-1608681283623-68d80f836109?w=600&q=80' },
+      { id: 'anti-inflammatory', name: 'Anti-Inflammatory Plants', description: 'Modulate the inflammatory response naturally.',       image: 'https://images.unsplash.com/photo-1608681283623-68d80f836109?w=600&q=80', plants: ['turmeric', 'ginger', 'rosemary', 'garlic'] },
+    ],
+  },
+  {
+    id: 'uti',
+    name: 'Urinary Tract Health',
+    icon: 'water_drop',
+    description: 'Botanical support for urinary tract infections, diuresis, and prostate health.',
+    longDescription: 'A specialized collection of medicinal plants addressing urinary tract wellness. From antiseptic herbs that fight urinary pathogens, to aquaretic diuretics that flush the urinary tract, to evidence-based phytomedicines for benign prostatic hyperplasia: these botanicals offer validated support for urological health.',
+    tags: ['Diuretic', 'Antiseptic', 'Medicinal'],
+    color: 'bg-primary-fixed text-on-primary-fixed',
+    image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80',
+    subcategories: [
+      { id: 'anti-septic', name: 'Anti-Septic Plants',  description: 'Antimicrobial botanicals for urinary tract antisepsis.',         image: 'https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=600&q=80', plants: ['clove', 'garlic', 'witch-hazel'] },
+      { id: 'diuretics',   name: 'Diuretic Plants',     description: 'Aquaretic herbs that flush the urinary tract naturally.',        image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80', plants: ['dandelion', 'parsley', 'halfabar'] },
+      { id: 'bph',         name: 'BPH Support Plants',  description: 'Phytomedicines for benign prostatic hyperplasia management.',    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&q=80', plants: ['saw-palmetto', 'stinging-nettle-root', 'pygeum'] },
     ],
   },
 ];
@@ -2348,7 +4691,7 @@ export const SYMPTOM_TAG_MAP = {
   'Acne':                    ['aloe-vera', 'tea-tree', 'green-tea', 'licorice'],
   'Wound healing':           ['aloe-vera', 'tea-tree'],
   'Fungal infection':        ['tea-tree'],
-  'Dandruff':                ['tea-tree', 'rosemary'],
+  'Dandruff':                ['tea-tree', 'rosemary', 'garlic'],
   'Minor wounds':            ['tea-tree', 'aloe-vera'],
   'Hyperpigmentation':       ['licorice', 'green-tea'],
   'Dark spots':              ['licorice', 'green-tea'],
@@ -2356,10 +4699,17 @@ export const SYMPTOM_TAG_MAP = {
   'Eczema':                  ['licorice', 'aloe-vera'],
   'Cough':                   ['licorice', 'lemon', 'ginger', 'eucalyptus'],
   'Sore throat':             ['licorice', 'lemon', 'ginger', 'eucalyptus'],
-  'Hair loss':               ['rosemary'],
-  'Scalp issues':            ['rosemary', 'tea-tree'],
+  'Hair loss':               ['rosemary', 'rocket', 'garlic'],
+  'Scalp issues':            ['rosemary', 'tea-tree', 'garlic', 'rocket'],
+  'Hair breakage':           ['rocket', 'garlic'],
   'Memory':                  ['rosemary'],
-  'Digestive discomfort':    ['rosemary', 'ginger', 'dill-seed', 'fennel', 'cinnamon'],
+  'Constipation':            ['senna', 'psyllium', 'castor'],
+  'Bowel irregularity':      ['senna', 'psyllium', 'castor'],
+  'Diarrhea':                ['peppermint', 'chamomile', 'ginger', 'fennel'],
+  'IBS symptoms':            ['peppermint', 'chamomile'],
+  'Abdominal cramps':        ['peppermint', 'chamomile', 'ginger', 'fennel'],
+  'Gastritis':               ['chamomile', 'licorice'],
+  'Digestive discomfort':    ['rosemary', 'ginger', 'dill-seed', 'fennel', 'cinnamon', 'peppermint', 'chamomile'],
   'Low milk supply':         ['fenugreek', 'fennel', 'moringa'],
   'Infant colic':            ['fennel', 'dill-seed'],
   'Bloating':                ['fennel', 'dill-seed'],
@@ -2382,4 +4732,26 @@ export const SYMPTOM_TAG_MAP = {
   'High cholesterol':        ['black-seed', 'fenugreek'],
   'Chronic fatigue':         ['astragalus'],
   'Recurrent infections':    ['echinacea', 'astragalus'],
+  'Joint pain':              ['ginger', 'turmeric', 'rosemary', 'stinging-nettle'],
+  'Chronic inflammation':    ['turmeric', 'ginger', 'rosemary', 'garlic'],
+  'Arthritis':               ['turmeric', 'ginger', 'stinging-nettle'],
+  'Liver support':           ['turmeric', 'dandelion'],
+  'Oral infections':         ['clove', 'tea-tree'],
+  'Toothache':               ['clove'],
+  'Gum inflammation':        ['clove', 'tea-tree'],
+  'Hemorrhoid symptoms':     ['witch-hazel'],
+  'Fluid retention':         ['dandelion', 'parsley'],
+  'Kidney stones':           ['parsley', 'halfabar', 'dandelion'],
+  'Ureteric colic':          ['halfabar'],
+  'Renal colic':             ['halfabar'],
+  'Urinary tract infections':['cranberry', 'parsley', 'garlic'],
+  'Recurrent UTIs':          ['cranberry'],
+  'Weak urine stream':       ['saw-palmetto', 'pygeum', 'stinging-nettle-root'],
+  'Urinary hesitancy':       ['saw-palmetto', 'pygeum', 'stinging-nettle-root'],
+  'Nocturia':                ['saw-palmetto', 'pygeum', 'stinging-nettle-root'],
+  'BPH symptoms':            ['saw-palmetto', 'pygeum', 'stinging-nettle-root'],
+  'Bronchitis':              ['thyme', 'anise', 'licorice', 'eucalyptus'],
+  'Sinusitis':               ['pelargonium', 'eucalyptus', 'black-elderberry'],
+  'Influenza':               ['black-elderberry', 'echinacea', 'ginger'],
+  'Productive cough':        ['thyme', 'anise', 'eucalyptus', 'licorice', 'guava'],
 };

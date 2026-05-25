@@ -8,7 +8,7 @@ const LinkedInIcon = () => (
 );
 
 const PlantLogoFooter = () => (
-  <svg className="w-10 h-10 text-[#436F4D] mr-2 -mt-1" fill="none" stroke="currentColor"
+  <svg className="w-10 h-10 text-[#436F4D] me-2 -mt-1" fill="none" stroke="currentColor"
     strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
     <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
     <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
@@ -29,7 +29,7 @@ export default function Footer() {
     <footer className="bg-surface-container-low w-full pt-16 pb-8 border-t border-outline-variant relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#436F4D]/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
-      <div className="flex flex-col md:flex-row justify-between items-center px-5 md:px-16 max-w-container mx-auto gap-10 text-center md:text-left">
+      <div className="flex flex-col md:flex-row justify-between items-center px-5 md:px-16 max-w-container mx-auto gap-10 text-center md:text-start">
         <Link to="/" className="flex items-center hover:scale-105 transition-transform duration-300">
           <PlantLogoFooter />
           <span className="font-caslon text-4xl font-bold text-[#436F4D] tracking-tight">
@@ -69,6 +69,7 @@ export default function Footer() {
           </a>
         </div>
       </div>
+
     </footer>
   );
 }

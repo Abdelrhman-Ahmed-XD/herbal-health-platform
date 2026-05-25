@@ -50,14 +50,16 @@ export const TRANSLATIONS = {
     cats_title: 'Apothecary Collections',
     cats_sub: "Browse plants grouped by health area. Each profile includes active compounds, mechanisms of action, dosage guidance, and clinical evidence.",
     cats_explore: 'Explore Collection',
-    cat_immunity_name: 'Immunity', cat_immunity_tagline: 'Echinacea, Black Seed, and Astragalus — plants with clinical evidence for immune activation and antiviral defense.',
-    cat_immunity_long: "Plants with documented effects on immune activation — from T-cell stimulation to interferon production. Each profile includes clinical evidence, dosage ranges, and safety data.",
+    cat_immunity_name: 'Immunity', cat_immunity_tagline: 'Echinacea, Black Seed, and Astragalus: plants with clinical evidence for immune activation and antiviral defense.',
+    cat_immunity_long: "Plants with documented effects on immune activation: from T-cell stimulation to interferon production. Each profile includes clinical evidence, dosage ranges, and safety data.",
     cat_digestive_name: 'Digestive Health', cat_digestive_tagline: 'Soothe and optimize the digestive system with bitter tonics and carminatives like Ginger and Peppermint.',
-    cat_digestive_long: 'From bitter tonics that trigger digestive enzymes to carminatives that relieve cramping — plants with documented effects on gut function and symptom relief.',
-    cat_respiratory_name: 'Respiratory Health', cat_respiratory_tagline: 'Eucalyptus, Butterbur, and Lemon — for colds, rhinitis, and bronchial inflammation.',
+    cat_digestive_long: 'From bitter tonics that trigger digestive enzymes to carminatives that relieve cramping: plants with documented effects on gut function and symptom relief.',
+    cat_respiratory_name: 'Respiratory Health', cat_respiratory_tagline: 'Eucalyptus, Butterbur, and Lemon: for colds, rhinitis, and bronchial inflammation.',
     cat_respiratory_long: 'Plants with proven effects on airway clearance, mucus reduction, and bronchial inflammation. Covers colds, seasonal allergies, and chronic respiratory conditions.',
-    cat_womens_name: "Women's Health", cat_womens_tagline: 'Ginger, Cinnamon, Fenugreek — menstrual pain, lactation, and skin health with clinical evidence.',
+    cat_womens_name: "Women's Health", cat_womens_tagline: 'Ginger, Cinnamon, Fenugreek: menstrual pain, lactation, and skin health with clinical evidence.',
     cat_womens_long: "Plants with clinical evidence for menstrual pain, hormonal regulation, lactation support, and skin health. Each profile includes safety data specific to pregnancy and breastfeeding.",
+    cat_uti_name: 'Urinary Tract Health', cat_uti_tagline: 'Clove, Dandelion, Saw Palmetto: antiseptic, diuretic, and prostate-supporting botanicals for urinary wellness.',
+    cat_uti_long: 'A specialized collection addressing urinary tract wellness: from antimicrobial herbs that fight urinary pathogens, to aquaretic diuretics that flush the tract, to evidence-based phytomedicines for benign prostatic hyperplasia.',
     plant_view_profile: 'View Profile', plant_save: 'Save plant',
     plant_save_journal: 'Save to Journal', plant_history: 'History & Origin',
     plant_benefits: 'Scientific Benefits',
@@ -105,10 +107,19 @@ export const TRANSLATIONS = {
     res_focus: 'Focus Area', res_symptoms: 'Key Symptoms', res_recommended: 'Recommended Plants for You',
     res_explore_all: 'Explore All Categories', res_retake: 'Retake Questionnaire',
     res_disclaimer: '⚠️ These recommendations are for educational purposes only. Always consult a qualified healthcare provider.',
-    about_title: 'About Nabta', about_sub: 'Nabta documents medicinal plants with clinical evidence, active compound data, dosage guidance, and safety profiles — in both English and Arabic.',
+    about_title: 'About Nabta', about_sub: 'Nabta documents medicinal plants with clinical evidence, active compound data, dosage guidance, and safety profiles, in both English and Arabic.',
     about_evidence: 'Evidence-Based', about_evidence_desc: 'Every profile includes peer-reviewed research, active constituents, mechanisms of action, and clinical evidence grades.',
     about_sourced: 'Data Sources', about_sourced_desc: 'Plant data is drawn from pharmacopoeias, peer-reviewed journals, and validated traditional medicine records.',
     about_education: 'Botanical Education', about_education_desc: 'Reference material for informed decisions. Not a substitute for medical consultation.',
+    about_stats_title: 'Platform Statistics',
+    about_stats_visitors: 'Website Visitors', about_stats_visitors_sub: 'Total visits',
+    about_stats_plants: 'Plants in Database', about_stats_plants_sub: 'Active this month',
+    about_stats_questionnaires: 'Questionnaires Completed', about_stats_questionnaires_sub: 'Community responses',
+    about_stats_top_plant: 'Most Viewed Plant', about_stats_top_sub: 'This month',
+    about_stats_categories: 'Research Categories', about_stats_categories_sub: 'Health areas covered',
+    about_stats_loading: 'Loading...',
+    about_team_title: 'Meet the Team',
+    about_team_sub: 'The dedicated pharmacists behind Nabta',
     about_disclaimer_title: 'Important Disclaimer',
     about_disclaimer: 'All information on Nabta is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare provider before starting any herbal regimen, especially if pregnant, nursing, or taking medications.',
     footer_privacy: 'Privacy Policy', footer_sourcing: 'Ethical Sourcing',
@@ -117,7 +128,7 @@ export const TRANSLATIONS = {
     chat_title: 'Botanical Guide', chat_powered: 'Powered by Nabta AI',
     chat_placeholder: 'Ask about herbs, symptoms...',
     chat_disclaimer: 'Educational info only • Not medical advice',
-    chat_welcome: "Hello! 🌿 I'm Nabta's herbal assistant. Ask me about a plant, a symptom, or a health condition — I'll answer from the clinical database.",
+    chat_welcome: "Hello! 🌿 I'm Nabta's herbal assistant. Ask me about a plant, a symptom, or a health condition and I'll answer from the clinical database.",
     chat_suggest_1: 'Boost my immunity', chat_suggest_2: 'Help with digestion',
     chat_suggest_3: "I'm stressed", chat_suggest_4: 'Cough remedies',
     not_found: 'Not found', back_categories: '← Back to Categories',
@@ -133,6 +144,7 @@ export const TRANSLATIONS = {
     sub_sinusitis: 'Sinusitis', sub_cough: 'Cough',
     sub_immune: 'Immune Boosting Plants', sub_antioxidant: 'Anti-Oxidant Rich Plants',
     sub_antiinflammatory: 'Anti-Inflammatory Plants',
+    sub_antiseptic: 'Anti-Septic Plants', sub_diuretics: 'Diuretic Plants', sub_bph: 'BPH Support Plants',
     // ── Subcategory descriptions ──────────────────────────────────────────
     sub_menstrual_desc: 'Support for cycle regulation and hormonal balance.',
     sub_pregnancy_desc: 'Gentle, nourishing botanicals for expectant mothers.',
@@ -150,6 +162,9 @@ export const TRANSLATIONS = {
     sub_immune_desc: 'Deep immune system support with powerful botanicals.',
     sub_antioxidant_desc: 'Protect cells from oxidative stress and damage.',
     sub_antiinflammatory_desc: 'Natural anti-inflammatory plant compounds.',
+    sub_antiseptic_desc: 'Antimicrobial botanicals for urinary tract antisepsis.',
+    sub_diuretics_desc: 'Aquaretic herbs that flush the urinary tract naturally.',
+    sub_bph_desc: 'Phytomedicines for benign prostatic hyperplasia management.',
     // ── Chart display names for new questionnaire sub_concern slugs ───────
     chart_menstrual_health: 'Menstrual', chart_pregnancy_support: 'Pregnancy',
     chart_breast_feeding: 'Breastfeeding', chart_hair_care: 'Hair Care',
@@ -233,14 +248,16 @@ export const TRANSLATIONS = {
     cats_title: 'مجموعات الصيدلية',
     cats_sub: 'تصفح النباتات مرتبةً حسب مجال الصحة. يتضمن كل ملف المركبات الفعّالة وآليات الفعل وإرشادات الجرعة والدليل السريري.',
     cats_explore: 'استكشف المجموعة',
-    cat_immunity_name: 'المناعة', cat_immunity_tagline: 'الإشنسا والحبة السوداء والأسترغالوس — نباتات ذات دليل سريري لتنشيط المناعة والدفاع الفيروسي.',
-    cat_immunity_long: 'نباتات ذات آثار موثّقة على تنشيط المناعة — من تفعيل خلايا T إلى إنتاج الإنترفيرون. يتضمن كل ملف الدليل السريري ونطاقات الجرعة وبيانات السلامة.',
+    cat_immunity_name: 'المناعة', cat_immunity_tagline: 'الإشنسا والحبة السوداء والأسترغالوس: نباتات ذات دليل سريري لتنشيط المناعة والدفاع الفيروسي.',
+    cat_immunity_long: 'نباتات ذات آثار موثّقة على تنشيط المناعة؛ من تفعيل خلايا T إلى إنتاج الإنترفيرون. يتضمن كل ملف الدليل السريري ونطاقات الجرعة وبيانات السلامة.',
     cat_digestive_name: 'صحة الجهاز الهضمي', cat_digestive_tagline: 'هدّئ الجهاز الهضمي وحسّن أداءه بالمقويات المرة والكارميناتيف كالزنجبيل والنعناع.',
-    cat_digestive_long: 'من المقويات المرة التي تحفّز إنزيمات الهضم إلى الكارميناتيف التي تخفف التشنجات — نباتات ذات آثار موثّقة على وظائف الأمعاء وتخفيف الأعراض.',
-    cat_respiratory_name: 'صحة الجهاز التنفسي', cat_respiratory_tagline: 'الإيكاليبتوس والبتربور والليمون — للبرد والتهاب الأنف والالتهاب القصبي.',
+    cat_digestive_long: 'من المقويات المرة التي تحفّز إنزيمات الهضم إلى الكارميناتيف التي تخفف التشنجات؛ نباتات ذات آثار موثّقة على وظائف الأمعاء وتخفيف الأعراض.',
+    cat_respiratory_name: 'صحة الجهاز التنفسي', cat_respiratory_tagline: 'الإيكاليبتوس والبتربور والليمون: للبرد والتهاب الأنف والالتهاب القصبي.',
     cat_respiratory_long: 'نباتات ذات آثار مثبتة على تصفية مجرى الهواء وتقليل المخاط والالتهاب القصبي. تشمل ملفات للبرد والحساسية الموسمية والحالات التنفسية المزمنة.',
-    cat_womens_name: "صحة المرأة", cat_womens_tagline: 'الزنجبيل والقرفة والحلبة — آلام الدورة الشهرية والرضاعة وصحة البشرة بالدليل السريري.',
+    cat_womens_name: "صحة المرأة", cat_womens_tagline: 'الزنجبيل والقرفة والحلبة: آلام الدورة الشهرية والرضاعة وصحة البشرة بالدليل السريري.',
     cat_womens_long: 'نباتات ذات دليل سريري لآلام الدورة الشهرية وتنظيم الهرمونات ودعم الرضاعة وصحة البشرة. يتضمن كل ملف بيانات السلامة الخاصة بالحمل والرضاعة.',
+    cat_uti_name: 'صحة المسالك البولية', cat_uti_tagline: 'القرنفل والهندباء وسو بالميتو: نباتات مطهّرة ومُدرّة وداعمة للبروستات لصحة الجهاز البولي.',
+    cat_uti_long: 'مجموعة متخصصة لصحة المسالك البولية؛ من الأعشاب المضادة للميكروبات التي تحارب مسببات التهابات المسالك، إلى المدرّات المائية التي تُنظّف المسالك، إلى الأدوية النباتية المدعومة بالأدلة لتضخّم البروستات الحميد.',
     plant_view_profile: 'عرض الملف', plant_save: 'حفظ النبتة',
     plant_save_journal: 'حفظ في المجلة', plant_history: 'التاريخ والأصل',
     plant_benefits: 'الفوائد العلمية',
@@ -289,10 +306,19 @@ export const TRANSLATIONS = {
     res_recommended: 'النباتات الموصى بها لك', res_explore_all: 'استكشف جميع التصنيفات',
     res_retake: 'أعد الاستبيان',
     res_disclaimer: '⚠️ هذه التوصيات لأغراض تعليمية فقط. استشر دائماً مقدم الرعاية الصحية المؤهل.',
-    about_title: 'عن نبتة', about_sub: 'نبتة توثّق النباتات الطبية بالدليل السريري والمركبات الفعّالة وإرشادات الجرعة وملفات السلامة — بالعربية والإنجليزية.',
+    about_title: 'عن نبتة', about_sub: 'نبتة توثّق النباتات الطبية بالدليل السريري والمركبات الفعّالة وإرشادات الجرعة وملفات السلامة؛ بالعربية والإنجليزية.',
     about_evidence: 'قائم على الأدلة', about_evidence_desc: 'يتضمن كل ملف أبحاثاً محكّمة ومكونات فعّالة وآليات الفعل ودرجات الدليل السريري.',
     about_sourced: 'مصادر البيانات', about_sourced_desc: 'تُستقى بيانات النباتات من الفارماكوبيا والدوريات العلمية المحكّمة وسجلات الطب التقليدي الموثّقة.',
     about_education: 'تعليم نباتي', about_education_desc: 'مرجع للقرارات المبنية على المعرفة. ليس بديلاً عن الاستشارة الطبية.',
+    about_stats_title: 'إحصائيات المنصة',
+    about_stats_visitors: 'زوّار الموقع', about_stats_visitors_sub: 'إجمالي الزيارات',
+    about_stats_plants: 'نباتات في قاعدة البيانات', about_stats_plants_sub: 'نشطة هذا الشهر',
+    about_stats_questionnaires: 'استبيانات مكتملة', about_stats_questionnaires_sub: 'استجابات المجتمع',
+    about_stats_top_plant: 'أكثر النباتات مشاهدة', about_stats_top_sub: 'هذا الشهر',
+    about_stats_categories: 'فئات البحث', about_stats_categories_sub: 'مجالات صحية مُغطّاة',
+    about_stats_loading: 'جارٍ التحميل...',
+    about_team_title: 'فريق العمل',
+    about_team_sub: 'الصيادلة المتخصصون وراء نبتة',
     about_disclaimer_title: 'إخلاء مسؤولية مهم',
     about_disclaimer: 'جميع المعلومات على نبتة لأغراض تعليمية فقط ولا تُعدّ نصيحة طبية. استشر دائماً مقدم رعاية صحية مؤهلاً قبل البدء بأي نظام عشبي.',
     footer_privacy: 'سياسة الخصوصية', footer_sourcing: 'الاستدامة الأخلاقية',
@@ -301,7 +327,7 @@ export const TRANSLATIONS = {
     chat_title: 'المرشد النباتي', chat_powered: 'مدعوم من نبتة AI',
     chat_placeholder: 'اسأل عن الأعشاب أو الأعراض...',
     chat_disclaimer: 'معلومات تعليمية فقط • ليست نصيحة طبية',
-    chat_welcome: 'مرحباً! 🌿 أنا مساعد نبتة العشبي. اسألني عن نبات أو عرض أو حالة صحية — سأجيبك من قاعدة البيانات السريرية.',
+    chat_welcome: 'مرحباً! 🌿 أنا مساعد نبتة العشبي. اسألني عن نبات أو عرض أو حالة صحية وسأجيبك من قاعدة البيانات السريرية.',
     chat_suggest_1: 'تعزيز مناعتي', chat_suggest_2: 'مساعدة في الهضم',
     chat_suggest_3: 'أعاني من التوتر', chat_suggest_4: 'علاجات السعال',
     not_found: 'غير موجود', back_categories: '← العودة إلى التصنيفات',
@@ -317,6 +343,7 @@ export const TRANSLATIONS = {
     sub_sinusitis: 'التهاب الجيوب الأنفية', sub_cough: 'السعال',
     sub_immune: 'نباتات تقوية المناعة', sub_antioxidant: 'نباتات غنية بمضادات الأكسدة',
     sub_antiinflammatory: 'نباتات مضادة للالتهابات',
+    sub_antiseptic: 'نباتات مطهّرة', sub_diuretics: 'نباتات مُدرّة للبول', sub_bph: 'نباتات دعم البروستات',
     // ── أوصاف التصنيفات الفرعية ───────────────────────────────────────────
     sub_menstrual_desc: 'دعم تنظيم الدورة الشهرية والتوازن الهرموني.',
     sub_pregnancy_desc: 'نباتات لطيفة ومغذية للأمهات الحوامل.',
@@ -334,6 +361,9 @@ export const TRANSLATIONS = {
     sub_immune_desc: 'دعم عميق للجهاز المناعي بنباتات فعّالة.',
     sub_antioxidant_desc: 'حماية الخلايا من الإجهاد التأكسدي والتلف.',
     sub_antiinflammatory_desc: 'مركبات نباتية طبيعية مضادة للالتهابات.',
+    sub_antiseptic_desc: 'نباتات مضادة للميكروبات لتطهير المسالك البولية.',
+    sub_diuretics_desc: 'أعشاب مُدرّة مائية تنظّف المسالك البولية طبيعياً.',
+    sub_bph_desc: 'أدوية نباتية لإدارة تضخّم البروستات الحميد.',
     // ── أسماء عرض الرسم البياني للاستبيان الجديد ─────────────────────────
     chart_menstrual_health: 'الدورة الشهرية', chart_pregnancy_support: 'الحمل',
     chart_breast_feeding: 'الرضاعة', chart_hair_care: 'الشعر',
@@ -693,7 +723,7 @@ export const PLANT_TRANSLATIONS = {
         'تفاعلات تحسسية نادرة',
       ],
       contraindications: [
-        'حصى المرارة: قد يزيد تدفق الصفراء — استشر طبيبك',
+        'حصى المرارة: قد يزيد تدفق الصفراء؛ استشر طبيبك',
         'اضطرابات النزيف: تأثير مضاد خفيف للصفيحات',
         'الحمل: الجرعات الكبيرة تستوجب إشرافاً طبياً',
       ],
@@ -824,7 +854,7 @@ export const PLANT_TRANSLATIONS = {
     },
     dandelion: {
       name: 'الهندباء', shortDescription: 'منشّط مرّ قوي يحفّز وظيفة الكبد ويدعم إنتاج الصفراء ويُطهّر الجهاز الهضمي بلطف.',
-      description: 'الهندباء من أكمل النباتات الدوائية المتاحة، إذ تقدم كل أجزائها—الجذر والورق والزهرة—تأثيرات طبية مميزة.',
+      description: 'الهندباء من أكمل النباتات الدوائية المتاحة، إذ تقدم كل أجزائها (الجذر والورق والزهرة) تأثيرات طبية مميزة.',
       history: 'استُخدمت طبياً لأكثر من 1000 عام في التقاليد الأوروبية والصينية والأمريكية الأصلية.',
       benefits: [
         { icon: 'nutrition', title: 'منشّط الكبد', desc: 'المركبات المرة تحفّز إنتاج الصفراء، مما يدعم هضم الدهون وتطهير الكبد.' },
@@ -886,9 +916,9 @@ export const PLANT_TRANSLATIONS = {
       ],
       symptoms: ['جهاز تنفسي', 'سعال', 'التهاب الجيوب', 'برد'],
       warnings: [
-        'خطر حرج: لا تُطبِّق الزيت الأساسي بالقرب من وجه الأطفال أقل من سنتين أبداً — خطر توقف التنفس.',
+        'خطر حرج: لا تُطبِّق الزيت الأساسي بالقرب من وجه الأطفال أقل من سنتين أبداً؛ خطر توقف التنفس.',
         'لا تبتلع الزيت الأساسي الخالص: شديد السمية عند الابتلاع.',
-        'مرضى الربو: استخدامه بحذر شديد — قد يُحفِّز تشنج الشعب الهوائية لدى بعض المرضى.',
+        'مرضى الربو: استخدامه بحذر شديد؛ قد يُحفِّز تشنج الشعب الهوائية لدى بعض المرضى.',
       ],
       activeConstituents: [
         { name: '1,8-سينيول / إيكاليبتول (الأساسي، 70-90%)', percentage: '70-90%', effect: 'طارد للبلغم؛ موسِّع للشعب الهوائية؛ مُزيل الاحتقان؛ مضاد للميكروبات؛ محلِّل للمخاط' },
@@ -916,7 +946,7 @@ export const PLANT_TRANSLATIONS = {
         { method: 'شاي الأوراق', instruction: 'انقع 1-2 غرام أوراق مجففة في ماء ساخن 5-10 دقائق. اشرب كوباً مرتين يومياً.' },
       ],
       suitableAgeGroups: [
-        { group: 'الأطفال (<2 سنة)', notes: 'محظور تماماً تطبيقه بالقرب من الوجه أو الصدر — خطر توقف التنفس.' },
+        { group: 'الأطفال (أقل من سنتين)', notes: 'محظور تماماً تطبيقه بالقرب من الوجه أو الصدر؛ خطر توقف التنفس.' },
         { group: 'الأطفال (2-12 سنة)', notes: 'تخفيف عالٍ جداً (<0.5%) للاستخدام الموضعي؛ الاستنشاق بحذر.' },
         { group: 'البالغون', notes: 'آمن بالتخفيف الصحيح للاستخدام الموضعي؛ الاستنشاق فعّال جداً.' },
         { group: 'مرضى الربو والصرع', notes: 'استخدام بحذر شديد جداً؛ قد يُحفِّز نوبات في بعض المرضى.' },
@@ -932,7 +962,7 @@ export const PLANT_TRANSLATIONS = {
       overdose: {
         symptoms: [
           'جرعة زائدة موضعية: تهيج جلدي حاد، احمرار، حرق.',
-          'ابتلاع الزيت الأساسي: سمية جهازية حادة — اكتئاب الجهاز العصبي المركزي، نوبات تشنجية، فشل تنفسي.',
+          'ابتلاع الزيت الأساسي: سمية جهازية حادة؛ اكتئاب الجهاز العصبي المركزي، نوبات تشنجية، فشل تنفسي.',
         ],
         management: [
           'موضعي: اغسل فوراً بماء وصابون.',
@@ -946,7 +976,7 @@ export const PLANT_TRANSLATIONS = {
       ],
       contraindications: [
         'الأطفال أقل من سنتين: لا يُطبَّق على الوجه أو الصدر',
-        'الربو: استخدام بحذر شديد — قد يُحفِّز تشنجاً',
+        'الربو: استخدام بحذر شديد؛ قد يُحفِّز تشنجاً',
         'الصرع: تجنّبي الاستنشاق المكثَّف',
       ],
       drugInteractions: [],
@@ -1021,7 +1051,7 @@ export const PLANT_TRANSLATIONS = {
       symptoms: ['تساقط الشعر', 'مشاكل فروة الرأس', 'ضعف الدورة الدموية'],
       warnings: [
         'الحمل: الجرعات العلاجية من الزيت الأساسي محظورة (تأثير مُنبِّه للحيض بالتركيزات العالية).',
-        'الصرع: تجنّبي الجرعات العالية من الزيت الأساسي — قد تُحفِّز نوبات.',
+        'الصرع: تجنّبي الجرعات العالية من الزيت الأساسي؛ قد تُحفِّز نوبات.',
         'لا تبتلع الزيت الأساسي الخالص لإكليل الجبل.',
       ],
       activeConstituents: [
@@ -1550,7 +1580,7 @@ export const PLANT_TRANSLATIONS = {
       description: 'المورينغا أولييفيرا شجرة استوائية غنية بالقيمة الغذائية. أوراقها تحتوي على مستويات استثنائية من البروتين والحديد والكالسيوم وفيتامين C. إيزوثيوسيانات الأوراق تُحفِّز إدرار الحليب. الجذور والنباك والأزهار تحتوي على السبيروكين وهو قلويد خطير.',
       symptoms: ['قلة حليب الثدي', 'نقص التغذية', 'ضعف الطاقة', 'ارتفاع السكر'],
       warnings: [
-        'خطر حرج: الجذور والنباك والأزهار تحتوي على السبيروكين قلويد عصبي سام — لا تُستخدم أبداً.',
+        'خطر حرج: الجذور والنباك والأزهار تحتوي على السبيروكين قلويد عصبي سام؛ لا تُستخدم أبداً.',
         'قد تُخفِّض ضغط الدم: حذر شديد عند مرضى انخفاض ضغط الدم أو مستخدمي أدويته.',
         'الحامل: الكميات الغذائية من الأوراق آمنة؛ المستخلصات المركَّزة تستوجب استشارة طبية.',
       ],
@@ -1596,7 +1626,7 @@ export const PLANT_TRANSLATIONS = {
       overdose: {
         symptoms: [
           'جرعة زائدة فموية من الأوراق: عدم راحة هضمي خفيف، غثيان، إسهال.',
-          'جذور أو نباك أو أزهار: سمية عصبية خطيرة من السبيروكين — تستوجب تدخلاً طبياً طارئاً فورياً.',
+          'جذور أو نباك أو أزهار: سمية عصبية خطيرة من السبيروكين؛ تستوجب تدخلاً طبياً طارئاً فورياً.',
         ],
         management: [
           'جرعة زائدة من الأوراق: تقليل الجرعة وعلاج أعراض الجهاز الهضمي.',
@@ -1628,8 +1658,8 @@ export const PLANT_TRANSLATIONS = {
       description: 'بذور الشبت Anethum graveolens تحتوي على مركبات فيتوإستروجين تُوازن الأعراض الهرمونية وتُرخِّي العضلات الملساء الرحمية. البذور هي الجزء الطبي فقط؛ الأوراق لا تملك هذه الخصائص. يُحظر استخدامها إطلاقاً أثناء الحمل.',
       symptoms: ['تشنجات الدورة الشهرية', 'انتفاخ الحيض', 'غثيان الدورة', 'غازات الجهاز الهضمي'],
       warnings: [
-        'محظور تماماً أثناء الحمل: مُسقِط للجنين قوي ومُحفِّز شديد للحيض — خطر الإجهاض مرتفع جداً.',
-        'قصور الغدة الدرقية: يُخفِّض مستويات هرمون الغدة الدرقية بشكل ملحوظ — يُحظر الاستخدام.',
+        'محظور تماماً أثناء الحمل: مُسقِط للجنين قوي ومُحفِّز شديد للحيض؛ خطر الإجهاض مرتفع جداً.',
+        'قصور الغدة الدرقية: يُخفِّض مستويات هرمون الغدة الدرقية بشكل ملحوظ؛ يُحظر الاستخدام.',
         'الرضع أقل من 12 شهراً: لا يُعطى أبداً حتى في صيغة الشاي الخفيف.',
       ],
       activeConstituents: [
@@ -1638,12 +1668,12 @@ export const PLANT_TRANSLATIONS = {
         { name: 'α-فيلاندرين', percentage: '', effect: 'خصائص مضادة للبكتيريا الثانوية' },
       ],
       moa: [
-        { title: 'مُرخٍّ للعضلات الملساء', detail: 'الكارفون يُرخِّي العضلات الملساء بحجب تدفق الكالسيوم المعتمد على الجهد في الرحم والجهاز الهضمي — يُخفِّف التشنجات الشديدة.' },
+        { title: 'مُرخٍّ للعضلات الملساء', detail: 'الكارفون يُرخِّي العضلات الملساء بحجب تدفق الكالسيوم المعتمد على الجهد في الرحم والجهاز الهضمي؛ يُخفِّف التشنجات الشديدة.' },
         { title: 'طارد للغازات', detail: 'الزيوت المتطايرة تُحفِّز حركة الجهاز الهضمي وتُرخِّي العضلة العاصرة المريئية السفلى مما يُسرِّع طرح الغازات المحبوسة.' },
         { title: 'مضاد للميكروبات المعوية', detail: 'تأثير مثبِّط للبكتيريا ضد E. coli والمكورات العنقودية في الجهاز الهضمي.' },
       ],
       uses: [
-        'عسر الطمث الأولي (تشنجات الدورة الشهرية — مثيل لحمض الميفيناميك في التجارب السريرية)',
+        'عسر الطمث الأولي (تشنجات الدورة الشهرية، مثيل لحمض الميفيناميك في التجارب السريرية)',
         'مغص الرضع (شاي خفيف فقط، للأعمار >6 أشهر)',
         'الانتفاخ وغازات الجهاز الهضمي',
         'عسر الهضم الوظيفي والتشنجات المعوية',
@@ -1701,7 +1731,7 @@ export const PLANT_TRANSLATIONS = {
       symptoms: ['تشنجات الدورة الشهرية', 'ارتفاع السكر', 'التهاب المفاصل', 'صعوبة الهضم'],
       warnings: [
         'استخدمي القرفة السيلانية فقط للعلاج: قرفة الكاسيا تُسبِّب تلف الكبد من الكومارين عند الجرعات العلاجية.',
-        'قرحة المعدة أو التهاب المعدة الحاد: تتفاقم مع القرفة — يُحظر الاستخدام الفموي.',
+        'قرحة المعدة أو التهاب المعدة الحاد: تتفاقم مع القرفة؛ يُحظر الاستخدام الفموي.',
         'الحمل: الجرعات العلاجية العالية محظورة؛ الكميات الغذائية آمنة.',
       ],
       activeConstituents: [
@@ -1778,13 +1808,13 @@ export const PLANT_TRANSLATIONS = {
       warnings: [
         'خطر حرج: النبات الخام غير المُعالَج يحتوي على ألكالويدات البيروليزيدين (PA) التي تُسبِّب تلفاً كبدياً دائماً وهي مُسبِّبة للسرطان.',
         'استخدمي المستحضرات المُعتمدة الخالية من PA فقط (مثل Petadolex® أو ما يُعادلها).',
-        'الحمل والرضاعة: بيانات السلامة غير كافية — تجنّبي الاستخدام.',
+        'الحمل والرضاعة: بيانات السلامة غير كافية؛ تجنّبي الاستخدام.',
       ],
       activeConstituents: [
         { name: 'بيتاسين وإيزوبيتاسين (لاكتونات سيسكويتيربينية)', percentage: '', effect: 'العوامل المضادة للحساسية الأساسية؛ مُرخِيات للعضلات الملساء؛ مُثبِّطات لتخليق الليكوترين' },
         { name: 'S-بيتاسين', percentage: '', effect: 'نشاط مضاد للشقيقة؛ مُثبِّط لـ5-LOX؛ موسِّع للأوعية' },
         { name: 'لاكتونات سيسكويتيربينية باكينولايد', percentage: '', effect: 'مضادة للالتهاب؛ مضادة للتشنج' },
-        { name: 'مستخلصات خالية من PA (حرج)', percentage: '', effect: 'النبات الخام يحتوي على ألكالويدات البيروليزيدين (PA) — لا يُستخدم إلا المستحضر الخالي من PA' },
+        { name: 'مستخلصات خالية من PA (حرج)', percentage: '', effect: 'النبات الخام يحتوي على ألكالويدات البيروليزيدين (PA)؛ لا يُستخدم إلا المستحضر الخالي من PA' },
       ],
       moa: [
         { title: 'مضاد للحساسية', detail: 'البيتاسين والإيزوبيتاسين يحجبان تخليق الليكوترين (تثبيط 5-LOX) مما يُقلِّل تدهوُّر الخلايا البدينة وإطلاق الهيستامين.' },
@@ -1846,7 +1876,7 @@ export const PLANT_TRANSLATIONS = {
       symptoms: ['التهاب الأنف التحسسي', 'العطس', 'حمى القش', 'حكة العيون'],
       warnings: [
         'استخدمي المستحضرات المُعالَجة فقط (مجففة أو مجمَّدة): النبات الطازج يُسبِّب حروقاً جلدية وشرى فورياً عند اللمس.',
-        'أمراض الكلى: التأثير المُدرّ للبول قد يُجهِّد الكلى المتضررة — استشيري طبيبك.',
+        'أمراض الكلى: التأثير المُدرّ للبول قد يُجهِّد الكلى المتضررة؛ استشيري طبيبك.',
         'الحمل: تجنّبي الجرعات العلاجية لاحتمال تحفيز تقلصات الرحم.',
       ],
       activeConstituents: [
@@ -1903,7 +1933,7 @@ export const PLANT_TRANSLATIONS = {
         'الأدوية المُدرّة للبول: تأثير إضافي',
       ],
       drugInteractions: [
-        'مدرات البول: تأثير مُدرّ إضافي — مراقبة الكهارل ضرورية',
+        'مدرات البول: تأثير مُدرّ إضافي؛ مراقبة الكهارل ضرورية',
         'أدوية ضغط الدم: تعزيز محتمل لتأثير الخفض',
       ],
       storage: {
@@ -2023,7 +2053,7 @@ export const PLANT_TRANSLATIONS = {
       ],
       howToUse: [
         { method: 'بذور مسحوقة طازجاً', instruction: 'اسحقي البذور فوراً قبل الاستخدام مباشرةً. تناولي مع الطعام أو خلطي مع عسل أو ماء. ابدئي بنصف الجرعة الأسبوع الأول.' },
-        { method: 'زيت معصور على البارد', instruction: 'تناولي الزيت مع الوجبة أو بعدها — لا تأخذيه على معدة فارغة. ابدئي بجرعة منخفضة.' },
+        { method: 'زيت معصور على البارد', instruction: 'تناولي الزيت مع الوجبة أو بعدها؛ لا تأخذيه على معدة فارغة. ابدئي بجرعة منخفضة.' },
       ],
       suitableAgeGroups: [
         { group: 'البالغون', notes: 'آمن ضمن الجرعات الموصى بها؛ ابدئي بالجرعة الأدنى الأسبوع الأول.' },
@@ -2069,6 +2099,1923 @@ export const PLANT_TRANSLATIONS = {
         ],
       },
     },
+
+    rocket: {
+      name: 'الجرجير',
+      shortDescription: 'غني بالجلوكوزينولات الكبريتية والإيزوثيوسيانات والأحماض الدهنية الأساسية التي تُغذّي بصيلات الشعر وتُقلّل التكسّر وتدعم الدورة الدموية الدقيقة لفروة الرأس.',
+      description: 'زيت بذور الجرجير (Eruca sativa) ومستخلصات أوراقه يدعمان صحة فروة الرأس والبصيلات من خلال محتواهما الكثيف من الإيزوثيوسيانات والجلوكوزينولات. الإيروسين والمركبات الكبريتية ذات الصلة توفر حماية مضادة للميكروبات ومضادة للأكسدة لفروة الرأس، بينما يُوفّر الزيت المعصور على البارد أحماض الأوليك واللينوليك التي تُهيّئ عمود الشعر وتُقلّل التكسر الميكانيكي.',
+      symptoms: ['تساقط الشعر', 'تكسّر الشعر', 'جفاف فروة الرأس', 'ضعف الشعر', 'ترقّق الشعر'],
+      warnings: [
+        'أجرِ اختبار حساسية جلدية قبل الاستخدام الأول، خاصةً لمن يعانون من حساسية تجاه نباتات الفصيلة الصليبية.',
+        'لا تُطبَّق على فروة الرأس المتشققة أو الملتهبة أو المصابة بالتهاب جلدي نشط؛ المركبات الكبريتية قد تُهيّج البشرة الجريحة.',
+        'عصير الأوراق الطازج يتأكسد بسرعة ويجب تحضيره واستخدامه فوراً.',
+      ],
+      activeConstituents: [
+        { name: 'الإيزوثيوسيانات (الإيروسين والمركبات الكبريتية ذات الصلة)', percentage: '', effect: 'نشاط مضاد للميكروبات والأكسدة؛ دعم صحة فروة الرأس والبيئة الجريبية' },
+        { name: 'الجلوكوزينولات (الجلوكوإيروسين)', percentage: '', effect: 'سلائف الإيزوثيوسيانات؛ مركبات غنية بالكبريت تدعم تخليق الكيراتين' },
+        { name: 'الأحماض الدهنية (الأوليك، اللينوليك، الإيروسيك بكميات ضئيلة)', percentage: '', effect: 'تُهيّئ عمود الشعر وتُقلّل التكسر الميكانيكي وتُحسّن نعومة الشعر' },
+        { name: 'الفيتامينات A وC وK والمعادن (الحديد، الماغنيسيوم، الكبريت)', percentage: '', effect: 'تدعم استقلاب البصيلات وسلامة أنسجة فروة الرأس ودورات نمو الشعر الطبيعية' },
+        { name: 'الفلافونويدات (الكيرستين والإيزورامنيتين)', percentage: '', effect: 'حماية مضادة للأكسدة لخلايا البصيلات؛ تُقلّل الإجهاد التأكسدي المرتبط بتساقط الشعر' },
+      ],
+      moa: [
+        { title: 'دعم الدورة الدموية الدقيقة لفروة الرأس', detail: 'تُشير الدراسات التجريبية إلى أن المركبات الكبريتية والفلافونويدات قد تُعزّز الإمداد الدموي الدقيق لفروة الرأس، مما يُحسّن توصيل المغذيات إلى الحليمة الجلدية.' },
+        { title: 'الحماية المضادة للأكسدة للبصيلات', detail: 'الكيرستين والإيزورامنيتين يُبطّلان الجذور الحرة داخل بيئة فروة الرأس، مُقلّلَين الضرر التأكسدي للبصيلات الذي يُساهم في التساقط المبكر.' },
+        { title: 'تهيئة عمود الشعر', detail: 'أحماض الأوليك واللينوليك في الزيت تتغلغل في قشرة الشعر، تملأ الفجوات في البشيرة، تُقلّل الإجهاد الرطوبي، وتُقلّل القابلية للتكسر الميكانيكي.' },
+        { title: 'النشاط المضاد للميكروبات لفروة الرأس', detail: 'الإيزوثيوسيانات تُمارس نشاطاً مضاداً واسع الطيف ضد مسببات الأمراض السطحية لفروة الرأس، مما يُساعد في الحفاظ على بيئة صحية مواتية لنمو الشعر.' },
+      ],
+      uses: [
+        'دعم نمو الشعر الصحي وتقليل التكسر',
+        'تحسين نعومة الشعر ولمعانه وسهولة إدارته',
+        'تغذية فروة الرأس وترطيبها',
+        'تحسين مظهر الشعر الخفيف أو الباهت',
+        'دعم مساعد لجفاف فروة الرأس الخفيف والتهيج',
+      ],
+      howToUse: [
+        { method: 'تدليك فروة الرأس بالزيت', instruction: 'سخّن كمية صغيرة من زيت بذور الجرجير المعصور على البارد ودلّك فروة الرأس لمدة 5-10 دقائق. اترك 30-60 دقيقة كعلاج قبل الغسيل ثم اشطف جيداً. استخدم مرتين أسبوعياً.' },
+        { method: 'قناع عصير الأوراق الطازج', instruction: 'اخلط أوراق الجرجير الطازجة مع كمية صغيرة من الماء الفاتر، ثم صفّها بقطعة قماش ناعمة للحصول على العصير المركّز. طبّق على فروة الرأس واترك 30-60 دقيقة ثم اشطف. مرتين أسبوعياً.' },
+        { method: 'زيت بذور منزلي الصنع', instruction: 'اسحق بذور الجرجير لتكسير القشرة. ضعها في وعاء زجاجي وأضف زيت اللوز الحلو. اترك في مكان دافئ مظلم 14 يوماً مع التحريك اليومي، ثم صفّه واستخدمه كعلاج قبل الغسيل.' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون', notes: 'آمن للاستخدام الموضعي عند التطبيق حسب التعليمات.' },
+        { group: 'الأطفال', notes: 'آمن عموماً للاستخدام الموضعي؛ يُفضَّل المستحضرات المخففة. أجرِ اختبار حساسية قبل الاستخدام.' },
+        { group: 'الحوامل', notes: 'يُعدّ آمناً عموماً للاستخدام الموضعي بكميات معتدلة. تجنّب التطبيق المفرط.' },
+      ],
+      dosage: {
+        standard: 'زيت البذور: دلّك فروة الرأس 5-10 دقائق، مرتين أسبوعياً كعلاج قبل الغسيل. عصير الأوراق الطازج: طبّق على فروة الرأس مرتين أسبوعياً لمدة 30-60 دقيقة.',
+        forms: [
+          { form: 'زيت البذور المعصور على البارد (موضعي)', dose: 'كمية صغيرة على فروة الرأس، تدليك 5-10 دقائق، اترك 30-60 دقيقة قبل الغسيل. مرتين أسبوعياً.' },
+          { form: 'قناع عصير الأوراق الطازج (موضعي)', dose: 'طبّق العصير المصفّى على فروة الرأس، اترك 30-60 دقيقة، اشطف. مرتين أسبوعياً.' },
+          { form: 'الزيت المنقوع منزلياً (موضعي)', dose: 'دلّك فروة الرأس كعلاج قبل الغسيل. مرتين أسبوعياً.' },
+        ],
+      },
+      overdose: {
+        symptoms: [
+          'احمرار خفيف لفروة الرأس أو تهيّج عند الأفراد الحساسين مع التطبيق المتكرر للزيت المركّز.',
+          'إحساس مؤقت بالحرق أو اللسعة على البشرة الحساسة.',
+        ],
+        management: [
+          'اشطف فروة الرأس جيداً بالماء البارد.',
+          'أوقف الاستخدام مؤقتاً إذا استمر التهيج.',
+          'طبّق مُلطِّفاً مهدئاً (مثل هلام الصبّار) لتهدئة فروة الرأس.',
+        ],
+      },
+      sideEffects: [
+        'إحساس دافئ خفيف أثناء التطبيق (شائع مع الزيوت الغنية بالكبريت)',
+        'رائحة كبريتية قوية أثناء التطبيق وبعده',
+        'تهيّج موضعي خفيف محتمل لدى أصحاب البشرة الحساسة',
+      ],
+      contraindications: [
+        'الحساسية من نباتات الفصيلة الصليبية: من يعانون من حساسية تجاه الخردل أو الملفوف أو البروكلي أو النباتات ذات الصلة يجب إجراء اختبار حساسية قبل الاستخدام.',
+        'فروة الرأس الجريحة الشديدة أو الملتهبة: تجنّب التطبيق على الجروح المفتوحة أو مناطق فروة الرأس الملتهبة الشديدة أو التهاب الجلد النشط.',
+      ],
+      drugInteractions: [],
+      storage: {
+        forms: [
+          { form: 'عصير الأوراق الطازج', instructions: 'استخدم فوراً بعد التحضير؛ يتأكسد بسرعة ولا يمكن تخزينه.' },
+          { form: 'زيت البذور المعصور على البارد (تجاري)', instructions: 'يُخزَّن في مكان بارد مظلم في زجاجة كهرمانية. مدة صلاحية تصل إلى سنة واحدة عند الإغلاق.' },
+          { form: 'الزيت المنقوع منزلياً', instructions: 'يُبرَّد بعد التصفية؛ يُستخدم خلال شهر إلى شهرين. تجنّب تلوثه بالماء لمنع نمو الميكروبات.' },
+        ],
+      },
+      benefits: [
+        { icon: 'spa', title: 'تغذية فروة الرأس', desc: 'أحماض الأوليك واللينوليك تُرطّب فروة الرأس وعمود الشعر بعمق لتقليل التكسر وتحسين اللمعان.' },
+        { icon: 'science', title: 'حماية مضادة للأكسدة', desc: 'فلافونويدات الكيرستين والإيزورامنيتين تُبطّل الجذور الحرة لحماية البصيلات من الإجهاد التأكسدي.' },
+        { icon: 'water_drop', title: 'دعم نمو الشعر', desc: 'المركبات الكبريتية تدعم الدورة الدموية الدقيقة لفروة الرأس وتخليق الكيراتين لدورات نمو شعر أكثر صحة.' },
+        { icon: 'shield', title: 'مضاد للميكروبات لفروة الرأس', desc: 'الإيزوثيوسيانات تُثبّط مسببات الأمراض السطحية لفروة الرأس، مما يُحافظ على بيئة جريبية صحية.' },
+      ],
+      botanicalFacts: {
+        family: 'الفصيلة الصليبية (Brassicaceae)',
+        nativeRegion: 'منطقة البحر المتوسط وجنوب غرب آسيا؛ يُزرع حالياً في جميع أنحاء العالم',
+        growthHabit: 'نبات عشبي حولي، ارتفاعه 20-100 سم؛ أوراق مُريشة الفصوص ذات رائحة فلفلية؛ أزهار بيضاء أو صفراء شاحبة بعروق أرجوانية',
+        activeCompounds: 'الجلوكوإيروسين، الإيروسين (إيزوثيوسيانات)، حمض الأوليك، حمض اللينوليك، الكيرستين، الإيزورامنيتين',
+        cultivationNotes: 'يُزرع على نطاق واسع كعشبة للسلطة ومحصول زيت. زيت التراميرا المعصور على البارد من البذور يُستخدم على نطاق واسع في تقاليد العناية بالشعر في جنوب آسيا.',
+      },
+      preparation: [
+        { method: 'زيت البذور المعصور على البارد (العلمي القياسي)', desc: 'يُعصَر البذور على البارد للحفاظ على المركبات الكبريتية والأحماض الدهنية الحساسة التي تتدهور بالحرارة.', bestFor: 'تهيئة فروة الرأس، طلاء عمود الشعر، علاج مضاد للتكسر' },
+        { method: 'قناع عصير الأوراق الطازج', desc: 'خلط أوراق الجرجير الطازجة مع ماء فاتر قليل وتصفيتها بقطعة قماش ناعمة للحصول على عصير مركّز.', bestFor: 'تغذية فروة الرأس، دعم القشرة الخفيفة، علاج مضاد للأكسدة' },
+        { method: 'زيت البذور المنقوع منزلياً', desc: 'نقع البذور المسحوقة في زيت اللوز الحلو لمدة 14 يوماً في مكان دافئ مظلم مع التحريك اليومي ثم تصفيته.', bestFor: 'علاج قبل الغسيل، التهيئة، دعم حيوية الشعر' },
+      ],
+    },
+
+    garlic: {
+      name: 'الثوم',
+      shortDescription: 'المركبات الكبريتية القوية في الثوم (بقيادة الأليسين) تُوفّر نشاطاً مضاداً قوياً للميكروبات في فروة الرأس وتُعزّز الدورة الدموية الدقيقة للبصيلات عبر قنوات TRP، وتُمد الكبريت الحيوي لتقوية شبكة الكيراتين وتقليل تكسّر الشعر.',
+      description: 'الثوم Allium sativum يدعم النظام البيئي لفروة الرأس والبصيلات عبر مسارات دوائية متعددة الأهداف. الفصيل الكبريتي (بقيادة الأليسين) يُمارس نشاطاً قوياً مضاداً للميكروبات والفطريات يُثبّط مباشرةً المسببات المرضية الانتهازية لفروة الرأس كالمالاسيزيا فورفور. التطبيق الموضعي يُحفّز توسع الأوعية الدموية الدقيقة، مُعزّزاً الإمداد الدموي للحليمة الجلدية. الكبريت والسيلينيوم الحيويان يُوفّران اللبنات الأساسية لتقاطع رابطة ثنائي الكبريت في مصفوفة الكيراتين.',
+      symptoms: ['القشرة', 'التهاب الجلد الدهني', 'تكسّر الشعر', 'ترقق الشعر', 'فرط نمو الميكروبات في فروة الرأس', 'الثعلبة البقعية'],
+      warnings: [
+        'لا تُطبّق أبداً معجون الثوم الخام أو الثوم غير المخفف مباشرةً على فروة الرأس؛ خطر حروق كيميائية حادة والتهاب جلدي تماسي.',
+        'خفّف دائماً في زيت ناقل قبل التطبيق؛ أجرِ اختبار حساسية 24 ساعة قبل الاستخدام الأول.',
+        'لا تُطبّق على فروة الرأس الجريحة أو الملتهبة أو المصابة بالصدفية أو الجروح المفتوحة.',
+        'يجب تبريد زيت الثوم الطازج المصنوع منزلياً واستهلاكه خلال 3-5 أيام لتفادي خطر نمو البكتيريا اللاهوائية الخطير (خطر التسمم الوشيقي).',
+        'تجنّب التطبيق المركّز على الأطفال؛ فروة رأس الأطفال عالية النفاذية للمتطايرات الكبريتية.',
+      ],
+      activeConstituents: [
+        { name: 'الأليين والأليسين (مركبات كبريتية عضوية)', percentage: '', effect: 'نشاط مضاد للميكروبات والفطريات الأساسي؛ الأليسين يتشكّل مؤقتاً عبر تنشيط إنزيم الأليينيز عند تكسير الأنسجة' },
+        { name: 'الأجوين، DADS، DATS (مستقلبات كبريتية ثانوية قابلة للذوبان في الدهون)', percentage: '', effect: 'تأثيرات ثانوية مضادة للميكروبات والالتهاب وداعمة للدورة الدموية' },
+        { name: 'غليكوسيدات الكيرستين والأحماض الفينولية (فلافونويدات بوليفينولية)', percentage: '', effect: 'اصطياد موضعي للجذور الحرة؛ حماية مضادة للأكسدة لخلايا البصيلات' },
+        { name: 'السيلينيوم والكبريت العنصري (معادن نادرة)', percentage: '', effect: 'ضروريان للحفاظ على سلامة الظهارة ودعم تقاطع رابطة ثنائي الكبريت وتشكّل الكيراتين في عمود الشعر' },
+        { name: 'فيتامين C (حمض الأسكوربيك) وفيتامين B6 (بيريدوكسين)', percentage: '', effect: 'عوامل مساعدة أيضية تدعم استقلاب البصيلات وتخليق الكولاجين في الأدمة الجلدية' },
+        { name: 'أحماض أمينية كبريتية', percentage: '', effect: 'أحماض أمينية غير بروتينية تدعم مباشرةً تخليق الكيراتين وتقاطعه داخل مصفوفة البصيلة' },
+      ],
+      moa: [
+        { title: 'النشاط المضاد للميكروبات والفطريات لفروة الرأس', detail: 'الأليسين والمركبات الكبريتية ذات الصلة تُمارس نشاطاً قوياً واسع الطيف مضاداً للميكروبات والفطريات، يُثبّط مباشرةً المسببات المرضية الجلدية الانتهازية بما فيها المالاسيزيا فورفور، المساهم الرئيسي في القشرة والتهاب الجلد الدهني.' },
+        { title: 'تعزيز الدورة الدموية الدقيقة للبصيلات', detail: 'التطبيق الموضعي يُحفّز تهيّجاً مضاداً خفيفاً وتوسع أوعية دموية عبر تنشيط قنوات TRP، مما يُعزّز الإمداد الدموي الوعائي الدقيق للحليمة الجلدية ويُحسّن توصيل المغذيات للبصيلات الفعّالة.' },
+        { title: 'تعزيز مصفوفة الكيراتين', detail: 'الكبريت الحيوي والسيلينيوم يُوفّران اللبنات الأساسية لتقاطع رابطة ثنائي الكبريت داخل مصفوفة الكيراتين لعمود الشعر النامي، مما يُحسّن القوة الشدية ميكانيكياً ويُقلّل التكسر المبكر.' },
+        { title: 'تأثير مناعي مُهيّج مضاد', detail: 'أدلة تجريبية وسريرية محدودة تُشير إلى أن هلام الثوم يعمل كعلاج مشترك موضعي مساعد في الثعلبة البقعية الموضعية من خلال خصائص مناعية مُهيّجة مضادة تُعدّل الاستجابات المناعية المحلية.' },
+      ],
+      uses: [
+        'الإدارة المضادة للميكروبات الداعمة لالتهاب الجلد الدهني والتراكم الميكروبي المفرط في فروة الرأس',
+        'علاج موضعي مساعد داعم في الثعلبة البقعية الموضعية المبكرة',
+        'تقليل تكسر عمود الشعر الميكانيكي عبر تعزيز رابطة ثنائي الكبريت والدهون',
+        'تنشيط الإمداد الدموي الأيضي داخل البيئة الجريبية لدعم حيوية الشعر العامة',
+      ],
+      howToUse: [
+        { method: 'زيت الثوم المنقوع (قناع قبل الغسيل)', instruction: 'اسحق فصوص الثوم الطازجة لتنشيط إنزيم الأليينيز (انتظر 5-10 دقائق). أغمر الثوم المسحوق في زيت ناقل (زيت الزيتون أو جوز الهند) في وعاء زجاجي محكم. انقع 5-7 أيام في مكان بارد مظلم. صفّه بقطعة قماش معقمة. دلّك فروة الرأس 1-2 مرة أسبوعياً كعلاج قبل الغسيل ثم اشطف جيداً.' },
+        { method: 'زيت الثوم التجاري (جاهز للاستخدام)', instruction: 'طبّق على مناطق فروة الرأس المحددة ودلّك بلطف. اترك حسب تعليمات المنتج. اشطف جيداً بعده. استخدم 1-2 مرة أسبوعياً.' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون', notes: 'مؤشَّر تماماً للاستخدام الموضعي المنتظم عند تخفيفه الكافي في الزيوت الناقلة القياسية.' },
+        { group: 'الأطفال', notes: 'مقيَّد بشدة. تجنّب المستخلصات المركّزة على فروة رأس الأطفال بسبب ارتفاع نفاذية الجلد والقابلية للحروق الكيميائية الدقيقة.' },
+        { group: 'الحوامل', notes: 'آمن عموماً للاستخدام التجميلي التقليدي منخفض التكرار. تجنّب التطبيقات المركّزة أو المغلقة أو الواسعة النطاق بسبب الامتصاص الجهازي للمتطايرات.' },
+      ],
+      dosage: {
+        standard: 'يُدلَّك على مناطق فروة الرأس المحددة 1-2 مرة أسبوعياً كعلاج قناع قبل الشامبو، يعقبه غسيل جيد.',
+        forms: [
+          { form: 'زيت الثوم المنقوع (موضعي)', dose: 'دلّك فروة الرأس 1-2 مرة أسبوعياً كعلاج قبل الغسيل. اشطف جيداً بعده. دائماً مخفّف في زيت ناقل؛ لا تستخدم غير مخفف أبداً.' },
+          { form: 'زيت الثوم التجاري (موضعي)', dose: 'اتبع تعليمات المنتج؛ عادةً تطبيق 1-2 مرة أسبوعياً على فروة الرأس قبل الشامبو.' },
+        ],
+      },
+      overdose: {
+        symptoms: [
+          'إحساس حرق موضعي شديد عند التلامس المطوّل أو غير المراقَب.',
+          'التهاب جلدي تماسي حاد واحمرار موضعي شديد.',
+          'حروق كيميائية جلدية مؤلمة عند التطبيق غير المخفف أو في ظل الانسداد أو على بشرة متضررة.',
+        ],
+        management: [
+          'نظّف فروة الرأس فوراً وبشكل مكثّف بالماء البارد وشامبو خفيف غير معطّر متوازن الـ pH.',
+          'أوقف جميع تطبيقات الثوم فوراً.',
+          'طبّق مستحضرات إصلاح حاجز الجلد الموضعية كـ D-بانثينول أو هلام الصبّار المنقّى لتسريع إعادة التظهير.',
+          'اطلب المشورة الطبية إذا ظهرت حروق أو التهاب جلدي شديد.',
+        ],
+      },
+      sideEffects: [
+        'رائحة كبريتية عضوية قوية ومستمرة في الجسم والشعر',
+        'دفء جلدي خفيف مؤقت أو إحساس بالحرق أثناء المرحلة الأولى من التطبيق',
+        'خطر الإصابة بالتهاب جلدي تماسي تحسسي متأخر عند الاستخدام المطوّل لدى الأفراد التوبيين',
+      ],
+      contraindications: [
+        'حساسية معروفة من عائلة Amaryllidaceae: من يعانون من فرط حساسية سريري معروف أو حساسية تماسية من نباتات عائلة الأمريلليسية (مثل البصل والكراث والثوم المعمر) يجب تجنّب تطبيقات الثوم على فروة الرأس.',
+        'فروة الرأس المكسورة أو المتضررة: موانع استخدام مطلقة ضد تطبيق مستخلصات الثوم الخام أو العصائر الطازجة أو معجون الثوم الخام على فروة الرأس المتقشرة أو الملتهبة أو المجروحة أو المصابة بالصدفية؛ خطر ألم حاد وإصابة كيميائية شديدة والتكوّن الكوبنري والعدوى الكيميائية الثانوية.',
+      ],
+      drugInteractions: [],
+      storage: {
+        forms: [
+          { form: 'زيت الثوم المنزلي الطازج', instructions: 'يجب تبريده (2-8°C) واستهلاكه خلال 3-5 أيام تماماً للقضاء على تحلل الأليسين وتفادي مخاطر الميكروبات اللاهوائية.' },
+          { form: 'زيوت الثوم التجارية', instructions: 'يُخزَّن في حاويات زجاجية داكنة محكمة الإغلاق بعيداً عن الرطوبة وتقلبات درجات الحرارة وأشعة الشمس المباشرة.' },
+        ],
+      },
+      benefits: [
+        { icon: 'shield', title: 'مضاد للميكروبات لفروة الرأس', desc: 'الأليسين والمركبات الكبريتية تُثبّط المالاسيزيا فورفور ومسببات الأمراض الأخرى، مُقلّلةً القشرة والتهاب الجلد الدهني.' },
+        { icon: 'water_drop', title: 'تحسين الدورة الدموية للبصيلات', desc: 'تنشيط قنوات TRP يُحفّز توسعاً وعائياً خفيفاً، يُعزّز الإمداد الدموي الوعائي الدقيق وتوصيل المغذيات للبصيلات.' },
+        { icon: 'science', title: 'تعزيز الكيراتين', desc: 'الكبريت الحيوي والسيلينيوم يُوفّران لبنات أساسية لتقاطع رابطة ثنائي الكبريت في مصفوفة الكيراتين، مما يُقلّل تكسر الشعر.' },
+        { icon: 'spa', title: 'دعم الثعلبة البقعية', desc: 'الخصائص المناعية المُهيّجة المضادة توفر دعماً مساعداً في الثعلبة البقعية الموضعية المبكرة (أدلة سريرية من دراسة Sharquie et al.).' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Amaryllidaceae (الفصيلة الفرعية: Allioideae)',
+        nativeRegion: 'آسيا الوسطى (على الأرجح قيرغيزستان/طاجيكستان)؛ يُزرع في جميع أنحاء العالم منذ أكثر من 7000 عام',
+        growthHabit: 'نبات بصلي معمر؛ البصلة مكوّنة من فصوص متعددة مُغلّفة بغلاف ورقي؛ أوراق مسطحة شريطية؛ رؤوس زهرية كروية بيضاء إلى وردية',
+        activeCompounds: 'الأليين، الأليسين، الأجوين، ثنائي أليل ثنائي الكبريت (DADS)، ثنائي أليل ثلاثي الكبريت (DATS)، غليكوسيدات الكيرستين، السيلينيوم، الأحماض الأمينية الكبريتية',
+        cultivationNotes: 'أحد أقدم النباتات الطبية المُزرَّعة. الأليسين (المركب الفعّال الرئيسي) يتولّد فقط عبر التفاعل الأنزيمي (الأليينيز) عند سحق الفصوص أو تقطيعها، وليس موجوداً في البصلة الكاملة.',
+      },
+      preparation: [
+        { method: 'التقطير البخاري / الاستخلاص بالمذيبات (القياسي العلمي)', desc: 'يُوحّد تركيز ثنائيات الأليل الكبريتية الثابتة؛ العصر البارد يعزل كسور الأليسين المؤقتة في ظروف محكومة بدرجة الحرارة.', bestFor: 'إنتاج زيت الثوم التجاري بمحتوى موحّد من المركبات الفعّالة' },
+        { method: 'زيت الثوم المنقوع المنزلي', desc: 'سحق الفصوص (انتظر 5-10 دقائق للتحويل الأنزيمي للأليين إلى أليسين) ثم نقعها في زيت ناقل (زيتون أو جوز هند) لمدة 5-7 أيام في مكان بارد مظلم ثم تصفيته.', bestFor: 'علاج موضعي لفروة الرأس قبل الغسيل، دعم التهاب الجلد الدهني، حيوية الشعر' },
+      ],
+    },
+
+    psyllium: {
+      name: 'سيلليوم / إسباغول',
+      shortDescription: 'ألياف غذائية ذائبة تعمل كملين تجميعي؛ قشرة البذرة تمتص حتى 40 ضعف وزنها في الماء مكوّنةً هلاماً مخاطياً لزجاً يُليّن البراز ويُحفّز التمعج ويُعدّل الكوليسترول وملف الجلوكوز.',
+      description: 'قشور سيلليوم (Plantago ovata) تحتوي على 10–30% من الهيتروسكاريدات المخاطية (أرابينوزيلانات) شديدة محبة الماء ومقاومة للهضم الأنزيمي في الجهاز الهضمي العلوي. عند وصولها للقولون، يُمارس المصفوفة الهلامية المتمددة شدًا ميكانيكياً على مستقبلات الميكانو في القولون، مُنشِّطاً منعكس الضفيرة العضلية الخارجية ومُحفِّزاً التمعج. التخمر البكتيري الجزئي يُولّد أحماضاً دهنية قصيرة السلسلة تُغذّي خلايا القولون. خلافاً للملينات المنبّهة، السيلليوم غير مُعتاد ويُصنَّف علاجاً أول لخطّ للإمساك المزمن ومتلازمة القولون العصبي.',
+      symptoms: ['الإمساك', 'عدم انتظام حركة الأمعاء', 'أعراض القولون العصبي', 'ارتفاع الكوليسترول', 'ضبط سكر الدم'],
+      warnings: [
+        'تناوله دائماً مع كوب كامل (250 مل) من الماء؛ لا تتناوله جافاً أو مع سائل غير كافٍ.',
+        'لا تتناوله مباشرةً قبل النوم؛ خطر انسداد المريء في وضع الاستلقاء.',
+        'تناوله قبل الأدوية الأخرى بـ30–60 دقيقة على الأقل لمنع التداخل في امتصاص الدواء.',
+        'موانع مطلقة في الانسداد البرازي وانسداد الأمعاء.',
+        'الأطفال دون سن 6 سنوات: تحت الإشراف الطبي للأطفال فقط.',
+      ],
+      activeConstituents: [
+        { name: 'المخاط (أرابينوزيلانات)', percentage: '10 إلى 30% من وزن القشرة', effect: 'هيتروسكاريدات عالية الوزن الجزيئي شديدة محبة الماء؛ تمتص حتى 40 ضعف وزنها ماءً مكوّنةً هلاماً لزجاً يقاوم الهضم الأنزيمي في الجهاز الهضمي' },
+      ],
+      moa: [
+        { title: 'تكوّن الكتلة والشد الميكانيكي', detail: 'المخاط يمتص الماء الداخلي مكوّناً مصفوفة هلامية مرطّبة مستقرة، تُضخّم كتلة البراز وتُليّن قوامه. الكتلة المتمددة تُمارس شداً شعاعياً ميكانيكياً على مستقبلات الميكانو القولونية، مُنشِّطاً منعكس الضفيرة العضلية الخارجية ومُحفِّزاً التمعج الدافع.' },
+        { title: 'التخمر البكتيري (أحماض دهنية قصيرة السلسلة)', detail: 'تخضع الأرابينوزيلانات للتخمر اللاهوائي الجزئي بواسطة الميكروبيوم القولوني، مُولّدةً أحماضاً دهنية قصيرة السلسلة (أسيتات، بروبيونات، بوتيرات) تُوفّر طاقة تغذوية لخلايا القولون وتُعدّل الحركية المعوية.' },
+        { title: 'تعديل الكوليسترول والجلوكوز', detail: 'الهلام اللزج يحبس الكوليسترول الغذائي ويرتبط بالأحماض الصفراوية في تجويف الأمعاء، مُثبِّطاً إعادة امتصاصها الكبدي المعوي ومُنشِّطاً خلوص LDL الكبدي. عند تناوله مع الوجبات، يُبطئ إفراغ المعدة وامتصاص الكربوهيدرات، مُسطِّحاً ارتفاعات الجلوكوز بعد الأكل.' },
+      ],
+      uses: [
+        'علاج خط أول للإمساك المزمن وتصحيح عادات الأمعاء (غير مُعتاد)',
+        'تليين البراز لحالات المستقيم: البواسير، الشقوق الشرجية، التعافي بعد الجراحة',
+        'متلازمة القولون العصبي (IBS-C والمتناوبة): تُطبّع قوام البراز وأوقات العبور',
+        'خفض LDL الكوليسترول المساعد في فرط شحوم الدم',
+        'دعم ضبط الجلوكوز في السكري من النوع الثاني عند تناوله مع الوجبات',
+      ],
+      howToUse: [
+        { method: 'مسحوق / حبيبات في ماء', instruction: 'اخلط 5–10 غ (كيس واحد أو ملعقة كبيرة) في كوب كامل (250 مل) من الماء البارد أو العصير. اخلط بسرعة واشرب فوراً قبل حدوث التهلمة. اشرب كوباً إضافياً من الماء مباشرةً بعدها.' },
+        { method: 'ملاحظة الوقت المهمة', instruction: 'يمكن تناوله في أي وقت من اليوم لكن لا تتناوله أبداً مباشرةً قبل النوم. تناوله بعد الأدوية الأخرى بـ30–60 دقيقة على الأقل.' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون والمراهقون (أكثر من 12 عاماً)', notes: '5–10 غ 1–3 مرات يومياً. الحد الأقصى: 30 غ/يوم. دائماً مع سائل كافٍ.' },
+        { group: 'الأطفال (6–12 عاماً)', notes: '2.5–5 غ 1–2 مرات يومياً. مراقبة إلزامية للسوائل. ليس للعلاج الذاتي.' },
+        { group: 'الأطفال (أقل من 6 سنوات)', notes: 'تحديد الجرعة من قِبل طبيب الأطفال. غير موصى به للعلاج الذاتي.' },
+        { group: 'الحوامل والمرضعات', notes: 'الفئة B (آمن). العلاج الأول المفضّل للإمساك أثناء الحمل؛ آلية ميكانيكية داخل الأمعاء فقط، لا يُمتص جهازياً. آمن أثناء الرضاعة.' },
+      ],
+      dosage: {
+        standard: 'البالغون: 5–10 غ (كيس أو ملعقة كبيرة) مخلوطة في 250 مل ماء، 1–3 مرات يومياً. الحد الأقصى: 30 غ/يوم. لا تتناوله دون سائل كافٍ.',
+        forms: [
+          { form: 'أكياس فوارة (مثلاً Fybogel)', dose: 'كيس واحد (3.5 غ إسباغول) محلول في 150 مل ماء، مرتين يومياً صباحاً ومساءً.' },
+          { form: 'مسحوق قشرة خالص', dose: '5–10 غ لكل جرعة في 250 مل ماء، 1–3 مرات يومياً.' },
+        ],
+      },
+      overdose: {
+        symptoms: [
+          'انسداد معوي حاد، إمساك مطلق، تمدد بطني مؤلم، انتفاخ شديد من الجفاف الكافي',
+          'انسداد المريء إذا ابتُلع مع سائل غير كافٍ (تمدد مبكر في المريء)',
+          'نادراً: طفح جلدي، شرى، تشنج قصبي في الأفراد الحساسين',
+        ],
+        management: [
+          'إماهة كثيفة فورية إذا كانت الممرات الهوائية آمنة والمريض قادر على البلع',
+          'تدخل جراحي أو بمنظار لانسداد الجهاز الهضمي الهيكلي المتحقق',
+          'لا تُعطِ ملينات منبّهة في الانسداد',
+        ],
+      },
+      sideEffects: [
+        'غازات مؤقتة وقرقرة معوية وانتفاخ عابر خلال أول 3–5 أيام (تعديل التخمر الميكروبي)',
+        'خطر الانسداد الميكانيكي للمريء أو الأمعاء مرتبط فقط بضعف الإماهة',
+        'تفاعلات فرط حساسية نادرة في الأفراد المعرضين',
+      ],
+      contraindications: [
+        'عسر البلع: صعوبات في البلع موجودة مسبقاً، تضيّق المريء، أو تشوهات هيكلية في الجهاز الهضمي',
+        'الانسداد البرازي: موانع مطلقة إذا كانت كتلة براز متصلبة موجودة',
+        'انسداد الأمعاء: عيلس ميكانيكي أو تضيّق معروف أو مشتبه به',
+        'الحالات العصبية أو الحركية الشديدة المقيّدة للحركة',
+      ],
+      drugInteractions: [
+        'جميع الأدوية الفموية: هلام السيلليوم يحبس ويُقلّل امتصاص الليثيوم والكاربامازيبين والحديد والديجوكسين وغيرها. تناول السيلليوم بعد 30–60 دقيقة من أي دواء فموي آخر.',
+      ],
+      storage: {
+        forms: [
+          { form: 'المسحوق / الأكياس', instructions: 'مكان بارد جاف أقل من 25°C في حاويات محكمة الإغلاق. حماية مطلقة من الرطوبة؛ التعرض المبكر لبخار الماء يُطلق التمدد الداخلي ويُدمر الفاعلية العلاجية.' },
+        ],
+      },
+      benefits: [
+        { icon: 'favorite', title: 'علاج خط أول للإمساك', desc: 'ملين تجميعي غير مُعتاد معتمد من وكالة الأدوية الأوروبية ومنظمة الصحة العالمية؛ آمن للاستخدام طويل الأمد والحمل وإدارة القولون العصبي.' },
+        { icon: 'bar_chart', title: 'إدارة الكوليسترول والجلوكوز', desc: 'الهلام اللزج يربط الأحماض الصفراوية والكوليسترول الغذائي خافضاً LDL. عند تناوله مع الوجبات، يُسطّح ارتفاعات الجلوكوز في السكري من النوع الثاني.' },
+        { icon: 'water_drop', title: 'تليين البراز وتنظيم الأمعاء', desc: 'يمتص حتى 40 ضعف وزنه ماءً مُكوّناً هلاماً يُليّن البراز ويُخفّف الإجهاد في البواسير والشقوق الشرجية ومرضى ما بعد الجراحة.' },
+        { icon: 'spa', title: 'منظّم أعراض القولون العصبي', desc: 'يُطبّع قوام البراز وأوقات العبور في كل من القولون العصبي المُمسك والمتناوب، مُقلِّلاً الإلحاح والتشنج والانزعاج.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Plantaginaceae',
+        nativeRegion: 'أصيل جنوب آسيا والشرق الأوسط (الهند، باكستان، إيران). يُزرع تجارياً في الهند (راجستان) حيث تُنتَج ~85% من الإمدادات العالمية.',
+        growthHabit: 'نبات حولي؛ البذور محاطة بقشرة سيلليوم ذات محتوى عالي من المخاط.',
+        activeCompounds: 'المخاط (أرابينوزيلانات)، أحماض فينولية، فلافونويدات',
+        cultivationNotes: 'مستخدم لقرون في الطب الآيورفيدي. أصدرت وكالة الأدوية الأوروبية ومنظمة الصحة العالمية تقارير عشبية رسمية تُرسّخ دوره السريري في الإمساك ومتلازمة القولون العصبي والصحة الأيضية.',
+      },
+      preparation: [
+        { method: 'معلّق مائي', desc: 'اخلط 5–10 غ مسحوق في 250 مل من الماء البارد أو العصير، اخلط بسرعة وتناوله فوراً قبل التهلمة. دائماً اتبعه بكوب آخر كامل من السائل.', bestFor: 'الإمساك المزمن، القولون العصبي، تنظيم الأمعاء، تخفيف البواسير' },
+        { method: 'أكياس فوارة', desc: 'أذِب الكيس في الماء (يُكوّن معلقاً فوّاراً لذيذاً). تناوله مرتين يومياً صباحاً ومساءً بعد الوجبات.', bestFor: 'امتثال وتقبّل أفضل مقارنةً بالمسحوق الخالص' },
+      ],
+    },
+
+    castor: {
+      name: 'الخروع',
+      shortDescription: 'مُسهِّل قوي عالي الفاعلية؛ حمض الريسينوليك المُنشَّط بليباز البنكرياس يُناهض مستقبلات البروستانويد انتقائياً في الأمعاء الدقيقة، مُطلِقاً تمعجاً هائلاً وإخلاءً معوياً سريعاً في 2–6 ساعات.',
+      description: 'زيت الخروع (زيت ثابت معصور بارد من بذور Ricinus communis) غير نشط دوائياً حتى يُحلَّل بليباز البنكرياس في الأمعاء الدقيقة، مُطلِقاً حمض الريسينوليك. هذا الحمض الدهني الهيدروكسيل الفريد يعمل كناهض انتقائي لمستقبلات البروستانويد SEP_3/SEP_4 على العضلة المعوية الملساء، مُحاكياً البروستاغلاندينات ومُطلِقاً انقباضات تمعجية قوية وسريعة. يُثبّط في الوقت ذاته Na+/K+-ATPase مُزيداً إفراز السوائل تجويف الأمعاء. خلافاً للسنا الذي يستهدف القولون، يُحفّز زيت الخروع الأمعاء الدقيقة أساساً.',
+      symptoms: ['الإمساك', 'تنظيف الأمعاء قبل الإجراءات الطبية', 'عدم انتظام حركة الأمعاء'],
+      warnings: [
+        'موانع مطلقة في الحمل (الفئة X)؛ يُحفّز انقباضات الرحم مُسبِّباً الولادة المبكرة.',
+        'لا تُستخدم مزمنياً للإمساك أو إنقاص الوزن؛ يُسبّب ضرراً لا يُعكس في أعصاب الأمعاء.',
+        'موانع مطلقة للأطفال دون سنتين.',
+        'اشرب 6–8 أكواب من الماء طوال اليوم بعد تناول زيت الخروع.',
+        'فصل جميع الأدوية الفموية الأخرى بساعتين على الأقل.',
+        'لا تُستخدم في انسداد الأمعاء أو أمراض الأمعاء الالتهابية النشطة أو التهاب الزائدة.',
+      ],
+      activeConstituents: [
+        { name: 'حمض الريسينوليك', percentage: '85–90% من إجمالي محتوى الأحماض الدهنية', effect: 'المستقلب النشط المُطلَق بليباز البنكرياس؛ ناهض انتقائي لمستقبلات البروستانويد (SEP_3/SEP_4) مُطلِقاً تمعجاً معوياً دقيقاً مكثفاً وإفراز السوائل' },
+      ],
+      moa: [
+        { title: 'التنشيط الأنزيمي (تأثير البروتوبروغ)', detail: 'زيت الخروع نفسه غير نشط دوائياً. ليباز البنكرياس في الأمعاء الدقيقة يُحلّل الدهون الثلاثية إلى جليسيرول وحمض الريسينوليك وهو المستقلب النشط.' },
+        { title: 'مناهضة مستقبلات البروستانويد', detail: 'حمض الريسينوليك يرتبط انتقائياً بمستقبلات SEP_3 وSEP_4 البروستانويدية على الخلايا العضلية الملساء المعوية، مُحاكياً البروستاغلاندينات الطبيعية. يُطلق انقباضات عضلية فورية قوية في جميع أنحاء الأمعاء الدقيقة.' },
+        { title: 'تحريض التمعج وإفراز السوائل', detail: 'يُسبّب انقباضات تمعجية هائلة وسريعة أساساً في الأمعاء الدقيقة. يُثبّط في الوقت ذاته Na+/K+-ATPase ويُحفّز إفراز السوائل في التجويف، مُبقياً البراز سائلاً لإخلاء سريع في 2–6 ساعات.' },
+      ],
+      uses: [
+        'إخلاء معوي سريع قصير الأمد في الإمساك الحاد',
+        'تنظيف الأمعاء قبل التنظير القولوني والأشعة والتنظير الشرجي والتدخلات الجراحية (تحت إشراف طبي)',
+        'تحريض المخاض (تحت إشراف المستشفى الصارم فقط)',
+      ],
+      howToUse: [
+        { method: 'الإعطاء الفموي', instruction: 'اخلط الجرعة الموصوفة (15–60 مل للبالغين) مع كوب كامل من عصير البرتقال أو الليمون أو التفاح البارد لإخفاء الملمس الزيتي اللزج. برّد الزيت قبل الإعطاء. اشرب 6–8 أكواب من الماء على مدار اليوم. البداية: 2–6 ساعات.' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون والمراهقون (أكثر من 12 عاماً)', notes: '15–60 مل جرعة فموية واحدة في عصير بارد. البداية: 2–6 ساعات. إماهة إلزامية طوال اليوم.' },
+        { group: 'الأطفال (2–11 عاماً)', notes: '5–15 مل تحت الإشراف الطبي الصارم فقط.' },
+        { group: 'الأطفال (أقل من سنتين)', notes: 'موانع مطلقة؛ خطر جفاف مهدد للحياة واختلال الشوارد.' },
+        { group: 'الحوامل', notes: 'موانع مطلقة (الفئة X). حمض الريسينوليك يُحفّز العضلة الملساء الرحمية؛ خطر مرتفع من الولادة المبكرة ونزيف الرحم أو الإجهاض.' },
+        { group: 'كبار السن (65 سنة فأكثر)', notes: 'يُثبَّط عموماً بسبب زيادة الحساسية للانخفاض الانتصابي من الجفاف السريع.' },
+      ],
+      dosage: {
+        standard: 'البالغون: 15–60 مل جرعة فموية واحدة مخلوطة في عصير بارد. البداية: 2–6 ساعات. إماهة وفيرة إلزامية (6–8 أكواب/يوم).',
+        forms: [
+          { form: 'زيت الخروع (فموي)', dose: 'البالغون: 15–60 مل جرعة واحدة في عصير بارد. الأطفال 2–11 سنة: 5–15 مل تحت الإشراف الطبي. دائماً مبرداً ومخلوطاً في عصير حمضي بارد.' },
+        ],
+      },
+      overdose: {
+        symptoms: [
+          'ضائقة هضمية شديدة: تقلصات بطنية عنيفة، قيء مستمر، إسهال مائي انفجاري',
+          'جفاف سريع: جفاف الأغشية المخاطية، عطش شديد، قلة بول، انخفاض ضغط الدم',
+          'أزمة شوارد: نقص بوتاسيوم وصوديوم الدم الشديد → ضعف عضلي، رعاش، ارتباك، اضطراب نظم القلب الخطير، صدمة نقص حجم الدم',
+        ],
+        management: [
+          'توقف فوراً عن زيت الخروع',
+          'أملاح معالجة الجفاف (ORS) إذا كان واعياً؛ سوائل وريدية عدوانية (محلول ملحي طبيعي أو رينجر) في القيء الشديد',
+          'تكملة البوتاسيوم والصوديوم الوريدية/الفموية لاستقرار نظم القلب',
+          'هيوسين بيوتيلبروميد (بوسكوبان) للتشنجات المعوية الشديدة',
+        ],
+      },
+      sideEffects: [
+        'تقلصات بطنية ومغص شديد من التحريض التمعجي القسري',
+        'غثيان وقيء من الملمس الزيتي الثقيل والطعم الكريه',
+        'جفاف سريع من الإسهال المائي الانفجاري',
+        'استنزاف الشوارد: نقص بوتاسيوم وصوديوم الدم',
+        'احتقان الحوض: يمكن أن يُشدّد تقلصات الدورة أو يُطلق نشاطاً رحمياً',
+        'الاعتماد على الملينات من الإساءة المزمنة: ضرر دائم في الضفيرة العضلية الخارجية (متلازمة الأمعاء الكسولة)',
+      ],
+      contraindications: [
+        'الحمل (الفئة X): يُحفّز انقباضات الرحم → خطر الولادة المبكرة',
+        'انسداد الأمعاء: خطر انثقاب الأمعاء',
+        'الأمراض الالتهابية المعوية: التهاب الزائدة، داء كرون، التهاب القولون التقرحي',
+        'الحيض النشط: قد يُفاقم احتقان الحوض',
+        'الأطفال دون سنتين: موانع مطلقة',
+      ],
+      drugInteractions: [
+        'جميع الأدوية الفموية: يُقلّل التوافر الحيوي بشكل كبير بسبب تسريع العبور؛ افصل الأدوية الأخرى بساعتين على الأقل.',
+        'مدرات البول (مثلاً فوروسيميد): يُضاعف خطر فقدان السوائل ونقص بوتاسيوم الدم الشديد.',
+        'الغليكوسيدات القلبية (مثلاً ديجوكسين): نقص البوتاسيوم الناجم عن الخروع → سمية ديجوكسين الخطيرة واضطراب النظم القاتل المحتمل.',
+        'الفيتامينات الذائبة في الدهون (A, D, E, K): الاستخدام المزمن يُعيق الامتصاص → نقص التغذية.',
+      ],
+      storage: {
+        forms: [
+          { form: 'زيت الخروع', instructions: 'حاويات محكمة الإغلاق مقاومة للضوء في مكان بارد أقل من 25°C. الحماية من أشعة الشمس المباشرة تمنع أكسدة حمض الريسينوليك وتزنّخه.' },
+        ],
+      },
+      benefits: [
+        { icon: 'bolt', title: 'إخلاء قوي وسريع', desc: 'إخلاء معوي خلال 2 إلى 6 ساعات عبر مناهضة مستقبلات البروستانويد في الأمعاء الدقيقة؛ أسرع بكثير من السنا أو السيلليوم.' },
+        { icon: 'medical_services', title: 'معيار تحضير الأمعاء', desc: 'أداة راسخة لتنظيف الأمعاء قبل التنظير القولوني والأشعة والتدخلات الجراحية تحت الإشراف الطبي.' },
+        { icon: 'science', title: 'آلية مزدوجة', desc: 'حمض الريسينوليك يُحفّز مستقبلات SEP_3/SEP_4 (حركية) ويُثبّط Na+/K+-ATPase (إفراز السوائل) معاً لإخلاء كامل وسريع.' },
+        { icon: 'warning', title: 'للاستخدام قصير الأمد فقط', desc: 'الاستخدام المزمن يُسبّب ضرراً دائماً في الضفيرة العضلية الخارجية (متلازمة الأمعاء الكسولة). للاستخدام الحاد قصير الأمد فقط تحت التوجيه الطبي.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Euphorbiaceae',
+        nativeRegion: 'أصيل أفريقيا الاستوائية الشرقية (إثيوبيا). يُزرع على نطاق واسع في المناطق الاستوائية وشبه الاستوائية؛ المنتجون الرئيسيون: الهند والصين والبرازيل.',
+        growthHabit: 'شجيرة كبيرة تصل لـ12 متراً؛ بذور كبيرة مرقطة تحتوي على الريسين (بروتين سام جداً غائب عن الزيت المصنَّع).',
+        activeCompounds: 'حمض الريسينوليك (85–90% من محتوى الأحماض الدهنية)، ريسينين، حمض الإيكوزاديينويك',
+        cultivationNotes: 'موثّق في بردية إيبرس المصرية القديمة (~1550 ق.م). مُستخدم طبياً منذ أكثر من 4000 عام. اليوم أيضاً سواغ دوائي رئيسي كـCremophor EL (مذيب باكليتاكسيل الوريدي في علاج السرطان).',
+      },
+      preparation: [
+        { method: 'زيت معصور بارد (فموي)', desc: 'برّد الزيت قبل الإعطاء. اخلط 15–60 مل في عصير حمضي بارد وتناوله جرعة واحدة. إماهة وفيرة إلزامية (6–8 أكواب/يوم) طوال اليوم.', bestFor: 'الإمساك الحاد؛ إخلاء معوي سريع قصير الأمد؛ تحضير الأمعاء قبل الإجراءات' },
+      ],
+    },
+
+    peppermint: {
+      name: 'النعناع الفلفلي',
+      shortDescription: 'علاج نباتي مضاد للتشنج سريرياً لمتلازمة القولون العصبي والاضطرابات المعوية الوظيفية؛ المنثول يعمل كحاصر طبيعي لقنوات الكالسيوم من النوع L، مُحلاً فرط نشاط العضلة الملساء الهضمية والألم الحشوي.',
+      description: 'النعناع الفلفلي (Mentha × piperita) هجين عقيم يجمع المنثول (30–55%) كعامل مضاد للتشنج الرئيسي من خلال حصر قنوات Ca²⁺ من النوع L، إضافةً لتنشيط مستقبلات TRPM8 البرودية للتسكين الحشوي. حمض الروزمارينيك والفلافونويدات (لوتيولين، أبيجينين) توفر دعماً مضاداً للالتهاب وحماية للمعدة. الكبسولات المعوية تُوصّل المنثول النشط مباشرةً للأمعاء متجاوزةً المعدة لتجنب استرخاء العضلة العاصرة للمريء السفلية والجزر المعدي المريئي.',
+      symptoms: ['الإسهال', 'أعراض القولون العصبي', 'تقلصات البطن', 'الغازات', 'الغثيان', 'الانتفاخ'],
+      warnings: [
+        'لا تُكسر أو تُمضغ الكبسولات المعوية؛ تُطلق المنثول في المعدة مُسبِّبةً حرقة شديدة.',
+        'لا تُستخدم إذا كنت تعاني من الجزر المعدي المريئي الشديد أو الفتق الحجابي أو مشاكل المرارة/حصى المرارة.',
+        'الزيت الخالص موانع مطلقة للرضع والأطفال دون 4 سنوات.',
+        'افصل بين مضادات الحموضة ومثبطات المضخة البروتونية بساعتين على الأقل.',
+      ],
+      activeConstituents: [
+        { name: 'المنثول (30–55%)', percentage: '30–55% من الزيت العطري', effect: 'حاصر لقنوات Ca²⁺ من النوع L في العضلة الملساء المعوية (مضاد تشنج)؛ ناهض لمستقبلات TRPM8 البرودية (تسكين حشوي)؛ المادة الفعّالة الرئيسية' },
+        { name: 'المنثون (14–32%)', percentage: '14–32%', effect: 'كيتون سليفة يتعاون مع المنثول في التأثير المضاد للتشنج' },
+        { name: 'المنثوفوران (1 إلى 9%)', percentage: '1 إلى 9%', effect: 'مكوّن ثانوي؛ محتمل الكبدية عند التركيزات العالية؛ يجب مراقبته' },
+        { name: 'حمض الروزمارينيك والفلافونويدات (لوتيولين، أبيجينين، إريوسيتريين)', percentage: '', effect: 'مضادة للالتهاب وحماية معدية وفعل مضاد للأكسدة جهازي' },
+      ],
+      moa: [
+        { title: 'مناهضة قنوات الكالسيوم (مضاد للتشنج)', detail: 'المنثول يعمل كحاصر طبيعي لقنوات الكالسيوم ذات الجهد الكهربي من النوع L في العضلة الملساء المعوية. يُثبّط تدفق Ca²⁺ الخارجي للخلايا العضلية الملساء مانعاً انقباضاتها المستدامة، مُحلاً تشنجات الجهاز الهضمي وفرط الحركة والحركات المعوية المفرطة.' },
+        { title: 'تنشيط مستقبلات TRPM8 (التسكين الحشوي)', detail: 'المنثول يُنشّط انتقائياً مستقبلات TRPM8 البرودية في ألياف الأعصاب الواردة الهضمية، مُطلِقاً إحساساً محلياً بالبرودة والتخدير، مُحدِثاً تسكيناً خفيفاً للجدران الحشوية شديدة الحساسية.' },
+        { title: 'التأثير الطارد للغاز وتقليل التوتر السطحي', detail: 'يُرخي العضلة العاصرة للمريء السفلية مُيسِّراً طرد الغاز المحبوس، مُخفِّفاً سريعاً الغازات والانتفاخ المؤلم وتوتر شرسوفي.' },
+        { title: 'مضاد للميكروبات ومضاد للالتهاب', detail: 'فعالية قاصرة للجراثيم المباشرة ضد مسببات الأمراض الهضمية القياسية؛ يُثبّط شلالات الإيكوزانويد الالتهابية الموضعية بقمع إنتاج الليكوترين والبروستاغلاندين.' },
+      ],
+      uses: [
+        'تخفيف أعراض متلازمة القولون العصبي: الإسهال والعادات المعوية المتناوبة وفرط الحساسية الحشوية',
+        'إدارة تشنجات الجهاز الهضمي والتوتر البطني والغازات وعسر الهضم الوظيفي',
+        'تخفيف مساعد للغثيان والدوار الخفيف/الحركي',
+      ],
+      howToUse: [
+        { method: 'كبسولات زيت معوية', instruction: 'تناول 0.2 إلى 0.4 مل (180 إلى 360 مغ) 3 مرات يومياً قبل 30 إلى 60 دقيقة من الوجبات. يجب أن تكون معوية؛ ابتلعها كاملةً، لا تكسرها ولا تمضغها.' },
+        { method: 'شاي النعناع (منقوع مائي)', instruction: 'انقع 1.5–3 غ أوراق مجففة في 150 مل ماء مغلي في إناء مُغطّى لمدة 5–10 دقائق (التغطية تحفظ المنثول العطري). اشرب دافئاً 2–3 مرات يومياً.' },
+        { method: 'مستخلص سائل (1:1 في 45% إيثانول)', instruction: '1–3 مل 3 مرات يومياً.' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون', notes: 'آمن جداً ومتحمَّل جيداً بالجرعات العلاجية.' },
+        { group: 'الأطفال (أقل من 4 سنوات)', notes: 'الزيت الخالص موانع مطلقة؛ المنثول بالقرب من الغشاء المخاطي للأنف قد يُطلق تشنجات حنجرية/قصبية مميتة وسكتة تنفسية.' },
+        { group: 'الأطفال (أكثر من 4 سنوات)', notes: 'المنقوعات المائية الخفيفة (الشاي) آمنة عموماً. تجنب منتجات الزيت المركّزة.' },
+        { group: 'الحوامل والمرضعات', notes: 'استخدام الشاي الغذائي يُعتبر آمناً. الجرعات العالية من الزيوت الأساسية المركّزة تُجتنب بسبب التأثيرات المحتملة المُنبّهة للطمث.' },
+        { group: 'كبار السن', notes: 'آمن مع تقييم سريري دقيق بسبب ارتفاع معدل الفتق الحجابي أو الجزر المعدي المريئي.' },
+      ],
+      dosage: {
+        standard: 'كبسولات معوية: 0.2–0.4 مل (180–360 مغ) 3 مرات يومياً قبل 30–60 دقيقة من الوجبات. شاي: 1.5–3 غ أوراق مجففة منقوعة 5–10 دقائق (مغطّى)، 2–3 مرات يومياً.',
+        forms: [
+          { form: 'كبسولات معوية', dose: '0.2 إلى 0.4 مل (180 إلى 360 مغ) 3 مرات يومياً قبل 30 إلى 60 دقيقة من الوجبات. ابتلع كاملةً.' },
+          { form: 'شاي النعناع', dose: '1.5–3 غ أوراق مجففة في 150 مل ماء مغلي (مغطّى)، منقوع 5–10 دقائق. 2–3 مرات يومياً.' },
+          { form: 'مستخلص سائل', dose: '1–3 مل في 45% إيثانول، 3 مرات يومياً.' },
+        ],
+      },
+      overdose: {
+        symptoms: [
+          'تآكل هضمي شديد وبيلة دموية وطفح جلدي من الزيت الخالص غير المعوي عالي الجرعة',
+          'اكتئاب الجهاز العصبي المركزي: دوخة، ارتباك، رنح، بطء القلب، اكتئاب تنفسي',
+          'تسمم شديد للغاية: نوبات شبيهة بالصرع',
+        ],
+        management: [
+          'التوقف الفوري. علاج داعم وأعراضي عدواني.',
+          'الحفاظ على المجرى الهوائي والديناميكا الدموية.',
+          'مراقبة الملف الكلوي والكبدي إذا كان الامتصاص الجهازي مكثفاً.',
+        ],
+      },
+      sideEffects: [
+        'حرقة الفؤاد وتفاقم الجزر المعدي المريئي من استرخاء العضلة العاصرة السفلية (استخدم الكبسولات المعوية لتقليله)',
+        'إحساس بالحرق حول الشرج من المنثول المتبقي في البراز',
+        'تفاعلات تحسسية نادرة في الأفراد الحساسين للمنثول',
+      ],
+      contraindications: [
+        'فرط حساسية معروف للنعناع الفلفلي أو المنثول',
+        'الجزر المعدي المريئي الشديد والفتق الحجابي: زيت النعناع يُرخي العضلة العاصرة السفلية مُفاقِماً الحموضة بشكل ملحوظ',
+        'انسداد المسالك الصفراوية والتهاب المرارة: نشاط صفراوي/مُفرِز للصفراء قوي يُطلق المغص الصفراوي في مرضى الحصى الصفراوية',
+        'قصور كبدي شديد: الحمل الأيضي للموناتيربين',
+        'الرضع والأطفال دون 4 سنوات: الزيت الخالص موانع مطلقة',
+      ],
+      drugInteractions: [
+        'مضادات الحموضة وحاصرات H2 ومثبطات المضخة البروتونية (مثلاً أوميبرازول): ترفع pH المعدة → تذويب مبكر للغلاف المعوي → حرقة شديدة. افصل بساعتين على الأقل.',
+        'ركائز CYP3A4 (مثلاً سيكلوسبورين، فيلوديبين): تثبيط معتدل لـCYP3A4 قد يرفع تركيزات الأدوية ذات النطاق العلاجي الضيق.',
+        'مثبطات الجهاز العصبي المركزي: تهدئة إضافية مع مستحضرات المنثول عالية الجرعة.',
+      ],
+      storage: {
+        forms: [
+          { form: 'الأوراق المجففة', instructions: 'حاويات محكمة الإغلاق مقاومة للرطوبة والضوء أقل من 25°C.' },
+          { form: 'الكبسولات المعوية', instructions: 'العبوة الأصلية أقل من 25°C، بعيداً عن الرطوبة والحرارة.' },
+          { form: 'منتجات الزيت العطري', instructions: 'مختوم بإحكام لمنع التبخر والأكسدة التركيبية.' },
+        ],
+      },
+      benefits: [
+        { icon: 'spa', title: 'المعيار الذهبي للقولون العصبي', desc: 'تُؤكد تحليلات متعددة أن كبسولات زيت النعناع تُقلّل بشكل ملحوظ درجات ألم القولون العصبي وتكرار البراز والإلحاح.' },
+        { icon: 'air', title: 'مُرخٍ طبيعي للعضلة الملساء الهضمية', desc: 'حصر المنثول لقنوات Ca²⁺ من النوع L يحلّ التشنجات المعوية المؤلمة وفرط الحركة دون تكوين عادة.' },
+        { icon: 'thermostat', title: 'تسكين حشوي عبر TRPM8', detail: 'تنشيط مستقبلات TRPM8 البرودية في أعصاب الجهاز الهضمي الواردة يُحدث تسكيناً بالتبريد مُخدِّراً الجدران الحشوية شديدة الحساسية.' },
+        { icon: 'bubble_chart', title: 'تخفيف سريع للغاز', desc: 'التأثير الطارد للغاز يُخفّف الغازات والانتفاخ المؤلم والتوتر الشرسوفي بسرعة.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Lamiaceae',
+        nativeRegion: 'هجين عقيم (Mentha aquatica × Mentha spicata) يُكثَّر فقط بالعقل الخضرية. الزراعة التجارية في الولايات المتحدة والهند وأوروبا.',
+        growthHabit: 'نبات معمر عطري؛ سيقان رباعية الزوايا؛ أوراق بيضاوية ذات حواف مسننة؛ أزهار بنفسجية خفيفة.',
+        activeCompounds: 'المنثول، المنثون، أسيتات المنثيل، المنثوفوران، أينيول (يوكاليبتول)، حمض الروزمارينيك، لوتيولين، أبيجينين',
+        cultivationNotes: 'يُزرع طبياً منذ القرن الثامن عشر على الأقل. أصدرت وكالة الأدوية الأوروبية ومنظمة الصحة العالمية وESCOP تقارير تُؤكد دوره في القولون العصبي وتشنجات الجهاز الهضمي وعسر الهضم الوظيفي.',
+      },
+      preparation: [
+        { method: 'كبسولة معوية', desc: 'كبسولة دوائية مُقيسة على محتوى الزيت. تُوصّل المنثول للأمعاء الدقيقة والقولون متجاوزةً المعدة.', bestFor: 'القولون العصبي؛ تشنجات الجهاز الهضمي؛ الإسهال الوظيفي' },
+        { method: 'منقوع مائي (شاي)', desc: 'انقع 1.5–3 غ أوراق مجففة في 150 مل ماء مغلي في إناء مُغطّى لمدة 5–10 دقائق. التغطية ضرورية للحفاظ على المنثول العطري.', bestFor: 'انزعاج هضمي خفيف، غثيان، غازات، انتفاخ' },
+      ],
+    },
+
+    chamomile: {
+      name: 'البابونج',
+      shortDescription: 'نبات متعدد الإجراءات اللطيف للاضطرابات الهضمية الالتهابية والتشنجية؛ الكاموزولين والأبيجينين يُثبّطان بشكل تآزري مسارات COX/5-LOX ويعملان على مستقبلات GABA-A، مُنتِجَين آثاراً مضادة للتشنج ومضادة للالتهاب وتهدئة خفيفة.',
+      description: 'بابونج ألماني (Matricaria chamomilla) يحتوي على الكاموزولين وα-بيسابولول (زيت عطري) إلى جانب أبيجينين-7-غلوكوزيد (فلافونويد محب للماء) وهيرنياريين/أمبيليفيرون (كومارينات). الكاموزولين والبيسابولول مثبطان قويان لـCOX/5-LOX يُقلّلان البروستاغلاندينات والليكوترينات الالتهابية. الأبيجينين يرتبط بمستقبلات GABA-A البنزوديازيبينية مُوفِّراً تهدئة خفيفة ويُقلّل الضائقة الهضمية النفسية الجسدية.',
+      symptoms: ['الإسهال', 'أعراض القولون العصبي', 'تقلصات البطن', 'الغازات', 'الانتفاخ', 'التهاب المعدة', 'الأرق الخفيف'],
+      warnings: [
+        'إذا كنت حساساً للبنج البري أو الأقحوان أو زهور الربيع أو القطيفة فلا تستخدم البابونج (خطر التفاعل التقاطعي والصدمة التحسسية).',
+        'الجرعات العالية من المستخلصات المركّزة تُجتنب في الحمل.',
+        'افصل عن مضادات التخثر وراقب خطر النزيف إذا استُخدم مع أدوية مُرققة للدم.',
+        'الرضع دون 6 أشهر: تحت الإشراف الطبي الصارم فقط.',
+      ],
+      activeConstituents: [
+        { name: 'الكاموزولين', percentage: 'يتكوّن من الماتريسين أثناء التقطير', effect: 'مُثبِّط COX و5-LOX؛ مضاد التهاب قوي؛ اللون الأزرق المميز لزيت البابونج المقطّر' },
+        { name: 'α-البيسابولول وأكاسيده', percentage: '', effect: 'مضاد للتشنج ومضاد للالتهاب ومضاد للميكروبات؛ يُعزّز شفاء الغشاء المخاطي والتقرحات' },
+        { name: 'أبيجينين-7-غلوكوزيد (فلافون)', percentage: 'الفلافونويد المحب للماء المهيمن', effect: 'رابط تنافسي لمستقبلات GABA-A البنزوديازيبينية؛ تهدئة خفيفة ومزيل للقلق؛ مُيسِّر للتشنج عبر حصر قنوات Ca²⁺ وتثبيط PDE' },
+        { name: 'كومارينات (أمبيليفيرون، هيرنياريين)', percentage: '', effect: 'استرخاء إضافي للعضلة الملساء؛ يُراقَب في مرضى مضادات التخثر' },
+      ],
+      moa: [
+        { title: 'تثبيط COX/5-LOX (مضاد للالتهاب)', detail: 'الكاموزولين وα-البيسابولول يُثبّطان مباشرةً مسارات COX و5-LOX، مُقلِّلَين بشكل ملحوظ تخليق البروستاغلاندينات والليكوترينات الالتهابية، مُخفِّفَين تهيّج الغشاء المخاطي المعوي والوذمة.' },
+        { title: 'مضاد للتشنج عبر Ca²⁺ وتثبيط PDE', detail: 'الأبيجينين والبيسابولول يحصران بشكل تآزري قنوات الكالسيوم ذات الجهد الكهربي ويُثبّطان فسفودييستيرازات النيوكليوتيد الحلقية داخل الخلية، مُحلَّين فاعلياً فرط نشاط العضلة الملساء والتقلصات البطنية والانتفاخ.' },
+        { title: 'تنشيط مستقبلات GABA-A (المهدئ/المزيل للقلق)', detail: 'الأبيجينين يعمل كرابط تنافسي لمستقبلات GABA-A البنزوديازيبينية المركزية، مُحدِثاً تهدئة خفيفة ومُقلِّلاً الضائقة الهضمية النفسية الجسدية في اضطرابات الأمعاء المحرَّضة بالتوتر.' },
+        { title: 'تلطيف الغشاء المخاطي ومضاد للميكروبات', detail: 'فعل قاصر للجراثيم ضد مسببات الأمراض الهضمية الشائعة؛ تأثير ملطّف موضعي على الغشاء المخاطي المعدي والمعوي، مُسرِّعاً شفاء التقرحات.' },
+      ],
+      uses: [
+        'تخفيف أعراض الإسهال الخفيف والتهاب المعدة وعسر الهضم والغازات والانتفاخ',
+        'إدارة تشنجات العضلة الملساء الهضمية والتقلصات البطنية المؤلمة',
+        'العلاج الداعم للضائقة الهضمية النفسية الجسدية والأرق الخفيف والقلق',
+      ],
+      howToUse: [
+        { method: 'شاي البابونج (منقوع مائي)', instruction: 'انقع 2–3 غ من رؤوس الأزهار المجففة في 150–250 مل ماء مغلي في إناء مُغطّى لمدة 5–10 دقائق (التغطية تمنع فقدان الزيوت العطرية، لا سيما الكاموزولين). تناول 3–4 مرات يومياً بين الوجبات.' },
+        { method: 'كبسولات / مستخلصات موحّدة', instruction: '200–500 مغ 2–3 مرات يومياً، موحّدة على محتوى الأبيجينين أو الزيت العطري.' },
+        { method: 'مستخلص سائل (1:1 في 45% إيثانول)', instruction: '1–4 مل مخففة في ماء دافئ، 3 مرات يومياً.' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون', notes: 'آمن عموماً ومتحمَّل بشكل ممتاز وفق الإرشادات العلاجية.' },
+        { group: 'الرضع (أقل من 6 أشهر)', notes: 'تحت الإشراف الطبي الصارم فقط.' },
+        { group: 'الأطفال', notes: 'المنقوعات المائية الخفيفة المخففة جيداً آمنة للمغص الرضيعي والانزعاج الهضمي الخفيف تحت الإشراف الطبي.' },
+        { group: 'الحوامل والمرضعات', notes: 'الجرعات الغذائية القياسية كشاي آمنة عموماً. الجرعات العلاجية العالية أو المستخلصات المركّزة تُجتنب بسبب مخاطر التحفيز الرحمي النظرية.' },
+        { group: 'كبار السن', notes: 'آمن بالجرعات القياسية مع مراقبة دقيقة في المرضى متعددي الأمراض.' },
+      ],
+      dosage: {
+        standard: 'شاي: 2–3 غ أزهار مجففة منقوعة 5–10 دقائق (مغطّى) في 150–250 مل ماء، 3–4 مرات يومياً بين الوجبات. كبسولات: 200–500 مغ موحّدة 2–3 مرات يومياً.',
+        forms: [
+          { form: 'شاي البابونج', dose: '2–3 غ أزهار مجففة منقوعة 5–10 دقائق (مغطّى) في 150–250 مل ماء. 3–4 مرات يومياً بين الوجبات.' },
+          { form: 'كبسولات موحّدة', dose: '200–500 مغ 2–3 مرات يومياً، موحّدة على محتوى الأبيجينين.' },
+          { form: 'مستخلص سائل', dose: '1–4 مل في 45% إيثانول، 3 مرات يومياً، مخفف في ماء دافئ.' },
+        ],
+      },
+      overdose: {
+        symptoms: [
+          'غثيان وقيء ودوخة شديدة من المستخلصات المركّزة',
+          'نعاس مفرط واسترخاء عصبي عضلي معمّم من تقوية مسارات GABA',
+        ],
+        management: [
+          'التوقف فوراً. الحفاظ على الإماهة الكافية.',
+          'علاج أعراضي وداعم إذا استمرت الأعراض الشديدة.',
+        ],
+      },
+      sideEffects: [
+        'تفاعلات تحسسية نادرة في الأفراد الحساسين للنباتات من عائلة Asteraceae (تقاطع مع البنج البري والأقحوان والكريزانثيم)',
+        'نعاس خفيف بالجرعات العالية من التأثير GABA',
+      ],
+      contraindications: [
+        'فرط حساسية معروف للبابونج الألماني أو أي نبات من عائلة Asteraceae/Compositae (البنج البري، القطيفة، الكريزانثيم)؛ خطر الصدمة التحسسية',
+        'الربو التأتبي الشديد: تجنب الاستنشاق أو الاستهلاك عالي الجرعة دون موافقة طبية',
+      ],
+      drugInteractions: [
+        'مضادات التخثر (وارفارين، أسبيرين، كلوبيدوجريل): محتوى الكومارين + النشاط المضاد للصفيحات قد يُقوّي خطر النزيف. راقب PT/INR.',
+        'مثبطات الجهاز العصبي المركزي (بنزوديازيبينات، كحول، مواد أفيونية): تهدئة إضافية من ارتباط الأبيجينين بـGABA.',
+        'ركائز CYP3A4: تثبيط CYP3A4 في المختبر؛ توخّ الحذر مع الأدوية ذات النطاق العلاجي الضيق.',
+      ],
+      storage: {
+        forms: [
+          { form: 'رؤوس الأزهار المجففة / المستحضرات الموحّدة', instructions: 'حاويات محكمة الإغلاق مقاومة للضوء أقل من 25°C. منع امتصاص الرطوبة وتطاير الزيت العطري وتحلّل الكاموزولين الضوئي.' },
+        ],
+      },
+      benefits: [
+        { icon: 'spa', title: 'مضاد التهاب هضمي لطيف', desc: 'الكاموزولين والبيسابولول يُثبّطان مسارات COX و5-LOX معاً، مُقلِّلَين الالتهاب المخاطي في التهاب المعدة والقولون العصبي والإسهال الخفيف.' },
+        { icon: 'self_improvement', title: 'مُزيل للقلق عبر GABA-A لمحور الأمعاء والدماغ', desc: 'ارتباط الأبيجينين بمستقبلات GABA-A يهدّئ الضائقة الهضمية النفسية الجسدية والقلق، مُعالِجاً العلاقة بين الأمعاء والدماغ في الاضطرابات المعوية المحرَّضة بالتوتر.' },
+        { icon: 'healing', title: 'شفاء الغشاء المخاطي وتلطيفه', desc: 'α-البيسابولول يُهدّئ ويُسرّع شفاء تقرحات المعدة والأمعاء، مُحمِّياً بطانة الغشاء المخاطي أثناء الالتهاب الهضمي الحاد.' },
+        { icon: 'local_florist', title: 'تخفيف مغص الرضع', desc: 'للمنقوعات الخفيفة من البابونج أدلة سريرية على تقليل أعراض مغص الرضع بأمان من خلال إرخاء العضلة الملساء في الجهاز الهضمي.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Asteraceae (Compositae)',
+        nativeRegion: 'أصيل أوروبا وآسيا المعتدلة. مُطبَّع على نطاق واسع في أمريكا الشمالية. الزراعة التجارية الكبرى في ألمانيا والمجر ومصر والأرجنتين.',
+        growthHabit: 'نبات حولي أو ثنائي الحول؛ رؤوس زهرية بيضاء مع قرص أصفر مرتفع؛ الكاموزولين الأزرق يتكوّن فقط أثناء التقطير البخاري من الماتريسين.',
+        activeCompounds: 'الكاموزولين، α-البيسابولول، أكاسيد البيسابولول، أبيجينين-7-غلوكوزيد، لوتيولين، كويرسيتين، أمبيليفيرون، هيرنياريين',
+        cultivationNotes: 'استُخدم من قِبل المصريين القدماء (مُكرَّس للإله رع) واليونانيين والرومانيين للشكاوى الهضمية. أحد أكثر الشاي العشبي استهلاكاً عالمياً. أصدرت وكالة الأدوية الأوروبية ومنظمة الصحة العالمية وESCOP تقارير سريرية.',
+      },
+      preparation: [
+        { method: 'منقوع مائي (شاي)', desc: 'انقع 2–3 غ رؤوس أزهار مجففة في 150–250 مل ماء مغلي في إناء مُغطّى لمدة 5–10 دقائق. التغطية ضرورية لمنع فقدان الكاموزولين العطري.', bestFor: 'الإسهال الخفيف، تشنجات الجهاز الهضمي، التهاب المعدة، الغازات، مغص الرضع، الأرق الخفيف' },
+        { method: 'كبسولة مستخلص موحّدة', desc: 'كبسولات دوائية موحّدة على محتوى الأبيجينين لنتائج علاجية متسقة.', bestFor: 'القولون العصبي والضائقة الهضمية المرتبطة بالقلق والجرعة الدقيقة' },
+      ],
+    },
+
+    senna: {
+      name: 'السنا',
+      shortDescription: 'ملين منبّه معتمد سريرياً يعمل عبر تنشيط بروتوبروغ بكتيري في القولون، منتجاً إخلاء معوياً قصير الأمد موثوقاً من خلال آليتَي تحريك الحركة وإفراز المواد.',
+      description: 'يحتوي السنا (Senna alexandrina) على السنوسيدات A وB، وهي غليكوسيدات ثنائي الأنثرون التي تمر غير ممتصة عبر الجهاز الهضمي العلوي. عند وصولها للقولون، تُفرز البكتيريا ريانثرون النشط الذي يُحفّز التمعج القولوني ويُعدّل نقل الشوارد عبر تثبيط Na+/K+-ATPase وفتح قنوات الكلوريد، منتجاً براز طريًا كثيفاً. مخصص للاستخدام قصير الأمد فقط؛ الإساءة المزمنة تؤدي إلى القولون التحرّكي وفقدان الشوارد والاعتمادية.',
+      symptoms: ['الإمساك', 'عدم انتظام حركة الأمعاء', 'تنظيف الأمعاء قبل الإجراءات الطبية'],
+      warnings: [
+        'للاستخدام قصير الأمد فقط (أسبوع إلى أسبوعين بحد أقصى). الاستخدام المزمن يُفضي إلى الاعتمادية وضمور القولون.',
+        'لا تُستخدم لإنقاص الوزن؛ أي وزن يُفقَد هو وزن ماء فقط وهذا خطير.',
+        'موانع الاستخدام المطلقة للأطفال دون سنتين.',
+        'موانع الاستخدام في الحمل (خاصة الثلث الأول) بسبب المخاطر الجينية المحتملة للأنثراكينونات.',
+        'لا تُستخدم في انسداد الأمعاء أو الألم البطني الحاد أو أمراض الأمعاء الالتهابية.',
+        'خطر نقص بوتاسيوم الدم الخطير مع الإفراط في الاستخدام.',
+      ],
+      activeConstituents: [
+        { name: 'السنوسيدات A وB (غليكوسيدات ثنائي الأنثرون)', percentage: '~80% من الفاعلية الكلية', effect: 'المواد المنشّطة الملينة الرئيسية؛ يتحلل الميكروبيوم القولوني إلى ريانثرون النشط الذي يُحفّز التمعج ويُعدّل إفراز الشوارد' },
+        { name: 'السنوسيدات C وD', percentage: '~20% من الفاعلية الكلية', effect: 'غليكوسيدات أنثراكينونية ثانوية تُسهم في التأثير الملين الكلي' },
+        { name: 'غليكوسيدات الأنثراكينون (ثنائي الأنثرون 75-80%، الأنثرونات 20-25%)', percentage: '', effect: 'مجتمعةً مسؤولة عن خاصية الملين المنبّه عبر تنشيط البروتوبروغ البكتيري في القولون' },
+      ],
+      moa: [
+        { title: 'تنشيط البروتوبروغ بواسطة الميكروبيوم المعوي', detail: 'السنوسيدات بروتوبروغات محبة للماء تعبر الأمعاء الدقيقة دون امتصاص. عند وصولها للقولون، تُحلّل بيتا-غليكوسيداز البكتيرية إلى ريانثرون النشط الذي يمارس تأثيراته الملينة موضعياً.' },
+        { title: 'تهيّج الأمعاء وتعزيز الحركة', detail: 'ريانثرون يُحفّز الغشاء المخاطي القولوني مُسبّباً تهيّجاً موضعياً يُعزّز التمعج الدافع ويُقصّر وقت العبور القولوني، مما يدفع لإخلاء الأمعاء.' },
+        { title: 'تعديل الشوارد والسوائل', detail: 'ريانثرون يثبّط Na+/K+-ATPase ويفتح قنوات الكلوريد في الغشاء المخاطي القولوني، مُثبّطاً امتصاص الماء ومُعزّزاً إفراز الماء والشوارد إلى تجويف الأمعاء، منتجاً براز طري كثيف.' },
+      ],
+      uses: [
+        'تخفيف أعراض الإمساك العرضي أو الحاد قصير الأمد',
+        'تنظيف الأمعاء قبل التنظير القولوني أو الأشعة أو التدخلات الجراحية (تحت إشراف طبي)',
+      ],
+      howToUse: [
+        { method: 'شاي السنا (منقوع مائي)', instruction: 'انقع 1-2 غ من أوراق السنا المجففة في 150 مل من الماء المغلي في إناء مُغطّى لمدة 10-15 دقيقة. لا تغلي الأوراق مباشرةً. صفّ وأضف الزنجبيل أو النعناع اختيارياً كمُقطّع. يُحسن تناوله ليلاً قبل النوم. البداية: 6-12 ساعة.' },
+        { method: 'أقراص / حبيبات موحّدة', instruction: 'تناول حسب تعليمات المنتج (عادةً 15-30 ملغ سنوسيد مرة يومياً عند النوم للبالغين). لا تتجاوز 30 ملغ غليكوسيدات هيدروكسي أنثراسين يومياً. استخدم لفترات قصيرة فقط.' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون والمراهقون (12 سنة فأكثر)', notes: '15-30 ملغ سنوسيد مرة يومياً عند النوم. الحد الأقصى: 30 ملغ/يوم. استخدام قصير الأمد فقط (أسبوع إلى أسبوعين بحد أقصى بدون توجيه طبي).' },
+        { group: 'الأطفال (6-12 سنة)', notes: '7.5-15 ملغ سنوسيد مرة يومياً (نصف جرعة البالغين). تحت الإشراف الطبي المباشر فقط.' },
+        { group: 'الأطفال (2-6 سنوات)', notes: '2.5-5 ملغ سنوسيد مرة يومياً. تحت الإشراف الطبي المباشر الصارم فقط.' },
+        { group: 'الأطفال دون سنتين', notes: 'موانع الاستخدام المطلقة.' },
+        { group: 'الحوامل', notes: 'غير موصى به. الثلث الأول موانع صارمة بسبب المخاطر الجينية المحتملة. فقط بموجب توجيه طبي صارم إذا فشلت التدابير الغذائية والملينات التجميعية.' },
+        { group: 'المرضعات', notes: 'غير موصى به. مخاطر حدوث إسهال أو مغص للرضيع.' },
+      ],
+      dosage: {
+        standard: 'البالغون: 15-30 ملغ سنوسيد مرة يومياً عند النوم. الحد الأقصى: 30 ملغ غليكوسيدات هيدروكسي أنثراسين (محسوبة كسنوسيد B) يومياً. البداية: 6-12 ساعة.',
+        forms: [
+          { form: 'شاي أوراق السنا', dose: '1-2 غ أوراق مجففة تُنقع 10-15 دقيقة في 150 مل ماء مغلي؛ يُتناول عند النوم. لا تُغلى.' },
+          { form: 'أقراص موحّدة (مثلاً 7.5 ملغ سنوسيد)', dose: 'البالغون: 2-4 أقراص عند النوم. الأطفال 6-12 سنة: 1-2 قرص. حسب تعليمات المنتج.' },
+          { form: 'حبيبات / شراب', dose: 'حسب تركيز المنتج والفئة العمرية؛ عادةً 5-10 مل للأطفال 6-12 سنة.' },
+        ],
+      },
+      overdose: {
+        symptoms: [
+          'تقلصات بطنية شديدة وألم "مغص" حاد',
+          'إسهال مائي غزير يؤدي إلى فقدان سريع للسوائل والمعادن',
+          'اختلال الشوارد (نقص بوتاسيوم الدم) - قد يُحفّز اضطراب نظم القلب وضعف العضلات',
+          'الحماض الأيضي من فقدان مفرط للبيكربونات',
+          'الإساءة المزمنة: الاعتماد على الملينات، ضمور القولون (القولون القثطاري)',
+        ],
+        management: [
+          'أوقف فوراً جميع المنتجات المحتوية على الأنثراكينون',
+          'إماهة عدوانية بأملاح معالجة الجفاف الفموية (ORS) أو سوائل وريدية',
+          'مراقبة مستمرة لشوارد المصل، خاصة مستويات البوتاسيوم',
+          'مراقبة القلب في المرضى ذوي الأمراض القلبية السابقة',
+        ],
+      },
+      sideEffects: [
+        'آلام بطنية وتقلصات ("مغص") - الأكثر شيوعاً',
+        'إسهال (خاصة بجرعات عالية أو في الأفراد الحساسين)',
+        'اختلالات الشوارد بما فيها نقص بوتاسيوم الدم',
+        'سواد القولون: تصبّغ بني حميد قابل للعكس للغشاء المخاطي القولوني (يختفي بعد أشهر من التوقف)',
+        'غثيان وفرط في النشاط المعوي',
+        'تلوّن البول بالأصفر البني أو البني المحمر (إطراح حميد للمستقلبات)',
+      ],
+      contraindications: [
+        'فرط حساسية معروف للسنا أو مشتقات الأنثراكينون الأخرى',
+        'انسداد الأمعاء أو العيلس أو الانسداد البرازي',
+        'أمراض الأمعاء الالتهابية الحادة (داء كرون، التهاب القولون التقرحي، التهاب الزائدة)',
+        'الجفاف الشديد أو استنزاف الشوارد',
+        'آلام بطنية شديدة غير محددة مصحوبة بغثيان/قيء',
+        'قصور كلوي أو كبدي حاد',
+        'الأطفال دون سنتين (موانع مطلقة)',
+      ],
+      drugInteractions: [
+        'الغليكوسيدات القلبية (مثلاً ديجوكسين) ومضادات اضطراب النظم: نقص بوتاسيوم الدم الناتج عن إساءة الملينات يُضخّم سميتها - خطير.',
+        'مدرات البول المُستنزِفة للبوتاسيوم (مثلاً فوروسيميد) والكورتيكوستيرويدات: تُسرّع فقدان البوتاسيوم، تُفاقم نقص بوتاسيوم الدم.',
+        'جذر عرق السوس (Glycyrrhiza glabra): الاستخدام المشترك يزيد فقدان البوتاسيوم بشكل كبير.',
+      ],
+      storage: {
+        forms: [
+          { form: 'أوراق السنا المجففة / الشاي', instructions: 'مكان بارد جاف (15-25°C) في حاويات محكمة الإغلاق مقاومة للضوء. احمِ من الحرارة وأشعة الشمس المباشرة والرطوبة.' },
+          { form: 'أقراص / حبيبات', instructions: 'يُخزَّن في عبوته الأصلية بعيداً عن الحرارة والرطوبة. لا يُخزَّن في الحمامات. يُبعد عن متناول الأطفال.' },
+        ],
+      },
+      benefits: [
+        { icon: 'medical_services', title: 'ملين منبّه معتمد سريرياً', desc: 'ملين مُثبَت لتخفيف الإمساك قصير الأمد وفقاً لمنظمة الصحة العالمية ووكالة الأدوية الأوروبية.' },
+        { icon: 'cleaning_services', title: 'تنظيف الأمعاء', desc: 'للتحضير للتنظير القولوني والتدخلات الجراحية تحت الإشراف الطبي.' },
+        { icon: 'timer', title: 'بداية عمل سريعة وموثوقة', desc: 'إخلاء معوي موثوق في 6-12 ساعة.' },
+        { icon: 'science', title: 'آلية مزدوجة', detail: 'مُحفّز للحركة ومُفرِز للشوارد في آن واحد.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Leguminosae / Fabaceae',
+        nativeRegion: 'أصيل شمال شرق أفريقيا (مصر والسودان) وجنوب آسيا (الهند). يُزرع تجارياً في الهند وباكستان ووادي النيل.',
+        growthHabit: 'شجيرة أو عشب معمّر صغير؛ أوراق مركّبة ريشية مزدوجة؛ أزهار صفراء.',
+        activeCompounds: 'السنوسيدات A وB (الرئيسية)، السنوسيدات C وD، غليكوسيدات الأنثراكينون (ثنائي الأنثرون والأنثرونات)',
+        cultivationNotes: 'موثق في ابن سينا (القانون في الطب) منذ القرن التاسع الميلادي. تمتلك منظمة الصحة العالمية ووكالة الأدوية الأوروبية تقارير رسمية لاستخدامه الطبي.',
+      },
+      preparation: [
+        { method: 'المنقوع المائي (الاستخدام المنزلي القياسي)', desc: 'انقع 1-2 غ أوراق مجففة في 150 مل ماء مغلي في إناء مُغطّى لـ 10-15 دقيقة. صفّ جيداً. أضف الزنجبيل أو النعناع لتقليل المغص.', bestFor: 'تخفيف الإمساك قصير الأمد؛ يُتناول عند النوم لتأثير صباحي' },
+        { method: 'مستخلص موحّد (تجاري)', desc: 'أقراص وحبيبات موحّدة بمحتوى سنوسيد محدد (مثلاً 7.5 أو 12.5 ملغ سنوسيد لكل قرص) وفق إرشادات وكالة الأدوية الأوروبية/منظمة الصحة العالمية.', bestFor: 'جرعات دقيقة؛ التحضير للإجراءات الطبية' },
+      ],
+    },
+
+    turmeric: {
+      name: 'الكركم',
+      shortDescription: 'مضاد التهاب طبيعي قوي',
+      description: 'الكركم (Curcuma longa) نبات جذمور استوائي من الفصيلة الزنجبيلية، يُستخدم في الطب الأيورفيدي والصيني منذ أكثر من 4000 سنة. مادته الفعّالة الكركيومين ثبت لها تأثير مضاد قوي للالتهاب ومضاد للأكسدة في عشرات الدراسات السريرية.',
+      symptoms: ['ألم المفاصل', 'الالتهاب', 'آلام العضلات', 'أمراض المناعة الذاتية', 'دعم الكبد'],
+      warnings: [
+        'يُخفّض مستوى السكر في الدم؛ تابع نسب السكر عند استخدامه مع مضادات السكري',
+        'يؤخّر تخثّر الدم؛ أوقف الاستخدام قبل الجراحة بأسبوعين على الأقل',
+      ],
+      activeConstituents: [
+        { name: 'كركيومينويدات', percentage: '2-4%', effect: 'المادة الفعّالة الرئيسية المضادة للالتهاب ومضادة للأكسدة' },
+        { name: 'زيوت طيّارة (توميرون، زنجيبرين)', percentage: '', effect: 'تُعزّز التأثير الإجمالي وتُحسّن الامتصاص' },
+        { name: 'نشا', percentage: '40-50%', effect: 'المكوّن الهيكلي الرئيسي في الجذمور الجاف' },
+      ],
+      moa: [
+        { title: 'تثبيط NF-κB', detail: 'يُقلّل إنتاج السيتوكينات الالتهابية (IL-1β، IL-6، TNF-α)' },
+        { title: 'تثبيط COX-2 وLOX-5', detail: 'يُقلّل تركيب البروستاغلاندينات واللوكوترينات الالتهابية' },
+        { title: 'تنشيط Nrf2', detail: 'يُحفّز مسار الحماية من الإجهاد التأكسدي على مستوى الخلية' },
+      ],
+      uses: ['التهاب المفاصل ومتلازمة الألم المزمن', 'دعم وظائف الكبد وإزالة السموم', 'التهابات الجهاز الهضمي والقولون التقرحي', 'الوقاية من التأكسد والشيخوخة الخلوية'],
+      howToUse: [
+        { method: 'مع الفلفل الأسود أو البيبيرين', instruction: 'أضف قرصة فلفل أسود مع كل جرعة لتحسين الامتصاص حتى 20 ضعفاً' },
+        { method: 'صياغة الفيتوزوم أو الميسيل', instruction: 'اختر هذه الكبسولات للحالات العلاجية لامتصاص أعلى بكثير' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون (18 سنة فأكثر)', notes: 'الجرعة القياسية الكاملة آمنة' },
+        { group: 'الأطفال (12 إلى 17 سنة)', notes: 'يُستخدم بحذر تحت إشراف طبي' },
+        { group: 'الحوامل', notes: 'يُتجنّب بجرعات علاجية؛ الاستخدام كتوابل في الطعام آمن' },
+      ],
+      dosage: {
+        standard: 'مسحوق الجذمور 1 إلى 3 غ يومياً مقسّمة على وجبات',
+        forms: [
+          { form: 'مسحوق الجذمور', dose: '1 إلى 3 غ يومياً مقسّمة على وجبات' },
+          { form: 'مستخلص موحّد (95% كركيومينويدات)', dose: '400 إلى 600 ملغ ثلاث مرات يومياً' },
+          { form: 'صياغات الفيتوزوم', dose: '200 إلى 400 ملغ مرتين يومياً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['اضطرابات معدية معوية', 'غثيان', 'إسهال (عند جرعات أعلى من 8 غ يومياً)'],
+        management: [
+          'أوقف الاستخدام وتناول الطعام لتخفيف التهيّج المعدي',
+          'التجارب السريرية استخدمت حتى 12 غ يومياً بأمان نسبي لفترات قصيرة',
+        ],
+      },
+      sideEffects: [
+        'اضطراب معدي وغثيان وإسهال بالجرعات العالية',
+        'صداع ودوخة (نادراً)',
+        'تحسس جلدي عند الاستخدام الموضعي المطوّل (نادر)',
+      ],
+      contraindications: [
+        'حصوات المرارة أو انسداد القناة الصفراوية (يُحفّز تدفق العصارة)',
+        'فرط حساسية للنباتات الزنجبيلية',
+        'اضطرابات النزيف الحادة',
+        'ما قبل الجراحة (توقف قبل أسبوعين على الأقل)',
+      ],
+      drugInteractions: [
+        'مضادات التخثر (وارفارين، هيبارين): يزيد خطر النزيف',
+        'مضادات الصفيحات (أسبرين، كلوبيدوجريل): تأثير مضاعف',
+        'مضادات السكري: قد يخفّض السكر',
+        'مثبطات مضخة البروتون: قد يُضعف تأثيرها',
+      ],
+      storage: {
+        forms: [
+          { form: 'مسحوق', instructions: 'وعاء محكم الإغلاق بعيداً عن الضوء والرطوبة في درجة حرارة الغرفة' },
+          { form: 'كبسولات', instructions: 'وفق إرشادات المُصنّع، عادةً أقل من 25 درجة مئوية' },
+        ],
+      },
+      benefits: [
+        { icon: 'healing', title: 'مضاد التهاب قوي', desc: 'يثبّط مسارات NF-κB وCOX-2 لتخفيف الألم المزمن.' },
+        { icon: 'shield', title: 'حماية الكبد', desc: 'يُحفّز إنزيمات إزالة السموم ويحمي خلايا الكبد من الإجهاد التأكسدي.' },
+        { icon: 'psychology', title: 'دعم معرفي', desc: 'يُعزّز مستوى BDNF ويُقلّل من خطر الاضطرابات العصبية.' },
+        { icon: 'favorite', title: 'صحة القلب', desc: 'يُحسّن وظيفة البطانة الوعائية ويُقلّل الأكسدة الدهنية.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Zingiberaceae (الزنجبيليات)',
+        nativeRegion: 'جنوب آسيا (الهند وإندونيسيا وجنوب شرق آسيا). تُزرع تجارياً في الهند (90% من الإنتاج العالمي) وباكستان وبنغلاديش.',
+        growthHabit: 'نبات جذمور معمّر يصل ارتفاعه إلى متر واحد؛ أوراق كبيرة رمحية؛ جذمور برتقالي لامع عند الكسر.',
+        activeCompounds: 'كركيومين (70-80% من الكركيومينويدات)، بيسديميثوكسي كركيومين، ديميثوكسي كركيومين، ar-تورميرون.',
+        cultivationNotes: 'مذكور في الفيدا الأثارفا (1500 قبل الميلاد). الأدلة السريرية الأكثر شمولاً في النباتات الطبية مع أكثر من 3000 دراسة منشورة.',
+      },
+      preparation: [
+        { method: 'ذهب الحليب (Turmeric Latte)', desc: 'اخفق 1 ملعقة صغيرة مسحوق + قرصة فلفل أسود + ملعقة صغيرة زيت جوز هند في 250 مل حليب دافئ. حلّ بالعسل.', bestFor: 'الاستخدام اليومي للصحة العامة والنوم' },
+        { method: 'كبسولات موحّدة', desc: 'اختر صياغات فيتوزوم أو بيبيرين (مثل Curcumin C3 Complex®) للحصول على امتصاص أعلى.', bestFor: 'الجرعات العلاجية لألم المفاصل والالتهاب المزمن' },
+      ],
+    },
+
+    clove: {
+      name: 'القرنفل',
+      shortDescription: 'مطهّر طبيعي قوي للجهاز البولي',
+      description: 'القرنفل (Syzygium aromaticum) براعم زهرية مجففة من شجرة استوائية دائمة الخضرة. يحتوي على أعلى تركيز من اليوجينول بين التوابل المعروفة، وقد ثبتت فاعليته المضادة للميكروبات والبكتيريا في مسببات التهابات المسالك البولية بما فيها E. coli.',
+      symptoms: ['التهاب المسالك البولية', 'الألم عند التبوّل', 'تكرار الإصابة بالعدوى', 'الحمى المصاحبة للعدوى'],
+      warnings: [
+        'لا يستبدل المضادات الحيوية في حالات التهاب المسالك البولية الحادة أو التهاب الكلى',
+        'راجع الطبيب فوراً عند الحمى أو ألم الظهر المصاحب للعدوى',
+      ],
+      activeConstituents: [
+        { name: 'يوجينول', percentage: '70-90%', effect: 'المضاد الرئيسي للبكتيريا والفطريات والمسكّن الموضعي' },
+        { name: 'أسيتيل يوجينول وكاريوفيلين', percentage: '', effect: 'يُعزّزان التأثير المضاد للالتهاب' },
+        { name: 'فلافونويدات (كيمبفيرول، كيرسيتين)', percentage: '', effect: 'مضادة للأكسدة ومضادة للالتهاب' },
+        { name: 'تانينات (غاليك وإيلاجيك)', percentage: '', effect: 'قابضة ومضادة للميكروبات' },
+      ],
+      moa: [
+        { title: 'تثبيط غشاء البيوفيلم', detail: 'اليوجينول يُدمّر غشاء الخلية البكتيرية ويمنع تكوين الغشاء الحيوي' },
+        { title: 'تثبيط مضخة الأيونات', detail: 'يُثبّط مضخة Na+/K+ البكتيرية ويُقلّل إنتاج السموم الخلوية' },
+        { title: 'تأثير الفلافونويدات', detail: 'تُعزّز التأثير المضاد للأكسدة وتُقلّل الالتهاب المحلي في المسالك البولية' },
+      ],
+      uses: ['دعم علاج التهابات المسالك البولية الخفيفة', 'مضاد فطري لالتهابات Candida', 'خافض للحمى مساعد', 'مسكّن للألم السني والموضعي'],
+      howToUse: [
+        { method: 'منقوع القرنفل', instruction: 'يُستخدم الشاي أو المنقوع للاستخدام الداخلي الآمن' },
+        { method: 'الزيت الأساسي', instruction: 'مُخفَّف فقط للاستخدام الخارجي الموضعي؛ لا يُستخدم نقياً داخلياً' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون (18 سنة فأكثر)', notes: 'الجرعة الكاملة آمنة' },
+        { group: 'الأطفال (12 سنة فأكثر)', notes: 'يُتجنّب داخلياً بدون إشراف طبي' },
+        { group: 'الحوامل', notes: 'استشارة طبية ضرورية قبل الاستخدام' },
+      ],
+      dosage: {
+        standard: 'منقوع القرنفل: 1 إلى 2 غ براعم مجففة في 200 مل ماء مغلي، مرتين يومياً',
+        forms: [
+          { form: 'منقوع البراعم المجففة', dose: '1 إلى 2 غ في 200 مل ماء مغلي، مرتين يومياً' },
+          { form: 'مستخلص موحّد (يوجينول 80%)', dose: '100 إلى 200 ملغ ثلاث مرات يومياً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['غثيان وإقياء', 'نزيف', 'تسمم كبدي عند الجرعات الزائدة جداً'],
+        management: [
+          'أوقف الاستخدام فوراً وراجع الطبيب',
+          'احفظ زيت القرنفل بعيداً عن الأطفال',
+        ],
+      },
+      sideEffects: [
+        'تهيّج الفم والمعدة',
+        'فرط حساسية جلدية (نادراً)',
+        'حرق موضعي عند استخدام الزيت غير المخفّف',
+      ],
+      contraindications: [
+        'اضطرابات النزيف والجلطات',
+        'أمراض الكبد الحادة',
+        'حساسية من الفينيل بروبانويد',
+        'الحمل بجرعات علاجية',
+      ],
+      drugInteractions: [
+        'مضادات التخثر: يزيد خطر النزيف',
+        'مضادات الصفيحات: تأثير مضاعف',
+        'سيكلوسبورين ومثبطات CYP3A4: تداخلات محتملة',
+      ],
+      storage: {
+        forms: [
+          { form: 'براعم مجففة', instructions: 'وعاء زجاجي محكم في مكان بارد وجاف؛ تدوم 3 إلى 4 سنوات' },
+          { form: 'زيت أساسي', instructions: 'في الثلاجة؛ يدوم حتى سنتين' },
+        ],
+      },
+      benefits: [
+        { icon: 'vaccines', title: 'مضاد للبكتيريا', desc: 'اليوجينول يثبّط E. coli وKlebsiella المسببة لالتهابات المسالك.' },
+        { icon: 'thermostat', title: 'خافض للحمى', desc: 'يُقلّل الالتهاب الجهازي المصاحب للعدوى.' },
+        { icon: 'healing', title: 'مضاد للفطريات', desc: 'فعّال ضد Candida albicans في التهابات المهبل والمسالك البولية.' },
+        { icon: 'medication', title: 'مسكّن موضعي', desc: 'يُخدّر الأعصاب المحلية مؤقتاً ويُخفّف ألم التبوّل.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Myrtaceae (الآسيليات)',
+        nativeRegion: 'جزر مالوكو (إندونيسيا) أصلاً. تُزرع الآن في إندونيسيا وتنزانيا (زنجبار) وسريلانكا وكينيا.',
+        growthHabit: 'شجرة دائمة الخضرة تصل إلى 12 متراً؛ تُقطف البراعم قبل تفتّح الأزهار وتُجفَّف.',
+        activeCompounds: 'يوجينول، أسيتيل يوجينول، β-كاريوفيلين، α-هيومولين، غاليوتانين.',
+        cultivationNotes: 'كان من أثمن توابل العصور الوسطى. اليوجينول لا يزال أساسياً في صناعة طب الأسنان كمادة مُخدِّرة.',
+      },
+      preparation: [
+        { method: 'منقوع القرنفل', desc: 'اغلِ 4-5 براعم في 300 مل ماء 10 دقائق. صفّ واشرب دافئاً مع العسل، مرتين يومياً.', bestFor: 'دعم علاج التهابات المسالك الخفيفة' },
+        { method: 'كبسولات مستخلص القرنفل', desc: 'اختر كبسولات موحّدة تحتوي 80% يوجينول وفق إرشادات الجرعة.', bestFor: 'الاستخدام العلاجي المنتظم مع مراقبة طبية' },
+      ],
+    },
+
+    'witch-hazel': {
+      name: 'الهاماميليس',
+      shortDescription: 'قابض طبيعي مضاد للالتهاب',
+      description: 'الهاماميليس (Hamamelis virginiana) شجيرة أمريكية شمالية تحتوي لحاؤها وأوراقها على تانينات وبروانثوسيانيدينات تمنحها خصائص قابضة وضد التهاب ومضادة للأكسدة. تُستخدم تقليدياً لتهدئة التهيّج ودعم صحة المسالك البولية.',
+      symptoms: ['التهيّج والالتهاب الخفيف', 'دعم صحة الجهاز البولي', 'الأوردة الدوالية', 'التهاب الجلد'],
+      warnings: [
+        'للاستخدام الداخلي: لا تتجاوز الجرعة الموصى بها',
+        'يحتوي على تانينات قد تتداخل مع امتصاص الحديد والأدوية',
+      ],
+      activeConstituents: [
+        { name: 'تانينات (هاماميليتانين، غاليوتانينات)', percentage: '8-12%', effect: 'قابضة ومضادة للالتهاب ومضادة للميكروبات' },
+        { name: 'فلافونويدات (كيرسيتين، كيمبفيرول)', percentage: '', effect: 'مضادة للأكسدة ومثبّطة لإنزيم COX-2' },
+        { name: 'بروانثوسيانيدينات', percentage: '', effect: 'تُعزّز صحة الأوردة والشعيرات الدموية' },
+        { name: 'زيوت طيارة وصابونينات', percentage: '', effect: 'تُساهم في التأثير المضاد للالتهاب' },
+      ],
+      moa: [
+        { title: 'تأثير التانينات القابض', detail: 'تُبطّن الأغشية المخاطية وتُقلّل النفاذية الشعرية وتُثبّط تحرّر الهستامين' },
+        { title: 'تثبيط COX-2', detail: 'الفلافونويدات تُثبّط إنزيم COX-2 وتُقلّل الإجهاد التأكسدي' },
+        { title: 'تأثير مضاد للإفراز', detail: 'يُقلّل التهيّج وإفراز المخاط من الغشاء المخاطي' },
+      ],
+      uses: ['تهدئة التهيّج البولي الخفيف', 'تحسين مقاومة الأوردة وتقليل الوذمة', 'علاج الفروة والجلد المتهيّج موضعياً', 'مضاد للأكسدة عام'],
+      howToUse: [
+        { method: 'الاستخدام الموضعي', instruction: 'أشيع وأأمن؛ يُطبَّق بالقطن على المنطقة المتهيّجة 2 إلى 3 مرات يومياً' },
+        { method: 'الاستخدام الداخلي', instruction: 'استشر متخصصاً؛ التانينات المرتفعة تتداخل مع الامتصاص المعدي المعوي' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون (فوق 18 سنة)', notes: 'الجرعة الكاملة آمنة داخلياً وخارجياً' },
+        { group: 'الأطفال (6 سنوات فأكثر)', notes: 'يُسمح بالاستخدام الموضعي فقط' },
+        { group: 'الحوامل', notes: 'يُتجنّب الاستخدام الداخلي' },
+      ],
+      dosage: {
+        standard: 'مستخلص سائل 2 إلى 4 مل ثلاث مرات يومياً للاستخدام الداخلي',
+        forms: [
+          { form: 'مستخلص سائل (1:1)', dose: '2 إلى 4 مل ثلاث مرات يومياً' },
+          { form: 'شاي الأوراق', dose: '2 إلى 3 غ في 200 مل ماء مغلي، مرتين يومياً' },
+          { form: 'محلول موضعي', dose: 'محلول 10 إلى 15% حسب الحاجة' },
+        ],
+      },
+      overdose: {
+        symptoms: ['غثيان وإسهال وقيء بسبب التانينات', 'سُمّية كبدية في حالات نادرة مع الاستخدام المطوّل'],
+        management: ['أوقف الاستخدام وتناول الماء والطعام', 'راجع الطبيب عند أعراض الكبد'],
+      },
+      sideEffects: [
+        'إزعاج معدي معوي بالجرعات العالية',
+        'فرط حساسية (نادراً)',
+        'تهيّج جلدي موضعي (نادر)',
+      ],
+      contraindications: [
+        'أمراض الكبد بسبب التانينات',
+        'الحمل والرضاعة (الاستخدام الداخلي)',
+        'حساسية من نباتات Hamamelidaceae',
+      ],
+      drugInteractions: [
+        'يُقلّل امتصاص الحديد والمعادن؛ تناوله بعيداً عن المكمّلات',
+        'أدوية الكبد: احترس من التأثير التراكمي',
+      ],
+      storage: {
+        forms: [
+          { form: 'مستخلص', instructions: 'بارد وبعيد عن الضوء؛ يدوم سنة' },
+          { form: 'أوراق مجففة', instructions: 'وعاء محكم بعيداً عن الرطوبة' },
+        ],
+      },
+      benefits: [
+        { icon: 'compress', title: 'تأثير قابض', desc: 'يُشدّ الأنسجة المخاطية ويُقلّل التهيّج والإفراز.' },
+        { icon: 'water_drop', title: 'دعم الأوردة', desc: 'يُعزّز مقاومة جدار الأوردة ويُخفّف الوذمة.' },
+        { icon: 'shield', title: 'مضاد للأكسدة', desc: 'فلافونوياته تحمي الخلايا من الإجهاد التأكسدي.' },
+        { icon: 'spa', title: 'تهدئة موضعية', desc: 'يُهدّئ الالتهاب الجلدي والفروة المتهيّجة.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Hamamelidaceae',
+        nativeRegion: 'شرق أمريكا الشمالية (من كندا حتى فلوريدا). تُستزرع تجارياً في الولايات المتحدة وأوروبا.',
+        growthHabit: 'شجيرة أو شجرة صغيرة تصل إلى 5 أمتار؛ أزهار صفراء في الشتاء؛ أوراق بيضاوية مموّجة الحواف.',
+        activeCompounds: 'هاماميليتانين، غاليك أسيد، إيلاجيك أسيد، بروانثوسيانيدين B-2، كيرسيتين.',
+        cultivationNotes: 'استخدمتها القبائل الأمريكية الأصلية (الأبيناكي والموهيكان) لعلاج الجروح والالتهابات منذ قرون. منتجاتها الموضعية معتمدة من FDA كأدوية مساعدة.',
+      },
+      preparation: [
+        { method: 'شاي الهاماميليس', desc: 'اغلِ 2 غ لحاء أو أوراق مجففة في 250 مل ماء لـ 15 دقيقة. صفّ واشرب دافئاً مرتين يومياً.', bestFor: 'دعم صحة الأوردة والمسالك الخفيفة' },
+        { method: 'محلول موضعي', desc: 'استخدم محلول هاماميليس 10% على القطن وضعه على المنطقة المتهيّجة 2-3 مرات يومياً.', bestFor: 'التهاب الجلد والبواسير والفروة' },
+      ],
+    },
+
+    dandelion: {
+      name: 'الهندباء البرية',
+      shortDescription: 'مُدرّ بولي طبيعي لا يستنزف البوتاسيوم',
+      description: 'الهندباء البرية (Taraxacum officinale) عشبة مألوفة تتميز بجذر وتيدي سميك وأوراق مسنّنة. تُستخدم جذورها وأوراقها مُدرّاً للبول غنياً بالبوتاسيوم، ما يجعلها آمنة خلافاً للمدرّات الصناعية. لها تأثير مُذيب للحصوات وداعم لوظيفة الكبد.',
+      symptoms: ['احتباس السوائل', 'التهابات المسالك البولية الخفيفة', 'حصوات الكلى الصغيرة', 'دعم الكبد والمرارة'],
+      warnings: [
+        'تحتوي على البوتاسيوم؛ تابع مستوياته مع أدوية القلب',
+        'قد تُسبّب تفاعل تحسسي في حساسية المُركّبات الصفراء (Asteraceae)',
+      ],
+      activeConstituents: [
+        { name: 'فلافونويدات (لوتيولين، أبيجينين، كيرسيتين)', percentage: '', effect: 'مضادة للالتهاب وتمنع التصاق البكتيريا بجدار المثانة' },
+        { name: 'أحماض فينولية (حمض القهوة، الكلوروجينيك)', percentage: '', effect: 'مضادة للأكسدة وداعمة لوظيفة الكبد' },
+        { name: 'مواد مُرّة (تاراكساسين، تاراكساسيرين)', percentage: '', effect: 'تُحفّز العصارة الصفراوية وتحسّن وظيفة الكبد' },
+        { name: 'بوتاسيوم', percentage: '4.5%', effect: 'يُعوّض الفقد الطبيعي مع الإدرار' },
+      ],
+      moa: [
+        { title: 'مُدرّ مائي (Aquaretic)', detail: 'يزيد معدل الترشيح الكُبيبي ويمنع إعادة الامتصاص دون خسارة بوتاسيوم' },
+        { title: 'منع التصاق البكتيريا', detail: 'الفلافونويدات تُثبّط التصاق البكتيريا بجدار المثانة' },
+        { title: 'تحفيز العصارة الصفراوية', detail: 'المواد المُرّة تُحفّز إفراز الصفراء وتحسّن وظيفة الكبد' },
+      ],
+      uses: ['الوذمة واحتباس السوائل الخفيف', 'دعم الوقاية من التهابات المسالك', 'تعزيز طرح الحصوات الصغيرة', 'تحسين وظيفة الكبد وإفراز الصفراء'],
+      howToUse: [
+        { method: 'الأوراق الطازجة', instruction: 'تُضاف للسلطة كغذاء يومي للإدرار الخفيف' },
+        { method: 'شاي الجذر', instruction: 'الجذر المجفف كشاي للإدرار القوي؛ ثلاث مرات يومياً' },
+        { method: 'المستخلص المُركّز', instruction: 'للجرعة العلاجية الدقيقة والمراقبة' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون (18 سنة فأكثر)', notes: 'الجرعة الكاملة آمنة' },
+        { group: 'مرضى الكلى المزمن', notes: 'بحذر؛ مراقبة مستوى البوتاسيوم' },
+        { group: 'مرضى انسداد القنوات الصفراوية', notes: 'يُتجنّب كلياً' },
+      ],
+      dosage: {
+        standard: 'شاي جذر الهندباء 2 إلى 8 غ في 200 مل ماء مغلي، ثلاث مرات يومياً',
+        forms: [
+          { form: 'أوراق طازجة', dose: '4 إلى 10 غ ثلاث مرات يومياً' },
+          { form: 'شاي جذر الهندباء', dose: '2 إلى 8 غ في 200 مل ماء مغلي، ثلاث مرات يومياً' },
+          { form: 'مستخلص سائل (1:1)', dose: '4 إلى 8 مل ثلاث مرات يومياً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['إسهال', 'ارتجاع حمضي', 'فرط بوتاسيوم في مرضى الكلى'],
+        management: ['لا سمّية حادة موثقة', 'قلّل الجرعة عند ظهور أعراض الجهاز الهضمي'],
+      },
+      sideEffects: [
+        'تهيّج معدي وارتجاع حمضي (نادراً)',
+        'حساسية جلدية في حساسية المُركّبات الصفراء (Asteraceae)',
+      ],
+      contraindications: [
+        'انسداد القناة الصفراوية أو التهاب المرارة الحاد',
+        'فرط بوتاسيوم الدم',
+        'حصوات الكلى الكبيرة',
+        'فرط حساسية من نباتات Asteraceae',
+      ],
+      drugInteractions: [
+        'مدرّات البول: تأثير مضاعف وخطر جفاف',
+        'حاصرات البيتا وACE inhibitors: ارتفاع محتمل في البوتاسيوم',
+        'مضادات التخثر: قد يُعزّز التأثير بسبب فيتامين K',
+      ],
+      storage: {
+        forms: [
+          { form: 'أوراق طازجة', instructions: 'في الثلاجة حتى أسبوع' },
+          { form: 'جذر مجفف', instructions: 'وعاء محكم بعيداً عن الرطوبة؛ يدوم حتى سنتين' },
+        ],
+      },
+      benefits: [
+        { icon: 'water_drop', title: 'مُدرّ بولي آمن', desc: 'يزيد إدرار البول دون استنزاف البوتاسيوم كالمدرّات الصناعية.' },
+        { icon: 'local_pharmacy', title: 'دعم الكبد', desc: 'يُحفّز إفراز الصفراء ويدعم تخلّص الكبد من السموم.' },
+        { icon: 'healing', title: 'مضاد التصاق بكتيري', desc: 'يُقلّل التصاق البكتيريا بجدار المثانة والمسالك.' },
+        { icon: 'nutrition', title: 'غني بالمغذيات', desc: 'مصدر ممتاز لفيتامين A وK والبوتاسيوم والحديد.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Asteraceae (المُركّبات)',
+        nativeRegion: 'أصيل أوروبا وآسيا الوسطى. انتشر الآن عالمياً كنبات مُجنسَّن.',
+        growthHabit: 'عشبة معمّرة جذرها وتيدي سميك؛ أوراق مسنّنة في مجموعة قاعدية؛ نورة زهرية صفراء.',
+        activeCompounds: 'لوتيولين، أبيجينين، تاراكساسين، تاراكسيرول، بيتا-سيتوستيرول، بوتاسيوم.',
+        cultivationNotes: 'مستخدمة في الطب الصيني واليوناني والعربي لأكثر من ألف سنة. تُعدّ من أكثر النباتات العلاجية توثيقاً في دراسات الإدرار البولي.',
+      },
+      preparation: [
+        { method: 'شاي جذر الهندباء', desc: 'اغلِ 2-3 غ جذر مجفف في 300 مل ماء لـ 10 دقائق. صفّ واشرب دافئاً ثلاث مرات يومياً بعد الوجبات.', bestFor: 'الإدرار البولي ودعم الكبد والمسالك' },
+        { method: 'أوراق طازجة كسلطة', desc: 'اغسل الأوراق الطازجة جيداً وأضفها للسلطة مع ليمون وزيت زيتون. 1-2 حفنة يومياً.', bestFor: 'التغذية اليومية والإدرار الخفيف' },
+      ],
+    },
+
+    parsley: {
+      name: 'البقدونس',
+      shortDescription: 'مُدرّ بولي ومُذيب للحصوات',
+      description: 'البقدونس (Petroselinum crispum) عشبة طبيخ شائعة من الفصيلة الخيمية تمتلك خصائص إدرارية ومضادة للميكروبات موثّقة. يحتوي على أبيول وميريستيسين يُحفّزان الترشيح الكلوي، كما أن فلافونوياته تمنع تكوّن حصوات الأوكسالات.',
+      symptoms: ['احتباس السوائل', 'حصوات الكلى (وقاية)', 'التهاب المسالك البولية', 'ارتفاع ضغط الدم الخفيف'],
+      warnings: [
+        'الزيت الأساسي سام جداً؛ يُستخدم عشب البقدونس فقط',
+        'الجرعات العالية محظورة خلال الحمل لتأثيرها المُحرّض للرحم',
+      ],
+      activeConstituents: [
+        { name: 'أبيول وميريستيسين', percentage: '', effect: 'يُحفّزان الترشيح الكلوي ويزيدان الإدرار' },
+        { name: 'أبيجينين (فلافونويد)', percentage: '', effect: 'يثبّط تكوّن حصوات الأوكسالات ويُخفّف التشنج الحالبي' },
+        { name: 'فيتامين C وK وبيتا كاروتين', percentage: '', effect: 'تُعزّز المناعة وتحمي الأنسجة الكلوية' },
+        { name: 'بوتاسيوم', percentage: '', effect: 'يُحفّز الإدرار ويُعوّض الفقد' },
+      ],
+      moa: [
+        { title: 'تثبيط إعادة امتصاص الصوديوم', detail: 'الأبيول والميريستيسين يُثبّطان الامتصاص في الأنابيب الكلوية مما يزيد الإدرار' },
+        { title: 'منع تكوّن الحصوات', detail: 'الأبيجينين يثبّط إنزيمات تكوّن حصوات الأوكسالات ويُخفّف التشنج الحالبي' },
+        { title: 'حماية مصفوفة الأنسجة', detail: 'فيتامين K يحمي مصفوفة الأنسجة من الكلسة ويمنع ترسب الكالسيوم' },
+      ],
+      uses: ['زيادة إدرار البول في الاحتباس والوذمة', 'الوقاية من حصوات الكلى الأوكساليتية', 'خفض ضغط الدم الخفيف', 'مضاد للميكروبات في المسالك البولية'],
+      howToUse: [
+        { method: 'العشب الطازج أو المجفف', instruction: 'الأكثر أماناً؛ يُضاف للطعام بكميات حرة' },
+        { method: 'منقوع البذور', instruction: 'أقوى تأثيراً للإدرار؛ يُستخدم مرتين يومياً' },
+        { method: 'الزيت الأساسي', instruction: 'مقصور على الاستخدام المُشرَف عليه طبياً فقط' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون (18 سنة فأكثر)', notes: 'الجرعة الكاملة آمنة' },
+        { group: 'الحوامل', notes: 'يُتجنّب بجرعات علاجية؛ الاستخدام كتوابل آمن' },
+        { group: 'مرضى الكلى', notes: 'بحذر تحت إشراف طبي' },
+      ],
+      dosage: {
+        standard: 'عشب طازج 30 إلى 50 غ يومياً في الطعام',
+        forms: [
+          { form: 'عشب طازج', dose: '30 إلى 50 غ يومياً في الطعام' },
+          { form: 'منقوع البذور', dose: '6 غ في 300 مل ماء مغلي، مرتين يومياً' },
+          { form: 'مستخلص سائل', dose: '2 إلى 4 مل ثلاث مرات يومياً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['فرط نشاط كلوي وجفاف', 'فرط بوتاسيوم', 'سمّية كبدية وكلوية حادة (من الزيت الأساسي)'],
+        management: ['أوقف الاستخدام وتناول السوائل', 'راجع الطبيب عند أعراض الكلى أو الكبد'],
+      },
+      sideEffects: [
+        'إزعاج معدي وتبوّل متكرر بالجرعات العالية',
+        'تحسس جلدي ضوئي (نادراً)',
+      ],
+      contraindications: [
+        'الحمل لأنه يُحرّض الرحم',
+        'أمراض الكلى الحادة',
+        'حصوات أوكسالات الكالسيوم الكبيرة',
+        'فرط حساسية من نباتات Apiaceae',
+      ],
+      drugInteractions: [
+        'مدرّات البول: تأثير مضاعف',
+        'مضادات التخثر (وارفارين): فيتامين K يُقلّل التأثير',
+        'أدوية ضغط الدم: قد يُعزّز الخفض',
+      ],
+      storage: {
+        forms: [
+          { form: 'طازج', instructions: 'في الثلاجة ملفوفاً بمنشفة رطبة حتى أسبوع' },
+          { form: 'مجفف', instructions: 'وعاء محكم بعيداً عن الضوء حتى سنة' },
+        ],
+      },
+      benefits: [
+        { icon: 'water_drop', title: 'مُدرّ بولي فعّال', desc: 'يُحفّز الترشيح الكلوي ويُعزّز طرح السوائل الزائدة.' },
+        { icon: 'diamond', title: 'مانع تكوّن الحصوات', desc: 'يُثبّط تبلور أوكسالات الكالسيوم في الكلى.' },
+        { icon: 'monitor_heart', title: 'داعم القلب والأوعية', desc: 'يُخفّض ضغط الدم الخفيف ويحمي البطانة الوعائية.' },
+        { icon: 'nutrition', title: 'غني بالفيتامينات', desc: 'مصدر ممتاز لفيتامين C وK والحديد والأبيجينين.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Apiaceae (الخيميات)',
+        nativeRegion: 'أصيل البحر الأبيض المتوسط (اليونان وإيطاليا وسردينيا). يُزرع الآن عالمياً.',
+        growthHabit: 'عشبة حولية أو ثنائية الحول؛ أوراق مُركّبة خضراء مشرشرة؛ أزهار صغيرة بيضاء.',
+        activeCompounds: 'أبيجينين، أبيول، ميريستيسين، لوتيولين، بيتا كاروتين، فيتامين K.',
+        cultivationNotes: 'مستخدم في الطب اليوناني القديم (أبقراط ودياسقوريدس) لاضطرابات الكلى والمسالك منذ القرن الخامس قبل الميلاد.',
+      },
+      preparation: [
+        { method: 'منقوع بذور البقدونس', desc: 'اسحق ملعقة صغيرة بذور طازجة وانقعها في 300 مل ماء مغلي 15 دقيقة. صفّ واشرب دافئاً مرتين يومياً.', bestFor: 'الإدرار القوي والوقاية من الحصوات' },
+        { method: 'عصير البقدونس الطازج', desc: 'اعصر حفنة من الأوراق الطازجة مع خيارة وليمونة. اشرب صباحاً على الريق.', bestFor: 'التنقية اليومية الخفيفة' },
+      ],
+    },
+
+    halfabar: {
+      name: 'الحلفبر (خيوط الذرة)',
+      shortDescription: 'مُهدّئ المسالك البولية التقليدي',
+      description: 'الحلفبر أو خيوط الذرة (Zea mays L.، stigmata) الوشائج الحريرية لنبات الذرة، تستخدم في الطب الشعبي العربي والأمريكي والصيني مُدرّاً بولياً لطيفاً ومُهدّئاً للتهاب المثانة والحالب. غنية بالبوتاسيوم والساپونينات التي تُلطّف الغشاء المخاطي.',
+      symptoms: ['التهاب المثانة والمسالك', 'ألم وحرقة التبوّل', 'الاحتباس البولي الخفيف', 'التهيّج الكلوي'],
+      warnings: [
+        'تجنّب في فرط الحساسية من الذرة أو حبوب لقاحها',
+        'بحذر في مرضى السكري إذ قد يخفّض سكر الدم',
+        'استشر الطبيب في الحمل قبل الاستخدام',
+      ],
+      activeConstituents: [
+        { name: 'فلافونويدات (ميابيانين، كيرسيتين)', percentage: '', effect: 'تُثبّط إطلاق الهستامين في المثانة وتُقلّل الالتهاب' },
+        { name: 'ساپونينات', percentage: '', effect: 'تُطيف جدار المسالك البولية وتُقلّل الالتهاب' },
+        { name: 'ألانتوئين', percentage: '', effect: 'يُعزّز التئام الغشاء المخاطي المُهيّج' },
+        { name: 'أملاح بوتاسيوم', percentage: '', effect: 'تُحفّز الإدرار البولي الخفيف' },
+      ],
+      moa: [
+        { title: 'تطييف جدار المسالك', detail: 'الساپونينات تُطيف الأغشية المخاطية للمثانة والحالب وتُقلّل الالتهاب' },
+        { title: 'تثبيط الهستامين', detail: 'الفلافونويدات تُثبّط إطلاق الهستامين في المثانة' },
+        { title: 'تعزيز الالتئام', detail: 'الألانتوئين يُعزّز تجديد خلايا الغشاء المخاطي المُهيّج' },
+        { title: 'إدرار بولي خفيف', detail: 'تُحفّز الترشيح الكلوي دون إجهاد الكلى' },
+      ],
+      uses: ['تخفيف حرقة التبوّل في التهاب المثانة الخفيف', 'مدرّ بولي لطيف لاحتباس السوائل', 'تهدئة الحالب في حالات المغص الكلوي', 'الوقاية من الالتهابات المتكررة'],
+      howToUse: [
+        { method: 'شاي خيوط الذرة', instruction: 'الصورة الأكثر شيوعاً وأماناً؛ ثلاث مرات يومياً، التأثير يظهر خلال 24 إلى 48 ساعة' },
+        { method: 'مستخلص جاهز', instruction: 'كبسولات أو قطرات من محلات المنتجات الطبيعية؛ اتبع تعليمات المُصنّع' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون (18 سنة فأكثر)', notes: 'الجرعة الكاملة آمنة' },
+        { group: 'المراهقون (12 سنة فأكثر)', notes: 'يمكن استخدامه بحذر بإشراف طبي' },
+        { group: 'الحوامل', notes: 'بحذر تحت إشراف طبي' },
+      ],
+      dosage: {
+        standard: 'شاي خيوط الذرة 4 إلى 8 غ طازجة في 300 مل ماء مغلي، ثلاث مرات يومياً',
+        forms: [
+          { form: 'شاي خيوط الذرة الطازجة', dose: '4 إلى 8 غ في 300 مل ماء مغلي لـ 15 دقيقة، ثلاث مرات يومياً' },
+          { form: 'شاي خيوط الذرة المجففة', dose: '2 إلى 4 غ في 300 مل ماء مغلي، ثلاث مرات يومياً' },
+          { form: 'مستخلص سائل', dose: '4 مل ثلاث مرات يومياً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['إسهال خفيف', 'جفاف بسبب الإدرار الزائد'],
+        management: ['لا سمّية حادة موثّقة', 'اشرب كميات كافية من الماء لتعويض الفقد'],
+      },
+      sideEffects: [
+        'تفاعل تحسسي في حساسية حبوب لقاح الذرة (نادراً)',
+        'تبوّل متكرر',
+      ],
+      contraindications: [
+        'حساسية من الذرة أو عائلة النجيليات',
+        'فرط بوتاسيوم الدم',
+        'مرضى الكلى المتقدم',
+        'انسداد المسالك البولية الكامل',
+      ],
+      drugInteractions: [
+        'أدوية السكري: قد يُعزّز خفض السكر',
+        'مدرّات البول: تأثير مضاعف',
+        'مضادات التخثر: فيتامين K يُقلّل تأثير الوارفارين',
+      ],
+      storage: {
+        forms: [
+          { form: 'طازج', instructions: 'في الثلاجة حتى أسبوع' },
+          { form: 'مجفف', instructions: 'وعاء محكم بعيداً عن الرطوبة والضوء حتى سنة' },
+        ],
+      },
+      benefits: [
+        { icon: 'spa', title: 'مُطيف المسالك', desc: 'يُلطّف الغشاء المخاطي للمثانة والحالب ويُقلّل الحرقة.' },
+        { icon: 'water_drop', title: 'مُدرّ لطيف', desc: 'يزيد إدرار البول دون إجهاد الكلى أو فقدان المعادن.' },
+        { icon: 'healing', title: 'التئام الغشاء المخاطي', desc: 'الألانتوئين يُعزّز تجديد خلايا المسالك المُهيّجة.' },
+        { icon: 'vaccines', title: 'وقاية من الالتهابات', desc: 'يُقلّل تكرار التهابات المثانة بالاستخدام المنتظم.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Poaceae (النجيليات)',
+        nativeRegion: 'أصيل المكسيك وأمريكا الوسطى. يُزرع الذرة الآن عالمياً في جميع المناطق المعتدلة والاستوائية.',
+        growthHabit: 'الذرة نبات حولي طويل القامة (2-3 أمتار). الخيوط تظهر أعلى الكيزان قبيل التلقيح.',
+        activeCompounds: 'ميابيانين، كيرسيتين، ألانتوئين، حمض الكلوروجينيك، هورديسين، أملاح البوتاسيوم.',
+        cultivationNotes: 'مستخدمة في طب الهنود الأمريكيين منذ آلاف السنين. لا تزال في دساتير الأدوية الأوروبية والفرنسية كعلاج مساعد لاضطرابات المسالك.',
+      },
+      preparation: [
+        { method: 'شاي خيوط الذرة', desc: 'اجمع خيوط الذرة الطازجة عند شراء الذرة. اغسلها وانقع 4 غ في 300 مل ماء مغلي لـ 15 دقيقة. صفّ واشرب دافئاً ثلاث مرات يومياً.', bestFor: 'التهاب المثانة الخفيف والاحتباس البولي' },
+        { method: 'مستخلص جاهز', desc: 'تتوفر كبسولات وقطرات مستخلص خيوط الذرة في محلات المنتجات الطبيعية. اتبع تعليمات المُصنّع.', bestFor: 'الراحة والجرعة المُتحكَّم بها' },
+      ],
+    },
+
+    pygeum: {
+      name: 'بيجيوم',
+      shortDescription: 'علاج أفريقي تقليدي لتضخّم البروستات',
+      description: 'بيجيوم (Prunus africana) شجرة استوائية أفريقية تُستخلص من لحائها مركّبات فيتوستيرولية وتربينية تثبّط تضخّم البروستات الحميد (BPH). تؤكد تجارب سريرية متعددة تحسّنه في أعراض المسالك البولية السفلية مقارنةً بالغفل.',
+      symptoms: ['تضخّم البروستات الحميد', 'ضعف تدفق البول', 'التبوّل الليلي المتكرر (النكتيوريا)', 'بقايا البول بعد التبوّل'],
+      warnings: [
+        'لا يُعالج سرطان البروستات؛ الفحص الدوري ضروري',
+        'استشر الطبيب إذا ارتفع PSA',
+        'اختر منتجات مُعتمدة بالاستدامة لأن الأشجار مهددة بالانقراض',
+      ],
+      activeConstituents: [
+        { name: 'β-سيتوستيرول', percentage: '', effect: 'يثبّط إنزيم 5-ألفا ريداكتاز مما يُقلّل DHT المُحفّز لنمو البروستات' },
+        { name: 'ن-دوكوسانول (فيتوستيرول)', percentage: '', effect: 'يُساهم في تثبيط نمو خلايا البروستات' },
+        { name: 'أتراتيت (ترفينويد)', percentage: '', effect: 'يُقلّل الالتهاب وذمة الغدة' },
+        { name: 'فيروليك أسيد وأوليانوليك أسيد', percentage: '', effect: 'مضادان للالتهاب ويثبّطان عوامل النمو' },
+      ],
+      moa: [
+        { title: 'تثبيط 5-ألفا ريداكتاز', detail: 'β-سيتوستيرول يُقلّل تحويل التستوستيرون إلى DHT الذي يُحفّز تضخّم خلايا البروستات' },
+        { title: 'تثبيط عوامل النمو', detail: 'يُثبّط EGF وIGF-1 اللذين يُحفّزان تضخّم الغدة' },
+        { title: 'تقليل الوذمة والالتهاب', detail: 'الأتراتيت يُقلّل الالتهاب والوذمة في غدة البروستات' },
+        { title: 'حماية المثانة', detail: 'يحمي الغشاء المخاطي للمثانة من الضغط المزمن' },
+      ],
+      uses: ['تخفيف أعراض BPH والمسالك السفلية', 'تحسين قوة تدفق البول', 'تقليل التبوّل الليلي', 'حماية الغشاء المخاطي للمثانة'],
+      howToUse: [
+        { method: 'كبسولات مستخلص موحّد', instruction: 'الصياغة الوحيدة الفعّالة الموثّقة سريرياً؛ مع الطعام لتحسين الامتصاص' },
+        { method: 'التأثير التدريجي', instruction: 'قد يستغرق 4 إلى 8 أسابيع لظهور التحسّن الكامل' },
+      ],
+      suitableAgeGroups: [
+        { group: 'الرجال البالغون (فوق 50 سنة)', notes: 'الفئة الرئيسية المستفيدة؛ تحت إشراف طبي دائم' },
+        { group: 'النساء والأطفال', notes: 'لا يُستخدم' },
+      ],
+      dosage: {
+        standard: 'مستخلص موحّد (13% β-سيتوستيرول): 100 ملغ مرتين يومياً',
+        forms: [
+          { form: 'مستخلص موحّد (13% β-سيتوستيرول)', dose: '100 ملغ مرتين يومياً (المعيار المدروس سريرياً)' },
+        ],
+      },
+      overdose: {
+        symptoms: ['ألم معدي', 'غثيان'],
+        management: ['لا سمّية حادة موثّقة بالجرعات المعيارية', 'قلّل الجرعة عند ظهور الأعراض'],
+      },
+      sideEffects: [
+        'اضطراب معدي خفيف وغثيان (نادراً)',
+        'تشنج عضلي واضطراب نوم (نادر جداً)',
+      ],
+      contraindications: [
+        'حساسية من نباتات Rosaceae',
+        'أمراض الكبد الحادة',
+        'الأعراض العصبية المصاحبة لمشكلات البروستات تستوجب تقييماً طبياً أولاً',
+      ],
+      drugInteractions: [
+        'مضادات التخثر: مراقبة التأثير',
+        'أدوية BPH الدوائية (Tamsulosin, Finasteride): تآزر محتمل يستوجب مراجعة الطبيب',
+      ],
+      storage: {
+        forms: [
+          { form: 'كبسولات', instructions: 'في مكان بارد وجاف بعيداً عن الضوء والرطوبة؛ اتبع تاريخ الصلاحية' },
+        ],
+      },
+      benefits: [
+        { icon: 'male', title: 'تقليص تضخّم البروستات', desc: 'يُثبّط DHT ويُقلّل عوامل النمو التي تُحفّز تضخّم الغدة.' },
+        { icon: 'water_drop', title: 'تحسين تدفق البول', desc: 'يُقلّل المقاومة في عنق المثانة ويُعزّز قوة التدفق.' },
+        { icon: 'bedtime', title: 'تقليل الاستيقاظ الليلي', desc: 'يُخفّض النكتيوريا ويُحسّن جودة النوم.' },
+        { icon: 'shield', title: 'حماية الغشاء المخاطي', desc: 'يحمي بطانة المثانة من الالتهاب المزمن.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Rosaceae',
+        nativeRegion: 'أفريقيا جنوب الصحراء، أساساً الكاميرون ورواندا وكينيا وتنزانيا.',
+        growthHabit: 'شجرة دائمة الخضرة تصل إلى 25 متراً؛ اللحاء بنيّ داكن مُتشقّق. الاستخلاص من اللحاء.',
+        activeCompounds: 'β-سيتوستيرول، ن-دوكوسانول، أتراتيت، فيروليك أسيد، أوليانوليك أسيد.',
+        cultivationNotes: 'مستخدم في طب القبائل الأفريقية التقليدية. مدرج في قائمة الأنواع الأكثر تداولاً في الطب الأفريقي. مُهدَّد بالانقراض بسبب التجارة غير المشروعة.',
+      },
+      preparation: [
+        { method: 'كبسولات مستخلص اللحاء', desc: 'اختر منتجاً موحّداً يحتوي على 13% β-سيتوستيرول. تناول 100 ملغ مرتين يومياً مع الطعام.', bestFor: 'علاج BPH والمسالك السفلية بإشراف طبي' },
+      ],
+    },
+
+    'saw-palmetto': {
+      name: 'سو بالميتو',
+      shortDescription: 'أكثر الأعشاب دراسةً لتضخّم البروستات',
+      description: 'سو بالميتو (Serenoa repens) نخيل قزم أمريكي شمالي تُستخلص من ثماره مركّبات أسيد دهنية وستيرولية تُعدّ الأكثر بحثاً في مجال BPH عالمياً. مستخلصه الدهني (Lipidosterolic extract) يثبّط 5-ألفا ريداكتاز ويُقلّل الالتهاب البروستاتي.',
+      symptoms: ['تضخّم البروستات الحميد', 'صعوبة الإفراغ البولي', 'التبوّل المتكرر ليلاً ونهاراً', 'إحساس عدم إفراغ المثانة'],
+      warnings: [
+        'لا يُعالج سرطان البروستات',
+        'لا يُوقف ارتفاع PSA؛ تابع مع طبيبك',
+        'قد يُؤثّر على الهرمونات؛ أبلغ طبيبك قبل جراحة البروستات',
+      ],
+      activeConstituents: [
+        { name: 'أحماض دهنية حرة (لوريك، ميريستيك، أوليك، لينوليك)', percentage: '70-95%', effect: 'المادة الفعّالة الرئيسية في المستخلص الدهني' },
+        { name: 'فيتوستيرولات (β-سيتوستيرول)', percentage: '', effect: 'يثبّط 5-ألفا ريداكتاز ويُقلّل DHT' },
+        { name: 'فلافونويدات وبوليساكاريدات', percentage: '', effect: 'تُعزّز التأثير المضاد للالتهاب' },
+      ],
+      moa: [
+        { title: 'تثبيط مزدوج لـ 5-ألفا ريداكتاز', detail: 'يثبّط كلا النوعين 1 و2 من الإنزيم بخلاف Finasteride الذي يثبّط النوع 2 فقط' },
+        { title: 'تثبيط ارتباط DHT', detail: 'يُثبّط ارتباط DHT بمستقبلاته في خلايا البروستات' },
+        { title: 'تثبيط LOX-5', detail: 'يُقلّل اللوكوترينات الالتهابية في البروستات' },
+        { title: 'تثبيط مستقبلات الاستروجين', detail: 'يُقلّل ارتباط هرمون الاستروجين بمستقبلاته في البروستات' },
+      ],
+      uses: ['علاج BPH وأعراض المسالك السفلية', 'تحسين تدفق البول وتقليل المتبقّي', 'تقليل التبوّل الليلي', 'مضاد التهاب البروستات'],
+      howToUse: [
+        { method: 'مستخلص دهني (Lipidosterolic)', instruction: 'الصياغة الفعّالة؛ الكبسولات المائية أقل فاعلية' },
+        { method: 'مع وجبة دسمة', instruction: 'يُحسّن الامتصاص؛ التأثير يتراكم خلال 4 إلى 6 أسابيع' },
+      ],
+      suitableAgeGroups: [
+        { group: 'الرجال البالغون (فوق 45 سنة)', notes: 'الفئة المستفيدة الرئيسية' },
+        { group: 'النساء الحوامل', notes: 'مضادٌّ للهرمونات؛ يُتجنّب كلياً' },
+        { group: 'الأطفال', notes: 'لا يُعطى' },
+      ],
+      dosage: {
+        standard: 'مستخلص دهني موحّد: 160 ملغ مرتين يومياً',
+        forms: [
+          { form: 'مستخلص دهني (85-95% أحماض دهنية)', dose: '160 ملغ مرتين يومياً (المعيار السريري)' },
+          { form: 'مستخلص دهني جرعة موحّدة', dose: '320 ملغ مرة واحدة يومياً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['صداع خفيف', 'دوخة', 'اضطراب هضمي'],
+        management: ['آمن جداً في الجرعات الموصى بها', 'قلّل الجرعة عند الإزعاج المعدي'],
+      },
+      sideEffects: [
+        'غثيان خفيف وإسهال أو إمساك (نادراً)',
+        'صداع (نادراً)',
+        'اضطراب في الرغبة الجنسية (نادر جداً، أقل بكثير من Finasteride)',
+      ],
+      contraindications: [
+        'الحمل والرضاعة (مضاد هرموني)',
+        'حساسية من Arecaceae',
+        'جرعات عالية مع مميّعات الدم',
+      ],
+      drugInteractions: [
+        'مضادات التخثر (وارفارين): يُضعف تكوين الصفائح مما يزيد خطر النزيف',
+        'علاجات هرمونية: تداخل محتمل في مستويات DHT والاستروجين',
+        'Finasteride وDutasteride: تأثير مضاعف على مثبّطات 5-ألفا ريداكتاز',
+      ],
+      storage: {
+        forms: [
+          { form: 'كبسولات', instructions: 'في مكان بارد وجاف' },
+          { form: 'مستخلص سائل', instructions: 'في الثلاجة بعد الفتح' },
+        ],
+      },
+      benefits: [
+        { icon: 'male', title: 'مثبّط 5-ألفا ريداكتاز مزدوج', desc: 'يثبّط النوعين 1 و2 من الإنزيم لتقليل DHT بفاعلية فائقة.' },
+        { icon: 'water_drop', title: 'تحسين تدفق البول', desc: 'يُقلّل المقاومة في مجرى البول ويُحسّن الإفراغ.' },
+        { icon: 'bedtime', title: 'نوم أفضل', desc: 'يُقلّل الاستيقاظ الليلي المتكرر للتبوّل.' },
+        { icon: 'science', title: 'الأكثر دراسةً', desc: 'أكثر من 20 تجربة سريرية عشوائية تؤكد فاعليته في BPH.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Arecaceae (النخيليات)',
+        nativeRegion: 'السواحل الجنوبية الشرقية للولايات المتحدة (فلوريدا، جورجيا، كارولينا).',
+        growthHabit: 'نخيل قزم يصل إلى 2-4 أمتار؛ أوراق مروحية مُدبَّبة؛ ثمار بيضاوية سوداء بنفسجية عند النضج.',
+        activeCompounds: 'حمض اللوريك، حمض الميريستيك، حمض الأوليك، β-سيتوستيرول، كامبستيرول.',
+        cultivationNotes: 'استخدمه السكان الأصليون للغذاء والدواء لآلاف السنين. ألمانيا وإيطاليا وفرنسا تعتمده رسمياً علاجاً لـBPH.',
+      },
+      preparation: [
+        { method: 'كبسولات المستخلص الدهني', desc: 'احرص على اختيار مستخلص دهني (Lipidosterolic) وليس مائياً. تناول 160 ملغ مرتين يومياً مع وجبة دسمة للامتصاص الأمثل.', bestFor: 'علاج BPH والمسالك السفلية بإشراف طبي' },
+      ],
+    },
+
+    'stinging-nettle-root': {
+      name: 'جذر القراص',
+      shortDescription: 'جذر القراص لصحة البروستات',
+      description: 'جذر القراص (Urtica dioica radix) يختلف كيميائياً اختلافاً جوهرياً عن أوراقه. يحتوي على ليكتينات وبوليساكاريدات وفيتوستيرولات تثبّط ارتباط SHBG بالتستوستيرون وتُقلّل تضخّم البروستات الحميد. يُستخدم كثيراً مع سو بالميتو لتعزيز التأثير.',
+      symptoms: ['تضخّم البروستات الحميد', 'ضعف تدفق البول', 'التبوّل الليلي المتكرر', 'التهاب البروستات المزمن'],
+      warnings: [
+        'للجذر فقط؛ أوراق القراص لها تطبيقات مختلفة تماماً',
+        'لا يُعالج سرطان البروستات',
+      ],
+      activeConstituents: [
+        { name: 'UDA ليكتين (Urtica dioica agglutinin)', percentage: '', effect: 'يثبّط ارتباط بروتين SHBG بمستقبلاته في خلايا البروستات' },
+        { name: 'بوليساكاريدات', percentage: '', effect: 'تُثبّط التصاق البكتيريا وتُقلّل الالتهاب في البروستات' },
+        { name: 'β-سيتوستيرول', percentage: '', effect: 'يثبّط تحوّل التستوستيرون إلى DHT جزئياً' },
+        { name: 'حمض الكافيك وأوكوماريك', percentage: '', effect: 'مضادان للأكسدة والالتهاب' },
+      ],
+      moa: [
+        { title: 'تثبيط SHBG', detail: 'UDA يثبّط ارتباط بروتين SHBG بمستقبلاته في خلايا البروستات مما يُقلّل التشغيل الهرموني لنمو الغدة' },
+        { title: 'تثبيط جزئي لـDHT', detail: 'β-سيتوستيرول يثبّط تحوّل التستوستيرون إلى DHT جزئياً' },
+        { title: 'مضاد التهاب البروستات', detail: 'البوليساكاريدات تُثبّط التصاق البكتيريا وتُقلّل الالتهاب في أنسجة البروستات' },
+      ],
+      uses: ['علاج BPH مع سو بالميتو أو بمفرده', 'تحسين تدفق البول وتقليل الاحتجاز', 'مضاد التهاب البروستات المزمن', 'تقليل التبوّل الليلي'],
+      howToUse: [
+        { method: 'كبسولات مستخلص الجذر', instruction: 'يُدمج كثيراً مع سو بالميتو في المنتجات المركّبة لـ BPH' },
+        { method: 'التأثير التدريجي', instruction: 'يستغرق 3 إلى 6 أسابيع لظهور التحسّن الكامل' },
+      ],
+      suitableAgeGroups: [
+        { group: 'الرجال البالغون (فوق 45 سنة)', notes: 'الفئة المستهدفة لعلاج BPH' },
+        { group: 'النساء الحوامل', notes: 'لا يُستخدم' },
+        { group: 'الأطفال', notes: 'لا يُعطى بجرعات علاجية' },
+      ],
+      dosage: {
+        standard: 'مستخلص جذر القراص (5:1): 300 إلى 600 ملغ مرتين يومياً',
+        forms: [
+          { form: 'مستخلص جذر القراص (5:1)', dose: '300 إلى 600 ملغ مرتين يومياً' },
+          { form: 'تركيبة مشتركة (جذر القراص + سو بالميتو)', dose: '300 ملغ جذر قراص + 160 ملغ سو بالميتو مرتين يومياً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['إزعاج معدي خفيف', 'حساسية جلدية (نادراً)'],
+        management: ['آمن بالجرعات المعيارية', 'قلّل الجرعة عند الإزعاج'],
+      },
+      sideEffects: [
+        'إزعاج معدي معوي خفيف (نادراً)',
+        'تفاعل تحسسي (نادر جداً)',
+      ],
+      contraindications: [
+        'حساسية من نبات القراص',
+        'الحمل والرضاعة',
+        'أعراض تُشير لسرطان البروستات تستوجب تقييماً طبياً أولاً',
+      ],
+      drugInteractions: [
+        'مدرّات البول: تأثير مضاعف في احتباس السوائل',
+        'مضادات التخثر: مراقبة',
+        'أدوية BPH (Tamsulosin, Alpha-blockers): تآزر يستوجب متابعة طبية',
+      ],
+      storage: {
+        forms: [
+          { form: 'كبسولات', instructions: 'في مكان بارد وجاف بعيداً عن الرطوبة؛ اتبع تاريخ الصلاحية' },
+        ],
+      },
+      benefits: [
+        { icon: 'male', title: 'تثبيط SHBG', desc: 'يمنع ارتباط بروتين SHBG بخلايا البروستات مما يُقلّل التحفيز الهرموني للتضخّم.' },
+        { icon: 'water_drop', title: 'تحسين الإفراغ البولي', desc: 'يُقلّل المقاومة في مجرى البول ويُحسّن تدفقه.' },
+        { icon: 'shield', title: 'مضاد التهاب', desc: 'بوليساكاريداته تُقلّل الالتهاب المزمن في أنسجة البروستات.' },
+        { icon: 'science', title: 'تآزر مع سو بالميتو', desc: 'التركيبة المشتركة أفضل من كل منهما منفرداً في التجارب السريرية.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Urticaceae (القراصيات)',
+        nativeRegion: 'مناطق معتدلة في أوروبا وآسيا وأمريكا الشمالية وأفريقيا الشمالية.',
+        growthHabit: 'عشبة معمّرة قد تصل إلى مترين. الجذر أبيض اللون كثيف الليف. الأوراق محروقة (لاسعة).',
+        activeCompounds: 'UDA ليكتين، β-سيتوستيرول، كامبستيرول، بوليساكاريدات، ليكنان، حمض الكافيك.',
+        cultivationNotes: 'مستخدم في الطب الأوروبي الشعبي للمسالك البولية والبروستات منذ القرن السادس عشر. مُدرج في دستور الأدوية الألماني (Commission E) لـBPH.',
+      },
+      preparation: [
+        { method: 'كبسولات مستخلص جذر القراص', desc: 'تناول 300-600 ملغ مستخلص موحّد (5:1) مرتين يومياً مع الطعام. ابحث عن منتجات مُدمجة مع سو بالميتو لتأثير أفضل.', bestFor: 'علاج BPH بإشراف طبي' },
+      ],
+    },
+
+    cranberry: {
+      name: 'التوت البري (كرانبيري)',
+      shortDescription: 'واقي المسالك البولية الأمثل للمرأة',
+      description: 'التوت البري (Vaccinium macrocarpon) فاكهة شمال أمريكية غنية بالبروانثوسيانيدينات (PAC) من النوع-A، وهي المركّبات الفريدة التي تمنع التصاق بكتيريا E. coli فائقة الوبر بجدار المسالك البولية. الأدلة السريرية تؤيد دوره في الوقاية من التهابات المسالك المتكررة لدى النساء.',
+      symptoms: ['التهاب المسالك البولية المتكرر', 'الوقاية من الالتهاب البولي', 'دعم صحة المسالك خلال الحمل'],
+      warnings: [
+        'للوقاية لا للعلاج؛ لا يُعوّض المضادات الحيوية في الحالات الحادة',
+        'جرعات عالية تزيد خطر حصوات الأوكسالات',
+        'يُؤثّر على مستوى الوارفارين في الدم',
+      ],
+      activeConstituents: [
+        { name: 'بروانثوسيانيدينات نوع-A (PAC)', percentage: '36 ملغ في الجرعة الوقائية', effect: 'المادة الفريدة التي تمنع التصاق E. coli بجدار المسالك البولية' },
+        { name: 'حمض الكينيك', percentage: '', effect: 'يُحوَّل إلى حمض الهيبوريك ويُحمّض البول' },
+        { name: 'فلافونويدات (كيرسيتين، ميريسيتين)', percentage: '', effect: 'مضادة للأكسدة وتُعزّز صحة القلب والأوعية' },
+        { name: 'فيتامين C', percentage: '', effect: 'مضاد للأكسدة ومعزّز للمناعة' },
+      ],
+      moa: [
+        { title: 'منع التصاق E. coli', detail: 'PAC نوع-A يُغيّر بنية أهداب بكتيريا E. coli مما يمنع ارتباطها بمستقبلات المانوز-المقاومة' },
+        { title: 'تحميض البول', detail: 'حمض الكينيك يُحوَّل إلى حمض الهيبوريك مما يُحمّض البول ويُعيق نمو البكتيريا' },
+        { title: 'الفعل الفريد لـPAC نوع-A', detail: 'هذا التأثير فريد ولا تشاركه PAC نوع-B الموجودة في التوت الأزرق أو العنب' },
+      ],
+      uses: ['الوقاية من التهابات المسالك البولية المتكررة', 'دعم صحة المسالك خلال الحمل (باعتدال)', 'مضاد للأكسدة العام', 'تعزيز صحة القلب والأوعية'],
+      howToUse: [
+        { method: 'عصير غير محلّى', instruction: 'العصير الطبيعي غير المحلّى هو الأمثل؛ العصير المحلّى يُعدّم جزءاً كبيراً من الفائدة' },
+        { method: 'مكمّلات PAC الموحّدة', instruction: 'اختر مكمّلاً يحتوي على 36 ملغ على الأقل من PAC نوع-A' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون والأطفال (فوق 12 سنة)', notes: 'الجرعة الكاملة آمنة' },
+        { group: 'النساء الحوامل', notes: 'العصير غير المحلّى بكميات معتدلة آمن' },
+        { group: 'مرضى حصوات الكلى', notes: 'احترس من الجرعات العالية' },
+      ],
+      dosage: {
+        standard: 'عصير غير محلّى 240 إلى 300 مل مرتين يومياً',
+        forms: [
+          { form: 'عصير غير محلّى', dose: '240 إلى 300 مل مرتين يومياً' },
+          { form: 'مكمّل PAC موحّد', dose: '36 إلى 72 ملغ PAC يومياً' },
+          { form: 'مستخلص مُركّز', dose: '400 إلى 500 ملغ مرتين يومياً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['زيادة حمض الأوكساليك وخطر الحصوات (كميات أكبر من لترين يومياً)'],
+        management: ['لا سمّية حادة موثّقة', 'اشطف الفم بعد العصير الحمضي لحماية مينا الأسنان'],
+      },
+      sideEffects: [
+        'اضطراب معدي وإسهال بالكميات الكبيرة (نادراً)',
+        'تآكل مينا الأسنان من حموضة العصير',
+      ],
+      contraindications: [
+        'حصوات الكلى الأوكساليتية بجرعات عالية',
+        'الحساسية من مجموعة Vaccinium',
+        'مع وارفارين: تحت متابعة طبية دقيقة',
+      ],
+      drugInteractions: [
+        'وارفارين: يزيد مستوى الدواء في الدم مما يرفع خطر النزيف',
+        'أدوية السكري: قد يُعدّل استجابة الغلوكوز',
+      ],
+      storage: {
+        forms: [
+          { form: 'عصير مفتوح', instructions: 'في الثلاجة بعد الفتح حتى أسبوع' },
+          { form: 'كبسولات/أقراص', instructions: 'وعاء محكم بعيداً عن الرطوبة في درجة الغرفة' },
+        ],
+      },
+      benefits: [
+        { icon: 'vaccines', title: 'مانع التصاق البكتيريا', desc: 'PAC نوع-A يمنع E. coli من الارتباط بجدار المثانة.' },
+        { icon: 'shield', title: 'وقاية من الالتهابات المتكررة', desc: 'ثبت سريرياً تقليل تكرار التهابات المسالك في النساء.' },
+        { icon: 'favorite', title: 'صحة القلب والأوعية', desc: 'فلافونوياته تُقلّل الأكسدة الدهنية وتحمي الأوعية الدقيقة.' },
+        { icon: 'spa', title: 'مضاد أكسدة قوي', desc: 'فيتامين C والبروانثوسيانيدينات يحمان الخلايا من الإجهاد التأكسدي.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Ericaceae (الخلنجيات)',
+        nativeRegion: 'شمال شرق أمريكا الشمالية (ماساتشوستس، ويسكونسن، كندا). أكبر مُنتِج عالمي: الولايات المتحدة.',
+        growthHabit: 'شجيرة زاحفة دائمة الخضرة؛ ثمار حمراء حمضية؛ تنمو في المستنقعات الرملية.',
+        activeCompounds: 'PAC نوع-A، حمض الكينيك، حمض الهيبوريك، أنثوسيانينات، كيرسيتين، ميريسيتين، فيتامين C.',
+        cultivationNotes: 'استخدمته قبائل الهنود الأمريكيين (Wampanoag) غذاءً وعلاجاً للجروح قبل وصول الأوروبيين. أبحاثه السريرية في الحماية من UTI تعدّ من الأقوى في فئة الأعشاب الوقائية.',
+      },
+      preparation: [
+        { method: 'عصير التوت البري غير المحلّى', desc: 'اشرب 240-300 مل عصير طبيعي غير محلّى مرتين يومياً. يمكن تخفيفه بالماء إذا كان حمضياً جداً.', bestFor: 'الوقاية اليومية من التهابات المسالك المتكررة' },
+        { method: 'كبسولات PAC', desc: 'اختر مكمّلاً موحّداً يحتوي على ≥36 ملغ PAC نوع-A. يُؤخذ بعد الإفطار والعشاء.', bestFor: 'الجرعة الوقائية المُتحكَّم بها بدلاً من العصير' },
+      ],
+    },
+
+    thyme: {
+      name: 'الزعتر',
+      shortDescription: 'طارد البلغم الطبيعي للسعال والجهاز التنفسي',
+      description: 'الزعتر (Thymus vulgaris) عشبة عطرية من حوض البحر الأبيض المتوسط تحتوي على ثيمول وكارفاكرول وهما من أقوى مضادات الجراثيم في عالم الأعشاب. يُثبّط ذيفانات البكتيريا التنفسية، يُرخي العضلات الملساء في القصبات، ويُحفّز إفراز المخاط وطرحه (طارد للبلغم).',
+      symptoms: ['السعال المزمن والجاف', 'التهاب الشعب الهوائية', 'الزكام والإنفلونزا', 'التهاب البلعوم واللوزتين'],
+      warnings: [
+        'الزيت الأساسي خاماً سامٌّ؛ يُستخدم في شاي العشب أو مخفّفاً فقط',
+        'الحوامل: يُتجنّب الزيت الأساسي والكميات الكبيرة',
+      ],
+      activeConstituents: [
+        { name: 'ثيمول وكارفاكرول', percentage: '40-60%', effect: 'أقوى مضادَّي الجراثيم في الزيت الأساسي' },
+        { name: 'بي-سيمين ولينالول', percentage: '', effect: 'يُعزّزان التأثير المضاد للتشنج القصبي' },
+        { name: 'روزمارينيك أسيد', percentage: '', effect: 'مضاد للأكسدة ومعزّز للمناعة' },
+        { name: 'أوريجانين (فلافون)', percentage: '', effect: 'مضاد للالتهاب ومعزّز مناعي' },
+      ],
+      moa: [
+        { title: 'إرخاء العضلة الملساء القصبية', detail: 'الثيمول يُثبّط إنزيم الفسفوديستراز مما يُرخي العضلة القصبية ويُقلّل التشنج' },
+        { title: 'تحفيز إفراز المخاط', detail: 'يُحفّز خلايا الكأس المُخاطية على إفراز بلغم سائل يُسهّل طرحه' },
+        { title: 'تدمير غشاء البكتيريا التنفسية', detail: 'كارفاكرول يُدمّر غشاء الخلية البكتيرية ويثبّط Streptococcus وHaemophilus' },
+      ],
+      uses: ['علاج السعال الجاف وسعال الشعب الهوائية', 'التهاب الشعب الحاد والمزمن', 'التهاب البلعوم واللوزتين', 'دعم المناعة في موسم البرد والإنفلونزا'],
+      howToUse: [
+        { method: 'شاي الزعتر', instruction: 'الأنسب للاستخدام اليومي؛ يُضاف العسل لتعزيز التأثير المضاد للميكروبات' },
+        { method: 'استنشاق البخار', instruction: 'زيت مُخفَّف (2%) فعّال في احتقان الجيوب الأنفية' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون وفوق 12 سنة', notes: 'الجرعة الكاملة آمنة' },
+        { group: 'الأطفال (6 إلى 12 سنة)', notes: 'شاي مُخفَّف نصف الجرعة' },
+        { group: 'الأطفال تحت 6 سنوات', notes: 'يُتجنّب الزيت الأساسي كلياً' },
+      ],
+      dosage: {
+        standard: 'شاي الزعتر الجاف 1 إلى 2 غ في 150 مل ماء مغلي، 3 إلى 4 مرات يومياً',
+        forms: [
+          { form: 'شاي الزعتر الجاف', dose: '1 إلى 2 غ في 150 مل ماء مغلي، 3 إلى 4 مرات يومياً' },
+          { form: 'مستخلص سائل (1:1)', dose: '1 إلى 2 مل ثلاث مرات يومياً' },
+          { form: 'شراب موحّد', dose: 'وفق إرشادات المُصنّع' },
+        ],
+      },
+      overdose: {
+        symptoms: ['تشنجات وارتباك (من الزيت الأساسي النقي بجرعة عالية)', 'قصور كبدي وكلوي (في الجرعات السامة جداً)'],
+        management: ['شاي العشب آمن جداً بالجرعات المعيارية', 'الزيت الأساسي يستوجب العلاج الطبي الطارئ عند التجرّع الزائد'],
+      },
+      sideEffects: [
+        'تهيّج معدي خفيف (نادراً)',
+        'حرق جلدي من الزيت الموضعي غير المُخفَّف',
+        'تفاعل تحسسي (نادر جداً)',
+      ],
+      contraindications: [
+        'فرط حساسية من الشفويات (Lamiaceae)',
+        'الحمل بجرعات علاجية كبيرة من المستخلص',
+        'اضطرابات الغدة الدرقية بسبب أثر ثيمول على اليود',
+      ],
+      drugInteractions: [
+        'مضادات التخثر: الثيمول يُضعف الصفيحات؛ تابع مع وارفارين',
+        'أدوية الغدة الدرقية: تدخّل محتمل',
+        'مضادات الكولين: يُقلّل تأثيرها',
+      ],
+      storage: {
+        forms: [
+          { form: 'عشب مجفف', instructions: 'وعاء زجاجي محكم بعيداً عن الضوء والرطوبة؛ يدوم سنتين' },
+          { form: 'زيت أساسي', instructions: 'مكان بارد ومُعتم؛ يدوم 3 سنوات' },
+        ],
+      },
+      benefits: [
+        { icon: 'air', title: 'طارد البلغم', desc: 'يُرخي القصبات ويُسهّل طرح البلغم اللزج المعلَّق في الشعب.' },
+        { icon: 'vaccines', title: 'مضاد للبكتيريا التنفسية', desc: 'الثيمول وكارفاكرول يُثبّطان Streptococcus وHaemophilus المسبّبَين للتهابات الحلق.' },
+        { icon: 'healing', title: 'مُرخٍ للقصبات', desc: 'يُقلّل تشنج العضلة القصبية ويُفسح مجرى الهواء.' },
+        { icon: 'shield', title: 'دعم المناعة', desc: 'روزمارينيك أسيد والأوريجانين يُعزّزان مقاومة الجسم للفيروسات.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Lamiaceae (الشفويات)',
+        nativeRegion: 'حوض البحر الأبيض المتوسط (جنوب أوروبا وشمال أفريقيا). يُزرع الآن عالمياً.',
+        growthHabit: 'شجيرة صغيرة معمّرة تصل إلى 30-40 سم؛ أوراق صغيرة ضيقة خضراء داكنة؛ أزهار بنفسجية صغيرة.',
+        activeCompounds: 'ثيمول، كارفاكرول، ρ-سيمين، لينالول، أوريجانين، روزمارينيك أسيد.',
+        cultivationNotes: 'استخدمه المصريون القدماء في التحنيط، والإغريق لتطهير المعابد. ابن سينا وصفه لأمراض الصدر. مُدرَج في دستور الأدوية الألماني (Commission E) للسعال والتهاب القصبات.',
+      },
+      preparation: [
+        { method: 'شاي الزعتر بالعسل', desc: 'انقع ملعقة صغيرة زعتر مجفف في 200 مل ماء مغلي مُغطّى لـ 10 دقائق. صفّ وأضف ملعقة عسل. اشرب 3-4 مرات يومياً.', bestFor: 'السعال والتهاب الشعب الهوائية والزكام' },
+        { method: 'استنشاق البخار', desc: 'أضف 3-4 قطرات زيت زعتر مخفّف (2%) إلى وعاء ماء ساخن. استنشق البخار 10 دقائق مرتين يومياً.', bestFor: 'احتقان الجيوب الأنفية والتهاب الممرات العليا' },
+      ],
+    },
+
+    anise: {
+      name: 'اليانسون',
+      shortDescription: 'طارد بلغم ومُخفِّف سعال بالأنيثول',
+      description: 'اليانسون (Pimpinella anisum) عشبة خيمية عربية أصيلة يحتوي زيتها الأساسي على ترانس-أنيثول (80-90%) الذي يُرخّي عضلات القصبات، يُقلّل التهاب الممرات الهوائية، ويُحفّز خلايا الظهارة الرئوية على إدرار مخاط سائل يُسهّل السعال المنتج.',
+      symptoms: ['السعال الجاف وشبه الجاف', 'التهاب الشعب الهوائية', 'انتفاخ البطن مصحوباً بسعال', 'التهاب الحلق'],
+      warnings: [
+        'الزيت الأساسي النقي مضادٌّ استروجيني؛ يُتجنّب بكميات كبيرة في حالات السرطانات الهرمونية',
+        'الحوامل: كميات معتدلة كتوابل آمنة؛ يُتجنّب بجرعات علاجية كبيرة',
+      ],
+      activeConstituents: [
+        { name: 'ترانس-أنيثول', percentage: '80-90%', effect: 'المركّب الرئيسي المُرخّي للقصبات وطارد البلغم' },
+        { name: 'أيزوأنيثول وسيودوأيزوأنيثول', percentage: '', effect: 'يُعزّزان التأثير الإجمالي' },
+        { name: 'فلافونويدات (روتين، كيرسيتين)', percentage: '', effect: 'مضادة للأكسدة والالتهاب' },
+        { name: 'كومارينات', percentage: '', effect: 'تُساهم في التأثير المضاد للتشنج' },
+      ],
+      moa: [
+        { title: 'تثبيط الفسفوديستراز القصبي', detail: 'الأنيثول يُثبّط إنزيم الفسفوديستراز في خلايا القصبة مما يُرخّي العضلة الملساء' },
+        { title: 'إفراز مخاط أقل لزوجة', detail: 'يُحفّز خلايا الكأس المُخاطية لإفراز مخاط طريّ يُسهّل طرحه' },
+        { title: 'مضاد خفيف للتشنج الهستاميني', detail: 'يُقلّل التشنج القصبي الناجم عن الهستامين' },
+      ],
+      uses: ['تخفيف السعال الجاف وإنتاج المخاط', 'علاج التهاب الشعب الهوائية المصحوب بانتفاخ', 'تهدئة التهاب الحلق', 'الغازات المعوية المصاحبة لأمراض الجهاز التنفسي'],
+      howToUse: [
+        { method: 'شاي اليانسون', instruction: 'الصورة الأكثر أماناً وشيوعاً' },
+        { method: 'مضغ البذور', instruction: 'فعّال لتهدئة الحلق وطرد الغازات الهضمية' },
+        { method: 'خلطة السعال', instruction: 'يُجمع مع الزعتر والزنجبيل في خلطات السعال الشعبية' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون وفوق 12 سنة', notes: 'الجرعة الكاملة آمنة' },
+        { group: 'الأطفال (2 إلى 12 سنة)', notes: 'شاي مُخفَّف ربع الجرعة باستشارة طبية' },
+        { group: 'الأطفال تحت سنتين', notes: 'يُتجنّب الزيت الأساسي كلياً' },
+      ],
+      dosage: {
+        standard: 'شاي البذور: ملعقة صغيرة بذور مسحوقة في 200 مل ماء مغلي، ثلاث مرات يومياً',
+        forms: [
+          { form: 'شاي البذور', dose: 'ملعقة صغيرة بذور مسحوقة في 200 مل ماء مغلي، ثلاث مرات يومياً' },
+          { form: 'مستخلص سائل (1:1)', dose: '1 إلى 2 مل ثلاث مرات يومياً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['تشنجات واضطرابات عصبية وتقيؤ (من الزيت الأساسي بجرعات عالية)'],
+        management: ['البذور كشاي: آمنة بالجرعات العادية', 'الزيت الأساسي يستوجب العلاج الطبي عند التجرّع الزائد'],
+      },
+      sideEffects: [
+        'ردود فعل تحسسية في حساسية نباتات Apiaceae (نادراً)',
+        'إزعاج معدي خفيف',
+        'أثر استروجيني خفيف عند الكميات الكبيرة جداً من الأنيثول',
+      ],
+      contraindications: [
+        'حساسية من نباتات Apiaceae',
+        'السرطانات الهرمونية بجرعات الزيت الأساسي العالية',
+        'الحمل بجرعات علاجية كبيرة',
+      ],
+      drugInteractions: [
+        'موانع الحمل الهرمونية: الأنيثول قد يُعدّل نشاطها',
+        'أدوية تجلط الدم: تأثيرات ضئيلة محتملة',
+      ],
+      storage: {
+        forms: [
+          { form: 'بذور كاملة', instructions: 'وعاء محكم بعيداً عن الضوء؛ تدوم 3 سنوات' },
+          { form: 'بذور مطحونة', instructions: 'تُفقد تعطّرها خلال 6 أشهر؛ اطحن عند الحاجة' },
+        ],
+      },
+      benefits: [
+        { icon: 'air', title: 'طارد بلغم فعّال', desc: 'الأنيثول يُرقّق البلغم ويُحفّز الظهارة الرئوية على طرحه.' },
+        { icon: 'healing', title: 'مُرخٍ قصبي', desc: 'يُخفّف تشنج العضلة القصبية ويُحسّن التهوية.' },
+        { icon: 'spa', title: 'مُهدّئ الحلق', desc: 'طعمه الحلو ومضاد التهابه يُلطّف الحلق الملتهب.' },
+        { icon: 'restaurant', title: 'مُهدّئ الهضم', desc: 'يُهدّئ الغازات والانتفاخ المصاحب للسعال والزكام.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Apiaceae (الخيميات)',
+        nativeRegion: 'البحر الأبيض المتوسط الشرقي ومصر والشرق الأوسط. يُزرع الآن في مصر والهند وتركيا وأوروبا.',
+        growthHabit: 'عشبة حولية تصل إلى متر واحد؛ أوراق علوية مُقسَّمة دقيقة؛ نوريات بيضاء خيمية.',
+        activeCompounds: 'ترانس-أنيثول، ميثيل كافيكول، أنيسالديهيد، روتين، كيرسيتين.',
+        cultivationNotes: 'مستخدم في مصر القديمة وبلاد الرافدين منذ 4000 سنة. ورد في البردي الطبية المصرية كعلاج للسعال والهضم. اليانسون والنجمة اليانسون (الأنيس النجمي) مصدران مختلفان لنفس الجزيء الفعّال (أنيثول).',
+      },
+      preparation: [
+        { method: 'شاي اليانسون', desc: 'اطحن ملعقة صغيرة بذور طازجة واتركها في 200 مل ماء مغلي مُغطّى 10 دقائق. صفّ واشرب مع العسل، ثلاث مرات يومياً.', bestFor: 'السعال الجاف وتهدئة الشعب الهوائية' },
+        { method: 'خلطة السعال (يانسون + زعتر + عسل)', desc: 'اخلط شاي يانسون وزعتر بنسبة متساوية مع ملعقة عسل. اشرب دافئاً قبل النوم.', bestFor: 'السعال المزمن الليلي والتهاب القصبات' },
+      ],
+    },
+
+    pelargonium: {
+      name: 'بيلارغونيوم (إبرة الراعي الأفريقية)',
+      shortDescription: 'علاج أفريقي مُثبَت لالتهابات الجهاز التنفسي',
+      description: 'بيلارغونيوم (Pelargonium sidoides) نبات أفريقي تقليدي تُستخلص من جذوره مركّبات كوماريني-أوكسيجينية وبوليفينولية فريدة تُثبّط التصاق بكتيريا الجهاز التنفسي العلوي ولا سيما Streptococcus وHaemophilus، وتُعزّز مناعة الغشاء المخاطي. مُستخلَصه EPs 7630 هو أكثر المستخلصات النباتية توثيقاً لالتهابات الشعب الهوائية الحادة.',
+      symptoms: ['التهاب الجيوب الأنفية', 'التهاب الشعب الهوائية الحاد', 'التهاب البلعوم والأنف', 'الزكام والإنفلونزا الخفيفة'],
+      warnings: [
+        'أبلغ عن تفاعلات كبدية نادرة؛ أوقف الاستخدام عند اصفرار الجلد',
+        'الحوامل والمرضعات: يُتجنّب احتياطاً',
+      ],
+      activeConstituents: [
+        { name: 'كومارينات أوكسيجينية (أومكالين، أرتيلين)', percentage: '', effect: 'تُثبّط ارتباط بكتيريا الجهاز التنفسي بمستقبلات الغشاء المخاطي' },
+        { name: 'نفثوكينونات', percentage: '', effect: 'مضادة للميكروبات وتُعزّز النشاط المناعي' },
+        { name: 'فلافونويدات وبروانثوسيانيدينات', percentage: '', effect: 'مضادة للأكسدة وتُعزّز المناعة المخاطية' },
+      ],
+      moa: [
+        { title: 'منع ارتباط البكتيريا التنفسية', detail: 'الكومارينات الأوكسيجينية تُثبّط ارتباط بكتيريا الجهاز التنفسي بمستقبلات الغشاء المخاطي' },
+        { title: 'تنشيط المناعة الطبيعية', detail: 'تُحفّز خلايا المناعة الطبيعية (Natural Killer cells) وبلعمة الضامّات' },
+        { title: 'تثبيط إنزيمات البكتيريا', detail: 'يُثبّط إنزيمات protease وneuraminidase التي تُتلف النسيج المخاطي' },
+      ],
+      uses: ['التهاب الجيوب الأنفية الحاد', 'التهاب الشعب الهوائية الحاد والمزمن', 'التهاب الحلق والبلعوم البكتيري', 'تعزيز مناعة المسالك التنفسية العليا'],
+      howToUse: [
+        { method: 'مستخلص EPs 7630 (قطرات)', instruction: 'الصياغة المدروسة سريرياً؛ 30 قطرة ثلاث مرات يومياً قبل الوجبات' },
+        { method: 'أقراص بيلارغونيوم', instruction: 'أنسب للمسافرين؛ 20 ملغ ثلاث مرات يومياً' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون وفوق 12 سنة', notes: 'الجرعة الكاملة آمنة' },
+        { group: 'الأطفال (6 إلى 12 سنة)', notes: 'جرعة مخفّضة تحت إشراف طبي' },
+        { group: 'الحوامل', notes: 'يُتجنّب احتياطاً' },
+      ],
+      dosage: {
+        standard: 'مستخلص EPs 7630: 30 قطرة ثلاث مرات يومياً لـ 7 إلى 14 يوماً',
+        forms: [
+          { form: 'مستخلص EPs 7630 قطرات', dose: '30 قطرة ثلاث مرات يومياً' },
+          { form: 'أقراص 20 ملغ', dose: '20 ملغ ثلاث مرات يومياً؛ مدة العلاج 7 إلى 14 يوماً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['اضطراب معدي معوي'],
+        management: ['لا سمّية حادة موثّقة بالجرعات المعيارية', 'قلّل الجرعة عند الإزعاج'],
+      },
+      sideEffects: [
+        'إزعاج معدي خفيف وغثيان وطعم مرّ (شائعة قليلاً)',
+        'تفاعل تحسسي (نادر)',
+        'ارتفاع إنزيمات الكبد (نادر جداً، تقارير فردية)',
+      ],
+      contraindications: [
+        'أمراض الكبد الحادة أو المزمنة',
+        'اضطرابات المناعة الذاتية الحادة',
+        'الحمل والرضاعة',
+        'الاستخدام المطوّل فوق 4 أسابيع يستوجب متابعة طبية',
+      ],
+      drugInteractions: [
+        'مضادات التخثر: الكومارينات قد تُعزّز تأثير وارفارين',
+        'مثبطات CYP2C9: تداخل نظري محتمل',
+        'أدوية المناعة: تآزر أو تضاد محتمل',
+      ],
+      storage: {
+        forms: [
+          { form: 'قطرات', instructions: 'في درجة الغرفة بعيداً عن الضوء' },
+          { form: 'أقراص', instructions: 'وعاء محكم في بيئة جافة' },
+        ],
+      },
+      benefits: [
+        { icon: 'vaccines', title: 'مانع التصاق البكتيريا', desc: 'الكومارينات الأوكسيجينية تمنع تثبّت البكتيريا التنفسية بالغشاء المخاطي.' },
+        { icon: 'shield', title: 'تعزيز المناعة المخاطية', desc: 'يُحفّز Natural Killer cells وبلعمة الضامّات للتصدي للعدوى.' },
+        { icon: 'air', title: 'علاج الجيوب الأنفية', desc: 'من أقوى الأعشاب الموثّقة لالتهاب الجيوب الأنفية الحاد.' },
+        { icon: 'science', title: 'أدلة سريرية قوية', desc: 'EPs 7630 مدروس في أكثر من 20 تجربة سريرية عشوائية مُحكَّمة.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Geraniaceae (الغرانيومية)',
+        nativeRegion: 'أفريقيا الجنوبية (جنوب أفريقيا، ليسوتو، سوازيلاند).',
+        growthHabit: 'نبات معمّر جذره أسمر داكن سميك؛ أوراق دائرية مخملية؛ أزهار أرجوانية داكنة.',
+        activeCompounds: 'أومكالين (8-هيدروكسي-5،7-ثنائي ميثوكسي كومارين)، أرتيلين، نفثوكينونات، كيرسيتين.',
+        cultivationNotes: 'استخدمه شعب الزولو والباسوتو في جنوب أفريقيا للسل وأمراض الصدر لقرون. المستخلص EPs 7630 طوّرته شركة Schwabe الألمانية وهو مُعتمد في أكثر من 40 دولة.',
+      },
+      preparation: [
+        { method: 'قطرات مستخلص EPs 7630', desc: 'تناول 30 قطرة في كمية صغيرة من الماء ثلاث مرات يومياً قبل الوجبات، لمدة 7-14 يوماً.', bestFor: 'التهاب الجيوب الأنفية والشعب الهوائية الحاد' },
+        { method: 'أقراص بيلارغونيوم', desc: 'تناول 20 ملغ ثلاث مرات يومياً مع كوب ماء. أنسب للمسافرين وصعوبة حمل القطرات.', bestFor: 'التهاب الحلق وعلاج التنفسية في السفر' },
+      ],
+    },
+
+    'black-elderberry': {
+      name: 'الإلدربيري الأسود (العبهر الأسود)',
+      shortDescription: 'مُعزّز مناعي مضاد للفيروسات التنفسية',
+      description: 'الإلدربيري (Sambucus nigra) شجرة أوروبية تحتوي ثمارها الناضجة على أنثوسيانينات وبروتينات SNA-II تُثبّط التصاق فيروسات الإنفلونزا ونزلات البرد بمستقبلات الخلايا التنفسية. التجارب السريرية تُظهر تقليص مدة الإنفلونزا بـ 2-4 أيام وتخفيف أعراضها بنسبة معتدالة.',
+      symptoms: ['الإنفلونزا والزكام الشديد', 'احتقان الجيوب الأنفية', 'التهاب الحلق الفيروسي', 'ضعف المناعة الموسمي'],
+      warnings: [
+        'الثمار غير الناضجة والأوراق والجذور سامّة (سيانوجينيك غليكوسيدات)؛ تُستخدم فقط الثمار الناضجة المطبوخة أو المستخلصات المُعالجة',
+        'لا تُفرط في استخدامه مع أمراض المناعة الذاتية',
+      ],
+      activeConstituents: [
+        { name: 'أنثوسيانينات (سيانيدين 3-سامبيوبيوسيد وسيانيدين 3-غلوكوسيد)', percentage: '', effect: 'تمنع ارتباط فيروسات الإنفلونزا بمستقبلات الخلايا التنفسية' },
+        { name: 'بروتين SNA-II (ليكتين)', percentage: '', effect: 'يُثبّط عملية التكاثر الفيروسي داخل الخلايا' },
+        { name: 'كيرسيتين وكلوروجينيك أسيد', percentage: '', effect: 'مضادان للأكسدة ويُعزّزان الاستجابة المناعية' },
+        { name: 'فيتامين C', percentage: '', effect: 'مضاد للأكسدة ومعزّز للمناعة' },
+      ],
+      moa: [
+        { title: 'منع ارتباط الفيروسات', detail: 'الأنثوسيانينات ترتبط بالمستقبلات الغليكوبروتينية على سطح فيروسات الإنفلونزا وتمنع ارتباطها بمستقبلات حمض السياليك على الخلايا التنفسية' },
+        { title: 'تثبيط التكاثر الفيروسي', detail: 'SNA-II ليكتين يُثبّط عملية التكاثر الفيروسي داخل الخلايا' },
+        { title: 'تحفيز السيتوكينات المناعية', detail: 'يُحفّز إنتاج IFN-γ وTNF-α المُفيدَين بجرعات معتدلة' },
+      ],
+      uses: ['تقصير مدة الإنفلونزا وتخفيف شدّتها', 'علاج الزكام الشديد وسيلان الأنف', 'دعم مناعة المجاري التنفسية العليا', 'التعافي بعد الأمراض التنفسية'],
+      howToUse: [
+        { method: 'شراب الإلدربيري التجاري', instruction: 'الأنسب للجرعة الدقيقة؛ ابدأ عند ظهور الأعراض الأولى' },
+        { method: 'شاي التوت المجفف', instruction: 'للدعم المناعي الوقائي في موسم البرد والإنفلونزا' },
+      ],
+      suitableAgeGroups: [
+        { group: 'البالغون وفوق 12 سنة', notes: 'الجرعة الكاملة آمنة' },
+        { group: 'الأطفال (2 إلى 12 سنة)', notes: 'بالجرعة المخصصة للأطفال (7.5 مل)' },
+        { group: 'مرضى المناعة الذاتية الشديدة', notes: 'يُتجنّب بسبب تحفيز المناعة' },
+      ],
+      dosage: {
+        standard: 'شراب موحّد: 15 مل أربع مرات يومياً للبالغين',
+        forms: [
+          { form: 'شراب موحّد (38 إلى 40% أنثوسيانين)', dose: '15 مل أربع مرات يومياً (بالغون)؛ 7.5 مل أربع مرات (أطفال)' },
+          { form: 'أقراص/كبسولات 500 ملغ', dose: 'مرتين يومياً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['غثيان وإقياء من التوت الطازج النيّئ غير الناضج (سيانوجينيك)'],
+        management: ['الثمار الناضجة المطبوخة أو المستخلصات المُعالجة: لا سمّية حادة', 'عند تناول التوت النيّئ الكثير: راجع الطبيب فوراً'],
+      },
+      sideEffects: [
+        'اضطراب معدي وإسهال خفيف (نادراً)',
+        'تحفيز زائد للسيتوكينات في أمراض المناعة الذاتية (نظرياً)',
+      ],
+      contraindications: [
+        'أمراض المناعة الذاتية الشديدة (لوبوس، التهاب المفاصل الروماتويدي) لأنه يُحفّز المناعة',
+        'مثبطات المناعة بعد زراعة الأعضاء',
+        'حساسية من Sambucus',
+      ],
+      drugInteractions: [
+        'مثبطات المناعة (Cyclosporine): قد يُضعف تأثيرها',
+        'أدوية السكري: مراقبة خفض السكر',
+        'مدرّات البول: تأثير مضاعف طفيف',
+      ],
+      storage: {
+        forms: [
+          { form: 'شراب مفتوح', instructions: 'في الثلاجة بعد الفتح؛ يدوم 3 أشهر' },
+          { form: 'كبسولات', instructions: 'وعاء محكم بعيداً عن الرطوبة' },
+        ],
+      },
+      benefits: [
+        { icon: 'coronavirus', title: 'مضاد للفيروسات التنفسية', desc: 'يمنع ارتباط فيروسات الإنفلونزا وكورونا بمستقبلات الخلايا التنفسية.' },
+        { icon: 'timer', title: 'تقصير مدة الإنفلونزا', desc: 'يُقلّص مدة الإنفلونزا بـ 2-4 أيام وفق التجارب السريرية.' },
+        { icon: 'shield', title: 'دعم مناعي شامل', desc: 'يُحفّز إنتاج السيتوكينات المناعية المُفيدة ويُعزّز التعافي.' },
+        { icon: 'spa', title: 'غني بالأنثوسيانينات', desc: 'أحد أغنى المصادر الطبيعية بالأنثوسيانينات المضادة للأكسدة.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Adoxaceae',
+        nativeRegion: 'أوروبا وغرب آسيا وأمريكا الشمالية. يُزرع تجارياً في أوروبا والولايات المتحدة.',
+        growthHabit: 'شجرة أو شجيرة تصل إلى 6 أمتار؛ أزهار بيضاء عطرية في خريطات (umbels)؛ ثمار أرجوانية سوداء صغيرة.',
+        activeCompounds: 'سيانيدين 3-سامبيوبيوسيد، سيانيدين 3-غلوكوسيد، SNA-II ليكتين، كيرسيتين، روتين.',
+        cultivationNotes: 'مستخدم في الطب الشعبي الأوروبي لآلاف السنين. العالم بيندت سامبوسيوس درس مستخلصاته في إسرائيل الثمانينيات وأثبت فاعليتها ضد الإنفلونزا. منتجاته الجاهزة (Sambucol®) من أكثر المكملات الشتوية مبيعاً عالمياً.',
+      },
+      preparation: [
+        { method: 'شراب الإلدربيري', desc: 'تناول 15 مل شراب موحّد أربع مرات يومياً عند الإصابة بالزكام أو الإنفلونزا، ابدأ فور ظهور الأعراض.', bestFor: 'علاج الإنفلونزا والزكام الشديد وتقصير مدته' },
+        { method: 'شاي الإلدربيري المجفف', desc: 'انقع ملعقة كبيرة توت مجفف في 300 مل ماء مغلي 15 دقيقة. صفّ واشرب مرتين يومياً.', bestFor: 'الدعم المناعي الوقائي في موسم البرد والإنفلونزا' },
+      ],
+    },
+
+    guava: {
+      name: 'الجوافة',
+      shortDescription: 'فاكهة استوائية للجهاز التنفسي والمناعة',
+      description: 'الجوافة (Psidium guajava) فاكهة استوائية وأوراقها غنية بفيتامين C (4 أضعاف البرتقال) وكيرسيتين وكاتيشينات تُعزّز مناعة الجهاز التنفسي وتُثبّط الفيروسات التنفسية. تُستخدم أوراقها ومستخلصاتها في الطب الاستوائي للسعال وإفراز البلغم والتهابات الجهاز التنفسي العليا.',
+      symptoms: ['السعال والزكام', 'ضعف المناعة التنفسية', 'التهاب الحلق', 'الحمى المصاحبة للعدوى'],
+      warnings: [
+        'مستخلص الأوراق يُخفّض السكر؛ راقب نسبته مع أدوية السكري',
+        'يُتجنّب مستخلص الأوراق بجرعات عالية في أمراض الكلى',
+      ],
+      activeConstituents: [
+        { name: 'فيتامين C', percentage: '228 ملغ/100 غ', effect: 'يُعزّز تكاثر الخلايا التائية ونشاط الخلايا القاتلة الطبيعية' },
+        { name: 'كيرسيتين', percentage: '', effect: 'يُثبّط تكاثر الفيروسات التنفسية عبر تثبيط Neuraminidase' },
+        { name: 'كاتيشين وغاليك أسيد', percentage: '', effect: 'مضادان للأكسدة والميكروبات' },
+        { name: 'تانينات', percentage: '', effect: 'مضادة للإسهال وقابضة' },
+      ],
+      moa: [
+        { title: 'تعزيز المناعة الخلوية', detail: 'فيتامين C يُعزّز تكاثر الخلايا التائية ونشاط الخلايا القاتلة الطبيعية' },
+        { title: 'تثبيط Neuraminidase الفيروسية', detail: 'كيرسيتين يُثبّط تكاثر فيروسات الإنفلونزا A عبر تثبيط إنزيم Neuraminidase' },
+        { title: 'تثبيط COX-2', detail: 'مستخلص الأوراق يُثبّط COX-2 ويُقلّل الالتهاب المخاطي' },
+      ],
+      uses: ['تعزيز مناعة الجهاز التنفسي بفيتامين C الطبيعي', 'تخفيف السعال والاحتقان', 'خافض حمى طبيعي', 'مضاد فيروسي خفيف للزكام والإنفلونزا'],
+      howToUse: [
+        { method: 'ثمرة كاملة يومياً', instruction: 'الأفضل للوقاية اليومية ودعم المناعة التنفسية' },
+        { method: 'شاي أوراق الجوافة', instruction: 'للجرعة العلاجية للسعال والحمى' },
+      ],
+      suitableAgeGroups: [
+        { group: 'جميع الأعمار (كفاكهة)', notes: 'آمن للجميع' },
+        { group: 'البالغون وفوق 12 سنة (مستخلص الأوراق)', notes: 'الجرعة الكاملة آمنة' },
+        { group: 'الحوامل', notes: 'يُتجنّب مستخلص الأوراق بجرعات علاجية' },
+      ],
+      dosage: {
+        standard: 'ثمرة جوافة يومياً أو شاي أوراق مرتين يومياً',
+        forms: [
+          { form: 'ثمرة جوافة', dose: '1 إلى 2 ثمرة يومياً' },
+          { form: 'شاي أوراق الجوافة', dose: '5 إلى 10 غ أوراق مجففة في 300 مل ماء مغلي، مرتين يومياً' },
+          { form: 'مستخلص موحّد', dose: '400 ملغ مرتين يومياً' },
+        ],
+      },
+      overdose: {
+        symptoms: ['إمساك (من التانينات في مستخلص الأوراق)', 'انخفاض سكر الدم'],
+        management: ['الثمار آمنة جداً في الكميات المعتادة', 'قلّل جرعة مستخلص الأوراق عند الإمساك أو انخفاض السكر'],
+      },
+      sideEffects: [
+        'إمساك من التانينات في مستخلص الأوراق (نادراً)',
+        'إسهال عند الحساسة',
+        'انخفاض سكر محتمل مع مستخلص الأوراق',
+      ],
+      contraindications: [
+        'مرضى السكري يجب مراقبة السكر مع المستخلص',
+        'حساسية من فاكهة الجوافة أو Myrtaceae',
+      ],
+      drugInteractions: [
+        'أدوية السكري: قد يُضاعف خفض السكر',
+        'وارفارين: فيتامين K في الأوراق قد يُقلّل التأثير',
+        'مضادات الإسهال: قد يعكس تأثيرها',
+      ],
+      storage: {
+        forms: [
+          { form: 'ثمار طازجة', instructions: 'في درجة الغرفة حتى تنضج، ثم الثلاجة حتى أسبوع' },
+          { form: 'مجففة', instructions: 'وعاء محكم حتى سنة' },
+        ],
+      },
+      benefits: [
+        { icon: 'shield', title: 'فيتامين C الطبيعي الفائق', desc: 'تُوفّر ثمرة واحدة 4 أضعاف الاحتياج اليومي من فيتامين C.' },
+        { icon: 'coronavirus', title: 'مضاد فيروسي', desc: 'كيرسيتين يُثبّط إنزيم Neuraminidase الفيروسي مما يُعيق تكاثره.' },
+        { icon: 'thermostat', title: 'خافض حمى طبيعي', desc: 'مستخلص الأوراق يُخفّض الحمى بتثبيط البروستاغلاندينات.' },
+        { icon: 'nutrition', title: 'غنيّ بالأنتيأكسدة', desc: 'كاروتينويدات وفلافونويدات تحمي الخلايا التنفسية من الإجهاد التأكسدي.' },
+      ],
+      botanicalFacts: {
+        family: 'عائلة Myrtaceae (الآسيليات)',
+        nativeRegion: 'أمريكا الوسطى والجنوبية (المكسيك وبيرو). يُزرع الآن في جميع المناطق الاستوائية وشبه الاستوائية عالمياً.',
+        growthHabit: 'شجرة أو شجيرة تصل إلى 10 أمتار؛ أوراق بيضاوية عطرة؛ أزهار بيضاء؛ ثمار خضراء أو صفراء عند النضج.',
+        activeCompounds: 'فيتامين C، كيرسيتين، كاتيشين، غاليك أسيد، ليكوبين، β-كاروتين، تانينات.',
+        cultivationNotes: 'مستخدمة في طب الأمريكيين الأصليين والطب الأيورفيدي والصيني والعربي لآلاف السنين. أوراقها في دستور الأدوية البرازيلي لعلاج الإسهال. دراسات حديثة تُثبت فاعليتها ضد السرطانات ومرض السكري والجهاز التنفسي.',
+      },
+      preparation: [
+        { method: 'ثمار الجوافة الطازجة', desc: 'تناول 1-2 ثمرة يومياً كاملة مع قشرها (تحتوي القشرة على أعلى تركيز فيتامين C). جنّبها مع الوجبات الغنية بالحديد.', bestFor: 'دعم المناعة التنفسية اليومي والوقاية' },
+        { method: 'شاي أوراق الجوافة', desc: 'اغلِ 5 أوراق طازجة أو ملعقتَين مجففة في 300 مل ماء لـ 15 دقيقة. صفّ واشرب دافئاً مرتين يومياً.', bestFor: 'السعال والحمى وتقوية مناعة الجهاز التنفسي' },
+      ],
+    },
+
   },
 };
 
@@ -2088,6 +4035,12 @@ export const TAG_TRANSLATIONS = {
   'Anti-aging': 'مضاد للشيخوخة',
   'Topical': 'موضعي',
   'Hair Growth': 'نمو الشعر',
+  'Scalp Health': 'صحة فروة الرأس',
+  'Keratin Support': 'دعم الكيراتين',
+  'Anti-dandruff': 'مضاد للقشرة',
+  'Sulfur-rich': 'غني بالكبريت',
+  'Anti-breakage': 'مضاد للتكسر',
+  'Scalp Nourishment': 'تغذية فروة الرأس',
   'Anti-alopecia': 'مضاد للصلع',
   'Cognitive': 'معرفي',
   'Galactagogue': 'مُدرّ للحليب',
@@ -2130,4 +4083,64 @@ export const TAG_TRANSLATIONS = {
   'Digestive': 'هضمي',
   'Culinary': 'طهوي',
   'Medicinal': 'طبي',
+  'Laxative': 'ملين',
+  'Constipation Relief': 'تخفيف الإمساك',
+  'Bowel Cleansing': 'تنظيف الأمعاء',
+  'Anthraquinone': 'أنثراكينون',
+  'Short-term Use': 'استخدام قصير الأمد',
+  'Bulk-forming Laxative': 'ملين تجميعي',
+  'Fiber': 'ألياف',
+  'IBS Relief': 'تخفيف القولون العصبي',
+  'Cholesterol': 'كوليسترول',
+  'Bowel Regulator': 'منظّم الأمعاء',
+  'Stimulant Laxative': 'ملين منبّه',
+  'Purgative': 'مسهّل قوي',
+  'Castor Oil': 'زيت الخروع',
+  'Ricinoleic Acid': 'حمض الريسينوليك',
+  'Antispasmodic': 'مضاد للتشنج',
+  'Antidiarrheal': 'مضاد للإسهال',
+  'Menthol': 'منثول',
+  'GI Soother': 'مهدئ الجهاز الهضمي',
+  'Anxiolytic': 'مزيل القلق',
+  'Joint Health': 'صحة المفاصل',
+  'Curcumin': 'كركيومين',
+  'Hepatoprotective': 'واقٍ للكبد',
+  'Antiseptic': 'مطهّر',
+  'Eugenol': 'يوجينول',
+  'Dental Health': 'صحة الأسنان',
+  'Astringent': 'قابض',
+  'Tannins': 'تانينات',
+  'Aquaretic': 'مُدرّ مائي',
+  'Potassium-Sparing': 'محافظ على البوتاسيوم',
+  'Choleretic': 'مُحفّز الصفراء',
+  'Liver Support': 'دعم الكبد',
+  'Anti-urolithic': 'مانع الحصوات البولية',
+  'Vitamin K': 'فيتامين K',
+  'Apiaceae': 'الخيميات',
+  'Ureteric Spasmolytic': 'مُرخٍ الحالب',
+  'Stone Expulsion': 'طرد الحصوات',
+  'Renal Colic': 'مغص كلوي',
+  'Calcium Channel Blocker': 'حاصر قنوات الكالسيوم',
+  'BPH': 'تضخّم البروستات الحميد',
+  'Prostate Health': 'صحة البروستات',
+  'Phytosterol': 'فيتوستيرول',
+  '5-Alpha Reductase Inhibitor': 'مثبّط 5-ألفا ريداكتاز',
+  'DHT Blocker': 'حاصر DHT',
+  'Lipidosterolic Extract': 'مستخلص دهني-ستيرولي',
+  '5-LOX Inhibitor': 'مثبّط 5-LOX',
+  'SHBG Binding': 'ربط SHBG',
+  'Lectin': 'ليكتين',
+  'UTI Prevention': 'الوقاية من التهابات المسالك',
+  'Anti-adhesion': 'مضاد للالتصاق',
+  'Proanthocyanidins': 'بروانثوسيانيدينات',
+  'Expectorant': 'طارد بلغم',
+  'Thymol': 'ثيمول',
+  'Antitussive': 'مضاد السعال',
+  'Bronchospasmolytic': 'مُرخٍ قصبي',
+  'Anethole': 'أنيثول',
+  'Antiviral': 'مضاد للفيروسات',
+  'Immunomodulator': 'مُعدِّل المناعة',
+  'Anthocyanins': 'أنثوسيانينات',
+  'Influenza': 'إنفلونزا',
+  'Quercetin': 'كيرسيتين',
 };

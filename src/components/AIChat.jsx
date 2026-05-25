@@ -236,7 +236,7 @@ function MessageBubble({ msg, loading }) {
   const isEmpty = msg.content === '';
 
   return (
-    <div className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-3`}>
+    <div dir="ltr" className={`flex ${isUser ? 'justify-end' : 'justify-start'} mb-3`}>
       {!isUser && (
         <div className="w-8 h-8 rounded-full bg-primary-container flex items-center justify-center mx-2 flex-shrink-0 mt-0.5">
           <span className="material-symbols-outlined text-on-primary-container text-sm">eco</span>

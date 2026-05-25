@@ -6,13 +6,14 @@ import { PLANT_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
 import PlantCard from '../components/PlantCard.jsx';
 import { fetchPlantViews, trackPlantView } from '../services/firestoreService.js';
 
-const NAME_KEY = { immunity:'cat_immunity_name', digestive:'cat_digestive_name', respiratory:'cat_respiratory_name', 'womens-health':'cat_womens_name' };
+const NAME_KEY = { immunity:'cat_immunity_name', digestive:'cat_digestive_name', respiratory:'cat_respiratory_name', 'womens-health':'cat_womens_name', uti:'cat_uti_name' };
 const SUB_NAME_KEY = {
   'menstrual-health':'sub_menstrual','pregnancy-support':'sub_pregnancy','breast-feeding':'sub_breastfeeding',
   'hair-care':'sub_haircare','skin-care':'sub_skincare','constipation-relief':'sub_constipation',
   'diarrhea-support':'sub_diarrhea','dyspepsia':'sub_dyspepsia','ibs':'sub_ibs',
   'cold':'sub_cold','rhinitis':'sub_rhinitis','sinusitis':'sub_sinusitis','cough':'sub_cough',
   'immune-boosting':'sub_immune','anti-oxidant-rich':'sub_antioxidant','anti-inflammatory':'sub_antiinflammatory',
+  'anti-septic':'sub_antiseptic','diuretics':'sub_diuretics','bph':'sub_bph',
 };
 const SUB_DESC_KEY = {
   'menstrual-health':'sub_menstrual_desc','pregnancy-support':'sub_pregnancy_desc','breast-feeding':'sub_breastfeeding_desc',
@@ -20,6 +21,7 @@ const SUB_DESC_KEY = {
   'diarrhea-support':'sub_diarrhea_desc','dyspepsia':'sub_dyspepsia_desc','ibs':'sub_ibs_desc',
   'cold':'sub_cold_desc','rhinitis':'sub_rhinitis_desc','sinusitis':'sub_sinusitis_desc','cough':'sub_cough_desc',
   'immune-boosting':'sub_immune_desc','anti-oxidant-rich':'sub_antioxidant_desc','anti-inflammatory':'sub_antiinflammatory_desc',
+  'anti-septic':'sub_antiseptic_desc','diuretics':'sub_diuretics_desc','bph':'sub_bph_desc',
 };
 
 export default function SubcategoryPage() {
@@ -30,7 +32,9 @@ export default function SubcategoryPage() {
   const category    = CATEGORIES.find(c => c.id === id);
   const subcategory = category?.subcategories?.find(s => s.id === subId);
 
-  const categoryPlants = Object.values(PLANTS).filter(p => p.subcategory === subId);
+  const categoryPlants = subcategory?.plants
+    ? subcategory.plants.map(pid => PLANTS[pid]).filter(Boolean)
+    : Object.values(PLANTS).filter(p => p.subcategory === subId);
 
   useEffect(() => {
     if (categoryPlants.length === 0) return;

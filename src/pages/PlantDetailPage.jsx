@@ -7,6 +7,7 @@ import PlantCard from '../components/PlantCard.jsx';
 const NAME_KEY = {
   immunity: 'cat_immunity_name', digestive: 'cat_digestive_name',
   respiratory: 'cat_respiratory_name', 'womens-health': 'cat_womens_name',
+  uti: 'cat_uti_name',
 };
 const SUB_NAME_KEY = {
   'menstrual-health': 'sub_menstrual', 'pregnancy-support': 'sub_pregnancy',
@@ -16,6 +17,7 @@ const SUB_NAME_KEY = {
   cold: 'sub_cold', rhinitis: 'sub_rhinitis', sinusitis: 'sub_sinusitis', cough: 'sub_cough',
   'immune-boosting': 'sub_immune', 'anti-oxidant-rich': 'sub_antioxidant',
   'anti-inflammatory': 'sub_antiinflammatory',
+  'anti-septic': 'sub_antiseptic', diuretics: 'sub_diuretics', bph: 'sub_bph',
 };
 
 function MoaAccordionItem({ title, detail }) {
@@ -31,7 +33,7 @@ function MoaAccordionItem({ title, detail }) {
     >
       <button
         onClick={() => setOpen(o => !o)}
-        className={`w-full flex items-center justify-between gap-3 px-5 py-4 bg-surface-container-lowest hover:bg-surface-container transition-colors ${isAr ? 'text-right flex-row-reverse' : 'text-left'}`}
+        className={`w-full flex items-center justify-between gap-3 px-5 py-4 bg-surface-container-lowest hover:bg-surface-container transition-colors ${isAr ? 'text-right' : 'text-left'}`}
       >
         <span className="font-manrope font-semibold text-sm text-primary">{title}</span>
         <span
@@ -77,19 +79,23 @@ export default function PlantDetailPage() {
   const prepData         = arData?.preparation      ?? plant.preparation;
   const botFacts         = arData?.botanicalFacts   ?? plant.botanicalFacts;
 
-  const activeConstituents = arData?.activeConstituents ?? plant.activeConstituents;
-  const moa               = arData?.moa               ?? plant.moa;
-  const uses              = arData?.uses               ?? plant.uses;
-  const howToUse          = arData?.howToUse           ?? plant.howToUse;
-  const suitableAgeGroups = arData?.suitableAgeGroups  ?? plant.suitableAgeGroups;
-  const dosage            = arData?.dosage             ?? plant.dosage;
-  const overdose          = arData?.overdose           ?? plant.overdose;
-  const sideEffects       = arData?.sideEffects        ?? plant.sideEffects;
-  const contraindications = arData?.contraindications  ?? plant.contraindications;
-  const drugInteractions  = arData?.drugInteractions   ?? plant.drugInteractions;
-  const storage           = arData?.storage            ?? plant.storage;
+  // If Arabic field is a plain string (not yet structured), fall back to English structured data
+  const arArr = (arField, enField) => Array.isArray(arField) ? arField : enField;
+  const arObj = (arField, enField) => (arField && typeof arField === 'object' && !Array.isArray(arField)) ? arField : enField;
+
+  const activeConstituents = arArr(arData?.activeConstituents, plant.activeConstituents);
+  const moa               = arArr(arData?.moa,               plant.moa);
+  const uses              = arArr(arData?.uses,              plant.uses);
+  const howToUse          = arArr(arData?.howToUse,          plant.howToUse);
+  const suitableAgeGroups = arArr(arData?.suitableAgeGroups, plant.suitableAgeGroups);
+  const dosage            = arObj(arData?.dosage,            plant.dosage);
+  const overdose          = arObj(arData?.overdose,          plant.overdose);
+  const sideEffects       = arArr(arData?.sideEffects,       plant.sideEffects);
+  const contraindications = arArr(arData?.contraindications, plant.contraindications);
+  const drugInteractions  = arArr(arData?.drugInteractions,  plant.drugInteractions);
+  const storage           = arObj(arData?.storage,           plant.storage);
   const { marketedProducts } = plant;
-  const warnings          = arData?.warnings           ?? plant.warnings;
+  const warnings          = arArr(arData?.warnings,          plant.warnings);
 
   const factLabels = {
     family:          t('plant_family'),
@@ -161,13 +167,13 @@ export default function PlantDetailPage() {
               {/* Warnings */}
               {warnings?.length > 0 && (
                 <div className="bg-red-50 border border-red-200 rounded-xl p-5">
-                  <div className={`flex items-center gap-2 mb-3 ${isAr ? 'flex-row-reverse' : ''}`}>
+                  <div className="flex items-center gap-2 mb-3">
                     <span className="material-symbols-outlined text-red-600">warning</span>
                     <h2 className="font-manrope font-bold text-red-800">{t('plant_warnings')}</h2>
                   </div>
                   <ul className="space-y-2">
                     {warnings.map((w, i) => (
-                      <li key={i} className={`font-manrope text-sm text-red-700 flex gap-2 items-start ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                      <li key={i} className={`font-manrope text-sm text-red-700 flex gap-2 items-start ${isAr ? 'text-right' : ''}`}>
                         <span className="material-symbols-outlined text-red-400 text-base flex-shrink-0 mt-0.5"
                           style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>chevron_right</span>
                         {w}
@@ -184,7 +190,7 @@ export default function PlantDetailPage() {
                   <div className="space-y-3">
                     {activeConstituents.map((c, i) => (
                       <div key={i} className="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5 transition-shadow duration-200 hover:shadow-md">
-                        <div className={`flex items-start gap-4 mb-2 ${isAr ? 'flex-row-reverse' : ''}`}>
+                        <div className={`flex items-start gap-4 mb-2 ${isAr ? 'text-right' : ''}`}>
                           <h4 className="font-manrope font-semibold text-sm text-primary flex-1">{c.name}</h4>
                           {c.percentage && (
                             <span className="bg-secondary-fixed text-on-secondary-fixed font-manrope text-xs font-bold px-3 py-1 rounded-full flex-shrink-0">
@@ -217,7 +223,7 @@ export default function PlantDetailPage() {
                   <h2 className="font-caslon text-headline-sm text-primary mb-4">{t('plant_uses')}</h2>
                   <ul className="space-y-2">
                     {uses.map((u, i) => (
-                      <li key={i} className={`flex gap-3 font-manrope text-body-md text-on-surface-variant items-start ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                      <li key={i} className={`flex gap-3 font-manrope text-body-md text-on-surface-variant items-start ${isAr ? 'text-right' : ''}`}>
                         <span className="material-symbols-outlined text-secondary text-base mt-0.5 flex-shrink-0">check_circle</span>
                         {u}
                       </li>
@@ -247,11 +253,11 @@ export default function PlantDetailPage() {
                   <h2 className="font-caslon text-headline-sm text-primary mb-4">{t('plant_age_groups')}</h2>
                   <div className="space-y-3">
                     {suitableAgeGroups.map((ag, i) => (
-                      <div key={i} className={`flex gap-4 bg-surface-container-lowest border border-surface-container-high rounded-xl p-4 items-start transition-shadow duration-200 hover:shadow-sm ${isAr ? 'flex-row-reverse' : ''}`}>
+                      <div key={i} className="flex gap-4 bg-surface-container-lowest border border-surface-container-high rounded-xl p-4 items-start transition-shadow duration-200 hover:shadow-sm">
                         <div className="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
                           <span className="material-symbols-outlined text-on-primary-fixed text-sm">person</span>
                         </div>
-                        <div>
+                        <div className={isAr ? 'text-right flex-1' : 'flex-1'}>
                           <h4 className="font-manrope font-semibold text-sm text-primary mb-1">{ag.group}</h4>
                           <p className="font-manrope text-sm text-on-surface-variant leading-relaxed">{ag.notes}</p>
                         </div>
@@ -271,9 +277,9 @@ export default function PlantDetailPage() {
                   {dosage.forms?.length > 0 && (
                     <div className="space-y-3">
                       {dosage.forms.map((f, i) => (
-                        <div key={i} className={`flex gap-4 bg-surface-container-lowest border border-surface-container-high rounded-xl p-4 items-start transition-shadow duration-200 hover:shadow-sm ${isAr ? 'flex-row-reverse' : ''}`}>
+                        <div key={i} className="flex gap-4 bg-surface-container-lowest border border-surface-container-high rounded-xl p-4 items-start transition-shadow duration-200 hover:shadow-sm">
                           <span className="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">medication</span>
-                          <div>
+                          <div className={isAr ? 'text-right flex-1' : 'flex-1'}>
                             <h4 className="font-manrope font-semibold text-sm text-primary mb-1">{f.form}</h4>
                             <p className="font-manrope text-sm text-on-surface-variant">{f.dose}</p>
                           </div>
@@ -290,7 +296,7 @@ export default function PlantDetailPage() {
                   <h2 className="font-caslon text-headline-sm text-primary mb-4">{t('plant_side_effects')}</h2>
                   <ul className="space-y-2">
                     {sideEffects.map((s, i) => (
-                      <li key={i} className={`flex gap-3 font-manrope text-body-md text-on-surface-variant items-start ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                      <li key={i} className={`flex gap-3 font-manrope text-body-md text-on-surface-variant items-start ${isAr ? 'text-right' : ''}`}>
                         <span className="material-symbols-outlined text-amber-500 text-base mt-0.5 flex-shrink-0">info</span>
                         {s}
                       </li>
@@ -302,7 +308,7 @@ export default function PlantDetailPage() {
               {/* Overdose */}
               {(overdose?.symptoms?.length > 0 || overdose?.management?.length > 0) && (
                 <div className="bg-orange-50 border border-orange-200 rounded-xl p-5">
-                  <div className={`flex items-center gap-2 mb-4 ${isAr ? 'flex-row-reverse' : ''}`}>
+                  <div className="flex items-center gap-2 mb-4">
                     <span className="material-symbols-outlined text-orange-600">emergency</span>
                     <h2 className="font-caslon text-headline-sm text-orange-800">{t('plant_overdose')}</h2>
                   </div>
@@ -311,7 +317,7 @@ export default function PlantDetailPage() {
                       <h4 className={`font-manrope font-semibold text-sm text-orange-700 mb-2 uppercase tracking-wide ${isAr ? 'text-right' : ''}`}>{t('plant_overdose_symptoms')}</h4>
                       <ul className="space-y-1">
                         {overdose.symptoms.map((s, i) => (
-                          <li key={i} className={`font-manrope text-sm text-orange-700 flex gap-2 items-start ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                          <li key={i} className={`font-manrope text-sm text-orange-700 flex gap-2 items-start ${isAr ? 'text-right' : ''}`}>
                             <span className="material-symbols-outlined text-orange-400 text-base flex-shrink-0 mt-0.5"
                               style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>chevron_right</span>
                             {s}
@@ -325,7 +331,7 @@ export default function PlantDetailPage() {
                       <h4 className={`font-manrope font-semibold text-sm text-orange-700 mb-2 uppercase tracking-wide ${isAr ? 'text-right' : ''}`}>{t('plant_overdose_management')}</h4>
                       <ul className="space-y-1">
                         {overdose.management.map((m, i) => (
-                          <li key={i} className={`font-manrope text-sm text-orange-700 flex gap-2 items-start ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                          <li key={i} className={`font-manrope text-sm text-orange-700 flex gap-2 items-start ${isAr ? 'text-right' : ''}`}>
                             <span className="material-symbols-outlined text-orange-400 text-base flex-shrink-0 mt-0.5"
                               style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>chevron_right</span>
                             {m}
@@ -343,7 +349,7 @@ export default function PlantDetailPage() {
                   <h2 className="font-caslon text-headline-sm text-primary mb-4">{t('plant_contraindications')}</h2>
                   <ul className="space-y-2">
                     {contraindications.map((c, i) => (
-                      <li key={i} className={`flex gap-3 font-manrope text-body-md text-on-surface-variant items-start ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                      <li key={i} className={`flex gap-3 font-manrope text-body-md text-on-surface-variant items-start ${isAr ? 'text-right' : ''}`}>
                         <span className="material-symbols-outlined text-red-400 text-base mt-0.5 flex-shrink-0">block</span>
                         {c}
                       </li>
@@ -358,7 +364,7 @@ export default function PlantDetailPage() {
                   <h2 className="font-caslon text-headline-sm text-primary mb-4">{t('plant_drug_interactions')}</h2>
                   <ul className="space-y-2">
                     {drugInteractions.map((d, i) => (
-                      <li key={i} className={`flex gap-3 font-manrope text-body-md text-on-surface-variant items-start ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                      <li key={i} className={`flex gap-3 font-manrope text-body-md text-on-surface-variant items-start ${isAr ? 'text-right' : ''}`}>
                         <span className="material-symbols-outlined text-purple-400 text-base mt-0.5 flex-shrink-0">pill</span>
                         {d}
                       </li>
@@ -373,9 +379,9 @@ export default function PlantDetailPage() {
                   <h2 className="font-caslon text-headline-sm text-primary mb-4">{t('plant_storage')}</h2>
                   <div className="space-y-3">
                     {storage.forms.map((f, i) => (
-                      <div key={i} className={`flex gap-4 bg-surface-container-lowest border border-surface-container-high rounded-xl p-4 items-start ${isAr ? 'flex-row-reverse' : ''}`}>
+                      <div key={i} className="flex gap-4 bg-surface-container-lowest border border-surface-container-high rounded-xl p-4 items-start">
                         <span className="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">inventory_2</span>
-                        <div>
+                        <div className={isAr ? 'text-right flex-1' : 'flex-1'}>
                           <h4 className="font-manrope font-semibold text-sm text-primary mb-1">{f.form}</h4>
                           <p className="font-manrope text-sm text-on-surface-variant">{f.instructions}</p>
                         </div>
@@ -426,11 +432,11 @@ export default function PlantDetailPage() {
                   <div className="space-y-3">
                     {benefitsData.map((b, i) => (
                       <div key={i} className="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5">
-                        <div className={`flex items-start gap-3 ${isAr ? 'flex-row-reverse' : ''}`}>
+                        <div className="flex items-start gap-3">
                           <div className="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0 mt-0.5">
                             <span className="material-symbols-outlined text-on-secondary-fixed text-sm">{b.icon}</span>
                           </div>
-                          <div>
+                          <div className={isAr ? 'text-right flex-1' : 'flex-1'}>
                             <h4 className="font-manrope font-semibold text-sm text-primary mb-1">{b.title}</h4>
                             <p className="font-manrope text-sm text-on-surface-variant leading-relaxed">{b.desc}</p>
                           </div>
@@ -481,7 +487,7 @@ export default function PlantDetailPage() {
                   <h2 className="font-caslon text-headline-sm text-primary mb-4">{t('plant_references')}</h2>
                   <div className="bg-surface-container-lowest border border-surface-container-high rounded-xl p-5 space-y-3">
                     {plant.references.map((ref, i) => (
-                      <div key={i} className={`flex gap-3 items-start ${isAr ? 'flex-row-reverse text-right' : ''}`}>
+                      <div key={i} className={`flex gap-3 items-start ${isAr ? 'text-right' : ''}`}>
                         <span className="font-manrope text-xs font-bold text-secondary bg-secondary-fixed px-2 py-0.5 rounded-full flex-shrink-0 mt-0.5">
                           {i + 1}
                         </span>
@@ -492,7 +498,7 @@ export default function PlantDetailPage() {
                               href={ref.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className={`inline-flex items-center gap-1 font-manrope text-xs text-secondary hover:text-primary transition-colors mt-1 ${isAr ? 'flex-row-reverse' : ''}`}
+                              className="inline-flex items-center gap-1 font-manrope text-xs text-secondary hover:text-primary transition-colors mt-1"
                             >
                               <span className="material-symbols-outlined text-sm">open_in_new</span>
                               {ref.url.includes('doi.org') ? 'View DOI' : ref.url.includes('pubmed') ? 'PubMed' : 'View Source'}
@@ -543,7 +549,7 @@ export default function PlantDetailPage() {
                   </p>
                   <Link
                     to={`/category/${category.id}/${subcategory.id}`}
-                    className={`flex items-center justify-between font-caslon text-primary hover:text-secondary transition-colors ${isAr ? 'flex-row-reverse' : ''}`}
+                    className="flex items-center justify-between font-caslon text-primary hover:text-secondary transition-colors"
                   >
                     {t(SUB_NAME_KEY[subcategory.id]) ?? subcategory.name}
                     <span className="material-symbols-outlined text-base"
@@ -559,7 +565,7 @@ export default function PlantDetailPage() {
                   </p>
                   <Link
                     to={`/category/${category.id}`}
-                    className={`flex items-center justify-between font-caslon text-primary hover:text-secondary transition-colors ${isAr ? 'flex-row-reverse' : ''}`}
+                    className="flex items-center justify-between font-caslon text-primary hover:text-secondary transition-colors"
                   >
                     {t(NAME_KEY[category.id]) ?? category.name}
                     <span className="material-symbols-outlined text-base"

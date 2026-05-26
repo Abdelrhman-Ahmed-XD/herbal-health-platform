@@ -4135,7 +4135,8 @@ export const PLANTS = {
       ],
     },
     marketedProducts: [
-      { name: 'Cran-Max Cranberry Concentrate (Imported)', image: 'https://images.unsplash.com/photo-1574316071802-0d684efa7bf5?w=400&q=80' },
+      { name: 'Modern Cranberry Dietary Supplement', image: '/images/cranberry-product-1.jpeg' },
+      { name: 'Cranberry Ema Pharm (30 Capsules)', image: '/images/cranberry-product-2.jpeg' },
     ],
     benefits: [
       { icon: 'shield', title: 'Proven UTI Anti-adhesion', desc: 'A-type PACs structurally block the fimbriae of P-fimbriated E. coli from binding to uroepithelial cells: preventing the critical first step of UTI establishment without antibiotic resistance.' },

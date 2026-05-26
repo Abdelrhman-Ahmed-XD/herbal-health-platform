@@ -124,8 +124,7 @@ function AnalyticsDashboard() {
                     textAnchor="end"
                     height={65}
                   />
-                  <YAxis tick={{ fontFamily: 'Manrope, sans-serif', fontSize: 11, fill: '#434843' }} />
-                  <Tooltip content={<CustomTooltip />} />
+                  <YAxis allowDecimals={false} tick={{ fontFamily: 'Manrope, sans-serif', fontSize: 11, fill: '#434843' }} />                  <Tooltip content={<CustomTooltip />} />
                   <Bar dataKey="count" radius={[4, 4, 0, 0]}>
                     <LabelList dataKey="count" position="top" style={{ fill: '#536346', fontSize: 11, fontFamily: 'Manrope, sans-serif', fontWeight: 600 }} />
                     {symptomData.map((e, i) => <Cell key={i} fill={e.fill} />)}

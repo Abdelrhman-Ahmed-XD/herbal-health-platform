@@ -180,12 +180,12 @@ export default function HomePage() {
     <div className="page-enter">
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[80vh] flex items-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center overflow-hidden pt-28">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-45"
           style={{ backgroundImage: `url(${heroBackground})` }}
         />
-        <div className="relative section-container w-full text-center pt-32 md:pt-20 pb-16 md:pb-0 px-4 md:px-0">
+        <div className="relative section-container w-full text-center py-16 px-4 md:px-0">
           <div className="inline-flex items-center gap-2 bg-secondary-fixed text-on-secondary-fixed font-manrope text-label-sm px-4 py-1.5 rounded-full mb-8 mx-auto">
             {t('tagline')}
           </div>

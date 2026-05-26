@@ -31,7 +31,7 @@ export default function CategoriesPage() {
                 style={{ animationDelay: `${i * 120}ms` }}
               >
                 <div className="flex flex-col rounded-xl overflow-hidden border border-surface-container-high shadow-botanical hover:shadow-botanical-lg transition-all duration-300 hover:-translate-y-1 h-full">
-                  <div className="h-56 bg-surface-container overflow-hidden flex items-center justify-center">
+                  <div className={`h-56 overflow-hidden flex items-center justify-center ${id === 'respiratory' || id === 'immunity' || id === 'uti' || id === 'digestive' ? 'bg-transparent' : 'bg-surface-container'}`}>
                     <img
                       src={meta.image}
                       alt={t(meta.nameKey)}

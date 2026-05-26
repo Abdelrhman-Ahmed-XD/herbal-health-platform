@@ -2,14 +2,6 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
 
-const PlantLogo = () => (
-  <svg className="w-8 h-8 text-[#436F4D] me-2 -mt-1" fill="none" stroke="currentColor"
-    strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 24 24">
-    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
-    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
-  </svg>
-);
-
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const { t, toggle, isAr } = useLanguage();
@@ -26,13 +18,18 @@ export default function Navbar() {
   return (
     <>
       <header className="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-outline-variant/50">
-        <div className="flex justify-between items-center max-w-container mx-auto px-5 md:px-16 h-20">
+        <div className="flex justify-between items-center max-w-container mx-auto px-5 md:px-16 h-28">
 
-          <Link to="/" className="flex items-center hover:scale-105 transition-transform duration-300 group flex-shrink-0">
-            <PlantLogo />
-            <span className="font-caslon text-3xl font-bold text-[#436F4D] tracking-tight">
-              {t('brand')}
-            </span>
+          <Link to="/" className="flex items-center flex-shrink-0 group" aria-label="Nabta Home">
+            <img
+              src="/images/nabta-logo.png"
+              alt="Nabta"
+              className="h-24 w-auto object-contain
+                transition-all duration-500 ease-in-out
+                group-hover:scale-110
+                group-hover:drop-shadow-[0_4px_12px_rgba(67,111,77,0.45)]
+                group-hover:brightness-110"
+            />
           </Link>
 
           {/* Mobile: lang toggle + hamburger */}

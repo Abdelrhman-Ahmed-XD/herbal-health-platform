@@ -2,11 +2,11 @@ import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext.jsx';
 
 const CATEGORY_META = {
-  immunity:       { icon: 'shield',      image: 'https://images.unsplash.com/photo-1597848212624-a19eb35e2651?w=600&q=80', chips: ['Medicinal','Adaptogen'],  nameKey: 'cat_immunity_name',    taglineKey: 'cat_immunity_tagline' },
-  digestive:      { icon: 'nutrition',   image: 'https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=600&q=80', chips: ['Digestive','Culinary'],   nameKey: 'cat_digestive_name',   taglineKey: 'cat_digestive_tagline' },
-  respiratory:    { icon: 'air',         image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80', chips: ['Nervines','Adaptogens'], nameKey: 'cat_respiratory_name', taglineKey: 'cat_respiratory_tagline' },
-  'womens-health':{ icon: 'favorite',    image: 'https://images.unsplash.com/photo-1543362906-acfc16c67564?w=600&q=80', chips: ['Adaptogens','Nervines'], nameKey: 'cat_womens_name',      taglineKey: 'cat_womens_tagline' },
-  uti:            { icon: 'water_drop',  image: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80', chips: ['Diuretic','Antiseptic'], nameKey: 'cat_uti_name',         taglineKey: 'cat_uti_tagline' },
+  immunity:        { icon: 'shield',      image: '/images/categories/cat-immunity.jpeg',   cover: false, chips: ['Medicinal','Adaptogen'],  nameKey: 'cat_immunity_name',    taglineKey: 'cat_immunity_tagline' },
+  digestive:       { icon: 'nutrition',   image: '/images/categories/cat-digestive.jpeg',  cover: false, chips: ['Digestive','Culinary'],   nameKey: 'cat_digestive_name',   taglineKey: 'cat_digestive_tagline' },
+  respiratory:     { icon: 'air',         image: '/images/categories/cat-respiratory.jpeg',cover: false, chips: ['Nervines','Adaptogens'],  nameKey: 'cat_respiratory_name', taglineKey: 'cat_respiratory_tagline' },
+  'womens-health': { icon: 'favorite',    image: '/images/categories/cat-womens.jpeg',     cover: true,  chips: ['Adaptogens','Nervines'],  nameKey: 'cat_womens_name',      taglineKey: 'cat_womens_tagline' },
+  uti:             { icon: 'water_drop',  image: '/images/categories/cat-urinary.jpeg',    cover: false, chips: ['Diuretic','Antiseptic'],  nameKey: 'cat_uti_name',         taglineKey: 'cat_uti_tagline' },
 };
 const CAT_IDS = ['womens-health','digestive','respiratory','immunity','uti'];
 
@@ -31,11 +31,11 @@ export default function CategoriesPage() {
                 style={{ animationDelay: `${i * 120}ms` }}
               >
                 <div className="flex flex-col rounded-xl overflow-hidden border border-surface-container-high shadow-botanical hover:shadow-botanical-lg transition-all duration-300 hover:-translate-y-1 h-full">
-                  <div className="h-56 bg-surface-container overflow-hidden">
+                  <div className="h-56 bg-surface-container overflow-hidden flex items-center justify-center">
                     <img
                       src={meta.image}
                       alt={t(meta.nameKey)}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      className={`w-full h-full ${meta.cover ? 'object-cover' : 'object-contain'} group-hover:scale-105 transition-transform duration-500`}
                       loading="lazy"
                     />
                   </div>

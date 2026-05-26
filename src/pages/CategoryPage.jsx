@@ -52,9 +52,9 @@ export default function CategoryPage() {
           {(category.subcategories ?? []).map((sub, i) => (
             <Link key={sub.id} to={`/category/${category.id}/${sub.id}`} className="block group animate-slide-up" style={{ animationDelay: `${i * 100}ms` }}>
               <div className="card-botanical shadow-botanical hover:shadow-botanical-lg">
-                <div className="relative h-52 overflow-hidden bg-surface-container">
+                <div className="relative h-52 overflow-hidden bg-surface-container flex items-center justify-center">
                   <img src={sub.image} alt={t(SUB_NAME_KEY[sub.id]) ?? sub.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    className={`w-full h-full ${sub.id === 'hair-care' ? 'object-cover' : 'object-contain'} group-hover:scale-105 transition-transform duration-500`}
                     loading="lazy" />
                 </div>
                 <div className="p-5">

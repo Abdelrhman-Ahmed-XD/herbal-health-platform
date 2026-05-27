@@ -230,9 +230,10 @@ function TypingDots() {
 }
 
 // ── Single message bubble ────────────────────────────────────────────────
-function MessageBubble({ msg, loading }) {
+function MessageBubble({ msg, loading, isAr }) {
   const isUser = msg.role === 'user';
-  const msgIsRtl = containsArabic(msg.content);
+  // Direction follows app language setting; only override if user personally types Arabic in English mode
+  const msgIsRtl = isAr || (isUser && containsArabic(msg.content));
   const isEmpty = msg.content === '';
 
   return (
@@ -384,7 +385,7 @@ export default function AIChat() {
             {/* Messages */}
             <div className="flex-1 overflow-y-auto px-4 py-4">
               {(messages ?? []).map(msg => (
-                <MessageBubble key={msg.id} msg={msg} loading={loading} />
+                <MessageBubble key={msg.id} msg={msg} loading={loading} isAr={isAr} />
               ))}
               <div ref={bottomRef} />
             </div>

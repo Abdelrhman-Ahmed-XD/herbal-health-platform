@@ -125,7 +125,7 @@ export default function PlantDetailPage() {
             </p>
           </div>
           <div className="rounded-2xl overflow-hidden h-72 md:h-96 bg-surface-container shadow-botanical-lg">
-            <img src={plant.image} alt={name} className="w-full h-full object-cover plant-hero-img" loading="eager" />
+            <img src={plant.image} alt={name} className={`w-full h-full ${plant.imageFit === 'contain' ? 'object-contain p-6' : 'object-cover plant-hero-img'}`} loading="eager" />
           </div>
         </div>
       </section>

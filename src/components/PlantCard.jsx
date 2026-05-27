@@ -17,7 +17,7 @@ export default function PlantCard({ plant }) {
           <img
             src={plant.image}
             alt={displayName}
-            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            className={`w-full h-full ${plant.imageFit === 'contain' ? 'object-contain p-3' : 'object-cover group-hover:scale-105'} transition-transform duration-500`}
             loading="lazy"
           />
           <div className={`absolute top-3 ${isAr ? 'right-3' : 'left-3'} flex flex-wrap gap-1.5`}>

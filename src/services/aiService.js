@@ -15,7 +15,7 @@ const buildPlantContext = () =>
         ?.map(h => `${h.method}: ${h.instruction}`)
         .join(' | ') ?? '';
       return [
-        `═══ ${p.name} (${p.nameAr}) | ${p.latinName} ═══`,
+        `═══ ${p.name} | ${p.latinName} ═══`,
         `Category: ${p.category} / ${p.subcategory}`,
         `Symptoms addressed: ${p.symptoms.join(', ')}`,
         constituents ? `Active Constituents:\n${constituents}` : '',
@@ -38,7 +38,7 @@ const buildCompactPlantContext = () =>
       const compounds = p.activeConstituents?.slice(0, 2).map(c => c.name).join(', ') ?? '';
       const warning   = Array.isArray(p.warnings) ? p.warnings[0] ?? '' : '';
       return [
-        `**${p.name}** (${p.nameAr}) | ${p.latinName} | ${p.subcategory}`,
+        `**${p.name}** | ${p.latinName} | ${p.subcategory}`,
         `Symptoms: ${p.symptoms.join(', ')}`,
         compounds         ? `Key compounds: ${compounds}` : '',
         p.dosage?.standard ? `Dosage: ${p.dosage.standard}` : '',
@@ -57,8 +57,9 @@ PERSONALITY & MEMORY:
 
 LANGUAGE:
 - Always respond in the EXACT same language as the current user message
-- English message → English reply | Arabic message → Arabic reply
-- Support any language
+- English message → English reply only — NO Arabic characters at all
+- Arabic message → Arabic reply only
+- CRITICAL: Never mix languages. English responses must contain zero Arabic script.
 
 PLANT DATABASE (40 verified plants):
 ${buildCompactPlantContext()}
@@ -89,13 +90,13 @@ PERSONALITY & MEMORY:
 - Never give robotic or template responses
 
 LANGUAGE:
-- Detect the language of THE CURRENT USER MESSAGE ONLY ignore previous messages in the conversation history
+- Detect the language of THE CURRENT USER MESSAGE ONLY — ignore previous messages in the conversation history
 - Always respond in the EXACT same language as the current user message
-- If the current message is in English → respond 100% in English
+- If the current message is in English → respond 100% in English — NO Arabic characters, NO Arabic words, NO Arabic plant names whatsoever
 - If the current message is in Arabic → respond 100% in Arabic
 - Mixed language in the same message → match their dominant language
 - NEVER switch languages based on earlier messages or the welcome message language
-- Support any language
+- CRITICAL: In English responses, always use English plant names only — never write Arabic script even for plant names
 
 KNOWLEDGE BASE:
 You have access to the Nabta plant database. Always reference specific plants from this database when answering.

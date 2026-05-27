@@ -2006,7 +2006,7 @@ export const PLANTS = {
     ],
     symptoms: ['Cold symptoms', 'Flu', 'Recurrent infections', 'Reduced immunity', 'Minor wounds'],
     warnings: [
-      'Echinacea has NO direct bactericidal effect: it trains immune cells to be faster and more aggressive; useless if taken after infection has fully subsided.',
+      'Echinacea has Minimal direct bactericidal effect: it trains immune cells to be faster and more aggressive; useless if taken after infection has fully subsided.',
       'STRICTLY CONTRAINDICATED in autoimmune diseases (MS, SLE, RA): stimulates immune attack on body\'s own tissues.',
       'ABSOLUTELY PROHIBITED for organ transplant patients: directly antagonizes essential immunosuppressant therapies.',
       'Maximum acute use: 10 consecutive days; maximum prophylactic cycle: 8 weeks (mandatory 3-week rest after).',
@@ -2028,7 +2028,7 @@ export const PLANTS = {
     category: 'immunity',
     subcategory: 'immune-boosting',
     tags: ['Immunomodulator', 'Anti-inflammatory', 'Bronchodilator', 'Antidiabetic', 'Adaptogen'],
-    image: '/images/Picture60.png',
+    image: '/images/black-seed-main.jpg',
     shortDescription: 'Revered in prophetic medicine as a cure for "everything except death": Thymoquinone provides advanced immunomodulation, 5-LOX inhibition, mast cell stabilization, and powerful anti-inflammatory and antidiabetic actions.',
     description: 'Black seed\'s primary crystalline phenol is Thymoquinone (TQ), which acts as a direct 5-LOX enzyme inhibitor stopping leukotriene production, significantly accelerates Natural Killer (NK) cell cytotoxic capacity, and boosts macrophage phagocytic activity. The nigellone fraction provides potent anti-histaminic and bronchodilator action. CRITICAL PREPARATION: Whole seeds must be crushed or ground IMMEDIATELY before use: pre-ground seeds or continuous boiling causes complete evaporation of volatile TQ, stripping all medicinal value. Must be taken WITH FOOD to enhance lipophilic absorption.',
     history: 'Found in Tutankhamun\'s tomb, black seed has been used for over 3,000 years in Islamic, Ayurvedic, and Chinese traditional medicine. It holds a special place in Islamic medicine where the Prophet Muhammad (PBUH) is reported to have said it is a cure for "everything except death." Modern research has validated many of these properties through rigorous clinical trials.',
@@ -2045,11 +2045,10 @@ export const PLANTS = {
     moa: [
       { title: 'Advanced Immunomodulation', detail: 'Significantly accelerates the cytotoxic destructive capacity of Natural Killer (NK) cells and markedly boosts the baseline phagocytic capacity of tissue macrophages.' },
       { title: 'Targeted Anti-inflammatory Pathway (5-LOX Inhibition)', detail: 'Functions as a direct 5-LOX (5-Lipoxygenase) enzyme inhibitor, stopping the production of pro-inflammatory leukotrienes that drive acute allergic and asthmatic bronchospasms.' },
-      { title: 'Bronchodilation & Mast Cell Stabilization', detail: 'The nigellone fraction provides powerful anti-histaminic action, protecting bronchial tissue from histamine-induced spasms and relaxing hyperreactive airways.' },
+
     ],
     uses: [
       'Systemic immune and antioxidant support: upregulation of cellular defense lines',
-      'Pulmonary management: significant clinical relief of chronic asthma symptoms, hyperreactive airway disease, and upper respiratory tract congestion',
       'Cardiovascular and lipid control: clinical management of dyslipidemia (balancing LDL/HDL ratios) and mild vascular smooth muscle relaxation for hypertension',
       'Endocrine regulation: excellent adjuvant therapy for blood glucose control in Type 2 Diabetes Mellitus',
     ],
@@ -2068,11 +2067,9 @@ export const PLANTS = {
       standard: 'Start with lowest dose first week (titration). General immune support: ~500 mg seeds/day or 2.5 mL oil/day. Always take WITH FOOD.',
       forms: [
         { form: 'Powdered Seeds: General Immune Support', dose: '~500 mg daily.' },
-        { form: 'Powdered Seeds: Asthma Protocol', dose: '500 mg to 1.0 g twice daily.' },
         { form: 'Powdered Seeds: Type 2 Diabetes', dose: '2.0-3.0 g daily for continuous 3-month cycle.' },
         { form: 'Powdered Seeds: Hypertension Support', dose: '200-400 mg daily.' },
         { form: 'Cold-Pressed Oil: General Immune Maintenance', dose: '2.5 mL daily.' },
-        { form: 'Cold-Pressed Oil: Acute Asthma', dose: '5.0 mL up to 3 times daily.' },
         { form: 'Cold-Pressed Oil: Type 2 Diabetes', dose: '5.0 mL once daily, or 2.5 mL twice daily.' },
         { form: 'Cold-Pressed Oil: Hypertension', dose: '2.5 mL twice daily.' },
       ],
@@ -2111,14 +2108,13 @@ export const PLANTS = {
       ],
     },
     marketedProducts: [
-      { name: 'Baraka 450mg Black Seed Oil Capsules (Pharco)', image: null },
+      { name: 'Baraka 450mg Black Seed Oil Capsules (Pharco)', image: '/images/Baraka-Black-Seed-Capsules.jpg' },
       { name: 'Imtenan Cold-Pressed Black Seed Oil', image: '/images/Picture61.png' },
-      { name: "El-Captain Habbat al-Barakah Oil", image: null },
+      { name: "El-Captain Habbat al-Barakah Oil", image: '/images/El-Captain-Black-Seed-Oil.jpg' },
       { name: 'Shana Black Seed Oil', image: '/images/Picture62.png' },
     ],
     benefits: [
       { icon: 'shield', title: 'NK Cell Activation', desc: 'Significantly accelerates cytotoxic destructive capacity of Natural Killer cells and boosts macrophage phagocytic activity for comprehensive immune defense.' },
-      { icon: 'air', title: 'Asthma & Airway Management', desc: '5-LOX inhibition halts leukotriene synthesis; nigellone provides anti-histaminic bronchodilation and mast cell stabilization.' },
       { icon: 'bloodtype', title: 'Metabolic Support', desc: 'Clinical evidence for adjuvant management of Type 2 Diabetes, dyslipidemia (LDL/HDL balance), and mild hypertension.' },
       { icon: 'spa', title: 'Anti-inflammatory', desc: 'Broad anti-inflammatory profile via 5-LOX inhibition reduces inflammatory mediators across multiple organ systems.' },
     ],
@@ -2135,7 +2131,6 @@ export const PLANTS = {
     ],
     symptoms: ['Reduced immunity', 'Asthma', 'Allergy', 'High blood sugar', 'High cholesterol', 'Hypertension'],
     warnings: [
-      'Black seed oil is NOT an acute rescue therapy for bronchospasm attacks: it is a preventative and adjuvant treatment; does NOT replace fast-acting bronchodilators.',
       'STRICTLY CONTRAINDICATED in pregnancy: stimulates uterine contractions.',
       'CRITICAL: Seeds MUST be crushed immediately before use and taken with food: volatile TQ evaporates rapidly from pre-ground seeds.',
       'Discontinue 2 weeks before any major surgery.',

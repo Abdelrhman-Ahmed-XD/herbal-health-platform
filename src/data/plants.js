@@ -4106,7 +4106,7 @@ export const PLANTS = {
     symptoms: ['Recurrent UTIs', 'Urinary tract prevention', 'Urinary health', 'Antioxidant support'],
     warnings: [
       'Prophylactic only: does not treat active, established UTIs. Seek antibiotics for confirmed UTI.',
-      'Warfarin interaction: cranberry significantly elevates INR: avoid combination or monitor closely.',
+      'Warfarin interaction: cranberry may increase INR and bleeding risk : avoid combination or monitor closely.',
       'High doses may increase kidney stone risk in oxalate-sensitive individuals.',
       'Excessive juice (>1 L/day) may cause GI upset and diarrhea.',
     ],
@@ -4116,8 +4116,7 @@ export const PLANTS = {
       { name: 'Benzoic Acid, Vitamin C', detail: 'Urinary acidification (benzoic acid → hippuric acid) and antioxidant immune support.' },
     ],
     moa: [
-      { title: 'Bacterial Anti-adhesion (PAC-mediated)', detail: 'A-type PACs structurally prevent P-fimbriated E. coli type 1 fimbriae from attaching to uroepithelial mannose receptors: bacteria cannot initiate UTI without mucosal adhesion.' },
-      { title: 'Urinary Acidification', detail: 'Benzoic acid is metabolized to hippuric acid and excreted in urine, lowering urinary pH and creating an inhospitable environment for bacterial growth.' },
+      { title: 'Bacterial Anti-adhesion (PAC-mediated)', detail: 'A-type PACs structurally prevent P-fimbriated E. coli from attaching to uroepithelial receptors, thereby inhibiting bacterial adhesion and reducing UTI risk' },
       { title: 'Antioxidant & Anti-inflammatory Support', detail: 'Polyphenols reduce oxidative stress in the urinary epithelium and suppress pro-inflammatory cytokines.' },
     ],
     uses: [
@@ -4160,7 +4159,7 @@ export const PLANTS = {
     ],
     storage: {
       forms: [
-        { form: 'Standardized PAC Capsules / Juice', storage: 'Capsules: cool, dry, dark place below 25°C. Juice: refrigerate after opening; consume within 7–10 days.' },
+        { form: 'Store in a cool, dry place away from direct sunlight. Refrigerate juice after opening', storage: 'Capsules: cool, dry, dark place below 25°C. Juice: refrigerate after opening; consume within 7–10 days.' },
       ],
     },
     marketedProducts: [
@@ -4178,7 +4177,7 @@ export const PLANTS = {
       history: 'Used by Native Americans for UTI symptoms and as a food. Became widely studied in the 1980s–1990s when anti-adhesion mechanism was elucidated. EMA and several national guidelines support its prophylactic use for recurrent UTIs.',
     },
     preparation: [
-      { method: 'Daily UTI Prevention Capsule', desc: 'Take one standardized cranberry capsule (36 mg PAC) with a full glass of water each morning. Continue daily for minimum 3 months to achieve prophylactic effect.', bestFor: 'Recurrent UTI prevention, pregnancy urinary health' },
+      { method: 'Daily UTI Prevention Capsule', desc: 'Take one standardized cranberry capsule (36 mg PAC) with a full glass of water each morning. May be used for recurrent UTI prevention.', bestFor: 'Recurrent UTI prevention, pregnancy urinary health' },
     ],
     relatedPlants: ['dandelion', 'parsley', 'garlic'],
     references: [

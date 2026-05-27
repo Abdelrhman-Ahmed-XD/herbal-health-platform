@@ -312,6 +312,9 @@ export default function PlantDetailPage() {
                     <span className="material-symbols-outlined text-orange-600">emergency</span>
                     <h2 className="font-caslon text-headline-sm text-orange-800">{t('plant_overdose')}</h2>
                   </div>
+                  {overdose.intro && (
+                    <p className={`font-manrope text-sm text-orange-700 mb-4 italic ${isAr ? 'text-right' : ''}`}>{overdose.intro}</p>
+                  )}
                   {overdose.symptoms?.length > 0 && (
                     <div className="mb-4">
                       <h4 className={`font-manrope font-semibold text-sm text-orange-700 mb-2 uppercase tracking-wide ${isAr ? 'text-right' : ''}`}>{t('plant_overdose_symptoms')}</h4>

@@ -1072,111 +1072,129 @@ export const PLANTS = {
   // WOMEN'S HEALTH › MENSTRUAL HEALTH
   // ══════════════════════════════════════════════════════════════════════
 
-  'ginger': {
-    id: 'ginger',
+  'ginger-menstrual': {
+    id: 'ginger-menstrual',
     name: 'Ginger',
     nameAr: 'الزنجبيل',
     latinName: 'Zingiber officinale',
     commonNames: ['Ginger'],
     category: 'womens-health',
     subcategory: 'menstrual-health',
-    tags: ['Anti-emetic', 'Pregnancy', 'Anti-inflammatory', 'Antioxidant', 'Antiemetic'],
+    tags: ['Analgesic', 'Anti-emetic', 'Anti-inflammatory', 'Dysmenorrhea', 'Menstrual Health'],
     image: '/images/Picture29.jpg',
-    shortDescription: 'A safe, effective, and evidence-based non-pharmacological treatment for managing mild to moderate nausea and vomiting in pregnancy (morning sickness), with potent anti-inflammatory, antioxidant, and antiemetic properties.',
-    description: 'Pharmacological uses in pregnancy:\nGinger is primarily used in pregnancy as a safe, effective, and evidence-based non-pharmacological treatment for managing mild to moderate nausea and vomiting (morning sickness)\n\nOther uses:\nfresh ginger has the ability to balance the body\'s external conditions and promote sweating. fresh ginger may help relieve symptoms associated with common colds, such as congestion, headache, and nausea.\n fresh ginger possesses the ability to alleviate symptoms such as headache, nasal congestion, cough, and nausea that are induced by colds and febrile disorders.\n Ginger provides potent anti-inflammatory, antioxidant, antiemetic, and potential anticancer properties. It is widely used to treat nausea (pregnancy, chemotherapy, surgery), digestive issues (bloating, indigestion), arthritis pain, and metabolic issues like high blood sugar',
+    shortDescription: 'A biochemical analgesic whose Gingerols and Shogaols act as dual COX/LOX inhibitors — clinically proven to rival Ibuprofen (400 mg) and Mefenamic Acid (Ponstan 250 mg) for Primary Dysmenorrhea relief, while peripheral 5-HT3 antagonism provides potent anti-emetic effects.',
+    description: 'The therapeutic efficacy of the ginger rhizome is driven by its active secondary metabolites. Gingerols are abundant in fresh ginger and primarily responsible for anti-emetic effects, while possessing baseline analgesic and anti-inflammatory activities. Shogaols are formed via drying or heating and are 3 times more potent than gingerols in inhibiting inflammatory markers, while working synergistically to enhance anti-emetic efficacy. Volatile Oils such as Zingiberene are responsible for the characteristic aromatic scent.',
     isDemo: false,
     activeConstituents: [
-      { name: 'Gingerols-Shogaols', percentage: '', effect: 'Main pungent principle responsible for the therapeutic benefits' },
+      { name: 'Gingerols', percentage: '', effect: 'Abundant in fresh ginger; primarily responsible for anti-emetic effects, while possessing baseline analgesic and anti-inflammatory activities.' },
+      { name: 'Shogaols', percentage: '', effect: 'Formed via drying or heating; 3 times more potent than gingerols in inhibiting inflammatory markers, while working synergistically to enhance anti-emetic efficacy.' },
+      { name: 'Volatile Oils (e.g., Zingiberene)', percentage: '', effect: 'Responsible for the characteristic aromatic scent.' },
     ],
     moa: [
-      { title: 'Gastrointestinal Stimulation', detail: 'Ginger increases gastric tone and peristalsis (motion). By speeding up gastric emptying, it reduces the amount of time food sits in the stomach, thus reducing nausea.' },
-      { title: 'Serotonin (5-HT3) Receptor Antagonism', detail: 'Ginger compounds (gingerols and shogaols) act as competitive antagonists at peripheral and central serotonin (5-HT3) receptors. Serotonin is a key neurotransmitter that causes vomiting when released in response to nausea, and blocking it reduces this sensation.' },
-      { title: 'Direct Action on the Gut', detail: 'Ginger is thought to exert much of its antiemetic effect locally within the gastrointestinal tract.' },
-      { title: 'Anti-inflammatory and Carminative Effects', detail: 'Ginger provides relief from dyspepsia (upset stomach) and helps with motility issues.' },
+      { title: 'For Pain Relief (Analgesic)', detail: 'Acts as a dual inhibitor of the Cyclooxygenase (COX-1 & COX-2) and Lipoxygenase (5-LOX) enzymes. This reduces the production of Prostaglandins and Leukotrienes, the primary chemical mediators of pain and severe uterine contractions.' },
+      { title: 'For Nausea (Anti-emetic)', detail: 'Functions primarily via localized peripheral mechanisms within the gastrointestinal tract. The active lipophilic constituents (specifically 6-gingerol and 6-shogaol) exhibit competitive antagonism at peripheral Serotonin (5-HT3) and muscarinic receptors. This action effectively suppresses vagal afferent stimulation, modulates gastric dysrhythmia, and accelerates gastric emptying, thereby neutralizing peripheral emetic signaling without exerting central nervous system depression.' },
     ],
     uses: [
-      'Pharmacological use in pregnancy: safe, effective, evidence-based non-pharmacological treatment for managing mild to moderate nausea and vomiting (morning sickness)',
-      'Fresh ginger balances the body\'s external conditions and promotes sweating; helps relieve symptoms associated with common colds, such as congestion, headache, and nausea',
-      'Fresh ginger alleviates symptoms such as headache, nasal congestion, cough, and nausea that are induced by colds and febrile disorders',
-      'Potent anti-inflammatory, antioxidant, antiemetic, and potential anticancer properties; widely used to treat nausea (pregnancy, chemotherapy, surgery), digestive issues (bloating, indigestion), arthritis pain, and metabolic issues like high blood sugar',
+      'Primary Dysmenorrhea: Relief of Menstrual Pain and Cramping. Clinical studies confirm that its efficacy in pain relief is comparable to Ibuprofen (400 mg) and Mefenamic Acid (Ponstan 250 mg).',
+      'Nausea & Vomiting: Morning sickness in pregnancy, motion sickness, and post-operative nausea.',
+      'Anti-inflammatory: Joint pain (Arthritis) and muscle soreness for athletes.',
     ],
     howToUse: [
-      { method: 'Fresh Ginger Tea', instruction: 'Steep 1–2 teaspoons of grated or sliced fresh ginger root in hot water for 5–10 minutes.' },
-      { method: 'Ginger Capsules', instruction: 'Look for supplements containing 250 mg of ginger powder, often taken 2–4 times daily, ensuring they are approved by a healthcare professional.' },
+      { method: 'Aqueous Infusion', instruction: 'Infuse the ginger in hot water (covered) for 10 minutes. It is highly recommended to consume the remaining sediment; it is a rich source of Shogaols and essential oils trapped within the plant fibers. Consume with food to minimize irritation to the gastric mucosa.' },
     ],
     suitableAgeGroups: [
-      { group: 'Children (Under 2 years)', notes: 'Use of medicinal amounts is generally not recommended.' },
-      { group: 'Children (2 years and older)', notes: 'Small amounts, such as small quantities of fresh ginger in food, can be used for nausea or cold symptoms.' },
-      { group: 'Adults (18+ years)', notes: 'Moderation is advised, as very high amounts may not be appropriate.' },
-      { group: 'Pregnancy', notes: 'Medicinal, standardized low doses (up to 1 g/day) are clinically effective and safe, rather than just restricting it to "culinary amounts," provided it is monitored.' },
+      { group: 'Females (Adolescents & Adults)', notes: 'For dysmenorrhea management.' },
+      { group: 'Travelers, Athletes, and Elderly', notes: 'For motion sickness and inflammatory joint/muscle pain.' },
+      { group: 'Pediatrics', notes: 'Not recommended for children under 6 years of age.' },
+      { group: 'Pregnancy', notes: 'First-line non-pharmacological therapy for Pregnancy-Induced Nausea and Vomiting (NVP), provided the daily dose does not exceed 1.0 g of dry powder equivalent per day. The abortifacient reputation applies only to pure, concentrated essential oils or toxic megadoses (>5.0 g/day).' },
+      { group: 'Lactation', notes: 'Safety during lactation has not been established. In the absence of sufficient data, the use during lactation is not recommended.' },
     ],
     dosage: {
-     
+      standard: 'Timeline: Start consumption 2 days prior to the expected period and continue through the first 3 days of menstruation. Note: 1 gram of powdered ginger is bio-equivalent to approximately 4 grams of fresh ginger.',
       forms: [
-        { form: 'Pregnancy', dose: '250 mg orally, 4 times daily. Total maximum dose: 1 g daily. Total maximum dose: 1 g daily. Higher doses during pregnancy should be used cautiously due to limited safety data.' },
+        { form: 'Powdered Ginger (Dried Extract)', dose: '250 mg to 500 mg per single dose (approx. 1/4 flat teaspoon), taken 3 to 4 times daily. Do not exceed a daily limit of 4 grams per day.' },
+        { form: 'Fresh Ginger (Rhizome)', dose: '2 to 3 grams per single dose (approx. 1 level teaspoon of finely grated ginger), taken 3 to 4 times daily. Do not exceed a daily limit of 15 to 20 grams per day.' },
       ],
     },
     overdose: {
-      intro: 'There is no strict legal definition for a "toxic" dose of ginger, but high daily amounts are generally considered excessive and may lead to adverse side effects.',
+      intro: 'Acute Overdose Thresholds: Powdered Ginger: Consumption of more than 5 grams per day. Fresh Ginger: Consumption of more than 20–25 grams per day.',
       symptoms: [
-        'Bleeding Risks: Because ginger has anti-platelet properties, excessive intake can increase the risk of bleeding or bruising, which is specifically dangerous close to labor.',
-        'Gastrointestinal Distress: Severe heartburn, acid reflux, bloating, and diarrhea.',
-        'Mouth and Throat Irritation: A burning sensation or soreness in the mouth.',
-        'Heart Irregularities: High doses may rarely affect heart rhythm at excessive doses.',
-        'Central Nervous System Depression: Very high doses can potentially cause lethargy or fatigue.',
+        'Severe gastrointestinal irritation or "heartburn".',
+        'Increased risk of bleeding (due to potent inhibition of thromboxane).',
+        'Hypotension and central nervous system depression (in extreme cases).',
+        'Severe oral mucosal irritation.',
       ],
       management: [
-        'Immediately stop consuming it.',
-        'Stay hydrated to flush the system.',
-        'Symptomatic Management: Administer antacids or Proton Pump Inhibitors (PPIs) for severe gastric irritation.',
-        'Seek medical attention if experiencing severe symptoms like heart palpitations, breathing issues, or excessive bleeding.',
-        'There is no antidote; management is supportive.',
+        'Immediate cessation of ginger intake.',
+        'Administration of oral antacids or cold milk to soothe the esophageal and gastric lining.',
+        'Monitoring for any signs of prolonged bleeding time.',
       ],
     },
     sideEffects: [
-      'Uterine Stimulation: High doses can theoretically stimulate uterine contractions, increasing risks of premature labor in late pregnancy.',
-      'Gastrointestinal Distress: Heartburn, acid reflux, diarrhea, and bloating are the most common side effects particularly when consumed in large amounts.',
-      'Mouth/Throat Irritation: A burning sensation in the mouth or throat may occur.',
-      'Contact Dermatitis: Topical application of ginger essential oils may provoke erythema, skin irritation, or allergic rashes.',
-      'Anti-platelet Activity: Inhibition of platelet aggregation, predisposing the patient to bleeding.',
+      'Heartburn and spicy-tasting eructation (burping).',
     ],
     contraindications: [
-      'Late Pregnancy / Near Labor: Use near labor should be approached cautiously due to ginger\'s mild antiplatelet activity.',
-      'Bleeding Disorders: Ginger has anticoagulant (blood-thinning) effects, making it unsafe for women with bleeding disorders or those taking blood-thinning medication (e.g., warfarin).',
-      'High-Risk Pregnancies: Contraindicated in pregnant women with a documented clinical history of recurrent spontaneous abortions, or unexplained vaginal bleeding.',
+      'Patients with gallstones.',
+      'Patients on high-dose anticoagulant therapy (blood thinners).',
+      'Major pre-operative states (must be discontinued 14 days prior to major surgery).',
+      'Use with caution when suffering from peptic ulcer.',
     ],
     drugInteractions: [
-      'Anticoagulants / Antiplatelet Drugs (e.g., Warfarin, Aspirin, Clopidogrel, Enoxaparin): Synergistic interaction. Ginger enhances the risk of bleeding by inhibiting platelet thromboxane synthesis.',
-      'Antidiabetic Agents (e.g., Insulin, Metformin, Sulfonylureas): Additive pharmacodynamic interaction. High doses of ginger enhance glucose uptake in insulin-responsive tissues, increasing the risk of hypoglycemia.',
-      'Antihypertensive Drugs / Calcium Channel Blockers (e.g., Amlodipine, Nifedipine): Ginger exhibits natural voltage-dependent calcium channel blocking activity. Concomitant use may potentiate hypotensive and negative inotropic responses.',
+      'Anticoagulants / Blood Thinners (e.g., Warfarin): Ginger may increase plasma partial prothrombin time and may increase prothrombin time in clients taking warfarin concurrently.',
     ],
     storage: {
       forms: [
-        { form: 'Room Temperature', instructions: 'Raw rhizomes can be stored for 1–2 weeks in a cool, dry, and well-ventilated area away from direct sunlight.' },
-        { form: 'In the Refrigerator (4°C)', instructions: '1–2 Months.' },
-        { form: 'In the Freezer (−18°C)', instructions: 'Up to 6 Months.' },
+        { form: 'General Storage', instructions: 'Store in airtight, opaque glass containers away from moisture and direct light to maintain the stability of active compounds.' },
       ],
     },
+    factsAndMyths: [
+      {
+        myth: '"Ginger kills the influenza virus completely and works as an instant biological cure for the common cold."',
+        fact: 'Ginger does not eradicate or cure respiratory viral pathogens in vivo; instead, it acts as an exceptional supportive, evidence-based phytotherapy that significantly mitigates symptom severity, suppresses inflammatory cascades, and improves patient respiratory comfort. Additionally: Ginger is not just a "warm drink"; it is a biochemical analgesic that rivals Ibuprofen in potency when the correct dosage is followed. Note: Sweetening ginger with sugar is a "functional antagonism" that sensitizes your pain receptors and cancels out the plant\'s therapeutic benefits.',
+      },
+    ],
     marketedProducts: [
-      { name: 'Ginger 400 mg by Mepaco', image: '/images/Ginger-400mg-Mepaco.jpg' },
-      { name: 'Imtenan Organic Ginger Powder', image: '/images/Imtenan-Organic-Ginger-Powder.jpg' },
+      { name: 'Ginger Capsules 400mg (Mepaco Pharaonia)', image: '/images/Ginger-400mg-Mepaco.jpg' },
+      { name: 'Emetal Drops / Capsules (Pharco Pharmaceuticals)', image: null },
+      { name: 'Rani Ginger Effervescent Granules', image: null },
+      { name: 'Strepsils Ginger & Lemon Lozenges (also available as Strepsils Warm Ginger)', image: null },
+      { name: 'Isis Ginger Tea (100% Natural ginger filter bags)', image: null },
+      { name: 'Royal Ginger Tea (Natural and pure ginger filter bags)', image: null },
+    ],
+    benefits: [
+      { icon: 'spa', title: 'Dysmenorrhea Relief', desc: 'Dual COX/LOX inhibition reduces prostaglandins and leukotrienes: efficacy clinically comparable to Ibuprofen (400 mg) and Mefenamic Acid (Ponstan 250 mg) for menstrual pain.' },
+      { icon: 'favorite', title: 'Anti-emetic Action', desc: 'Peripheral 5-HT3 and muscarinic receptor antagonism suppresses vagal afferent stimulation and accelerates gastric emptying without central nervous system depression.' },
+      { icon: 'fitness_center', title: 'Anti-inflammatory', desc: 'Effective for joint pain (Arthritis) and muscle soreness in athletes and the elderly through dual enzyme inhibition.' },
     ],
     botanicalFacts: {
       family: 'Zingiberaceae',
-      scientificEvidence: 'Extensive randomized controlled trials (RCTs) confirm that ginger is a highly effective, safe, non-pharmacological intervention for NVP. Systematic reviews indicate its efficacy is statistically comparable to Pyridoxine (Vitamin B6) and significantly superior to placebos in mitigating the severity of nausea scores, without showing any statistical increase in adverse pregnancy outcomes or teratogenicity.',
+      nativeRegion: 'Southeast Asia; cultivated throughout tropical regions worldwide',
+      growthHabit: 'Herbaceous perennial growing from aromatic rhizomes; the rhizome is the medicinal part',
+      activeCompounds: 'Gingerols (fresh), shogaols (dried/heated, 3× potency), zingiberene (volatile oil)',
     },
-    symptoms: ['Nausea', 'Vomiting', 'Morning sickness', 'Bloating', 'Indigestion', 'Arthritis pain', 'Congestion', 'Headache'],
-    relatedPlants: ['dill-seed', 'cinnamon', 'fennel', 'lemon'],
+    preparation: [
+      { method: 'Aqueous Infusion (Covered)', desc: 'Infuse fresh or dried ginger in hot water in a covered vessel for 10 minutes. Consume the sediment for maximum shogaol content.', bestFor: 'Dysmenorrhea, nausea, motion sickness' },
+      { method: 'Powdered Capsules', desc: '250–500 mg per dose, 3–4 times daily; start 2 days before period onset.', bestFor: 'Standardized dysmenorrhea management' },
+    ],
+    symptoms: ['Menstrual cramps', 'Primary dysmenorrhea', 'Nausea', 'Vomiting', 'Joint pain', 'Muscle soreness', 'Motion sickness'],
+    warnings: [
+      'Patients with gallstones: contraindicated.',
+      'High-dose anticoagulant therapy: contraindicated due to thromboxane inhibition.',
+      'Discontinue 14 days prior to major surgery.',
+      'Use with caution with peptic ulcer.',
+      'Do not exceed 4 g/day powdered or 15–20 g/day fresh ginger.',
+      'During pregnancy: do not exceed 1.0 g dry powder equivalent per day.',
+    ],
+    relatedPlants: ['dill-seed-menstrual', 'cinnamon-menstrual', 'fennel', 'lemon'],
     references: [
-      { text: 'PubMed Central — Ginger in pregnancy.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6616534/' },
-      { text: 'PubMed Central — Ginger safety in pregnancy.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4228518/' },
-      { text: 'PubMed Central — Ginger nausea in pregnancy.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4755634/' },
-      { text: 'ScienceDirect — Ginger in pregnancy outcomes.', url: 'https://www.sciencedirect.com/science/article/pii/S216183132400142X' },
+      { text: 'Duke, J. A., Bogenschutz-Godwin, M. J., duCellier, J., & Duke, P. K. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
+      { text: 'Chevallier, A. (2016). Encyclopedia of Herbal Medicine (3rd ed.). DK Publishing / Penguin Random House.' },
+      { text: 'Egyptian Drug Authority — Zingiber officinale monograph.', url: 'https://edaegypt.gov.eg/media/2kuczzhq/zingiber-officinale-roscoe-%DA%86%D9%86%D8%B2%D9%86%D8%A8%D9%8A%D9%84.pdf' },
     ],
   },
 
-  'dill-seed': {
-    id: 'dill-seed',
+  'dill-seed-menstrual': {
+    id: 'dill-seed-menstrual',
     name: 'Dill Seed',
     nameAr: 'الشبت',
     latinName: 'Anethum graveolens L.',
@@ -1225,14 +1243,14 @@ export const PLANTS = {
       ],
     },
     overdose: {
+      intro: 'Dill seeds possess an exceptionally wide safety margin, and no clinical cases of crude seed poisoning have been reported. Toxicity is only clinically relevant in cases of massive misuse of the pure essential oil (e.g., ingesting volumes exceeding 100 mL).',
       symptoms: [
-        'Dill seeds have an exceptionally wide safety margin. Toxicity is only relevant with massive misuse of pure essential oil (>100 mL).',
-        'Symptoms: Severe localized gastrointestinal distress, renal epithelial irritation, and profound photosensitivity.',
+        'Severe localized gastrointestinal distress, renal epithelial irritation, and profound photosensitivity.',
       ],
       management: [
         'Discontinue intake immediately.',
         'Initiate aggressive oral or intravenous hydration to protect renal function.',
-        'Mandate total UV/sunlight avoidance (stay completely indoors) for a minimum of 24 hours to prevent severe phototoxic skin reactions.',
+        'Mandate total UV/sunlight avoidance (staying completely indoors) for a minimum of 24 hours to prevent severe phototoxic skin reactions.',
       ],
     },
     sideEffects: [
@@ -1241,25 +1259,35 @@ export const PLANTS = {
       'Essential oil overdose: renal irritation, severe photosensitivity',
     ],
     contraindications: [
-      'Hypothyroidism (CRITICAL WARNING): dill may significantly lower circulating thyroid hormone levels; strictly contraindicated in underactive thyroid or those on Levothyroxine therapy',
-      'Acute renal inflammation: essential oil components can cause direct epithelial irritation in kidneys',
-      'Major pre-operative states: discontinue at least 2 weeks before surgery',
-      'PREGNANCY: classified as abortifacient and potent emmenagogue',
+      'Hypothyroidism (CRITICAL WARNING): Dill may significantly lower circulating thyroid hormone levels. It is strictly contraindicated for patients suffering from an underactive thyroid or those currently stabilized on Levothyroxine therapy.',
+      'Acute Renal Inflammation: Essential oil components can cause direct epithelial irritation in the kidneys; avoid therapeutic doses completely in patients with compromised renal health.',
+      'Major Pre-operative States: Discontinue all therapeutic use at least 2 weeks prior to major surgical procedures due to its systemic impact on blood glucose levels and potential interference with general anesthesia protocols.',
+      'Pregnancy: STRICTLY PROHIBITED & CONTRAINDICATED. Classified medically as an Abortifacient and a potent Emmenagogue; it can stimulate severe uterine contractions, risking acute miscarriage or fetal demise.',
     ],
     drugInteractions: [
-      'Antidiabetics & Antihypertensives: may exert additive effects; monitor closely',
-      'Levothyroxine: dill may interfere with thyroid hormone function; critical interaction',
+      'Antidiabetics & Antihypertensives: May exert additive effects; monitor clinical parameters closely.',
+      'Hormonal Conditions: Requires close medical monitoring for individuals with pre-existing endocrine disorders due to potential structural interactions.',
     ],
     storage: {
       forms: [
-        { form: 'Dill Seeds', instructions: 'Store in tightly sealed, airtight glass containers, protected from direct light, moisture, and high heat to maintain absolute chemical stability of the active carvone molecule.' },
+        { form: 'Dill Seeds', instructions: 'Store in tightly sealed, airtight glass containers, protected completely from direct light, moisture, and high heat environments to maintain the absolute chemical stability of the active Carvone molecule.' },
       ],
     },
+    factsAndMyths: [
+      {
+        myth: '"Dill is a completely safe galactagogue for breastfeeding mothers."',
+        fact: 'While traditionally used to increase milk supply, the Egyptian Drug Authority (EDA) advises caution during lactation due to insufficient safety data regarding the infant\'s exposure via breast milk.',
+      },
+      {
+        myth: '"Dill can replace painkillers for menstrual cramps without any monitoring."',
+        fact: 'It is a potent natural alternative, but clinical monitoring is required for those with pre-existing hormonal conditions.',
+      },
+    ],
     marketedProducts: [
-      { name: 'Gripe Water (Pharco Pharmaceuticals: Dill Water for Infant Colic)', image: null },
+      { name: 'Gripe Water Liquid (Pharco Pharmaceuticals / Various Manufacturers — Standardized dill water for infantile colic)', image: null },
       { name: 'Sekem Dill Tea Bags', image: null },
-      { name: 'Imtenan Dill Seeds (Whole Dried)', image: null },
-      { name: 'Spice Way Dill Seed Bag', image: '/images/Picture52.png' },
+      { name: 'Imtenan Dill Seeds (Whole dried seeds for clinical infusion)', image: null },
+      { name: 'Isis Organic Dill Tea', image: null },
     ],
     benefits: [
       { icon: 'spa', title: 'Dysmenorrhea Relief', desc: 'Carvone-driven spasmolytic activity relieves severe uterine cramping: comparable in clinical trials to Mefenamic Acid (Ponstan).' },
@@ -1285,7 +1313,7 @@ export const PLANTS = {
       'DILL LEAVES do NOT have therapeutic spasmolytic effects: SEEDS ONLY are the medicinal part.',
       'Must steep in COVERED vessel to prevent volatile carvone from escaping with steam.',
     ],
-    relatedPlants: ['ginger', 'cinnamon', 'fennel'],
+    relatedPlants: ['ginger-menstrual', 'cinnamon-menstrual', 'fennel'],
     references: [
       { text: 'Duke, J. A., et al. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
       { text: 'Chevallier, A. (2016). Encyclopedia of Herbal Medicine (3rd ed.). DK Publishing.' },
@@ -1293,8 +1321,8 @@ export const PLANTS = {
     ],
   },
 
-  'cinnamon': {
-    id: 'cinnamon',
+  'cinnamon-menstrual': {
+    id: 'cinnamon-menstrual',
     name: 'Cinnamon',
     nameAr: 'القرفة',
     latinName: 'Cinnamomum verum J. Presl (syn. C. zeylanicum)',
@@ -1344,14 +1372,17 @@ export const PLANTS = {
       ],
     },
     overdose: {
+      intro: 'Overdose Threshold: Consuming more than 6 grams of dried bark per day for prolonged periods, or exceeding 200 mg per day of the pure, undiluted essential oil.',
       symptoms: [
-        'Overdose threshold: >6 g dried bark/day for prolonged periods, or >200 mg pure essential oil/day.',
-        'Symptoms: Severe burning across buccal mucosa and gastric lining, violent vomiting. Systemic: acute tachycardia (racing heart) and tachypnea (rapid breathing). Cassia chronic use: elevated liver enzymes and hepatocyte necrosis. Also: severe hypoglycemia.',
+        'Severe burning sensations across the buccal mucosa and gastric lining, triggering violent emetic effects (vomiting).',
+        'Systemic absorption overstimulates the vasomotor center, causing acute tachycardia (racing heart rate) and tachypnea (rapid breathing).',
+        'Chronic accumulation of Cassia causes elevated liver enzymes and hepatocyte necrosis.',
+        'Can also precipitate severe hypoglycemia (dangerously low blood sugar).',
       ],
       management: [
         'Discontinue all cinnamon intake immediately.',
-        'Immediate gastric lavage if large volume of pure essential oil was acutely ingested.',
-        'Administer Activated Charcoal to adsorb residual cinnamaldehyde and toxic terpenes.',
+        'Perform immediate gastric lavage if a large volume of pure essential oil was acutely ingested.',
+        'Administer Activated Charcoal to adsorb residual cinnamaldehyde and toxic terpenes within the GI tract.',
         'Provide aggressive supportive care, high fluid intake, and gastric mucosal protectants (antacids/PPIs).',
       ],
     },
@@ -1362,25 +1393,30 @@ export const PLANTS = {
       'Cassia only: hepatotoxicity from coumarin accumulation',
     ],
     contraindications: [
-      'Active Peptic Ulcer Disease (PUD) or gastritis: volatile oils directly irritate damaged mucosa',
-      'Severe hepatic impairment',
-      'CASSIA cinnamon in therapeutic doses: severe hepatotoxicity risk from coumarin',
-      'High therapeutic doses in pregnancy: emmenagogue and uterine stimulant risks',
+      'Active Peptic Ulcer Disease (PUD) or gastritis: volatile oils will directly irritate damaged mucosa.',
+      'Severe hepatic impairment.',
+      'High therapeutic doses in pregnancy: Strictly Contraindicated — potential emmenagogue actions and theoretical uterine stimulant risks.',
     ],
     drugInteractions: [
-      'Antidiabetics (all classes): potentiates hypoglycemic agents; risk of acute dangerously low blood sugar',
-      'Anticoagulants (Warfarin): increases bleeding times; close INR monitoring required',
-      'Tetracyclines: tannins in cinnamon bind to tetracyclines via chelation, forming insoluble complexes that inhibit antibiotic absorption; separate by at least 2-3 hours',
+      'Antidiabetics & Anticoagulants: Potentiates hypoglycemic agents (risking acute sugar drops) and anticoagulants like Warfarin (increasing bleeding times).',
+      'Cinnamon & Tetracyclines: Tannins in cinnamon bind to Tetracyclines via chemical chelation/precipitation, forming insoluble complexes that inhibit antibiotic absorption. Separate oral administration by at least 2 to 3 hours.',
     ],
     storage: {
       forms: [
-        { form: 'Dried Bark / Sticks / Powder', instructions: 'Must be stored in strictly airtight, opaque glass containers away from thermal fluctuations to completely prevent rapid oxidation and evaporation of active cinnamaldehyde.' },
+        { form: 'Dried Bark / Sticks / Powder', instructions: 'Must be stored in strictly airtight, opaque glass containers away from thermal fluctuations to completely prevent the rapid oxidation and evaporation of active Cinnamaldehyde.' },
       ],
     },
+    factsAndMyths: [
+      {
+        myth: '"All types of cinnamon are the same, and any cinnamon can be used safely in high therapeutic doses."',
+        fact: 'Cassia Cinnamon contains high concentrations of Coumarin, which can cause liver toxicity (hepatotoxicity) if taken in medicinal doses over extended periods. True Ceylon Cinnamon has negligible coumarin levels and is the safe choice for prolonged therapeutic use.',
+      },
+    ],
     marketedProducts: [
-      { name: 'SEKEM Organic Cinnamon Tea Bags', image: '/images/Picture55.jpg' },
-      { name: 'Ceylon vs Cassia Cinnamon Comparison', image: '/images/Picture54.png' },
-      { name: 'ISIS Cinnamon Tea Bags', image: '/images/Picture56.png' },
+      { name: 'Cinara Capsules (Standardized cinnamon extract for metabolic support)', image: null },
+      { name: 'Sekem Cinnamon Tea Bags (Pure Cinnamomum verum)', image: '/images/Picture55.jpg' },
+      { name: 'Isis Cinnamon & Ginger Blend Tea', image: '/images/Picture56.png' },
+      { name: 'Imtenan Ceylon Cinnamon Powder / Sticks (Verified low-coumarin true cinnamon)', image: null },
     ],
     benefits: [
       { icon: 'spa', title: 'Menstrual Pain Relief', desc: 'Dual COX/LOX inhibition reduces prostaglandin synthesis, clinically decreasing menstrual pain intensity, nausea, and vomiting.' },
@@ -1406,11 +1442,423 @@ export const PLANTS = {
       'STRICTLY CONTRAINDICATED in pregnancy at medicinal doses.',
       'Never exceed 6 g dried bark/day: risk of severe GI irritation, tachycardia, and hypoglycemia.',
     ],
-    relatedPlants: ['ginger', 'dill-seed'],
+    relatedPlants: ['ginger-menstrual', 'dill-seed-menstrual'],
     references: [
       { text: 'Duke, J. A., et al. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
       { text: 'Chevallier, A. (2016). Encyclopedia of Herbal Medicine (3rd ed.). DK Publishing.' },
       { text: 'Egyptian Drug Authority — Cinnamomum verum monograph.', url: 'https://www.edaegypt.gov.eg/media/jvknpkbg/cinnamomum-verum-j-presl.pdf' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════
+  // WOMEN'S HEALTH › PREGNANCY SUPPORT
+  // ══════════════════════════════════════════════════════════════════════
+
+  'ginger-pregnancy': {
+    id: 'ginger-pregnancy',
+    name: 'Ginger',
+    nameAr: 'الزنجبيل',
+    latinName: 'Zingiber officinale',
+    category: 'womens-health',
+    subcategory: 'pregnancy-support',
+    tags: ['Antiemetic', 'Pregnancy-Safe', 'Nausea Relief', 'Evidence-Based', 'Morning Sickness'],
+    image: '/images/Picture29.jpg',
+    shortDescription: 'Safe, effective, and evidence-based non-pharmacological treatment for managing mild to moderate nausea and vomiting (morning sickness) during pregnancy.',
+    description: 'Ginger is primarily used in pregnancy as a safe, effective, and evidence-based non-pharmacological treatment for managing mild to moderate nausea and vomiting (morning sickness). Gingerols and shogaols are the main pungent principles responsible for the therapeutic benefits; other constituents include terpenoids (like zingiberene) and zingiberol. Extensive RCTs confirm its efficacy is statistically comparable to Pyridoxine (Vitamin B6) and significantly superior to placebos in mitigating nausea severity, without any statistical increase in adverse pregnancy outcomes or teratogenicity.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Gingerols-Shogaols ', percentage: '', effect: 'Main pungent principles responsible for the therapeutic benefits.' },
+      { name: 'Terpenoids (Zingiberene, Zingiberol)', percentage: '', effect: 'Other active constituents of ginger.' },
+    ],
+    moa: [
+      { title: 'Gastrointestinal Stimulation', detail: 'Ginger increases gastric tone and peristalsis (motion). By speeding up gastric emptying, it reduces the amount of time food sits in the stomach, thus reducing nausea.' },
+      { title: 'Serotonin (5-HT3) Receptor Antagonism', detail: 'Ginger compounds (gingerols and shogaols) act as competitive antagonists at peripheral and central serotonin (5-HT3) receptors. Serotonin is a key neurotransmitter that causes vomiting when released in response to nausea, and blocking it reduces this sensation.' },
+      { title: 'Direct Action on the Gut', detail: 'Ginger is thought to exert much of its antiemetic effect locally within the gastrointestinal tract.' },
+      { title: 'Anti-inflammatory and Carminative Effects', detail: 'Ginger provides relief from dyspepsia (upset stomach) and helps with motility issues.' },
+    ],
+    uses: [
+      'Primary use in pregnancy: safe, effective, evidence-based non-pharmacological treatment for mild-to-moderate nausea and vomiting of pregnancy (morning sickness)',
+      'Fresh ginger may help relieve symptoms associated with common colds, such as congestion, headache, and nausea',
+      'possesses the ability to alleviate symptoms such as headache, nasal congestion, cough, and nausea that are induced by colds and febrile disorders. ',
+      'Ginger provides potent anti-inflammatory, antioxidant, antiemetic, and potential anticancer properties; widely used to treat nausea, digestive issues (bloating, indigestion), arthritis pain, and metabolic issues like high blood sugar',
+    ],
+    howToUse: [
+      { method: 'Fresh Ginger Tea', instruction: 'Steep 1–2 teaspoons of grated or sliced fresh ginger root in hot water for 5–10 minutes.' },
+      { method: 'Ginger Capsules', instruction: 'Look for supplements containing 250 mg of ginger powder, often taken 2–4 times daily, ensuring they are approved by a healthcare professional.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Children (Under 2 years)', notes: 'Use of medicinal amounts is generally not recommended.' },
+      { group: 'Children (2 years and older)', notes: 'Small amounts, such as small quantities of fresh ginger in food, can be used for nausea or cold symptoms.' },
+      { group: 'Adults (18+ years)', notes: 'Moderation is advised, as very high amounts may not be appropriate.' },
+      { group: 'Pregnant Women', notes: 'Medicinal, standardized low doses (up to 1 g/day) are clinically effective and safe, provided it is monitored by a healthcare provider.' },
+    ],
+    dosage: {
+
+      forms: [
+        { form: 'Pregnancy', dose: 'Standardized dosage of 250 mg orally, 4 times daily (Total maximum dose: 1,000 mg / 1 gram daily). Higher doses during pregnancy should be used cautiously due to limited safety data.' },
+      ],
+    },
+    overdose: {
+      intro: 'There is no strict legal definition for a "toxic" dose of ginger, but high daily amounts are generally considered excessive and may lead to adverse side effects.',
+      symptoms: [
+        'Bleeding Risks: Because ginger has anti-platelet properties, excessive intake can increase the risk of bleeding or bruising, which is specifically dangerous close to labor.',
+        'Gastrointestinal Distress: Severe heartburn, acid reflux, bloating, and diarrhea.',
+        'Mouth and Throat Irritation: A burning sensation or soreness in the mouth.',
+        'Heart Irregularities: High doses may rarely affect heart rhythm at excessive doses.',
+        'Central Nervous System Depression: Very high doses can potentially cause lethargy or fatigue.',
+      ],
+      management: [
+        'Immediately stop consuming ginger and stay hydrated to flush the system.',
+        'Symptomatic Management: Administer antacids or Proton Pump Inhibitors (PPIs) for severe gastric irritation.',
+        'Seek medical attention if experiencing severe symptoms like heart palpitations, breathing issues, or excessive bleeding.',
+        'There is no antidote; management is supportive.',
+      ],
+    },
+    sideEffects: [
+      'Uterine Stimulation: High doses can theoretically stimulate uterine contractions, increasing risks of premature labor in late pregnancy.',
+      'Gastrointestinal Distress: Heartburn, acid reflux, diarrhea, and bloating are the most common side effects, particularly when consumed in large amounts.',
+      'Mouth/Throat Irritation: A burning sensation in the mouth or throat may occur.',
+      'Contact Dermatitis: Topical application of ginger essential oils may provoke erythema, skin irritation, or allergic rashes.',
+      'Anti-platelet Activity: Inhibition of platelet aggregation, predisposing the patient to bleeding.',
+    ],
+    contraindications: [
+      'Late Pregnancy / Near Labor: Use near labor should be approached cautiously due to ginger\'s mild antiplatelet activity.',
+      'Bleeding Disorders: Ginger has anticoagulant (blood-thinning) effects, making it unsafe for women with bleeding disorders or those taking blood-thinning medication (e.g., warfarin).',
+      'High-Risk Pregnancies: Contraindicated in pregnant women with a documented clinical history of recurrent spontaneous abortions, or unexplained vaginal bleeding.',
+    ],
+    drugInteractions: [
+      'Anticoagulants / Antiplatelet Drugs (e.g., Warfarin, Aspirin, Clopidogrel, Enoxaparin): Synergistic interaction . ginger enhances the risk of bleeding by inhibiting platelet thromboxane synthesis.',
+      'Antidiabetic Agents (e.g., Insulin, Metformin, Sulfonylureas): High doses of ginger enhance glucose uptake in insulin-responsive tissues, increasing the risk of hypoglycemia.',
+      'Antihypertensive Drugs / Calcium Channel Blockers (e.g., Amlodipine, Nifedipine): Ginger exhibits natural voltage-dependent calcium channel blocking activity; concomitant use may potentiate hypotensive and negative inotropic responses.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Room Temperature', instructions: 'Raw rhizomes can be stored for 1–2 weeks in a cool, dry, well-ventilated area away from direct sunlight.' },
+        { form: 'Refrigerator (4°C)', instructions: 'Store for 1–2 months.' },
+        { form: 'Freezer (−18°C)', instructions: 'Store for up to 6 months.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Ginger 400 mg by Mepaco', image: '/images/Ginger-400mg-Mepaco.jpg' },
+      { name: 'Imtenan Organic Ginger Powder', image: '/images/Imtenan Organic Ginger Powder.jpg' },
+    ],
+    botanicalFacts: {
+      family: 'Zingiberaceae',
+    },
+    relatedPlants: ['psyllium-pregnancy', 'peppermint-pregnancy'],
+    references: [
+      { text: 'PMC — Safety of ginger rhizome for decreasing nausea and vomiting in women during early pregnancy.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC6616534/' },
+      { text: 'PMC — A systematic review and meta-analysis of the effect and safety of ginger in the treatment of pregnancy-associated nausea and vomiting.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4228518/' },
+      { text: 'PMC — Safety of ginger use in pregnancy: results from a large population-based cohort study.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4755634/' },
+      { text: 'ScienceDirect — Ginger in pregnancy research.', url: 'https://www.sciencedirect.com/science/article/pii/S216183132400142X' },
+    ],
+  },
+
+  'psyllium-pregnancy': {
+    id: 'psyllium-pregnancy',
+    name: 'Psyllium',
+    nameAr: 'سيلليوم / إسباغول',
+    latinName: 'Plantago ovata Forsk.',
+    category: 'womens-health',
+    subcategory: 'pregnancy-support',
+    tags: ['Bulk-forming Laxative', 'Fiber', 'Constipation Relief', 'Pregnancy-Safe', 'Hemorrhoid Prevention'],
+    image: '/images/Picture274.jpeg',
+    shortDescription: 'Clinically favored first-line treatment for gestational constipation and hemorrhoid prevention. Not absorbed systemically — works locally within the GI tract without fetal exposure.',
+    description: 'Psyllium is primarily used in pregnancy to promote regular, soft bowel movements, helping prevent hemorrhoids and anal fissures. It increases fecal water content and transit time, making stool easier to pass. It is clinically favored over chemical stimulant laxatives (like Senna or Bisacodyl) for managing gestational constipation due to its non-systemic nature. Research indicates that daily consumption, especially in the third trimester, can significantly prevent and treat constipation, hemorrhoids, and anal fissures.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Arabinoxylan (a soluble, gel-forming polysaccharide', percentage: '' },
+      { name: 'Mucilage', percentage: '' },
+      { name: 'Water-Soluble Fiber', percentage: '' },
+    ],
+    moa: [
+      { title: 'Water Retention & Lubrication', detail: 'Psyllium absorbs water, increasing the moisture content of stool, which keeps it soft and eases transit through the intestines, helping to combat constipation caused by increased progesterone levels and reduced bowel motility.' },
+      { title: 'Bulk Formation', detail: 'The gel-like mass increases the physical volume (bulk) of stool, stimulating stretch receptors in the bowel wall, which triggers the urge to defecate.' },
+      { title: 'Local Action', detail: 'Because it is not absorbed systemically, it works locally within the GI tract without causing fetal exposure, making it a commonly preferred treatment.' },
+    ],
+    uses: [
+      'Hemorrhoid/Fissure Prevention: promotes regular, soft bowel movements, helping prevent the straining that leads to hemorrhoids and anal fissures in pregnancy',
+      'Constipation Relief: increases fecal water content and transit time, making stool easier to pass',
+      'Safe First-Line Alternative: clinically favored over chemical stimulant laxatives (like Senna or Bisacodyl) for managing chronic or gestational constipation due to its non-systemic nature',
+    ],
+    howToUse: [
+      { method: 'Consult Your Provider', instruction: 'Always check with your doctor or midwife before starting, particularly if you have other health issues.' },
+      { method: 'Crucial Hydration', instruction: 'Drink at least 8 ounces (240 mL) of water or juice with each dose. Inadequate fluid intake can lead to blockage.' },
+      { method: 'Start Slow', instruction: 'Begin with 1 teaspoon/day and gradually increase to 1 tablespoon up to 3 times daily to minimize gas and bloating.' },
+      { method: 'Timing', instruction: 'Take psyllium at least 2 hours apart from prenatal vitamins and other medications to avoid interfering with nutrient absorption.' },
+      { method: 'Usage Duration', instruction: 'Avoid using for longer than 1 week without consulting your doctor.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults and Children (6+ years)', notes: 'Generally safe for adults and children over the age of 6, though many pediatric guidelines suggest consulting a doctor for children under 12.' },
+    ],
+    dosage: {
+      forms: [
+        { form: 'Pregnancy', dose: '28 g/day with adequate fluid intake.' },
+      ],
+    },
+    overdose: {
+      intro: 'While psyllium is generally considered safe during pregnancy because it is not absorbed systemically, excessive intake can lead to serious complications.',
+      symptoms: [
+        'Severe Gastrointestinal Obstruction: Because psyllium is a bulk-forming laxative that absorbs water, taking too much without enough fluid can cause it to harden, leading to bowel, esophageal, or stomach blockage.',
+        'Abdominal Pain and Cramping: Severe stomach pain or cramping.',
+        'Nausea and Vomiting.',
+        'Severe Paradoxical Constipation/Impaction: Excess unhydrated fiber binds together, worsening bowel stasis rather than relieving it.',
+        'Diarrhea: In some cases, excessive intake can cause diarrhea.',
+      ],
+      management: [
+        'Hydrate Immediately: Drink large amounts of water to prevent the fiber from causing intestinal obstruction or fecal impaction.',
+        'Monitor Symptoms: Watch for severe stomach pain, vomiting, or inability to have a bowel movement.',
+        'Symptomatic Management: Treatment is typically conservative, focusing on relieving discomfort.',
+        'Medical Care: If severe blockage occurs, medical professionals may provide treatment for bowel obstruction.which, while rare, can occur if taken with insufficient fluid. ',
+      ],
+    },
+    sideEffects: [
+      'The most common side effects are mild gastrointestinal issues, including bloating, gas (flatulence), stomach cramps, and abdominal discomfort.',
+      'Obstruction Risk: Increased risk of exacerbating constipation or inducing a bowel blockage if strict fluid compliance is ignored.',
+    ],
+    contraindications: [
+      'Gastrointestinal Obstruction/Impaction: Do not take psyllium if you have a fecal impaction, narrowing of the gastrointestinal tract, or a known bowel obstruction.',
+      'Swallowing Disorders: Do not use if you have difficulty swallowing, as psyllium can cause choking.',
+      'Severe Dehydration / Insufficient Fluid Intake: Psyllium should be avoided in patients unable to maintain adequate fluid intake.',
+      'Allergic Reactions: Hypersensitivity to psyllium.',
+      'Symptoms of Appendicitis or Undiagnosed Gastrointestinal Distress: Including fever, severe abdominal pain, nausea, or vomiting.',
+      'Phenylketonuria (PKU): Some psyllium products are sweetened with aspartame.',
+    ],
+    drugInteractions: [
+      'Psyllium acts as a bulk-forming laxative, creating a gel that can bind to other medications, reducing their effectiveness. Administer other medications at least 2 hours before or after taking psyllium.',
+      'Digoxin: Reduced therapeutic serum levels.',
+      'Lithium: Impaired absorption, posing a relapse risk in psychiatric patients.',
+      'Iron Supplements: Complexation and reduced absorption, which is particularly detrimental in gestational anemia.',
+      'Warfarin: Variable absorption patterns affecting INR values.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Psyllium Husk', instructions: 'Psyllium husk should be stored at room temperature (59°F to 86°F or 15°C to 30°C) in a cool, dry, dark place, away from direct sunlight, moisture, and heat sources.  \n' +
+              'It is highly hygroscopic (absorbs moisture), so it must be kept in an Airtight Container to prevent clumping, spoilage, and reduced effectiveness \n' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Imtenan Psyllium Husk', image: '/images/Imtenan-Psyllium-Husk.jpg' },
+      { name: 'Abu Auf Psyllium Husk', image: '/images/Abu-Auf-Psyllium-Husk.jpg' },
+    ],
+    botanicalFacts: {
+      family: 'Plantaginaceae',
+      clinicalEvidence: 'Research indicates that daily consumption of psyllium, especially in the third trimester, can significantly prevent and treat constipation, hemorrhoids, and anal fissures.',
+    },
+    relatedPlants: ['ginger-pregnancy', 'peppermint-pregnancy'],
+    references: [
+      { text: 'LactMed Database — Psyllium monograph.', url: 'https://www.ncbi.nlm.nih.gov/books/n/lactmed/LM471/?report=reader' },
+      { text: 'PMC — Psyllium research.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC12422764/' },
+      { text: 'Drugs.com — Psyllium use during pregnancy.', url: 'https://www.drugs.com/pregnancy/psyllium.html' },
+      { text: 'PMC — Review of psyllium fiber and clinical applications.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3418980/' },
+    ],
+  },
+
+  'peppermint-pregnancy': {
+    id: 'peppermint-pregnancy',
+    name: 'Peppermint',
+    nameAr: 'النعناع',
+    latinName: 'Mentha × piperita L.',
+    category: 'womens-health',
+    subcategory: 'pregnancy-support',
+    tags: ['Antiemetic', 'Carminative', 'Aromatherapy', 'Pregnancy-Safe', 'Antispasmodic'],
+    image: '/images/Picture279.jpg',
+    shortDescription: 'Peppermint tea (1–2 cups/day) and aromatherapy are safe during pregnancy for morning sickness, bloating, and pruritus. High medicinal doses or concentrated essential oil should be used cautiously.',
+    description: 'Scientific evidence suggests that peppermint is generally safe during pregnancy in moderate, culinary amounts (1–2 cups of tea daily) and can effectively alleviate first-trimester nausea and vomiting through aromatherapy. It also acts as a carminative and antispasmodic to relieve gestational bloating, flatulence, and functional dyspepsia. Topical application of low-concentration (0.5%) peppermint oil in a carrier oil can relieve itching (pruritus gravidarum). While studies show significant reductions in morning sickness, high medicinal doses or essential oils should be used cautiously, as data is limited.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Menthol and Menthone', percentage: '', },
+      { name: 'Non-Volatile Compounds ', percentage: '', effect: 'Flavonoids (luteolin, eriocitrin), phenolic acids (rosmarinic acid), and triterpenes ' },
+      { name: 'Other key active constituents ', percentage: '', effect: 'include menthyl acetate, 1,8-cineole (eucalyptol), and limonene, which contribute to its refreshing aroma and respiratory benefits ' },
+    ],
+    moa: [
+      { title: 'Gastrointestinal Smooth Muscle Relaxation', detail: 'By reducing the inflow of calcium, peppermint relaxes the muscles of the stomach and intestines, reducing spasms, esophageal dysmotility, and overall nausea.' },
+      { title: 'Carminative Action', detail: 'Peppermint aids in reducing gas and improving digestion, which helps relieve the abdominal discomfort often associated with pregnancy.' },
+      { title: 'Aromatherapy Mechanism', detail: 'When inhaled, the compounds in peppermint oil (menthol) are absorbed through the olfactory system, which may influence the central nervous system to reduce the severity of nausea.' },
+      { title: 'Anxiety Reduction', detail: 'It can help reduce anxiety during pregnancy and labor, which often accompanies morning sickness.' },
+      { title: 'Antipruritic Action'  },
+    ],
+    uses: [
+      'Nausea and Vomiting (Morning Sickness): peppermint inhalation or aromatherapy acts as an antiemetic',
+      'Gastrointestinal Relief: acts as a carminative and antispasmodic to alleviate gestational bloating, flatulence, and functional dyspepsia',
+      'Symptomatic Relief of Pruritus (Itching): topical application of low-concentration (0.5%) peppermint oil in a carrier oil can relieve itching (pruritus gravidarum) common in late pregnancy',
+      'Headache Relief: topical application of diluted oil on the temples may help with tension headaches, which are frequent during pregnancy',
+      'Anxiety Reduction',
+      'Skin & Hair Care: Included in products for acne-fighting antimicrobial properties and hair strengthening.',
+      'Respiratory Support: Menthol acts as a decongestant, aiding in breathing during colds.',
+      'Digestive Health: Used to reduce abdominal pain and symptoms of Irritable Bowel Syndrome (IBS).',
+    ],
+    howToUse: [
+      { method: 'Tea', instruction: 'Drinking 1–2 cups of peppermint tea daily (using tea bags or dried leaves) is considered safe for morning sickness and indigestion.' },
+      { method: 'Aromatherapy', instruction: 'Inhaling peppermint essential oil via a diffuser or a cotton ball can safely help reduce nausea, particularly during the first trimester.' },
+      { method: 'Culinary', instruction: 'Peppermint-flavored candies or food items in moderation are safe.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Essential Oil (Aromatherapy/Topical)', notes: 'Generally safe for children over age 3. Do not use on children under 30 months (2.5 years) as it can cause seizures or breathing issues.' },
+      { group: 'Adults and Children (8+ years)', notes: 'Safe and recommended for IBS management.' },
+      { group: 'Peppermint Tea', notes: 'Generally safe in moderate amounts for younger children, but not recommended for infants.' },
+      { group: 'Candy/Candy Canes', notes: 'Due to choking hazards, it is best to wait until age 5.' },
+    ],
+    dosage: {
+      forms: [
+        { form: 'Peppermint Tea', dose: 'may be consumed in moderate amounts during pregnancy, commonly 1–2 cups daily. ' },
+        { form: ' Peppermint essential oil aromatherapy', dose: 'commonly uses 2–4 drops for inhalation. High doses should be avoided during pregnancy due to limited safety data.' },
+      ],
+    },
+    overdose: {
+      intro: 'While moderate consumption of peppermint tea is generally considered safe during pregnancy, an overdose of peppermint — particularly in the form of concentrated essential oil — can be dangerous due to its high content of menthol and other compounds.',
+      symptoms: [
+        'Uterine Sensitivity: Large doses of certain herbal extracts can cause uterine stimulation, which may pose risks to the pregnancy.',
+        'Gastrointestinal Distress: Severe nausea, vomiting, abdominal pain, or diarrhea.',
+        'Neurological Symptoms: Dizziness, loss of coordination (ataxia), confusion, or in extreme cases, seizures.',
+        'Respiratory Issues: Slow or shallow breathing.',
+        'Cardiovascular Changes: Changes in heart rate or rhythm.',
+        'Kidney Concerns: Significant changes in urine output or the presence of blood in the urine.',
+        'Allergic Reactions: Skin rashes, hives, or swelling of the throat.',
+      ],
+      management: [
+        'Medical Evaluation: Providers will monitor vital signs (pulse, breathing rate, blood pressure) and may perform blood/urine tests or an electrocardiogram (ECG).',
+        'Gastric Decontamination: In cases of severe ingestion, the stomach may be emptied by gastric lavage.',
+        'Activated charcoal may be used to reduce absorption.',
+        'Symptomatic Treatment: Intravenous fluids for hypotension, mechanical ventilation/oxygen therapy for respiratory depression.',
+        'Fetal Monitoring: Fetal heart monitoring is essential if the fetus is at a viable gestational age, and an emergency C-section may be required if fetal distress occurs.',
+        'Avoid Over-the-Counter Remedies: Do not try to treat symptoms at home with other herbal remedies.',
+      ],
+    },
+    sideEffects: [
+      'Heartburn/Reflux: Peppermint relaxes the esophageal sphincter, which can worsen pregnancy-related heartburn.',
+      'Excessive Consumption: High amounts of tea may cause digestive discomfort or cramping.',
+      'Toxic doses stimulate uterine smooth muscle (emmenagogue effect).',
+      'Allergic Reactions: Possible, particularly if sensitive to menthol.',
+      'Medication Interaction: It may interfere with the absorption of certain nutrients or supplements.',
+    ],
+    contraindications: [
+      'Individuals with severe gastroesophageal reflux disease (GERD), hiatal hernia, gallstones (cholelithiasis), gallbladder inflammation (cholecystitis), or severe liver disease.',
+    ],
+    drugInteractions: [
+      'Heartburn/Acid-Reducing Medications (Antacids, H2RAs, PPIs): Concomitant use increases gastric pH, causing the enteric coating of peppermint capsules to dissolve prematurely in the stomach, leading to severe gastric irritation.',
+      'Blood Pressure Medications: Peppermint may lower blood pressure; It should be used cautiously if you are already taking medication for hypertension. ',
+      'Liver-Metabolized Drugs: Peppermint may influence how the liver breaks down certain medications, potentially altering their effectiveness.',
+    ],
+    storage: {
+      forms: [
+        { form: 'All Forms', instructions: 'Store in a cool, dry, and dark place.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Isis Organic Peppermint Tea', image: '/images/Isis-Organic-Peppermint.jpg' },
+      { name: 'Royal Peppermint Natural Tea', image: '/images/Royal-Peppermint-Natural.jpg' },
+    ],
+    botanicalFacts: {
+      family: 'Lamiaceae',
+      clinicalEvidence: 'Scientific evidence suggests that peppermint (Mentha piperita) is generally safe during pregnancy in moderate, culinary amounts (1–2 cups of tea daily) and can effectively alleviate first-trimester nausea and vomiting through aromatherapy. While studies show significant reductions in morning sickness, high medicinal doses or essential oils should be used cautiously, as data is limited.',
+    },
+    relatedPlants: ['ginger-pregnancy', 'psyllium-pregnancy'],
+    references: [
+      { text: 'PMC — The effect of peppermint on nausea and vomiting during pregnancy.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC5960050/' },
+      { text: 'LactMed Database — Peppermint monograph.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK501851/' },
+      { text: 'PMC — Herbal medicine use in pregnancy: results of a multinational study.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC7384490/' },
+    ],
+  },
+
+  'cranberry-pregnancy': {
+    id: 'cranberry-pregnancy',
+    name: 'Cranberry',
+    latinName: 'Vaccinium macrocarpon',
+    category: 'womens-health',
+    subcategory: 'pregnancy-support',
+    tags: ['UTI Prevention', 'Anti-adhesion', 'Proanthocyanidins', 'Antioxidant', 'Pregnancy-Safe'],
+    image: '/images/Cranberry.webp',
+    shortDescription: 'Cranberries help prevent UTIs and asymptomatic bacteriuria during pregnancy via A-type proanthocyanidins (PACs) that prevent E. coli adhesion to the bladder wall. Prevents but does NOT treat active infections.',
+    description: 'Cranberries contain A-type proanthocyanidins (PACs) which prevent uropathogenic bacteria ; specifically E. coli from adhering to the bladder wall. Studies suggest that a daily dose of 500 mg of cranberry extract can be a safe and effective approach in preventing asymptomatic bacteriuria and UTI recurrence in pregnant individuals. Large observational studies have found no link between cranberry consumption during pregnancy and an increased risk of congenital malformations, preterm delivery, or adverse infant outcomes. Note: While cranberry is widely recognized to help prevent UTIs, evidence indicates it is not effective for treating an active infection, which requires professional medical treatment during pregnancy.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'A-Type Proanthocyanidins (PACs)', percentage: '',  },
+      { name: 'Anthocyanins (Antioxidants)', percentage: '' },
+      { name: 'Flavonols (Quercetin), ', percentage: '',  },
+      { name: 'Phenolic Acids ', percentage: '',  },
+      { name: 'Ursolic Acid (Triterpenoids)', percentage: '',  },
+    ],
+    moa: [
+      { title: 'Inhibition of E. coli Adhesion (Anti-Adhesion Activity)', detail: 'The active compounds, specifically A-type proanthocyanidins (PACs), interfere with the ability of P-fimbriated Escherichia coli (E. coli) a common cause of UTIs during pregnancy ,to attach to the epithelial cells lining the urinary tract. \n' },
+      { title: 'Structural Disruption of Fimbriae', detail: 'Cranberry constituents can change the conformation of surface molecules on E. coli, interfering with fimbrial adhesion mechanisms.' },
+      { title: 'Fructose Inhibition', detail: 'Fructose present in cranberries acts in conjunction with PACs to inhibit the adhesion of type 1 pili to the bladder wall.' },
+
+      { title: 'Direct Antibacterial and Anti-inflammatory Effects', detail: 'Beyond adhesion prevention, components of cranberry may help reduce bacterial adherence and inflammation associated with UTIs.' },
+      { title: 'Modification of Urinary Environment', detail: 'Metabolites from ingested cranberry, when excreted in urine, decrease the adherence capacity of E. coli and other Gram-negative bacteria to uroepithelial cells.' },
+    ],
+    uses: [
+      'Preventing Urinary Tract Infections (UTIs): cranberries contain A-type PACs which prevent uropathogenic E. coli from adhering to the bladder wall',
+      'Managing Asymptomatic Bacteriuria (ASB): daily consumption of cranberry capsules or juice may help reduce bacterial load and decrease progression to symptomatic UTIs',
+      'Reducing Antibiotic Use: by helping prevent recurrent UTIs, cranberry may help reduce reliance on antibiotics during pregnancy',
+      'Gastrointestinal Health: the PACs in cranberries can inhibit the adhesion of Helicobacter pylori to gastric mucus, helping to manage or reduce the risk of stomach ulcers',
+      'Cardiovascular Protection: regular consumption is associated with lower blood pressure, improved vascular function, and decreased LDL oxidation',
+      'Oral Health: cranberry extracts can help prevent the adhesion of bacteria that cause plaque formation and dental caries',
+    ],
+    howToUse: [
+      { method: 'Juice Formulation', instruction: 'Choose 100% pure, unsweetened cranberry juice to minimize added sugar.' },
+      { method: 'Alternative Forms', instruction: 'Dried cranberries can be added to yogurt or salads, and fresh cranberries can be added to smoothies.' },
+      { method: 'Supplements', instruction: 'Research indicates a daily dose of 500 mg of cranberry extract is effective for preventing UTI recurrence in pregnant women.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Pediatric Use', notes: 'Standardized extracts and therapeutic doses are safe for children (typically above 2–3 years old) and adults to help prevent UTIs and for nutritional benefits.' },
+    ],
+    dosage: {
+
+      forms: [
+        { form: 'Cranberry Juice', dose: '240–720 mL daily.' },
+        { form: 'Cranberry Capsules/Tablets', dose: '500 mg extract daily; or two capsules taken twice daily.' },
+      ],
+    },
+    overdose: {
+      intro: 'An overdose of cranberry products (juice or supplements) during pregnancy typically causes mild to moderate gastrointestinal distress, such as diarrhea, nausea, or abdominal cramping. While moderate consumption is generally safe, excessive intake of concentrated capsules might increase the risk of kidney stones due to high levels of oxalic acid.',
+      symptoms: [
+        'Gastrointestinal Distress: The most common symptoms are stomach cramps, diarrhea, nausea, and vomiting.',
+        'Kidney Stones: Long-term consumption of high doses can increase the risk of developing calcium-oxalate kidney stones.',
+        'Increased Pregnancy Complications (Rare): High doses of cranberry extract have been associated with increased rates of perinatal complications, including preterm delivery or low birth weight, though many studies indicate it is generally safe.',
+      ],
+      management: [
+        'Stop Consumption: Immediately stop taking cranberry supplements or drinking large amounts of juice.',
+        'Seek Medical Advice.',
+        'Supportive Care: If symptoms are mild (e.g., mild diarrhea, stomach upset), increase fluid intake to ensure hydration.',
+        'Monitor Symptoms: Keep watch for signs of worsening dehydration, severe diarrhea, or severe abdominal pain, which require immediate medical attention.',
+      ],
+    },
+    sideEffects: [
+      'Gastrointestinal Distress: Excessive intake of cranberry juice or supplements can lead to diarrhea, nausea, or stomach cramping.',
+      'Kidney Stones: Cranberries contain high amounts of oxalates, which may increase the risk of kidney stones in susceptible individuals if consumed in high amounts.',
+      'Vaginal Bleeding: Some data suggested a slight, though often mild, increase in vaginal bleeding incidents after week 17 of pregnancy, though this requires further study.',
+      'Sugar Intake: Commercial cranberry juice can be high in added sugars, which may be a concern for women with or at risk of gestational diabetes.',
+      'Drug Interactions (Blood Thinners): Cranberry may interact with medications like warfarin or other anticoagulants, increasing the risk of bruising or bleeding.',
+    ],
+    contraindications: [
+      'High-Dose Risk: While normal dietary intake is usually safe, high-dose supplements (tablets/capsules) should be avoided due to limited safety data.',
+      'Drug Interactions (Warfarin/Blood Thinners): If you are taking blood-thinning medication, cranberry can interact with it, potentially increasing the risk of bleeding.',
+      'Kidney Stones: Women with a history of or susceptibility to oxalate kidney stones should avoid high consumption of cranberry products.',
+      'Atrophic Gastritis/Hypochlorhydria: Those with low stomach acid or gastric inflammation should use caution, as cranberry may alter gastric pH.',
+    ],
+    drugInteractions: [
+      'Warfarin (Coumadin/Anisindione): The most significant interaction — cranberry can enhance its anticoagulant effect, increasing bleeding risks.',
+      'Blood Pressure/Cholesterol Medications: There is potential for increased effects of some medications, such as atorvastatin (cholesterol) and nifedipine (blood pressure).',
+    ],
+    storage: {
+      forms: [
+        { form: 'Refrigerator Storage', instructions: 'To maintain the stability of bioactive compounds (anthocyanins and PACs), cranberry products (such as juice or processed purees) should be kept refrigerated. Due to high temperatures in Egypt, ensure products are not left in direct sunlight or warm, humid environments, as this degrades the antioxidant benefits.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Modern Cranberry Dietary Supplement', image: '/images/Modern-Cranberry-Dietary-Supplement.png' },
+      { name: 'Cranberry Ema Pharm (30 Capsules)', image: '/images/Cranberry-Ema-Pharm-30-Capsules.png' },
+    ],
+    botanicalFacts: {
+      family: 'Ericaceae',
+      clinicalEvidence: 'Large observational studies have found no link between cranberry consumption during pregnancy and an increased risk of congenital malformations, preterm delivery, or adverse infant outcomes.',
+    },
+    relatedPlants: ['ginger-pregnancy', 'psyllium-pregnancy'],
+    references: [
+      { text: 'Drugs.com — Cranberry natural product monograph.', url: 'https://www.drugs.com/npp/cranberry.html' },
+      { text: 'PMC — Cranberries for preventing urinary tract infections.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC3924191/' },
+      { text: 'WebMD — Cranberry supplement guide.', url: 'https://www.webmd.com/diet/supplement-guide-cranberry' },
     ],
   },
 
@@ -1657,6 +2105,131 @@ export const PLANTS = {
     ],
   },
 
+  'black-seed-rhinitis': {
+    id: 'black-seed-rhinitis',
+    name: 'Black Seed',
+    nameAr: 'حبة البركة',
+    latinName: 'Nigella sativa',
+    commonNames: ['Black Seed', 'Black Cumin', 'Kalonji'],
+    category: 'respiratory',
+    subcategory: 'rhinitis',
+    tags: ['Antihistamine', 'Anti-inflammatory', 'Rhinitis', 'Immunomodulator', 'Mast Cell Stabilizer'],
+    image: '/images/black-seed-main.jpg',
+    shortDescription: 'Provides natural antihistaminic, anti-inflammatory, and immunomodulatory effects that alleviate symptoms like sneezing, nasal congestion, and itching without common conventional side effects.',
+    description: 'Nigella sativa (Black Seed) provides natural antihistaminic, anti-inflammatory, and immunomodulatory effects that alleviate symptoms like sneezing, nasal congestion, and itching without common conventional side effects.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Essential Oils', percentage: '', effect: 'Thymoquinone (main active compound), dithymoquinone, thymohydroquinone, p-cymene, carvacrol, thymol, α-pinene' },
+      { name: 'Alkaloids', percentage: '', effect: 'Nigellicimine, Nigellicimine N-oxide, Nigellidine, Nigellicine' },
+      { name: 'Saponins', percentage: '', effect: 'α-Hederin (immune & potential anti-tumor effects)' },
+      { name: 'Fixed Oils & Fatty Acids', percentage: '', effect: '32–40% oil containing linoleic acid (Omega-6), oleic acid (Omega-9), palmitic acid, plus sterols like β-sitosterol, stigmasterol & campesterol' },
+    ],
+    moa: [
+      { title: 'Antihistaminic and Anti-Allergic Effects', detail: 'Mast Cell Stabilization: Thymoquinone prevents mast cell degranulation, lowering histamine release in nasal passages. Receptor Blocking: Non-selectively blocks histamine receptors to relieve itching and sneezing.' },
+      { title: 'Anti-Inflammatory Action', detail: 'Pathway Inhibition: Nigella sativa inhibits 5-LOX and COX enzymes (arachidonic acid pathway), blocking leukotrienes and prostaglandins to reduce nasal edema and mucus. Cytokine Regulation: Downregulates pro-inflammatory cytokines like TNF-α.' },
+    ],
+    uses: [
+      'Provides natural antihistaminic, anti-inflammatory, and immunomodulatory effects that alleviate symptoms like sneezing, nasal congestion, and itching without common conventional side effects.',
+    ],
+    howToUse: [
+      { method: 'Oral Capsules', instruction: 'Clinical studies have shown success with doses ranging from (250 mg) to (500 mg) of seed extract taken daily.' },
+      { method: 'Liquid Black Seed Oil', instruction: 'Adults typically take 1 to 2 teaspoons per day, either directly or mixed with honey or warm water.' },
+      { method: 'Nasal Drops/Spray', instruction: 'Some trials suggest applying 1 to 2 drops of high-quality black seed oil directly into each nostril up to 3 times a day to relieve mucosal inflammation.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Infants & Toddlers (< 12 months)', notes: 'Not recommended due to their still-developing digestive and immune systems.' },
+      { group: 'Young Children (Ages 1 to 5)', notes: 'Used in small, limited amounts. Specific nasal administration products exist for daily use.' },
+      { group: 'School-Age Children (Ages 6 to 12)', notes: 'Dosing focuses on specific, measured daily amounts adapted to the child\'s weight.' },
+      { group: 'Teens & Adults (Age 13+)', notes: 'Uses standard daily measurements, which can be split into multiple doses.' },
+    ],
+    dosage: {
+      standard: 'It is generally considered safe, with typical suggested adult doses ranging from 10 to 100 mg/kg/day, though mild digestive upset can sometimes occur.',
+      forms: [
+        { form: 'Oral Capsules', dose: '250 mg to 500 mg of seed extract taken daily.' },
+        { form: 'Liquid Black Seed Oil', dose: '1 to 2 teaspoons per day, either directly or mixed with honey or warm water.' },
+        { form: 'Nasal Drops/Spray', dose: '1 to 2 drops of high-quality black seed oil directly into each nostril up to 3 times a day.' },
+      ],
+    },
+    overdose: {
+      intro: 'Consuming excessive amounts of black seed or its oil can cause:',
+      symptoms: [
+        'Organ Damage: High intake has been linked to acute kidney injury and liver toxicity.',
+        'Severe Metabolic Issues: Rare cases of rhabdomyolysis (muscle breakdown) and acute renal failure have been reported following high ingestion.',
+        'Hypoglycemia and Hypotension: It can aggressively lower blood sugar and blood pressure, which may lead to dizziness or fainting in vulnerable individuals.',
+        'Gastrointestinal Distress: Excessive intake often results in nausea, bloating, vomiting, and gut irritation.',
+        'Serotonin Syndrome Risk: If taken with serotonergic medications, it may dangerously increase serotonin levels, causing heart problems or seizures.',
+      ],
+      management: [
+        'Discontinue Use: Immediately stop taking all Nigella sativa supplements, oils, or extracts.',
+        'Supportive Care: Focus on managing specific symptoms (e.g., intravenous fluids for dehydration, electrolyte balancing).',
+        'Monitor Organ Function: Because high doses can potentially cause liver and kidney damage, seek medical evaluation to check liver enzymes and renal function.',
+      ],
+    },
+    sideEffects: [
+      'Gastrointestinal: Nausea, vomiting, indigestion, constipation, or stomach pain.',
+      'Nasal Dryness: Particularly when taken or applied locally as nasal drops.',
+      'Systemic: Mild drowsiness, fatigue, or headaches.',
+      'Skin: Contact dermatitis or allergic rashes from direct topical application.',
+    ],
+    contraindications: [
+      'Pregnancy: It is generally contraindicated during pregnancy because it may inhibit uterine contractions.',
+      'Bleeding Disorders: Due to potential blood-thinning properties, it may increase the risk of bleeding.',
+      'Upcoming Surgeries: You should stop taking it at least two weeks before a scheduled surgery.',
+      'Low Blood Sugar (Hypoglycemia): Black seed extract can lower blood sugar.',
+      'People with diabetes or those taking glucose-lowering medications should use it with caution.',
+      'Low Blood Pressure (Hypotension): It may further lower blood pressure, making it risky for those already taking antihypertensive drugs.',
+      'Active Allergies: Although used to treat rhinitis, some individuals may develop allergic rashes or skin irritation when taking it.',
+    ],
+    marketedProducts: [
+      { name: 'Black Seed Oil — Pure, cold-pressed oils from brands like Imtenan, Biohayah, and Purity', image: null },
+      { name: 'Softgel Capsules — Avantic Activated Black Seed Oil, ZeinPharma, or generic Premium Black Seed Oil', image: null },
+      { name: 'Organic Nation Black Seed Honey — Herbal Infusion with natural Upper Egypt honey', image: null },
+    ],
+    storage: {
+      forms: [
+        { form: 'Nigella Sativa Oil', instructions: 'Keep in amber or cobalt glass bottles to block light. Seal the cap tightly after every use to prevent oxygen exposure. Store in a cool pantry or refrigerate after opening to preserve the delicate fatty acids.' },
+        { form: 'Oil Capsules / Softgels', instructions: 'Store in their original container away from heat and moisture. Avoid bathroom storage, as high humidity can cause the softgel shells to stick together or dissolve.' },
+        { form: 'Whole or Ground Seeds', instructions: 'Keep whole seeds in a sealed, dry jar at room temperature. Grind them only right before consumption, as pre-ground seeds lose their medicinal essential oils very rapidly.' },
+      ],
+    },
+    benefits: [
+      { icon: 'air', title: 'Antihistaminic Effect', desc: 'Thymoquinone prevents mast cell degranulation, lowering histamine release in nasal passages and non-selectively blocking histamine receptors to relieve itching and sneezing.' },
+      { icon: 'spa', title: 'Anti-Inflammatory Action', desc: 'Inhibits 5-LOX and COX enzymes (arachidonic acid pathway), blocking leukotrienes and prostaglandins to reduce nasal edema and mucus.' },
+      { icon: 'shield', title: 'Immunomodulatory Support', desc: 'Provides natural immunomodulatory effects through cytokine regulation, downregulating pro-inflammatory cytokines like TNF-α.' },
+    ],
+    botanicalFacts: {
+      family: 'Ranunculaceae',
+      scientificName: 'Nigella sativa',
+      commonAliases: 'Kalonji (South Asia), Black Cumin, Habbat al-Barakah',
+    },
+    factsAndMyths: [
+      {
+        myth: '"Nigella sativa can completely cure allergic rhinitis on its own."',
+        fact: 'Nigella sativa may help reduce allergic rhinitis symptoms because it contains anti-inflammatory and antioxidant compounds like thymoquinone, but it is supportive therapy and not a guaranteed cure.',
+      },
+    ],
+    preparation: [
+      { method: 'Oral Capsules', desc: '250 mg to 500 mg of seed extract taken daily as shown in clinical studies.', bestFor: 'Allergic rhinitis, systemic use' },
+      { method: 'Nasal Drops/Spray', desc: '1 to 2 drops of high-quality black seed oil into each nostril up to 3 times a day.', bestFor: 'Direct nasal mucosal inflammation relief' },
+    ],
+    symptoms: ['Rhinitis', 'Sneezing', 'Nasal congestion', 'Nasal itching', 'Allergic rhinitis', 'Nasal inflammation'],
+    warnings: [
+      'Contraindicated during pregnancy: may inhibit uterine contractions.',
+      'May increase bleeding risk: stop at least two weeks before surgery.',
+      'Can aggressively lower blood sugar and blood pressure: monitor closely in diabetic or hypertensive patients.',
+      'Although used for rhinitis, some individuals may develop allergic rashes or skin irritation.',
+    ],
+    relatedPlants: ['stinging-nettle', 'butterbur', 'black-seed'],
+    references: [
+      { text: 'ScienceDirect — Nigella sativa and allergic rhinitis.', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0041010124003593' },
+      { text: 'WebMD — Black Seed.', url: 'https://www.webmd.com/vitamins/ai/ingredientmono-901/black-seed' },
+      { text: 'Frontiers in Pharmacology — Nigella sativa pharmacology.', url: 'https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2024.1417013/full' },
+      { text: 'IJABBR — Nigella sativa review.', url: 'https://www.ijabbr.com/article_712694_0a0a34b2f0cc578baf9052ee287b18d0.pdf' },
+      { text: 'PubMed — Nigella sativa antihistamine.', url: 'https://pubmed.ncbi.nlm.nih.gov/23855426/' },
+      { text: 'PubMed Central — Nigella sativa anti-allergic review.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4387228/' },
+    ],
+  },
+
   // ══════════════════════════════════════════════════════════════════════
   // RESPIRATORY › COLD
   // ══════════════════════════════════════════════════════════════════════
@@ -1770,7 +2343,7 @@ export const PLANTS = {
       'Store completely out of reach of children: must be treated as a pharmaceutical hazard.',
       'Do not use undiluted on skin: always dilute to maximum 1-5% in carrier oil.',
     ],
-    relatedPlants: ['lemon', 'ginger', 'stinging-nettle'],
+    relatedPlants: ['lemon', 'stinging-nettle'],
     references: [
       { text: 'DOI — Eucalyptus phytotherapy research.', url: 'https://doi.org/10.1007/s10787-024-01588-8' },
       { text: 'PeaceHealth — Eucalyptus medical information.', url: 'https://www.peacehealth.org/medical-topics/id/hn-2086009?hl=en-US' },
@@ -1893,7 +2466,7 @@ export const PLANTS = {
       'Avoid adding boiling water (>60°C): destroys Vitamin C.',
       'Avoid in active GERD, gastritis, or peptic ulcer disease.',
     ],
-    relatedPlants: ['ginger', 'eucalyptus'],
+    relatedPlants: ['eucalyptus'],
     references: [
       { text: 'Egyptian Drug Authority — Citrus lemon monograph.', url: 'https://share.google/HGyIszy5fXiY9Ud1i' },
       { text: 'Addi, M., et al. (2021). An overview of bioactive flavonoids from citrus fruits. Applied Sciences, 12(1), 29.', url: 'https://doi.org/10.3390/app12010029' },
@@ -2630,7 +3203,7 @@ export const PLANTS = {
       'Do NOT use in intestinal obstruction, acute abdominal pain, or inflammatory bowel disease.',
       'Risk of dangerous hypokalemia with overuse - monitor electrolytes if used medically.',
     ],
-    relatedPlants: ['psyllium', 'ginger', 'fennel'],
+    relatedPlants: ['psyllium', 'fennel'],
     references: [
       { text: 'European Medicines Agency — Senna leaf herbal monograph.', url: 'https://www.ema.europa.eu/en/medicines/herbal/sennae-folium' },
       { text: 'WHO — Senna monograph (iris.who.int).', url: 'https://iris.who.int/server/api/core/bitstreams/6e21eaaa-d157-421d-a136-eb61964de18c/content' },
@@ -2750,7 +3323,7 @@ export const PLANTS = {
       'Absolutely contraindicated in fecal impaction and intestinal obstruction.',
       'Children under 6 years: only under pediatric medical supervision.',
     ],
-    relatedPlants: ['senna', 'castor', 'ginger'],
+    relatedPlants: ['senna', 'castor'],
     references: [
       { text: 'Egyptian Drug Authority — Plantago ovata monograph.', url: 'https://share.google/lH8q4stDezqsL7jNQ' },
       { text: 'European Medicines Agency — Plantago ovata herbal monograph.', url: 'https://www.ema.europa.eu/en/medicines/herbal/plantaginis-ovatae-seminis-tegumentum' },
@@ -2999,7 +3572,7 @@ export const PLANTS = {
       'Pure peppermint essential oil is STRICTLY CONTRAINDICATED in infants and children under 4 years.',
       'Separate from antacids and PPIs by at least 2 hours.',
     ],
-    relatedPlants: ['chamomile', 'ginger', 'fennel'],
+    relatedPlants: ['chamomile', 'fennel'],
     references: [
       { text: 'National Center for Complementary and Integrative Health — Peppermint Oil.', url: 'https://www.nccih.nih.gov/health/peppermint-oil' },
       { text: 'MedlinePlus — Peppermint.', url: 'https://medlineplus.gov/druginfo/natural/705.html' },
@@ -3118,7 +3691,7 @@ export const PLANTS = {
       'Separate from anticoagulants and monitor bleeding risk if used with blood thinners.',
       'Infants under 6 months: only under strict medical supervision.',
     ],
-    relatedPlants: ['peppermint', 'ginger', 'fennel'],
+    relatedPlants: ['peppermint', 'fennel'],
     references: [
       { text: 'National Center for Complementary and Integrative Health — Chamomile.', url: 'https://www.nccih.nih.gov/health/chamomile' },
       { text: 'Mount Sinai — Chamomile.', url: 'https://www.mountsinai.org/health-library/herb/chamomile' },
@@ -3230,7 +3803,7 @@ export const PLANTS = {
       { method: 'Golden Milk (Turmeric Latte)', desc: 'Mix 1 tsp turmeric + pinch of black pepper + 250 mL warm milk + honey. Fat and piperine together optimize curcumin absorption.', bestFor: 'Daily anti-inflammatory support, joint health' },
       { method: 'Standardized Capsule Extract', desc: 'Pharmaceutical-grade capsules standardized to 95% curcuminoids, co-formulated with BioPerine (piperine) for maximum bioavailability.', bestFor: 'Osteoarthritis, rheumatoid arthritis, therapeutic dosing' },
     ],
-    relatedPlants: ['ginger', 'black-seed', 'rosemary'],
+    relatedPlants: ['black-seed', 'rosemary'],
     references: [
       { text: 'World Health Organization (WHO). WHO Monographs on Selected Medicinal Plants, Volume 2: Rhizoma Curcumae Longae.' },
       { text: 'Aggarwal, B. B., et al. (2009). Potential therapeutic effects of curcumin in patients with inflammatory bowel disease, hyperlipidemia, and osteoarthritis. Alternative Therapies in Health and Medicine, 15(5), 44–53.' },
@@ -4658,7 +5231,7 @@ export const PLANTS = {
     preparation: [
       { method: 'Guava Leaf Cough Decoction', desc: 'Boil 4–5 guava leaves in 2 cups of water for 10–15 minutes. Add honey and ginger for enhanced effect. Strain and drink warm 2–3 times daily.', bestFor: 'Cough, sore throat, upper respiratory infections' },
     ],
-    relatedPlants: ['thyme', 'licorice', 'ginger'],
+    relatedPlants: ['thyme', 'licorice'],
     references: [
       { text: 'Gutierrez, R. M. P., Mitchell, S., & Solis, R. V. (2008). Psidium guajava: A review of its traditional uses, phytochemistry and pharmacology. Journal of Ethnopharmacology, 117(1), 1–27.' },
       { text: 'Begum, S., Hassan, S. I., Ali, S. N., & Siddiqui, B. S. (2004). Chemical constituents from the leaves of Psidium guajava. Natural Product Research, 18(2), 135–140.' },
@@ -4679,8 +5252,8 @@ export const CATEGORIES = [
     color: 'bg-tertiary-fixed text-on-tertiary-fixed-variant',
     image: '/images/categories/cat-womens.jpeg',
     subcategories: [
-      { id: 'menstrual-health',   name: 'Menstrual Health',              description: 'Support for cycle regulation and hormonal balance.',    image: '/images/categories/sub-menstrual.jpeg',    plants: ['ginger', 'cinnamon', 'dill-seed'] },
-      { id: 'pregnancy-support',  name: 'Pregnancy Support Plants',       description: 'Gentle, nourishing botanicals for expectant mothers.',  image: '/images/categories/sub-pregnancy.jpeg',    plants: ['ginger', 'psyllium', 'peppermint', 'cranberry'] },
+      { id: 'menstrual-health',   name: 'Menstrual Health',              description: 'Support for cycle regulation and hormonal balance.',    image: '/images/categories/sub-menstrual.jpeg',    plants: ['ginger-menstrual', 'cinnamon-menstrual', 'dill-seed-menstrual'] },
+      { id: 'pregnancy-support',  name: 'Pregnancy Support Plants',       description: 'Gentle, nourishing botanicals for expectant mothers.',  image: '/images/categories/sub-pregnancy.jpeg',    plants: ['ginger-pregnancy', 'psyllium-pregnancy', 'peppermint-pregnancy', 'cranberry-pregnancy'] },
       { id: 'breast-feeding',     name: 'Breast Feeding Support Plants',  description: 'Herbs to support lactation and nursing.',               image: '/images/categories/sub-breastfeeding.jpeg', plants: ['moringa', 'fenugreek', 'fennel'] },
       { id: 'hair-care',          name: 'Hair Care Plants',               description: 'Botanical extracts for scalp health and hair vitality.', image: '/images/categories/sub-hair-care.jpeg',    plants: ['aloe-vera', 'rocket', 'rosemary', 'garlic'] },
       { id: 'skin-care',          name: 'Skin Care Plants',               description: 'Botanicals for a radiant, healthy complexion.',          image: '/images/categories/sub-skin-care.jpeg',    plants: ['aloe-vera', 'licorice', 'tea-tree', 'green-tea', 'rosemary'] },
@@ -4697,9 +5270,9 @@ export const CATEGORIES = [
     image: '/images/categories/cat-digestive.jpeg',
     subcategories: [
       { id: 'constipation-relief', name: 'Constipation Relief Plants', description: 'Support healthy bowel motility and regularity.',         image: '/images/categories/sub-constipation.jpeg', plants: ['senna', 'psyllium', 'castor'] },
-      { id: 'diarrhea-support',    name: 'Diarrhea Support Plants',    description: 'Astringent herbs to soothe and settle the tract.',      image: '/images/categories/sub-diarrhea.jpeg',     plants: ['peppermint', 'chamomile', 'ginger', 'fennel'] },
+      { id: 'diarrhea-support',    name: 'Diarrhea Support Plants',    description: 'Astringent herbs to soothe and settle the tract.',      image: '/images/categories/sub-diarrhea.jpeg',     plants: ['peppermint', 'chamomile', 'fennel'] },
       { id: 'dyspepsia',           name: 'Dyspepsia',                  description: 'Herbal relief for indigestion and stomach discomfort.', image: '/images/categories/sub-dyspepsia.jpeg',    plants: ['peppermint', 'chamomile', 'fennel'] },
-      { id: 'ibs',                 name: 'IBS',                        description: 'Calming carminatives to manage IBS symptoms.',          image: '/images/categories/sub-ibs.jpeg',          plants: ['peppermint', 'psyllium', 'ginger'] },
+      { id: 'ibs',                 name: 'IBS',                        description: 'Calming carminatives to manage IBS symptoms.',          image: '/images/categories/sub-ibs.jpeg',          plants: ['peppermint', 'psyllium'] },
     ],
   },
   {
@@ -4712,8 +5285,8 @@ export const CATEGORIES = [
     color: 'bg-primary-fixed text-on-primary-fixed',
     image: '/images/categories/cat-respiratory.jpeg',
     subcategories: [
-      { id: 'cold',      name: 'Cold',      description: 'Herbs to ease cold symptoms and speed recovery.',           image: '/images/categories/sub-cold.jpeg',      plants: ['eucalyptus', 'ginger', 'lemon'] },
-      { id: 'rhinitis',  name: 'Rhinitis',  description: 'Botanical support for nasal inflammation and runny nose.',  image: '/images/categories/sub-rhinitis.jpeg',  plants: ['butterbur', 'stinging-nettle', 'black-seed'] },
+      { id: 'cold',      name: 'Cold',      description: 'Herbs to ease cold symptoms and speed recovery.',           image: '/images/categories/sub-cold.jpeg',      plants: ['eucalyptus', 'lemon'] },
+      { id: 'rhinitis',  name: 'Rhinitis',  description: 'Botanical support for nasal inflammation and runny nose.',  image: '/images/categories/sub-rhinitis.jpeg',  plants: ['butterbur', 'stinging-nettle', 'black-seed-rhinitis'] },
       { id: 'sinusitis', name: 'Sinusitis', description: 'Clear congestion and sinus pressure naturally.',             image: '/images/categories/sub-sinusitis.jpeg', plants: ['pelargonium', 'eucalyptus', 'black-elderberry'] },
       { id: 'cough',     name: 'Cough',     description: 'Soothing herbs for irritated throats and airways.',         image: '/images/categories/sub-cough.jpeg',     plants: ['guava', 'anise', 'thyme', 'licorice'] },
     ],
@@ -4729,7 +5302,7 @@ export const CATEGORIES = [
     image: '/images/categories/cat-immunity.jpeg',
     subcategories: [
       { id: 'immune-boosting',   name: 'Immune Boosting Plants',   description: 'Deep immune system support with powerful botanicals.', image: '/images/categories/sub-immune-boosting.jpeg',    plants: ['echinacea', 'black-seed', 'astragalus'] },
-      { id: 'anti-inflammatory', name: 'Anti-Inflammatory Plants', description: 'Modulate the inflammatory response naturally.',       image: '/images/categories/sub-anti-inflammatory.jpeg', plants: ['turmeric', 'ginger', 'rosemary', 'garlic'] },
+      { id: 'anti-inflammatory', name: 'Anti-Inflammatory Plants', description: 'Modulate the inflammatory response naturally.',       image: '/images/categories/sub-anti-inflammatory.jpeg', plants: ['turmeric', 'rosemary', 'garlic'] },
     ],
   },
   {
@@ -4766,29 +5339,29 @@ export const SYMPTOM_TAG_MAP = {
   'Dark spots':              ['licorice', 'green-tea'],
   'Rosacea':                 ['licorice', 'green-tea'],
   'Eczema':                  ['licorice', 'aloe-vera'],
-  'Cough':                   ['licorice', 'lemon', 'ginger', 'eucalyptus'],
-  'Sore throat':             ['licorice', 'lemon', 'ginger', 'eucalyptus'],
+  'Cough':                   ['licorice', 'lemon', 'eucalyptus'],
+  'Sore throat':             ['licorice', 'lemon', 'eucalyptus'],
   'Hair loss':               ['rosemary', 'rocket', 'garlic'],
   'Scalp issues':            ['rosemary', 'tea-tree', 'garlic', 'rocket'],
   'Hair breakage':           ['rocket', 'garlic'],
   'Memory':                  ['rosemary'],
   'Constipation':            ['senna', 'psyllium', 'castor'],
   'Bowel irregularity':      ['senna', 'psyllium', 'castor'],
-  'Diarrhea':                ['peppermint', 'chamomile', 'ginger', 'fennel'],
+  'Diarrhea':                ['peppermint', 'chamomile', 'fennel'],
   'IBS symptoms':            ['peppermint', 'chamomile'],
-  'Abdominal cramps':        ['peppermint', 'chamomile', 'ginger', 'fennel'],
+  'Abdominal cramps':        ['peppermint', 'chamomile', 'fennel'],
   'Gastritis':               ['chamomile', 'licorice'],
-  'Digestive discomfort':    ['rosemary', 'ginger', 'dill-seed', 'fennel', 'cinnamon', 'peppermint', 'chamomile'],
+  'Digestive discomfort':    ['rosemary', 'fennel', 'peppermint', 'chamomile'],
   'Low milk supply':         ['fenugreek', 'fennel', 'moringa'],
-  'Infant colic':            ['fennel', 'dill-seed'],
-  'Bloating':                ['fennel', 'dill-seed'],
-  'Menstrual cramps':        ['ginger', 'dill-seed', 'cinnamon'],
-  'Nausea':                  ['ginger', 'lemon'],
-  'Vomiting':                ['ginger', 'lemon'],
-  'Cold symptoms':           ['ginger', 'lemon', 'eucalyptus', 'echinacea'],
-  'Joint pain':              ['ginger', 'stinging-nettle'],
-  'Heavy bleeding':          ['cinnamon'],
-  'PCOS':                    ['cinnamon'],
+  'Infant colic':            ['fennel'],
+  'Bloating':                ['fennel'],
+  'Menstrual cramps':        ['ginger-menstrual', 'dill-seed-menstrual', 'cinnamon-menstrual'],
+  'Nausea':                  ['lemon'],
+  'Vomiting':                ['lemon'],
+  'Cold symptoms':           ['lemon', 'eucalyptus', 'echinacea'],
+  'Joint pain':              ['stinging-nettle'],
+  'Heavy bleeding':          ['cinnamon-menstrual'],
+  'PCOS':                    ['cinnamon-menstrual'],
   'Rhinorrhea':              ['butterbur', 'stinging-nettle'],
   'Sneezing':                ['butterbur', 'stinging-nettle'],
   'Nasal congestion':        ['butterbur', 'stinging-nettle', 'eucalyptus'],
@@ -4801,9 +5374,9 @@ export const SYMPTOM_TAG_MAP = {
   'High cholesterol':        ['black-seed', 'fenugreek'],
   'Chronic fatigue':         ['astragalus'],
   'Recurrent infections':    ['echinacea', 'astragalus'],
-  'Joint pain':              ['ginger', 'turmeric', 'rosemary', 'stinging-nettle'],
-  'Chronic inflammation':    ['turmeric', 'ginger', 'rosemary', 'garlic'],
-  'Arthritis':               ['turmeric', 'ginger', 'stinging-nettle'],
+  'Joint pain':              ['turmeric', 'rosemary', 'stinging-nettle'],
+  'Chronic inflammation':    ['turmeric', 'rosemary', 'garlic'],
+  'Arthritis':               ['turmeric', 'stinging-nettle'],
   'Liver support':           ['turmeric', 'dandelion'],
   'Oral infections':         ['clove', 'tea-tree'],
   'Toothache':               ['clove'],

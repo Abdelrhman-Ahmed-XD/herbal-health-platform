@@ -96,12 +96,14 @@ export default function PlantDetailPage() {
   const storage           = arObj(arData?.storage,           plant.storage);
   const { marketedProducts } = plant;
   const warnings          = arArr(arData?.warnings,          plant.warnings);
+  const factsAndMyths     = arArr(arData?.factsAndMyths,     plant.factsAndMyths);
 
   const factLabels = {
-    family:          t('plant_family'),
-    nativeRegion:    t('plant_native'),
-    growthHabit:     t('plant_growth'),
-    activeCompounds: t('plant_compounds'),
+    family:           t('plant_family'),
+    nativeRegion:     t('plant_native'),
+    growthHabit:      t('plant_growth'),
+    activeCompounds:  t('plant_compounds'),
+    clinicalEvidence: t('plant_clinical_evidence'),
   };
 
   return (
@@ -479,6 +481,33 @@ export default function PlantDetailPage() {
                       <span key={s} className="bg-primary-fixed text-on-primary-fixed font-manrope text-sm font-medium px-4 py-2 rounded-full">
                         {s}
                       </span>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Facts & Myths */}
+              {factsAndMyths?.length > 0 && (
+                <div>
+                  <h2 className="font-caslon text-headline-sm text-primary mb-4">{t('plant_facts_myths')}</h2>
+                  <div className="space-y-4">
+                    {factsAndMyths.map((item, i) => (
+                      <div key={i} className="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden">
+                        <div className={`flex gap-3 items-start p-4 bg-red-50 border-b border-surface-container-high ${isAr ? 'text-right' : ''}`}>
+                          <span className="material-symbols-outlined text-red-500 text-base flex-shrink-0 mt-0.5">close</span>
+                          <div>
+                            <p className="font-manrope text-xs font-bold text-red-700 uppercase tracking-wider mb-1">{t('plant_myth')}</p>
+                            <p className="font-manrope text-sm text-red-700 leading-relaxed">{item.myth}</p>
+                          </div>
+                        </div>
+                        <div className={`flex gap-3 items-start p-4 ${isAr ? 'text-right' : ''}`}>
+                          <span className="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">check_circle</span>
+                          <div>
+                            <p className="font-manrope text-xs font-bold text-secondary uppercase tracking-wider mb-1">{t('plant_fact')}</p>
+                            <p className="font-manrope text-sm text-on-surface-variant leading-relaxed">{item.fact}</p>
+                          </div>
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </div>

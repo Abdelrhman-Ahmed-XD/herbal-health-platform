@@ -3300,118 +3300,184 @@ export const PLANTS = {
   'eucalyptus': {
     id: 'eucalyptus',
     name: 'Eucalyptus',
-    nameAr: 'اليوكاليبتوس',
+    nameAr: 'اليوكاليبتوس / كافور الورق',
     latinName: 'Eucalyptus globulus Labill.',
     commonNames: ['Eucalyptus', 'Blue gum', 'Fever tree'],
     category: 'respiratory',
     subcategory: 'cold',
-    tags: ['Expectorant', 'Decongestant', 'Mucolytic', 'Respiratory', 'Essential Oil'],
-    image: '/images/Picture307.jpeg',
-    shortDescription: 'The gold standard respiratory botanical: 1,8-cineole (eucalyptol) at 70-85% provides simultaneous mucolytic, decongestant, and anti-inflammatory actions for cough, congestion, and bronchial irritation. CRITICAL: Pure oil is highly toxic if swallowed.',
-    description: 'Eucalyptus oil is strictly determined by its high volatile monoterpene content: primarily 1,8-cineole (70-85%), which must meet pharmacopeial standards (typically >70% cineole). 1,8-cineole directly stimulates respiratory epithelium ciliary beat (secretomotoric action) and downregulates mucin gene expression (MUC2 and MUC19) to thin mucus secretions. It also stimulates TRPM8 cold receptors in nasal mucosa, creating a decongestant cooling sensation similar to menthol. CRITICAL: 3.5 mL of pure oil can be fatal in an adult.',
-    history: 'Eucalyptus trees are native to Australia where Aboriginal peoples used steam inhalation for respiratory ailments. Introduced to Europe in the 19th century as a fever remedy (hence "fever tree"). The purified oil has been used in pharmaceutical formulations (lozenges, inhalations, chest rubs) for over 150 years and remains one of the most commercially produced essential oils worldwide.',
-    isDemo: false,
+    image: '/images/Picture6.jpg',
     activeConstituents: [
-      { name: '1,8-Cineole (Eucalyptol)', percentage: '70-85%', effect: 'Primary active monoterpene alcohol; mucolytic, secretomotoric, and anti-inflammatory activities in respiratory tracts' },
-      { name: 'α-Pinene & Limonene', percentage: 'minor', effect: 'Minor monoterpene hydrocarbons; synergistic antiseptic and antioxidant protection' },
-      { name: 'Sesquiterpenes (e.g., Globulol)', percentage: 'minor', effect: 'Contributes to characteristic aroma and antimicrobial profile' },
-      { name: 'Flavonoids & Hydrolyzable Tannins', percentage: '', effect: 'Present in crude leaf extracts; astringent and cellular antioxidant support' },
+      { name: '1,8-Cineole (Eucalyptol)', detail: 'The primary active monoterpene alcohol (comprising 70–85% of the oil). It is the principal compound responsible for the mucolytic, secretolytic, and anti-inflammatory activities in respiratory tracts.' },
+      { name: 'α-Pinene & Limonene', detail: 'Minor monoterpene hydrocarbons that act synergistically to provide secondary antiseptic and antioxidant protection.' },
+      { name: 'Sesquiterpenes (e.g., Globulol)', detail: 'Contributes to the characteristic aroma and antimicrobial profile.' },
+      { name: 'Flavonoids & Hydrolyzable Tannins', detail: 'Present in the crude leaf extracts, providing astringent and cellular antioxidant support.' },
     ],
     moa: [
-      { title: 'Secretomotoric & Mucolytic Effect', detail: '1,8-Cineole directly stimulates the ciliary beat frequency of the respiratory epithelium (secretomotoric action). Concurrently, it exerts a true mucolytic effect by downregulating genetic expression of mucin genes (MUC2 and MUC19) in airway goblet cells, effectively thinning hyperviscous mucus and facilitating effective expectoration.' },
-      { title: 'Anti-inflammatory Action', detail: 'Strongly suppresses production of pro-inflammatory cascades. Inhibits activation of NF-κB, leading to significant reduction in TNF-α, IL-1β, leukotriene B4 (LTB4), and thromboxane B2 synthesis.' },
-      { title: 'Decongestant Effect (Sensory Modification)', detail: 'Actively stimulates TRPM8 cold receptors on afferent trigeminal nerve endings within the nasal mucosa. Similar to menthol, this induces a localized cooling sensation, reducing the perception of nasal congestion and breathing resistance without acting as a true vasoconstrictor.' },
-      { title: 'Antimicrobial Action', detail: 'Disrupts bacterial cell membrane integrity with notable bacteriostatic and bactericidal effects against common respiratory pathogens like Streptococcus pneumoniae and Haemophilus influenzae.' },
+      { title: 'Secretomotoric & Mucolytic Effect', detail: '1,8-Cineole directly stimulates the ciliary beat frequency of the respiratory epithelium (secretomotoric action). Concurrently, it exerts a true mucolytic effect by downregulating the genetic expression of mucin genes (MUC2 and MUC19) in airway goblet cells, effectively thinning hyperviscous mucus secretions and facilitating effective expectoration.' },
+      { title: 'Anti-inflammatory Action', detail: 'Strongly suppresses the production of pro-inflammatory cascades. It inhibits the activation of Nuclear Factor-kappa B (NF-κB), leading to a significant reduction in the synthesis of tumor necrosis factor-alpha (TNF-α), interleukin-1β (IL-1β), leukotriene B4 (LTB4), and thromboxane B2.' },
+      { title: 'Decongestant Effect (Sensory Modification)', detail: 'Actively stimulates the TRPM8 cold receptors located on the afferent trigeminal nerve endings within the nasal mucosa. Similar to menthol, this interaction induces a localized cooling sensation, which psychologically and physiologically reduces the perception of nasal congestion and breathing resistance without acting as a vascular vasoconstrictor.' },
+      { title: 'Antimicrobial Action', detail: 'Disrupts bacterial cell membrane integrity, demonstrating notable bacteriostatic and bactericidal effects against common respiratory pathogens like Streptococcus pneumoniae and Haemophilus influenzae.' },
     ],
     uses: [
-      'Symptomatic relief of productive cough: effective expectorant to loosen and clear viscous bronchial mucus',
-      'Alleviation of nasal and sinus congestion associated with common cold, acute rhinosinusitis, and influenza',
-      'Reduction of bronchial irritation: soothes catarrh and mild bronchospasms',
-      'Adjuvant therapy for sore throats: local anesthetic and antiseptic qualities in lozenges or gargles',
+      'Symptomatic Relief of Productive Cough: Functions as an effective expectorant to loosen and clear viscous bronchial mucus.',
+      'Alleviation of Nasal & Sinus Congestion: Relieves upper respiratory tract stuffiness associated with the common cold, acute rhinosinusitis, and influenza.',
+      'Reduction of Bronchial Irritation: Soothes catarrh and mild bronchospasms associated with non-acute respiratory ailments.',
+      'Adjuvant Therapy for Sore Throats: Utilized in lozenges or gargles for its mild local anesthetic and antiseptic qualities.',
     ],
     howToUse: [
-      { method: 'Steam Inhalation (Aqueous Vapor)', instruction: 'Add 2-5 drops of pure eucalyptus essential oil into a vessel of steaming (not boiling) water. Inhale the medicated vapors through nose and mouth for 5-10 minutes with eyes closed to avoid ocular irritation.' },
-      { method: 'Topical Application (Chest Rub)', instruction: 'Incorporate into a suitable carrier oil to a maximum concentration of 1%. Massage gently onto the chest or back to act as a localized counter-irritant and vapor releaser.' },
-      { method: 'Standardized Oral Pharmaceutical Formulations', instruction: 'Standardized eucalyptol is available in specific pharmaceutical enteric-coated capsules (e.g., Soledum® or Myrtol®) for lower respiratory infections: must be administered under medical supervision.' },
+      { method: 'Steam Inhalation (Aqueous Vapor)', instruction: 'Add 2–5 drops of pure eucalyptus essential oil into a vessel of steaming (not boiling) water. Inhale the medicated vapors through the nose and mouth for 5–10 minutes while keeping eyes closed to avoid ocular irritation.' },
+      { method: 'Topical Application (Chest Rub)', instruction: 'Incorporate the essential oil into a suitable lipid base or carrier oil (such as sweet almond or jojoba oil) to a maximum concentration of 1%. Massage gently onto the chest or back area to act as a localized counter-irritant and vapor releaser.' },
+      { method: 'Standardized Oral Formulations', instruction: 'Standardized eucalyptol is available in specific pharmaceutical enteric-coated capsules (e.g., Soledum® or Myrtol®) indicated for lower respiratory infections, and must be administered strictly under medical supervision.' },
     ],
     suitableAgeGroups: [
-      { group: 'Pregnancy & Lactation', notes: 'Oral administration STRICTLY CONTRAINDICATED: insufficient clinical safety data and potential risks of hepatic enzyme induction in fetus. Inhalation or low-dose topical use away from thoracic/mammary area generally considered low-risk during lactation.' },
-      { group: 'Pediatrics (<6 years)', notes: 'STRICTLY CONTRAINDICATED: formulations containing 1,8-cineole or pure eucalyptus oil must NEVER be applied to the face, nose, or chest of infants/young children under 6, nor used in steam inhalations. Exposure can trigger reflex glottis spasms, severe laryngospasm, acute respiratory depression, or systemic seizures.' },
-      { group: 'Geriatrics & Chronic Diseases', notes: 'Use with high clinical caution in patients with asthma history (unmonitored inhalation may trigger bronchospasm), epilepsy, or severe hepatic impairment.' },
+      { group: 'Pregnancy & Lactation', notes: 'Oral administration of the essential oil is strictly contraindicated due to insufficient clinical safety data and potential risks of hepatic enzyme induction in the fetus. Inhalation or low-dose topical cosmetic use away from the thoracic/mammary area is generally considered low-risk during lactation.' },
+      { group: 'Pediatrics (<6 years old)', notes: 'Strictly Contraindicated. Formulations containing 1,8-cineole or pure eucalyptus oil must never be applied topically to the face, nose, or chest of infants and young children under 6 years old, nor used in steam inhalations. Exposure can trigger reflex glottis spasms, severe laryngospasm, acute respiratory depression, or systemic seizures.' },
+      { group: 'Geriatrics & Chronic Diseases', notes: 'Use with high clinical caution in patients with history of asthma (unmonitored inhalation may trigger an acute bronchospasm bronchoconstriction reflex), epilepsy, or severe hepatic impairment.' },
     ],
-    dosage: {
-      standard: 'Steam inhalation: 2-5 drops in steaming water; 5-10 min, 2-3 times daily. Topical: max 1% in carrier oil. Oral pharmaceutical formulations only under medical supervision.',
-      forms: [
-        { form: 'Steam Inhalation', dose: '2-5 drops in steaming water; inhale 5-10 min, 2-3 times daily.' },
-        { form: 'Topical Chest Rub', dose: '1% maximum concentration in carrier oil; apply to chest or back.' },
-        { form: 'Enteric-Coated Oral Capsules (Pharmaceutical)', dose: 'As directed by prescribing physician only.' },
-      ],
-    },
     overdose: {
       symptoms: [
-        'Acute Ingestion Overdose (Severe Neuro- & Cytotoxicity): As little as 3.5 mL of pure oil can be FATAL in an adult; significantly less in pediatric patients.',
-        'Symptoms (Rapid onset within 10-30 minutes): Severe burning epigastric pain, projectile vomiting, nausea, severe CNS depression, profound ataxia, miosis (pinpoint pupils), convulsions, status epilepticus, and fatal respiratory failure or coma.',
-        'Topical: Severe localized erythema, burning sensation, pruritus, or allergic contact dermatitis.',
+        'Acute Ingestion Overdose (Severe Neuro- & Cytotoxicity): Accidental swallowing of concentrated eucalyptus oil is highly dangerous; as little as 3.5 mL of pure oil can be fatal in an adult, and significantly less in pediatric patients.',
+        'Symptoms (Rapid onset within 10–30 minutes): Severe burning epigastric pain, projectile vomiting, nausea, severe Central Nervous System (CNS) depression, profound Ataxia (loss of balance), miosis (pinpoint pupils), convulsions (seizures), status epilepticus, and fatal respiratory failure or coma.',
+        'Topical Irritation (Application of undiluted oil) — Symptoms: Severe localized erythema, burning sensation, pruritus, or allergic contact dermatitis.',
       ],
       management: [
-        'Oral: IMMEDIATE EMERGENCY HOSPITALIZATION. Do NOT induce emesis under any circumstances: extreme risk of volatile oil aspiration causing fatal chemical aspiration pneumonia. Establish airway protection, manage active convulsions with IV benzodiazepines, administer activated charcoal via gastric tube if within first hour.',
-        'Topical: Halt use immediately, wash skin with copious cool water and mild soap, apply soothing fragrance-free emollient.',
+        'Oral: Immediate emergency hospitalization. Do not induce emesis under any circumstances due to the extreme risk of volatile oil aspiration, leading to fatal chemical aspiration pneumonia. Establish airway protection, manage active convulsions with intravenous benzodiazepines, and administer activated charcoal via a gastric tube if clinically indicated within the first hour.',
+        'Topical: Halt use immediately, wash the skin area with copious cool water and mild soap, and apply a soothing, fragrance-free emollient.',
       ],
     },
-    sideEffects: [
-      'Inhalation (high concentration): respiratory tract irritation if used in poorly ventilated spaces',
-      'Topical (undiluted): severe localized irritation, erythema, burning, contact dermatitis',
-    ],
+    sideEffects: [],
     contraindications: [
-      'Known hypersensitivity to Eucalyptus globulus or other Myrtaceae family members',
-      'Infants and children under 6 years: laryngospasm and seizure risks',
-      'Active, unmonitored asthma or severe COPD',
-      'Pre-existing seizure disorders or history of epilepsy',
-      'Inflammatory diseases of the gastrointestinal tract or gall bladder (biliary disorders)',
-      'Severe hepatic insufficiency',
-      'Oral administration during pregnancy',
+      'Known genetic hypersensitivity to Eucalyptus globulus or other members of the Myrtaceae family.',
+      'Infants and children under 6 years of age (due to laryngospasm and seizure risks).',
+      'Active, unmonitored Asthma or severe chronic obstructive pulmonary disease (COPD).',
+      'Pre-existing Seizure Disorders or History of Epilepsy.',
+      'Severe hepatic insufficiency (monoterpenes undergo extensive hepatic clearance).',
+      'Oral administration during pregnancy.',
     ],
     drugInteractions: [],
     storage: {
       forms: [
-        { form: 'Essential Oil', instructions: 'Store in tightly sealed dark amber glass bottles in a cool, dark environment completely out of reach of children to prevent accidental fatal poisoning. Exposure to light and oxygen induces auto-oxidation of monoterpenes, rendering the oil highly irritating.' },
+        { form: 'Essential Oil', instructions: 'Store in tightly sealed, dark amber glass bottles located in a cool, dark environment completely out of reach of children to prevent accidental fatal poisoning. Exposure to light and oxygen induces the auto-oxidation of monoterpenes, rendering the oil highly irritating.' },
       ],
     },
     marketedProducts: [
-      { name: 'Sinex Nasal Spray', image: '/images/Picture308.jpeg' },
-      { name: 'Vicks VapoRub', image: '/images/Picture42.jpg' },
-      { name: 'Soledum Capsules (standardized eucalyptol)', image: '/images/Picture309.jpeg' },
+      { name: '', image: '/images/Eucalyptus1.jpg' },
+      { name: '', image: '/images/Eucalyptus2.jpg' },
+      { name: '', image: '/images/Eucalyptus3.jpg' },
     ],
-    benefits: [
-      { icon: 'air', title: 'Powerful Mucolytic', desc: '1,8-Cineole thins hyperviscous mucus by downregulating MUC2/MUC19 mucin genes and stimulates ciliary beat for effective expectoration.' },
-      { icon: 'thermostat', title: 'Natural Decongestant', desc: 'TRPM8 cold receptor stimulation in nasal mucosa creates instant cooling sensation, reducing perceived nasal congestion without vasoconstrictive side effects.' },
-      { icon: 'spa', title: 'Anti-inflammatory', desc: 'NF-κB inhibition significantly reduces TNF-α, IL-1β, LTB4, and thromboxane B2 in respiratory airways.' },
-      { icon: 'sanitizer', title: 'Antimicrobial', desc: 'Bactericidal against Streptococcus pneumoniae and Haemophilus influenzae: common causes of secondary respiratory infections.' },
+    benefits: [],
+    factsAndMyths: [
+      {
+        myth: 'Eucalyptus oil is an all-natural herbal extract, so drinking a few drops in warm water is perfectly safe to treat a cold.',
+        fact: 'Pure eucalyptus oil is highly toxic and can be fatal if swallowed due to its acute neurotoxic camphor-like actions. It is strictly indicated for inhalation or external application unless chemically processed into specific, enteric-coated pharmaceutical products.',
+      },
     ],
     botanicalFacts: {
       family: 'Myrtaceae',
-      nativeRegion: 'Tasmania and southeastern Australia; widely cultivated in subtropical regions worldwide',
-      growthHabit: 'Very fast-growing evergreen tree reaching 30-55 m tall (one of the tallest trees on earth); narrow, aromatic, lance-shaped adult leaves are the medicinal part',
-      activeCompounds: '1,8-Cineole (70-85% of oil), α-pinene, limonene, globulol',
-      cultivationNotes: 'Essential oil is steam-distilled from leaves and young twigs. Must contain >70% cineole to meet pharmacopeial pharmaceutical standard. Widely cultivated in Australia, Spain, Portugal, China, and Egypt.',
+      activeCompounds: '1,8-Cineole (70–85% of oil), α-pinene, limonene, sesquiterpenes (globulol), flavonoids, hydrolyzable tannins',
+      clinicalEvidence: 'Juergens et al. (2003) demonstrated anti-inflammatory activity of 1,8-cineole (eucalyptol) in bronchial asthma via a double-blind placebo-controlled trial; Yadegarinia et al. (2006) documented biochemical activities of Eucalyptus globulus essential oils.',
     },
-    preparation: [
-      { method: 'Steam Inhalation', desc: '2-5 drops in steaming water; inhale with eyes closed for 5-10 min.', bestFor: 'Nasal congestion, productive cough, sinus stuffiness' },
-      { method: 'Topical Chest Rub (1% dilution)', desc: 'Dilute 1% in carrier oil; apply to chest and back.', bestFor: 'Bronchial irritation, productive cough, muscle counter-irritant' },
-    ],
-    symptoms: ['Productive cough', 'Nasal congestion', 'Sinus stuffiness', 'Cold symptoms', 'Bronchial irritation', 'Sore throat'],
-    warnings: [
-      'CRITICAL: Pure eucalyptus oil is HIGHLY TOXIC if swallowed: even 3.5 mL can be fatal in an adult.',
-      'NEVER apply to the face, nostrils, or chest of children under 6 years old.',
-      'Store completely out of reach of children: must be treated as a pharmaceutical hazard.',
-      'Do not use undiluted on skin: always dilute to maximum 1-5% in carrier oil.',
-    ],
-    relatedPlants: ['lemon', 'stinging-nettle'],
+    relatedPlants: ['ginger-cold'],
     references: [
-      { text: 'DOI — Eucalyptus phytotherapy research.', url: 'https://doi.org/10.1007/s10787-024-01588-8' },
-      { text: 'PeaceHealth — Eucalyptus medical information.', url: 'https://www.peacehealth.org/medical-topics/id/hn-2086009?hl=en-US' },
-      { text: 'Egyptian Drug Authority — Eucalyptus monograph.', url: 'https://share.google/UxU0P9ogdLDFmvlxK' },
-      { text: 'ResearchGate — Eucalyptus pharmacology.', url: 'https://share.google/09LFp1qEYE5Do7HAB' },
+      { text: 'Juergens, U. R., Dethlefsen, U., Steinkamp, G., Gillissen, A., Repges, R., & Vetter, H. (2003). Anti-inflammatory activity of 1.8-cineole (eucalyptol) in bronchial asthma: a double-blind placebo-controlled trial. Respiratory Medicine, 97(3), 250-256.' },
+      { text: 'Yadegarinia, D., Gachkar, L., Rezaei, M. B., Taghizadeh, M., Astaneh, S. A., & Rasooli, I. (2006). Biochemical activities of Iranian Mentha piperita L. and Eucalyptus globulus Labill. essential oils. Phytochemistry, 67(12), 1249-1255.' },
+      { text: 'PeaceHealth Medical Topics (Eucalyptus Monograph).', url: 'https://www.peacehealth.org/medical-topics/id/hn-2086009?hl=en-US' },
+    ],
+  },
+
+  'ginger-cold': {
+    id: 'ginger-cold',
+    name: 'Ginger',
+    nameAr: 'الزنجبيل',
+    latinName: 'Zingiber officinale Roscoe',
+    commonNames: ['Ginger', 'African Ginger', 'Cochin Ginger'],
+    category: 'respiratory',
+    subcategory: 'cold',
+    image: '/images/Picture8.jpg',
+    activeConstituents: [
+      { name: 'Gingerols', detail: 'The primary active principles in fresh ginger rhizomes, with 6-gingerol being the most abundant and biologically active. It possesses potent anti-inflammatory and anti-emetic properties.' },
+      { name: 'Shogaols', detail: 'Formed via the thermal dehydration of gingerols during drying or heating processes. 6-shogaol is the predominant compound in dry ginger, exhibiting significantly higher chemical stability and a more potent anti-inflammatory and neuroprotective profile than gingerols.' },
+      { name: 'Paradols & Zingerone', detail: 'Secondary degradation products formed during long-term storage and cooking, contributing to the antioxidant and warming profile.' },
+      { name: 'Volatile Essential Oils (1% to 3%)', detail: 'Composed primarily of sesquiterpene hydrocarbons, chiefly beta-zingiberene (up to 35%), ar-curcumene, beta-sesquiphellandrene, and alpha-farnesene, which dictate the characteristic spicy aroma and contribute to the antimicrobial and antispasmodic effects.' },
+      { name: 'Phenolic Derivatives & Resins', detail: 'Provide secondary cellular antioxidant support and maintain gastric mucosal integrity at physiological doses.' },
+    ],
+    moa: [
+      { title: 'Anti-inflammatory Action', detail: 'Effectively suppresses pro-inflammatory signaling pathways. 6-gingerol and 6-shogaol act as dual inhibitors of the arachidonic acid cascade by downregulating cyclooxygenase-2 (COX-2) and 5-lipoxygenase (5-LOX) pathways, leading to a significant reduction in the synthesis of pro-inflammatory prostaglandins (PGE₂) and leukotrienes (LTB₄). Furthermore, they inhibit the activation of Nuclear Factor-kappa B (NF-κB), thereby suppressing the release of pro-inflammatory cytokines (TNF-α, IL-1β, and IL-6).' },
+      { title: 'Antispasmodic & Antitussive Effect', detail: 'Exerts a direct relaxant effect on airway smooth muscle cells (ASMCs). It blocks voltage-dependent calcium channels (VDCCs) and modulates intracellular calcium stores, which effectively mitigates bronchospasms and reduces non-productive, spasmodic coughing fits.' },
+      { title: 'Antioxidant Effect', detail: 'Directly scavenges reactive oxygen species (ROS), including superoxide and hydroxyl free radicals, while upregulating endogenous antioxidant defense enzymes like superoxide dismutase (SOD) and catalase, mitigating respiratory oxidative stress during infections.' },
+      { title: 'Antimicrobial & Antiviral Action', detail: 'Demonstrates notable in vitro antiviral activity, particularly against Respiratory Syncytial Virus (RSV) in human airway epithelium, by blocking viral attachment, internalization, and plaque formation. It also exhibits bacteriostatic actions against common secondary respiratory pathogens.' },
+      { title: 'Local Demulcent & Soothing Effect', detail: 'When administered as a warm aqueous infusion, the mucilaginous and resinous fractions exert a local demulcent effect over the pharyngeal mucosa, reducing sensory nerve irritation, throat roughness, and vocal cord hoarseness.' },
+    ],
+    uses: [
+      'Symptomatic Relief of Upper Respiratory Tract Infections: Alleviates secondary symptoms of the common cold, acute rhinitis, and influenza by promoting diaphoresis (mild sweating) and acting as a warming agent.',
+      'Alleviation of Pharyngitis and Laryngitis: Relieves sore throats, pharyngeal inflammation, and associated hoarseness or loss of voice.',
+      'Management of Non-Productive Coughs: Calms hyperreactive airways and spasmodic, dry coughs via peripheral smooth muscle relaxation.',
+      'Reduction of Secondary Cold Symptoms: Aids in managing mild fever, chills, and associated tension headaches due to its systemic analgesic and antipyretic actions.',
+    ],
+    howToUse: [
+      { method: 'Aqueous Infusion (Ginger Tea)', instruction: 'Steep 2–3 g of freshly sliced or grated rhizome in 200–250 mL of boiling water in a covered vessel for 10–15 minutes (to prevent the loss of volatile essential oils). Inhale vapors during consumption. Honey or lemon may be added as adjuvants.' },
+      { method: 'Crude Dried Powder', instruction: '1–4 g daily, administered in divided doses 500–1000 mg per dose mixed with food or warm water.' },
+      { method: 'Standardized Oral Capsules', instruction: '250–500 mg of standardized extract taken 2 to 4 times per day (typically standardized to contain 5% total gingerols/shogaols).' },
+      { method: 'Local Lozenges / Candies', instruction: 'Used as needed to dissolve slowly in the buccal cavity for targeted, local antiseptic and anesthetic action in the pharynx.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Pregnancy & Lactation', notes: 'Highly effective and clinically utilized for pregnancy-induced nausea and morning sickness. However, oral consumption must be strictly limited to a maximum of 1 g/day of dry ginger equivalent under medical supervision. High therapeutic doses are avoided due to theoretical risks of uterine contraction stimulation (oxytocic effect) and low-level inhibition of fetal testosterone binding. Safe during lactation at standard culinary doses.' },
+      { group: 'Pediatrics (<2 years old)', notes: 'Strictly Contraindicated. Safe clinical data is absent for infants. For children over 2 years of age, very mild aqueous infusions may be administered under supervision at weight-adjusted, significantly reduced doses.' },
+      { group: 'Geriatrics & Chronic Diseases', notes: 'Diabetes: Ginger enhances insulin sensitivity and may lower blood glucose; monitoring is required. Cardiovascular: May exert weak calcium-channel blocking properties; use with caution in patients taking antihypertensives. Cholelithiasis (Gallstones): Must be used with extreme clinical caution.' },
+    ],
+    overdose: {
+      symptoms: [
+        'Acute Oral Overdose (>5 g of dry ginger equivalent per day) — Symptoms: Severe gastric mucosal irritation, burning epigastric pain, severe heartburn, acid reflux, diarrhea, and local mouth/throat inflammation. At massive toxic doses, it can theoretically cause central nervous system depression and cardiac palpitations (due to positive inotropic actions of high-dose gingerols).',
+        'Topical Irritation (Undiluted Essential Oil) — Symptoms: Erythema and hypersensitivity contact dermatitis.',
+      ],
+      management: [
+        'Acute Oral Overdose: Discontinue use immediately. Administer oral antacids, H₂-receptor antagonists, or Proton Pump Inhibitors (PPIs) to soothe gastric mucosal erosion. Maintain hydration and electrolyte balance if diarrhea is present. Monitor coagulation profiles (PT/INR) if massive amounts were ingested due to theoretical antiplatelet actions.',
+        'Topical Irritation: Wash thoroughly with cool water and soap; apply a neutral emollient.',
+      ],
+    },
+    sideEffects: [],
+    contraindications: [
+      'Known hypersensitivity to Zingiber officinale or other members of the Zingiberaceae family (e.g., turmeric, cardamom).',
+      'Active Cholelithiasis (Gallstones): Ginger exhibits a potent choleretic effect (stimulates bile secretion and gallbladder contraction), which can precipitate biliary colic or bile duct obstruction in patients with pre-existing gallstones.',
+      'Active Peptic Ulcer Disease (PUD) or Ulcerative Colitis: May exacerbate underlying gastrointestinal lesions due to its pungent, local irritant properties when raw or highly concentrated.',
+      'Severe Bleeding Disorders: (e.g., Hemophilia) due to potential anti-aggregatory effects on platelets.',
+      'Major Pre-operative States: Must be discontinued 1 to 2 weeks prior to major surgical procedures.',
+    ],
+    drugInteractions: [
+      { drug: 'Anticoagulants / Antiplatelets (e.g., Warfarin, Aspirin, Clopidogrel)', effect: 'Ginger inhibits thromboxane synthase and acts as a weak platelet aggregation inhibitor in vitro. While clinical trials show conflicting data regarding significant INR alterations, close monitoring of bleeding times and INR is mandatory during concurrent use.' },
+      { drug: 'Antidiabetic Agents (e.g., Metformin, Insulin)', effect: 'May potentiate hypoglycemic effects by enhancing glucose uptake into skeletal muscle cells; blood glucose monitoring is recommended.' },
+      { drug: 'Calcium Channel Blockers (CCBs) (e.g., Nifedipine, Verapamil)', effect: 'High therapeutic doses of ginger may exert additive hypotensive and bradycardic properties via synergistic voltage-dependent calcium channel blockade.' },
+    ],
+    storage: {
+      forms: [
+        { form: 'Dry Powder / Standardized Capsules', instructions: 'Must be stored in tightly sealed, light-resistant containers below 25°C in a dry environment to avoid moisture absorption and the hydrolytic degradation of active gingerols.' },
+        { form: 'Fresh Ginger Rhizomes', instructions: 'Should be wrapped securely and refrigerated at 4°C to maintain cellular moisture and prevent fungal/microbial spoilage.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Ginger Capsules 400mg (Mepaco Pharaonia)', image: '/images/ginger2.jpg' },
+      { name: 'Emetal Drops / Capsules (Pharco Pharmaceuticals)', image: '/images/ginger1.jpg' },
+      { name: 'Rani Ginger Effervescent Granules', image: '' },
+      { name: 'Strepsils Ginger & Lemon Lozenges', image: '' },
+    ],
+    benefits: [],
+    factsAndMyths: [
+      {
+        myth: 'Ginger kills the influenza virus completely and works as an instant biological cure for the common cold.',
+        fact: 'Ginger does not eradicate or cure respiratory viral pathogens in vivo; rather, it acts as an exceptional supportive, evidence-based phytotherapy that significantly mitigates symptom severity, suppresses inflammatory cascades, and improves patient respiratory comfort.',
+      },
+    ],
+    botanicalFacts: {
+      family: 'Zingiberaceae',
+      activeCompounds: 'Gingerols (6-gingerol), shogaols (6-shogaol), paradols, zingerone, volatile essential oils (1–3%: beta-zingiberene, ar-curcumene, beta-sesquiphellandrene, alpha-farnesene), phenolic derivatives and resins',
+      clinicalEvidence: 'EMA (2014) European herbal monograph; WHO monograph on Zingiber officinale; Anh et al. (2020) comprehensive systematic review; Chang et al. (2013) demonstrated antiviral activity against RSV in human respiratory tract cell lines.',
+    },
+    relatedPlants: ['eucalyptus'],
+    references: [
+      { text: 'European Medicines Agency (EMA): European Union herbal monograph on Zingiber officinale Roscoe, rhizoma. (2014). Committee on Herbal Medicinal Products (HMPC).' },
+      { text: 'World Health Organization (WHO): WHO Monographs on Selected Medicinal Plants, Volume 1: Rhizoma Zingiberis. Geneva.' },
+      { text: 'Anh, N. H., Kim, S. J., Long, N. P., Min, J. E., Yoon, Y. C., Lee, E. G., Kim, M., Al-Mazaideh, A. M., & Kwon, S. W. (2020). Ginger on Human Health: A Comprehensive Systematic Review of Randomized Clinical Trials. Nutrients, 12(1), 157.' },
+      { text: 'Chang, J. S., Wang, K. C., Yeh, C. F., Shieh, D. E., & Chiang, L. C. (2013). Fresh ginger (Zingiber officinale) has antiviral activity against respiratory syncytial virus in human respiratory tract cell lines. Journal of Ethnopharmacology, 145(1), 146-151.' },
     ],
   },
 
@@ -4680,9 +4746,6 @@ export const PLANTS = {
       { group: 'Pregnancy', notes: 'Safe for conventional, moderate cosmetic topical use.' },
       { group: 'Frequency', notes: 'Aqueous leaf juice can be applied twice weekly; the cold-pressed seed oil is massaged thoroughly into the scalp for 5–10 minutes twice weekly prior to cleansing.' },
     ],
-    dosage: {
-      standard: 'Aqueous leaf juice applied twice weekly. Cold-pressed seed oil massaged into the scalp for 5–10 minutes twice weekly prior to cleansing.',
-    },
     overdose: {
       symptoms: [
         'Marked localized erythema, intense transient warmth or stinging sensation, and localized contact irritation.',
@@ -4712,6 +4775,7 @@ export const PLANTS = {
       },
     ],
     botanicalFacts: {
+      family: 'Brassicaceae (Cruciferous Family)',
       activeCompounds: 'Erucin (isothiocyanate), glucoerucin, oleic acid, linoleic acid, erucic acid, vitamins A/C/K, iron, magnesium, elemental sulfur, quercetin glycosides, kaempferol, isorhamnetin',
       clinicalEvidence: 'Active isothiocyanates require highly standardized concentrations or consistent, disciplined therapeutic protocols over a duration of several months to yield measurable cosmetic benefits in general hair thickness and breakage control. It is not an alternative to medical immunomodulators in alopecia areata.',
     },
@@ -4764,9 +4828,6 @@ export const PLANTS = {
       { group: 'Pregnancy & Lactation', notes: 'Generally safe for conventional, low-frequency cosmetic topical use; avoid highly concentrated, occlusive, or widespread applications due to systemic absorption of volatile metabolites.' },
       { group: 'Frequency', notes: 'Topically massaged into the designated scalp areas 1 to 2 times per week as a pre-shampoo mask treatment, followed by thorough washing.' },
     ],
-    dosage: {
-      standard: 'Topically massaged into the designated scalp areas 1 to 2 times per week as a pre-shampoo mask treatment, followed by thorough washing.',
-    },
     overdose: {
       symptoms: [
         'Intense localized burning sensations, acute contact dermatitis, severe localized erythema, and painful epidermal chemical micro-burns.',
@@ -7009,9 +7070,6 @@ export const PLANTS = {
       { group: 'Pregnancy & Lactation', notes: 'Deemed safe for topical/cosmetic application; systemic exposure is negligible.' },
       { group: 'Frequency', notes: 'Topically applied as a scalp mask or leave-on conditioner 2 to 3 times per week.' },
     ],
-    dosage: {
-      standard: 'Topically applied as a scalp mask or leave-on conditioner 2 to 3 times per week.',
-    },
     overdose: {
       symptoms: [
         'Mild transient erythema, localized burning sensation, or rare allergic contact dermatitis.',
@@ -7093,9 +7151,6 @@ export const PLANTS = {
       { group: 'Pregnancy', notes: 'Pure concentrated essential oils are completely avoided due to trace systemic absorption risks of camphor; mild aqueous infusions should only be utilized after direct medical clearance.' },
       { group: 'Posology', notes: '5–10 sprays of the aqueous infusion applied directly onto the scalp 1–2 times daily as a leave-on routine. Infused oils are massaged 1–2 times per week as a pre-shampoo treatment.' },
     ],
-    dosage: {
-      standard: '5–10 sprays of aqueous infusion onto scalp 1–2 times daily. Infused oils massaged 1–2 times per week as a pre-shampoo treatment.',
-    },
     overdose: {
       symptoms: [
         'Severe contact allergy, chemical irritation, localized desquamation, intense burning sensations, and generalized scalp inflammation.',
@@ -7127,6 +7182,7 @@ export const PLANTS = {
       },
     ],
     botanicalFacts: {
+      family: 'Lamiaceae',
       activeCompounds: 'Carnosic acid, carnosol, rosmarinic acid, caffeic acid, 1,8-cineole (eucalyptol), camphor, alpha-pinene, luteolin, apigenin',
       clinicalEvidence: 'Well-designed comparative clinical trials (e.g., Panahi et al.) demonstrate that standardized rosemary oil requires a minimum of 6 continuous months of highly compliant, twice-daily application to match the hair-count improvements seen with Minoxidil 2%. It is a slow, supportive vascular and antioxidant strategy requiring months of consistent discipline.',
     },
@@ -7583,7 +7639,7 @@ export const CATEGORIES = [
     color: 'bg-primary-fixed text-on-primary-fixed',
     image: '/images/categories/cat-respiratory.jpeg',
     subcategories: [
-      { id: 'cold',      name: 'Cold',      description: 'Herbs to ease cold symptoms and speed recovery.',           image: '/images/categories/sub-cold.jpeg',      plants: ['eucalyptus', 'lemon'] },
+      { id: 'cold',      name: 'Cold',      description: 'Herbs to ease cold symptoms and speed recovery.',           image: '/images/categories/sub-cold.jpeg',      plants: ['eucalyptus'] },
       { id: 'rhinitis',  name: 'Rhinitis',  description: 'Botanical support for nasal inflammation and runny nose.',  image: '/images/categories/sub-rhinitis.jpeg',  plants: ['butterbur', 'stinging-nettle', 'black-seed-rhinitis'] },
       { id: 'sinusitis', name: 'Sinusitis', description: 'Clear congestion and sinus pressure naturally.',             image: '/images/categories/sub-sinusitis.jpeg', plants: ['pelargonium', 'eucalyptus', 'black-elderberry'] },
       { id: 'cough',     name: 'Cough',     description: 'Soothing herbs for irritated throats and airways.',         image: '/images/categories/sub-cough.jpeg',     plants: ['guava', 'anise', 'thyme', 'licorice'] },

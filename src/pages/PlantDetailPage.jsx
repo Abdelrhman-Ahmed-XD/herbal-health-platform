@@ -200,7 +200,7 @@ export default function PlantDetailPage() {
                             </span>
                           )}
                         </div>
-                        <p className="font-manrope text-sm text-on-surface-variant leading-relaxed">{c.effect}</p>
+                        <p className="font-manrope text-sm text-on-surface-variant leading-relaxed">{c.effect ?? c.detail}</p>
                       </div>
                     ))}
                   </div>

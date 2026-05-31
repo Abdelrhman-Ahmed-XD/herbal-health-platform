@@ -3274,7 +3274,7 @@ export const PLANTS = {
     },
     overdose: {
       symptoms: [
-        'Acute Ingestion Overdose: Accidental swallowing of concentrated eucalyptus oil is highly dangerous; as little as 3.5 mL of pure oil can be fatal in an adult, and significantly less in pediatric patients.',
+        'Acute Ingestion Overdose: Accidental swallowing of concentrated eucalyptus oil is highly dangerous; as little as 3.5 mL of pure oil can be fatal in an pediatric, and significantly less in pediatric patients.',
         'Severe burning epigastric pain, projectile vomiting, nausea.',
         'Severe Central Nervous System (CNS) depression, profound Ataxia (loss of balance), miosis (pinpoint pupils).',
         'Convulsions (seizures), status epilepticus, and fatal respiratory failure or coma. Rapid onset within 10–30 minutes.',

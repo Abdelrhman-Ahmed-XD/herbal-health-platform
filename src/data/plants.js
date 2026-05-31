@@ -131,11 +131,6 @@ export const PLANTS = {
       { method: 'Topical Skincare Formulation', desc: 'Standardized commercial gels or creams containing aloe vera extract.', bestFor: 'Daily moisturizing, acne care, and UV protection' },
     ],
     symptoms: ['Skin irritation', 'Burns', 'Dry skin', 'Acne', 'Wound healing'],
-    warnings: [
-      'Never use unpurified oral aloe latex long-term: risk of severe hypokalemia and kidney damage.',
-      'Oral use absolutely contraindicated in pregnancy.',
-      'Avoid applying to deeply infected or surgical wounds as it may delay deep tissue healing.',
-    ],
     relatedPlants: ['tea-tree', 'green-tea', 'witch-hazel'],
     references: [
       { text: 'Surjushe, A., Vasani, R., & Saple, D. G. (2008). Aloe vera: A short review. Indian Journal of Dermatology, 53(4), 163–166.', url: 'https://journals.lww.com/ijd/fulltext/2008/53040/aloe_vera__a_short_review.1.aspx' },
@@ -248,11 +243,6 @@ export const PLANTS = {
       { method: 'Medicated Shampoo', desc: '5% TTO added to mild shampoo for scalp use.', bestFor: 'Dandruff, seborrheic dermatitis' },
     ],
     symptoms: ['Acne', 'Fungal infection', 'Dandruff', 'Minor wounds', 'Skin infections'],
-    warnings: [
-      'CRITICAL: Never ingest tea tree oil: highly toxic. Even small amounts can cause severe CNS toxicity.',
-      'Always dilute before skin application. Undiluted oil causes severe chemical burns.',
-      'Store out of reach of children: as little as a few mL can be dangerous if swallowed by a child.',
-    ],
     relatedPlants: ['aloe-vera', 'green-tea', 'licorice'],
     references: [
       { text: 'Egyptian Drug Authority — Tea Tree monograph.', url: 'https://share.google/YdFqGC2Zq6Z1YMHFc' },
@@ -383,11 +373,6 @@ export const PLANTS = {
       { method: 'Oral Root Infusion', desc: 'Steep chopped dried root in hot water for respiratory or digestive use.', bestFor: 'Cough, sore throat, gastric ulcer support' },
     ],
     symptoms: ['Hyperpigmentation', 'Dark spots', 'Acne', 'Rosacea', 'Eczema', 'Cough', 'Sore throat'],
-    warnings: [
-      'Oral licorice containing glycyrrhizin must not be used long-term: causes severe hypertension, hypokalemia, and cardiac arrhythmias.',
-      'Use DGL (deglycyrrhizinated) form for oral use in patients with cardiovascular or renal concerns.',
-      'Strictly avoid oral use in pregnancy.',
-    ],
     relatedPlants: ['aloe-vera', 'green-tea', 'tea-tree'],
     references: [
       { text: 'Healthline — Licorice Root: Benefits, Dosage, Side Effects, and More.', url: 'https://www.healthline.com/nutrition/licorice-root#dosage-and-forms' },
@@ -509,11 +494,6 @@ export const PLANTS = {
       { method: 'Oral Tea', desc: 'Brewed at 80-85°C for 3-5 minutes; 2-3 cups daily.', bestFor: 'Cardiovascular support, cognitive function, weight management' },
     ],
     symptoms: ['Acne', 'Oily skin', 'Dark circles', 'Puffiness', 'UV damage', 'Aging skin'],
-    warnings: [
-      'Concentrated green tea extract supplements must never be taken on an empty stomach: risk of acute hepatotoxicity.',
-      'Limit oral intake during pregnancy to 1-2 cups daily; high EGCG may impair folic acid metabolism.',
-      'Avoid with MAO inhibitors or CNS stimulants due to caffeine interactions.',
-    ],
     relatedPlants: ['aloe-vera', 'tea-tree', 'rosemary'],
     references: [
       { text: 'National Center for Biotechnology Information — Green Tea.', url: 'https://pubchem.ncbi.nlm.nih.gov' },
@@ -633,11 +613,6 @@ export const PLANTS = {
       { method: 'Oral Herbal Tea', desc: 'Steep 1-2 g dried leaves covered at 85-90°C for 10-15 minutes.', bestFor: 'Cognitive support, dyspepsia, antioxidant maintenance' },
     ],
     symptoms: ['Hair loss', 'Dandruff', 'Scalp issues', 'Memory', 'Muscle pain', 'Digestive discomfort'],
-    warnings: [
-      'Oral use in medicinal doses strictly contraindicated in pregnancy: emmenagogue and uterine stimulant.',
-      'Essential oil must NEVER be applied near the face of children under 6 years old.',
-      'Camphor content can lower seizure threshold: avoid oral use in epilepsy patients.',
-    ],
     relatedPlants: ['green-tea', 'aloe-vera', 'witch-hazel'],
     references: [
       { text: 'WebMD — Rosemary Uses, Side Effects, Interactions.', url: 'https://www.webmd.com/vitamins/ai/ingredientmono-154/rosemary' },
@@ -777,11 +752,6 @@ export const PLANTS = {
       { method: 'Topical Skincare Formulation', desc: 'Standardized commercial gels or creams containing aloe vera extract.', bestFor: 'Daily moisturizing, acne care, and UV protection' },
     ],
     symptoms: ['Skin irritation', 'Burns', 'Dry skin', 'Acne', 'Wound healing'],
-    warnings: [
-      'Never use unpurified oral aloe latex long-term: risk of severe hypokalemia and kidney damage.',
-      'Oral use absolutely contraindicated in pregnancy.',
-      'Avoid applying to deeply infected or surgical wounds as it may delay deep tissue healing.',
-    ],
     relatedPlants: ['tea-tree-skincare', 'green-tea-skincare', 'witch-hazel'],
     references: [
       { text: 'Surjushe, A., Vasani, R., & Saple, D. G. (2008). Aloe vera: A short review. Indian Journal of Dermatology, 53(4), 163–166.', url: 'https://journals.lww.com/ijd/fulltext/2008/53040/aloe_vera__a_short_review.1.aspx' },
@@ -894,11 +864,6 @@ export const PLANTS = {
       { method: 'Medicated Shampoo', desc: '5% TTO added to mild shampoo for scalp use.', bestFor: 'Dandruff, seborrheic dermatitis' },
     ],
     symptoms: ['Acne', 'Fungal infection', 'Dandruff', 'Minor wounds', 'Skin infections'],
-    warnings: [
-      'CRITICAL: Never ingest tea tree oil: highly toxic. Even small amounts can cause severe CNS toxicity.',
-      'Always dilute before skin application. Undiluted oil causes severe chemical burns.',
-      'Store out of reach of children: as little as a few mL can be dangerous if swallowed by a child.',
-    ],
     relatedPlants: ['aloe-vera-skincare', 'green-tea-skincare', 'licorice-skincare'],
     references: [
       { text: 'Egyptian Drug Authority — Tea Tree monograph.', url: 'https://share.google/YdFqGC2Zq6Z1YMHFc' },
@@ -1029,11 +994,6 @@ export const PLANTS = {
       { method: 'Oral Root Infusion', desc: 'Steep chopped dried root in hot water for respiratory or digestive use.', bestFor: 'Cough, sore throat, gastric ulcer support' },
     ],
     symptoms: ['Hyperpigmentation', 'Dark spots', 'Acne', 'Rosacea', 'Eczema', 'Cough', 'Sore throat'],
-    warnings: [
-      'Oral licorice containing glycyrrhizin must not be used long-term: causes severe hypertension, hypokalemia, and cardiac arrhythmias.',
-      'Use DGL (deglycyrrhizinated) form for oral use in patients with cardiovascular or renal concerns.',
-      'Strictly avoid oral use in pregnancy.',
-    ],
     relatedPlants: ['aloe-vera-skincare', 'green-tea-skincare', 'tea-tree-skincare'],
     references: [
       { text: 'Healthline — Licorice Root: Benefits, Dosage, Side Effects, and More.', url: 'https://www.healthline.com/nutrition/licorice-root#dosage-and-forms' },
@@ -1155,11 +1115,6 @@ export const PLANTS = {
       { method: 'Oral Tea', desc: 'Brewed at 80-85°C for 3-5 minutes; 2-3 cups daily.', bestFor: 'Cardiovascular support, cognitive function, weight management' },
     ],
     symptoms: ['Acne', 'Oily skin', 'Dark circles', 'Puffiness', 'UV damage', 'Aging skin'],
-    warnings: [
-      'Concentrated green tea extract supplements must never be taken on an empty stomach: risk of acute hepatotoxicity.',
-      'Limit oral intake during pregnancy to 1-2 cups daily; high EGCG may impair folic acid metabolism.',
-      'Avoid with MAO inhibitors or CNS stimulants due to caffeine interactions.',
-    ],
     relatedPlants: ['aloe-vera-skincare', 'tea-tree-skincare', 'rosemary-skincare'],
     references: [
       { text: 'National Center for Biotechnology Information — Green Tea.', url: 'https://pubchem.ncbi.nlm.nih.gov' },
@@ -1279,11 +1234,6 @@ export const PLANTS = {
       { method: 'Oral Herbal Tea', desc: 'Steep 1-2 g dried leaves covered at 85-90°C for 10-15 minutes.', bestFor: 'Cognitive support, dyspepsia, antioxidant maintenance' },
     ],
     symptoms: ['Hair loss', 'Dandruff', 'Scalp issues', 'Memory', 'Muscle pain', 'Digestive discomfort'],
-    warnings: [
-      'Oral use in medicinal doses strictly contraindicated in pregnancy: emmenagogue and uterine stimulant.',
-      'Essential oil must NEVER be applied near the face of children under 6 years old.',
-      'Camphor content can lower seizure threshold: avoid oral use in epilepsy patients.',
-    ],
     relatedPlants: ['green-tea-skincare', 'aloe-vera-skincare', 'witch-hazel'],
     references: [
       { text: 'WebMD — Rosemary Uses, Side Effects, Interactions.', url: 'https://www.webmd.com/vitamins/ai/ingredientmono-154/rosemary' },
@@ -1419,11 +1369,6 @@ export const PLANTS = {
       { method: 'Culinary Use', desc: 'Add seeds to food or sprinkle powder into smoothies, yogurt, or soups.', bestFor: 'Nutritional supplementation, gradual lactation support' },
     ],
     symptoms: ['Low milk supply', 'Postpartum fatigue', 'Nutritional deficiency during lactation'],
-    warnings: [
-      'STRICTLY CONTRAINDICATED in pregnancy: causes uterine contractions and risk of miscarriage.',
-      'May cause maple syrup body odor in both mother and infant: this is harmless but can be alarming.',
-      'Monitor blood sugar closely if taking alongside diabetes medications: risk of dangerous hypoglycemia.',
-    ],
     relatedPlants: ['fennel', 'moringa'],
     references: [
       { text: 'National Center for Biotechnology Information — Fenugreek.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK501779/' },
@@ -1550,11 +1495,6 @@ export const PLANTS = {
       { method: 'Culinary Incorporation', desc: 'Add to soups, salads, or roasted vegetables.', bestFor: 'Nutritional supplementation, mild digestive support' },
     ],
     symptoms: ['Low milk supply', 'Infant colic', 'Bloating', 'Menstrual pain', 'Digestive discomfort'],
-    warnings: [
-      'STRICTLY CONTRAINDICATED in pregnancy: emmenagogue effects may cause uterine contractions.',
-      'Avoid concentrated fennel essential oil while breastfeeding: can be toxic to infants.',
-      'Do not use in hormone-sensitive cancers (estrogen-like activity).',
-    ],
     relatedPlants: ['fenugreek', 'moringa', 'anise'],
     references: [
       { text: 'PubMed Central — Fennel and lactation.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4137549/' },
@@ -1697,11 +1637,6 @@ export const PLANTS = {
       { method: 'Fresh Leaves (Cooked)', desc: 'Cooked like spinach in local dishes.', bestFor: 'Culinary integration, nutritional boost' },
     ],
     symptoms: ['Low milk supply', 'Postpartum fatigue', 'Nutritional deficiency', 'Anemia during lactation'],
-    warnings: [
-      'Use LEAVES ONLY during breastfeeding: moringa roots, bark, and flowers contain dangerous toxin spirochin.',
-      'STRICTLY CONTRAINDICATED in pregnancy: all parts except leaves can cause uterine contractions.',
-      'Monitor blood sugar and blood pressure closely when taking alongside antidiabetic or antihypertensive medications.',
-    ],
     relatedPlants: ['fenugreek', 'fennel'],
     references: [
       { text: 'PubMed Central — Moringa oleifera and lactation.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9684698/' },
@@ -1836,11 +1771,6 @@ export const PLANTS = {
       { method: 'Culinary Use', desc: 'Add seeds to food or sprinkle powder into smoothies, yogurt, or soups.', bestFor: 'Nutritional supplementation, gradual lactation support' },
     ],
     symptoms: ['Low milk supply', 'Postpartum fatigue', 'Nutritional deficiency during lactation'],
-    warnings: [
-      'STRICTLY CONTRAINDICATED in pregnancy: causes uterine contractions and risk of miscarriage.',
-      'May cause maple syrup body odor in both mother and infant: this is harmless but can be alarming.',
-      'Monitor blood sugar closely if taking alongside diabetes medications: risk of dangerous hypoglycemia.',
-    ],
     relatedPlants: ['fennel-breastfeeding', 'moringa-breastfeeding'],
     references: [
       { text: 'National Center for Biotechnology Information — Fenugreek.', url: 'https://www.ncbi.nlm.nih.gov/books/NBK501779/' },
@@ -1967,11 +1897,6 @@ export const PLANTS = {
       { method: 'Culinary Incorporation', desc: 'Add to soups, salads, or roasted vegetables.', bestFor: 'Nutritional supplementation, mild digestive support' },
     ],
     symptoms: ['Low milk supply', 'Infant colic', 'Bloating', 'Menstrual pain', 'Digestive discomfort'],
-    warnings: [
-      'STRICTLY CONTRAINDICATED in pregnancy: emmenagogue effects may cause uterine contractions.',
-      'Avoid concentrated fennel essential oil while breastfeeding: can be toxic to infants.',
-      'Do not use in hormone-sensitive cancers (estrogen-like activity).',
-    ],
     relatedPlants: ['fenugreek-breastfeeding', 'moringa-breastfeeding'],
     references: [
       { text: 'PubMed Central — Fennel and lactation.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC4137549/' },
@@ -2114,11 +2039,6 @@ export const PLANTS = {
       { method: 'Fresh Leaves (Cooked)', desc: 'Cooked like spinach in local dishes.', bestFor: 'Culinary integration, nutritional boost' },
     ],
     symptoms: ['Low milk supply', 'Postpartum fatigue', 'Nutritional deficiency', 'Anemia during lactation'],
-    warnings: [
-      'Use LEAVES ONLY during breastfeeding: moringa roots, bark, and flowers contain dangerous toxin spirochin.',
-      'STRICTLY CONTRAINDICATED in pregnancy: all parts except leaves can cause uterine contractions.',
-      'Monitor blood sugar and blood pressure closely when taking alongside antidiabetic or antihypertensive medications.',
-    ],
     relatedPlants: ['fenugreek-breastfeeding', 'fennel-breastfeeding'],
     references: [
       { text: 'PubMed Central — Moringa oleifera and lactation.', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC9684698/' },
@@ -2237,14 +2157,6 @@ export const PLANTS = {
       { method: 'Powdered Capsules', desc: '500–1000 mg per dose, 3–4 times daily; start 2 days before period onset.', bestFor: 'Standardized dysmenorrhea management' },
     ],
     symptoms: ['Menstrual cramps', 'Primary dysmenorrhea', 'Nausea', 'Vomiting', 'Joint pain', 'Muscle soreness', 'Motion sickness'],
-    warnings: [
-      'Patients with gallstones: contraindicated.',
-      'Use with caution in patients on anticoagulant therapy due to the risk of thromboxane inhibition and potential increased bleeding.',
-      'Discontinue 14 days prior to major surgery.',
-      'Use with caution with peptic ulcer.',
-      'Do not exceed 4 g/day powdered or 15–20 g/day fresh ginger.',
-
-    ],
     relatedPlants: ['dill-seed-menstrual', 'cinnamon-menstrual', 'fennel', 'lemon'],
     references: [
       { text: 'Duke, J. A., Bogenschutz-Godwin, M. J., duCellier, J., & Duke, P. K. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
@@ -2368,12 +2280,6 @@ export const PLANTS = {
       { method: 'Dry Powder', desc: '3 g daily in divided doses mixed with food or water.', bestFor: 'Consistent therapeutic dosing for dysmenorrhea or dyspepsia' },
     ],
     symptoms: ['Menstrual cramps', 'Bloating', 'Flatulence', 'Infant colic', 'Indigestion', 'Stomach cramps'],
-    warnings: [
-      'PREGNANCY: Strictly contraindicated: potent abortifacient and emmenagogue.',
-      'HYPOTHYROIDISM: Strictly contraindicated: significantly lowers circulating thyroid hormone levels.',
-      'DILL LEAVES do NOT have therapeutic spasmolytic effects: SEEDS ONLY are the medicinal part.',
-      'Must steep in COVERED vessel to prevent volatile carvone from escaping with steam.',
-    ],
     relatedPlants: ['ginger-menstrual', 'cinnamon-menstrual', 'fennel'],
     references: [
       { text: 'Duke, J. A., et al. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
@@ -2499,12 +2405,6 @@ export const PLANTS = {
       { method: 'Standardized Extract Capsules', desc: 'Commercially standardized Ceylon cinnamon capsules for consistent therapeutic dosing.', bestFor: 'PCOS, blood sugar management, metabolic support' },
     ],
     symptoms: ['Menstrual cramps', 'Heavy bleeding', 'Nausea', 'PCOS', 'Blood sugar dysregulation', 'Digestive discomfort'],
-    warnings: [
-      'USE CEYLON CINNAMON ONLY for therapeutic protocols: Cassia cinnamon causes liver toxicity at medicinal doses.',
-      'Use the Iodine Starch Test to identify Ceylon vs. Cassia before prolonged use.',
-      'STRICTLY CONTRAINDICATED in pregnancy at medicinal doses.',
-      'Never exceed 6 g dried bark/day: risk of severe GI irritation, tachycardia, and hypoglycemia.',
-    ],
     relatedPlants: ['ginger-menstrual', 'dill-seed-menstrual'],
     references: [
       { text: 'Duke, J. A., et al. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
@@ -2526,8 +2426,10 @@ export const PLANTS = {
     subcategory: 'pregnancy-support',
     tags: ['Antiemetic', 'Pregnancy-Safe', 'Nausea Relief', 'Evidence-Based', 'Morning Sickness'],
     image: '/images/Picture29.jpg',
-    shortDescription: 'Safe, effective, and evidence-based non-pharmacological treatment for managing mild to moderate nausea and vomiting (morning sickness) during pregnancy.',
-    description: 'Ginger is primarily used in pregnancy as a safe, effective, and evidence-based non-pharmacological treatment for managing mild to moderate nausea and vomiting (morning sickness). Gingerols and shogaols are the main pungent principles responsible for the therapeutic benefits; other constituents include terpenoids (like zingiberene) and zingiberol. Extensive RCTs confirm its efficacy is statistically comparable to Pyridoxine (Vitamin B6) and significantly superior to placebos in mitigating nausea severity, without any statistical increase in adverse pregnancy outcomes or teratogenicity.',
+    shortDescription: 'History of Use in Pregnancy:\n' +
+        '\n' +
+        'Ginger has been used for centuries in traditional medicine systems, including Traditional Chinese Medicine and Ayurveda, to relieve gastrointestinal discomfort, nausea, and vomiting. In pregnancy, it has a long history of use as a natural remedy for morning sickness. Over the past few decades, its traditional use has been supported by numerous clinical studies, making ginger one of the most extensively researched herbal therapies for nausea and vomiting during pregnancy.',
+    description: 'Ginger is primarily used in pregnancy as a safe, effective, and evidence-based non-pharmacological treatment for managing mild to moderate nausea and vomiting (morning sickness). Gingerols and shogaols are the main pungent principles responsible for the therapeutic benefits;  Extensive RCTs confirm its efficacy is statistically comparable to Pyridoxine (Vitamin B6) and significantly superior to placebos in mitigating nausea severity, without any statistical increase in adverse pregnancy outcomes or teratogenicity.',
     isDemo: false,
     activeConstituents: [
       { name: 'Gingerols-Shogaols ', percentage: '', effect: 'Main pungent principles responsible for the therapeutic benefits.' },
@@ -2542,7 +2444,6 @@ export const PLANTS = {
     uses: [
       'Primary use in pregnancy: safe, effective, evidence-based non-pharmacological treatment for mild-to-moderate nausea and vomiting of pregnancy (morning sickness)',
       'Fresh ginger may help relieve symptoms associated with common colds, such as congestion, headache, and nausea',
-      'possesses the ability to alleviate symptoms such as headache, nasal congestion, cough, and nausea that are induced by colds and febrile disorders. ',
       'Ginger provides potent anti-inflammatory, antioxidant, antiemetic, and potential anticancer properties; widely used to treat nausea, digestive issues (bloating, indigestion), arthritis pain, and metabolic issues like high blood sugar',
     ],
     howToUse: [
@@ -2590,7 +2491,7 @@ export const PLANTS = {
       'High-Risk Pregnancies: Contraindicated in pregnant women with a documented clinical history of recurrent spontaneous abortions, or unexplained vaginal bleeding.',
     ],
     drugInteractions: [
-      'Anticoagulants / Antiplatelet Drugs (e.g., Warfarin, Aspirin, Clopidogrel, Enoxaparin): Synergistic interaction . ginger enhances the risk of bleeding by inhibiting platelet thromboxane synthesis.',
+      'Anticoagulants / Antiplatelet Drugs (e.g., Warfarin, Aspirin, Clopidogrel, Enoxaparin): Synergistic interaction: Ginger may increase bleeding risk when used concomitantly with anticoagulant or antiplatelet medications.',
       'Antidiabetic Agents (e.g., Insulin, Metformin, Sulfonylureas): High doses of ginger enhance glucose uptake in insulin-responsive tissues, increasing the risk of hypoglycemia.',
       'Antihypertensive Drugs / Calcium Channel Blockers (e.g., Amlodipine, Nifedipine): Ginger exhibits natural voltage-dependent calcium channel blocking activity; concomitant use may potentiate hypotensive and negative inotropic responses.',
     ],
@@ -2627,7 +2528,9 @@ export const PLANTS = {
     tags: ['Bulk-forming Laxative', 'Fiber', 'Constipation Relief', 'Pregnancy-Safe', 'Hemorrhoid Prevention'],
     image: '/images/Picture274.jpeg',
     shortDescription: 'Clinically favored first-line treatment for gestational constipation and hemorrhoid prevention. Not absorbed systemically — works locally within the GI tract without fetal exposure.',
-    description: 'Psyllium is primarily used in pregnancy to promote regular, soft bowel movements, helping prevent hemorrhoids and anal fissures. It increases fecal water content and transit time, making stool easier to pass. It is clinically favored over chemical stimulant laxatives (like Senna or Bisacodyl) for managing gestational constipation due to its non-systemic nature. Research indicates that daily consumption, especially in the third trimester, can significantly prevent and treat constipation, hemorrhoids, and anal fissures.',
+    description: 'History of Use in Pregnancy:\n' +
+        '\n' +
+        'Psyllium has a long history of traditional and clinical use during pregnancy for the management of constipation and prevention of hemorrhoids. Due to its bulk-forming, non-systemic mechanism of action, it has been widely preferred over stimulant laxatives for pregnant women. Historically, psyllium husk has been used to promote regular bowel movements and reduce straining during defecation, helping to minimize pregnancy-related gastrointestinal discomfort. Modern clinical practice continues to support its use as a safe first-line option for gestational constipation when taken with adequate fluid intake.',
     isDemo: false,
     activeConstituents: [
       { name: 'Arabinoxylan (a soluble, gel-forming polysaccharide', percentage: '' },
@@ -2641,7 +2544,7 @@ export const PLANTS = {
     ],
     uses: [
       'Hemorrhoid/Fissure Prevention: promotes regular, soft bowel movements, helping prevent the straining that leads to hemorrhoids and anal fissures in pregnancy',
-      'Constipation Relief: increases fecal water content and transit time, making stool easier to pass',
+      'Constipation Relief: improve transit time, making stool easier to pass',
       'Safe First-Line Alternative: clinically favored over chemical stimulant laxatives (like Senna or Bisacodyl) for managing chronic or gestational constipation due to its non-systemic nature',
     ],
     howToUse: [
@@ -2649,7 +2552,7 @@ export const PLANTS = {
       { method: 'Crucial Hydration', instruction: 'Drink at least 8 ounces (240 mL) of water or juice with each dose. Inadequate fluid intake can lead to blockage.' },
       { method: 'Start Slow', instruction: 'Begin with 1 teaspoon/day and gradually increase to 1 tablespoon up to 3 times daily to minimize gas and bloating.' },
       { method: 'Timing', instruction: 'Take psyllium at least 2 hours apart from prenatal vitamins and other medications to avoid interfering with nutrient absorption.' },
-      { method: 'Usage Duration', instruction: 'Avoid using for longer than 1 week without consulting your doctor.' },
+      { method: 'Usage Duration', instruction: 'Avoid prolonged use without consulting a healthcare professional.' },
     ],
     suitableAgeGroups: [
       { group: 'Adults and Children (6+ years)', notes: 'Generally safe for adults and children over the age of 6, though many pediatric guidelines suggest consulting a doctor for children under 12.' },
@@ -2727,7 +2630,7 @@ export const PLANTS = {
     tags: ['Antiemetic', 'Carminative', 'Aromatherapy', 'Pregnancy-Safe', 'Antispasmodic'],
     image: '/images/Picture279.jpg',
     shortDescription: 'Peppermint tea (1–2 cups/day) and aromatherapy are safe during pregnancy for morning sickness, bloating, and pruritus. High medicinal doses or concentrated essential oil should be used cautiously.',
-    description: 'Scientific evidence suggests that peppermint is generally safe during pregnancy in moderate, culinary amounts (1–2 cups of tea daily) and can effectively alleviate first-trimester nausea and vomiting through aromatherapy. It also acts as a carminative and antispasmodic to relieve gestational bloating, flatulence, and functional dyspepsia. Topical application of low-concentration (0.5%) peppermint oil in a carrier oil can relieve itching (pruritus gravidarum). While studies show significant reductions in morning sickness, high medicinal doses or essential oils should be used cautiously, as data is limited.',
+    description: 'Peppermint has a long history of traditional use during pregnancy, particularly in herbal medicine and midwifery practices, although clinical evidence supporting its efficacy remains mixed. Historically and currently, it has been used to relieve several pregnancy-related discomforts.يحط الكلام ده قبل scientific evidence',
     isDemo: false,
     activeConstituents: [
       { name: 'Menthol and Menthone', percentage: '', },
@@ -2739,7 +2642,6 @@ export const PLANTS = {
       { title: 'Carminative Action', detail: 'Peppermint aids in reducing gas and improving digestion, which helps relieve the abdominal discomfort often associated with pregnancy.' },
       { title: 'Aromatherapy Mechanism', detail: 'When inhaled, the compounds in peppermint oil (menthol) are absorbed through the olfactory system, which may influence the central nervous system to reduce the severity of nausea.' },
       { title: 'Anxiety Reduction', detail: 'It can help reduce anxiety during pregnancy and labor, which often accompanies morning sickness.' },
-      { title: 'Antipruritic Action'  },
     ],
     uses: [
       'Nausea and Vomiting (Morning Sickness): peppermint inhalation or aromatherapy acts as an antiemetic',
@@ -2771,7 +2673,7 @@ export const PLANTS = {
     overdose: {
       intro: 'While moderate consumption of peppermint tea is generally considered safe during pregnancy, an overdose of peppermint — particularly in the form of concentrated essential oil — can be dangerous due to its high content of menthol and other compounds.',
       symptoms: [
-        'Uterine Sensitivity: Large doses of certain herbal extracts can cause uterine stimulation, which may pose risks to the pregnancy.',
+        'Uterine Stimulation: Large doses of certain herbal extracts can cause uterine stimulation, which may pose risks to the pregnancy.',
         'Gastrointestinal Distress: Severe nausea, vomiting, abdominal pain, or diarrhea.',
         'Neurological Symptoms: Dizziness, loss of coordination (ataxia), confusion, or in extreme cases, seizures.',
         'Respiratory Issues: Slow or shallow breathing.',
@@ -2832,8 +2734,10 @@ export const PLANTS = {
     subcategory: 'pregnancy-support',
     tags: ['UTI Prevention', 'Anti-adhesion', 'Proanthocyanidins', 'Antioxidant', 'Pregnancy-Safe'],
     image: '/images/Cranberry.webp',
-    shortDescription: 'Cranberries help prevent UTIs and asymptomatic bacteriuria during pregnancy via A-type proanthocyanidins (PACs) that prevent E. coli adhesion to the bladder wall. Prevents but does NOT treat active infections.',
-    description: 'Cranberries contain A-type proanthocyanidins (PACs) which prevent uropathogenic bacteria ; specifically E. coli from adhering to the bladder wall. Studies suggest that a daily dose of 500 mg of cranberry extract can be a safe and effective approach in preventing asymptomatic bacteriuria and UTI recurrence in pregnant individuals. Large observational studies have found no link between cranberry consumption during pregnancy and an increased risk of congenital malformations, preterm delivery, or adverse infant outcomes. Note: While cranberry is widely recognized to help prevent UTIs, evidence indicates it is not effective for treating an active infection, which requires professional medical treatment during pregnancy.',
+    shortDescription: 'History of Use in Pregnancy:\n' +
+        '\n' +
+        'Cranberry has a long history of traditional use for supporting urinary tract health, particularly in women prone to recurrent urinary tract infections (UTIs). During pregnancy, cranberry products have been commonly used as a preventive dietary approach to reduce the recurrence of UTIs due to their anti-adhesion activity against uropathogenic Escherichia coli. In modern clinical practice, cranberry is widely recognized as a supportive, non-antibiotic preventive option for recurrent UTIs, although it is not considered a treatment for active infections..',
+    description: 'Cranberries contain A-type proanthocyanidins (PACs) which prevent uropathogenic bacteria ; specifically E. coli from adhering to the bladder wall. Studies suggest that a daily dose of cranberry extract can be a safe and effective approach in preventing asymptomatic bacteriuria and UTI recurrence in pregnant individuals. Large observational studies have found no link between cranberry consumption during pregnancy and an increased risk of congenital malformations, preterm delivery, or adverse infant outcomes. Note: While cranberry is widely recognized to help prevent UTIs, evidence indicates it is not effective for treating an active infection, which requires professional medical treatment during pregnancy.',
     isDemo: false,
     activeConstituents: [
       { name: 'A-Type Proanthocyanidins (PACs)', percentage: '',  },
@@ -2861,7 +2765,7 @@ export const PLANTS = {
     howToUse: [
       { method: 'Juice Formulation', instruction: 'Choose 100% pure, unsweetened cranberry juice to minimize added sugar.' },
       { method: 'Alternative Forms', instruction: 'Dried cranberries can be added to yogurt or salads, and fresh cranberries can be added to smoothies.' },
-      { method: 'Supplements', instruction: 'Research indicates a daily dose of 500 mg of cranberry extract is effective for preventing UTI recurrence in pregnant women.' },
+      { method: 'Supplements', instruction: 'Capsules or Tablets: If you take supplements, follow the specific dosing instructions on the packaging.' },
     ],
     suitableAgeGroups: [
       { group: 'Pediatric Use', notes: 'Standardized extracts and therapeutic doses are safe for children (typically above 2–3 years old) and adults to help prevent UTIs and for nutritional benefits.' },
@@ -2869,9 +2773,10 @@ export const PLANTS = {
     dosage: {
 
       forms: [
-        { form: 'Cranberry Juice', dose: '240–720 mL daily.' },
-        { form: 'Cranberry Capsules/Tablets', dose: '500 mg extract daily; or two capsules taken twice daily.' },
+        { form: 'Cranberry Juice', dose: '240–300 mL daily; higher amounts may be used in some studies but should be consumed cautiously due to gastrointestinal discomfort and sugar content.' },
+        { form: 'Cranberry Capsules/Tablets', dose: 'Standardized products providing approximately 36 mg of A-type proanthocyanidins (PACs) daily are most commonly studied for prevention of recurrent urinary tract infections (UTIs) during pregnancy.' },
       ],
+      note: 'Note: Cranberry is generally considered safe during pregnancy when used in moderate amounts for urinary tract health support and prevention of recurrent uncomplicated UTIs.',
     },
     overdose: {
       intro: 'An overdose of cranberry products (juice or supplements) during pregnancy typically causes mild to moderate gastrointestinal distress, such as diarrhea, nausea, or abdominal cramping. While moderate consumption is generally safe, excessive intake of concentrated capsules might increase the risk of kidney stones due to high levels of oxalic acid.',
@@ -2906,7 +2811,7 @@ export const PLANTS = {
     ],
     storage: {
       forms: [
-        { form: 'Refrigerator Storage', instructions: 'To maintain the stability of bioactive compounds (anthocyanins and PACs), cranberry products (such as juice or processed purees) should be kept refrigerated. Due to high temperatures in Egypt, ensure products are not left in direct sunlight or warm, humid environments, as this degrades the antioxidant benefits.' },
+        { form: 'Refrigerator Storage', instructions: 'To maintain the stability of bioactive compounds (anthocyanins and PACs), cranberry products (such as juice or processed purees) should be kept refrigerated.ensure products are not left in direct sunlight or warm, humid environments, as this degrades the antioxidant benefits.' },
       ],
     },
     marketedProducts: [
@@ -3534,12 +3439,6 @@ export const PLANTS = {
       { method: 'Lemon-Honey Demulcent', desc: '15 mL fresh juice + 1-2 tsp honey in warm water, sip slowly.', bestFor: 'Dry irritative cough, sore throat, pharyngitis' },
     ],
     symptoms: ['Sore throat', 'Dry cough', 'Cold symptoms', 'Congestion', 'Hydration during fever', 'Immune support'],
-    warnings: [
-      'Lemon juice has NO direct in vivo virucidal properties: its role is strictly supportive via antioxidant defense, hydration, and symptom relief.',
-      'NEVER combine with honey for infants under 12 months: fatal infant botulism risk.',
-      'Avoid adding boiling water (>60°C): destroys Vitamin C.',
-      'Avoid in active GERD, gastritis, or peptic ulcer disease.',
-    ],
     relatedPlants: ['eucalyptus'],
     references: [
       { text: 'Egyptian Drug Authority — Citrus lemon monograph.', url: 'https://share.google/HGyIszy5fXiY9Ud1i' },
@@ -3652,12 +3551,6 @@ export const PLANTS = {
       { method: 'Standardized Capsules / Liquid Extract', desc: 'Commercially standardized preparations for consistent dosing.', bestFor: 'Prophylactic immune maintenance cycles (max 8 weeks, then 3-week break)' },
     ],
     symptoms: ['Cold symptoms', 'Flu', 'Recurrent infections', 'Reduced immunity', 'Minor wounds'],
-    warnings: [
-      'Echinacea has Minimal direct bactericidal effect: it trains immune cells to be faster and more aggressive; useless if taken after infection has fully subsided.',
-      'STRICTLY CONTRAINDICATED in autoimmune diseases (MS, SLE, RA): stimulates immune attack on body\'s own tissues.',
-      'ABSOLUTELY PROHIBITED for organ transplant patients: directly antagonizes essential immunosuppressant therapies.',
-      'Maximum acute use: 10 consecutive days; maximum prophylactic cycle: 8 weeks (mandatory 3-week rest after).',
-    ],
     relatedPlants: ['black-seed', 'astragalus', 'turmeric'],
     references: [
       { text: 'Duke, J. A., et al. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
@@ -3777,11 +3670,6 @@ export const PLANTS = {
       { method: 'Cold-Pressed Oil WITH Food', desc: '2.5-5 mL cold-pressed oil taken with food; do not heat.', bestFor: 'All indications; easier to take than crushed seeds; best bioavailability' },
     ],
     symptoms: ['Reduced immunity', 'Asthma', 'Allergy', 'High blood sugar', 'High cholesterol', 'Hypertension'],
-    warnings: [
-      'STRICTLY CONTRAINDICATED in pregnancy: stimulates uterine contractions.',
-      'CRITICAL: Seeds MUST be crushed immediately before use and taken with food: volatile TQ evaporates rapidly from pre-ground seeds.',
-      'Discontinue 2 weeks before any major surgery.',
-    ],
     relatedPlants: ['echinacea', 'astragalus', 'turmeric'],
     references: [
       { text: 'ScienceDirect — Nigella sativa pharmacology.', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0041010124003593' },
@@ -3899,12 +3787,6 @@ export const PLANTS = {
       { method: 'Standardized Capsules', desc: '100-150 mg standardized extract three times daily.', bestFor: 'Convenient therapeutic dosing for immune prophylaxis and post-viral recovery' },
     ],
     symptoms: ['Reduced immunity', 'Recurrent infections', 'Chronic fatigue', 'Post-viral weakness', 'Respiratory vulnerability'],
-    warnings: [
-      'STRICTLY CONTRAINDICATED in autoimmune diseases (SLE, RA, MS): worsens immune attacks on body\'s own tissues.',
-      'ABSOLUTELY PROHIBITED for organ transplant patients: antagonizes immunosuppressant therapy.',
-      'Do NOT use during acute high fever: use preventatively BEFORE infection or AFTER recovery only.',
-      'Clinical evidence shows synergistic antiviral effect with body\'s natural interferon against Coxsackie B virus: but it is not a replacement for chemotherapy.',
-    ],
     relatedPlants: ['echinacea', 'black-seed', 'turmeric'],
     references: [
       { text: 'Duke, J. A., et al. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
@@ -4017,12 +3899,6 @@ export const PLANTS = {
       { method: 'Standardized Capsules / Liquid Extract', desc: 'Commercially standardized preparations for consistent dosing.', bestFor: 'Prophylactic immune maintenance cycles (max 8 weeks, then 3-week break)' },
     ],
     symptoms: ['Cold symptoms', 'Flu', 'Recurrent infections', 'Reduced immunity', 'Minor wounds'],
-    warnings: [
-      'Echinacea has Minimal direct bactericidal effect: it trains immune cells to be faster and more aggressive; useless if taken after infection has fully subsided.',
-      'STRICTLY CONTRAINDICATED in autoimmune diseases (MS, SLE, RA): stimulates immune attack on body\'s own tissues.',
-      'ABSOLUTELY PROHIBITED for organ transplant patients: directly antagonizes essential immunosuppressant therapies.',
-      'Maximum acute use: 10 consecutive days; maximum prophylactic cycle: 8 weeks (mandatory 3-week rest after).',
-    ],
     relatedPlants: ['black-seed-immunity', 'astragalus-immunity', 'turmeric-immunity'],
     references: [
       { text: 'Duke, J. A., et al. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
@@ -4141,11 +4017,6 @@ export const PLANTS = {
       { method: 'Cold-Pressed Oil WITH Food', desc: '2.5-5 mL cold-pressed oil taken with food; do not heat.', bestFor: 'All indications; easier to take than crushed seeds; best bioavailability' },
     ],
     symptoms: ['Reduced immunity', 'Asthma', 'Allergy', 'High blood sugar', 'High cholesterol', 'Hypertension'],
-    warnings: [
-      'STRICTLY CONTRAINDICATED in pregnancy: stimulates uterine contractions.',
-      'CRITICAL: Seeds MUST be crushed immediately before use and taken with food: volatile TQ evaporates rapidly from pre-ground seeds.',
-      'Discontinue 2 weeks before any major surgery.',
-    ],
     relatedPlants: ['echinacea-immunity', 'astragalus-immunity', 'turmeric-immunity'],
     references: [
       { text: 'ScienceDirect — Nigella sativa pharmacology.', url: 'https://www.sciencedirect.com/science/article/abs/pii/S0041010124003593' },
@@ -4263,12 +4134,6 @@ export const PLANTS = {
       { method: 'Standardized Capsules', desc: '100-150 mg standardized extract three times daily.', bestFor: 'Convenient therapeutic dosing for immune prophylaxis and post-viral recovery' },
     ],
     symptoms: ['Reduced immunity', 'Recurrent infections', 'Chronic fatigue', 'Post-viral weakness', 'Respiratory vulnerability'],
-    warnings: [
-      'STRICTLY CONTRAINDICATED in autoimmune diseases (SLE, RA, MS): worsens immune attacks on body\'s own tissues.',
-      'ABSOLUTELY PROHIBITED for organ transplant patients: antagonizes immunosuppressant therapy.',
-      'Do NOT use during acute high fever: use preventatively BEFORE infection or AFTER recovery only.',
-      'Clinical evidence shows synergistic antiviral effect with body\'s natural interferon against Coxsackie B virus: but it is not a replacement for chemotherapy.',
-    ],
     relatedPlants: ['echinacea-immunity', 'black-seed-immunity', 'turmeric-immunity'],
     references: [
       { text: 'Duke, J. A., et al. (2002). Handbook of Medicinal Herbs (2nd ed.). CRC Press.' },
@@ -4292,12 +4157,6 @@ export const PLANTS = {
     description: 'Turmeric (Curcuma longa) belongs to the Zingiberaceae family. Its dried rhizome contains curcuminoids (3–5%), principally curcumin, which drives potent anti-inflammatory, antioxidant, and hepatoprotective effects. Bioavailability requires co-administration with piperine (black pepper) for a 2000% increase in absorption.',
     isDemo: false,
     symptoms: ['Joint pain', 'Chronic inflammation', 'Arthritis', 'Digestive discomfort', 'Liver support'],
-    warnings: [
-      'Discontinue ≥14 days before surgery: anti-platelet and mild fibrinolytic properties.',
-      'Contraindicated with active bile duct obstruction or severe gallstones.',
-      'Do not combine with anticoagulants (Warfarin, Heparin, Clopidogrel, Aspirin) without INR monitoring.',
-      'Pregnant women: culinary amounts safe; therapeutic extracts STRICTLY CONTRAINDICATED.',
-    ],
     activeConstituents: [
       { name: 'Curcuminoids (3–5%)', detail: 'Curcumin (77%), demethoxycurcumin (17%), bisdemethoxycurcumin (3%): lipophilic polyphenolic pigments responsible for anti-inflammatory and antioxidant activity.' },
       { name: 'Volatile Essential Oils (3–7%)', detail: 'ar-Turmerone, alpha-turmerone, beta-turmerone, curlone, zingiberene: contribute anti-inflammatory and antimicrobial actions.' },
@@ -4500,11 +4359,6 @@ export const PLANTS = {
       { method: 'Topical Essential Oil', desc: 'Dilute in carrier oil; massage into affected area or scalp.', bestFor: 'Musculoskeletal pain, hair loss, scalp antimicrobial' },
     ],
     symptoms: ['Chronic inflammation', 'Joint pain', 'Hair loss', 'Dandruff', 'Memory', 'Muscle pain'],
-    warnings: [
-      'Oral use in medicinal doses strictly contraindicated in pregnancy: emmenagogue and uterine stimulant.',
-      'Essential oil must NEVER be applied near the face of children under 6 years old.',
-      'Camphor content can lower seizure threshold: avoid oral use in epilepsy patients.',
-    ],
     relatedPlants: ['turmeric-immunity', 'garlic-immunity'],
     references: [
       { text: 'WebMD — Rosemary Uses, Side Effects, Interactions.', url: 'https://www.webmd.com/vitamins/ai/ingredientmono-154/rosemary' },
@@ -4631,11 +4485,6 @@ export const PLANTS = {
       { method: 'Aged Garlic Extract Capsules', desc: 'Standardized odorless supplement for consistent therapeutic dosing.', bestFor: 'All indications without strong garlic odor; preferred for long-term use' },
     ],
     symptoms: ['Reduced immunity', 'Chronic inflammation', 'High blood pressure', 'High cholesterol', 'Recurrent respiratory infections'],
-    warnings: [
-      'Discontinue medicinal doses 2 weeks before surgery: antiplatelet properties increase bleeding risk.',
-      'Monitor blood pressure and INR closely if taking antihypertensives or anticoagulants.',
-      'High doses on an empty stomach cause significant GI irritation: always take with food.',
-    ],
     relatedPlants: ['turmeric-immunity', 'rosemary-immunity'],
     references: [
       { text: 'Bayan, L., et al. (2014). Garlic: a review of potential therapeutic effects. Avicenna Journal of Phytomedicine, 4(1), 1–14.' },
@@ -4930,14 +4779,6 @@ export const PLANTS = {
       { method: 'Standardized Extract (Commercial)', desc: 'Tablets and granules standardized to specific sennoside content (e.g., 7.5 mg or 12.5 mg sennoside per tablet) following EMA/WHO monograph guidelines.', bestFor: 'Precise dosing; bowel preparation for medical procedures' },
     ],
     symptoms: ['Constipation', 'Bowel irregularity', 'Pre-procedure bowel cleansing'],
-    warnings: [
-      'Strictly for short-term use only (maximum 1-2 weeks). Chronic use leads to dependency and cathartic colon.',
-      'NEVER use for weight loss; any weight loss is water weight and is dangerous.',
-      'Strictly contraindicated in children under 2 years old.',
-      'Contraindicated in pregnancy (especially first trimester) due to potential genotoxic anthraquinone risks.',
-      'Do NOT use in intestinal obstruction, acute abdominal pain, or inflammatory bowel disease.',
-      'Risk of dangerous hypokalemia with overuse — monitor electrolytes if used medically.',
-    ],
     relatedPlants: ['psyllium', 'fennel'],
     references: [
       { text: 'European Medicines Agency — Senna leaf herbal monograph.', url: 'https://www.ema.europa.eu/en/medicines/herbal/sennae-folium' },
@@ -5058,13 +4899,6 @@ export const PLANTS = {
       { method: 'Effervescent Sachets', desc: 'Dissolve sachet in water (creates a fizzy, palatable suspension). Take 2× daily morning and evening after meals.', bestFor: 'Better compliance and palatability vs. plain powder' },
     ],
     symptoms: ['Constipation', 'Bowel irregularity', 'IBS symptoms', 'High cholesterol', 'Blood sugar management'],
-    warnings: [
-      'ALWAYS take with a full glass (250 mL) of water: NEVER dry or with insufficient fluid.',
-      'NEVER take immediately before bedtime: risk of esophageal obstruction in recumbent position.',
-      'Take at least 30–60 minutes after other oral medications to prevent drug absorption interference.',
-      'Absolutely contraindicated in fecal impaction and intestinal obstruction.',
-      'Children under 6 years: only under pediatric medical supervision.',
-    ],
     relatedPlants: ['senna', 'castor'],
     references: [
       { text: 'Egyptian Drug Authority — Plantago ovata monograph.', url: 'https://share.google/lH8q4stDezqsL7jNQ' },
@@ -5188,14 +5022,6 @@ export const PLANTS = {
       { method: 'Cold-pressed Oil (Oral)', desc: 'Chill the oil before administration. Mix 15–60 mL in cold citrus juice and consume as a single dose. Mandatory copious hydration (6–8 glasses/day) throughout the day.', bestFor: 'Acute constipation; short-term rapid bowel evacuation; pre-procedure bowel preparation' },
     ],
     symptoms: ['Constipation', 'Pre-procedure bowel cleansing', 'Bowel irregularity'],
-    warnings: [
-      'STRICTLY CONTRAINDICATED in pregnancy (Category X): stimulates uterine contractions causing premature labor.',
-      'NEVER use chronically for constipation or weight loss: causes irreversible bowel nerve damage.',
-      'Strictly contraindicated in children under 2 years.',
-      'Drink 6–8 glasses of water throughout the day after taking castor oil.',
-      'Separate all other oral medications by at least 2 hours.',
-      'Do NOT use in intestinal obstruction, active inflammatory bowel disease, or appendicitis.',
-    ],
     relatedPlants: ['senna', 'psyllium'],
     references: [
       { text: 'European Medicines Agency — Ricinus communis herbal monograph.', url: 'https://www.ema.europa.eu/en/medicines/herbal/ricini-oleum' },
@@ -5297,6 +5123,9 @@ export const PLANTS = {
         { form: 'Volatile Oil Products', storage: 'Hermetically sealed to prevent evaporation and compositional oxidation.' },
       ],
     },
+    factsAndMyths: [
+      { myth: 'Peppermint oil is an appropriate curative drug for severe, high-fever infectious bacterial or amoebic dysentery.', fact: 'Peppermint oil holds no in-vivo curative efficacy against virulent invasive enteropathogens nor does it resolve clinical dehydration. It serves as an exceptional, clinically validated supportive/antispasmodic phytotherapy targeting functional bowel hypermotility, cramping, and IBS symptoms.' },
+    ],
     marketedProducts: [
       { name: 'Colpermin Capsules (Enteric-coated Peppermint oil 187 mg)', image: '/images/Picture280.jpeg' },
       { name: 'IBgard Capsules (Sustained-release peppermint oil microspheres)', image: '/images/IBgard Capsules.jpeg' },
@@ -5317,12 +5146,6 @@ export const PLANTS = {
       { method: 'Aqueous Infusion (Tea)', desc: 'Steep 1.5–3 g dried leaves in 150 mL boiling water in a COVERED vessel for 5–10 minutes. Covering is essential to preserve volatile menthol.', bestFor: 'Mild GI discomfort, nausea, flatulence, bloating' },
     ],
     symptoms: ['Diarrhea', 'IBS symptoms', 'Abdominal cramps', 'Flatulence', 'Nausea', 'Bloating'],
-    warnings: [
-      'NEVER crush or chew enteric-coated capsules: releases menthol in stomach causing severe heartburn.',
-      'DO NOT use if you have GERD, hiatal hernia, or active gallbladder/gallstone problems.',
-      'Pure peppermint essential oil is STRICTLY CONTRAINDICATED in infants and children under 4 years.',
-      'Separate from antacids and PPIs by at least 2 hours.',
-    ],
     relatedPlants: ['chamomile', 'fennel'],
     references: [
       { text: 'National Center for Complementary and Integrative Health — Peppermint Oil.', url: 'https://www.nccih.nih.gov/health/peppermint-oil' },
@@ -5416,6 +5239,9 @@ export const PLANTS = {
         { form: 'Dried Flower Heads / Standardized Formulations', storage: 'Tightly sealed, airtight, light-resistant containers below 25°C. Prevent moisture absorption, volatile oil volatilization, and photodegradation of chamazulene.' },
       ],
     },
+    factsAndMyths: [
+      { myth: 'Chamomile tea alone can cure severe, infectious bacterial or amoebic diarrhea instantly.', fact: 'Chamomile does not eradicate highly virulent GI pathogens in vivo nor does it replace the critical need for Oral Rehydration Salts (ORS) or antibiotic therapy; rather, it acts as an exceptional, evidence-based supportive phytotherapy that significantly reduces painful spasms, decreases mucosal inflammation, and improves patient comfort.' },
+    ],
     marketedProducts: [
       { name: 'Sekem Chamomile Tea (أعشاب سيكم بابونج)', image: '/images/Picture283.jpeg' },
       { name: 'Kamillosan Liquid (Chamomile extract for GI and topical use)', image: '/images/Picture282.jpeg' },
@@ -5436,12 +5262,6 @@ export const PLANTS = {
       { method: 'Standardized Capsule Extract', desc: 'Pharmaceutical-grade capsules standardized to apigenin content for consistent therapeutic outcomes.', bestFor: 'IBS, anxiety-associated GI distress, precise dosing' },
     ],
     symptoms: ['Diarrhea', 'IBS symptoms', 'Abdominal cramps', 'Flatulence', 'Bloating', 'Gastritis', 'Mild insomnia'],
-    warnings: [
-      'If allergic to ragweed, daisies, chrysanthemums, or marigolds: DO NOT use chamomile (cross-reactivity, anaphylaxis risk).',
-      'High doses of concentrated extracts AVOIDED in pregnancy.',
-      'Separate from anticoagulants and monitor bleeding risk if used with blood thinners.',
-      'Infants under 6 months: only under strict medical supervision.',
-    ],
     relatedPlants: ['peppermint', 'fennel'],
     references: [
       { text: 'National Center for Complementary and Integrative Health — Chamomile.', url: 'https://www.nccih.nih.gov/health/chamomile' },
@@ -5466,12 +5286,6 @@ export const PLANTS = {
     shortDescription: 'Golden rhizome with multi-pathway anti-inflammatory action via NF-κB, COX-2, and 5-LOX inhibition.',
     description: 'Turmeric (Curcuma longa) belongs to the Zingiberaceae family. Its dried rhizome contains curcuminoids (3–5%), principally curcumin, which drives potent anti-inflammatory, antioxidant, and hepatoprotective effects. Bioavailability requires co-administration with piperine (black pepper) for a 2000% increase in absorption.',
     symptoms: ['Joint pain', 'Chronic inflammation', 'Arthritis', 'Digestive discomfort', 'Liver support'],
-    warnings: [
-      'Discontinue ≥14 days before surgery: anti-platelet and mild fibrinolytic properties.',
-      'Contraindicated with active bile duct obstruction or severe gallstones.',
-      'Do not combine with anticoagulants (Warfarin, Heparin, Clopidogrel, Aspirin) without INR monitoring.',
-      'Pregnant women: culinary amounts safe; therapeutic extracts STRICTLY CONTRAINDICATED.',
-    ],
     activeConstituents: [
       { name: 'Curcuminoids (3–5%)', detail: 'Curcumin (77%), demethoxycurcumin (17%), bisdemethoxycurcumin (3%): lipophilic polyphenolic pigments responsible for anti-inflammatory and antioxidant activity.' },
       { name: 'Volatile Essential Oils (3–7%)', detail: 'ar-Turmerone, alpha-turmerone, beta-turmerone, curlone, zingiberene: contribute anti-inflammatory and antimicrobial actions.' },
@@ -5575,12 +5389,6 @@ export const PLANTS = {
     shortDescription: 'Aromatic flower buds rich in eugenol (70–90%) with potent cell-membrane-disrupting antiseptic activity.',
     description: 'Clove (Syzygium aromaticum) belongs to the Myrtaceae family. Its dried flower buds contain eugenol as the dominant active compound (70–90% of essential oil), providing broad-spectrum antimicrobial, local anesthetic, and anti-inflammatory properties. Widely used in dentistry, oral antisepsis, and food preservation.',
     symptoms: ['Oral infections', 'Toothache', 'Gum inflammation', 'Minor wounds', 'Fungal infection'],
-    warnings: [
-      'Never apply undiluted clove oil directly to skin or mucous membranes: causes severe chemical burns.',
-      'Do not ingest concentrated clove oil: eugenol is hepatotoxic in high doses.',
-      'Children under 2 years: do not apply topically or orally.',
-      'Discontinue 2 weeks before surgery: eugenol inhibits blood clotting.',
-    ],
     activeConstituents: [
       { name: 'Eugenol (70–90% of essential oil)', detail: 'Primary phenolic compound responsible for antimicrobial, local anesthetic, anti-inflammatory, and mild analgesic effects.' },
       { name: 'Eugenol Acetate, β-Caryophyllene, α-Humulene', detail: 'Secondary sesquiterpenes contributing antimicrobial and anti-inflammatory activity.' },
@@ -5684,12 +5492,6 @@ export const PLANTS = {
     shortDescription: 'Potassium-rich aquaretic that enhances renal water excretion without electrolyte depletion, unlike conventional diuretics.',
     description: 'Dandelion (Taraxacum officinale) belongs to the Asteraceae family. Its leaves contain high concentrations of potassium salts (3–5%), flavonoids (luteolin), and coumarins that provide diuretic action without the hypokalemia risk of synthetic diuretics. The root provides choleretic (bile-stimulating) effects via sesquiterpene lactones.',
     symptoms: ['Fluid retention', 'Minor edema', 'Urinary tract flushing', 'Liver support', 'Mild hypertension'],
-    warnings: [
-      'Contraindicated with active biliary obstruction: choleretic action can trigger gallbladder spasm.',
-      'Asteraceae family allergy (ragweed, chamomile, daisies): cross-reactivity risk.',
-      'Severe renal failure: high potassium content may cause dangerous hyperkalemia.',
-      'Not recommended in pregnancy or lactation: insufficient safety data.',
-    ],
     activeConstituents: [
       { name: 'Potassium Salts (Leaves, 3–5%)', detail: 'Exceptionally high endogenous potassium content continuously compensates for potassium excreted during diuresis: maintaining electrolyte balance unlike synthetic diuretics.' },
       { name: 'Flavonoids (Luteolin) & Coumarins', detail: 'Act on renal tubules to stimulate water excretion and provide anti-inflammatory support.' },
@@ -5796,12 +5598,6 @@ export const PLANTS = {
     shortDescription: 'Apiol-rich aquaretic that raises GFR via renal vasodilation; prevents calcium oxalate crystal aggregation.',
     description: 'Parsley (Petroselinum crispum) belongs to the Apiaceae family. The therapeutic profile is driven by apiol (60–80% of seed oil), myristicin (10–30%), apiin, and exceptional potassium (554 mg/100 g) and vitamin C (133 mg/100 g) content. Provides evidence-based diuresis and urinary tract irrigation. Strictly contraindicated in pregnancy due to abortifacient properties (Category X).',
     symptoms: ['Urinary tract infections', 'Fluid retention', 'Kidney stones prevention', 'Minor edema'],
-    warnings: [
-      'STRICTLY CONTRAINDICATED IN PREGNANCY (Category X): Apiol and myristicin cause uterine contractions, premature labor, or miscarriage.',
-      'Contraindicated in active nephritis, glomerulonephritis, or severe CKD (stage 4–5).',
-      'High vitamin K1 content (1640 mcg/100 g) directly antagonizes Warfarin: dangerous INR decrease.',
-      'Apiaceae family allergy (celery, carrots, fennel): cross-reactivity risk.',
-    ],
     activeConstituents: [
       { name: 'Apiol (60–80% of seed essential oil)', detail: 'Inhibits renal tubular Na⁺/K⁺-ATPase pump, trapping sodium in tubular lumen and forcing fluid clearance: osmotic/aquaretic effect.' },
       { name: 'Myristicin (10–30% of seed oil)', detail: 'Direct renal vasodilator; relaxes afferent arterioles, increasing renal blood flow and glomerular filtration rate (GFR).' },
@@ -5909,12 +5705,6 @@ export const PLANTS = {
     shortDescription: 'Polyphenolic tannin-rich astringent with protein-precipitation mechanism for topical antisepsis and tissue protection.',
     description: 'Witch Hazel (Hamamelis virginiana) belongs to the Hamamelidaceae family. Its bark and leaves contain gallotannins, procyanidins, catechins, and flavonols that provide broad-spectrum topical antimicrobial, astringent, vasoconstricting, and anti-inflammatory effects. Widely used in dermatology and wound care.',
     symptoms: ['Minor wounds', 'Skin irritation', 'Acne', 'Hemorrhoid symptoms', 'Sore throat'],
-    warnings: [
-      'For external topical use only: do not ingest (tannins cause GI upset).',
-      'Oral mouthwash use: not recommended for children, pregnant, or breastfeeding women.',
-      'Alcohol-based formulations may cause dryness with frequent use.',
-      'Children under 2 years: avoid unless directed by a pediatrician.',
-    ],
     activeConstituents: [
       { name: 'Gallotannins (Hamamelitannin)', detail: 'Primary polyphenolic tannins mediating the astringent, protein-precipitating, and antibacterial actions.' },
       { name: 'Flavonoids (Procyanidins, Catechins, Flavonols)', detail: 'Anti-inflammatory and antioxidant flavonoid complex that downregulates pro-inflammatory cytokines and cellular exudates.' },
@@ -6016,11 +5806,6 @@ export const PLANTS = {
     shortDescription: 'Selective calcium channel blocker in the ureter that relaxes smooth muscle to allow stone passage while preserving peristaltic propulsion.',
     description: 'Halfabar (Cymbopogon proximus) belongs to the Poaceae family. Principal active constituent proximadiol (>75% of sesquiterpenoid fraction) acts as a non-atropinic calcium channel blocker selectively targeting ureteric smooth muscle: dilating the passage below impacted stones while preserving propulsive peristalsis for stone expulsion. Used in MET (Medical Expulsion Therapy) synergistically with Tamsulosin.',
     symptoms: ['Kidney stones', 'Ureteric colic', 'Renal colic', 'Urinary stasis', 'Intestinal colic'],
-    warnings: [
-      'For stone expulsion: effective for calculi ≤1 cm; larger stones require lithotripsy or surgery.',
-      'Always rule out hematuria, acute retention, or suspected malignancy before use.',
-      'Avoid high therapeutic doses in early pregnancy as a precautionary measure.',
-    ],
     activeConstituents: [
       { name: 'Proximadiol (>75% of sesquiterpenoid fraction)', detail: 'Primary crystalline sesquiterpene diol; selective non-atropinic calcium channel blocker in ureteric walls: the pharmacological quality control marker.' },
       { name: 'Piperitone (60–85% of volatile oil)', detail: 'Dominant monoterpene ketone; renal vasodilator increasing GFR and hydraulic flushing pressure.' },
@@ -6117,11 +5902,6 @@ export const PLANTS = {
     shortDescription: 'African cherry bark extract that inhibits prostate growth factors and reduces prostatic edema for BPH symptom relief.',
     description: 'Pygeum (Prunus africana) belongs to the Rosaceae family. Its lipophilic bark extract contains β-sitosterol, ursolic/oleanolic acid triterpenes, and ferulic acid esters that collectively inhibit prostate growth factors, reduce glandular edema, and improve bladder detrusor function: providing evidence-based relief for lower urinary tract symptoms in BPH.',
     symptoms: ['Weak urine stream', 'Urinary hesitancy', 'Nocturia', 'BPH symptoms', 'Incomplete bladder emptying'],
-    warnings: [
-      'Prostate cancer must be ruled out before using phytotherapy for BPH: Pygeum masks symptoms.',
-      'Not a substitute for urological assessment in Stage III–IV BPH.',
-      'Discontinue if symptoms worsen or fever, hematuria, or acute retention develops.',
-    ],
     activeConstituents: [
       { name: 'β-sitosterol & Phytosterols', detail: 'Inhibit androgen binding to prostatic tissue and reduce pro-inflammatory eicosanoid synthesis.' },
       { name: 'Ursolic & Oleanolic Acid Triterpenes', detail: 'Anti-proliferative and anti-edematous; inhibit 5-LOX inflammatory pathway in prostate tissue.' },
@@ -6205,12 +5985,6 @@ export const PLANTS = {
     shortDescription: 'Dual 5-alpha reductase inhibitor (Types 1 & 2) with DHT receptor antagonism; the most studied herbal BPH treatment.',
     description: 'Saw Palmetto (Serenoa repens) is a low-growing palm of the Arecaceae family native to southeastern North America. Its lipidosterolic berry extract (85–95% fatty acids and sterols) provides multi-mechanism BPH relief: dual 5-alpha reductase inhibition, DHT receptor antagonism, COX/5-LOX anti-inflammatory action, and alpha-1 adrenergic antagonism. Clinical trials demonstrate LUTS efficacy comparable to finasteride and alpha-blockers with fewer sexual side effects.',
     symptoms: ['Weak urine stream', 'Urinary hesitancy', 'Nocturia', 'BPH symptoms', 'Incomplete bladder emptying'],
-    warnings: [
-      'Prostate cancer must be ruled out before initiating phytotherapy: Saw Palmetto masks symptoms.',
-      'Tea preparations are completely ineffective: active lipidosterolic fraction requires standardized lipid extraction.',
-      'May slightly lower PSA levels: inform urologist to avoid misinterpretation of PSA screening.',
-      'Discontinue if acute urinary retention, hematuria, or sudden PSA elevation occurs.',
-    ],
     activeConstituents: [
       { name: 'Lipidosterolic Fraction (85–95% of extract)', detail: 'Fatty acid complex (oleic, lauric, myristic, palmitic acids): primary 5-alpha reductase inhibitors.' },
       { name: 'β-sitosterol & Phytosterols', detail: 'DHT receptor antagonism and anti-inflammatory eicosanoid modulation.' },
@@ -6296,12 +6070,6 @@ export const PLANTS = {
     shortDescription: 'Root lignans competitively bind SHBG to block prostatic androgen signaling; lectins inhibit EGF-driven prostate hyperproliferation.',
     description: 'The root of Urtica dioica (pharmacologically distinct from the aerial leaf parts used for rhinitis) provides unique BPH mechanisms: SHBG-binding lignans block androgen delivery to the prostate, UDA lectins inhibit EGF receptor-driven hyperproliferation, and β-sitosterol/scopoletin provide anti-inflammatory COX-2/NF-κB suppression. Frequently combined with Saw Palmetto for synergistic LUTS relief in clinical practice.',
     symptoms: ['Weak urine stream', 'Urinary hesitancy', 'Nocturia', 'BPH symptoms', 'Incomplete bladder emptying'],
-    warnings: [
-      'ROOT extract is NOT interchangeable with nettle leaf: different chemistry, different indication.',
-      'Prostate cancer must be ruled out by urologist before initiating BPH phytotherapy.',
-      'Strictly contraindicated in pregnancy: stimulates uterine contractions and alters androgen/estrogen profiles.',
-      'Cardiovascular/renal disease: mild diuretic action may shift fluid/electrolyte balance.',
-    ],
     activeConstituents: [
       { name: 'Lignans (Root-specific)', detail: 'Bind competitively to SHBG (Sex Hormone-Binding Globulin), blocking its interaction with prostatic cell membranes and preventing androgen receptor activation.' },
       { name: 'UDA Lectins (Urtica dioica Agglutinin)', detail: 'Bind EGF receptors on prostate cells, arresting hyperplastic tissue growth: a unique mechanism not shared by other herbal BPH agents.' },
@@ -6394,12 +6162,6 @@ export const PLANTS = {
     shortDescription: 'A-type proanthocyanidins prevent E. coli adhesion to uroepithelium: prophylaxis rather than treatment of UTIs.',
     description: 'Cranberry (Vaccinium macrocarpon) belongs to the Ericaceae family. Its unique A-type proanthocyanidins (PACs) prevent P-fimbriated Escherichia coli from adhering to the urinary tract epithelium: the critical first step in UTI development. Safe in pregnancy for UTI prevention, unlike antibiotic treatments that require caution.',
     symptoms: ['Recurrent UTIs', 'Urinary tract prevention', 'Urinary health', 'Antioxidant support'],
-    warnings: [
-      'Prophylactic only: does not treat active, established UTIs. Seek antibiotics for confirmed UTI.',
-      'Warfarin interaction: cranberry may increase INR and bleeding risk : avoid combination or monitor closely.',
-      'High doses may increase kidney stone risk in oxalate-sensitive individuals.',
-      'Excessive juice (>1 L/day) may cause GI upset and diarrhea.',
-    ],
     activeConstituents: [
       { name: 'A-type Proanthocyanidins (PACs)', detail: 'Unique structural A-type linkage (vs. B-type in other berries) prevents P-fimbriated E. coli from adhering to uroepithelial cell surfaces: the primary anti-adhesion mechanism.' },
       { name: 'Anthocyanins (Cyanidins), Flavonols (Quercetin, Myricetin)', detail: 'Antioxidant and anti-inflammatory polyphenols supporting systemic urinary and vascular health.' },
@@ -7084,28 +6846,116 @@ export const PLANTS = {
     name: 'Fennel',
     nameAr: 'الشمر',
     latinName: 'Foeniculum vulgare Mill.',
-    commonNames: ['Fennel', 'Sweet Fennel'],
+    commonNames: ['Fennel', 'Sweet Fennel', 'Bitter Fennel', 'Wild Fennel'],
     category: 'digestive',
     subcategory: 'diarrhea-support',
-    isDemo: true,
-    tags: [],
-    image: '/images/placeholder.jpg',
-    shortDescription: '',
-    description: '',
-    history: '',
-    activeConstituents: [],
-    moa: [],
-    uses: [],
-    howToUse: [],
-    suitableAgeGroups: [],
-    dosage: { standard: '', forms: [] },
-    overdose: { symptoms: [], management: [] },
-    sideEffects: [],
-    contraindications: [],
-    drugInteractions: [],
-    storage: { forms: [] },
-    marketedProducts: [],
-    benefits: [],
+    isDemo: false,
+    tags: ['Antispasmodic', 'Carminative', 'Anti-inflammatory', 'Digestive', 'Secretolytic'],
+    image: '/images/Picture36.jpg',
+    images: ['/images/Picture36.jpg'],
+    shortDescription: 'A multi-action carminative and antispasmodic botanical; trans-anethole and fenchone relax GI smooth muscle, expel trapped gas, and reduce spasmodic cramping during acute diarrheal episodes without arresting normal physiological elimination.',
+    activeConstituents: [
+      { name: 'Trans-Anethole (50–80% of volatile oil)', detail: 'Primary active principle responsible for the characteristic sweet, anise-like aroma; exhibits potent antispasmodic, anti-inflammatory, and secretolytic properties.' },
+      { name: 'Fenchone (5–20%)', detail: 'Monoterpene ketone providing the bitter flavor profile; contributes to antimicrobial, counter-irritant, and secretolytic effects.' },
+      { name: 'Estragole / Methyl chavicol (2–10%)', detail: 'Phenylpropene derivative providing secondary cellular effects; minimized in selected medical chemotypes due to safety monitoring.' },
+      { name: 'Phenolic Derivatives & Flavonoids (Quercetin, Rutin, Kaempferol)', detail: 'Rich in quercetin, rutin, and kaempferol derivatives alongside chlorogenic and rosmarinic acids, providing robust cellular antioxidant support and maintaining GI mucosal integrity.' },
+      { name: 'Fixed Oils & Phytosterols', detail: 'Contain essential fatty acids (petroselinic and oleic acids) and phytosterols contributing to the regulation of smooth muscle tone.' },
+    ],
+    moa: [
+      { title: 'Antispasmodic & Carminative Action', detail: 'Trans-anethole and fenchone exert a direct relaxant effect on GI smooth muscle cells by modulating intracellular calcium stores and acting as a weak antagonist to voltage-dependent calcium channels. This mitigates intestinal spasms, reduces intraluminal pressure, and facilitates gas expulsion (carminative effect).' },
+      { title: 'Anti-inflammatory & Mucosal Protective Effect', detail: 'Suppresses pro-inflammatory mediators and cascades, reducing mucosal irritation and abdominal cramping during acute gastrointestinal distress.' },
+      { title: 'Antioxidant Effect', detail: 'Directly scavenges reactive oxygen species (ROS), including superoxide and hydroxyl free radicals, while protecting cellular membranes within the mucosal linings from oxidative stress.' },
+      { title: 'Secretolytic, Secretomotor & Antitussive Action', detail: 'In the respiratory tract, the volatile fractions stimulate ciliary activity and increase bronchial secretions, thinning mucus and aiding in the management of non-productive, spasmodic coughs.' },
+      { title: 'Antimicrobial Action', detail: 'Demonstrates notable in vitro bacteriostatic and antifungal actions against common secondary pathogens.' },
+    ],
+    uses: [
+      'Supportive Relief for Diarrhea-Associated Cramps: Reduces spasmodic pain, abdominal gripping, and discomfort during acute diarrheal episodes by relaxing hyperactive intestinal walls (without arresting normal physiological elimination).',
+      'Symptomatic Relief of Digestive Disorders: Alleviates dyspepsia, flatulence, abdominal bloating, and functional gastrointestinal spasms.',
+      'Management of Infant Colic: Clinically utilized in mild, standardized, and strictly regulated pediatric formulations to calm hyperreactive GI tracts.',
+      'Mild Upper Respiratory Support: Calms hyperreactive airways, thins bronchial secretions, and assists in soothing pharyngeal inflammation and productive/non-productive coughs.',
+    ],
+    howToUse: [
+      { method: 'Aqueous Infusion (Fennel Tea)', instruction: 'Steep 1.5–2.5 g of freshly crushed or bruised seeds in 150–200 mL of boiling water in a covered vessel for 10–15 minutes (to prevent the loss of volatile essential oils). Take 2–3 times daily.' },
+      { method: 'Crude Dried Powder', instruction: '1–3 g daily, administered in divided doses mixed with warm water or food.' },
+      { method: 'Standardized Oral Capsules / Extracts', instruction: '200–400 mg taken 2–3 times per day, typically standardized to volatile oil content (under medical guidance).' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults & Adolescents', notes: 'Safe at standard therapeutic doses.' },
+      { group: 'Pediatrics (<4 years)', notes: 'Pure fennel essential oil Strictly Contraindicated due to risk of respiratory depression. Mild aqueous infusions (tea) for colic must be used with caution, under medical supervision, and within short durations to minimize estragole exposure.' },
+      { group: 'Pregnancy & Lactation', notes: 'Concentrated extracts, purifications, and pure essential oils are Strictly Contraindicated due to traditional emmenagogue properties and high estragole content. Safe during lactation only at standard culinary doses or under strict professional supervision in standardized formulations.' },
+      { group: 'Geriatrics & Hormone-Sensitive Conditions', notes: 'Use with extreme caution or avoid in patients with a history of estrogen-dependent conditions (e.g., breast, ovarian, or uterine malignancies) due to mild phytoestrogenic profile. High risk of cross-reactivity in individuals allergic to other Apiaceae family members.' },
+    ],
+    dosage: {
+      standard: 'Adults: 1.5–2.5 g seeds steeped 10–15 min in 150–200 mL boiling water (covered), 2–3× daily. Crude powder: 1–3 g daily in divided doses. Standardized capsules: 200–400 mg 2–3× daily.',
+      forms: [
+        { form: 'Fennel Tea', dose: '1.5–2.5 g freshly crushed seeds steeped 10–15 min in 150–200 mL boiling water (covered). 2–3× daily.' },
+        { form: 'Crude Dried Powder', dose: '1–3 g daily in divided doses mixed with warm water or food.' },
+        { form: 'Standardized Capsules/Extracts', dose: '200–400 mg 2–3× daily, standardized to volatile oil content. Under medical guidance.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Acute Oral Overdose (Excessive concentrated oil or high-dose extracts): Severe gastric mucosal irritation, burning epigastric pain, nausea, vomiting, skin hypersensitivity.',
+        'Massive toxic doses of pure essential oil: central nervous system excitability, muscle twitching, or seizures (neurotoxic potential of high-dose anethole/fenchone).',
+        'Topical Irritation (Undiluted Essential Oil): Erythema, photosensitivity, and allergic contact dermatitis.',
+      ],
+      management: [
+        'Discontinue use immediately.',
+        'Administer symptomatic and supportive treatment including oral antacids or mucosal protectants.',
+        'Maintain hydration and carefully monitor neurological and metabolic status if massive amounts of essential oil were ingested.',
+        'Topical Irritation: Wash thoroughly with cool water and soap; apply neutral emollient and avoid direct sunlight exposure.',
+      ],
+    },
+    sideEffects: [
+      'Mild gastric irritation or nausea at high doses.',
+      'Photosensitivity reactions from topical use of undiluted essential oil.',
+      'Allergic cross-reactivity in individuals sensitive to Apiaceae family members (carrots, celery, coriander).',
+    ],
+    contraindications: [
+      'Known hypersensitivity or allergy to Foeniculum vulgare or other members of the Apiaceae family (e.g., carrot, celery, coriander, cumin, anise, caraway).',
+      'Hormone-sensitive medical conditions or malignancies (breast, uterine, or ovarian cancer, endometriosis) due to phytoestrogenic components.',
+      'Infants and young children under 4 years old: concentrated extracts or pure essential oil strictly prohibited.',
+    ],
+    drugInteractions: [
+      'Estrogen & Hormone Therapies: May theoretically interfere with or potentiate oral contraceptives, tamoxifen, or hormone replacement therapies due to competitive or synergistic estrogen-receptor binding.',
+      'Fluoroquinolones (e.g., Ciprofloxacin): Fennel extracts may decrease the absorption, serum concentration, and bioavailability of certain oral antibiotics; administration must be spaced by at least 2 hours.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Dry Seeds / Powder / Capsules', storage: 'Store in tightly sealed, light-resistant containers below 25°C in a dry environment to avoid moisture absorption and rapid volatilization of active trans-anethole.' },
+        { form: 'Fennel Essential Oil', storage: 'Keep tightly closed in amber glass bottles away from direct light and heat sources.' },
+      ],
+    },
+    factsAndMyths: [
+      { myth: 'Fennel can completely replace medical rehydration therapies and oral antibiotics to stop severe infectious diarrhea.', fact: 'Fennel does not stop diarrhea directly nor eradicate severe bacterial pathogens in vivo; rather, it acts as an exceptional supportive phytotherapy that significantly reduces the painful intestinal spasms, cramping, and bloating while primary medical rehydration and targeted therapies are established.' },
+    ],
+    marketedProducts: [
+      { name: 'Himalaya Fennel Capsules / Digestive Wellness', image: '' },
+      { name: 'Sekem Fennel Tea / Baby Drink', image: '' },
+      { name: 'Isis Fennel Herbal Tea', image: '' },
+    ],
+    benefits: [
+      { icon: 'air', title: 'Carminative Gas Relief', desc: 'Trans-anethole relaxes GI smooth muscle and reduces intraluminal pressure, facilitating rapid expulsion of trapped gas and relieving painful bloating and flatulence.' },
+      { icon: 'spa', title: 'Antispasmodic for Diarrhea Cramps', desc: 'Calcium channel modulation relieves spasmodic abdominal pain during acute diarrheal episodes without arresting normal bowel elimination.' },
+      { icon: 'child_care', title: 'Safe Infant Colic Relief', desc: 'Standardized mild fennel infusions have clinical evidence for safely reducing infantile colic through GI smooth muscle relaxation.' },
+      { icon: 'healing', title: 'Mucosal Protection', desc: 'Quercetin and rosmarinic acid provide antioxidant and anti-inflammatory protection to the GI mucosa during acute digestive distress.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to the Mediterranean region. Widely cultivated throughout Europe, the Middle East, India, and China.',
+      parts: 'Fruits (commonly called seeds): the dried, ripe fruits (fructus). Volatile oil is distilled from both the fruits and the herb.',
+      history: 'Used since antiquity by the ancient Egyptians and Romans for digestive health and colic. EMA and WHO have published official herbal monographs on fennel fruit.',
+    },
+    preparation: [
+      { method: 'Fennel Seed Tea', desc: 'Lightly crush 1.5–2.5 g fennel seeds and steep in 150–200 mL boiling water in a covered vessel for 10–15 minutes. Drink warm 2–3× daily.', bestFor: 'Diarrhea-associated cramps, flatulence, bloating, infantile colic' },
+    ],
+    symptoms: ['Diarrhea', 'Abdominal cramps', 'Flatulence', 'Bloating', 'Dyspepsia', 'Infant colic'],
+    relatedPlants: ['peppermint-diarrhea', 'chamomile-diarrhea'],
+    references: [
+      { text: 'European Medicines Agency (EMA). (2016). European Union herbal monograph on Foeniculum vulgare Miller, fructus. Committee on Herbal Medicinal Products (HMPC).' },
+      { text: 'World Health Organization (WHO). WHO Monographs on Selected Medicinal Plants, Volume 3: Fructus Foeniculi. Geneva.' },
+      { text: 'National Center for Complementary and Integrative Health (NCCIH) — Fennel.', url: 'https://www.nccih.nih.gov' },
+      { text: 'Mount Sinai Health Library — Fennel.', url: 'https://www.mountsinai.org' },
+    ],
   },
 
   // ══════════════════════════════════════════════════════════════════════
@@ -7117,28 +6967,116 @@ export const PLANTS = {
     name: 'Peppermint',
     nameAr: 'النعناع الفلفلي',
     latinName: 'Mentha × piperita L.',
-    commonNames: ['Peppermint'],
+    commonNames: ['Peppermint', 'Brandy Mint', 'Balm Mint'],
     category: 'digestive',
     subcategory: 'dyspepsia',
-    isDemo: true,
-    tags: [],
-    image: '/images/placeholder.jpg',
-    shortDescription: '',
-    description: '',
+    isDemo: false,
+    tags: ['Antispasmodic', 'Carminative', 'IBS Relief', 'Dyspepsia Relief', 'Decongestant'],
+    image: '/images/Peppermint-Dyspepsia-main.jpg',
+    shortDescription: 'A clinically validated spasmolytic for dyspepsia and IBS; menthol blocks L-type Ca²⁺ channels in intestinal smooth muscle, relieving postprandial fullness, flatulence, and abdominal cramps while TRPM8 activation provides visceral analgesia.',
+    description: 'Peppermint (Mentha x piperita L.) contains monoterpenes dominated by menthol (30–55%) that block L-type voltage-gated calcium channels in intestinal smooth muscle, reducing contractions and hypermotility. Menthol also activates TRPM8 cold receptors, providing cooling visceral analgesia. Choleretic action (bile stimulation) aids fat digestion and relieves functional postprandial dyspepsia. Rosmarinic acid and flavonoids (luteolin, eriocitrin, hesperidin) provide anti-inflammatory and gastroprotective support.',
     history: '',
-    activeConstituents: [],
-    moa: [],
-    uses: [],
-    howToUse: [],
-    suitableAgeGroups: [],
-    dosage: { standard: '', forms: [] },
-    overdose: { symptoms: [], management: [] },
+    activeConstituents: [
+      { name: 'Menthol (30–55%)', percentage: '30–55% of volatile oil', effect: 'Major monoterpene alcohol responsible for cooling sensation, local analgesic properties, and dominant smooth muscle relaxant activities' },
+      { name: 'Menthone (14–32%)', percentage: '14–32%', effect: 'Monoterpene ketone structurally related to menthol providing secondary carminative actions' },
+      { name: 'Menthofuran (1–10%) & Isomenthone', percentage: '1–10%', effect: 'Trace compounds essential for species identification; excessive menthofuran indicates lower pharmaceutical grade or aging' },
+      { name: '1,8-Cineole (Eucalyptol) & Limonene', percentage: '', effect: 'Supplemental secretolytic, respiratory decongestant, and antiseptic mechanisms' },
+      { name: 'Rosmarinic Acid', percentage: '', effect: 'Prominent phenolic carboxylic acid displaying profound systemic antioxidant, antiviral, and tissue-protective actions' },
+      { name: 'Luteolin, Eriocitrin & Hesperidin', percentage: '', effect: 'Flavonoid glycosides providing systemic free-radical scavenging and complementary gastrointestinal spasmolysis' },
+    ],
+    moa: [
+      { title: 'Direct Smooth Muscle Spasmolysis', detail: 'Menthol acts as a direct local blocker of L-type voltage-gated calcium channels in intestinal smooth muscle. By inhibiting calcium influx across the sarcolemma, it reduces the amplitude and frequency of gastrointestinal contractions, safely mitigating painful visceral spasms and localized hyper-motility.' },
+      { title: 'Cooling, Decongestant & Local Analgesic Action', detail: 'Menthol selectively stimulates the Transient Receptor Potential Melastatin 8 (TRPM8) nerve receptors in cutaneous and mucosal nerve endings. This triggers a physiological cooling signal that suppresses secondary pain transmission, thins viscous mucous secretions, and relieves upper respiratory congestion or headaches.' },
+      { title: 'Carminative & Choleretic Actions', detail: 'Relaxes the lower esophageal sphincter, permitting trapped gas to be expelled effortlessly. Concurrently, it stimulates hepatic bile secretion, facilitating effective fat digestion and reducing functional postprandial dyspepsia.' },
+      { title: 'Antimicrobial Properties', detail: 'The lipophilic terpenes disrupt bacterial cell membranes, showing bacteriostatic actions against common intestinal and upper respiratory pathogens.' },
+    ],
+    uses: [
+      'Management of Irritable Bowel Syndrome (IBS): alleviates painful abdominal cramps, lower colonic spasms, bloating, and urgent tenesmus',
+      'Relief of Dyspepsia & Flatulence: combats postprandial upper abdominal fullness, functional nausea, and painful gastric flatulence',
+      'Support for Respiratory Tract Congestion: manages mucus buildup, catarrh, and coughing fits related to common colds and acute bronchitis',
+      'Alleviation of Tension Headaches: topical application of standardized preparations to the forehead and temples provides significant cooling relief',
+    ],
+    howToUse: [
+      { method: 'Aqueous Infusion (Peppermint Tea)', instruction: 'Infuse 1.5 to 3.0 g of dried leaves in 150–200 mL of boiling water in a tightly closed vessel for 10 minutes. Taken 3 times daily between or after meals.' },
+      { method: 'Enteric-Coated Essential Oil Capsules', instruction: '0.2 mL to 0.4 mL of standardized essential oil per capsule, 2 to 3 times daily. Enteric coating is mandatory to prevent the oil from releasing prematurely in the stomach, which can cause heartburn.' },
+      { method: 'Topical Liquid Formulations', instruction: '10% menthol or peppermint oil dissolved in ethanol, rubbed gently over temples for headaches, or applied over unbroken skin for local muscle pain.' },
+      { method: 'Steam Inhalation', instruction: '3 to 4 drops of pure oil placed into hot water for inhalation to clear respiratory pathways.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Pregnancy & Lactation', notes: 'Safe at normal dietary tea intakes (1–2 cups daily). Large therapeutic doses or pure essential oils are contraindicated due to risk of emmenagogue effects. Peppermint can slightly reduce breast milk supply when taken in massive quantities over extended periods.' },
+      { group: 'Pediatrics (under 4 years)', notes: 'Strictly contraindicated in infants and young children under 4 years old. Applying menthol or peppermint oil directly onto or near the nostrils, face, or chest of an infant can trigger sudden, severe laryngeal or bronchial spasms, leading to acute respiratory arrest.' },
+      { group: 'Geriatrics & Chronic Diseases', notes: 'Safe for elderly patients suffering from IBS, but contraindicated in individuals with severe gastroesophageal reflux disease (GERD) or hiatal hernia, as relaxation of the esophageal sphincter can exacerbate acid reflux.' },
+    ],
+    dosage: {
+      standard: 'Tea: 1.5–3.0 g dried leaves in 150–200 mL boiling water (covered), 10 min, 3× daily. Enteric-coated oil capsules: 0.2–0.4 mL, 2–3× daily. Topical: 10% menthol in ethanol.',
+      forms: [
+        { form: 'Aqueous Infusion (Tea)', dose: '1.5–3.0 g dried leaves in 150–200 mL boiling water, 10 min steep (covered vessel), 3× daily between or after meals.' },
+        { form: 'Enteric-Coated Oil Capsules', dose: '0.2–0.4 mL standardized essential oil, 2–3× daily. Enteric coating mandatory.' },
+        { form: 'Topical Liquid', dose: '10% menthol or peppermint oil in ethanol, applied gently over temples or unbroken skin.' },
+        { form: 'Steam Inhalation', dose: '3–4 drops pure oil in hot water, inhale to clear respiratory pathways.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Severe burning pain in the gastrointestinal tract, nausea, vomiting',
+        'Dizziness, ataxia (loss of motor coordination)',
+        'Cardiac arrhythmias',
+        'In catastrophic cases, central nervous system depression leading to coma',
+      ],
+      management: [
+        'Discontinue use immediately',
+        'Perform gastric lavage if ingestion is massive and caught early',
+        'Provide supportive care, monitor cardiac and respiratory parameters',
+        'Manage neurological symptoms symptomatically',
+      ],
+    },
     sideEffects: [],
-    contraindications: [],
-    drugInteractions: [],
-    storage: { forms: [] },
-    marketedProducts: [],
-    benefits: [],
+    contraindications: [
+      'Severe Acid Reflux (GERD): avoid in individuals with active gastroesophageal reflux disease, hiatal hernia, or severe heartburn',
+      'Biliary Obstructions: contraindicated in patients with gallstones, acute cholecystitis, or biliary tract obstructions, as its choleretic action can trigger severe biliary colic',
+    ],
+    drugInteractions: [
+      'Antacids, H2 Blockers & Proton Pump Inhibitors (PPIs): taking antacids concurrently with enteric-coated peppermint capsules will cause the enteric coating to dissolve prematurely in the stomach due to elevated pH levels, resulting in severe heartburn. Separate administration by at least 2 hours.',
+      'Cytochrome P450 Enzymes (CYP3A4): peppermint oil can inhibit CYP3A4 metabolism; use caution when co-administered with drugs that have a narrow therapeutic index metabolized via this pathway.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Dried Leaves & Capsules', storage: 'Store in airtight, light-resistant containers away from direct heat and moisture. Keep below 25°C to protect the volatile monoterpene profile from evaporation.' },
+      ],
+    },
+    factsAndMyths: [
+      { myth: 'Peppermint oil is a great, natural remedy to rub on an infant\'s nose to help them breathe when they have a bad cold.', fact: 'Applying peppermint oil or menthol near an infant\'s nose can trigger life-threatening laryngeal spasms and reflex respiratory arrest. It must never be used on faces of children under 4 years old.' },
+    ],
+    marketedProducts: [
+      { name: 'Colpermin Capsules (كولبرمين كبسولات - زيت نعناع فلفلي مغلف معوياً للقولون)', image: '/images/Peppermint-Dyspepsia-product.jpg' },
+      { name: 'Sekem Peppermint Tea (سيكم نعناع)', image: '' },
+      { name: 'Isis Peppermint Tea (إيزيس نعناع)', image: '' },
+      { name: 'Menthol Crystals / Rubs (بلورات الميثول والدهانات الموضعية لتخفيف آلام الصداع والعضلات)', image: '' },
+    ],
+    benefits: [
+      { icon: 'spa', title: 'IBS & Dyspepsia Relief', desc: 'Menthol\'s L-type Ca²⁺ channel blockade resolves painful intestinal spasms, postprandial fullness, and flatulence.' },
+      { icon: 'thermostat', title: 'Visceral Analgesia via TRPM8', desc: 'TRPM8 cold receptor activation in GI nerve fibers induces cooling analgesia, desensitizing hyperalgesic visceral walls.' },
+      { icon: 'water_drop', title: 'Choleretic & Digestive Aid', desc: 'Stimulates bile secretion, facilitating fat digestion and reducing functional dyspepsia.' },
+      { icon: 'air', title: 'Respiratory Decongestant', desc: 'Volatile menthol thins mucus and relieves upper respiratory congestion via TRPM8 stimulation.' },
+    ],
+    botanicalFacts: {
+      origin: 'Hybrid species (Mentha aquatica × Mentha spicata). Family: Lamiaceae.',
+      parts: 'Leaves (Menthae piperitae folium) and distilled volatile essential oil.',
+      history: 'EMA and WHO monographs confirm therapeutic role in IBS, dyspepsia, and functional GI disorders.',
+    },
+    preparation: [
+      { method: 'Aqueous Infusion (Tea)', desc: 'Infuse 1.5–3 g dried leaves in 150–200 mL boiling water in a tightly closed vessel for 10 minutes to retain volatile oils.', bestFor: 'Dyspepsia, flatulence, mild bloating' },
+      { method: 'Enteric-Coated Oil Capsules', desc: '0.2–0.4 mL standardized essential oil capsules. Enteric coating prevents premature release in stomach.', bestFor: 'IBS, GI spasms, functional dyspepsia' },
+      { method: 'Topical / Inhalation', desc: '10% menthol in ethanol for topical headache relief; 3–4 drops pure oil in hot water for steam inhalation.', bestFor: 'Tension headaches, respiratory congestion' },
+    ],
+    symptoms: ['Digestive discomfort', 'IBS symptoms', 'Flatulence', 'Bloating'],
+    relatedPlants: ['chamomile-dyspepsia', 'fennel-dyspepsia'],
+    references: [
+      { text: 'European Medicines Agency (EMA). (2020). European Union herbal monograph on Mentha x piperita L., folium. Committee on Herbal Medicinal Products (HMPC).' },
+      { text: 'World Health Organization (WHO). (2002). WHO Monographs on Selected Medicinal Plants (Vol. 2): Folium Menthae Piperitae. Geneva.' },
+      { text: 'Grigoleit, H. G., & Grigoleit, P. (2005). Peppermint oil in irritable bowel syndrome. Phytomedicine, 12(8), 601-606.' },
+      { text: 'Khanna, R., MacDonald, J. K., & Levesque, B. G. (2014). Peppermint oil for the treatment of irritable bowel syndrome: a systematic review and meta-analysis. Journal of Clinical Gastroenterology, 48(6), 505-512.' },
+    ],
   },
 
   'chamomile-dyspepsia': {
@@ -7146,28 +7084,115 @@ export const PLANTS = {
     name: 'Chamomile',
     nameAr: 'البابونج',
     latinName: 'Matricaria chamomilla L.',
-    commonNames: ['Chamomile', 'German Chamomile'],
+    commonNames: ['Chamomile', 'German Chamomile', 'Wild Chamomile'],
     category: 'digestive',
     subcategory: 'dyspepsia',
-    isDemo: true,
-    tags: [],
-    image: '/images/placeholder.jpg',
-    shortDescription: '',
-    description: '',
-    history: '',
-    activeConstituents: [],
-    moa: [],
-    uses: [],
-    howToUse: [],
-    suitableAgeGroups: [],
-    dosage: { standard: '', forms: [] },
-    overdose: { symptoms: [], management: [] },
+    isDemo: false,
+    tags: ['Antispasmodic', 'Anti-inflammatory', 'Anxiolytic', 'Carminative', 'Digestive Aid'],
+    image: '/images/Chamomile-Dyspepsia-main.jpg',
+    shortDescription: 'A multi-action botanical for nervous dyspepsia and GI spasms; chamazulene and α-bisabolol inhibit COX-2/5-LOX pathways while apigenin binds GABA-A receptors, delivering combined anti-inflammatory, antispasmodic, and mild anxiolytic effects.',
+    description: 'German Chamomile (Matricaria recutita L.) combines volatile sesquiterpene oils (chamazulene, α-bisabolol) with flavonoids (apigenin, luteolin) and coumarins (herniarin, umbelliferone). Chamazulene and bisabolol potently inhibit COX and 5-LOX inflammatory enzymes. Apigenin-7-glucoside competitively binds GABA-A benzodiazepine receptors, yielding mild sedation and anxiolytic activity without barbiturate-like withdrawal. Synergistic calcium channel blockade and phosphodiesterase inhibition resolve GI smooth muscle hyperreactivity.',
+    history: 'One of the oldest medicinal herbs, used by ancient Egyptians, Greeks, and Romans. EMA, WHO, and ESCOP monographs confirm its role in GI spasms, gastritis, and psychosomatic digestive disorders.',
+    activeConstituents: [
+      { name: 'Chamazulene', percentage: 'Formed from matricin during distillation', effect: 'Highly acclaimed anti-inflammatory, antioxidant, and antipyretic profile; imparts characteristic deep blue color to distilled oil' },
+      { name: 'alpha-Bisabolol & Bisabolol Oxides A, B', percentage: '', effect: 'Profound direct antispasmodic action on GI smooth muscles; alongside significant antibacterial, antifungal, and skin-protective properties' },
+      { name: 'Apigenin & Apigenin-7-glucoside', percentage: 'Predominant hydrophilic flavonoid', effect: 'Anxiolytic, mild sedative, and muscle relaxant properties via targeted central GABA-A benzodiazepine receptor binding' },
+      { name: 'Luteolin & Quercetin', percentage: '', effect: 'Potent synergistic free radical scavenging, local tissue repair, and supplemental anti-inflammatory activity' },
+      { name: 'Coumarins (Herniarin & Umbelliferone)', percentage: '', effect: 'Secondary antispasmodic and mild antifungal support within physiological therapeutic doses' },
+    ],
+    moa: [
+      { title: 'Anxiolytic & Mild Sedative Effect', detail: 'Apigenin selectively binds with high affinity to central benzodiazepine receptors within the GABA-A receptor complex in the brain. This action modulates neurotransmission, yielding a profound anxiolytic and sleep-inducing effect without inducing muscle coordination impairment or typical barbiturate-like withdrawal kinetics.' },
+      { title: 'Anti-inflammatory & Tissue Repair Action', detail: 'Active chamazulene and alpha-bisabolol strongly suppress pro-inflammatory enzymes. They inhibit the synthesis of Prostaglandin E2 (PGE2) and downregulate the activity of cyclooxygenase-2 (COX-2) and 5-lipoxygenase (5-LOX) pathways. Additionally, they exhibit significant free radical scavenging actions, protecting cell membranes against lipid peroxidation.' },
+      { title: 'Antispasmodic Gastrointestinal Effect', detail: 'Acts as a direct, non-specific relaxant on visceral smooth muscles. alpha-bisabolol and flavonoids diminish intestinal tone, decrease luminal hyper-motility, and exert an anti-peptic effect by protecting the gastric mucosa against mucosal damage.' },
+      { title: 'Antimicrobial & Local Vulnerary Actions', detail: 'Topical essential oil constituents degrade bacterial and fungal cellular membranes, accelerating granulation, tissue epithelization, and minor wound healing.' },
+    ],
+    uses: [
+      'Management of Insomnia & Sleep Disorders: alleviates mild nervous tension, generalized anxiety, restlessness, and secondary insomnia by optimizing sleep onset latency',
+      'Symptomatic Relief of Digestive Issues: effectively treats functional GI spasms, flatulence, bloating, nervous dyspepsia, and chronic IBS symptoms',
+      'Topical & Mucosal Treatment: indicated for skin irritations, minor eczema, diaper rashes, minor sunburns, and as an oral wash for aphthous ulcers or gingivitis',
+      'Alleviation of Respiratory Distresses: steam inhalation to reduce mucosal inflammation and congestion associated with common colds, rhinitis, and dry coughs',
+      'Reduction of Dysmenorrhea: eases smooth muscle uterine cramps and pelvic tightness associated with painful menstrual cycles',
+    ],
+    howToUse: [
+      { method: 'Internal Aqueous Infusion (Chamomile Tea)', instruction: 'Steep 1.5 to 3.0 g of dried whole flower heads in 150–250 mL of boiling water in a sealed container for 10–15 minutes (crucial to prevent the escape of volatile essential oils). Administered 3 to 4 times daily as an anxiolytic or carminative.' },
+      { method: 'Topical Wash or Compress', instruction: 'A prepared 3% to 10% aqueous infusion is applied locally using clean compresses, or applied as a sitz bath for perianal/genital mucosal inflammation.' },
+      { method: 'Standardized Oral Capsules / Liquid Extracts', instruction: '200 to 500 mg standardized dry extract capsules (standardized to apigenin equivalents) or 1–4 mL of hydroethanolic fluid extract taken 3 times daily.' },
+      { method: 'Steam Inhalation', instruction: 'Add 2 to 3 teaspoons of dried flowers or 2–4 drops of pure essential oil into a bowl of boiling water; deeply inhale the herbal steam for 5–10 minutes for respiratory relief.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Pregnancy & Lactation', notes: 'Safe for consumption during pregnancy and lactation when limited strictly to standard dietary/culinary tea levels (1–2 cups per day). Large therapeutic doses, concentrated liquid extracts, and pure essential oils are strictly contraindicated due to structural emmenagogue qualities and theoretical risks of uterine stimulation.' },
+      { group: 'Pediatrics', notes: 'Extremely safe for infants and toddlers when administered as a very mild, diluted aqueous infusion to alleviate infantile colic, teething distress, or mild restlessness. Pure, undiluted essential oils must never be applied near the face or ingested by infants.' },
+      { group: 'Geriatrics', notes: 'Highly tolerated and safe for elderly populations, serving as an exceptional non-addictive herbal alternative to pharmaceutical sedatives (e.g., benzodiazepines) which carry significant fall and cognitive risks in the elderly.' },
+    ],
+    dosage: {
+      standard: 'Tea: 1.5–3.0 g dried flower heads steeped 10–15 min (sealed) in 150–250 mL water, 3–4× daily. Capsules: 200–500 mg standardized dry extract, 3× daily. Fluid extract: 1–4 mL, 3× daily.',
+      forms: [
+        { form: 'Aqueous Infusion (Chamomile Tea)', dose: '1.5–3.0 g dried whole flower heads in 150–250 mL boiling water, sealed container, 10–15 min. 3–4× daily as anxiolytic or carminative.' },
+        { form: 'Standardized Oral Capsules', dose: '200–500 mg standardized dry extract (standardized to apigenin equivalents), 3× daily.' },
+        { form: 'Hydroethanolic Fluid Extract', dose: '1–4 mL, 3× daily.' },
+        { form: 'Topical Wash or Compress', dose: '3%–10% aqueous infusion applied locally using clean compresses or as a sitz bath.' },
+        { form: 'Steam Inhalation', dose: '2–3 tsp dried flowers or 2–4 drops essential oil in boiling water; inhale deeply for 5–10 minutes.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Severe systemic nausea, profuse vomiting (gastrointestinal emetic trigger)',
+        'Excessive drowsiness, marked lethargy',
+        'In hyper-reactive individuals: acute bronchoconstriction or anaphylaxis',
+      ],
+      management: [
+        'Discontinue ingestion immediately',
+        'Provide robust supportive and symptomatic care (oral or intravenous hydration)',
+        'Administer oral antihistamines or systemic corticosteroids promptly if severe hypersensitivity or allergic respiratory bronchospasms manifest',
+      ],
+    },
     sideEffects: [],
-    contraindications: [],
-    drugInteractions: [],
-    storage: { forms: [] },
-    marketedProducts: [],
-    benefits: [],
+    contraindications: [
+      'Asteraceae Hypersensitivity: strictly contraindicated in individuals with known severe allergies to members of the Asteraceae/Compositae family (e.g., ragweed, marigolds, daisies, chrysanthemums, arnica) due to risks of cross-sensitization triggered by sesquiterpene lactones',
+      'Direct Application to the Eyes: aqueous infusions or oils should never be applied directly onto or near the eye contour to treat ocular irritations, as it can induce severe chemical conjunctivitis',
+    ],
+    drugInteractions: [
+      'Anticoagulants / Antiplatelets (e.g., Warfarin, Aspirin, Heparin): chamomile contains naturally occurring trace coumarin derivatives. When consumed in large therapeutic amounts, it may theoretically exert additive antiplatelet actions and elevate risks of bleeding or alter prothrombin time (INR).',
+      'CNS Depressants (e.g., Benzodiazepines, Zolpidem, Alcohol): concurrent use can result in profound additive sedative and somnolent profiles via synergistic GABA-A pathways; adjustment of doses or cautious spacing is highly advised.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Dried Flower Heads', storage: 'Store in tightly sealed, light-resistant glass containers in a cool, dark, and dry environment. Protection from air and ambient light is critical to prevent the rapid oxidation, polymerization, and loss of volatile chamazulene and bisabolol oxides.' },
+      ],
+    },
+    factsAndMyths: [
+      { myth: 'Chamomile tea can be safely used as an eye drop or wash to cure bacterial conjunctivitis and soothe eye redness.', fact: 'Applying chamomile infusions to the eyes is dangerous. Microscopic pollen particles and plant hairs remaining in the tea can cause severe allergic conjunctivitis, secondary corneal irritation, and exacerbate ocular inflammation.' },
+    ],
+    marketedProducts: [
+      { name: 'Sekem Chamomile Tea (سيكم بابونج)', image: '/images/Chamomile-Dyspepsia-2.jpg' },
+      { name: 'Isis Chamomile Tea (إيزيس بابونج)', image: '/images/Chamomile-Dyspepsia-3.png' },
+      { name: 'Camisan Ointment / Cream (كاميستان كريم - مستخلص البابونج الموضعي للالتهابات)', image: '' },
+      { name: 'Kamillosan Liquid Spray / Wash (كاميلوسان غسول وبخاخ للفم والحلق)', image: '' },
+    ],
+    benefits: [
+      { icon: 'spa', title: 'Nervous Dyspepsia Relief', desc: 'Apigenin\'s GABA-A binding plus bisabolol\'s spasmolytic action resolve functional GI spasms and stress-related digestive discomfort.' },
+      { icon: 'healing', title: 'Anti-inflammatory GI Protection', desc: 'Chamazulene and bisabolol inhibit COX-2 and 5-LOX, reducing mucosal inflammation and gastric irritation.' },
+      { icon: 'bedtime', title: 'Mild Anxiolytic & Sleep Aid', desc: 'Apigenin competitively binds benzodiazepine receptors without withdrawal risks, easing anxiety and improving sleep onset.' },
+      { icon: 'water_drop', title: 'Mucosal Healing', desc: 'Vulnerary and antimicrobial actions accelerate healing of aphthous ulcers, skin irritations, and GI mucosal damage.' },
+    ],
+    botanicalFacts: {
+      origin: 'Matricaria recutita L. (syn. Matricaria chamomilla, German Chamomile) or Chamaemelum nobile L. (Roman Chamomile). Family: Asteraceae (Compositae).',
+      parts: 'Dried whole flower heads (Flos Chamomillae) and distilled volatile essential oil.',
+      history: 'Used by ancient Egyptians, Greeks, and Romans. EMA, WHO, and ESCOP monographs confirm clinical use in GI spasms, gastritis, and psychosomatic digestive disorders.',
+    },
+    preparation: [
+      { method: 'Aqueous Infusion (Chamomile Tea)', desc: 'Steep 1.5–3.0 g dried flower heads in 150–250 mL boiling water in a sealed container for 10–15 minutes; sealing prevents loss of volatile oils.', bestFor: 'Nervous dyspepsia, GI spasms, anxiety, insomnia' },
+      { method: 'Standardized Capsules', desc: '200–500 mg dry extract standardized to apigenin equivalents, 3× daily.', bestFor: 'IBS, functional digestive disorders, anxiety' },
+      { method: 'Topical / Steam', desc: '3–10% aqueous infusion as compress or sitz bath; 2–4 drops oil in hot water for steam inhalation.', bestFor: 'Skin irritations, mucosal inflammation, respiratory congestion' },
+    ],
+    symptoms: ['Digestive discomfort', 'Gastritis', 'Flatulence', 'Bloating', 'IBS symptoms'],
+    relatedPlants: ['peppermint-dyspepsia', 'fennel-dyspepsia'],
+    references: [
+      { text: 'European Medicines Agency (EMA). (2015). European Union herbal monograph on Matricaria recutita L., flos. Committee on Herbal Medicinal Products (HMPC).' },
+      { text: 'World Health Organization (WHO). (1999). WHO Monographs on Selected Medicinal Plants (Vol. 1): Flos Chamomillae. Geneva.' },
+      { text: 'Srivastava, J. K., Shankar, E., & Gupta, S. (2010). Chamomile: A herbal medicine of the past with bright future. Molecular Medicine Reports, 3(6), 895-901.' },
+      { text: 'Amsterdam, J. D., et al. (2009). A randomized, double-blind, placebo-controlled trial of oral Matricaria recutita (chamomile) extract therapy for generalized anxiety disorder. Journal of Clinical Psychopharmacology, 29(4), 378-382.' },
+    ],
   },
 
   'fennel-dyspepsia': {
@@ -7175,28 +7200,107 @@ export const PLANTS = {
     name: 'Fennel',
     nameAr: 'الشمر',
     latinName: 'Foeniculum vulgare Mill.',
-    commonNames: ['Fennel', 'Sweet Fennel'],
+    commonNames: ['Fennel', 'Sweet Fennel', 'Bitter Fennel'],
     category: 'digestive',
     subcategory: 'dyspepsia',
-    isDemo: true,
-    tags: [],
-    image: '/images/placeholder.jpg',
-    shortDescription: '',
-    description: '',
+    isDemo: false,
+    tags: ['Carminative', 'Antispasmodic', 'Galactagogue', 'Flatulence Relief', 'Digestive Aid'],
+    image: '/images/Fennel-Dyspepsia-main.jpg',
+    shortDescription: 'A carminative phytotherapy for dyspepsia and functional GI disorders; trans-anethole acts as a competitive calcium channel antagonist relaxing intestinal smooth muscle, while estrogenic modulation supports lactation and warrants caution in hormone-sensitive conditions.',
+    description: 'Fennel (Foeniculum vulgare Mill.) volatile essential oil (2–6%) is dominated by trans-anethole (50–80%), which competitively blocks calcium channels in intestinal smooth muscle, mitigating GI spasms and facilitating gas expulsion. Fenchone (5–20%) contributes antimicrobial properties and carries neurotoxic risks in high doses. Phenolic derivatives (quercetin, kaempferol, chlorogenic acid) provide systemic antioxidant support. Estrogenic modulation occurs via trans-anethole and dianethole binding to estrogen receptors. Family: Apiaceae.',
     history: '',
-    activeConstituents: [],
-    moa: [],
-    uses: [],
-    howToUse: [],
-    suitableAgeGroups: [],
-    dosage: { standard: '', forms: [] },
-    overdose: { symptoms: [], management: [] },
+    activeConstituents: [
+      { name: 'trans-Anethole (50–80%)', percentage: '50–80% of volatile oil', effect: 'Predominant constituent responsible for the characteristic sweet aroma, as well as its estrogenic, expectorant, and spasmolytic activities' },
+      { name: 'Fenchone (5–20%)', percentage: '5–20%', effect: 'Bicyclic monoterpene ketone providing the bitter taste; contributes to antimicrobial properties; carries neurotoxic risks in high doses' },
+      { name: 'Estragole / Methyl chavicol (3–20%)', percentage: '3–20%', effect: 'Natural phenylpropenoid requiring strict standardization due to potential genotoxic carcinogenicity concerns at isolated, massive doses' },
+      { name: 'Phenolic Derivatives & Flavonoids', percentage: '', effect: 'Includes quercetin, kaempferol, and chlorogenic acid; provide systemic antioxidant support and cellular protection' },
+    ],
+    moa: [
+      { title: 'Antispasmodic & Carminative Action', detail: 'Directly relaxes the intestinal smooth muscles. trans-anethole acts as a competitive calcium channel antagonist, reducing intracellular calcium influx and mitigating acetylcholine- and histamine-induced gastrointestinal spasms. This facilitates the expulsion of trapped gas and reduces luminal pressure.' },
+      { title: 'Secretolytic & Expectorant Effect', detail: 'In the respiratory tract, volatile components stimulate the ciliated epithelium of the bronchial mucosa, increasing the production of fluid respiratory tract secretions and reducing mucus viscosity, which aids in ciliary clearance.' },
+      { title: 'Estrogenic Modulation', detail: 'Compounds like trans-anethole and its polymers (such as dianethole) exhibit structural similarities to estrogen, weak binding to estrogen receptors, and stimulation of prolactin secretion.' },
+      { title: 'Antimicrobial & Antifungal Action', detail: 'The essential oil components disrupt microbial cell membrane integrity, demonstrating notable in vitro bacteriostatic actions against common secondary pathogens.' },
+    ],
+    uses: [
+      'Symptomatic Relief of Digestive Disorders: alleviates dyspepsia, abdominal bloating, flatulence, and spasmodic gastrointestinal pain associated with Irritable Bowel Syndrome (IBS)',
+      'Management of Infantile Colic: clinically proven to reduce crying time and abdominal spasms in infants when administered as a standardized, mild aqueous extract',
+      'Supportive Treatment for Respiratory Tract Catarrh: eases productive coughs, mild bronchitis, and upper respiratory tract congestion by promoting expectoration',
+      'Galactagogue Support: traditionally and clinically utilized to stimulate and improve breast milk production in lactating mothers via its estrogenic pathways',
+    ],
+    howToUse: [
+      { method: 'Aqueous Infusion (Fennel Tea)', instruction: 'Steep 1.5 to 2.5 g of freshly crushed seeds in 150–200 mL of boiling water in a covered vessel for 10–15 minutes (to prevent the loss of volatile anethole). Take 3 times daily (Max: 7.5 g daily).' },
+      { method: 'Standardized Oral Capsules', instruction: '200 to 400 mg of standardized dry extract or essential oil capsules, taken 2 to 3 times per day.' },
+      { method: 'Pediatric Syrup / Aqueous Drops (for Colic)', instruction: 'Standardized aqueous extracts equivalent to 1–2 g of seeds daily for children over 4 years of age, or specialized lower doses for infants under strict medical supervision.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Pregnancy & Lactation', notes: 'Safe during lactation at standard culinary or mild infusion doses (supports milk production). However, the pure essential oil is strictly contraindicated during pregnancy due to potential emmenagogue and uterine-stimulating properties.' },
+      { group: 'Pediatrics', notes: 'Pure essential oil must not be administered to infants or children under 4 years old due to potential central nervous system sensitivities to fenchone. Safe only when using strictly regulated, age-appropriate pediatric aqueous formulations.' },
+      { group: 'Geriatrics & Chronic Diseases', notes: 'Hormone-Sensitive Conditions: must be avoided or used with extreme caution in patients with a history of breast cancer, uterine cancer, ovarian cancer, or endometriosis, due to the weak phytoestrogenic activity of anethole.' },
+    ],
+    dosage: {
+      standard: 'Fennel Tea: 1.5–2.5 g freshly crushed seeds in 150–200 mL boiling water (covered vessel), 10–15 min, 3× daily (Max 7.5 g/day). Capsules: 200–400 mg standardized extract, 2–3× daily.',
+      forms: [
+        { form: 'Aqueous Infusion (Fennel Tea)', dose: '1.5–2.5 g freshly crushed seeds in 150–200 mL boiling water, covered vessel, 10–15 min. 3× daily. Max 7.5 g daily.' },
+        { form: 'Standardized Oral Capsules', dose: '200–400 mg standardized dry extract or essential oil capsules, 2–3× daily.' },
+        { form: 'Pediatric Syrup / Aqueous Drops', dose: 'Standardized aqueous extracts equivalent to 1–2 g seeds daily for children over 4 years; lower specialized doses for infants under medical supervision.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Acute Oral Overdose (concentrated pure essential oil): gastrointestinal irritation (nausea, vomiting), skin rashes, and central nervous system stimulation — restlessness, delirium, and epileptic seizures (primarily induced by excessive fenchone and anethole accumulation in the CNS)',
+        'Topical Irritation (Undiluted Essential Oil): erythema, photosensitivity reactions, and contact dermatitis',
+      ],
+      management: [
+        'Discontinue use immediately; administer symptomatic treatment',
+        'For seizures: administer anticonvulsants (e.g., benzodiazepines); maintain airway and monitoring',
+        'For topical irritation: wash thoroughly with cool water and soap; avoid direct sunlight and apply a neutral emollient',
+      ],
+    },
     sideEffects: [],
-    contraindications: [],
-    drugInteractions: [],
-    storage: { forms: [] },
-    marketedProducts: [],
-    benefits: [],
+    contraindications: [
+      'Hypersensitivity: known hypersensitivity to Foeniculum vulgare or other members of the Apiaceae family (e.g., celery, cumin, anise, carrots)',
+      'Malignancies: patients with active estrogen-dependent malignancies or endocrine disorders',
+    ],
+    drugInteractions: [
+      'Hormonal Therapies (e.g., Oral Contraceptives, HRT): high therapeutic doses of fennel may competitively interfere with or potentiate the efficacy of exogenous estrogen therapies due to its phytoestrogenic properties.',
+      'Ciprofloxacin / Fluoroquinolones: fennel may decrease the gastrointestinal absorption and bioavailability of ciprofloxacin; concurrent administration should be separated by at least 2 hours.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Crushed / Whole Seeds & Standardized Capsules', storage: 'Store in tightly sealed, airtight, and light-resistant containers in a cool, dry environment (below 25°C) to prevent the volatilization of anethole and degradation of active components.' },
+      ],
+    },
+    factsAndMyths: [
+      { myth: 'Fennel essential oil is 100% safe for infants to swallow for colic since it\'s natural.', fact: 'Pure, undiluted fennel essential oil is highly concentrated and can be toxic to an infant\'s developing central nervous system; only specialized, ultra-diluted aqueous pediatric drops are clinically safe.' },
+    ],
+    marketedProducts: [
+      { name: 'Sekem Fennel Tea (سيكم شمر)', image: '/images/Fennel-Dyspepsia-2.jpg' },
+      { name: 'Isis Fennel Tea (إيزيس شمر)', image: '/images/Fennel-Dyspepsia-3.jpg' },
+      { name: 'Aqua Vera Syrup (ماء غريب / تركيبات المغص للرضع المحتوية على مستخلص الشمر المائي)', image: '' },
+    ],
+    benefits: [
+      { icon: 'spa', title: 'Dyspepsia & Flatulence Relief', desc: 'trans-Anethole\'s calcium channel antagonism relaxes GI smooth muscle, expelling trapped gas and relieving bloating and dyspeptic discomfort.' },
+      { icon: 'child_care', title: 'Infantile Colic Management', desc: 'Clinically proven standardized aqueous extracts reduce crying time and abdominal spasms in infants.' },
+      { icon: 'air', title: 'Respiratory Expectorant', desc: 'Volatile components stimulate bronchial ciliated epithelium, reducing mucus viscosity and aiding clearance of catarrh and productive coughs.' },
+      { icon: 'water_drop', title: 'Galactagogue Support', desc: 'Estrogenic modulation via trans-anethole stimulates prolactin secretion, supporting breast milk production in lactating mothers.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to the Mediterranean region. Family: Apiaceae.',
+      parts: 'Fruit (seed) — Foeniculi vulgaris fructus — and volatile essential oil.',
+      history: 'Traditional Mediterranean and Ayurvedic herbal medicine. EMA and WHO monographs confirm its use for GI disorders, colic, and galactagogue support.',
+    },
+    preparation: [
+      { method: 'Aqueous Infusion (Fennel Tea)', desc: 'Steep 1.5–2.5 g freshly crushed seeds in 150–200 mL boiling water in a covered vessel for 10–15 minutes; covering prevents anethole volatilization.', bestFor: 'Dyspepsia, flatulence, GI spasms, bloating' },
+      { method: 'Standardized Capsules', desc: '200–400 mg standardized dry extract or essential oil capsules, 2–3× daily.', bestFor: 'Consistent dosing; respiratory support; lactation' },
+      { method: 'Pediatric Aqueous Drops', desc: 'Specialized ultra-diluted aqueous extracts for infants with colic, under medical supervision.', bestFor: 'Infantile colic' },
+    ],
+    symptoms: ['Digestive discomfort', 'Flatulence', 'Bloating', 'IBS symptoms'],
+    relatedPlants: ['peppermint-dyspepsia', 'chamomile-dyspepsia'],
+    references: [
+      { text: 'European Medicines Agency (EMA). (2016). European Union herbal monograph on Foeniculum vulgare Miller, fructus. Committee on Herbal Medicinal Products (HMPC).' },
+      { text: 'World Health Organization (WHO). (2007). WHO Monographs on Selected Medicinal Plants (Vol. 3). Geneva.' },
+      { text: 'Badgujar, S. B., Patel, V. V., & Bandivdekar, A. H. (2014). Foeniculum vulgare Mill: A review of its botany, phytochemistry, pharmacology, contemporary application, and toxicology. BioMed Research International, 2014.' },
+    ],
   },
 
   // ══════════════════════════════════════════════════════════════════════
@@ -7211,25 +7315,194 @@ export const PLANTS = {
     commonNames: ['Peppermint'],
     category: 'digestive',
     subcategory: 'ibs',
-    isDemo: true,
-    tags: [],
-    image: '/images/placeholder.jpg',
-    shortDescription: '',
-    description: '',
+    isDemo: false,
+    tags: ['Antispasmodic', 'IBS Relief', 'Carminative', 'Enteric-Coated', 'Level A Evidence'],
+    image: '/images/Peppermint-IBS-main.jpg',
+    shortDescription: 'One of the few herbal medicines with Level A clinical evidence for IBS; menthol acts as a natural calcium channel blocker on colonic smooth muscle delivering dose-dependent antispasmodic relief. Enteric-coated capsules are clinically superior to tea for targeting the colon directly.',
+    description: 'Peppermint (Mentha x piperita; Family: Lamiaceae) contains menthol as the major component of its essential oil. Menthol acts as a natural calcium channel blocker on the smooth muscle of the colon, leading to a direct, dose-dependent antispasmodic effect. It provides symptomatic relief of abdominal pain, bloating, cramps, and gas associated with IBS. Administered as enteric-coated capsules to ensure the oil bypasses the stomach and is released directly in the intestines; also available as herbal tea for mild symptoms.',
     history: '',
-    activeConstituents: [],
-    moa: [],
-    uses: [],
-    howToUse: [],
-    suitableAgeGroups: [],
-    dosage: { standard: '', forms: [] },
-    overdose: { symptoms: [], management: [] },
-    sideEffects: [],
-    contraindications: [],
+    activeConstituents: [
+      { name: 'Menthol', percentage: 'Major component of the essential oil', effect: 'Natural calcium channel blocker on colonic smooth muscle; direct, dose-dependent antispasmodic effect; provides relief of abdominal pain, bloating, cramps, and gas in IBS' },
+    ],
+    moa: [
+      { title: 'Calcium Channel Blockade (Antispasmodic)', detail: 'Menthol acts as a natural calcium channel blocker on the smooth muscle of the colon, leading to a direct, dose-dependent antispasmodic effect. This reduces colonic hypermotility and relieves abdominal pain, bloating, cramps, and gas associated with IBS.' },
+    ],
+    uses: [
+      'Symptomatic relief of abdominal pain, bloating, cramps, and gas associated with IBS',
+    ],
+    howToUse: [
+      { method: 'Enteric-Coated Capsules (Preferred)', instruction: 'Administered as enteric-coated capsules to ensure the oil bypasses the stomach and is released directly in the intestines. 180 mg to 360 mg (approximately 0.2 mL to 0.4 mL) or 1–2 capsules, three times daily. Must be administered strictly in enteric-coated capsules.' },
+      { method: 'Herbal Tea', instruction: 'Can be taken as a herbal tea for mild symptoms.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Generally safe and effective.' },
+      { group: 'Pediatrics', notes: 'Use with extreme caution; avoid in infants and very young children due to the risk of respiratory depression and laryngospasm from menthol.' },
+      { group: 'Pregnancy & Lactation', notes: 'Considered safe in standard culinary / food amounts; medical supervision is advised for concentrated medicinal oils.' },
+      { group: 'Chronic Diseases', notes: 'Use with caution in patients with GERD or hiatal hernia (may relax the lower esophageal sphincter, exacerbating reflux).' },
+    ],
+    dosage: {
+      standard: '180 mg to 360 mg (approximately 0.2 mL to 0.4 mL) or 1–2 capsules, taken three times daily. Must be administered strictly in enteric-coated capsules.',
+      forms: [
+        { form: 'Enteric-Coated Capsules', dose: '180–360 mg (0.2–0.4 mL), or 1–2 capsules, 3× daily. Must be enteric-coated — swallow whole, do not crush or chew.' },
+        { form: 'Herbal Tea', dose: 'For mild symptoms only.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Dizziness, slow heartbeat (bradycardia), or rapid breathing',
+        'Rare: ingestion of very high doses of menthol can lead to central nervous system toxicity, including ataxia or seizures',
+      ],
+      management: [
+        'Supportive care, symptomatic treatment, and gastric lavage if necessary',
+      ],
+    },
+    sideEffects: [
+      'Heartburn (acid reflux)',
+      'Nausea',
+      'Rarely, perianal burning',
+    ],
+    contraindications: [
+      'Gallstones',
+      'Bile duct obstruction',
+      'Severe liver damage',
+      'Achlorhydria (the absence of stomach acid causes premature dissolution of the enteric coating in the stomach)',
+    ],
     drugInteractions: [],
-    storage: { forms: [] },
-    marketedProducts: [],
-    benefits: [],
+    storage: {
+      forms: [
+        { form: 'Enteric-Coated Capsules', storage: 'Store in a cool, dry place (< 25°C) away from direct sunlight.' },
+      ],
+    },
+    factsAndMyths: [
+      { myth: 'Drinking regular peppermint tea is just as effective as enteric-coated capsules for IBS.', fact: 'Enteric-coated capsules are clinically superior for IBS because they target the colon directly without causing gastric irritation or heartburn. Peppermint oil is one of the few herbal medicines with high-quality clinical evidence (Level A recommendation) for short-term IBS symptom relief.' },
+    ],
+    marketedProducts: [
+      { name: 'Colpermin Capsules', image: '/images/Peppermint-IBS-product.jpg' },
+      { name: 'Mintec Capsules', image: '' },
+      { name: 'Spasmo-Colpermin Capsules', image: '' },
+    ],
+    benefits: [
+      { icon: 'spa', title: 'Level A Evidence for IBS', desc: 'One of the few herbal medicines with high-quality clinical evidence (Level A recommendation) for short-term IBS symptom relief.' },
+      { icon: 'air', title: 'Colonic Smooth Muscle Relaxant', desc: 'Menthol\'s calcium channel blockade delivers direct, dose-dependent antispasmodic relief targeting the colon.' },
+      { icon: 'bubble_chart', title: 'Relieves IBS Symptoms', desc: 'Provides symptomatic relief of abdominal pain, bloating, cramps, and gas associated with IBS.' },
+    ],
+    botanicalFacts: {
+      origin: 'Hybrid species (Mentha aquatica × Mentha spicata). Family: Lamiaceae.',
+      parts: 'Leaves and distilled volatile essential oil (Aetheroleum Menthae Piperitae).',
+      history: 'EMA (2020) herbal monograph on Mentha x piperita aetheroleum confirms Level A recommendation for IBS symptom relief.',
+    },
+    preparation: [
+      { method: 'Enteric-Coated Capsules', desc: 'Pharmaceutical-grade enteric-coated capsules ensuring oil release directly in the intestines, bypassing the stomach.', bestFor: 'IBS — clinically superior delivery for colonic targeting' },
+      { method: 'Herbal Tea', desc: 'Aqueous infusion of dried peppermint leaves for mild symptomatic relief.', bestFor: 'Mild IBS symptoms' },
+    ],
+    symptoms: ['IBS symptoms', 'Abdominal cramps', 'Flatulence', 'Bloating'],
+    relatedPlants: ['psyllium-ibs', 'ginger-ibs'],
+    references: [
+      { text: 'European Medicines Agency (EMA). (2020). European Union herbal monograph on Mentha x piperita L., aetheroleum. Committee on Herbal Medicinal Products (HMPC). EMA/HMPC/517721/2019.' },
+      { text: 'Khanna, R., MacDonald, J. K., & Levesque, B. G. (2014). Peppermint oil for the treatment of irritable bowel syndrome: a systematic review and meta-analysis. Journal of Clinical Gastroenterology, 48(6), 505-512.' },
+    ],
+  },
+
+  'ginger-ibs': {
+    id: 'ginger-ibs',
+    name: 'Ginger',
+    nameAr: 'الزنجبيل',
+    latinName: 'Zingiber officinale Roscoe',
+    commonNames: ['Ginger'],
+    category: 'digestive',
+    subcategory: 'ibs',
+    isDemo: false,
+    tags: ['Prokinetic', 'Anti-emetic', 'IBS Relief', 'Anti-inflammatory', 'Digestive Aid'],
+    image: '/images/Ginger-IBS-main.jpg',
+    shortDescription: 'A powerful prokinetic agent that accelerates gastric emptying by stimulating the antrum and corpus of the stomach; gingerols and shogaols act as peripheral 5-HT3 receptor antagonists (anti-emetic) and modulate cholinergic/5-HT4 receptors to regulate intestinal motility, helping manage nausea, dyspepsia, and secondary IBS symptoms.',
+    description: 'Ginger (Zingiber officinale; Family: Zingiberaceae) contains gingerols and shogaols as active ingredients. It acts as a peripheral 5-HT3 receptor antagonist providing anti-emetic effects, and modulates cholinergic/5-HT4 receptors to stimulate gastric emptying and regulate intestinal motility (prokinetic effect). It also possesses anti-inflammatory activities in the GI mucosa. Reduces nausea, improves digestive motility, and helps manage functional dyspepsia often co-existing with IBS.',
+    history: '',
+    activeConstituents: [
+      { name: 'Gingerols', percentage: '', effect: 'Primary active compounds; peripheral 5-HT3 receptor antagonist (anti-emetic); modulate cholinergic/5-HT4 receptors for prokinetic and intestinal motility regulation; anti-inflammatory in GI mucosa' },
+      { name: 'Shogaols', percentage: '', effect: 'Formed from gingerols upon drying or heating; contribute to anti-emetic, prokinetic, and anti-inflammatory activities' },
+    ],
+    moa: [
+      { title: 'Peripheral 5-HT3 Receptor Antagonism (Anti-emetic)', detail: 'Gingerols and shogaols act as peripheral 5-HT3 receptor antagonists, providing potent anti-emetic effects by blocking serotonin-mediated emetic signals in the GI tract.' },
+      { title: 'Cholinergic / 5-HT4 Modulation (Prokinetic)', detail: 'Modulates cholinergic and 5-HT4 receptors to stimulate gastric emptying and regulate intestinal motility, producing a prokinetic effect that accelerates gastric emptying by stimulating the antrum and corpus of the stomach.' },
+      { title: 'Anti-inflammatory Activity in the GI Mucosa', detail: 'Possesses anti-inflammatory activities in the GI mucosa, reducing local mucosal inflammation contributing to functional dyspepsia and nausea associated with IBS.' },
+    ],
+    uses: [
+      'Reduces nausea associated with IBS and functional dyspepsia',
+      'Improves digestive motility via prokinetic effect (accelerates gastric emptying)',
+      'Helps manage functional dyspepsia often co-existing with IBS',
+    ],
+    howToUse: [
+      { method: 'Fresh Root', instruction: 'Used as fresh root in cooking or as an infusion.' },
+      { method: 'Dried Powder', instruction: 'Dried powdered ginger in capsules or mixed in warm water.' },
+      { method: 'Standardized Capsules', instruction: '1 g to 2 g of dried powder or standardized extract daily, divided into multiple doses.' },
+      { method: 'Herbal Infusions', instruction: 'Prepared as a herbal tea from fresh or dried ginger root.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Safe for general consumption.' },
+      { group: 'Pregnancy', notes: 'Commonly used for pregnancy-induced nausea and morning sickness. Must be strictly limited to a maximum of 1 g/day of dried extract under medical guidance.' },
+      { group: 'Pediatrics', notes: 'Safe in culinary amounts; medicinal extracts should be restricted.' },
+    ],
+    dosage: {
+      standard: '1 g to 2 g of dried powder or standardized extract daily, divided into multiple doses.',
+      forms: [
+        { form: 'Dried Powder / Standardized Capsules', dose: '1–2 g daily, divided into multiple doses.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Consuming more than 4 g daily significantly increases GI adverse effects',
+        'Mild diarrhea, severe heartburn, and oral mucosal irritation',
+      ],
+      management: [
+        'Discontinuation of use and supportive symptomatic treatment',
+      ],
+    },
+    sideEffects: [
+      'Heartburn',
+      'Abdominal discomfort',
+      'Eructation (burping)',
+      'Gas',
+    ],
+    contraindications: [
+      'Use with caution in patients with active gallstones due to cholagogue effects (bile stimulation)',
+    ],
+    drugInteractions: [
+      'Oral anticoagulants (e.g., Warfarin) or antiplatelets (e.g., Aspirin, Clopidogrel): avoid or use with extreme caution — ginger inhibits thromboxane synthetase and may prolong bleeding time.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Dried / Powdered Forms', storage: 'Keep in airtight containers.' },
+        { form: 'Fresh Root', storage: 'Store in the refrigerator.' },
+      ],
+    },
+    factsAndMyths: [
+      { myth: 'Ginger can "cure" IBS.', fact: 'Ginger is a powerful prokinetic agent that accelerates gastric emptying by stimulating the antrum and corpus of the stomach. However, it only helps manage specific secondary symptoms like bloating, nausea, and dyspepsia rather than correcting the underlying gut-brain axis disorder.' },
+    ],
+    marketedProducts: [
+      { name: 'Ginger Root Capsules (e.g., Nature\'s Way)', image: '/images/Ginger-IBS-product.jpg' },
+      { name: 'Standardized Ginger Syrups', image: '' },
+      { name: 'Ginger Liquid Extracts', image: '' },
+    ],
+    benefits: [
+      { icon: 'spa', title: 'Powerful Prokinetic Agent', desc: 'Accelerates gastric emptying by stimulating the antrum and corpus of the stomach, improving digestive motility.' },
+      { icon: 'water_drop', title: 'Anti-emetic Relief', desc: 'Peripheral 5-HT3 receptor antagonism provides potent anti-emetic effects, reducing nausea associated with IBS.' },
+      { icon: 'healing', title: 'GI Mucosal Anti-inflammatory', desc: 'Reduces local mucosal inflammation contributing to functional dyspepsia co-existing with IBS.' },
+    ],
+    botanicalFacts: {
+      origin: 'Native to Southeast Asia. Family: Zingiberaceae.',
+      parts: 'Rhizome (underground stem) — fresh, dried, or powdered.',
+      history: 'Used for centuries in traditional medicine systems worldwide for digestive and anti-nausea properties. Clinically validated as a prokinetic agent.',
+    },
+    preparation: [
+      { method: 'Standardized Capsules', desc: '1–2 g dried powder or standardized extract daily, divided into multiple doses.', bestFor: 'Nausea, dyspepsia, IBS secondary symptoms' },
+      { method: 'Herbal Infusion (Tea)', desc: 'Fresh or dried ginger root steeped in hot water.', bestFor: 'Mild nausea, GI comfort' },
+    ],
+    symptoms: ['IBS symptoms', 'Nausea', 'Digestive discomfort', 'Bloating'],
+    relatedPlants: ['peppermint-ibs', 'psyllium-ibs'],
+    references: [
+      { text: 'Bodagh, M. N., Maleki, I., & Hekmatdoost, A. (2019). Ginger in gastrointestinal disorders: A systematic review of clinical trials. Food Science & Nutrition, 7(1), 96-108.' },
+      { text: 'Hu, M. L., et al. (2011). Effect of ginger on gastric motility and emptying of filled stomach in healthy humans. World Journal of Gastroenterology, 17(2), 143-148.' },
+    ],
   },
 
   'psyllium-ibs': {
@@ -7240,25 +7513,90 @@ export const PLANTS = {
     commonNames: ['Psyllium', 'Ispaghula'],
     category: 'digestive',
     subcategory: 'ibs',
-    isDemo: true,
-    tags: [],
-    image: '/images/placeholder.jpg',
-    shortDescription: '',
-    description: '',
+    isDemo: false,
+    tags: ['Bulk-Forming', 'IBS Relief', 'Soluble Fiber', 'IBS-C', 'IBS-D'],
+    image: '/images/Psyllium-IBS-main.jpg',
+    shortDescription: 'First-line dietary management for IBS; psyllium mucilage absorbs water in the intestinal lumen forming a viscous gel that normalizes stool consistency — softening hard stool in IBS-C and adding bulk to loose stools in IBS-D. Soluble fiber is highly recommended while insoluble fiber (wheat bran) can exacerbate IBS.',
+    description: 'Psyllium (Plantago ovata; Family: Plantaginaceae) contains mucilage (soluble, gel-forming polysaccharide fiber) as its active ingredient. It acts as a bulk-forming agent that absorbs water in the intestinal lumen to form a viscous gel, normalizing stool consistency: softening hard stool in IBS-C (Constipation) and delaying gastric emptying while adding bulk to loose stools in IBS-D (Diarrhea). First-line dietary management for optimizing and normalizing bowel habits in both constipation-predominant (IBS-C) and alternating IBS.',
     history: '',
-    activeConstituents: [],
-    moa: [],
-    uses: [],
-    howToUse: [],
-    suitableAgeGroups: [],
-    dosage: { standard: '', forms: [] },
-    overdose: { symptoms: [], management: [] },
-    sideEffects: [],
-    contraindications: [],
-    drugInteractions: [],
-    storage: { forms: [] },
-    marketedProducts: [],
-    benefits: [],
+    activeConstituents: [
+      { name: 'Mucilage (Soluble, Gel-forming Polysaccharide Fiber)', percentage: '', effect: 'Bulk-forming agent; absorbs water in the intestinal lumen forming a viscous gel; normalizes stool consistency in both IBS-C and IBS-D' },
+    ],
+    moa: [
+      { title: 'Bulk-Forming (Normalizes Stool Consistency)', detail: 'Psyllium mucilage absorbs water in the intestinal lumen to form a viscous gel. This action normalizes stool consistency: it softens hard stool in IBS-C (Constipation) and delays gastric emptying while adding bulk to loose stools in IBS-D (Diarrhea).' },
+    ],
+    uses: [
+      'First-line dietary management for optimizing and normalizing bowel habits in both constipation-predominant (IBS-C) and alternating IBS',
+    ],
+    howToUse: [
+      { method: 'Powder or Husks in Water / Juice', instruction: 'Mix powder or husks thoroughly into a full glass of water or juice (at least 250 mL), followed immediately by drinking an extra glass of water to ensure proper hydration.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults / Elderly', notes: 'Safe and highly recommended as a first-line structural intervention.' },
+      { group: 'Pregnancy', notes: 'Completely safe; it acts locally and is the preferred, non-absorbable choice for pregnancy-induced constipation.' },
+      { group: 'Pediatrics', notes: 'Safe for children over 6 years old under medical supervision.' },
+    ],
+    dosage: {
+      standard: '5 g to 10 g taken 1 to 3 times daily. Initiate at low doses to minimize initial gas.',
+      forms: [
+        { form: 'Powder / Husks', dose: '5–10 g mixed in at least 250 mL water or juice, 1–3× daily. Start at low doses. Follow immediately with an extra glass of water.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'Caused by excessive intake of dry bulk fiber without adequate fluid intake',
+        'Severe abdominal cramping, severe bloating, flatulence, mechanical fecal impaction, or intestinal obstruction',
+      ],
+      management: [
+        'Aggressive oral or intravenous hydration',
+        'Immediate medical evaluation is required if mechanical bowel obstruction is suspected',
+      ],
+    },
+    sideEffects: [
+      'Transient flatulence during the first few days of initiation',
+      'Abdominal distension and bloating during the first few days of initiation',
+    ],
+    contraindications: [
+      'Intestinal obstruction',
+      'Fecal impaction',
+      'Difficulty swallowing (dysphagia)',
+      'Esophageal narrowing',
+      'Undiagnosed acute abdominal pain',
+    ],
+    drugInteractions: [
+      'Psyllium mucilage can physically trap or delay the absorption of concomitantly administered medications (e.g., Digoxin, Warfarin, Iron supplements, Lithium). Clinical Rule: All other oral medications must be administered at least 2 hours before or 2 hours after taking psyllium.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Powder / Husks', storage: 'Store in a dry environment in tightly sealed containers to prevent premature moisture absorption and clumping.' },
+      ],
+    },
+    factsAndMyths: [
+      { myth: 'Psyllium can be safely swallowed dry or in capsule form with minimal water.', fact: 'This is a dangerous practice that can cause acute esophageal obstruction or severe choking. Soluble fiber (Psyllium) is highly recommended and well-tolerated by IBS patients, whereas insoluble fiber (e.g., wheat bran) can severely exacerbate abdominal pain and bloating.' },
+    ],
+    marketedProducts: [
+      { name: 'Metamucil', image: '/images/Psyllium-IBS-3.jpg' },
+      { name: 'Fybogel', image: '/images/Psyllium-IBS-4.jpg' },
+    ],
+    benefits: [
+      { icon: 'spa', title: 'First-Line IBS Management', desc: 'Highly recommended and well-tolerated by IBS patients as a first-line dietary intervention for normalizing bowel habits.' },
+      { icon: 'healing', title: 'Normalizes Stool in Both IBS-C and IBS-D', desc: 'Viscous gel softens hard stool in IBS-C and adds bulk to loose stools in IBS-D — addressing both extremes.' },
+      { icon: 'water_drop', title: 'Safe in Pregnancy', desc: 'Acts locally, non-absorbable, and is the preferred choice for pregnancy-induced constipation.' },
+    ],
+    botanicalFacts: {
+      origin: 'Plantago ovata; Family: Plantaginaceae. Native to the Mediterranean region and western Asia.',
+      parts: 'Seed husk (psyllium husk) containing mucilage polysaccharides.',
+      history: 'Long-established use as a bulk-forming laxative and fiber supplement. ACG Clinical Guidelines (2021) recommend soluble fiber for IBS management.',
+    },
+    preparation: [
+      { method: 'Powder / Husks in Water', desc: 'Mix 5–10 g thoroughly in at least 250 mL water or juice; drink immediately followed by an extra glass of water. Never swallow dry.', bestFor: 'IBS-C (constipation), IBS-D (diarrhea), alternating IBS' },
+    ],
+    symptoms: ['IBS symptoms', 'Constipation', 'Bowel irregularity'],
+    relatedPlants: ['peppermint-ibs', 'ginger-ibs'],
+    references: [
+      { text: 'Lacy, B. E., Pimentel, M., Brenner, D. M., Chey, W. D., Keefer, L. A., Long, M. D., & Mearin, F. (2021). ACG Clinical Guideline: Management of Irritable Bowel Syndrome. American Journal of Gastroenterology, 116(1), 17-44.' },
+      { text: 'Sweetman, S. C. (Ed.). (2014). Martindale: The Complete Drug Reference (38th ed.). London: Pharmaceutical Press. (Section on Bulk-forming Laxatives: Ispaghula).' },
+    ],
   },
 
   // ══════════════════════════════════════════════════════════════════════
@@ -7507,7 +7845,7 @@ export const CATEGORIES = [
       { id: 'constipation-relief', name: 'Constipation Relief Plants', description: 'Support healthy bowel motility and regularity.',         image: '/images/categories/sub-constipation.jpeg', plants: ['senna-constipation', 'psyllium-constipation', 'castor-constipation'] },
       { id: 'diarrhea-support',    name: 'Diarrhea Support Plants',    description: 'Astringent herbs to soothe and settle the tract.',      image: '/images/categories/sub-diarrhea.jpeg',     plants: ['peppermint-diarrhea', 'chamomile-diarrhea', 'fennel-diarrhea'] },
       { id: 'dyspepsia',           name: 'Dyspepsia',                  description: 'Herbal relief for indigestion and stomach discomfort.', image: '/images/categories/sub-dyspepsia.jpeg',    plants: ['peppermint-dyspepsia', 'chamomile-dyspepsia', 'fennel-dyspepsia'] },
-      { id: 'ibs',                 name: 'IBS',                        description: 'Calming carminatives to manage IBS symptoms.',          image: '/images/categories/sub-ibs.jpeg',          plants: ['peppermint-ibs', 'psyllium-ibs'] },
+      { id: 'ibs',                 name: 'IBS',                        description: 'Calming carminatives to manage IBS symptoms.',          image: '/images/categories/sub-ibs.jpeg',          plants: ['peppermint-ibs', 'ginger-ibs', 'psyllium-ibs'] },
     ],
   },
   {
@@ -7583,7 +7921,7 @@ export const SYMPTOM_TAG_MAP = {
   'Constipation':            ['senna-constipation', 'psyllium-constipation', 'castor-constipation'],
   'Bowel irregularity':      ['senna-constipation', 'psyllium-constipation', 'castor-constipation'],
   'Diarrhea':                ['peppermint-diarrhea', 'chamomile-diarrhea', 'fennel-diarrhea'],
-  'IBS symptoms':            ['peppermint-ibs', 'psyllium-ibs'],
+  'IBS symptoms':            ['peppermint-ibs', 'ginger-ibs', 'psyllium-ibs'],
   'Abdominal cramps':        ['peppermint-diarrhea', 'chamomile-diarrhea', 'fennel-diarrhea'],
   'Gastritis':               ['chamomile-dyspepsia', 'licorice'],
   'Digestive discomfort':    ['rosemary', 'fennel-dyspepsia', 'peppermint-dyspepsia', 'chamomile-dyspepsia'],
@@ -7591,7 +7929,7 @@ export const SYMPTOM_TAG_MAP = {
   'Infant colic':            ['fennel-breastfeeding'],
   'Bloating':                ['fennel-diarrhea'],
   'Menstrual cramps':        ['ginger-menstrual', 'dill-seed-menstrual', 'cinnamon-menstrual'],
-  'Nausea':                  ['lemon'],
+  'Nausea':                  ['lemon', 'ginger-ibs'],
   'Vomiting':                ['lemon'],
   'Cold symptoms':           ['lemon', 'eucalyptus', 'echinacea'],
   'Joint pain':              ['stinging-nettle'],

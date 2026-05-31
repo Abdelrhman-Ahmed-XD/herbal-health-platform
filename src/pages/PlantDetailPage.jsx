@@ -290,6 +290,9 @@ export default function PlantDetailPage() {
                       ))}
                     </div>
                   )}
+                  {dosage.note && (
+                    <p className="font-manrope text-body-md text-on-surface-variant leading-relaxed mt-4 italic">{dosage.note}</p>
+                  )}
                 </div>
               )}
 

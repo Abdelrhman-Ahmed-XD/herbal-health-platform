@@ -9,7 +9,7 @@ const buildCompactPlantContext = () =>
       const warning   = Array.isArray(p.warnings) ? p.warnings[0] ?? '' : '';
       return [
         `**${p.name}** (${p.nameAr}) | ${p.latinName} | ${p.subcategory}`,
-        `Symptoms: ${p.symptoms.join(', ')}`,
+        p.symptoms?.length ? `Symptoms: ${p.symptoms.join(', ')}` : '',
         compounds         ? `Key compounds: ${compounds}` : '',
         p.dosage?.standard ? `Dosage: ${p.dosage.standard}` : '',
         warning            ? `⚠️ ${warning.slice(0, 160)}` : '',
@@ -34,7 +34,7 @@ const buildPlantContext = () =>
       return [
         `═══ ${p.name} (${p.nameAr}) | ${p.latinName} ═══`,
         `Category: ${p.category} / ${p.subcategory}`,
-        `Symptoms addressed: ${p.symptoms.join(', ')}`,
+        p.symptoms?.length ? `Symptoms addressed: ${p.symptoms.join(', ')}` : '',
         constituents ? `Active Constituents:\n${constituents}` : '',
         moa         ? `Mechanisms of Action:\n${moa}` : '',
         p.uses?.length            ? `Uses: ${p.uses.join('; ')}` : '',

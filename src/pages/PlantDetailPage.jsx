@@ -389,7 +389,7 @@ export default function PlantDetailPage() {
                         <span className="material-symbols-outlined text-secondary text-base flex-shrink-0 mt-0.5">inventory_2</span>
                         <div className={isAr ? 'text-right flex-1' : 'flex-1'}>
                           <h4 className="font-manrope font-semibold text-sm text-primary mb-1">{f.form}</h4>
-                          <p className="font-manrope text-sm text-on-surface-variant">{f.instructions}</p>
+                          <p className="font-manrope text-sm text-on-surface-variant">{f.storage ?? f.instructions}</p>
                         </div>
                       </div>
                     ))}

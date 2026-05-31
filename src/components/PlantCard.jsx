@@ -6,7 +6,7 @@ export default function PlantCard({ plant }) {
   const { t, isAr } = useLanguage();
   const arData = isAr ? PLANT_TRANSLATIONS.ar[plant.id] : null;
   const displayName  = arData?.name  ?? plant.name;
-  const displayShort = arData?.shortDescription ?? plant.shortDescription;
+  const displayShort = arData?.shortDescription ?? plant.shortDescription ?? plant.uses?.[0] ?? '';
 
   const handlePlantClick = () => trackPlantView(plant.id);
 
@@ -21,7 +21,7 @@ export default function PlantCard({ plant }) {
             loading="lazy"
           />
           <div className={`absolute top-3 ${isAr ? 'right-3' : 'left-3'} flex flex-wrap gap-1.5`}>
-            {plant.tags.slice(0, 2).map(tag => (
+            {(plant.tags ?? []).slice(0, 2).map(tag => (
               <span key={tag} className="chip text-xs">
                 {isAr ? (TAG_TRANSLATIONS[tag] ?? tag) : tag}
               </span>

@@ -272,7 +272,7 @@ export default function HomePage() {
                   {potmDesc}
                 </p>
                 <div className={`flex flex-wrap gap-1.5 mb-4`}>
-                  {potm.tags.slice(0, 3).map(tag => (
+                  {(potm.tags ?? []).slice(0, 3).map(tag => (
                     <span key={tag} className="chip text-xs">{isAr ? (TAG_TRANSLATIONS[tag] ?? tag) : tag}</span>
                   ))}
                 </div>

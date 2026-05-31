@@ -71,7 +71,7 @@ export default function PlantDetailPage() {
   const related     = (plant.relatedPlants ?? []).map(rid => PLANTS[rid]).filter(Boolean);
 
   const name             = arData?.name            ?? plant.name;
-  const shortDescription = arData?.shortDescription ?? plant.shortDescription;
+  const shortDescription = arData?.shortDescription ?? plant.shortDescription ?? plant.uses?.[0] ?? '';
   const description      = arData?.description      ?? plant.description;
   const history          = arData?.history          ?? plant.history;
   const symptoms         = arData?.symptoms         ?? plant.symptoms;
@@ -95,6 +95,7 @@ export default function PlantDetailPage() {
   const drugInteractions  = arArr(arData?.drugInteractions,  plant.drugInteractions);
   const storage           = arObj(arData?.storage,           plant.storage);
   const { marketedProducts } = plant;
+  const crucialNote = arData?.crucialNote ?? plant.crucialNote;
   const warnings          = arArr(arData?.warnings,          plant.warnings);
   const factsAndMyths     = arArr(arData?.factsAndMyths,     plant.factsAndMyths);
 
@@ -114,7 +115,7 @@ export default function PlantDetailPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           <div>
             <div className="flex gap-2 mb-4 flex-wrap">
-              {plant.tags.map(tag => (
+              {(plant.tags ?? []).map(tag => (
                 <span key={tag} className="chip text-xs">
                   {isAr ? (TAG_TRANSLATIONS[tag] ?? tag) : tag}
                 </span>
@@ -274,7 +275,7 @@ export default function PlantDetailPage() {
                 <div>
                   <h2 className="font-caslon text-headline-sm text-primary mb-4">{t('plant_dosage')}</h2>
                   {dosage.standard && (
-                    <p className="font-manrope text-body-md text-on-surface-variant leading-relaxed mb-4">{dosage.standard}</p>
+                    <p className="font-manrope text-body-md text-on-surface-variant leading-relaxed mb-4 whitespace-pre-line">{dosage.standard}</p>
                   )}
                   {dosage.forms?.length > 0 && (
                     <div className="space-y-3">
@@ -371,7 +372,7 @@ export default function PlantDetailPage() {
                     {drugInteractions.map((d, i) => (
                       <li key={i} className={`flex gap-3 font-manrope text-body-md text-on-surface-variant items-start ${isAr ? 'text-right' : ''}`}>
                         <span className="material-symbols-outlined text-purple-400 text-base mt-0.5 flex-shrink-0">pill</span>
-                        {d}
+                        {typeof d === 'string' ? d : <span><strong className="text-on-surface">{d.drug}:</strong> {d.effect}</span>}
                       </li>
                     ))}
                   </ul>
@@ -424,6 +425,19 @@ export default function PlantDetailPage() {
                       ))}
                     </div>
                   )}
+                </div>
+              )}
+
+              {/* Crucial Note */}
+              {crucialNote && (
+                <div className="bg-amber-50 border border-amber-200 rounded-xl p-5">
+                  <div className="flex items-start gap-3">
+                    <span className="material-symbols-outlined text-amber-600 text-xl mt-0.5 flex-shrink-0">info</span>
+                    <div>
+                      <p className="font-manrope font-semibold text-sm text-amber-800 mb-1">{t('plant_crucial_note') ?? 'Pharmacognostical Note'}</p>
+                      <p className="font-manrope text-sm text-amber-700 leading-relaxed">{crucialNote}</p>
+                    </div>
+                  </div>
                 </div>
               )}
 

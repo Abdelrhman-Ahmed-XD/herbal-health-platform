@@ -66,7 +66,7 @@ export default function AboutPage() {
               </div>
               <div>
                 <p className="font-manrope font-semibold text-sm text-primary">{name}</p>
-                <p className="font-manrope text-xs text-secondary mt-0.5">Pharmacist</p>
+                <p className="font-manrope text-xs text-secondary mt-0.5">{t('team_role')}</p>
               </div>
             </div>
           ))}

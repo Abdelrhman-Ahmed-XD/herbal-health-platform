@@ -550,7 +550,7 @@ export default function PlantDetailPage() {
                               className="inline-flex items-center gap-1 font-manrope text-xs text-secondary hover:text-primary transition-colors mt-1"
                             >
                               <span className="material-symbols-outlined text-sm">open_in_new</span>
-                              {ref.url.includes('doi.org') ? 'View DOI' : ref.url.includes('pubmed') ? 'PubMed' : 'View Source'}
+                              {ref.url.includes('pubmed') ? 'PubMed' : ref.url.includes('doi.org') ? t('ref_view_doi') : t('ref_view_source')}
                             </a>
                           )}
                         </div>

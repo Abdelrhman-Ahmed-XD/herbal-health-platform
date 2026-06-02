@@ -234,6 +234,14 @@ export const TRANSLATIONS = {
     res_coming_soon_desc: 'We are actively researching and adding digestive health plants. Check back soon!',
     res_no_plants_found: 'No plants match your current safety profile. Please consult a qualified herbalist or healthcare provider for personalised advice.',
     res_view_plant: 'View Full Profile',
+    team_role: 'Pharmacist',
+    footer_devby: 'Developed by',
+    ref_view_doi: 'View DOI',
+    ref_view_source: 'View Source',
+    chip_medicinal: 'Medicinal', chip_adaptogen: 'Adaptogen',
+    chip_digestive_chip: 'Digestive', chip_culinary: 'Culinary',
+    chip_nervines: 'Nervines', chip_adaptogens: 'Adaptogens',
+    chip_diuretic: 'Diuretic', chip_antiseptic: 'Antiseptic',
   },
   ar: {
     brand: 'نبتة', tagline: 'معهد الأبحاث النباتية',
@@ -437,6 +445,14 @@ export const TRANSLATIONS = {
     res_coming_soon_desc: 'نعمل بنشاط على إضافة نباتات صحة الجهاز الهضمي. ترقّب التحديثات!',
     res_no_plants_found: 'لا توجد نباتات تتطابق مع ملفك الأمني الحالي. يُرجى استشارة عشّاب مؤهّل أو مختص صحي للحصول على نصيحة مخصّصة.',
     res_view_plant: 'عرض الملف الكامل',
+    team_role: 'صيدلاني',
+    footer_devby: 'طوّره',
+    ref_view_doi: 'عرض DOI',
+    ref_view_source: 'عرض المصدر',
+    chip_medicinal: 'طبي', chip_adaptogen: 'مُكيِّف',
+    chip_digestive_chip: 'هضمي', chip_culinary: 'طهوي',
+    chip_nervines: 'مهدّئ عصبي', chip_adaptogens: 'مُكيِّفات',
+    chip_diuretic: 'مُدرّ للبول', chip_antiseptic: 'مطهّر',
   },
 };
 
@@ -6877,6 +6893,13 @@ export const PLANT_TRANSLATIONS = {
 
   },
 };
+
+// Skincare subcategory uses same plants as the base entries — alias so Arabic shows correctly
+PLANT_TRANSLATIONS.ar['aloe-vera-skincare']  = PLANT_TRANSLATIONS.ar['aloe-vera'];
+PLANT_TRANSLATIONS.ar['tea-tree-skincare']   = PLANT_TRANSLATIONS.ar['tea-tree'];
+PLANT_TRANSLATIONS.ar['licorice-skincare']   = PLANT_TRANSLATIONS.ar['licorice'];
+PLANT_TRANSLATIONS.ar['green-tea-skincare']  = PLANT_TRANSLATIONS.ar['green-tea'];
+PLANT_TRANSLATIONS.ar['rosemary-skincare']   = PLANT_TRANSLATIONS.ar['rosemary'];
 
 export const TAG_TRANSLATIONS = {
   'Skin Care': 'رعاية البشرة',

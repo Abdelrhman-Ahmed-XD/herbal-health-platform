@@ -2176,8 +2176,8 @@ export const PLANTS = {
     subcategory: 'menstrual-health',
     tags: ['Spasmolytic', 'Dysmenorrhea', 'Carminative', 'Menstrual Health'],
     image: '/images/Picture51.png',
-    shortDescription: 'Dill SEEDS (not leaves) are the medicinal part: a potent spasmolytic whose carvone compound provides primary dysmenorrhea relief clinically comparable to Mefenamic Acid (Ponstan).',
-    description: 'The pharmaceutical efficacy of dill is entirely dependent on using the SEEDS: dill leaves are strictly culinary and lack therapeutic potency. Dill seed oil contains carvone (up to 60%), which is the key bioactive molecule for spasmolytic activity. It acts by blocking voltage-dependent calcium influx in smooth muscle of the uterus and gastrointestinal tract, effectively relieving severe cramping. Clinical trials confirm efficacy comparable to Mefenamic Acid for primary dysmenorrhea.',
+    shortDescription: 'Dill SEEDS are the officially recognized medicinal part. They contain essential oils rich in the bioactive compound Carvone, which acts as a potent spasmolytic. Clinical studies suggest that dill seed extract can help provide primary dysmenorrhea relief due to its smooth muscle relaxant properties.\n' +
+        '​The pharmaceutical efficacy of dill is heavily concentrated in its SEEDS. While dill leaves are primarily used for culinary purposes, the seeds yield a highly potent essential oil. Dill seed oil is characterized by a rich content of Carvone, which serves as the key bioactive molecule for spasmolytic activity. It acts by modulating intracellular calcium availability and blocking voltage-dependent calcium influx in the smooth muscles of both the uterus and the gastrointestinal tract, effectively relieving severe cramping and colic. Clinical trials suggest that its efficacy in alleviating the pain of primary dysmenorrhea is highly promising.',
     history: 'Dill has been used medicinally for thousands of years: mentioned in the Ebers Papyrus of ancient Egypt (1550 BC) and by Roman physicians. The word "dill" derives from the old Norse word "dylla" meaning to soothe or lull. It has historically been the primary ingredient in traditional "gripe water" for infant colic.',
     isDemo: false,
     activeConstituents: [
@@ -3241,6 +3241,7 @@ export const PLANTS = {
     commonNames: ['Ginger', 'African Ginger', 'Cochin Ginger'],
     category: 'respiratory',
     subcategory: 'cold',
+    tags: ['Anti-inflammatory', 'Antiviral', 'Antitussive', 'Cold & Flu'],
     image: '/images/home ginger.jpg',
     activeConstituents: [
       { name: 'Gingerols', detail: 'The primary active principles in fresh ginger rhizomes, with 6-gingerol being the most abundant and biologically active. It possesses potent anti-inflammatory and anti-emetic properties.' },
@@ -3441,6 +3442,111 @@ export const PLANTS = {
       { text: 'Egyptian Drug Authority — Citrus lemon monograph.', url: 'https://share.google/HGyIszy5fXiY9Ud1i' },
       { text: 'Addi, M., et al. (2021). An overview of bioactive flavonoids from citrus fruits. Applied Sciences, 12(1), 29.', url: 'https://doi.org/10.3390/app12010029' },
       { text: 'Agarwal, P., et al. (2022). Citrus essential oils in aromatherapy: Therapeutic effects and mechanisms. Antioxidants, 11(12), 2374.', url: 'https://doi.org/10.3390/antiox11122374' },
+    ],
+  },
+
+  'echinacea-cold': {
+    id: 'echinacea-cold',
+    name: 'Echinacea',
+    nameAr: 'الإشنسيا',
+    latinName: 'Echinacea purpurea (L.) Moench',
+    commonNames: ['Echinacea', 'Purple Coneflower'],
+    category: 'respiratory',
+    subcategory: 'cold',
+    tags: ['Immunomodulator', 'Antiviral', 'Anti-inflammatory', 'Cold & Flu'],
+    image: '/images/echinacea-cold-main.jpg',
+    shortDescription: 'A cornerstone immune-activating botanical for the common cold: activates macrophages and NK cells, inhibits respiratory virus replication, and significantly reduces cold severity and duration when initiated at the very first sign of symptoms.',
+    description: 'The therapeutic efficacy of Echinacea purpurea relies on a complex mixture of synergistic lipophilic and hydrophilic secondary metabolites: alkamides (polyunsaturated fatty acid amides), caffeic acid derivatives chiefly cichoric acid (the most abundant phenolic component), polysaccharides including arabinogalactans and heteroxylans, and volatile terpenoids. Primary indication is prophylaxis and supportive short-term treatment of the common cold and acute upper respiratory tract infections. Must be initiated at the very first sign of respiratory symptoms.',
+    isDemo: false,
+    activeConstituents: [
+      { name: 'Alkamides (Alkylamides)', detail: 'Primarily polyunsaturated fatty acid amides (e.g., isobutylamides), highly bioavailable and concentrated mostly in roots and aerial parts.' },
+      { name: 'Caffeic Acid Derivatives (Phenolics)', detail: 'Chiefly Cichoric acid (the most abundant phenolic component in E. purpurea), alongside caftaric acid and echinacoside.' },
+      { name: 'Polysaccharides and Glycoproteins', detail: 'High molecular weight arabinogalactans and heteroxylans.' },
+      { name: 'Volatile Terpenoids', detail: 'Essential oils present across all plant tissue.' },
+    ],
+    moa: [
+      { title: 'Immunomodulatory Effect', detail: 'Activates macrophages and natural killer (NK) cells. Enhances phagocytosis (the ability of immune cells to engulf pathogens). Stimulates the release of cytokines involved in the immune response.' },
+      { title: 'Anti-inflammatory Effect', detail: 'Alkamides and caffeic acid derivatives help regulate inflammatory pathways. May reduce the production of pro-inflammatory mediators, leading to decreased cold symptoms such as sore throat and nasal inflammation.' },
+      { title: 'Antiviral Activity', detail: 'Some studies suggest that Echinacea extracts can inhibit the replication of certain respiratory viruses, including rhinoviruses (the most common cause of the common cold). May reduce viral entry into host cells.' },
+    ],
+    uses: [
+      'Primary Indication: Prophylaxis and supportive short-term treatment of the Common Cold and acute upper respiratory tract infections.',
+      'Clinical Efficacy: Systematic reviews demonstrate that when standardized preparations are administered immediately at the early onset of cold symptoms, it significantly reduces both the severity and total duration of the illness.',
+    ],
+    howToUse: [
+      { method: 'Route & Forms', instruction: 'Oral administration only. Forms: standardized expressed fresh juice (from aerial parts), hydroethanolic liquid extracts, tinctures, capsules, or tablets.' },
+      { method: 'Timing', instruction: 'Must be initiated at the very first sign of respiratory symptoms (runny nose, scratchy throat) and continued daily for the course of the infection.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults and Elderly', notes: 'Safe for general use, presenting a robust tolerability profile when consumed short-term (under 6 to 8 weeks).' },
+      { group: 'Pediatrics (<12 years)', notes: 'The European Medicines Agency (EMA) and the UK MHRA restrict the use of Echinacea preparations in children under 12 years of age due to an increased statistical risk of developing acute systemic allergic reactions or skin rashes.' },
+      { group: 'Pregnancy and Lactation', notes: 'Although clinical reviews show no definitive correlation between oral Echinacea intake and major congenital malformations, structural safety parameters are not fully validated. Its use during pregnancy and lactation is not recommended unless clinically justified by a physician.' },
+      { group: 'Chronic Disease Patients', notes: 'Patients with autoimmune diseases or those taking immunosuppressive drugs should consult a physician before use.' },
+    ],
+    dosage: {
+      standard: 'Expressed Fresh Juice (E. purpurea herba): 6.0–9.0 ml in divided doses. Hydroethanolic Extract (Dry Root Equivalent): 500–2,000 mg crude root equivalent, split into 3 daily doses. Maximum Duration: up to 10 days per acute episode.',
+      forms: [
+        { form: 'Expressed Fresh Juice (E. purpurea herba)', dose: '6.0–9.0 ml in divided doses.' },
+        { form: 'Hydroethanolic Extract (Dry Root Equivalent)', dose: '500–2,000 mg crude root equivalent, split into 3 daily doses. Maximum Duration: up to 10 days per acute episode.' },
+      ],
+    },
+    overdose: {
+      symptoms: [
+        'No clearly defined toxic overdose level has been established, as it has a wide therapeutic index.',
+        'Possible symptoms include: Nausea, Vomiting, Abdominal pain, Dizziness, Headache, Allergic reactions.',
+      ],
+      management: [
+        'No specific antidote exists. Treatment is entirely symptomatic and supportive.',
+        'Discontinue use immediately, maintain hydration, and administer antiemetics or antihistamines if localized allergic responses emerge.',
+      ],
+    },
+    sideEffects: [
+      'Gastrointestinal: Mild, transient nausea, vomiting, or abdominal discomfort.',
+      'Dermatological/Allergic: Maculopapular skin rashes, urticaria (hives), pruritus, and localized facial swelling.',
+      'Severe Hypersensitivity (Rare): Triggering of bronchospasms, acute asthma exacerbation, or systemic anaphylactic shock in highly sensitive individuals.',
+    ],
+    contraindications: [
+      'Hypersensitivity: Known hypersensitivity or cross-reactivity to plants belonging to the Asteraceae (Compositae) family (e.g., chamomile, marigold, ragweed).',
+      'Progressive Systemic & Autoimmune Diseases: Strictly contraindicated in conditions like Tuberculosis, Multiple Sclerosis (MS), Systemic Lupus Erythematosus (SLE), Collagenosis, Rheumatoid Arthritis, and HIV/AIDS. Echinacea\'s immunostimulant mechanism theoretically conflicts with the medical management of these diseases.',
+      'Immunosuppressive Therapy: Patients taking immunosuppressants (e.g., cyclosporine, azathioprine) post-transplant or for autoimmune mitigation must avoid it, as it counteracts drug actions.',
+    ],
+    storage: {
+      forms: [
+        { form: 'All solid forms', instructions: 'Store below 25°C. Keep in a dry place. Protect from direct sunlight. Keep out of reach of children.' },
+        { form: 'Liquid extracts', instructions: 'Must be sealed properly to prevent ethanol evaporation and precipitation of active components.' },
+      ],
+    },
+    marketedProducts: [
+      { name: 'Immulant Plus', image: '/images/echinacea-cold-product1.jpg' },
+      { name: 'Mulone C', image: '/images/echinacea-cold-product2.jpg' },
+    ],
+    benefits: [
+      { icon: 'shield', title: 'Immune Activation', desc: 'Activates macrophages and NK cells, enhancing phagocytosis and cytokine release for rapid immune defense against cold viruses.' },
+      { icon: 'coronavirus', title: 'Antiviral Activity', desc: 'Inhibits replication of respiratory viruses including rhinoviruses (the most common cause of the common cold) and may reduce viral entry into host cells.' },
+      { icon: 'healing', title: 'Anti-inflammatory', desc: 'Alkamides and caffeic acid derivatives regulate inflammatory pathways, reducing sore throat and nasal inflammation associated with cold symptoms.' },
+    ],
+    factsAndMyths: [
+      {
+        myth: 'Echinacea can completely prevent all colds.',
+        fact: 'Research shows only a modest possible benefit, and it does not guarantee prevention.',
+      },
+    ],
+    botanicalFacts: {
+      family: 'Asteraceae',
+      nativeRegion: 'North America (Great Plains and eastern North America); now widely cultivated worldwide',
+      growthHabit: 'Herbaceous perennial 60–120 cm tall; large purple-pink cone-shaped flowers; entire aerial part (leaves, stems, flowers, roots) may be used medicinally',
+      activeCompounds: 'Alkamides (alkylamides), cichoric acid, caftaric acid, echinacoside, arabinogalactans, heteroxylans, volatile terpenoids',
+    },
+    preparation: [
+      { method: 'Expressed Fresh Juice', desc: '6.0–9.0 ml in divided doses, initiated at very first sign of symptoms.', bestFor: 'Acute common cold and upper respiratory tract infections' },
+      { method: 'Capsules / Liquid Extract', desc: '500–2,000 mg crude root equivalent daily in 3 divided doses. Maximum 10 days per acute episode.', bestFor: 'Standardized dosing for cold prophylaxis and treatment' },
+    ],
+    symptoms: ['Cold symptoms', 'Flu', 'Sore throat', 'Congestion', 'Reduced immunity'],
+    relatedPlants: ['ginger-cold', 'lemon', 'eucalyptus'],
+    references: [
+      { text: 'University of Cape Coast — Pharmacognosy: Echinacea purpurea.', url: 'https://pharmacognosy.ucc.edu.gh/echinacea-purpurea' },
+      { text: 'Cochrane Complementary and Alternative Medicine — Common Cold.', url: 'https://cam.cochrane.org/common-cold' },
+      { text: 'WebMD — Health Benefits, Safety, Dosage of Echinacea.', url: 'https://www.webmd.com/diet/health-benefits-echinacea' },
     ],
   },
 
@@ -6811,7 +6917,6 @@ export const PLANTS = {
       ],
     },
     marketedProducts: [
-      { name: 'ROOTAGE HAIR OIL ', image: '/images/Rosemary3.jpeg' },
       { name: 'ROSEMARY HAIR BOOSTER OIL ', image: '/images/Rosemary2.jpeg' },
     ],
     benefits: [],
@@ -7855,7 +7960,7 @@ export const CATEGORIES = [
     color: 'bg-primary-fixed text-on-primary-fixed',
     image: '/images/categories/cat-respiratory.jpeg',
     subcategories: [
-      { id: 'cold',      name: 'Cold',      description: 'Herbs to ease cold symptoms and speed recovery.',           image: '/images/categories/sub-cold.jpeg',      plants: ['eucalyptus', 'ginger-cold'] },
+      { id: 'cold',      name: 'Cold',      description: 'Herbs to ease cold symptoms and speed recovery.',           image: '/images/categories/sub-cold.jpeg',      plants: ['eucalyptus', 'ginger-cold', 'echinacea-cold'] },
       { id: 'rhinitis',  name: 'Rhinitis',  description: 'Botanical support for nasal inflammation and runny nose.',  image: '/images/categories/sub-rhinitis.jpeg',  plants: ['butterbur', 'stinging-nettle', 'black-seed-rhinitis'] },
       { id: 'sinusitis', name: 'Sinusitis', description: 'Clear congestion and sinus pressure naturally.',             image: '/images/categories/sub-sinusitis.jpeg', plants: ['pelargonium', 'eucalyptus', 'black-elderberry'] },
       { id: 'cough',     name: 'Cough',     description: 'Soothing herbs for irritated throats and airways.',         image: '/images/categories/sub-cough.jpeg',     plants: ['guava', 'anise', 'thyme', 'licorice-cough'] },

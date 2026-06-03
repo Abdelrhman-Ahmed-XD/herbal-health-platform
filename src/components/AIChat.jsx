@@ -7,6 +7,7 @@ import { PLANTS } from '../data/plants.js';
 // ── Plant name → route ID lookup (English + Arabic) ──────────────────────
 const PLANT_LINK_MAP = {};
 Object.values(PLANTS).forEach(p => {
+  PLANT_LINK_MAP[p.id] = p.id;                          // ID always resolves to itself
   PLANT_LINK_MAP[p.name.toLowerCase()] = p.id;
   const first = p.name.split(' ')[0].toLowerCase();
   if (!PLANT_LINK_MAP[first]) PLANT_LINK_MAP[first] = p.id;
@@ -44,12 +45,14 @@ function findPlantId(name = '') {
 // ── Inline markdown parser → React nodes ────────────────────────────────
 function renderInline(text) {
   const parts = [];
-  const regex = /\*\*(.*?)\*\*|\*(.*?)\*/g;
+  // Match **Name**[plant-id] (with optional [id] suffix) or *italic*
+  const regex = /\*\*(.*?)\*\*(?:\[([^\]]+)\])?|\*(.*?)\*/g;
   let last = 0, match;
   while ((match = regex.exec(text)) !== null) {
     if (match.index > last) parts.push(<span key={last}>{text.slice(last, match.index)}</span>);
     if (match[1] !== undefined) {
-      const id = findPlantId(match[1]);
+      // Prefer explicit [plant-id] from AI output; fall back to name lookup
+      const id = (match[2] && PLANT_LINK_MAP[match[2]]) ? match[2] : findPlantId(match[1]);
       if (id) {
         parts.push(
           <Link key={match.index} to={`/plant/${id}`}
@@ -62,7 +65,7 @@ function renderInline(text) {
         parts.push(<strong key={match.index} className="font-semibold text-on-surface">{match[1]}</strong>);
       }
     } else {
-      parts.push(<em key={match.index} className="italic text-on-surface-variant text-xs">{match[2]}</em>);
+      parts.push(<em key={match.index} className="italic text-on-surface-variant text-xs">{match[3]}</em>);
     }
     last = regex.lastIndex;
   }
@@ -92,21 +95,22 @@ function classifyLine(line) {
   const heading = t.match(/^#{1,3}\s+(.*)/);
   if (heading) return { type: 'heading', text: heading[1].trim() };
 
-  // Plant entry: **Name** (*Latin*): description  OR  **Name**: description
-  const plant = t.match(/^\*\*([^*]+)\*\*\s*(?:\(?\*([^*]*)\*\)?)?\s*[:：]\s*(.*)/);
+  // Plant entry: **Name**[plant-id] (*Latin*): description  OR  **Name**: description
+  const plant = t.match(/^\*\*([^*]+)\*\*(?:\[([^\]]+)\])?\s*(?:\(?\*([^*]*)\*\)?)?\s*[:：]\s*(.*)/);
   if (plant) {
-    const desc = plant[3]?.trim() ?? '';
+    const rawId = plant[2]?.trim() ?? null;
+    const desc = plant[4]?.trim() ?? '';
     return {
       type: 'plant',
       name: plant[1].trim(),
-      latin: plant[2]?.trim() ?? null,
+      latin: plant[3]?.trim() ?? null,
       desc,
-      id: findPlantId(plant[1].trim()),
+      id: (rawId && PLANT_LINK_MAP[rawId]) ? rawId : findPlantId(plant[1].trim()),
     };
   }
 
-  // Bold-only line = section heading
-  const boldOnly = t.match(/^\*\*([^*]+)\*\*\s*:?\s*$/);
+  // Bold-only line = section heading (skip [id] suffix before colon check)
+  const boldOnly = t.match(/^\*\*([^*]+)\*\*(?:\[[^\]]+\])?\s*:?\s*$/);
   if (boldOnly) return { type: 'heading', text: boldOnly[1].trim() };
 
   // Numbered list

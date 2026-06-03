@@ -112,6 +112,60 @@ function PlantSpotCard({ plant, badgeIcon, badgeLabel, isAr, t, imageClass = 'h-
   );
 }
 
+// ── Egyptian Medicine static data ─────────────────────────────────────────
+const EGYPTIAN_RECIPES = [
+  {
+    ref: 'Eb 714',
+    title: 'Chemical Microdermabrasion',
+    context: "To smooth textured skin and clear sun damage, Egyptians formulated the world's first recorded chemical peel.",
+    ingredients: ['Honey', 'Sodium carbonate', 'Sea salt', 'Alabaster flour'],
+    recipeText: 'Equal parts honey, sodium carbonate, sea salt, and finely ground alabaster flour mixed into a gritty paste and scrubbed into the skin.',
+    image: '/images/egyptian-skin.jpg',
+    ar: {
+      title: 'التقشير الكيميائي الدقيق',
+      context: 'لتنعيم الجلد الخشن ومعالجة أضرار الشمس، ابتكر المصريون القدماء أول تقشير كيميائي مسجّل في التاريخ.',
+      ingredients: ['العسل', 'كربونات الصوديوم', 'ملح البحر', 'دقيق الألاباستر المطحون'],
+      recipeText: 'أجزاء متساوية من العسل وكربونات الصوديوم وملح البحر ودقيق الألاباستر المطحون ناعماً تُخلط لتكوين عجينة حبيبية تُدلَّك على الجلد.',
+    },
+  },
+  {
+    ref: 'Eb 716–721',
+    title: 'Sun Protection & Hyperpigmentation',
+    context: 'To counteract the harsh desert sun and treat dark spots, both nobles and laborers used protective barrier oils.',
+    ingredients: ['Lupin seed oil', 'Bitter almond oil', 'Wild cardamom'],
+    recipeText: 'Cold-pressed Lupin seed oil blended with bitter almond oil and wild cardamom.',
+    image: '/images/egyptian-sun.jpg',
+    ar: {
+      title: 'الحماية من الشمس وفرط التصبغ',
+      context: 'لمواجهة أشعة الشمس الصحراوية القاسية وعلاج البقع الداكنة، استخدم النبلاء والعمال على حدٍّ سواء زيوتاً واقية.',
+      ingredients: ['زيت بذور الترمس', 'زيت اللوز المر', 'الهيل البري'],
+      recipeText: 'زيت بذور الترمس المعصور على البارد يُمزج مع زيت اللوز المر والهيل البري.',
+    },
+  },
+  {
+    ref: 'Eb 771–777',
+    title: 'Alopecia & Hair Regrowth',
+    context: 'To combat balding and strengthen hair follicles, a complex scalp stimulant was applied.',
+    ingredients: ['Fenugreek seeds', 'Castor oil', 'Rosemary'],
+    recipeText: 'A warm oil infusion made from fenugreek seeds, castor oil, and rosemary.',
+    image: '/images/egyptian-hair.jpg',
+    ar: {
+      title: 'الثعلبة وإعادة نمو الشعر',
+      context: 'لمكافحة الصلع وتقوية بصيلات الشعر، كان يُطبَّق منشّط مركّب لفروة الرأس.',
+      ingredients: ['بذور الحلبة', 'زيت الخروع', 'إكليل الجبل'],
+      recipeText: 'منقوع زيتي دافئ مصنوع من بذور الحلبة وزيت الخروع وإكليل الجبل.',
+    },
+  },
+];
+
+const EGYPTIAN_REFS = [
+  { label: 'Doctors, Ills & Herbs of Ancient Egypt', url: 'https://share.google/v01oBWv8zvirXsIXp' },
+  { label: 'Ebers Papyrus — Britannica', url: 'https://www.britannica.com/topic/Ebers-papyrus' },
+  { label: 'Source 3', url: 'https://share.google/dmkJW7CaPgBmbgimY' },
+  { label: 'Source 4', url: 'https://share.google/p2ebT75XaAFqiTKby' },
+  { label: 'Source 5', url: 'https://share.google/7ygc7GkEiIbqYNw8y' },
+];
+
 // ── Page ──────────────────────────────────────────────────────────────────
 export default function HomePage() {
   const { t, isAr } = useLanguage();
@@ -213,33 +267,26 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── Platform Statistics ──────────────────────────────────────────── */}
-      <section className="section-container py-16">
+      {/* ── Featured Grid ────────────────────────────────────────────────── */}
+      <section className="section-container py-20">
         <div className={`flex items-end justify-between mb-10 gap-4 flex-wrap ${isAr ? 'flex-row-reverse' : ''}`}>
           <div className={isAr ? 'text-right' : ''}>
             <p className="font-manrope text-xs font-bold text-secondary tracking-widest uppercase mb-1">
-              {isAr ? 'بالأرقام' : 'By the Numbers'}
+              {t('home_featured_overline')}
             </p>
-            <h2 className="font-caslon text-headline-sm text-primary">{t('about_stats_title')}</h2>
+            <h2 className="font-caslon text-headline-sm text-primary">{t('home_featured_title')}</h2>
           </div>
-          <div className={`flex items-center gap-2 ${isAr ? 'flex-row-reverse' : ''}`}>
-            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-            <span className="font-manrope text-xs text-on-surface-variant">
-              {isAr ? 'بيانات حية' : 'Live data'}
-            </span>
-          </div>
+          <Link
+            to="/categories"
+            className={`flex items-center gap-1.5 font-manrope text-sm font-semibold text-secondary hover:text-primary transition-colors duration-200 ${isAr ? 'flex-row-reverse' : ''}`}
+          >
+            {t('home_featured_link')}
+            <span
+              className="material-symbols-outlined text-base"
+              style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}
+            >arrow_forward</span>
+          </Link>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-          <StatCard icon="people"        label={t('about_stats_visitors')}       value={siteVisitors ?? t('about_stats_loading')}                                                                                       sub={t('about_stats_visitors_sub')}       color="teal"   delay={0}   isAr={isAr} />
-          <StatCard icon="local_florist" label={t('about_stats_plants')}         value={Object.keys(PLANTS).length.toString()}                                                                                          sub={t('about_stats_plants_sub')}         color="green"  delay={80}  isAr={isAr} />
-          <StatCard icon="assignment"    label={t('about_stats_questionnaires')} value={questionnaireCount ?? t('about_stats_loading')}                                                                                 sub={t('about_stats_questionnaires_sub')} color="blue"   delay={160} isAr={isAr} />
-          <StatCard icon="visibility"    label={t('about_stats_top_plant')}      value={topPlantName ?? (potm ? (isAr ? (PLANT_TRANSLATIONS.ar[potm.id]?.name ?? potm.name) : potm.name) : t('about_stats_loading'))} sub={t('about_stats_top_sub')}            color="amber"  delay={240} isAr={isAr} />
-          <StatCard icon="category"      label={t('about_stats_categories')}     value="5"                                                                                                                              sub={t('about_stats_categories_sub')}     color="purple" delay={320} isAr={isAr} className="col-span-2 sm:col-span-1" />
-        </div>
-      </section>
-
-      {/* ── Featured Grid ────────────────────────────────────────────────── */}
-      <section className="section-container py-20">
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_1fr_280px] gap-6">
 
           {/* Plant of the Month — large, spans 2 rows */}
@@ -334,6 +381,144 @@ export default function HomePage() {
             />
           </div>
 
+        </div>
+      </section>
+
+      {/* ── Ancient Egyptian Medicine ─────────────────────────────────────── */}
+      <section className="bg-gradient-to-b from-[#061b0e] via-[#0a2212] to-[#061b0e] pt-6 pb-20">
+        <div className="section-container">
+
+          {/* Header */}
+          <div className={`flex items-end justify-between mb-12 gap-4 flex-wrap ${isAr ? 'flex-row-reverse' : ''}`}>
+            <div className={`flex items-center gap-3 ${isAr ? 'flex-row-reverse' : ''}`}>
+              <span className="text-3xl text-amber-400 select-none leading-none">☥</span>
+              <div className={isAr ? 'text-right' : ''}>
+                <p className="font-manrope text-xs font-bold text-amber-400/70 tracking-widest uppercase mb-1">
+                  {t('home_egyptian_overline')}
+                </p>
+                <h2 className="font-caslon text-headline-sm text-primary-fixed leading-tight">
+                  {t('home_egyptian_title')}
+                </h2>
+              </div>
+            </div>
+            <span className="font-manrope text-xs font-semibold text-primary-fixed-dim bg-white/10 px-4 py-1.5 rounded-full border border-white/15">
+              {t('egyptian_year')}
+            </span>
+          </div>
+
+          {/* Intro: papyrus image + text */}
+          <div className={`flex flex-col md:flex-row gap-8 mb-14 items-center ${isAr ? 'md:flex-row-reverse' : ''}`}>
+            <div className="w-full md:w-60 flex-shrink-0">
+              <div className="rounded-xl overflow-hidden border border-amber-600/20 shadow-[0_0_40px_rgba(217,119,6,0.12)]">
+                <img
+                  src="/images/ebers-papyrus.jpg"
+                  alt="Ebers Papyrus"
+                  className="w-full h-56 md:h-64 object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <p className="font-manrope text-xs text-amber-400/50 text-center mt-2 tracking-widest uppercase">
+                {t('egyptian_papyrus_label')} · c. 1550 BCE
+              </p>
+            </div>
+            <div className={`flex-1 ${isAr ? 'text-right' : ''}`}>
+              <p className="font-manrope text-base text-primary-fixed leading-relaxed mb-4">
+                {t('egyptian_intro1')}
+              </p>
+              <p className="font-manrope text-sm text-primary-fixed-dim leading-relaxed">
+                {t('egyptian_intro2')}
+              </p>
+            </div>
+          </div>
+
+          {/* Recipe cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
+            {EGYPTIAN_RECIPES.map((recipe, i) => {
+              const r = (isAr && recipe.ar) ? recipe.ar : recipe;
+              return (
+              <div
+                key={i}
+                className="group bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:bg-white/10 hover:border-amber-500/30 transition-all duration-300"
+              >
+                <div className="relative h-44 overflow-hidden">
+                  <img
+                    src={recipe.image}
+                    alt={r.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
+                  <span className={`absolute top-3 ${isAr ? 'left-3' : 'right-3'} font-mono text-xs font-bold text-amber-300 bg-amber-900/70 backdrop-blur-sm border border-amber-600/40 px-2.5 py-1 rounded-full`}>
+                    {recipe.ref}
+                  </span>
+                </div>
+                <div className={`p-5 ${isAr ? 'text-right' : ''}`}>
+                  <h3 className="font-caslon text-lg text-primary-fixed mb-1 leading-tight">{r.title}</h3>
+                  <p className="font-manrope text-xs text-primary-fixed-dim mb-4 leading-relaxed">{r.context}</p>
+                  <div className="h-px bg-amber-600/20 mb-4" />
+                  <p className="font-manrope text-xs font-bold text-amber-400 uppercase tracking-widest mb-2.5">
+                    {t('egyptian_recipe_label')}
+                  </p>
+                  <div className={`flex flex-wrap gap-1.5 ${isAr ? 'flex-row-reverse' : ''}`}>
+                    {r.ingredients.map((ing, j) => (
+                      <span key={j} className="font-manrope text-xs text-primary-fixed-dim bg-white/10 border border-white/15 px-2.5 py-1 rounded-full">
+                        {ing}
+                      </span>
+                    ))}
+                  </div>
+                  {r.recipeText && (
+                    <p className="font-manrope text-xs text-primary-fixed-dim/70 mt-3 leading-relaxed italic">{r.recipeText}</p>
+                  )}
+                </div>
+              </div>
+              );
+            })}
+          </div>
+
+          {/* References */}
+          <div className={`flex flex-wrap items-center gap-x-4 gap-y-2 ${isAr ? 'flex-row-reverse' : ''}`}>
+            <span className="font-manrope text-xs text-primary-fixed-dim/40 uppercase tracking-widest">
+              {t('egyptian_refs_label')}:
+            </span>
+            {EGYPTIAN_REFS.map((ref, i) => (
+              <a
+                key={i}
+                href={ref.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-manrope text-xs text-primary-fixed-dim/50 hover:text-amber-400 flex items-center gap-1 transition-colors duration-200"
+              >
+                <span className="material-symbols-outlined" style={{ fontSize: '12px' }}>open_in_new</span>
+                {ref.label}
+              </a>
+            ))}
+          </div>
+
+        </div>
+      </section>
+
+      {/* ── Platform Statistics ──────────────────────────────────────────── */}
+      <section className="section-container py-16">
+        <div className={`flex items-end justify-between mb-10 gap-4 flex-wrap ${isAr ? 'flex-row-reverse' : ''}`}>
+          <div className={isAr ? 'text-right' : ''}>
+            <p className="font-manrope text-xs font-bold text-secondary tracking-widest uppercase mb-1">
+              {isAr ? 'بالأرقام' : 'By the Numbers'}
+            </p>
+            <h2 className="font-caslon text-headline-sm text-primary">{t('about_stats_title')}</h2>
+          </div>
+          <div className={`flex items-center gap-2 ${isAr ? 'flex-row-reverse' : ''}`}>
+            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
+            <span className="font-manrope text-xs text-on-surface-variant">
+              {isAr ? 'بيانات حية' : 'Live data'}
+            </span>
+          </div>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+          <StatCard icon="people"        label={t('about_stats_visitors')}       value={siteVisitors ?? t('about_stats_loading')}                                                                                       sub={t('about_stats_visitors_sub')}       color="teal"   delay={0}   isAr={isAr} />
+          <StatCard icon="local_florist" label={t('about_stats_plants')}         value={Object.keys(PLANTS).length.toString()}                                                                                          sub={t('about_stats_plants_sub')}         color="green"  delay={80}  isAr={isAr} />
+          <StatCard icon="assignment"    label={t('about_stats_questionnaires')} value={questionnaireCount ?? t('about_stats_loading')}                                                                                 sub={t('about_stats_questionnaires_sub')} color="blue"   delay={160} isAr={isAr} />
+          <StatCard icon="visibility"    label={t('about_stats_top_plant')}      value={topPlantName ?? (potm ? (isAr ? (PLANT_TRANSLATIONS.ar[potm.id]?.name ?? potm.name) : potm.name) : t('about_stats_loading'))} sub={t('about_stats_top_sub')}            color="amber"  delay={240} isAr={isAr} />
+          <StatCard icon="category"      label={t('about_stats_categories')}     value="5"                                                                                                                              sub={t('about_stats_categories_sub')}     color="purple" delay={320} isAr={isAr} className="col-span-2 sm:col-span-1" />
         </div>
       </section>
     </div>

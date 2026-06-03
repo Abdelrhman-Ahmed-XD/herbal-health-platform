@@ -15,7 +15,7 @@ const buildPlantContext = () =>
         ?.map(h => `${h.method}: ${h.instruction}`)
         .join(' | ') ?? '';
       return [
-        `═══ ${p.name} | ${p.latinName} ═══`,
+        `═══ ${p.name}[${p.id}] | ${p.latinName} ═══`,
         `Category: ${p.category} / ${p.subcategory}`,
         p.symptoms?.length ? `Symptoms addressed: ${p.symptoms.join(', ')}` : '',
         constituents ? `Active Constituents:\n${constituents}` : '',
@@ -36,16 +36,16 @@ const buildCompactPlantContext = () =>
     .filter(p => !p.isDemo)
     .map(p => {
       const compounds = p.activeConstituents?.slice(0, 2).map(c => c.name).join(', ') ?? '';
-      const warning   = Array.isArray(p.warnings) ? p.warnings[0] ?? '' : '';
+      const symptoms  = p.symptoms?.slice(0, 4).join(', ') ?? '';
+      const dose      = p.dosage?.standard ? p.dosage.standard.slice(0, 80) : '';
       return [
-        `**${p.name}** | ${p.latinName} | ${p.subcategory}`,
-        p.symptoms?.length ? `Symptoms: ${p.symptoms.join(', ')}` : '',
-        compounds         ? `Key compounds: ${compounds}` : '',
-        p.dosage?.standard ? `Dosage: ${p.dosage.standard}` : '',
-        warning            ? `⚠️ ${warning.slice(0, 160)}` : '',
-      ].filter(Boolean).join('\n');
+        `${p.name} [${p.id}] | ${p.subcategory}`,
+        symptoms  ? `Sx: ${symptoms}` : '',
+        compounds ? `Cmp: ${compounds}` : '',
+        dose      ? `Dose: ${dose}` : '',
+      ].filter(Boolean).join(' | ');
     })
-    .join('\n\n');
+    .join('\n');
 
 const GROQ_SYSTEM_PROMPT = `You are Nabta AI, an expert herbal pharmaceutical assistant for the Nabta botanical research platform.
 
@@ -64,8 +64,13 @@ LANGUAGE:
 PLANT DATABASE (40 verified plants):
 ${buildCompactPlantContext()}
 
+SAME-NAME PLANT IDs (append [id] immediately after bold name, no space):
+Echinacea: cold/flu→[echinacea-cold] | immunity→[echinacea-immunity]
+Ginger: cold/flu→[ginger-cold] | digestion/IBS→[ginger-ibs] | menstrual→[ginger-menstrual] | pregnancy→[ginger-pregnancy]
+
 FORMATTING:
-- Bold every plant name: **Plant Name** — this creates a clickable link in the app
+- Bold every plant name and append its [id] right after: **Plant Name**[plant-id]
+- Examples: **Echinacea**[echinacea-cold] or **Ginger**[ginger-cold] or **Lemon**[lemon]
 - Use ### for section headers, • for bullets, numbered lists for steps
 - Keep sections concise (2-4 bullets max)
 
@@ -104,9 +109,14 @@ You have access to the Nabta plant database. Always reference specific plants fr
 PLANT DATABASE:
 ${buildPlantContext()}
 
+SAME-NAME PLANT IDs:
+Echinacea: cold/flu→[echinacea-cold] | immunity→[echinacea-immunity]
+Ginger: cold/flu→[ginger-cold] | digestion/IBS→[ginger-ibs] | menstrual→[ginger-menstrual] | pregnancy→[ginger-pregnancy]
+
 FORMATTING RULES (strictly follow these):
-- Format each recommended plant as its own entry: **Plant Name** (*Latin name*): one-sentence description
-- ALWAYS use **bold** for every plant name  this creates a clickable link in the app
+- Format each recommended plant as its own entry: **Plant Name**[plant-id] (*Latin name*): one-sentence description
+- ALWAYS bold every plant name and append its [plant-id] right after with no space
+- Example: **Echinacea**[echinacea-cold] (*Echinacea purpurea*): immune activator for colds
 - Use bullet points (•) for lists of effects, uses, or warnings
 - Use ### for section headers (e.g., ### Recommended Plants, ### Why It Works, ### How to Use, ### Dosage, ### Warnings)
 - Use numbered lists (1. 2. 3.) for step-by-step instructions

@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import { PLANTS } from '../data/plants.js';
+import { Link, useNavigate } from 'react-router-dom';
+import { useState, useEffect, useRef, useMemo, useCallback } from 'react';
+import { PLANTS, CATEGORIES } from '../data/plants.js';
 import { useLanguage, PLANT_TRANSLATIONS, TAG_TRANSLATIONS } from '../contexts/LanguageContext.jsx';
 import heroBackground from '../assets/hero-bg.jpeg';
 import { trackPlantView, trackSiteVisit, subscribeToSiteStats } from '../services/firestoreService.js';
@@ -67,12 +67,46 @@ function topGlobal(views) {
   , plants[0]);
 }
 
+// ── Category color / name maps (used by PlantSpotCard + SearchBar) ────────
+const CAT_EN_NAMES = {
+  'womens-health': "Women's Health",
+  'digestive': 'Digestive Health',
+  'respiratory': 'Respiratory Health',
+  'immunity': 'Immunity',
+  'uti': 'Urinary Tract Health',
+};
+
+const CAT_AR_NAMES = {
+  'womens-health': 'صحة المرأة',
+  'digestive': 'صحة الجهاز الهضمي',
+  'respiratory': 'صحة الجهاز التنفسي',
+  'immunity': 'المناعة',
+  'uti': 'صحة المسالك البولية',
+};
+
+const CAT_ICON_COLORS = {
+  'womens-health': { bg: 'bg-pink-100', text: 'text-pink-600', border: 'border-pink-200', chip: 'bg-pink-50 text-pink-600 border-pink-200' },
+  'digestive':     { bg: 'bg-amber-100', text: 'text-amber-700', border: 'border-amber-200', chip: 'bg-amber-50 text-amber-700 border-amber-200' },
+  'respiratory':   { bg: 'bg-sky-100', text: 'text-sky-600', border: 'border-sky-200', chip: 'bg-sky-50 text-sky-600 border-sky-200' },
+  'immunity':      { bg: 'bg-emerald-100', text: 'text-emerald-700', border: 'border-emerald-200', chip: 'bg-emerald-50 text-emerald-700 border-emerald-200' },
+  'uti':           { bg: 'bg-blue-100', text: 'text-blue-600', border: 'border-blue-200', chip: 'bg-blue-50 text-blue-600 border-blue-200' },
+};
+
+const CAT_ICONS = {
+  'womens-health': 'favorite',
+  'digestive': 'nutrition',
+  'respiratory': 'air',
+  'immunity': 'shield',
+  'uti': 'water_drop',
+};
+
 // ── Shared small plant card ───────────────────────────────────────────────
 function PlantSpotCard({ plant, badgeIcon, badgeLabel, isAr, t, imageClass = 'h-48' }) {
   if (!plant) return null;
   const arData = isAr ? PLANT_TRANSLATIONS.ar[plant.id] : null;
   const name   = arData?.name ?? plant.name;
   const desc   = arData?.shortDescription ?? plant.shortDescription;
+  const catColors = CAT_ICON_COLORS[plant.category] ?? { bg: 'bg-surface/85', text: 'text-primary', border: 'border-transparent', chip: 'bg-surface/85 text-primary border-transparent' };
 
   return (
     <Link
@@ -86,10 +120,10 @@ function PlantSpotCard({ plant, badgeIcon, badgeLabel, isAr, t, imageClass = 'h-
           className="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500"
           loading="lazy"
         />
-        <div className={`absolute top-3 ${isAr ? 'right-3' : 'left-3'} flex items-center gap-1.5 bg-surface/85 backdrop-blur-sm rounded-full px-2.5 py-1`}>
-          <span className="material-symbols-outlined text-primary text-sm">{badgeIcon}</span>
+        <div className={`absolute top-3 ${isAr ? 'right-3' : 'left-3'} flex items-center gap-1.5 ${catColors.chip} border backdrop-blur-sm rounded-full px-2.5 py-1`}>
+          <span className={`material-symbols-outlined ${catColors.text} text-sm`}>{badgeIcon}</span>
           {badgeLabel && (
-            <span className="font-manrope text-xs font-semibold text-primary">{badgeLabel}</span>
+            <span className={`font-manrope text-xs font-semibold ${catColors.text}`}>{badgeLabel}</span>
           )}
         </div>
         <div className={`absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/30 to-transparent pointer-events-none`} />
@@ -109,6 +143,295 @@ function PlantSpotCard({ plant, badgeIcon, badgeLabel, isAr, t, imageClass = 'h-
         </div>
       </div>
     </Link>
+  );
+}
+
+// ── SearchBar component ───────────────────────────────────────────────────
+function SearchBar({ isAr, t }) {
+  const navigate = useNavigate();
+  const [query, setQuery] = useState('');
+  const [isFocused, setIsFocused] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(-1);
+  const inputRef = useRef(null);
+  const containerRef = useRef(null);
+
+  // Build plant index once
+  const plantIndex = useMemo(() => Object.values(PLANTS).map(p => {
+    const arData = PLANT_TRANSLATIONS.ar[p.id];
+    return {
+      type: 'plant',
+      id: p.id,
+      name: p.name,
+      nameAr: arData?.name ?? p.name,
+      latinName: p.latinName,
+      shortDescription: p.shortDescription,
+      category: p.category,
+      image: p.image,
+      searchText: [p.name, p.latinName, arData?.name ?? '', p.category].join(' ').toLowerCase(),
+    };
+  }), []);
+
+  // Build category index once
+  const catIndex = useMemo(() => {
+    const items = [];
+    CATEGORIES.forEach(cat => {
+      const colors = CAT_ICON_COLORS[cat.id] ?? CAT_ICON_COLORS['immunity'];
+      items.push({
+        type: 'category',
+        id: cat.id,
+        name: cat.name,
+        nameAr: CAT_AR_NAMES[cat.id] ?? cat.name,
+        icon: CAT_ICONS[cat.id] ?? 'eco',
+        colors,
+        plantCount: cat.subcategories?.reduce((s, sub) => s + (sub.plants?.length ?? 0), 0) ?? 0,
+        url: `/category/${cat.id}`,
+        searchText: [cat.name, CAT_AR_NAMES[cat.id] ?? '', cat.description ?? ''].join(' ').toLowerCase(),
+      });
+      cat.subcategories?.forEach(sub => {
+        items.push({
+          type: 'subcategory',
+          id: sub.id,
+          name: sub.name,
+          nameAr: sub.name,
+          parentName: cat.name,
+          parentNameAr: CAT_AR_NAMES[cat.id] ?? cat.name,
+          icon: CAT_ICONS[cat.id] ?? 'eco',
+          colors,
+          plantCount: sub.plants?.length ?? 0,
+          url: `/category/${cat.id}/${sub.id}`,
+          searchText: [sub.name, cat.name, CAT_AR_NAMES[cat.id] ?? '', sub.description ?? ''].join(' ').toLowerCase(),
+        });
+      });
+    });
+    return items;
+  }, []);
+
+  const results = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return { plants: [], categories: [] };
+    const plants = plantIndex.filter(p => p.searchText.includes(q)).slice(0, 5);
+    const categories = catIndex.filter(c => c.searchText.includes(q)).slice(0, 3);
+    return { plants, categories };
+  }, [query, plantIndex, catIndex]);
+
+  const allResults = [...results.plants, ...results.categories];
+  const hasResults = allResults.length > 0;
+  const hasQuery = query.trim().length > 0;
+  const showDropdown = isFocused && (hasQuery || true);
+
+  // Click outside closes dropdown
+  useEffect(() => {
+    const handler = (e) => {
+      if (containerRef.current && !containerRef.current.contains(e.target)) {
+        setIsFocused(false);
+        setActiveIndex(-1);
+      }
+    };
+    document.addEventListener('mousedown', handler);
+    return () => document.removeEventListener('mousedown', handler);
+  }, []);
+
+  // Cmd+K / Ctrl+K shortcut
+  useEffect(() => {
+    const handler = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        inputRef.current?.focus();
+        setIsFocused(true);
+      }
+    };
+    document.addEventListener('keydown', handler);
+    return () => document.removeEventListener('keydown', handler);
+  }, []);
+
+  const goToResult = useCallback((result) => {
+    if (!result) return;
+    const url = result.type === 'plant' ? `/plant/${result.id}` : result.url;
+    navigate(url);
+    setQuery('');
+    setIsFocused(false);
+    setActiveIndex(-1);
+  }, [navigate]);
+
+  const handleKeyDown = (e) => {
+    if (!isFocused) return;
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setActiveIndex(i => Math.min(i + 1, allResults.length - 1));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setActiveIndex(i => Math.max(i - 1, -1));
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (activeIndex >= 0) goToResult(allResults[activeIndex]);
+      else if (allResults.length > 0) goToResult(allResults[0]);
+    } else if (e.key === 'Escape') {
+      setQuery('');
+      setIsFocused(false);
+      setActiveIndex(-1);
+      inputRef.current?.blur();
+    }
+  };
+
+  // Quick-access categories shown when focused + empty
+  const quickCats = CATEGORIES.slice(0, 5);
+
+  return (
+    <div ref={containerRef} className={`relative w-full max-w-2xl mx-auto mb-8 sm:mb-10 z-40`}>
+      {/* Input */}
+      <div className={`flex items-center gap-3 bg-white/90 backdrop-blur-md border-2 rounded-2xl px-4 py-3 shadow-botanical transition-all duration-200 ${isFocused ? 'border-primary shadow-xl ring-4 ring-primary/10' : 'border-white/60 hover:border-primary/40'} ${isAr ? 'flex-row-reverse' : ''}`}>
+        <span className="material-symbols-outlined text-primary/70 text-xl flex-none">search</span>
+        <input
+          ref={inputRef}
+          type="text"
+          value={query}
+          onChange={e => { setQuery(e.target.value); setActiveIndex(-1); }}
+          onFocus={() => setIsFocused(true)}
+          onKeyDown={handleKeyDown}
+          placeholder={t('search_placeholder')}
+          dir={isAr ? 'rtl' : 'ltr'}
+          className={`flex-1 bg-transparent font-manrope text-sm text-on-surface placeholder:text-on-surface-variant/60 outline-none min-w-0 ${isAr ? 'text-right' : 'text-left'}`}
+        />
+        {query ? (
+          <button
+            onClick={() => { setQuery(''); setActiveIndex(-1); inputRef.current?.focus(); }}
+            className="flex-none w-5 h-5 rounded-full bg-on-surface-variant/20 flex items-center justify-center hover:bg-on-surface-variant/30 transition-colors"
+          >
+            <span className="material-symbols-outlined text-on-surface-variant text-sm leading-none">close</span>
+          </button>
+        ) : (
+          <img src="/images/nabta-logo.png" alt="Nabta" className="h-6 w-auto object-contain flex-none opacity-50" />
+        )}
+      </div>
+
+      {/* Dropdown */}
+      {isFocused && (
+        <div className={`absolute top-full mt-2 w-full bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-outline-variant/30 overflow-hidden animate-slide-up`}>
+          {/* No query: quick access */}
+          {!hasQuery && (
+            <div className="p-4">
+              <p className={`font-manrope text-xs font-semibold text-on-surface-variant uppercase tracking-widest mb-3 ${isAr ? 'text-right' : 'text-left'}`}>
+                {t('search_quick_access')}
+              </p>
+              <div className={`flex flex-wrap gap-2 ${isAr ? 'flex-row-reverse' : ''}`}>
+                {quickCats.map(cat => {
+                  const colors = CAT_ICON_COLORS[cat.id] ?? CAT_ICON_COLORS['immunity'];
+                  return (
+                    <Link
+                      key={cat.id}
+                      to={`/category/${cat.id}`}
+                      onClick={() => setIsFocused(false)}
+                      className={`inline-flex items-center gap-1.5 ${colors.chip} border rounded-full px-3 py-1.5 font-manrope text-xs font-semibold hover:opacity-80 transition-opacity ${isAr ? 'flex-row-reverse' : ''}`}
+                    >
+                      <span className="material-symbols-outlined text-sm">{CAT_ICONS[cat.id]}</span>
+                      {isAr ? (CAT_AR_NAMES[cat.id] ?? cat.name) : cat.name}
+                    </Link>
+                  );
+                })}
+              </div>
+              <p className={`font-manrope text-xs text-on-surface-variant/50 mt-3 ${isAr ? 'text-right' : 'text-left'}`}>
+                {t('search_hint')}
+              </p>
+            </div>
+          )}
+
+          {/* Has query + results */}
+          {hasQuery && hasResults && (
+            <div className="py-2">
+              {/* Plants */}
+              {results.plants.length > 0 && (
+                <div>
+                  <p className={`font-manrope text-xs font-semibold text-on-surface-variant uppercase tracking-widest px-4 py-2 ${isAr ? 'text-right' : 'text-left'}`}>
+                    {t('search_plants')}
+                  </p>
+                  {results.plants.map((p, i) => {
+                    const isActive = activeIndex === i;
+                    const colors = CAT_ICON_COLORS[p.category] ?? CAT_ICON_COLORS['immunity'];
+                    return (
+                      <button
+                        key={p.id}
+                        onMouseDown={() => goToResult(p)}
+                        onMouseEnter={() => setActiveIndex(i)}
+                        className={`w-full flex items-center gap-3 px-4 py-2.5 transition-colors ${isActive ? 'bg-primary/5' : 'hover:bg-surface-container/50'} ${isAr ? 'flex-row-reverse text-right' : 'text-left'}`}
+                      >
+                        <div className="flex-none w-10 h-10 rounded-xl overflow-hidden bg-surface-container shadow-sm">
+                          <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-manrope text-sm font-semibold text-on-surface truncate">{isAr ? p.nameAr : p.name}</p>
+                          <p className="font-manrope text-xs text-on-surface-variant italic truncate">{p.latinName}</p>
+                        </div>
+                        <span className={`flex-none font-manrope text-xs font-semibold ${colors.chip} border rounded-full px-2 py-0.5`}>
+                          {isAr ? (CAT_AR_NAMES[p.category] ?? p.category) : (CAT_EN_NAMES[p.category] ?? p.category)}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+
+              {/* Categories */}
+              {results.categories.length > 0 && (
+                <div>
+                  <p className={`font-manrope text-xs font-semibold text-on-surface-variant uppercase tracking-widest px-4 py-2 ${isAr ? 'text-right' : 'text-left'}`}>
+                    {t('search_categories')}
+                  </p>
+                  {results.categories.map((c, i) => {
+                    const idx = results.plants.length + i;
+                    const isActive = activeIndex === idx;
+                    return (
+                      <button
+                        key={c.id}
+                        onMouseDown={() => goToResult(c)}
+                        onMouseEnter={() => setActiveIndex(idx)}
+                        className={`w-full flex items-center gap-3 px-4 py-2.5 transition-colors ${isActive ? 'bg-primary/5' : 'hover:bg-surface-container/50'} ${isAr ? 'flex-row-reverse text-right' : 'text-left'}`}
+                      >
+                        <div className={`flex-none w-10 h-10 rounded-xl ${c.colors.bg} ${c.colors.text} flex items-center justify-center shadow-sm`}>
+                          <span className="material-symbols-outlined text-xl">{c.icon}</span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-manrope text-sm font-semibold text-on-surface truncate">{isAr ? c.nameAr : c.name}</p>
+                          {c.type === 'subcategory' && (
+                            <p className="font-manrope text-xs text-on-surface-variant truncate">
+                              {isAr ? c.parentNameAr : c.parentName}
+                            </p>
+                          )}
+                        </div>
+                        <span className="flex-none font-manrope text-xs text-on-surface-variant/60 bg-surface-container rounded-full px-2 py-0.5 border border-outline-variant/30">
+                          {c.plantCount}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* No results */}
+          {hasQuery && !hasResults && (
+            <div className={`px-4 py-6 text-center`}>
+              <span className="material-symbols-outlined text-3xl text-on-surface-variant/40 mb-2 block">search_off</span>
+              <p className="font-manrope text-sm text-on-surface-variant">
+                {t('search_no_results')} <span className="font-semibold text-on-surface">"{query}"</span>
+              </p>
+            </div>
+          )}
+
+          {/* Footer link */}
+          <div className={`border-t border-outline-variant/20 px-4 py-2.5 flex items-center gap-2 ${isAr ? 'flex-row-reverse' : ''}`}>
+            <button
+              type="button"
+              onMouseDown={() => { navigate('/categories'); setIsFocused(false); setQuery(''); setActiveIndex(-1); }}
+              className={`flex-1 flex items-center gap-1.5 font-manrope text-xs text-primary font-semibold hover:underline ${isAr ? 'flex-row-reverse justify-end' : ''}`}
+            >
+              <span className="material-symbols-outlined text-sm">grid_view</span>
+              {t('search_browse_all')}
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -234,7 +557,7 @@ export default function HomePage() {
     <div className="page-enter">
 
       {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-screen flex items-center overflow-hidden pt-28">
+      <section className="relative min-h-screen flex items-center pt-28">
         <div
           className="absolute inset-0 bg-cover bg-center opacity-45"
           style={{ backgroundImage: `url(${heroBackground})` }}
@@ -254,6 +577,7 @@ export default function HomePage() {
           <p className="font-manrope text-sm sm:text-lg md:text-body-lg text-on-surface-variant max-w-xl mx-auto mb-8 sm:mb-10 px-2">
             {t('home_hero_sub')}
           </p>
+          <SearchBar isAr={isAr} t={t} />
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
             <Link to="/categories"
               className="bg-primary-container text-on-primary-container font-manrope font-semibold text-xs sm:text-sm tracking-wide px-6 py-3 sm:px-8 sm:py-4 rounded-full hover:opacity-80 transition-all duration-200 hover:-translate-y-0.5 shadow-botanical w-[85%] sm:w-auto text-center">

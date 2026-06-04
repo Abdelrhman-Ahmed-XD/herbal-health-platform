@@ -167,8 +167,8 @@ export default function PlantDetailPage() {
                 </div>
               )}
 
-              {/* Warnings */}
-              {warnings?.length > 0 && (
+              {/* Warnings — English only */}
+              {!isAr && warnings?.length > 0 && (
                 <div className="bg-red-50 border border-red-200 rounded-xl p-5">
                   <div className="flex items-center gap-2 mb-3">
                     <span className="material-symbols-outlined text-red-600">warning</span>

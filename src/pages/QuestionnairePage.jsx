@@ -24,23 +24,26 @@ const CustomTooltip = ({ active, payload, label }) => {
 const SYM_PALETTE = ['#1b3022','#536346','#4d6453','#364c3c','#59694b','#819986'];
 const CAT_PALETTE = ['#f4dfcb','#d6e9c3','#b4cdb8','#d7c3b0'];
 const SYM_AR_MAP  = {
-  // Legacy keys
+  // Legacy
   Immunity:'مناعة', Stress:'توتر', Fatigue:'إرهاق', Sleep:'نوم', IBS:'قولون', Cough:'سعال', PMS:'دورة', Constipation:'إمساك',
-  // New sub_concern slugs (AR)
-  'menstrual-health':'الدورة الشهرية', 'pregnancy-support':'الحمل', 'breast-feeding':'الرضاعة',
-  'hair-care':'الشعر', 'skin-care':'البشرة', 'cold':'البرد', 'rhinitis':'التهاب الأنف',
-  'sinusitis':'الجيوب الأنفية', 'cough':'السعال', 'immune-boosting':'المناعة',
-  'immune-recover':'التعافي', 'anti-oxidant-rich':'مضادات الأكسدة', 'wellness':'الصحة العامة',
+  // Sub-concern slugs
+  'skin-care':'البشرة', 'hair-care':'الشعر', 'breast-feeding':'الرضاعة', 'menstrual-health':'الدورة الشهرية', 'pregnancy-support':'الحمل',
+  'cold':'البرد', 'rhinitis':'التهاب الأنف', 'cough':'السعال', 'sinusitis':'الجيوب الأنفية',
+  'immune-boosting':'المناعة', 'immune-recover':'التعافي', 'anti-oxidant-rich':'مضادات الأكسدة', 'anti-inflammatory':'مضاد للالتهابات',
+  'constipation-relief':'الإمساك', 'diarrhea-support':'الإسهال', 'dyspepsia':'عسر الهضم', 'ibs':'القولون العصبي',
+  'diuretics':'مدرّات البول', 'anti-septic':'التهاب المسالك', 'bph':'البروستاتا',
+  'wellness':'الصحة العامة',
 };
 const SYM_EN_MAP  = {
-  // New sub_concern slugs (EN display)
-  'menstrual-health':'Menstrual', 'pregnancy-support':'Pregnancy', 'breast-feeding':'Breastfeeding',
-  'hair-care':'Hair Care', 'skin-care':'Skin Care', 'cold':'Cold & Flu', 'rhinitis':'Rhinitis',
-  'sinusitis':'Sinusitis', 'cough':'Cough', 'immune-boosting':'Immunity',
-  'immune-recover':'Recovery', 'anti-oxidant-rich':'Antioxidant', 'wellness':'Wellness',
+  'skin-care':'Skin Care', 'hair-care':'Hair Care', 'breast-feeding':'Breastfeeding', 'menstrual-health':'Menstrual', 'pregnancy-support':'Pregnancy',
+  'cold':'Cold & Flu', 'rhinitis':'Rhinitis', 'cough':'Cough', 'sinusitis':'Sinusitis',
+  'immune-boosting':'Immunity', 'immune-recover':'Recovery', 'anti-oxidant-rich':'Antioxidant', 'anti-inflammatory':'Anti-inflammatory',
+  'constipation-relief':'Constipation', 'diarrhea-support':'Diarrhea', 'dyspepsia':'Dyspepsia', 'ibs':'IBS',
+  'diuretics':'Diuretics', 'anti-septic':'UTI', 'bph':'Prostate (BPH)',
+  'wellness':'Wellness',
 };
-const CAT_AR_MAP  = { immunity:'المناعة', digestive:'الهضم', respiratory:'الجهاز التنفسي', 'womens-health':'صحة المرأة', stress:'التوتر', sleep:'النوم' };
-const CAT_EN_MAP  = { immunity:'Immunity', digestive:'Digestive', respiratory:'Respiratory', 'womens-health':"Women's", stress:'Stress', sleep:'Sleep' };
+const CAT_AR_MAP  = { immunity:'المناعة', digestive:'الهضم', respiratory:'الجهاز التنفسي', 'womens-health':'صحة المرأة', uti:'المسالك البولية' };
+const CAT_EN_MAP  = { immunity:'Immunity', digestive:'Digestive', respiratory:'Respiratory', 'womens-health':"Women's", uti:'Urinary' };
 
 function buildSymptomChart(raw, isAr) {
   if (!raw || Object.keys(raw).length === 0) return [];
@@ -169,34 +172,88 @@ function AnalyticsDashboard() {
 
 /* ── Recommendation engine ──────────────────────────────────────────────── */
 const EVIDENCE = {
-  'ginger': 'high', 'dill-seed': 'high', 'cinnamon': 'high',
-  'echinacea': 'high', 'black-seed': 'high',
-  'aloe-vera': 'moderate', 'tea-tree': 'moderate', 'licorice': 'moderate',
-  'green-tea': 'moderate', 'fenugreek': 'moderate', 'fennel': 'moderate',
-  'butterbur': 'moderate', 'stinging-nettle': 'moderate',
-  'eucalyptus': 'moderate', 'lemon': 'moderate',
-  'rosemary': 'preliminary', 'moringa': 'preliminary', 'astragalus': 'preliminary',
+  // Women's Health — Skin Care
+  'aloe-vera':'high', 'tea-tree':'moderate', 'licorice':'moderate', 'green-tea':'moderate', 'rosemary':'moderate',
+  // Women's Health — Hair Care
+  'aloe-vera-hair':'moderate', 'rosemary-hair':'high', 'rocket':'preliminary', 'garlic':'preliminary',
+  // Women's Health — Breastfeeding
+  'fenugreek':'moderate', 'fennel':'moderate', 'moringa':'preliminary',
+  // Women's Health — Menstrual
+  'ginger-menstrual':'high', 'dill-seed-menstrual':'high', 'cinnamon-menstrual':'high',
+  // Women's Health — Pregnancy
+  'ginger-pregnancy':'high', 'peppermint-pregnancy':'moderate', 'psyllium-pregnancy':'moderate', 'cranberry-pregnancy':'moderate',
+  // Respiratory — Cold
+  'echinacea-cold':'high', 'eucalyptus':'moderate', 'ginger-cold':'high', 'lemon':'moderate',
+  // Respiratory — Rhinitis
+  'butterbur':'moderate', 'stinging-nettle':'moderate', 'black-seed-rhinitis':'moderate',
+  // Respiratory — Cough
+  'thyme':'moderate', 'licorice-cough':'moderate', 'anise':'moderate', 'guava':'preliminary',
+  // Respiratory — Sinusitis
+  'pelargonium':'moderate', 'black-elderberry':'moderate',
+  // Immunity — Boosting / Recover / Antioxidant
+  'echinacea':'high', 'black-seed':'high', 'astragalus':'moderate',
+  'echinacea-immunity':'high', 'black-seed-immunity':'high', 'astragalus-immunity':'moderate',
+  // Immunity — Anti-inflammatory
+  'turmeric-immunity':'moderate', 'garlic-immunity':'moderate', 'rosemary-immunity':'preliminary',
+  // Digestive — Constipation
+  'senna-constipation':'high', 'psyllium-constipation':'high', 'castor-constipation':'moderate',
+  // Digestive — Diarrhea
+  'peppermint-diarrhea':'moderate', 'chamomile-diarrhea':'moderate', 'fennel-diarrhea':'moderate',
+  // Digestive — Dyspepsia
+  'peppermint-dyspepsia':'high', 'chamomile-dyspepsia':'moderate',
+  // Digestive — IBS
+  'peppermint-ibs':'high', 'ginger-ibs':'moderate',
+  // UTI — Anti-septic
+  'uva-ursi-antiseptic':'moderate', 'cranberry-antiseptic':'moderate',
+  // UTI — Diuretics
+  'dandelion':'preliminary', 'parsley':'preliminary', 'halfabar':'preliminary',
+  // UTI — BPH
+  'pygeum':'moderate', 'saw-palmetto':'moderate', 'stinging-nettle-root':'moderate',
 };
 
 // Plants excluded for each safety flag
 const SAFETY_EXCLUDE = {
-  pregnant:      new Set(['fenugreek', 'dill-seed', 'butterbur', 'stinging-nettle', 'black-seed']),
-  nut_allergy:   new Set(['fenugreek']),
+  pregnant:    new Set(['fenugreek', 'dill-seed-menstrual', 'butterbur', 'stinging-nettle', 'black-seed', 'black-seed-rhinitis', 'black-seed-immunity', 'senna-constipation', 'castor-constipation', 'uva-ursi-antiseptic']),
+  nut_allergy: new Set(['fenugreek']),
 };
 // Plants flagged with a warning for each safety flag (not excluded, but caution needed)
 const SAFETY_WARN = {
-  pregnant:      new Set(['cinnamon', 'ginger', 'licorice']),
-  breastfeeding: new Set(['dill-seed']),
-  diabetes:      new Set(['fenugreek', 'cinnamon', 'black-seed']),
-  blood_thinners:new Set(['ginger', 'black-seed']),
-  liver:         new Set(['licorice', 'echinacea']),
+  pregnant:      new Set(['cinnamon-menstrual', 'ginger-cold', 'ginger-menstrual', 'licorice', 'licorice-cough', 'saw-palmetto', 'pygeum']),
+  breastfeeding: new Set(['senna-constipation', 'castor-constipation', 'saw-palmetto', 'uva-ursi-antiseptic']),
+  diabetes:      new Set(['fenugreek', 'cinnamon-menstrual', 'black-seed', 'black-seed-immunity', 'black-seed-rhinitis', 'ginger-cold', 'ginger-menstrual', 'ginger-pregnancy']),
+  blood_thinners:new Set(['ginger-cold', 'ginger-menstrual', 'ginger-pregnancy', 'black-seed', 'black-seed-immunity', 'black-seed-rhinitis', 'turmeric-immunity', 'garlic-immunity']),
+  liver:         new Set(['licorice', 'licorice-cough', 'echinacea', 'echinacea-cold', 'echinacea-immunity', 'senna-constipation', 'uva-ursi-antiseptic']),
 };
-// Sub-concerns that cross subcategory boundaries — explicit plant lists
+// Explicit plant lists for each sub-concern (avoids duplicate entries in database)
 const CONCERN_OVERRIDE = {
-  'resp-both':        ['eucalyptus', 'lemon', 'butterbur', 'stinging-nettle'],
-  'immune-recover':   ['echinacea', 'astragalus'],
-  'anti-oxidant-rich':['green-tea', 'rosemary', 'moringa', 'lemon'],
-  'wellness':         ['ginger', 'green-tea', 'lemon', 'rosemary'],
+  // Women's Health
+  'skin-care':          ['aloe-vera', 'tea-tree', 'green-tea', 'rosemary'],
+  'hair-care':          ['aloe-vera-hair', 'rosemary-hair', 'rocket', 'garlic'],
+  'breast-feeding':     ['fenugreek', 'fennel', 'moringa'],
+  'menstrual-health':   ['ginger-menstrual', 'dill-seed-menstrual', 'cinnamon-menstrual'],
+  'pregnancy-support':  ['ginger-pregnancy', 'peppermint-pregnancy', 'psyllium-pregnancy', 'cranberry-pregnancy'],
+  // Respiratory
+  'cold':               ['echinacea-cold', 'eucalyptus', 'ginger-cold', 'lemon'],
+  'rhinitis':           ['butterbur', 'stinging-nettle', 'black-seed-rhinitis'],
+  'cough':              ['thyme', 'licorice-cough', 'anise', 'guava'],
+  'sinusitis':          ['pelargonium', 'black-elderberry'],
+  'resp-both':          ['eucalyptus', 'lemon', 'butterbur', 'stinging-nettle'],
+  // Immunity
+  'immune-boosting':    ['echinacea-immunity', 'black-seed-immunity', 'astragalus-immunity'],
+  'anti-inflammatory':  ['turmeric-immunity', 'garlic-immunity', 'rosemary-immunity'],
+  'immune-recover':     ['echinacea', 'astragalus'],
+  'anti-oxidant-rich':  ['green-tea', 'rosemary', 'moringa', 'lemon'],
+  // Digestive
+  'constipation-relief':['psyllium-constipation', 'senna-constipation', 'castor-constipation'],
+  'diarrhea-support':   ['peppermint-diarrhea', 'chamomile-diarrhea', 'fennel-diarrhea'],
+  'dyspepsia':          ['peppermint-dyspepsia', 'chamomile-dyspepsia'],
+  'ibs':                ['peppermint-ibs', 'ginger-ibs'],
+  // UTI
+  'anti-septic':        ['uva-ursi-antiseptic', 'cranberry-antiseptic'],
+  'diuretics':          ['dandelion', 'parsley', 'halfabar'],
+  'bph':                ['pygeum', 'saw-palmetto', 'stinging-nettle-root'],
+  // Wellness
+  'wellness':           ['ginger-cold', 'green-tea', 'lemon', 'moringa'],
 };
 
 function getFormInfo(plant, preferredForm) {
@@ -215,11 +272,11 @@ function getRecommendations(answers) {
   const { primary_concern, sub_concern, safety_flags = [], preferred_form } = answers;
   const activeFlags = safety_flags.filter(f => f !== 'none');
 
-  if (primary_concern === 'digestive') return []; // coming soon
-
-  const key = (sub_concern === 'both' && primary_concern === 'respiratory')
-    ? 'resp-both'
-    : (sub_concern || primary_concern);
+  const key = primary_concern === 'wellness'
+    ? 'wellness'
+    : (sub_concern === 'both' && primary_concern === 'respiratory')
+      ? 'resp-both'
+      : (sub_concern || primary_concern);
 
   let candidateIds;
   if (CONCERN_OVERRIDE[key]) {
@@ -252,18 +309,34 @@ function buildQuestions(t, answers = {}) {
   const subOptionsMap = {
     'womens-health': [
       { value: 'skin-care',        label: t('opt_wh_skin'),      icon: 'face_retouching_natural', desc: t('opt_wh_skin_desc') },
-      { value: 'breast-feeding',   label: t('opt_wh_bf'),        icon: 'baby_changing_station',   desc: t('opt_wh_bf_desc') },
+      { value: 'hair-care',        label: t('opt_wh_hair'),      icon: 'self_improvement',        desc: t('opt_wh_hair_desc') },
       { value: 'menstrual-health', label: t('opt_wh_menstrual'), icon: 'spa',                     desc: t('opt_wh_menstrual_desc') },
+      { value: 'breast-feeding',   label: t('opt_wh_bf'),        icon: 'baby_changing_station',   desc: t('opt_wh_bf_desc') },
+      { value: 'pregnancy-support',label: t('opt_wh_pregnancy'), icon: 'child_care',              desc: t('opt_wh_pregnancy_desc') },
     ],
     'respiratory': [
-      { value: 'cold',     label: t('opt_resp_cold'),     icon: 'coronavirus', desc: t('opt_resp_cold_desc') },
-      { value: 'rhinitis', label: t('opt_resp_rhinitis'), icon: 'air',         desc: t('opt_resp_rhinitis_desc') },
-      { value: 'both',     label: t('opt_resp_both'),     icon: 'healing',     desc: t('opt_resp_both_desc') },
+      { value: 'cold',      label: t('opt_resp_cold'),      icon: 'coronavirus',  desc: t('opt_resp_cold_desc') },
+      { value: 'cough',     label: t('opt_resp_cough'),     icon: 'record_voice_over', desc: t('opt_resp_cough_desc') },
+      { value: 'rhinitis',  label: t('opt_resp_rhinitis'),  icon: 'air',          desc: t('opt_resp_rhinitis_desc') },
+      { value: 'sinusitis', label: t('opt_resp_sinusitis'), icon: 'face',         desc: t('opt_resp_sinusitis_desc') },
+      { value: 'both',      label: t('opt_resp_both'),      icon: 'healing',      desc: t('opt_resp_both_desc') },
     ],
     'immunity': [
-      { value: 'immune-boosting',   label: t('opt_imm_prevent'),     icon: 'shield',  desc: t('opt_imm_prevent_desc') },
-      { value: 'immune-recover',    label: t('opt_imm_recover'),     icon: 'healing', desc: t('opt_imm_recover_desc') },
-      { value: 'anti-oxidant-rich', label: t('opt_imm_antioxidant'), icon: 'spa',     desc: t('opt_imm_antioxidant_desc') },
+      { value: 'immune-boosting',   label: t('opt_imm_prevent'),          icon: 'shield',    desc: t('opt_imm_prevent_desc') },
+      { value: 'anti-inflammatory', label: t('opt_imm_antiinflammatory'), icon: 'reduce_capacity', desc: t('opt_imm_antiinflammatory_desc') },
+      { value: 'immune-recover',    label: t('opt_imm_recover'),          icon: 'healing',   desc: t('opt_imm_recover_desc') },
+      { value: 'anti-oxidant-rich', label: t('opt_imm_antioxidant'),      icon: 'spa',       desc: t('opt_imm_antioxidant_desc') },
+    ],
+    'digestive': [
+      { value: 'constipation-relief', label: t('opt_dig_constipation'), icon: 'sentiment_dissatisfied', desc: t('opt_dig_constipation_desc') },
+      { value: 'diarrhea-support',    label: t('opt_dig_diarrhea'),     icon: 'water_drop',             desc: t('opt_dig_diarrhea_desc') },
+      { value: 'dyspepsia',           label: t('opt_dig_dyspepsia'),    icon: 'restaurant',             desc: t('opt_dig_dyspepsia_desc') },
+      { value: 'ibs',                 label: t('opt_dig_ibs'),          icon: 'loop',                   desc: t('opt_dig_ibs_desc') },
+    ],
+    'uti': [
+      { value: 'anti-septic', label: t('opt_uti_antiseptic'), icon: 'biotech',    desc: t('opt_uti_antiseptic_desc') },
+      { value: 'diuretics',   label: t('opt_uti_diuretics'),  icon: 'water_drop', desc: t('opt_uti_diuretics_desc') },
+      { value: 'bph',         label: t('opt_uti_bph'),        icon: 'man',        desc: t('opt_uti_bph_desc') },
     ],
   };
 
@@ -273,16 +346,17 @@ function buildQuestions(t, answers = {}) {
       skipCheck: () => false,
       question: t('qq1_q'), subtitle: t('qq1_sub'),
       options: [
-        { value: 'womens-health', label: t('opt_womens'),         icon: 'favorite',  desc: t('opt_womens_desc') },
-        { value: 'respiratory',   label: t('opt_respiratory'),    icon: 'air',       desc: t('opt_respiratory_desc') },
-        { value: 'immunity',      label: t('opt_immunity'),       icon: 'shield',    desc: t('opt_immunity_desc') },
-        { value: 'digestive',     label: t('opt_digestive_soon'), icon: 'nutrition', desc: t('opt_digestive_soon_desc') },
-        { value: 'wellness',      label: t('opt_wellness'),       icon: 'spa',       desc: t('opt_wellness_desc') },
+        { value: 'womens-health', label: t('opt_womens'),      icon: 'favorite',       desc: t('opt_womens_desc') },
+        { value: 'respiratory',   label: t('opt_respiratory'), icon: 'air',            desc: t('opt_respiratory_desc') },
+        { value: 'immunity',      label: t('opt_immunity'),    icon: 'shield',         desc: t('opt_immunity_desc') },
+        { value: 'digestive',     label: t('opt_digestive'),   icon: 'nutrition',      desc: t('opt_digestive_desc') },
+        { value: 'uti',           label: t('opt_uti'),         icon: 'water_drop',     desc: t('opt_uti_desc') },
+        { value: 'wellness',      label: t('opt_wellness'),    icon: 'spa',            desc: t('opt_wellness_desc') },
       ],
     },
     {
       id: 'sub_concern', type: 'single',
-      skipCheck: (ans) => !ans.primary_concern || !subOptionsMap[ans.primary_concern],
+      skipCheck: (ans) => !ans.primary_concern || !subOptionsMap[ans.primary_concern] || ans.primary_concern === 'wellness',
       question: t('qq2_new_q'), subtitle: t('qq2_new_sub'),
       options: subOptionsMap[q1] ?? [],
     },
@@ -461,7 +535,6 @@ function EvidenceBadge({ level, t }) {
 function Results({ answers, onReset }) {
   const { t, isAr } = useLanguage();
   const recs = getRecommendations(answers);
-  const isComingSoon      = answers.primary_concern === 'digestive';
   const hasContraindication = (answers.safety_flags ?? []).some(f => f !== 'none');
 
   const summaryItems = [
@@ -500,17 +573,8 @@ function Results({ answers, onReset }) {
         </div>
       )}
 
-      {/* Coming soon */}
-      {isComingSoon && (
-        <div className="text-center py-16 bg-surface-container-lowest border border-dashed border-outline-variant rounded-2xl mb-8">
-          <span className="material-symbols-outlined text-5xl text-outline mb-3 block">construction</span>
-          <h3 className="font-caslon text-xl text-primary mb-2">{t('res_coming_soon_title')}</h3>
-          <p className="font-manrope text-sm text-on-surface-variant max-w-sm mx-auto">{t('res_coming_soon_desc')}</p>
-        </div>
-      )}
-
       {/* No plants found (excluded by safety) */}
-      {!isComingSoon && recs.length === 0 && (
+      {recs.length === 0 && (
         <div className="text-center py-12 bg-surface-container-lowest border border-dashed border-outline-variant rounded-2xl mb-8">
           <span className="material-symbols-outlined text-5xl text-outline mb-3 block">search_off</span>
           <p className="font-manrope text-sm text-on-surface-variant">{t('res_no_plants_found')}</p>
@@ -549,8 +613,8 @@ function Results({ answers, onReset }) {
                       <p className="font-manrope text-xs text-on-surface-variant leading-relaxed mt-1">
                         <span className="font-semibold text-on-surface">{t('res_match_reason_label')}: </span>
                         {isAr
-                          ? `يعالج: ${plant.symptoms.slice(0, 3).join('، ')}`
-                          : `Addresses: ${plant.symptoms.slice(0, 3).join(', ')}`
+                          ? `يعالج: ${(plant.symptoms ?? []).slice(0, 3).join('، ')}`
+                          : `Addresses: ${(plant.symptoms ?? []).slice(0, 3).join(', ')}`
                         }
                       </p>
                     </div>

@@ -1,17 +1,21 @@
 import { useLanguage } from '../contexts/LanguageContext.jsx';
 
 const TEAM = [
-  'Hana Mahmoud Emam',
-  'Mariam Ahmed Mohammed ElFeqi',
-  'Hagar Reda Salah Amin',
-  'Manar Magdy Sabry',
-  'Mariam Nashat Mohammed Elnahta',
-  'Mariam Tharwat Lotfy',
-  'Mary Romany Yousef',
-  'Mai Ahmed Saeed',
-  'Hagar Salah Abdelzaher',
-  'Mahmoud Ayman Hassan Amer',
+  { name: 'Hana Mahmoud Emam',            image: '/images/team/hana-mahmoud.jpeg',   role: ['Pharmacist Team Leader of 3D', 'Graduation Project 2026', 'MTI University'] },
+  { name: 'Mariam Ahmed Mohammed ElFeqi', image: '/images/team/mariam-elfeqi.jpeg'   },
+  { name: 'Hagar Reda Salah Amin',        image: '/images/team/hagar-reda.jpeg'      },
+  { name: 'Manar Magdy Sabry',            image: '/images/team/manar-magdy.jpeg'      },
+  { name: 'Mariam Nashat Mohammed Elnahta',image: '/images/team/mariam-elnahta.jpeg' },
+  { name: 'Mariam Tharwat Lotfy',         image: '/images/team/mariam-tharwat.jpeg' },
+  { name: 'Mary Romany Yousef',           image: '/images/team/mary-romany.jpeg'      },
+  { name: 'Mai Ahmed Saeed',              image: '/images/team/mai-ahmed.jpeg'       },
+  { name: 'Hagar Salah Abdelzaher',       image: '/images/team/hagar-salah.jpeg'     },
+  { name: 'Mahmoud Ayman Hassan Amer',    image: '/images/team/mahmoud-ayman.jpeg'   },
 ];
+
+function getInitials(name) {
+  return name.split(' ').slice(0, 2).map(w => w[0]).join('');
+}
 
 export default function AboutPage() {
   const { t, isAr } = useLanguage();
@@ -50,26 +54,81 @@ export default function AboutPage() {
 
       {/* ── Team ──────────────────────────────────────────────────────── */}
       <section className="section-container pb-20">
-        <div className={`mb-8 ${isAr ? 'text-right' : 'text-left'}`}>
+        <div className={`mb-10 ${isAr ? 'text-right' : 'text-left'}`}>
           <h2 className="font-caslon text-headline-sm text-primary mb-2">{t('about_team_title')}</h2>
           <p className="font-manrope text-sm text-on-surface-variant">{t('about_team_sub')}</p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {TEAM.map((name, i) => (
-            <div
-              key={name}
-              className={`flex items-center gap-4 bg-surface-container-lowest border border-surface-container-high rounded-xl px-5 py-4 shadow-botanical-sm animate-slide-up hover:-translate-y-0.5 transition-transform duration-200 ${isAr ? 'flex-row-reverse text-right' : ''}`}
-              style={{ animationDelay: `${i * 60}ms` }}
-            >
-              <div className="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
-                <span className="material-symbols-outlined text-on-secondary-fixed text-lg">person</span>
+
+        {/* ── Supervisor spotlight ─────────────────────────────────────── */}
+        <div className="mb-10 animate-slide-up">
+          <div className="relative rounded-2xl p-[2px] bg-gradient-to-br from-amber-400 via-primary to-secondary shadow-xl">
+            <div className={`bg-surface rounded-2xl p-6 md:p-8 flex flex-col sm:flex-row items-center gap-6 md:gap-8 ${isAr ? 'sm:flex-row-reverse text-right' : 'text-left'}`}>
+
+              {/* Photo */}
+              <div className="flex-none w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden ring-4 ring-amber-400/40 shadow-lg bg-surface-container">
+                <img
+                  src="/images/dr-radwa-mahrous.jpg"
+                  alt="Ass.Prof. Dr. Radwa Mahrous"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <div>
-                <p className="font-manrope font-semibold text-sm text-primary">{name}</p>
-                <p className="font-manrope text-xs text-secondary mt-0.5">{t('team_role')}</p>
+
+              {/* Info */}
+              <div className="flex-1">
+                <span className={`inline-flex items-center gap-1.5 bg-amber-100 text-amber-700 border border-amber-300 rounded-full px-3 py-1 font-manrope text-xs font-semibold mb-3 ${isAr ? 'flex-row-reverse' : ''}`}>
+                  <span className="material-symbols-outlined text-sm">workspace_premium</span>
+                  {t('team_supervisor')}
+                </span>
+                <h3 className="font-caslon text-2xl md:text-3xl text-primary leading-tight mb-1">
+                  Ass.Prof. Dr. Radwa Mahrous
+                </h3>
+                <p className="font-manrope text-sm text-secondary font-medium">{t('team_supervisor')}</p>
               </div>
+
+              {/* Decorative corner leaf */}
+              <span className={`material-symbols-outlined absolute text-7xl text-primary/5 pointer-events-none select-none bottom-2 ${isAr ? 'left-4' : 'right-4'}`}>psychiatry</span>
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* ── Team grid ────────────────────────────────────────────────── */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+          {TEAM.map((member, i) => {
+            const initials = getInitials(member.name);
+            return (
+              <div
+                key={member.name}
+                className="bg-surface-container-lowest border border-surface-container-high rounded-xl overflow-hidden shadow-botanical-sm animate-slide-up hover:-translate-y-1 transition-transform duration-200 flex flex-col"
+                style={{ animationDelay: `${i * 60}ms` }}
+              >
+                {/* Photo area */}
+                <div className="relative bg-gradient-to-br from-secondary-fixed/40 to-primary-fixed/20 min-h-[11rem] flex items-center justify-center overflow-hidden">
+                  <span className="font-caslon text-4xl text-secondary/30 select-none py-10">{initials}</span>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="absolute inset-0 w-full h-full object-contain"
+                    loading="lazy"
+                    onError={e => { e.currentTarget.style.display = 'none'; }}
+                  />
+                </div>
+
+                {/* Info */}
+                <div className={`p-3 flex-1 flex flex-col justify-center ${isAr ? 'text-right' : 'text-left'}`}>
+                  <p className="font-manrope font-semibold text-xs text-primary leading-snug">{member.name}</p>
+                  {member.role ? (
+                    <div className="mt-0.5">
+                      {member.role.map((line, li) => (
+                        <p key={li} className="font-manrope text-xs text-secondary leading-tight">{line}</p>
+                      ))}
+                    </div>
+                  ) : (
+                    <p className="font-manrope text-xs text-secondary mt-0.5">{t('team_member')}</p>
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 

@@ -2622,7 +2622,7 @@ export const PLANTS = {
     tags: ['Antiemetic', 'Carminative', 'Aromatherapy', 'Pregnancy-Safe', 'Antispasmodic'],
     image: '/images/Picture279.jpg',
     shortDescription: 'Peppermint tea (1–2 cups/day) and aromatherapy are safe during pregnancy for morning sickness, bloating, and pruritus. High medicinal doses or concentrated essential oil should be used cautiously.',
-    description: 'Peppermint has a long history of traditional use during pregnancy, particularly in herbal medicine and midwifery practices, although clinical evidence supporting its efficacy remains mixed. Historically and currently, it has been used to relieve several pregnancy-related discomforts.يحط الكلام ده قبل scientific evidence',
+    description: 'Peppermint has a long history of traditional use during pregnancy, particularly in herbal medicine and midwifery practices, although clinical evidence supporting its efficacy remains mixed. Historically and currently, it has been used to relieve several pregnancy-related discomforts.',
     isDemo: false,
     activeConstituents: [
       { name: 'Menthol and Menthone', percentage: '', },
@@ -5346,8 +5346,8 @@ export const PLANTS = {
       { myth: 'Chamomile tea alone can cure severe, infectious bacterial or amoebic diarrhea instantly.', fact: 'Chamomile does not eradicate highly virulent GI pathogens in vivo nor does it replace the critical need for Oral Rehydration Salts (ORS) or antibiotic therapy; rather, it acts as an exceptional, evidence-based supportive phytotherapy that significantly reduces painful spasms, decreases mucosal inflammation, and improves patient comfort.' },
     ],
     marketedProducts: [
-      { name: 'Sekem Chamomile Tea (أعشاب سيكم بابونج)', image: '/images/Picture283.jpeg' },
-      { name: 'Kamillosan Liquid (Chamomile extract for GI and topical use)', image: '/images/Picture282.jpeg' },
+      { name: 'Sekem Chamomile Tea ', image: '/images/Chamomile10.jpeg' },
+      { name: 'Kamillosan Liquid (Chamomile extract for GI and topical use)', image: '/images/Chamomile11.jpeg' },
     ],
     benefits: [
       { icon: 'spa', title: 'Gentle GI Anti-inflammatory', desc: 'Chamazulene and bisabolol inhibit both COX and 5-LOX pathways, reducing mucosal inflammation in gastritis, IBS, and mild diarrhea: without the GI side effects of NSAIDs.' },
@@ -5374,6 +5374,133 @@ export const PLANTS = {
       { text: 'World Health Organization (WHO). (1999). WHO Monographs on Selected Medicinal Plants (Vol. 1): Flos Chamomillae. Geneva.' },
       { text: 'Srivastava, J. K., et al. (2010). Chamomile: A herbal medicine of the past with bright future. Molecular Medicine Reports, 3(6), 895–901.' },
       { text: 'Amsterdam, J. D., et al. (2009). A randomized, double-blind, placebo-controlled trial of oral Matricaria recutita extract for generalized anxiety disorder. Journal of Clinical Psychopharmacology, 29(4), 378–382.' },
+    ],
+  },
+
+  // ══════════════════════════════════════════════════════════════════════
+  'ginger-diarrhea': {
+    id: 'ginger-diarrhea',
+    name: 'Ginger',
+    nameAr: 'الزنجبيل',
+    latinName: 'Zingiber officinale Roscoe',
+    commonNames: ['Ginger', 'African Ginger', 'Cochin Ginger'],
+    category: 'digestive',
+    subcategory: 'diarrhea-support',
+    tags: ['Anti-diarrheal', 'Antispasmodic', 'Anti-inflammatory', 'Antimicrobial', 'Carminative'],
+    image: '/images/Picture29.jpg',
+    images: ['/images/Picture29.jpg'],
+    isDemo: false,
+    shortDescription: 'A potent multi-mechanism anti-diarrheal botanical; gingerols and shogaols act as muscarinic antagonists and calcium channel blockers to reduce intestinal hypermotility, while blocking enterotoxin binding and exhibiting direct antimicrobial activity against major GI pathogens.',
+    description: 'German ginger (Zingiber officinale) contains non-volatile pungent phenylalkylketones (gingerols and shogaols) and volatile essential oils (1–3% β-zingiberene, β-sesquiphellandrene, ar-curcumene, α-farnesene). 6-gingerol is the primary active principle in fresh rhizome; 6-shogaol predominates in dried ginger (formed via thermal dehydration of gingerols). Shogaols exhibit higher stability and more potent anti-inflammatory and antispasmodic profiles. Gingerols and shogaols act as muscarinic receptor antagonists and voltage-dependent calcium channel blockers, inhibiting acetylcholine-induced intestinal hypermotility. Anti-secretory action blocks bacterial enterotoxin binding to intestinal cell receptors, preventing adenylate cyclase activation and massive fluid hypersecretion.',
+    activeConstituents: [
+      { name: '6-Gingerol', percentage: 'Primary active in fresh rhizome', effect: 'Being the most abundant and biologically active. It possesses potent anti-inflammatory, prokinetic, and anti-emetic properties.' },
+      { name: '6-Shogaol', percentage: 'Predominant in dry ginger', effect: 'Predominant compound in dry ginger, exhibiting higher chemical stability and a more potent anti-inflammatory and antispasmodic profile than gingerols.' },
+      { name: 'Zingerone & Paradols', percentage: '', effect: 'Secondary degradation products formed during long-term storage and cooking, contributing to the antioxidant and mucosal protective profiles.' },
+      { name: 'Volatile Essential Oils (1% to 3%)', percentage: '1%–3%', effect: 'Composed primarily of sesquiterpene hydrocarbons, chiefly β-zingiberene, β-sesquiphellandrene, ar-curcumene, and α-farnesene, which dictate the characteristic spicy aroma and contribute to local antimicrobial actions within the gut lumen.' },
+    ],
+    moa: [
+      { title: 'Antispasmodic & Myorelaxant Effect', detail: 'Gingerols and shogaols exert a direct relaxant effect on intestinal smooth muscles. They act as muscarinic receptor antagonists and voltage-dependent calcium channel blockers, effectively inhibiting acetylcholine-induced intestinal hypermotility, thereby reducing abdominal cramps and slowing down diarrheal transit.' },
+      { title: 'Anti-secretory & Anti-diarrheal Action', detail: 'Specifically blocks the binding of bacterial enterotoxins (such as E. coli heat-labile enterotoxin) to intestinal cell receptors. This inhibits the abnormal activation of adenylate cyclase, preventing the massive hypersecretion of water and electrolytes into the gut lumen.' },
+      { title: 'Anti-inflammatory Effect', detail: 'Dual inhibition of the arachidonic acid cascade by suppressing both cyclooxygenase (COX) and 5-lipoxygenase (5-LOX) pathways, as well as inhibiting pro-inflammatory cytokines (TNF-α, IL-1β). This significantly mitigates diarrheal-induced intestinal mucosal inflammation.' },
+      { title: 'Antimicrobial & Anti-motility Action', detail: 'Exhibits documented bacteriostatic and bactericidal activity against prominent diarrhea-causing pathogens including Escherichia coli, Salmonella typhi, and Vibrio cholerae.' },
+      { title: 'Serotonergic (5-HT3) Antagonism', detail: 'Modulates serotonin receptors both peripherally in the gut and centrally in the chemoreceptor trigger zone (CTZ), controlling concomitant nausea and vomiting often associated with infectious gastroenteritis.' },
+    ],
+    uses: [
+      'Symptomatic Relief of Mild Non-Specific Diarrhea: Reduces stool frequency and fluid loss in acute, uncomplicated digestive upsets.',
+      'Supportive Management of Traveler\'s Diarrhea: Acts as an adjunct phytotherapy to alleviate enterotoxigenic bacterial complications.',
+      'Alleviation of Associated Gastrointestinal Distress: Alleviates painful abdominal cramps, flatulence, bloating, indigestion, and concomitant nausea/vomiting.',
+    ],
+    howToUse: [
+      { method: 'Fresh Ginger Infusion (Tea)', instruction: 'Infuse 1–2 g of freshly sliced or grated rhizome in 200 mL of boiling water in a covered vessel for 10–15 minutes (to trap volatile oils). Drink warm 2–3 times daily. Max: 4 g fresh ginger per day.' },
+      { method: 'Standardized Oral Capsules / Tablets', instruction: '250 mg to 1000 mg daily, administered in divided doses. Formulations should ideally be standardized to total gingerol and shogaol content to ensure uniform therapeutic outcomes.' },
+      { method: 'Fluid Extract', instruction: 'Follow precise manufacturer guidelines, ensuring appropriate dilution to avoid direct gastric mucosal irritation.' },
+    ],
+    suitableAgeGroups: [
+      { group: 'Adults', notes: 'Generally recognized as safe (GRAS) within established therapeutic daily limits.' },
+      { group: 'Geriatrics', notes: 'Safe, but requires close monitoring for pre-existing chronic conditions and potential polypharmacy drug interactions.' },
+      { group: 'Pediatrics', notes: 'Use with extreme caution. Avoid in infants and children under 2 years of age. For older children, use very small weight-adjusted amounts under medical supervision.' },
+      { group: 'Pregnancy & Lactation', notes: 'Generally considered safe for short-term use at low doses (up to 1000 mg/day dried extract) for nausea, but high therapeutic doses for diarrhea management should be avoided during pregnancy without direct obstetric clearance due to theoretical risks of uterine contraction modulation.' },
+    ],
+    dosage: {
+      standard: 'Tea: 1–2 g fresh rhizome in 200 mL water, 2–3× daily (max 4 g/day). Capsules: 250–1000 mg/day in divided doses, standardized to gingerol/shogaol content.',
+      forms: [
+        { form: 'Fresh Ginger Tea', dose: '1–2 g freshly sliced rhizome, steeped covered 10–15 min in 200 mL water, 2–3× daily.' },
+        { form: 'Standardized Capsules', dose: '250–1000 mg daily in divided doses, standardized to gingerol and shogaol content.' },
+        { form: 'Fluid Extract', dose: 'Follow precise manufacturer guidelines, ensuring appropriate dilution to avoid direct gastric mucosal irritation.' },
+      ],
+    },
+    overdose: {
+      intro: 'Acute Oral Overdose: Rarely occurs from dietary intake, but highly possible with excessive consumption of concentrated extracts/supplements.',
+      symptoms: [
+        'Severe gastric reflux and debilitating heartburn',
+        'Paradoxical severe diarrhea due to mucosal irritation at massive doses',
+        'Stomach pain, mild CNS depression, hypotension',
+        'Increased systemic bleeding tendency',
+      ],
+      management: [
+        'Discontinue ginger intake immediately.',
+        'Initiate supportive and symptomatic protocols.',
+        'Maintain aggressive oral or intravenous rehydration to manage electrolyte balances.',
+      ],
+    },
+    sideEffects: [
+      'Gastric reflux and heartburn at high doses',
+      'Rare allergic reactions in Zingiberaceae-sensitive individuals',
+      'Mild antiplatelet effect: monitor in patients on anticoagulants',
+    ],
+    contraindications: [
+      'Known hypersensitivity to Zingiber officinale or other Zingiberaceae family members',
+      'Active coagulation and bleeding disorders (e.g., Hemophilia) due to antiplatelet activity',
+      'Symptomatic gallstones (Cholelithiasis): strong choleretic effect can trigger biliary colic or obstruction',
+      'Pre-operative states: discontinue at least 7–14 days prior to elective major surgeries to mitigate intraoperative hemorrhage risks',
+    ],
+    drugInteractions: [
+      'Anticoagulants / Antiplatelets (e.g., Warfarin, Aspirin, Clopidogrel): Ginger components (6-shogaol and 6-gingerol) inhibit thromboxane synthase and decrease platelet aggregation. Co-administration significantly potentiates bleeding risks and alters PT/INR values.',
+      'Antidiabetic Medications (e.g., Metformin, Insulin, Sulfonylureas): Ginger may enhance insulin sensitivity and increase peripheral glucose uptake, potentially compounding the risk of unexpected hypoglycemia. Dose adjustments of oral hypoglycemics may be necessary.',
+      'Antihypertensive Medications (e.g., Calcium Channel Blockers like Nifedipine): Ginger may exert additive calcium-channel-blocking cardiovascular effects, leading to a synergistic drop in blood pressure and increased risk of hypotension.',
+    ],
+    storage: {
+      forms: [
+        { form: 'Fresh Rhizomes', instructions: 'Wrap unpeeled and store in the refrigerator at 4°C to maintain cellular moisture and prevent microbial/fungal spoilage.' },
+        { form: 'Standardized Dry Formulations', instructions: 'Store in tightly closed, airtight containers protected from direct sunlight, high heat, and humidity to avoid degradation of gingerols into shogaols and evaporation of essential oils.' },
+      ],
+    },
+    factsAndMyths: [
+      { myth: '"Ginger acts as an instant, complete biological cure for all forms of severe infectious diarrhea, replacing all conventional drugs."', fact: 'Ginger does not instantly eradicate highly virulent invasive pathogens (like Shigella or Amoeba), nor can it replace essential rehydration protocols. It serves as an exceptional, evidence-based supportive phytotherapy that significantly mitigates symptom severity, calms intestinal hypermotility, reduces cramping, and improves patient comfort.' },
+    ],
+    marketedProducts: [
+      { name: 'Ginger Capsules 400mg (Mepaco Pharaonia)', image: '/images/Ginger-400mg-Mepaco.jpg' },
+      { name: 'Emetal Drops / Capsules (Pharco Pharmaceuticals)', image: null },
+      { name: 'Rani Ginger Effervescent Granules', image: null },
+      { name: 'Nature\'s Way Ginger Root / NOW Foods Ginger Extract', image: null },
+    ],
+    benefits: [
+      { icon: 'block', title: 'Enterotoxin Blocker', desc: 'Specifically blocks bacterial enterotoxin binding to intestinal cell receptors, preventing the massive fluid hypersecretion responsible for infectious diarrhea.' },
+      { icon: 'spa', title: 'Intestinal Antispasmodic', desc: 'Muscarinic receptor antagonism and calcium channel blockade reduce bowel hypermotility, alleviating cramps and urgency.' },
+      { icon: 'shield', title: 'Broad Antimicrobial Activity', desc: 'Documented bactericidal action against E. coli, Salmonella typhi, and Vibrio cholerae — key pathogens in acute gastroenteritis.' },
+    ],
+    botanicalFacts: {
+      origin: 'Believed to originate in Southeast Asia (likely India or China). Now cultivated commercially in Jamaica, India, China, Nigeria, and across the Arab world.',
+      parts: 'Rhizome (underground stem): used fresh, dried, powdered, or extracted. Rich in both volatile oils and non-volatile pungent phenylalkylketones.',
+      history: 'Among the oldest and most extensively traded medicinal spices in the world. Referenced in ancient Chinese, Ayurvedic, Unani, and Greco-Roman pharmacopeias for digestive, anti-emetic, and analgesic applications for over 2,000 years.',
+    },
+    preparation: [
+      { method: 'Fresh Infusion (Tea)', desc: 'Steep 1–2 g freshly sliced rhizome in 200 mL boiling water in a COVERED vessel for 10–15 minutes. Covering is critical to retain volatile oils.', bestFor: 'Acute diarrhea, nausea, abdominal cramps, traveler\'s diarrhea' },
+      { method: 'Standardized Capsules', desc: 'Capsules standardized to total gingerol and shogaol content ensure consistent therapeutic outcomes.', bestFor: 'Precise dosing, chronic digestive management' },
+    ],
+    clinicalNotes: [
+      { title: 'Adjunct Status', detail: 'Always counsel patients that ginger is a supportive therapy and never a substitute for Oral Rehydration Salts (ORS) or primary fluid replacement protocols.' },
+      { title: 'Red Flags for Referral', detail: 'Pharmacists must immediately refer patients presenting with bloody diarrhea (dysentery), high grade fever, severe abdominal rigidity, or signs of advanced dehydration directly to clinical emergency facilities.' },
+      { title: 'Monitoring', detail: 'Actively screen patient profiles for bleeding risks, scheduled surgeries, and concurrent use of narrow-therapeutic-index drugs (like Warfarin).' },
+    ],
+    symptoms: ['Diarrhea', 'Abdominal cramps', 'Nausea', 'Flatulence', 'Bloating', 'Digestive discomfort'],
+    relatedPlants: ['chamomile-diarrhea', 'peppermint-diarrhea'],
+    references: [
+      { text: 'European Medicines Agency (EMA): European Union herbal monograph on Zingiber officinale Roscoe, rhizoma. (2014). Committee on Herbal Medicinal Products (HMPC).' },
+      { text: 'World Health Organization (WHO): WHO Monographs on Selected Medicinal Plants, Volume 1: Rhizoma Zingiberis. Geneva.' },
+      { text: 'Chen, J. C., Huang, L. J., & Chen, W. C. (2007). Ginger and its bioactive component, zingerone, inhibit enterotoxigenic Escherichia coli heat-labile enterotoxin-induced diarrhea in mice. Journal of Agricultural and Food Chemistry, 55(21), 8390-8397.' },
+      { text: 'Anh, N. H., Kim, S. J., Long, N. P., & Kwon, S. W. (2020). Ginger on Human Health: A Comprehensive Systematic Review of Randomized Clinical Trials. Nutrients, 12(1), 157.' },
+      { text: 'Barnes, J., Anderson, L. A., & Phillipson, J. D. (2007). Herbal Medicines (3rd ed.). Pharmaceutical Press.' },
     ],
   },
 
@@ -7717,7 +7844,7 @@ export const PLANTS = {
     tags: ['Urinary Antiseptic', 'Antibacterial', 'Arbutin', 'Astringent', 'UTI Relief'],
     image: '/images/uva-ursi.jpg',
     images: ['/images/uva-ursi.jpg'],
-    shortDescription: 'Upon ingestion, arbutin is absorbed, metabolized in the liver, and excreted by the kidneys. In the urinary tract, it converts to free hydroquinone, which is a potent antibacterial agent against common urinary pathogens such as E. coli.',
+    shortDescription: 'Uva ursi has been used for centuries in traditional European, Native American, and Indigenous medicinal systems as a urinary tract remedy. Historical records indicate that its leaves were widely employed to manage urinary discomfort, bladder inflammation, and symptoms associated with urinary tract infections. During the 18th and 19th centuries, Uva ursi became a recognized herbal urinary antiseptic in European herbal medicine due to its arbutin content, which is metabolized into antibacterial compounds in the urinary tract.',
     description: 'Antibacterial Action: Upon ingestion, arbutin is absorbed, metabolized in the liver, and excreted by the kidneys. In the urinary tract, it converts to free hydroquinone, which is a potent antibacterial agent against common urinary pathogens such as E. coli. Astringent Properties: The leaves contain tannins, which help shrink and tighten swollen, inflamed mucous membranes in the bladder and urethra, reducing discomfort. Diuretic Effect: Uva ursi acts as a mild diuretic, potentially promoting the flushing of bacteria and toxins from the urinary tract.',
     activeConstituents: [
       { name: 'Arbutin', detail: '' },
@@ -7815,7 +7942,7 @@ export const PLANTS = {
     tags: ['UTI Prevention', 'Anti-adhesion', 'Proanthocyanidins', 'Antioxidant', 'Urinary Health'],
     image: '/images/cranberry-antiseptic.jpg',
     images: ['/images/cranberry-antiseptic.jpg'],
-    shortDescription: 'Cranberry is utilized as a prophylactic agent for prevention of recurrent urinary tract infections (UTIs). Supports urinary tract health by preventing adhesion of uropathogenic Escherichia coli to the urinary epithelium.',
+    shortDescription: 'Cranberry (Vaccinium macrocarpon) has been used for urinary tract disorders for many decades. During the early twentieth century, cranberry juice was widely recommended as a urinary antiseptic',
     description: 'Cranberry is utilized as a prophylactic agent for prevention of recurrent urinary tract infections (UTIs). Supports urinary tract health by preventing adhesion of uropathogenic Escherichia coli to the urinary epithelium. While cranberry is widely recognized to help prevent UTIs, evidence indicates it is not effective for treating an active infection.',
     activeConstituents: [
       { name: 'A-type Proanthocyanidins (PACs)', detail: '' },
@@ -7945,7 +8072,7 @@ export const CATEGORIES = [
     image: '/images/categories/cat-digestive.jpeg',
     subcategories: [
       { id: 'constipation-relief', name: 'Constipation Relief Plants', description: 'Support healthy bowel motility and regularity.',         image: '/images/categories/sub-constipation.jpeg', plants: ['senna-constipation', 'psyllium-constipation', 'castor-constipation'] },
-      { id: 'diarrhea-support',    name: 'Diarrhea Support Plants',    description: 'Astringent herbs to soothe and settle the tract.',      image: '/images/categories/sub-diarrhea.jpeg',     plants: ['peppermint-diarrhea', 'chamomile-diarrhea', 'fennel-diarrhea'] },
+      { id: 'diarrhea-support',    name: 'Diarrhea Support Plants',    description: 'Astringent herbs to soothe and settle the tract.',      image: '/images/categories/sub-diarrhea.jpeg',     plants: ['peppermint-diarrhea', 'chamomile-diarrhea', 'ginger-diarrhea', 'fennel-diarrhea'] },
       { id: 'dyspepsia',           name: 'Dyspepsia',                  description: 'Herbal relief for indigestion and stomach discomfort.', image: '/images/categories/sub-dyspepsia.jpeg',    plants: ['peppermint-dyspepsia', 'chamomile-dyspepsia', 'fennel-dyspepsia'] },
       { id: 'ibs',                 name: 'IBS',                        description: 'Calming carminatives to manage IBS symptoms.',          image: '/images/categories/sub-ibs.jpeg',          plants: ['peppermint-ibs', 'ginger-ibs', 'psyllium-ibs'] },
     ],
@@ -8022,9 +8149,9 @@ export const SYMPTOM_TAG_MAP = {
   'Memory':                  ['rosemary'],
   'Constipation':            ['senna-constipation', 'psyllium-constipation', 'castor-constipation'],
   'Bowel irregularity':      ['senna-constipation', 'psyllium-constipation', 'castor-constipation'],
-  'Diarrhea':                ['peppermint-diarrhea', 'chamomile-diarrhea', 'fennel-diarrhea'],
+  'Diarrhea':                ['peppermint-diarrhea', 'chamomile-diarrhea', 'ginger-diarrhea', 'fennel-diarrhea'],
   'IBS symptoms':            ['peppermint-ibs', 'ginger-ibs', 'psyllium-ibs'],
-  'Abdominal cramps':        ['peppermint-diarrhea', 'chamomile-diarrhea', 'fennel-diarrhea'],
+  'Abdominal cramps':        ['peppermint-diarrhea', 'chamomile-diarrhea', 'ginger-diarrhea', 'fennel-diarrhea'],
   'Gastritis':               ['chamomile-dyspepsia', 'licorice'],
   'Digestive discomfort':    ['rosemary', 'fennel-dyspepsia', 'peppermint-dyspepsia', 'chamomile-dyspepsia'],
   'Low milk supply':         ['fenugreek-breastfeeding', 'fennel-breastfeeding', 'moringa-breastfeeding'],

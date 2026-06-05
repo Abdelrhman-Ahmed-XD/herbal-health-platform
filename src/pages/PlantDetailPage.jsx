@@ -98,6 +98,7 @@ export default function PlantDetailPage() {
   const crucialNote = arData?.crucialNote ?? plant.crucialNote;
   const warnings          = arArr(arData?.warnings,          plant.warnings);
   const factsAndMyths     = arArr(arData?.factsAndMyths,     plant.factsAndMyths);
+  const clinicalNotes     = arArr(arData?.clinicalNotes,     plant.clinicalNotes);
 
   const factLabels = {
     family:           t('plant_family'),
@@ -523,6 +524,24 @@ export default function PlantDetailPage() {
                             <p className="font-manrope text-xs font-bold text-secondary uppercase tracking-wider mb-1">{t('plant_fact')}</p>
                             <p className="font-manrope text-sm text-on-surface-variant leading-relaxed">{item.fact}</p>
                           </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {/* Clinical Notes for Pharmacists */}
+              {clinicalNotes?.length > 0 && (
+                <div>
+                  <h2 className="font-caslon text-headline-sm text-primary mb-4">{t('plant_clinical_notes')}</h2>
+                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 space-y-3">
+                    {clinicalNotes.map((note, i) => (
+                      <div key={i} className={`flex gap-3 items-start ${isAr ? 'text-right' : ''}`}>
+                        <span className="material-symbols-outlined text-blue-600 text-base flex-shrink-0 mt-0.5">info</span>
+                        <div>
+                          <p className="font-manrope font-semibold text-sm text-blue-800 mb-0.5">{note.title}</p>
+                          <p className="font-manrope text-sm text-blue-700 leading-relaxed">{note.detail}</p>
                         </div>
                       </div>
                     ))}

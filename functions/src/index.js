@@ -42,7 +42,11 @@ NABTA PLANT DATABASE (18 plants):
 - Fenugreek (Trigonella foenum-graecum): Galactagogue, hypoglycaemic, digestive. Symptoms: Low milk supply, High blood sugar, Digestive discomfort.
 - Fennel (Foeniculum vulgare): Antispasmodic, carminative, galactagogue. Symptoms: Bloating, Infant colic, Digestive cramps, Menstrual pain.
 - Moringa (Moringa oleifera): Nutritive tonic, anti-inflammatory, galactagogue. Symptoms: Nutritional deficiency, Fatigue, Low milk supply.
-- Ginger (Zingiber officinale): Anti-nausea, anti-inflammatory, circulatory. Symptoms: Nausea, Vomiting, Indigestion, Menstrual cramps.
+- Ginger for cold/flu [ginger-cold]: Anti-nausea, anti-inflammatory, circulatory. Symptoms: Nausea, Vomiting, Cold symptoms.
+- Ginger for digestion/IBS [ginger-ibs]: Prokinetic, antispasmodic. Symptoms: Indigestion, IBS symptoms.
+- Ginger for diarrhea [ginger-diarrhea]: Muscarinic antagonist, calcium channel blocker, enterotoxin blocker, antimicrobial. Symptoms: Diarrhea, Abdominal cramps.
+- Ginger for menstrual [ginger-menstrual]: Analgesic, anti-inflammatory. Symptoms: Menstrual cramps.
+- Ginger for pregnancy [ginger-pregnancy]: Anti-emetic. Symptoms: Nausea, Vomiting (pregnancy).
 - Dill Seed (Anethum graveolens): Antispasmodic, carminative. Symptoms: Menstrual cramps, Bloating, Infant colic.
 - Cinnamon (Cinnamomum verum): Analgesic, hemostatic, insulin-sensitising. Symptoms: Menstrual cramps, Heavy bleeding, PCOS, Blood sugar.
 - Butterbur (Petasites hybridus): Antihistamine alternative, anti-migraine. Symptoms: Hay fever, Rhinorrhea, Sneezing, Migraine.
@@ -53,7 +57,7 @@ NABTA PLANT DATABASE (18 plants):
 - Black Seed (Nigella sativa): Immunomodulator, bronchodilator, antidiabetic. Symptoms: Asthma, Allergy, High blood sugar, Reduced immunity.
 - Astragalus (Astragalus mongholicus): Adaptogen, interferonogenic, antiviral. Symptoms: Chronic fatigue, Recurrent infections, Reduced immunity.
 
-SYMPTOM TAGS: Cough, Cold, Nausea, Bloating, Fatigue, Immunity, Hay fever, Rhinorrhea, Menstrual cramps, Heavy bleeding, PCOS, Blood sugar, Asthma, Infant colic, Skin infections, Constipation, High cholesterol
+SYMPTOM TAGS: Cough, Cold, Nausea, Bloating, Fatigue, Immunity, Hay fever, Rhinorrhea, Menstrual cramps, Heavy bleeding, PCOS, Blood sugar, Asthma, Infant colic, Skin infections, Constipation, High cholesterol, Diarrhea, Abdominal cramps
 `;
 
 // ─── Gemini Chat Function ─────────────────────────────────────────────────────

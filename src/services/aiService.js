@@ -66,7 +66,7 @@ ${buildCompactPlantContext()}
 
 SAME-NAME PLANT IDs (append [id] immediately after bold name, no space):
 Echinacea: cold/flu→[echinacea-cold] | immunity→[echinacea-immunity]
-Ginger: cold/flu→[ginger-cold] | digestion/IBS→[ginger-ibs] | menstrual→[ginger-menstrual] | pregnancy→[ginger-pregnancy]
+Ginger: cold/flu→[ginger-cold] | digestion/IBS→[ginger-ibs] | diarrhea→[ginger-diarrhea] | menstrual→[ginger-menstrual] | pregnancy→[ginger-pregnancy]
 
 FORMATTING:
 - Bold every plant name and append its [id] right after: **Plant Name**[plant-id]
@@ -111,7 +111,7 @@ ${buildPlantContext()}
 
 SAME-NAME PLANT IDs:
 Echinacea: cold/flu→[echinacea-cold] | immunity→[echinacea-immunity]
-Ginger: cold/flu→[ginger-cold] | digestion/IBS→[ginger-ibs] | menstrual→[ginger-menstrual] | pregnancy→[ginger-pregnancy]
+Ginger: cold/flu→[ginger-cold] | digestion/IBS→[ginger-ibs] | diarrhea→[ginger-diarrhea] | menstrual→[ginger-menstrual] | pregnancy→[ginger-pregnancy]
 
 FORMATTING RULES (strictly follow these):
 - Format each recommended plant as its own entry: **Plant Name**[plant-id] (*Latin name*): one-sentence description

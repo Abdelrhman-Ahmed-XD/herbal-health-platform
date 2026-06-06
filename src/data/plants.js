@@ -7913,8 +7913,8 @@ export const PLANTS = {
       ],
     },
     marketedProducts: [
-      { name: 'NusaPure Uva Ursi 450mg', image: '/images/nusapure-uva-ursi.jpg' },
-      { name: 'SOLARAY Uva Ursi Leaf', image: '/images/solaray-uva-ursi.jpg' },
+      { name: 'NusaPure Uva Ursi', image: '/images/uva-ursi-2.jpeg' },
+      { name: 'SOLARAY Uva Ursi Leaf', image: '/images/uva-ursi-3.jpeg' },
     ],
     benefits: [],
     botanicalFacts: {

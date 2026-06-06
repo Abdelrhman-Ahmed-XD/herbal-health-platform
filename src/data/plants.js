@@ -6587,8 +6587,8 @@ export const PLANTS = {
     drugInteractions: ['May theoretically enhance the pharmacological effects of Central Nervous System (CNS) depressants or sedatives due to its mild sedative properties.'],
     storage: { forms: [{ form: 'Store seeds in tightly sealed, airtight containers in a cool, dry environment away from ambient humidity and structural heat.', instructions: '' }] },
     marketedProducts: [
-      { name: 'Anisron Syrup 120 mL', image: '/images/cough_doc/image7.jpg' },
-      { name: 'Pentamix Syrup 120 mL (Multi-herb cough)', image: '/images/cough_doc/image5.jpg' },
+      { name: 'THYMY SYRUP 120 ML (Anise + Honey+Thyme )', image: '/images/cough_doc/image7.jpg' },
+      { name: 'FAST SYRUP 120 ML (Multi-herbal combination: Guava + Anise + Thyme + Honey).', image: '/images/FAST SYRUP.jpeg' },
     ],
     dosage: {
       standard: 'Adults and Adolescents over 12 years: 1 to 3.5 grams of whole or freshly crushed aniseed brewed as an infusion, taken 3 times daily.\nChildren (4–12 years): 0.5 to 1 gram of crushed seeds as an infusion, 2–3 times daily under supervision.\nStandardized Syrups: Follow targeted manufacturer guidelines (typically 5–10 mL, 3 times daily).',

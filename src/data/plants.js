@@ -5470,9 +5470,8 @@ export const PLANTS = {
     ],
     marketedProducts: [
       { name: 'Ginger Capsules 400mg (Mepaco Pharaonia)', image: '/images/Ginger-400mg-Mepaco.jpg' },
-      { name: 'Emetal Drops / Capsules (Pharco Pharmaceuticals)', image: null },
-      { name: 'Rani Ginger Effervescent Granules', image: null },
-      { name: 'Nature\'s Way Ginger Root / NOW Foods Ginger Extract', image: null },
+      { name: 'NOW Foods Ginger Extract ', image: '/images/Ginger 22.jpeg' },
+      { name: 'Nature\'s Way Ginger Root', image: '/images/ginger 23.jpeg' },
     ],
     benefits: [
       { icon: 'block', title: 'Enterotoxin Blocker', desc: 'Specifically blocks bacterial enterotoxin binding to intestinal cell receptors, preventing the massive fluid hypersecretion responsible for infectious diarrhea.' },

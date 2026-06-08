@@ -27,9 +27,9 @@ const SYM_AR_MAP  = {
   // Legacy
   Immunity:'مناعة', Stress:'توتر', Fatigue:'إرهاق', Sleep:'نوم', IBS:'قولون', Cough:'سعال', PMS:'دورة', Constipation:'إمساك',
   // Sub-concern slugs
-  'skin-care':'البشرة', 'hair-care':'الشعر', 'breast-feeding':'الرضاعة', 'menstrual-health':'الدورة الشهرية', 'pregnancy-support':'الحمل',
-  'cold':'البرد', 'rhinitis':'التهاب الأنف', 'cough':'السعال', 'sinusitis':'الجيوب الأنفية',
-  'immune-boosting':'المناعة', 'immune-recover':'التعافي', 'anti-oxidant-rich':'مضادات الأكسدة', 'anti-inflammatory':'مضاد للالتهابات',
+  'skin-care':'البشرة', 'hair-care':'الشعر', 'breast-feeding':'الرضاعة', 'menstrual-health':'الدورة', 'pregnancy-support':'الحمل',
+  'cold':'البرد', 'rhinitis':'التهاب الأنف', 'cough':'السعال', 'sinusitis':'الجيوب',
+  'immune-boosting':'المناعة', 'immune-recover':'التعافي', 'anti-oxidant-rich':'أكسدة', 'anti-inflammatory':'مضاد التهاب',
   'constipation-relief':'الإمساك', 'diarrhea-support':'الإسهال', 'dyspepsia':'عسر الهضم', 'ibs':'القولون العصبي',
   'diuretics':'مدرّات البول', 'anti-septic':'التهاب المسالك', 'bph':'البروستاتا',
   'wellness':'الصحة العامة',
@@ -62,6 +62,22 @@ function buildCategoryChart(raw, isAr) {
     fill: CAT_PALETTE[i%CAT_PALETTE.length],
   }));
 }
+
+const BarXTick = ({ x, y, payload }) => (
+  <g transform={`translate(${x},${y})`}>
+    <text
+      x={7} y={7} dy={4} dx={-4}
+      textAnchor="end"
+      fill="#434843"
+      fontSize={11}
+      fontFamily="Cairo, Manrope, sans-serif"
+      transform="rotate(-35)"
+      direction="ltr"
+    >
+      {payload.value}
+    </text>
+  </g>
+);
 
 const EmptyChart = ({ message }) => (
   <div className="flex flex-col items-center justify-center h-44 gap-2">
@@ -121,10 +137,8 @@ function AnalyticsDashboard() {
                   <CartesianGrid strokeDasharray="3 3" stroke="#c3c8c1" strokeOpacity={0.5} vertical={false} />
                   <XAxis
                     dataKey="name"
-                    tick={{ fontFamily: 'Cairo, Manrope, sans-serif', fontSize: 11, fill: '#434843' }}
+                    tick={<BarXTick />}
                     interval={0}
-                    angle={-35}
-                    textAnchor="end"
                     height={65}
                   />
                   <YAxis allowDecimals={false} tick={{ fontFamily: 'Manrope, sans-serif', fontSize: 11, fill: '#434843' }} />                  <Tooltip content={<CustomTooltip />} />

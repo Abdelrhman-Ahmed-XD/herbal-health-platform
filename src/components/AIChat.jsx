@@ -130,7 +130,7 @@ function HeadingLine({ text }) {
   return (
     <div className="flex items-center gap-2 mt-4 mb-1.5 border-b border-outline-variant/40 pb-1.5">
       <span className="material-symbols-outlined text-base text-secondary flex-shrink-0">{icon}</span>
-      <p className="font-caslon text-base text-primary font-semibold">{text}</p>
+      <p className="flex-1 font-caslon text-base text-primary font-semibold">{text}</p>
     </div>
   );
 }
@@ -139,7 +139,7 @@ function WarningLine({ text }) {
   return (
     <div className="flex items-start gap-2 bg-tertiary-fixed/30 border border-tertiary/20 rounded-lg px-3 py-2 mt-2">
       <span className="material-symbols-outlined text-sm text-tertiary flex-shrink-0 mt-0.5">warning</span>
-      <p className="font-manrope text-xs text-on-surface-variant leading-relaxed">{text}</p>
+      <p className="flex-1 font-manrope text-xs text-on-surface-variant leading-relaxed">{text}</p>
     </div>
   );
 }
@@ -151,7 +151,7 @@ function BulletLine({ text }) {
       <span className={`material-symbols-outlined text-sm flex-shrink-0 mt-0.5 ${isWarning ? 'text-tertiary' : 'text-secondary'}`}>
         {isWarning ? 'error_outline' : 'fiber_manual_record'}
       </span>
-      <p className="font-manrope text-sm text-on-surface leading-relaxed">{renderInline(text)}</p>
+      <p className="flex-1 font-manrope text-sm text-on-surface leading-relaxed">{renderInline(text)}</p>
     </div>
   );
 }
@@ -162,12 +162,12 @@ function NumberedLine({ index, text }) {
       <span className="w-5 h-5 rounded-full bg-primary/15 text-primary text-xs font-bold flex items-center justify-center flex-shrink-0 mt-0.5 font-manrope">
         {index}
       </span>
-      <p className="font-manrope text-sm text-on-surface leading-relaxed">{renderInline(text)}</p>
+      <p className="flex-1 font-manrope text-sm text-on-surface leading-relaxed">{renderInline(text)}</p>
     </div>
   );
 }
 
-function PlantEntryLine({ name, latin, desc, id }) {
+function PlantEntryLine({ name, latin, desc, id, isAr }) {
   const nameNode = id ? (
     <Link to={`/plant/${id}`}
       className="font-caslon text-base text-primary hover:text-secondary transition-colors hover:underline underline-offset-2 flex items-center gap-1">
@@ -191,8 +191,8 @@ function PlantEntryLine({ name, latin, desc, id }) {
       {id && (
         <Link to={`/plant/${id}`}
           className="inline-flex items-center gap-1 font-manrope text-xs font-semibold text-primary hover:gap-2 transition-all duration-150 mt-1">
-          {containsArabic(name) ? 'عرض الملف الكامل' : 'View full profile'}
-          <span className="material-symbols-outlined text-sm" style={{ transform: containsArabic(name) ? 'scaleX(-1)' : 'none' }}>arrow_forward</span>
+          {isAr ? 'عرض الملف الكامل' : 'View full profile'}
+          <span className="material-symbols-outlined text-sm" style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>arrow_forward</span>
         </Link>
       )}
     </div>
@@ -200,18 +200,19 @@ function PlantEntryLine({ name, latin, desc, id }) {
 }
 
 // ── Formatted message body ───────────────────────────────────────────────
-function FormattedMessage({ content }) {
+function FormattedMessage({ content, isAr }) {
   const lines = content.split('\n');
   const parsed = lines.map(classifyLine).filter(Boolean);
+  const rtl = isAr || containsArabic(content);
 
   return (
-    <div className="space-y-1 text-sm">
+    <div className="space-y-1 text-sm" dir={rtl ? 'rtl' : 'ltr'}>
       {parsed.map((item, i) => {
         if (item.type === 'heading')  return <HeadingLine key={i} text={item.text} />;
         if (item.type === 'warning')  return <WarningLine key={i} text={item.text} />;
         if (item.type === 'bullet')   return <BulletLine key={i} text={item.text} />;
         if (item.type === 'numbered') return <NumberedLine key={i} index={item.index} text={item.text} />;
-        if (item.type === 'plant')    return <PlantEntryLine key={i} {...item} />;
+        if (item.type === 'plant')    return <PlantEntryLine key={i} {...item} isAr={isAr} />;
         return (
           <p key={i} className="font-manrope text-sm text-on-surface leading-relaxed">
             {renderInline(item.text)}
@@ -256,10 +257,10 @@ function MessageBubble({ msg, loading, isAr }) {
         dir={msgIsRtl ? 'rtl' : 'ltr'}
       >
         {isUser
-          ? <p className="font-manrope text-sm">{msg.content}</p>
+          ? <p className={`font-manrope text-sm ${msgIsRtl ? 'text-right' : 'text-left'}`}>{msg.content}</p>
           : isEmpty && loading
             ? <TypingDots />
-            : <FormattedMessage content={msg.content} />
+            : <FormattedMessage content={msg.content} isAr={isAr} />
         }
       </div>
     </div>
@@ -267,6 +268,10 @@ function MessageBubble({ msg, loading, isAr }) {
 }
 
 // ── Main chat widget ─────────────────────────────────────────────────────
+const MAX_CHARS    = 500;
+const RATE_LIMIT   = 10;   // max messages
+const RATE_WINDOW  = 60;   // seconds
+
 export default function AIChat() {
   const { t, isAr } = useLanguage();
   const [open, setOpen]         = useState(false);
@@ -274,8 +279,10 @@ export default function AIChat() {
   const [input, setInput]       = useState('');
   const [loading, setLoading]   = useState(false);
   const [userName, setUserName] = useState(null);
-  const bottomRef = useRef(null);
-  const inputRef  = useRef(null);
+  const [inputError, setInputError] = useState('');
+  const bottomRef       = useRef(null);
+  const inputRef        = useRef(null);
+  const msgTimestamps   = useRef([]);   // timestamps of sent messages (client-side rate limiter)
 
   useEffect(() => {
     if (open && !messages) {
@@ -301,9 +308,47 @@ export default function AIChat() {
     ta.style.height = Math.min(ta.scrollHeight, 160) + 'px';
   }, [input]);
 
+  const validateInput = (text) => {
+    if (text.length > MAX_CHARS)
+      return isAr ? `الرسالة طويلة جداً (الحد الأقصى ${MAX_CHARS} حرفاً).` : `Message too long (max ${MAX_CHARS} characters).`;
+    if (text.length > 0 && text.length < 2)
+      return isAr ? 'الرسالة قصيرة جداً.' : 'Message too short.';
+    if (/^(.)\1{9,}$/.test(text))
+      return isAr ? 'يرجى إدخال رسالة صحيحة.' : 'Please enter a valid message.';
+    return '';
+  };
+
+  const handleInputChange = (e) => {
+    const val = e.target.value;
+    setInput(val);
+    setInputError(validateInput(val.trim()));
+  };
+
   const sendMessage = async () => {
     const text = input.trim();
     if (!text || loading) return;
+
+    // Network check
+    if (!navigator.onLine) {
+      setInputError(isAr ? 'لا يوجد اتصال بالإنترنت. تحقق من الاتصال وأعد المحاولة.' : 'No internet connection. Check your connection and try again.');
+      return;
+    }
+
+    // Client-side rate limit: max 10 messages per 60 seconds
+    const now = Date.now();
+    msgTimestamps.current = msgTimestamps.current.filter(t => t > now - RATE_WINDOW * 1000);
+    if (msgTimestamps.current.length >= RATE_LIMIT) {
+      const waitSecs = Math.ceil((msgTimestamps.current[0] + RATE_WINDOW * 1000 - now) / 1000);
+      setInputError(isAr
+        ? `⏱ وصلت إلى الحد المسموح (${RATE_LIMIT} رسائل في الدقيقة). انتظر ${waitSecs} ثانية.`
+        : `⏱ Rate limit reached (${RATE_LIMIT} messages/min). Please wait ${waitSecs}s.`);
+      return;
+    }
+    msgTimestamps.current.push(now);
+
+    const validErr = validateInput(text);
+    if (validErr) { setInputError(validErr); return; }
+    setInputError('');
 
     const detected = extractName(text);
     if (detected) setUserName(detected);
@@ -317,18 +362,37 @@ export default function AIChat() {
     setLoading(true);
 
     try {
-      await sendChatMessage(currentHistory, text, (chunk) => {
+      const result = await sendChatMessage(currentHistory, text, (chunk) => {
         setMessages(prev => prev.map(m => m.id === streamId ? { ...m, content: chunk } : m));
       });
+      // If streaming never populated the content (non-streaming fallback path), use the return value
+      if (result) {
+        setMessages(prev => prev.map(m =>
+          m.id === streamId && !m.content.trim() ? { ...m, content: result } : m
+        ));
+      }
     } catch (err) {
       const isRateLimit = err?.message === 'RATE_LIMIT';
       const errMsg = isAr
-        ? (isRateLimit ? '⏱️ تم الوصول إلى حد الطلبات. انتظر لحظة ثم أعد المحاولة.' : 'تعذّر الاتصال. حاول مجدداً لاحقاً.')
-        : (isRateLimit ? '⏱️ Rate limit reached, please wait a moment and try again.' : 'Unable to connect. Please try again later.');
+        ? (isRateLimit
+            ? '⚠️ تم الوصول إلى حد الطلبات من الخادم. انتظر لحظة ثم أعد المحاولة.'
+            : '⚠️ تعذّر الاتصال بالخادم. يرجى التحقق من اتصالك والمحاولة مرة أخرى.')
+        : (isRateLimit
+            ? '⚠️ Server rate limit reached. Please wait a moment and try again.'
+            : '⚠️ Unable to connect to the server. Check your connection and try again.');
       setMessages(prev => prev.map(m =>
         m.id === streamId ? { ...m, content: errMsg } : m
       ));
     } finally {
+      // Last-resort fallback for any truly silent/empty response
+      setMessages(prev => prev.map(m => {
+        if (m.id === streamId && !m.content.trim()) {
+          return { ...m, content: isAr
+            ? '⚠️ لم يتم استلام رد. يرجى إعادة المحاولة.'
+            : '⚠️ No response received. Please try again.' };
+        }
+        return m;
+      }));
       setLoading(false);
     }
   };
@@ -372,7 +436,7 @@ export default function AIChat() {
                 </p>
               </div>
               <button
-                onClick={() => { setMessages(null); setUserName(null); }}
+                onClick={() => { setMessages(null); setUserName(null); msgTimestamps.current = []; }}
                 className="text-on-primary-container/70 hover:text-on-primary-container transition-colors p-1 rounded-full hover:bg-white/10 flex-shrink-0"
                 title="Clear conversation"
               >
@@ -411,11 +475,18 @@ export default function AIChat() {
 
             {/* Input */}
             <div className="px-4 pb-4 pt-2 border-t border-outline-variant/50 flex-shrink-0">
-              <div className="flex gap-2 items-end bg-surface-container rounded-xl p-2">
+              {/* Validation error */}
+              {inputError && (
+                <div className="flex items-center gap-1.5 mb-2 px-1">
+                  <span className="material-symbols-outlined text-sm text-red-500 flex-shrink-0">error</span>
+                  <p className="font-manrope text-xs text-red-500 leading-snug">{inputError}</p>
+                </div>
+              )}
+              <div className={`flex gap-2 items-end rounded-xl p-2 transition-colors ${inputError ? 'bg-red-50 ring-1 ring-red-300' : 'bg-surface-container'}`}>
                 <textarea
                   ref={inputRef}
                   value={input}
-                  onChange={e => setInput(e.target.value)}
+                  onChange={handleInputChange}
                   onKeyDown={handleKeyDown}
                   placeholder={t('chat_placeholder')}
                   rows={1}
@@ -425,13 +496,19 @@ export default function AIChat() {
                 />
                 <button
                   onClick={sendMessage}
-                  disabled={!input.trim() || loading}
+                  disabled={!input.trim() || loading || !!inputError}
                   className="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center flex-shrink-0 disabled:opacity-40 disabled:cursor-not-allowed hover:opacity-80 transition-all hover:scale-105"
                 >
                   <span className="material-symbols-outlined text-lg"
                     style={{ transform: isAr ? 'scaleX(-1)' : 'none' }}>send</span>
                 </button>
               </div>
+              {/* Character counter (visible near limit) */}
+              {input.length > 400 && (
+                <p className={`font-manrope text-xs mt-1 ${isAr ? 'text-left' : 'text-right'} ${input.length > 480 ? 'text-red-500' : 'text-outline'}`}>
+                  {input.length}/{MAX_CHARS}
+                </p>
+              )}
               <p className="text-center font-manrope text-outline text-xs mt-2">
                 {t('chat_disclaimer')}
               </p>

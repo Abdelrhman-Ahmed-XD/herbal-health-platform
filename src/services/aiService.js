@@ -293,12 +293,15 @@ const callGeminiDirect = async (key, messages, userMessage, onChunk) => {
 //   2. Gemini direct (VITE_GEMINI_API_KEY — dev shortcut, streaming)
 //   3. Netlify Function  (prod: Groq server-side → Gemini server-side)
 export const sendChatMessage = async (messages, userMessage, onChunk) => {
+  let lastError = null;
+
   // 1. Groq direct (free, supports browser CORS + streaming)
   const groqKey = import.meta.env.VITE_GROQ_API_KEY;
   if (groqKey) {
     try {
       return await callGroqDirect(groqKey, messages, userMessage, onChunk);
     } catch (err) {
+      lastError = err;
       console.warn('[AI] Groq direct failed:', err.message);
     }
   }
@@ -309,6 +312,7 @@ export const sendChatMessage = async (messages, userMessage, onChunk) => {
     try {
       return await callGeminiDirect(geminiKey, messages, userMessage, onChunk);
     } catch (err) {
+      lastError = err;
       console.warn('[AI] Gemini direct failed:', err.message);
     }
   }
@@ -325,6 +329,8 @@ export const sendChatMessage = async (messages, userMessage, onChunk) => {
     return data.response || 'I apologize, I could not process your question. Please try again.';
   } catch (err) {
     console.warn('[AI] Function failed:', err.message);
-    return 'Unable to connect to the AI service. Please try again later.';
+    // Re-throw the most meaningful error so the caller can show the right message
+    if (lastError?.message === 'RATE_LIMIT') throw lastError;
+    throw new Error('CONNECTION_FAILED');
   }
 };

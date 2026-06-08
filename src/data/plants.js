@@ -6804,8 +6804,6 @@ export const PLANTS = {
     drugInteractions: ['No major clinical drug-drug interactions documented; however, theoretical additive effects may occur if co-administered with chemical antidiarrheal or highly astringent agents.'],
     storage: { forms: [{ form: 'Store in a cool, dry place, strictly protected from direct sunlight, moisture, and microbial contamination.', instructions: '' }] },
     marketedProducts: [
-      { name: 'Guava Syrup 120 mL', image: '/images/cough_doc/image4.jpg' },
-      { name: 'Pentamix Syrup 120 mL (Multi-herb cough)', image: '/images/cough_doc/image5.jpg' },
       { name: 'Fast Syrup 120 mL', image: '/images/cough_doc/image3.jpg' },
     ],
     benefits: [],

@@ -1,7 +1,7 @@
 import { useLanguage } from '../contexts/LanguageContext.jsx';
 
 const TEAM = [
-  { name: 'Hana Mahmoud Emam',            image: '/images/team/hana-mahmoud.jpeg',   role: ['Pharmacist Team Leader of 3D', 'Graduation Project 2026', 'MTI University'] },
+  { name: 'Hana Mahmoud Emam',            image: '/images/team/hana-mahmoud.jpeg',   role: ['Team Leader of 3D', 'Graduation Project 2026', 'MTI University'] },
   { name: 'Mariam Ahmed Mohammed ElFeqi', image: '/images/team/mariam-elfeqi.jpeg'   },
   { name: 'Hagar Reda Salah Amin',        image: '/images/team/hagar-reda.jpeg'      },
   { name: 'Manar Magdy Sabry',            image: '/images/team/manar-magdy.jpeg'      },

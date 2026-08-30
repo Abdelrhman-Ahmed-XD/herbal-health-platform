@@ -166,7 +166,7 @@ const callGroqDirect = async (key, messages, userMessage, onChunk) => {
   }));
 
   const body = {
-    model: 'llama-3.3-70b-versatile',
+    model: 'openai/gpt-oss-120b',
     messages: [
       { role: 'system', content: GROQ_SYSTEM_PROMPT },
       ...history,

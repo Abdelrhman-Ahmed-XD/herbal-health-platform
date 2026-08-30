@@ -2,50 +2,50 @@ import { PLANTS } from '../data/plants.js';
 
 // ── Comprehensive plant context from live database ───────────────────────────
 const buildPlantContext = () =>
-  Object.values(PLANTS)
-    .filter(p => !p.isDemo)
-    .map(p => {
-      const constituents = p.activeConstituents
-        ?.map(c => `  • ${c.name}${c.percentage ? ` (${c.percentage})` : ''}: ${c.effect}`)
-        .join('\n') ?? '';
-      const moa = p.moa
-        ?.map(m => `  • ${m.title}: ${m.detail}`)
-        .join('\n') ?? '';
-      const howToUse = p.howToUse
-        ?.map(h => `${h.method}: ${h.instruction}`)
-        .join(' | ') ?? '';
-      return [
-        `═══ ${p.name}[${p.id}] | ${p.latinName} ═══`,
-        `Category: ${p.category} / ${p.subcategory}`,
-        p.symptoms?.length ? `Symptoms addressed: ${p.symptoms.join(', ')}` : '',
-        constituents ? `Active Constituents:\n${constituents}` : '',
-        moa         ? `Mechanisms of Action:\n${moa}` : '',
-        p.uses?.length            ? `Uses: ${p.uses.join('; ')}` : '',
-        howToUse                  ? `How to Use: ${howToUse}` : '',
-        p.dosage?.standard        ? `Dosage: ${p.dosage.standard}` : '',
-        p.sideEffects?.length     ? `Side Effects: ${p.sideEffects.join('; ')}` : '',
-        p.contraindications?.length ? `Contraindications: ${p.contraindications.join('; ')}` : '',
-        p.warnings?.length        ? `Warnings: ${p.warnings.join(' ')}` : '',
-      ].filter(Boolean).join('\n');
-    })
-    .join('\n\n');
+    Object.values(PLANTS)
+        .filter(p => !p.isDemo)
+        .map(p => {
+          const constituents = p.activeConstituents
+              ?.map(c => `  • ${c.name}${c.percentage ? ` (${c.percentage})` : ''}: ${c.effect}`)
+              .join('\n') ?? '';
+          const moa = p.moa
+              ?.map(m => `  • ${m.title}: ${m.detail}`)
+              .join('\n') ?? '';
+          const howToUse = p.howToUse
+              ?.map(h => `${h.method}: ${h.instruction}`)
+              .join(' | ') ?? '';
+          return [
+            `═══ ${p.name}[${p.id}] | ${p.latinName} ═══`,
+            `Category: ${p.category} / ${p.subcategory}`,
+            p.symptoms?.length ? `Symptoms addressed: ${p.symptoms.join(', ')}` : '',
+            constituents ? `Active Constituents:\n${constituents}` : '',
+            moa         ? `Mechanisms of Action:\n${moa}` : '',
+            p.uses?.length            ? `Uses: ${p.uses.join('; ')}` : '',
+            howToUse                  ? `How to Use: ${howToUse}` : '',
+            p.dosage?.standard        ? `Dosage: ${p.dosage.standard}` : '',
+            p.sideEffects?.length     ? `Side Effects: ${p.sideEffects.join('; ')}` : '',
+            p.contraindications?.length ? `Contraindications: ${p.contraindications.join('; ')}` : '',
+            p.warnings?.length        ? `Warnings: ${p.warnings.join(' ')}` : '',
+          ].filter(Boolean).join('\n');
+        })
+        .join('\n\n');
 
 // Compact version for Groq (stays under free-tier token limits)
 const buildCompactPlantContext = () =>
-  Object.values(PLANTS)
-    .filter(p => !p.isDemo)
-    .map(p => {
-      const compounds = p.activeConstituents?.slice(0, 2).map(c => c.name).join(', ') ?? '';
-      const symptoms  = p.symptoms?.slice(0, 4).join(', ') ?? '';
-      const dose      = p.dosage?.standard ? p.dosage.standard.slice(0, 80) : '';
-      return [
-        `${p.name} [${p.id}] | ${p.subcategory}`,
-        symptoms  ? `Sx: ${symptoms}` : '',
-        compounds ? `Cmp: ${compounds}` : '',
-        dose      ? `Dose: ${dose}` : '',
-      ].filter(Boolean).join(' | ');
-    })
-    .join('\n');
+    Object.values(PLANTS)
+        .filter(p => !p.isDemo)
+        .map(p => {
+          const compounds = p.activeConstituents?.slice(0, 2).map(c => c.name).join(', ') ?? '';
+          const symptoms  = p.symptoms?.slice(0, 4).join(', ') ?? '';
+          const dose      = p.dosage?.standard ? p.dosage.standard.slice(0, 80) : '';
+          return [
+            `${p.name} [${p.id}] | ${p.subcategory}`,
+            symptoms  ? `Sx: ${symptoms}` : '',
+            compounds ? `Cmp: ${compounds}` : '',
+            dose      ? `Dose: ${dose}` : '',
+          ].filter(Boolean).join(' | ');
+        })
+        .join('\n');
 
 const GROQ_SYSTEM_PROMPT = `You are Nabta AI, an expert herbal pharmaceutical assistant for the Nabta botanical research platform.
 
@@ -160,7 +160,7 @@ const callGroqDirect = async (key, messages, userMessage, onChunk) => {
   const isStreaming = typeof onChunk === 'function';
   const url = 'https://api.groq.com/openai/v1/chat/completions';
 
-  const history = messages.filter(m => m.id !== 'welcome').slice(-20).map(m => ({
+  const history = messages.filter(m => m.id !== 'welcome').slice(-6).map(m => ({
     role: m.role === 'assistant' ? 'assistant' : 'user',
     content: m.content,
   }));
@@ -172,7 +172,7 @@ const callGroqDirect = async (key, messages, userMessage, onChunk) => {
       ...history,
       { role: 'user', content: userMessage },
     ],
-    max_tokens: 4096,
+    max_tokens: 1024,
     temperature: 0.4,
     top_p: 0.8,
     stream: isStreaming,
@@ -192,7 +192,7 @@ const callGroqDirect = async (key, messages, userMessage, onChunk) => {
   if (!isStreaming) {
     const data = await res.json();
     return data.choices?.[0]?.message?.content
-      || 'I apologize, I could not process your question. Please try again.';
+        || 'I apologize, I could not process your question. Please try again.';
   }
 
   const reader  = res.body.getReader();
@@ -227,8 +227,8 @@ const callGroqDirect = async (key, messages, userMessage, onChunk) => {
 const callGeminiDirect = async (key, messages, userMessage, onChunk) => {
   const isStreaming = typeof onChunk === 'function';
   const url = isStreaming
-    ? `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:streamGenerateContent?key=${key}&alt=sse`
-    : `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`;
+      ? `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:streamGenerateContent?key=${key}&alt=sse`
+      : `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${key}`;
 
   const history = messages.filter(m => m.id !== 'welcome').slice(-20).map(m => ({
     role: m.role === 'assistant' ? 'model' : 'user',
@@ -256,7 +256,7 @@ const callGeminiDirect = async (key, messages, userMessage, onChunk) => {
   if (!isStreaming) {
     const data = await res.json();
     return data.candidates?.[0]?.content?.parts?.[0]?.text
-      || 'I apologize, I could not process your question. Please try again.';
+        || 'I apologize, I could not process your question. Please try again.';
   }
 
   const reader  = res.body.getReader();
@@ -319,7 +319,7 @@ export const sendChatMessage = async (messages, userMessage, onChunk) => {
 
   // 3. Netlify Function (production — Groq server-side → Gemini server-side)
   try {
-    const res = await fetch('/.netlify/functions/geminiChat', {
+    const res = await fetch('/api/geminiChat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ messages: messages.filter(m => m.id !== 'welcome').slice(-20), userMessage }),
